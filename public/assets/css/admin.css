@@ -1,0 +1,585 @@
+@charset "utf8";
+
+body {
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    color: #0e0e0e;
+    line-height: 1.5;
+}
+
+img {
+    border: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img,
+input,
+select,
+textarea {
+    vertical-align: middle;
+}
+
+a {
+    transition: 0.1s;
+}
+
+a:hover {
+    color: blueviolet;
+}
+
+a:hover img {
+    opacity: 0.7;
+}
+
+#wrap {
+    width: 100%;
+    padding: 10px;
+}
+
+.container {
+    max-width: 1800px;
+    min-width: 1200px;
+    width: 100%;
+    margin: 0px auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.none {
+    display: none;
+}
+
+/* ページ全体共通のpadding left rightです */
+/* 各ページのセクションやブロックごとにクラスの指定をしてください */
+.p__lr {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* ヘッダー */
+#header {
+    width: 100%;
+    /* height: 100px; */
+    background-color: #30add1;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+}
+
+.header-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 20px; */
+}
+
+.logo {
+    width: 120px;
+    /* background-color: #fff; */
+    margin-right: 10px 20px;
+    border-radius: 20px;
+    padding: 5px 20px
+}
+
+/* h1 ページタイトル*/
+.page_title {
+    text-align: center;
+    color: #fff;
+    font-size: 1.8em;
+}
+
+.subtitle {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #30add1;
+    color: lightcyan;
+    font-weight: bold;
+    border: 2px lightcyan solid;
+    border-radius: 5px;
+    padding: 20px;
+    /* box-shadow: 5px 8px 8px -5px rgba(0, 0, 0, 1.5) */
+}
+
+.subtitle h2 {
+    width: 100%;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+}
+
+.login span {
+    color: yellow;
+    margin-right: 20px;
+}
+
+.logout {
+    border: 1px lightgray solid;
+    padding: 10px 15px;
+    background-color: burlywood;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 5px 8px 8px -5px rgba(0, 0, 0, 1.5);
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0px;
+}
+
+.content {
+    width: 100%;
+    /* border: 1px #30ADD1 solid; */
+    padding: 20px 0;
+}
+
+/* h3 セクションタイトル */
+h3 {
+    width: 99%;
+    color: blue;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-bottom: 1px #30add1 solid;
+    border-left: 10px #30add1 solid;
+    border-radius: 10px 0 0 10px;
+    padding: 2px 10px;
+    margin-bottom: 20px;
+}
+
+.g-nav {
+    width: 250px;
+    padding: 0 10px 10px 0;
+}
+
+.nav-item {
+    width: 120px;
+    border: 1px white solid;
+    border-radius: 10px;
+    background-color: lightcyan;
+    padding: 5px 10px;
+    text-align: center;
+    margin-left: 20px;
+}
+
+.menu-box li {
+    background-color: #30add1;
+    font-size: 1.2em;
+    color: lightcyan;
+    font-weight: bold;
+    border: 2px lightcyan solid;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.menu-box li:first-child {
+    background-color: #e9967a;
+    text-align: center;
+}
+
+/* ボタン共通 */
+.menubar>li,
+.search_btn,
+.submit_btn,
+.delete_btn,
+td.edit a {
+    border: 1px lightgray solid;
+    padding: 10px 15px;
+    background-color: burlywood;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 8px 8px 8px -8px rgba(0, 0, 0, 1.5);
+
+    /* border: 1px lightgray solid;
+    padding: 10px 20px;
+    background-color: burlywood;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px; */
+    /* box-shadow: 5px 8px 8px -5px rgba(0, 0, 0, 1.5); */
+}
+
+/* HOME・新規登録ボタン */
+.menubar {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.menubar li:first-child {
+    margin-right: 20px;
+    /* background-color: burlywood;
+    font-size: 1.2em;
+    color: lightcyan;
+    text-align: center; */
+}
+
+/* 検索条件,検索ボタン */
+.search {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search input:first-child {
+    border: 1px black solid;
+    margin-right: 20px;
+}
+
+.search_btn {
+    /* padding: 3px 10px; */
+    transition: 0.1s;
+}
+
+.search_btn:hover {
+    color: blueviolet;
+}
+
+/* 送信ボタン */
+.submit {
+    text-align: right;
+}
+
+.submit_btn {
+    /* width: 200px; */
+    padding: 5px 40px;
+    margin-top: 30px;
+    margin-right: 60px;
+    transition: 0.1s;
+}
+
+.submit_btn:hover {
+    color: blueviolet;
+}
+
+/* 修正・削除ボタン */
+.change_btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.delete_btn {
+    margin-top: 30px;
+    margin-right: 60px;
+    padding: 5px 40px;
+    background-color: #8c8c8c;
+}
+
+/* テーブル */
+table.info,
+table.tbl-count {
+    width: 95%;
+    border: 2px darkgrey solid;
+}
+
+table.tbl-count th {
+    width: 12.5%;
+}
+
+table.tbl-count td {
+    width: 12.5%;
+    text-align: center;
+}
+
+table.info th {
+    background-color: steelblue;
+    color: #fff;
+    text-align: center;
+    height: 50px;
+}
+
+th.clum-text {
+    width: 50%;
+}
+
+table.info th,
+table.info td {
+    border: 1px darkgrey solid;
+    padding: 10px 5px;
+    vertical-align: middle;
+}
+
+table.info tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+td.edit {
+    width: 100px;
+    text-align: center;
+}
+
+td.edit a {
+    /* text-align: center;
+    background-color: orange;
+    border: 1px solid chocolate; */
+    padding: 5px 20px;
+    /* color: #fff; */
+}
+
+td.dt {
+    width: 200px;
+    text-align: center;
+}
+
+table.info input,
+table.info textarea,
+table.info select {
+    /* border: 1px black solid; */
+    width: 100%;
+}
+
+/* アスタリスクの色変更 */
+table.info th span {
+    color: rgb(255, 19, 105);
+}
+
+/* 編集画面と新規登録画面のtdの仕切る線なくす */
+table.edit_info td,
+table.new_info td {
+    border: none;
+}
+
+/* 編集画面と新規登録画面の入力欄に枠線をつける */
+table.edit_info input,
+table.edit_info textarea,
+table.new_info input,
+table.new_info textarea,
+table.new_info select,
+table.new_info select,
+.selectcategory {
+    border: 1px #b9adc3 solid;
+    background-color: lightgoldenrodyellow;
+    padding: 4px;
+}
+
+/* 編集画面と新規登録画面の入力欄にホバーすると枠線の色が変わる */
+table.edit_info input:hover,
+table.edit_info textarea:hover,
+table.new_info input:hover,
+table.new_info textarea:hover,
+table.new_info select:hover,
+table.new_info select:hover,
+.selectcategory:hover {
+    border: 2px blueviolet solid;
+}
+
+/* フッター */
+#footer {
+    width: 100%;
+    background-color: #30add1;
+}
+
+.copyright {
+    padding: 20px;
+    color: #fff;
+}
+
+.mb0 {
+    margin-bottom: 0 !important;
+}
+
+.mb5 {
+    margin-bottom: 5px !important;
+}
+
+.mb10 {
+    margin-bottom: 10px !important;
+}
+
+.mb15 {
+    margin-bottom: 15px !important;
+}
+
+.mb20 {
+    margin-bottom: 20px !important;
+}
+
+.mb25 {
+    margin-bottom: 25px !important;
+}
+
+.mb30 {
+    margin-bottom: 30px !important;
+}
+
+.mb35 {
+    margin-bottom: 35px !important;
+}
+
+.mb40 {
+    margin-bottom: 40px !important;
+}
+
+.mb45 {
+    margin-bottom: 45px !important;
+}
+
+.mb50 {
+    margin-bottom: 50px !important;
+}
+
+/* 左右行揃え
+---------------------------------*/
+
+.ta-l {
+    text-align: left;
+}
+
+.ta-r {
+    text-align: right;
+}
+
+.ta-c {
+    text-align: center;
+}
+
+.mt80 {
+    margin-top: 80px !important;
+}
+
+.mt60 {
+    margin-top: 60px !important;
+}
+
+.mt40 {
+    margin-top: 40px !important;
+}
+
+.mt20 {
+    margin-top: 20px !important;
+}
+
+.mt10 {
+    margin-top: 10px !important;
+}
+
+.login-form {
+    width: 800px;
+    margin: 40px auto;
+    padding: 0;
+    border: 2px grey solid;
+}
+
+.card-header {
+    width: 100%;
+    font-size: 1.5em;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px 0;
+    background-color: #2b8cf3;
+}
+
+.card-body {
+    width: 80%;
+    margin: 40px auto;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.input-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+}
+
+.input-box {
+    width: 70%;
+    text-align: left;
+}
+
+.input-box input {
+    width: 400px;
+    text-align: left;
+    font-size: 24px;
+    padding: 4px;
+    border: 1px darkgray solid;
+}
+
+.input-box input:focus {
+    background: lightcyan;
+}
+
+.remember-box {
+    /* width: 60%; */
+    margin-left: 100px;
+    text-align: center;
+}
+
+#remember {
+    margin-right: 10px;
+}
+
+.item-label {
+    width: 35%;
+    text-align: left;
+}
+
+.button-box {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    text-align: right;
+}
+
+.btn {
+    width: 200px;
+    text-align: center;
+    padding: 5px 10px;
+    border: 1px darkcyan solid;
+}
+
+.btn-primary {
+    background-color: lightgrey;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.btn-link {
+    font-size: 1.2em;
+    color: orangered;
+    padding: 0 10px;
+}
+
+.pass-reset {
+    width: 100%;
+    text-align: left;
+}
+
+.login-form input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}

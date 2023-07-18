@@ -1,0 +1,149 @@
+@charset 'utf8';
+
+body {
+    font-size: 16pt;
+    color: #000;
+    margin: 5px;
+}
+
+h2 {
+    width: 100%;
+    text-align: center;
+}
+
+#header, #main, #footer {
+    width: 100%;
+    border: 1px red solid;
+    margin: 0px auto;
+    padding: 20px;
+}
+
+#main {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: 1px blue solid;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+h1 {
+    font-size: 2.0em;
+    text-align: center;
+    color: #00f;
+    margin: 20px auto;
+}
+
+ul {
+    font-size: 16pt;
+}
+
+hr {
+    margin: 20px 10px;
+    border: 1px dashed #ddd;
+}
+
+.menutitle {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0px;
+}
+
+.footer-inner {
+    text-align: center;
+    font-size: 14px;
+    margin: 10px auto;
+    /* border: 1px red solid; */
+    color: brown;
+    margin-bottom: 20px;
+}
+
+.message {
+    width: 80%;
+    max-width: 600px;
+    border: double 4px #ccc;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #fafafa;
+    /* text-align: center; */
+}
+
+.msg-img, .card-img {
+    width: 100%;
+    /* max-width: 100%; */
+    text-align: center;
+    margin: 4px auto;
+    border: 1px gray solid;
+}
+
+.msg-title {
+    margin: 10px 20px;
+    color: #00f;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.msg-content {
+    margin: 10px 20px;
+    color: #aaa;
+    font-size: 1.1rem;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    text-align: center;
+    color: black;
+}
+
+.error {
+    font-size: 1.1em;
+    color: red;
+}
+
+table.list {
+    width: 100%;
+    margin: 10px auto;
+}
+
+th {
+    background-color: #999;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+td {
+    border: 1px solid #aaa;
+    color: #999;
+    padding: 5px 10px;
+}
+
+.members {
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.item {
+    width: 300px;
+    border: 1px blue solid;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+div.input {
+    width: 80%;
+    margin: 20px auto;
+    border: 1px blue solid;
+    text-align: center;
+    padding: 40px;
+}
+
+div.newbtn {
+    text-align: right;
+}

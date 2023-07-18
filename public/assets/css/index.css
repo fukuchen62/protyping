@@ -1,0 +1,1378 @@
+@charset "utf-8";
+
+/* 基本情報 */
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+    padding-bottom: 20px;
+    text-align: left;
+}
+
+.wrapper {
+    margin: 0 auto;
+}
+
+section {
+    margin-top: 50px;
+}
+
+/* サイトロゴの固定 */
+.site-logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+/* キービジュアル */
+.top-kv {
+    z-index: -9999;
+}
+
+.top-kv video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center bottom;
+}
+
+.topvideo {
+    width: 100%;
+}
+
+/* PC版：ナビゲーションメニュー */
+.nav-pc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* height: 100px; */
+}
+
+.nav-pc li a div {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+/* ヘッダー背景 */
+.header-bg {
+    position: absolute;
+    bottom: 0%;
+}
+
+/* PC版：ナビゲーションメニューの固定 */
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    animation: DownAnime 0.5s forwards;
+
+    /* 固定時に変形 */
+    border: none;
+    border-radius: 0;
+}
+
+@keyframes DownAnime {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* モバイル版：ナビゲーションメニュー */
+.hamburger-menu-list {
+    display: none;
+}
+
+/* 見出し：特集リンク */
+.sp-h2 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-top: 30%;
+}
+
+/* ニュース */
+.news-title {
+    padding-bottom: 10px;
+}
+
+.news-box {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #ffff;
+    border: #ffebd8 2px solid;
+    border-radius: 50px;
+}
+
+.news-mobilebtn {
+    display: inline-block;
+    padding: 20px 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+/* PC版：ニュースボタン（非表示） */
+.news-pcbtn {
+    display: none;
+}
+
+.article-list {
+    align-items: baseline;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+/* 記事アンダーライン */
+.article-list li {
+    border-bottom: 1px solid #e3c8c1;
+    padding: 20px 0;
+}
+
+/* 記事アンダーライン */
+.article-list li a span {
+    font-weight: bold;
+}
+
+/* エリアマップを囲う要素 */
+.area-map {
+    position: relative;
+    text-align: center;
+    margin: 150px 0;
+}
+
+/* 木のアニメーション */
+.woods-01 {
+    width: 12%;
+    height: auto;
+    position: absolute;
+    top: -20%;
+    right: 10%;
+
+    .poyooon {
+        animation: poyooon 0.9s linear 0s 1;
+    }
+
+    @keyframes poyooon {
+        0% {
+            transform: scale(1.0, 1.0) translate(0%, 0%);
+        }
+
+        10% {
+            transform: scale(1.1, 0.9) translate(0%, 5%);
+        }
+
+        40% {
+            transform: scale(1.2, 0.8) translate(0%, 15%);
+        }
+
+        50% {
+            transform: scale(1.0, 1.0) translate(0%, 0%);
+        }
+
+        60% {
+            transform: scale(0.9, 1.2) translate(0%, -100%);
+        }
+
+        75% {
+            transform: scale(0.9, 1.2) translate(0%, -20%);
+        }
+
+        85% {
+            transform: scale(1.2, 0.8) translate(0%, 15%);
+        }
+
+        100% {
+            transform: scale(1.0, 1.0) translate(0%, 0%);
+        }
+    }
+}
+
+.woods-02 {
+    width: 12%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    /* アニメ */
+    animation: poyooon 0.9s linear 0s 1;
+}
+
+
+@keyframes poyooon {
+    0% {
+        transform: scale(1.0, 1.0) translate(0%, 0%);
+    }
+
+    10% {
+        transform: scale(1.1, 0.9) translate(0%, 5%);
+    }
+
+    40% {
+        transform: scale(1.2, 0.8) translate(0%, 15%);
+    }
+
+    50% {
+        transform: scale(1.0, 1.0) translate(0%, 0%);
+    }
+
+    60% {
+        transform: scale(0.9, 1.2) translate(0%, -100%);
+    }
+
+    75% {
+        transform: scale(0.9, 1.2) translate(0%, -20%);
+    }
+
+    85% {
+        transform: scale(1.2, 0.8) translate(0%, 15%);
+    }
+
+    100% {
+        transform: scale(1.0, 1.0) translate(0%, 0%);
+    }
+}
+
+/* 徳島のエリアマップ */
+/* TOPページ */
+#area-map {
+    max-width: 550px;
+    margin-bottom: 20px;
+}
+
+#east:hover,
+#south:hover,
+#west:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.line {
+    fill: #fff;
+}
+
+.west-color {
+    fill: #f99;
+}
+
+.south-color {
+    fill: #f96;
+}
+
+.east-color {
+    fill: #0c9;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: .5px;
+}
+
+/* 特産品 */
+.sp-btn {
+    display: none;
+}
+
+.anime1,
+.anime2,
+.anime3,
+.anime4 {
+    display: none;
+}
+
+
+.goods-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 150px;
+    justify-content: center;
+    margin-bottom: 50px;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+/* 特産品特集 */
+.goods,
+.activity {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+}
+
+@media screen and (min-width: 601px) {
+
+    .goods,
+    .activity {
+        max-width: 600px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* 画像のタイル */
+.image-tile {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 361px) {
+    .image-tile {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* 文字のタイル */
+.goods-title {
+    /* width: 100px;
+    height: 100px; */
+    align-items: center;
+    border-radius: 30px;
+    background-color: #ff8871;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+
+    /* リンクの設定 */
+    position: relative;
+    cursor: pointer;
+}
+
+.goods-title a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    width: 100%
+}
+
+/* 文字の解説 */
+.goods-strapline {
+    display: none;
+}
+
+/* ボタン */
+.goods-pcbtn {
+    display: none;
+}
+
+/* 体験 */
+.activity-wrapper {
+    margin: 0 auto;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+/* 体験 */
+/* .activity {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+} */
+
+/* 文字のタイル */
+.activity-title {
+    border-radius: 30px;
+    background-color: #fbae51;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    position: relative;
+}
+
+.activity-title a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    width: 100%
+}
+
+/*うどんたぬきアニメの設定 */
+.anime2 {
+    position: absolute;
+    top: -8px;
+    left: 0;
+}
+
+/* うどんアニメの設定 */
+.anime3 {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+}
+
+.activity-strapline {
+    display: none;
+}
+
+.activity-pcbtn {
+    display: none;
+}
+
+.img-wrapper {
+    max-width: 250px;
+    height: 150px;
+    vertical-align: bottom;
+    border-radius: 20px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.img-wrapper img {
+    width: 250px;
+    height: 200px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    object-fit: cover;
+}
+
+.img-wrapper {
+    padding: 8px 0;
+}
+
+imgcontent-wrapper .heading {
+    margin: 0 0 8px;
+}
+
+.img-wrapper .text {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* カテゴリー */
+.category {
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 10px;
+    padding: 4px 8px;
+    background-color: #e7d952;
+    color: #ffff;
+    border-radius: 10px;
+}
+
+/* 更新の日時とカテゴリー内容 */
+.update-information {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+
+/* ブログ全体を囲う要素 */
+.blog-main {
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media screen and (min-width:601px) {
+
+    /* ブログカードの設定 */
+    .blog-main {
+        max-width: 1000px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* カードの設定 */
+.blog-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(340px, 1fr));
+    justify-items: center;
+}
+
+/* ブログカード */
+.blog-card {
+    width: 100%;
+    height: 400px;
+    padding: 20px;
+    border-radius: 20px;
+    justify-content: center;
+    margin-bottom: 50px;
+    word-break: break-all;
+    box-shadow: 5px 5px 8px 0 #af813a;
+    border: groove 6px #cf9957;
+    background-color: #ffff;
+
+    /* リンク */
+    cursor: pointer;
+    position: relative;
+}
+
+/* カード全体にリンクを適用 */
+.blog-card a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+/* 画像サイズ */
+.blog-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.blog-btn img {
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* pcボタンの非表示 */
+.pcbtn {
+    display: none;
+}
+
+/* こんなんあるで！ */
+/* 「こんなんやってみ」を非表示 */
+.pc-title {
+    display: none;
+}
+
+.section-title01,
+.section-title02,
+.section-title03 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 40px;
+    align-items: center;
+    width: 100%;
+
+    /* 位置 */
+    position: relative;
+
+    padding: 60px 20px;
+}
+
+
+.tanumiti-01 {
+    position: absolute;
+    top: 0;
+    right: 20%;
+}
+
+/* モバイル版：車 */
+.headline-anime01 img,
+.headline-anime02 img {
+    width: 150px;
+    height: auto;
+}
+
+.headline-anime01 {
+    position: absolute;
+    /* top: 15%; */
+    left: 10%;
+
+    /* ぽよん */
+    /* animation: booboo 1.5s cubic-bezier(0.12, 0, 0.39, 0) 1 forwards; */
+}
+
+@keyframes booboo {
+    0% {
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    65% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+    20%,
+    100% {
+        opacity: 1;
+    }
+}
+
+.headline-anime02 {
+    position: absolute;
+    top: 25%;
+    /* right: 15%; */
+    width: 60%;
+
+    /* ぽよん */
+    /* animation: poyoyon 1.5s cubic-bezier(0.12, 0, 0.39, 0) 1 forwards; */
+}
+
+/* たぬみち */
+@keyframes poyoyon {
+    0% {
+        transform: translateX(500px);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    65% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+    20%,
+    100% {
+        opacity: 1;
+    }
+}
+
+/* こんなんやってみ！ */
+.section-title02 {
+    /* 背景イラスト */
+    /* background: url(../images/index/section_headline_01.png); */
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    text-align: center;
+    /* font-weight: bold; */
+    color: #8C5243;
+    background-color: ccc;
+
+    position: relative;
+    /* 背景のたぬみち */
+    text-align: center;
+    /* margin-bottom: 150px; */
+
+}
+
+@media screen and (min-width:401px) {
+
+    /* ブログカード */
+    .blog-card {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width:601px) {
+
+    /* モバイル：背景 */
+    body {
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .wrapper {
+        padding: 0;
+    }
+
+    /* ヘッダー背景 */
+    .header-bg {
+        position: absolute;
+        width: 100%;
+        bottom: 10vh;
+    }
+
+    /* KV */
+    .top-kv video {
+        width: 100%;
+        height: 90vh;
+        object-fit: cover;
+        object-position: center bottom;
+    }
+
+    .section-title01,
+    .section-title02,
+    .section-title03 {
+        flex-direction: row;
+        padding: 100px;
+    }
+
+    .article-list li {
+        text-align: left;
+        padding-bottom: 10px;
+    }
+
+    /* 特集見出し */
+    .sp-h2 {
+        color: #ffffff;
+        font-size: 2.5rem;
+        margin-top: 30%;
+    }
+
+    /* ニュース */
+    .news-box {
+        display: flex;
+        background-color: #ffff;
+        justify-content: center;
+        border-radius: 50px;
+        padding: 30px;
+        margin-bottom: 30px;
+        gap: 5%;
+        align-items: center;
+    }
+
+    .pcbtn {
+        display: block;
+        width: 100%;
+        padding: 20px;
+    }
+
+
+    .news-mobilebtn {
+        display: none;
+    }
+
+    .tokusimamap {
+        margin: 0 auto;
+        max-width: 80%;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .east {
+        top: 20%;
+        left: 57%;
+    }
+
+    .west {
+        top: 30%;
+        left: 20%;
+    }
+
+    .south {
+        top: 60%;
+        left: 50%;
+    }
+
+    .area {
+        text-align: center;
+    }
+
+    .station_detail {
+        text-align: center;
+        border-radius: 50px;
+        background-color: #B45A27;
+        color: #ffff;
+        font-size: 20px;
+        padding: 20px 30px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        display: inline-block;
+        margin-top: 5%;
+    }
+
+    /* 特集ボタン「もっと見る」 */
+    .sp-btn {
+        display: inline-block;
+        background-color: #fff;
+        border-radius: 50px;
+        padding: 10px;
+        margin-top: 20px;
+        color: #8C5243;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .sp-btn:hover {
+        animation: poyo-yon 2.5s infinite;
+    }
+
+
+
+
+    /* ブログカード */
+    .blog-card {
+        width: 100%;
+    }
+
+    .blog-wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, max(320px, 1fr));
+        justify-items: center;
+        gap: 30px;
+    }
+
+    /* アニメーション：ぽよん */
+    @keyframes poyo-yon {
+
+        0%,
+        40% {
+            transform: skew(0deg, 0deg);
+        }
+
+        5% {
+            transform: skew(5deg, 5deg);
+        }
+
+        10% {
+            transform: skew(-4deg, -4deg);
+        }
+
+        15% {
+            transform: skew(3deg, 3deg);
+        }
+
+        20% {
+            transform: skew(-2deg, -2deg);
+        }
+
+        25% {
+            transform: skew(1deg, 1deg);
+        }
+
+        30% {
+            transform: skew(-0.6deg, -0.6deg);
+        }
+
+        35% {
+            transform: skew(0.3deg, 0.3deg);
+        }
+    }
+
+    /* フッターアニメーション */
+    .move-wrap {
+        display: block;
+        position: absolute;
+        top: 20px;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+        animation-duration: 15s;
+        animation-iteration-count: 1;
+        margin-right: -25px;
+    }
+
+    /* ぴょん */
+    .poyooon {
+        animation: poyooon 0.9s linear 0s 1;
+    }
+
+    @keyframes poyooon {
+        0% {
+            transform: scale(1.0, 1.0) translate(0%, 0%);
+        }
+
+        10% {
+            transform: scale(1.1, 0.9) translate(0%, 5%);
+        }
+
+        40% {
+            transform: scale(1.2, 0.8) translate(0%, 15%);
+        }
+
+        50% {
+            transform: scale(1.0, 1.0) translate(0%, 0%);
+        }
+
+
+        100% {
+            transform: scale(1.0, 1.0) translate(0%, -100%);
+        }
+    }
+
+    .goods-wrapper {
+        margin: 0 auto;
+        width: 100%;
+        margin-bottom: 150px;
+        justify-content: center;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+
+
+    /* .image-tile {
+        width: 100%;
+        height: auto;
+        border-radius: 30px;
+        object-fit: cover;
+    } */
+    /* .goods-title {
+        width: 100%;
+        height: auto;
+        align-items: center;
+        border-radius: 30px;
+        color: black;
+        text-align: center;
+        font-size: 20px;
+        padding: 20px;
+        position: relative;
+    } */
+
+    /* アニメの表示 */
+    .anime1,
+    .anime2,
+    .anime3,
+    .anime4 {
+        display: block;
+    }
+
+    /* 芋ほりアニメの設定 */
+    .anime1 {
+        position: absolute;
+        top: 5px;
+        left: 230px;
+
+    }
+
+    /* 人参アニメの設定 */
+    .anime4 {
+        position: absolute;
+        top: 220px;
+        left: -35px;
+    }
+
+    /*
+    .goods-strapline {
+        text-align: center;
+    } */
+
+    .mobile-btn {
+        display: none;
+    }
+
+    /* .activity-wrapper {
+        margin: 0 auto;
+        width: 100%;
+        margin-bottom: 150px;
+        justify-content: center;
+        text-align: center;
+    } */
+
+    /* .activity {
+        display: flex;
+        flex-wrap: wrap;
+        width: 761px;
+        text-align: center;
+        margin-bottom: 30px;
+        justify-content: center;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    } */
+
+
+    .activityli {
+        /* width: 761px; */
+        text-align: center;
+    }
+
+
+    .activity-title {
+        border-radius: 30px;
+
+        text-align: center;
+        font-size: 20px;
+        padding: 20px;
+
+    }
+
+    .activity-strapline {
+        display: none;
+
+    }
+
+    .activity-pcbtn {
+        display: none;
+    }
+
+    .img-wrapper {
+        max-width: 500px;
+        max-height: 350px;
+        width: 80%;
+        vertical-align: bottom;
+        border-radius: 20px;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .img-wrapper img {
+        max-width: 500px;
+        width: 80%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        object-fit: cover;
+    }
+
+    .img-wrapper {
+        padding: 8px 0;
+    }
+
+    .imgcontent-wrapper .heading {
+        margin: 0 0 8px;
+        max-width: 761px;
+        width: 80%;
+    }
+
+    .img-wrapper .text {
+        margin: 0;
+        font-size: 16px;
+        max-width: 761px;
+        width: 80%;
+    }
+
+
+    .blog-wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, max(320px, 1fr));
+        justify-items: center;
+        gap: 30px;
+    }
+
+    .blog-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 901px) {
+
+    /* PC「こんなんやってみ」を表示 */
+    .pc-title {
+        display: block;
+    }
+
+    /* モバイル「こんなんやってみ」を非表示 */
+    .mobile-title {
+        display: none;
+    }
+
+    /* .goods-wrapper {
+        margin: 0 auto;
+        width: 100%;
+        margin-bottom: 150px;
+        justify-content: center;
+        margin-bottom: 50px;
+        text-align: center;
+    } */
+
+    /* .activity-wrapper {
+        margin: 0 auto;
+        width: 100%;
+        margin-bottom: 150px;
+        justify-content: center;
+        text-align: center;
+    } */
+
+    .map {
+        width: 85%;
+    }
+
+
+}
+
+@media screen and (min-width:901px) {
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    /* PC版：画像サイズ */
+    /* .goods-title {
+        width: 250px;
+        height: 250px;
+        align-items: center;
+        border-radius: 30px;
+
+        color: black;
+        text-align: center;
+        font-size: 20px;
+        padding: 20px;
+        position: relative;
+    } */
+
+    /* PC版：画像サイズ */
+    /* .image-tile {
+        width: 250px;
+        height: 250px;
+    } */
+
+    .activity-title {
+        border-radius: 30px;
+        background-color: #fbae51;
+        color: black;
+        text-align: center;
+        font-size: 20px;
+        padding: 20px;
+        position: relative;
+    }
+
+    .article-list {
+        width: 65%;
+    }
+
+
+}
+
+@media screen and (min-width:1000px) {
+
+    .wrapper {
+        padding: 0;
+    }
+
+    .kv {
+        width: 100%;
+        height: 980px;
+        position: absolute;
+        background: url(https://placehold.jp/1980x1080.png);
+        background-size: cover;
+        background-position: center;
+        z-index: -999;
+    }
+
+    section {
+        margin-top: 100px;
+    }
+
+    .sp-h2 {
+        color: #ffffff;
+        margin-top: 30%;
+    }
+
+    #global-nav {
+        position: static;
+        top: -100px;
+        transition: all 0.6s ease 0s;
+    }
+
+    /* ヘッダーの固定 */
+    #global-nav.m_fixed {
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #fffcef;
+        z-index: 999;
+    }
+
+    /*うどんたぬきアニメの設定 */
+    .anime2 {
+        position: absolute;
+        top: 10px;
+        left: 220px;
+    }
+
+    /* うどんアニメの設定 */
+    .anime3 {
+        position: absolute;
+        top: 80px;
+        left: 0px;
+    }
+
+    .news-box {
+        margin: 40px auto;
+        max-width: 800px;
+        align-items: center;
+    }
+
+    /* パソコン版：見出し幅 */
+    .news-left {
+        width: 35%;
+    }
+
+    /* ニュースボタン */
+    .news-pcbtn {
+        text-align: center;
+        border-radius: 50px;
+        background-color: #B45A27;
+        color: #ffff;
+        font-size: 20px;
+        padding: 20px 30px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        display: inline-block;
+    }
+
+    /* モバイル版：ニュースボタン */
+    .mobilebtn {
+        display: none;
+    }
+
+    /* 東部、西部、南部のボタン位置 */
+    .east {
+        top: 20%;
+        left: 57%;
+    }
+
+    .west {
+        top: 30%;
+        left: 20%;
+    }
+
+    .south {
+        top: 60%;
+        left: 50%;
+    }
+
+    /* .goods-wrapper {
+        margin: 0 auto;
+        width: 100%;
+        margin-bottom: 150px;
+    } */
+    /* .goods {
+        width: 100%;
+    } */
+    /* .image-tile {
+        width: 100%;
+        height: auto;
+        border-radius: 30px;
+        object-fit: cover;
+    } */
+
+
+    /* PC版：画像サイズ */
+    /* .goods-title {
+        width: 330px;
+        height: 330px;
+    } */
+    /*
+    .goods-strapline {
+        text-align: center;
+    } */
+
+    .pcbtn {
+        /* margin-bottom: 50px; */
+        display: inline-block;
+    }
+
+    /* .pcbtn:hover {
+        color: #ffffff;
+        background-color: #fff7e2;
+    } */
+
+    .goods-mobile-btn {
+        display: none;
+    }
+
+    /* .activity-wrapper {
+        margin: 0 auto;
+        width: 100%;
+        margin-bottom: 150px;
+        justify-content: center;
+        text-align: center;
+    } */
+
+    /* .activity {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+        justify-content: center;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    } */
+
+
+    .activityli {
+        /* width: 761px; */
+        text-align: center;
+    }
+
+
+    /* .activity-title {
+        width: 330px;
+        height: 330px;
+    } */
+
+    .activity-strapline {
+        text-align: center;
+
+    }
+
+
+    .activity-pcbtn {
+        text-align: center;
+        border-radius: 50px;
+        background-color: #ffffff;
+        color: #ff6c6c;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 20px 30px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        display: inline-block;
+        position: absolute;
+        top: 60%;
+        left: 20%;
+    }
+
+    .mobile-btn {
+        display: none;
+    }
+
+    .img-wrapper {
+        width: 300px;
+        height: 200px;
+        vertical-align: bottom;
+        border-radius: 20px;
+        margin: auto;
+    }
+
+    .img-wrapper img {
+        /* width: 300px; */
+        height: 230px;
+        /* padding-top: 30px; */
+        padding-bottom: 30px;
+        object-fit: cover;
+        text-align: center;
+    }
+
+    .img-wrapper {
+        padding: 8px 0;
+    }
+
+    .img-wrapper .heading {
+        margin: 0 0 8px;
+    }
+
+    .img-wrapper .text {
+        margin: 0;
+        font-size: 14px;
+        text-overflow: clip;
+    }
+
+    /* カードの設定 */
+    .blog-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(320px, 1fr));
+        justify-items: center;
+    }
+
+    .blog-btn a:hover {
+        opacity: 0.7;
+    }
+
+}
