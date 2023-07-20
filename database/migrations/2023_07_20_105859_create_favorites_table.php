@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('favorites', function (Blueprint $table) {
             $table->increments('id');
             $table->boolean('favorite')->default(false);
+            $table->integer('news_id');
+            $table->integer('knowhow_id');
         });
     }
 

@@ -19,9 +19,9 @@ return new class extends Migration
             $table->boolean('is_show')->default(true);
             //create_atはNOT NULLにし、update_atはNULLを許容する
             //$table->timestamps();
-            $table->timestamp('create_at')->nullable(false);
-            $table->timestamp('update_at')->nullable(true);
-            $table->timestamp('delete_at')->nullable(true);
+            $table->timestamp('created_at')->nullable(false);
+            $table->timestamp('updated_at')->nullable(true);
+            $table->timestamp('deleted_at')->nullable(true);
         });
     }
 

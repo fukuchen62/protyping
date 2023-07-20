@@ -18,7 +18,7 @@ return new class extends Migration
             // created_atをNOT NULLに設定するため、個別に記載
             $table->timestamp('created_at')->nullable(false);
             $table->timestamp('updated_at')->nullable(true);
-            $table->softDeletes('delete_at')->nullable(true);
+            $table->softDeletes('deleted_at')->nullable(true);
         });
     }
 
