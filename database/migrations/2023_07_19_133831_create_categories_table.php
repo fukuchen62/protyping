@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('category')->nullable(false);
+            $table->string('category', 60)->nullable(false);
             $table->boolean('is_show')->default(true);
             // created_atをNOT NULLに設定するため、個別に記載
             $table->timestamp('created_at')->nullable(false);
