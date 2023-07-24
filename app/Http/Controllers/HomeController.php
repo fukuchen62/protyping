@@ -23,6 +23,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        // return view('home');
+        // 管理画面のトップページへリダイレクト
+        // 福島　2023-7-19
+        return redirect()->route('admintop');
     }
 }
