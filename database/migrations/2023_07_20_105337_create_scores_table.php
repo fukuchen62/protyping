@@ -22,7 +22,6 @@ return new class extends Migration
             //$table->timestamps();
             $table->timestamp('created_at')->nullable(false);
             $table->timestamp('updated_at')->nullable(true);
-            $table->timestamp('deleted_at')->nullable(true);
         });
     }
 

@@ -13,9 +13,13 @@ return new class extends Migration
     {
         Schema::create('likes', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('like')->default(0);
+            $table->integer('users_id');
+            $table->integer('games_id');
             $table->integer('news_id');
             $table->integer('knowhow_id');
+            $table->timestamp('created_at')->nullable(false);
+            $table->softDeletes(); // softDeletes()メソッドを使ってdeleted_atカラムを定義する
+            //$table->timestamp('deleted_at')->default(null);
         });
     }
 

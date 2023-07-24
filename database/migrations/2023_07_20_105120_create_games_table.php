@@ -18,12 +18,15 @@ return new class extends Migration
             $table->string('game_icon', 50);
             $table->integer('language_id')->default(1);
             $table->integer('level_id')->default(1);
+            $table->integer('howmany')->default(10);
+            $table->integer('second')->default(60);
             $table->boolean('is_show')->default(true);
             //create_atはNOT NULLにし、update_atはNULLを許容する
             //$table->timestamps();
             $table->timestamp('created_at')->nullable(false);
             $table->timestamp('updated_at')->nullable(true);
-            $table->timestamp('deleted_at')->nullable(true);
+            $table->softDeletes(); // softDeletes()メソッドを使ってdeleted_atカラムを定義する
+            // $table->timestamp('deleted_at')->nullable(false);
         });
     }
 

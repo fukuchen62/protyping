@@ -21,7 +21,8 @@ return new class extends Migration
             //$table->timestamps();
             $table->timestamp('created_at')->nullable(false);
             $table->timestamp('updated_at')->nullable(true);
-            $table->timestamp('deleted_at')->nullable(true);
+            $table->softDeletes(); // softDeletes()メソッドを使ってdeleted_atカラムを定義する
+            //$table->timestamp('deleted_at')->default(null);
         });
     }
 
