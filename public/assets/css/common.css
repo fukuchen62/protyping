@@ -1,3 +1,30 @@
-@charset 'utf-8';
+@charset "utf-8";
 
-/* 本WEBアプリの共通スタイルシート */
+/* デバッグ用 */
+.debug{
+    background-color: skyblue;
+    border:1px solid #000;
+}
+
+/* 横並び */
+.flex{
+    display: flex;
+}
+
+/* 余白 */
+.margin{
+    margin: 0 12px;
+}
+
+/* 中央ぞろえ */
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* メインコンテンツとサイドバーを横並びにしたまま中央そぞろ */
+.container {
+    justify-content: center;
+}

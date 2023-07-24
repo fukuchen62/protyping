@@ -42,4 +42,25 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    // IDは自動生成するものなので、書き換えることはできない
+    protected $guarded = array('id');
+
+    // バリデーションルール
+    public static $rules = [
+        'name' => 'required|max:50',
+        'email' => 'required|email|max:100',
+        'password' => 'required|max:100',
+        'authority' => 'required',
+        'remember_token' => 'max:100',
+        'is_show' => 'required',
+        'created_at' => 'required',
+        'created_user_id' => 'required',
+    ];
+
+    public function getTitle()
+    {
+        $ret = $this->id . ':' . $this->language_id;
+        return $ret;
+    }
 }

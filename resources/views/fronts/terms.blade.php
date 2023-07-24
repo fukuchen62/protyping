@@ -1,9 +1,10 @@
 @extends('layouts.layout')
 
-@section('title','アバウト')
+@section('title','利用規約')
 @section('mycss')
 
 {{-- メインコンテンツの内容 --}}
 @section('maincontents')
-<h1>アバウト</h1>
+    <h1>利用規約</h1>
+
 @endsection
