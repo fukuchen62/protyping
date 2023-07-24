@@ -21,7 +21,6 @@ return new class extends Migration
             //create_atはNOT NULLにし、update_atはNULLを許容する
             //$table->timestamps();
             $table->timestamp('created_at')->nullable(false);
-            $table->timestamp('updated_at')->nullable(true);
         });
     }
 
