@@ -5,23 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>テンプレート</title>
+
+    <!-- 共通CSS -->
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/common.css">
-    <link rel="stylesheet" href="../assets/css/my.css">
+    <!-- <link rel="stylesheet" href="../assets/css/my.css"> -->
+
+    <!-- slick -->
+    <!-- <link rel="stylesheet" href="../assets/css/slick.css">
+<link rel="stylesheet" href="../assets/css/slick-theme.css"> -->
+
+    <!-- jqueryの読み込み -->
+    <script src="../assets/js/vendor/jquery-3.6.3.min.js"></script>
+
+    <!-- フォント設定 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;800;900&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+    <!-- ファビコン -->
+    <link rel="shortcut icon" href="../assets/images/favicon/favicon.ico">
+
+    <!-- アイコンフォント -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <script defer src="https://use.fontawesome.com/releases/v6.4.0/js/all.js"></script>
+
+
 </head>
+
 <body>
-    <header class="header container">
-        <div class="logo">
-            <img src="" alt="" srcset="">
+    <!-- ヘッダー -->
+    <header id="header" class="header">
+        <div class="container">
+
+            <!-- ヘッダーロゴ -->
+            <h1 class="headerLogo">
+                <a href=""><img src="" alt="タイプコード" srcset=""></a>
+            </h1>
+
+            <!-- ハンバーガーメニュー部分 -->
+            <div id="hanmburger">
+                <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+                <input id="drawerInput" class="drawerHidden" type="checkbox" />
+                <!-- ハンバーガーメニュー -->
+                <label for="drawerInput" class="drawerOpen">
+                    <span></span>
+                </label>
+
+                <!-- ナビゲーション -->
+                <nav id="nav">
+                    <ul>
+                        <li>
+                            <a href="">HOME</a>
+                        </li>
+                        <li>
+                            <a href="">辞書</a>
+                        </li>
+                        <li><a href="">ランキング</a></li>
+                        <li>
+                            <a href="">MyScore</a>
+                        </li>
+                        <li>
+                            <a href="">知っトク情報</a>
+                        </li>
+                        <li>
+                            <a href="">お問い合わせ</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+
         </div>
-
-        <nav id="hanbager">
-
-        </nav>
-
-        <nav id="nav">
-
-        </nav>
     </header>
 
     <main id="main" class="main container">
@@ -38,6 +93,13 @@
     </main>
 
     <footer>
+        <div class="footer">
+            <div class="footerLogo">
+            </div>
+            <div>
+                <p>Copyright©<a href="">タイプコード</a>, All Rights Reserved.</p>
+            </div>
+        </div>
     </footer>
 
 </body>
