@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\CustomNews;
+use App\Models\News;
 
 class ArticleController extends Controller
 {
@@ -16,7 +16,7 @@ class ArticleController extends Controller
     public function getarticle(Request $request)
     {
         // 更新情報の一覧を表示する
-        $items = CustomNews::all();
+        $items = News::all();
         $data = [
             'items' => $items,
         ];

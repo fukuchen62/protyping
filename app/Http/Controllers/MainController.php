@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use App\Models\CustomNews;
+use App\Models\News;
 use App\Models\Knowhow;
 use App\Models\Score;
 
@@ -20,7 +20,7 @@ class MainController extends Controller
     public function index(Request $request)
     {
         // 更新情報のデータ3件分を取得
-        $items = CustomNews::all();
+        $items = News::all();
         $news = [
             'items' => $items,
         ];
