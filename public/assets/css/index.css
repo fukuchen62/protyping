@@ -10,6 +10,11 @@
     border-radius:10px;
 }
 
+select{
+    border:#817F6E 2px solid;
+    border-radius:10px;
+}
+
 .topRanking section{
     border:#817F6E 2px solid;
     border-radius:10px;
