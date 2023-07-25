@@ -269,6 +269,7 @@
                     </tr>
                     @php
                         $json_array = json_encode($item->word_spell);
+                        var_dump($json_array);
                     @endphp
                 @endif
             @endif
@@ -309,6 +310,8 @@
 
             let wordJP1 = <?php echo $json_array; ?>; // 表示文章
             let wordJP2 = <?php echo $json_array; ?>; // ひらがな文章
+            console.log(wordJP1);
+            console.log(wordJP2);
 
             let wordRs; // ローマ字データ1
             let wordR; // ローマ字データ2

@@ -29,8 +29,27 @@ class ContactController extends Controller
     public function sendcontact(Request $request)
     {
         // お問い合わせフォームからメールを送信してもらう
+        // バリデーションのルールを定義すると良いでしょう
+        $validatedData = $request->validate([
+            'contact_id' => 'required',
+            'language_id' => 'required',
+            'word_spell' => 'max:200',
+            'japanese' => 'max:200',
+            'meaning' => 'max:200',
+            'usage' => 'max:200',
+            'memo' => 'max:200',
+            'email' => 'max:100|email',
+            'status' => 'requried',
+        ]);
+
+        // 入力内容をセッションに保存
+        $request->session()->put('contactData', $validatedData);
+
+        // 確認画面にリダイレクト
         // 送信確認画面に遷移する
-        return redirect('fronts.contacts_verification')->with('success', 'お問い合わせ内容の確認');
+        return redirect()->route('verification');
+
+        // return view('fronts.contacts_verification')->with('success', 'お問い合わせ内容の確認');
     }
 
     /**
@@ -43,7 +62,10 @@ class ContactController extends Controller
     {
         // お問い合わせ内容確認画面の表示
 
-        return view('fronts.contacts_verification');
+        // セッションから入力内容を取得
+        $contactData = session('contactData');
+
+        return view('fronts.contacts_verification', compact('contactData'));
     }
 
     /**
@@ -73,6 +95,7 @@ class ContactController extends Controller
 
         // お問い合わせフォームに遷移する
         // return redirect('front.contacts_verification')->with('success', 'お問い合わせが送信されました！');
-        return view('fronts.contacts_verification')->with('success', 'お問い合わせが送信されました！');
+        // return view('fronts.contacts_verification')->with('success', 'お問い合わせが送信されました！');
+        return redirect()->route('contact');
     }
 }

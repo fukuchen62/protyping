@@ -14,7 +14,49 @@
     <form action="/contact" method="POST">
     <!-- 他のフォーム要素をここに追加 -->
     @csrf <!-- LaravelのCSRFトークンをフォームに追加 -->
-    <button type="submit">送信</button>
+        <div>コンタクトID
+            <select name="contact_id">
+                <option value="" selected>選択してください</option>
+                <option value="1">単語追加要望</option>
+                <option value="2">不具合報告</option>
+                <option value="3">その他お問い合わせ</option>
+            </select>
+        </div>
+        <div>言語種別
+            <select name="language_id">
+                <option value="" selected>選択してください</option>
+                <option value="1">HTML</option>
+                <option value="2">CSS</option>
+                <option value="3">JavaScript</option>
+                <option value="4">PHP</option>
+            </select>
+        </div>
+        <div>単語(スペル)
+            <input type="text" name="word_spell">
+        </div>
+        <div>発音(ルビ)
+            <input type="text" name="japanese">
+        </div>
+        <div>意味
+            <input type="textarea" name="meaning">
+        </div>
+        <div>使用例
+            <input type="textarea" name="usage">
+        </div>
+        <div>備考欄
+            <input type="textarea" name="memo">
+        </div>
+        <div>メールアドレス
+            <input type="email" name="email">
+        </div>
+        <div>
+            {{-- ユーザに登録させない登録日時 --}}
+            <input type="hidden" name='created_at' value=''>
+        </div>
+        <div>
+            <input type="reset" value="クリア">&nbsp;&nbsp;
+            <input type="submit" value="登録" onclic="return confirm_dialog('記事を登録します。よろしいでしょうか？')">
+        </div>
     </form>
 
     {{-- 暫定的にリンクを貼っておく --}}

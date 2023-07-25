@@ -20,52 +20,27 @@
     </div>
     @endif
 
+<p><strong>コンタクトID:</strong> {{ $contactData['contact_id'] }}</p>
+<p><strong>言語種別:</strong> {{ $contactData['language_id'] }}</p>
+<p><strong>単語(スペル):</strong> {{ $contactData['word_spell'] }}</p>
+<p><strong>発音(ルビ):</strong> {{ $contactData['japanese'] }}</p>
+<p><strong>意味:</strong> {{ $contactData['meaning'] }}</p>
+<p><strong>使用例:</strong> {{ $contactData['usage'] }}</p>
+<p><strong>備考欄:</strong> {{ $contactData['memo'] }}</p>
+<p><strong>メールアドレス:</strong> {{ $contactData['email'] }}</p>
+
     <form action="{{ route('verification') }}" method="POST">
         @csrf <!-- LaravelのCSRFトークンをフォームに追加 -->
+        <input type="hidden" name="contact_id" value="{{ $contactData['contact_id'] }}">
+        <input type="hidden" name="language_id" value="{{ $contactData['language_id'] }}">
+        <input type="hidden" name="word_spell" value="{{ $contactData['word_spell'] }}">
+        <input type="hidden" name="japanese" value="{{ $contactData['japanese'] }}">
+        <input type="hidden" name="meaning" value="{{ $contactData['meaning'] }}">
+        <input type="hidden" name="usage" value="{{ $contactData['usage'] }}">
+        <input type="hidden" name="memo" value="{{ $contactData['memo'] }}">
+        <input type="hidden" name="email" value="{{ $contactData['email'] }}">
 
-        <div>コンタクトID
-            <select name="contact_id">
-                <option value="" selected>選択してください</option>
-                <option value="1">単語追加要望</option>
-                <option value="2">不具合報告</option>
-                <option value="3">その他お問い合わせ</option>
-            </select>
-        </div>
-        <div>言語種別
-            <select name="language_id">
-                <option value="" selected>選択してください</option>
-                <option value="1">HTML</option>
-                <option value="2">CSS</option>
-                <option value="3">JavaScript</option>
-                <option value="4">PHP</option>
-            </select>
-        </div>
-        <div>単語(スペル)
-            <input type="text" name="word_spell">
-        </div>
-        <div>発音(ルビ)
-            <input type="text" name="japanese">
-        </div>
-        <div>意味
-            <input type="textarea" name="meaning">
-        </div>
-        <div>使用例
-            <input type="textarea" name="usage">
-        </div>
-        <div>備考欄
-            <input type="textarea" name="memo">
-        </div>
-        <div>メールアドレス
-            <input type="email" name="email">
-        </div>
-        <div>
-            {{-- ユーザに登録させない登録日時 --}}
-            <input type="hidden" name='created_at' value=''>
-        </div>
-        <div>
-            <input type="reset" value="クリア">&nbsp;&nbsp;
-            <input type="submit" value="登録" onclic="return confirm_dialog('記事を登録します。よろしいでしょうか？')">
-        </div>
+        <input type="submit" value="登録" onclic="return confirm_dialog('記事を登録します。よろしいでしょうか？')">
     </form>
 
     {{-- 暫定的にリンクを貼っておく --}}
