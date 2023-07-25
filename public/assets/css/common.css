@@ -1,33 +1,43 @@
 @charset "utf-8";
 
+/* body */
+body{
+    background-color: #26567C;
+}
+
+/* メイン */
+.main{
+    margin: 20px;
+    background-color: #fff;
+}
 /* デバッグ用 */
-.debug{
+/* .debug{
     background-color: skyblue;
     border:1px solid #000;
-}
+} */
 
 /* 横並び */
-.flex{
+/* .flex{
     display: flex;
-}
+} */
 
 /* 余白 */
-.margin{
+/* .margin{
     margin: 0 12px;
-}
+} */
 
 /* 中央ぞろえ */
-.center{
+/* .center{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+} */
 
 /* メインコンテンツとサイドバーを横並びにしたまま中央そぞろ */
-.container {
+/* .container {
     justify-content: center;
-}
+} */
 
 /* ヘッダー */
 .header {
@@ -173,3 +183,87 @@
 }
 
 /* フッター */
+
+
+
+
+
+
+
+
+/* フォントサイズ */
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.375rem;
+}
+
+h4{
+    font-size:1.25rem;
+}
+
+h5{
+    font-size: 1.125rem;
+}
+
+h6{
+    font-size: 1.0625rem;
+}
+
+p{
+    font-size: 1rem;
+}
+
+/* 上に戻るボタン */
+#btn{
+    width: 3.25rem;
+    height: 3.25rem;
+    /* margin-right:15px;
+    margin-bottom:15px; */
+    border-radius:50%;
+    position: fixed;
+    bottom: 0;
+    right: 40px;
+    background-color: #BAB624;
+    }
+
+    /* 上に戻るボタンの矢印 */
+    /* 長方形 */
+.arrow_up {
+	font-size: 30px;
+	position: relative;
+	width: 0.6rem;
+	height: 1rem;
+	background-color: #ffff;
+}
+/* 三角 */
+.arrow_up::before {
+	position: absolute;
+	top: -0.6rem;
+	left: -0.5rem;
+	width: 0;
+	height: 0;
+	content: "";
+	border-bottom: 0.8rem solid #ffff;
+	border-left: 0.8rem solid transparent;
+	border-right: 0.8rem solid transparent;
+}
+
+/* ページネーション */
+
+
+/* 一覧を見るボタン */
+/* <a href="" class="btn btn--orange btn--radius">PUSH</a> */
+.linkBtn {
+    color: #fff;
+    background-color: #5FBFED;
+    border-radius: 25%;
+}
+.linkBtn:hover {
+    color: #fff;
+    background: lightblue;
+}
+
+/* 一覧を見るボタン */

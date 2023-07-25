@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class CustomNews extends Model
+class News extends Model
 {
     // use HasFactory;
 
@@ -31,5 +31,17 @@ class CustomNews extends Model
     {
         $ret = $this->id . ':' . $this->title;
         return $ret;
+    }
+
+    /**
+     * newsCategory function
+     * ニュースカテゴリーテーブルとのリレーション
+     *
+     * @return void
+     */
+    public function newsCategory()
+    {
+        $items = $this->belongsTo('App\Models\Category');
+        return $items;
     }
 }
