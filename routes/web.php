@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Auth;
  * 知っトク情報を取得
  * 難易度別に各言語のランキングTOP3のデータを取得(サイドバー)
  */
-Route::get('/', [App\Http\Controllers\MainController::class, 'index'])->name('index');
+Route::get('/', [App\Http\Controllers\MainController::class, 'index'])->name('top');
 
 /**
  * ゲーム画面
@@ -126,10 +126,25 @@ Route::get('privacypolicy', [App\Http\Controllers\PrivacypolicyController::class
  */
 Route::get('about', [App\Http\Controllers\AboutController::class, 'getabout'])->name('about');
 
+// Auth
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 /**
  * 管理画面のTOPページ
  */
 Route::get('admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admintop');
+
+/**
+ * 管理画面ログアウト
+ * 福島
+ */
+Route::get(
+    'admin/logout',
+    [App\Http\Controllers\AdminController::class, 'logout']
+)->name('logout');
+
 
 /**
  * 管理画面
