@@ -56,6 +56,14 @@ Route::get('ranking', [App\Http\Controllers\RankingController::class, 'getrankin
 Route::get('myscore', [App\Http\Controllers\MyscoreController::class, 'getmyscore'])->name('myscore');
 
 /**
+ * マイスコア登録(暫定)
+ * ゲーム画面が未だなのでテスト用に作成
+ */
+Route::post('myscore', [App\Http\Controllers\MyscoreController::class, 'setmyscore'])->name('myscore');
+
+Route::get('myscoreresult', [App\Http\Controllers\MyscoreController::class, 'getmyscoreresult'])->name('myscoreresult');
+
+/**
  * お問い合わせフォーム画面
  * お問い合わせ画面を表示
  */
