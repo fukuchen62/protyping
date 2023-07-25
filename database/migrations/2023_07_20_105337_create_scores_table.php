@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('scores', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('game_id')->nullable(false);
+            $table->integer('language_id')->nullable(false);
+            $table->integer('level_id')->nullable(false);
             $table->integer('user_id')->default(0);
             $table->string('username', 30)->nullable(true);
             $table->integer('score')->default(0);

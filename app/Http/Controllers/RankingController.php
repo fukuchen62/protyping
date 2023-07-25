@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Level;
+use App\Models\Language;
+use App\Models\Score;
+
 
 class RankingController extends Controller
 {
@@ -18,6 +22,17 @@ class RankingController extends Controller
     {
         // コース(難易度)別に各言語カテゴリーのランキングTOP10を表示させる(デフォルトはのんびりコース)
 
-        return view('fronts.scores_ranking');
+        // モデルからデータを取得
+        $items = Score::orderBy('Score', 'desc')
+            ->take(10)
+            ->get();
+
+
+        $data = [
+            'items' => $items,
+        ];
+
+
+        return view('fronts.scores_ranking', $data);
     }
 }
