@@ -42,17 +42,15 @@
 /* ロゴのクリックできる範囲を拡大 (54pxサイズ)*/
 .headerLogo a {
     display: inline-block;
-    width: 54%;
-    height: 54px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
 /* ロゴのサイズ (40pxサイズ）*/
-.header img {
+/* .headerLogo img {
     width: 50px;
-}
+} */
 
 /* ロゴとハンバーガーメニューを横並びにする */
 .container {
@@ -62,7 +60,7 @@
     align-items: center;
     padding: 0 20px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1080px;
     margin: 0 auto;
 }
 
@@ -97,33 +95,81 @@
 }
 
 /* 上の線の位置調整 */
-.drawer-open span:after {
+.draweOpen span:after {
     /* background: red; */
     bottom: 8px;
 }
 
 /* 下の線の位置調整 */
-.drawer-open span:before {
+.drawerOpen span:before {
     /* background: blue; */
     top: 8px;
 }
 
 /* ハンバーガーメニューがクリックされたら真ん中の線は透明に */
-#drawer-input:checked ~ .drawer-open span {
+#drawerInput:checked ~ .drawerOpen span {
     background-color: rgba(255, 255, 255, 0);
     transition: 0.1s;
 }
 
 /* ハンバーガーメニューがクリックされたら×印になように上下の線を回転 */
-#drawer-input:checked ~ .drawer-open span::after {
+#drawerInput:checked ~ .drawerOpen span::after {
     bottom: 0;
     transform: rotate(45deg);
 }
 
-#drawer-input:checked ~ .drawer-open span::before {
+#drawerInput:checked ~ .drawerOpen span::before {
     top: 0;
     transform: rotate(-45deg);
 }
 
+/* ナビゲーションのデザイン*/
+.nav {
+    list-style: none;
+    display: none;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 54px;
+    padding: 0 0 10px 0;
+    clear: both;
+    z-index: 1000;
+    background: rgba(127, 54, 54, 0.95);
+    text-align: center;
+    padding-top: 20px;
+    transition: opacity 1s ease-in-out;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawerInput:checked ~ .nav {
+    display: block;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.nav a {
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+.nav li {
+    padding: 15px 0;
+    margin: 0 54px;
+    transition: 0.5s;
+}
+
+#drawerInput:checked ~ .nav a,
+#drawerInput:checked ~ .nav li {
+    opacity: 1;
+    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.2s;
+}
+
+#drawerInput {
+    display: none;
+}
 
 /* フッター */
