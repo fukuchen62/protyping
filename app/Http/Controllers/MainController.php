@@ -20,27 +20,64 @@ class MainController extends Controller
     public function index(Request $request)
     {
         // 更新情報のデータ3件分を取得
-        $items = News::all();
+        $items = News::orderBy('created_at', 'desc')->take(3)->get();
         $news = [
             'items' => $items,
         ];
 
-        // 知っトク情報を取得
-        $items2 = Knowhow::all();
+        // 知っトク情報を最新の６件分取得
+        // $items2 = Knowhow::all();
+        $items2 = Knowhow::orderBy('created_at', 'desc')->take(6)->get();
         $knowhows = [
             'items2' => $items2,
         ];
 
-        // 難易度別に各言語のランキングTOP3のデータを取得
-        $items3 = Score::all();
-        $scores = [
+        // HTMLでスコアが高い順にデータを３件分取得
+        // $items3 = Score::all();
+        // 1：HTML
+        $items3 = Score::where('game_id', 1)->orderBy('score', 'desc')->take(3)->get();
+        $scoresHTML = [
             'items3' => $items3,
         ];
 
+        // CSSでスコアが高い順にデータを３件分取得
+        // 2：CSS
+        $items4 = Score::where('game_id', 2)->orderBy('score', 'desc')->take(3)->get();
+        $scoresCSS = [
+            'items4' => $items4,
+        ];
+
+        // JavaScriptでスコアが高い順にデータを３件分取得
+        // 3：JavaScript
+        $items5 = Score::where('game_id', 3)->orderBy('score', 'desc')->take(3)->get();
+        $scoresJS = [
+            'items5' => $items5,
+        ];
+
+        // PHPでスコアが高い順にデータを３件分取得
+        // 4：PHP
+        $items6 = Score::where('game_id', 4)->orderBy('score', 'desc')->take(3)->get();
+        $scoresPHP = [
+            'items6' => $items6,
+        ];
+
+
+        // pythonでスコアが高い順にデータを３件分取得
+        // 5：python
+        $items7 = Score::where('game_id', 5)->orderBy('score', 'desc')->take(3)->get();
+        $scoresPython = [
+            'items7' => $items7,
+        ];
+
+        // データベースから渡したいデータを配列変数に入れて一括で渡す
         $data = [
             'news' => $news,
             'knowhows' => $knowhows,
-            'scores' => $scores,
+            'scoresHTML' => $scoresHTML,
+            'scoresCSS' => $scoresCSS,
+            'scoresJS' => $scoresJS,
+            'scoresPHP' => $scoresPHP,
+            'scoresPython' => $scoresPython,
         ];
 
         // viewの引数っていくつでも増やせる
