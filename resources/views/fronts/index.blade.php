@@ -88,7 +88,7 @@
             {{-- ダッシュコースが選ばれていたら難易度idが２の情報のみ表示する --}}
             @if($_GET['param']==2)
                 @if(isset($scoresEnglish2))
-                    @foreach($scoresHTML2['items14'] as $item14)
+                    @foreach($scoresEnglish2['items14'] as $item14)
                             <tr>
                                 <th>{{ $item14->username }}</th>
                                 <th>{{ $item14->score }}</th>

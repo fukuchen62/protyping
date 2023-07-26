@@ -32,22 +32,22 @@
             </select>
         </div>
         <div>単語(スペル)
-            <input type="text" name="word_spell">
+            <input type="text" name="word_spell" value="{{ old('word_spell') }}">
         </div>
         <div>発音(ルビ)
-            <input type="text" name="japanese">
+            <input type="text" name="japanese" value="{{ old('japanese') }}">
         </div>
         <div>意味
-            <input type="textarea" name="meaning">
+            <input type="textarea" name="meaning" value="{{ old('meaning') }}">
         </div>
         <div>使用例
-            <input type="textarea" name="usage">
+            <input type="textarea" name="usage" value="{{ old('usage') }}">
         </div>
         <div>備考欄
-            <input type="textarea" name="memo">
+            <input type="textarea" name="memo" value="{{ old('memo') }}">
         </div>
         <div>メールアドレス
-            <input type="email" name="email">
+            <input type="email" name="email" value="{{ old('email') }}">
         </div>
         <div>
             {{-- ユーザに登録させない登録日時 --}}

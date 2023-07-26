@@ -94,8 +94,6 @@ class ContactController extends Controller
         $verification->fill($form)->save();
 
         // お問い合わせフォームに遷移する
-        // return redirect('front.contacts_verification')->with('success', 'お問い合わせが送信されました！');
-        // return view('fronts.contacts_verification')->with('success', 'お問い合わせが送信されました！');
-        return redirect()->route('contact');
+        return redirect()->route('contact')->with('success', 'お問い合わせが送信されました！');
     }
 }
