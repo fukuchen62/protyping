@@ -70,9 +70,9 @@ ul {
     width: 100%;
     border-top: 4px solid#D6A923;
     color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
+    /* position: fixed; */
+    /* top: 0;
+    left: 0; */
     z-index: 9999;
 }
 
