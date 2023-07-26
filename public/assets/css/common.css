@@ -1,8 +1,25 @@
 @charset "utf-8";
 
+*{
+    box-sizing: border-box;
+}
+
+/* html */
+html{
+    font-size: 62.5%; /* 16pxを10pxにしてる */
+    -webkit-locale: "ja"; /* 日本語のロケールを使用するように指定（日本語の曜日名や通貨単位、数値の桁区切りなどを適切に表示） */
+    -webkit-text-size-adjust: 100%; /* ブラウザによるテキストの自動拡大、縮小を無効にし、常に指定されたフォントサイズで表示する */
+}
+
 /* body */
 body{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
     background-color: #26567C;
+    color: #8B8B8B;
+    min-width: 320px;
+    overflow-x: hidden; /* 横スクロールを表示しなくなる設定 */
+    overflow-y: scroll; /* 要素内のコンテンツが要素をの高さを超えた場合に垂直方向のスクロールバーを表示する（ブログ記事内に長いコメント欄がある場合などに使用する） */
+    text-rendering: optimizeLegibility; /* フォントがなめらかに表示されます（ブラウザによってもフォントの見え方が統一され、読みやすさが向上する） */
 }
 
 /* メイン */
@@ -39,10 +56,20 @@ body{
     justify-content: center;
 } */
 
+ul {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
 /* ヘッダー */
 .header {
     background-color: #26567C;
     width: 100%;
+    border-top: 4px solid#D6A923;
+    color: #fff;
     position: fixed;
     top: 0;
     left: 0;
@@ -70,6 +97,7 @@ body{
     align-items: center;
     padding: 0 20px;
     width: 100%;
+    height: 50px;
     max-width: 1080px;
     margin: 0 auto;
 }
@@ -82,7 +110,7 @@ body{
 /* ハンバーガーメニューの設置スペース */
 .drawerOpen {
     display: flex;
-    width: 54%;
+    /* width: 54%; */
     justify-content: flex-end;
     align-items: center;
     position: relative;
@@ -105,7 +133,7 @@ body{
 }
 
 /* 上の線の位置調整 */
-.draweOpen span:after {
+.drawerOpen span:after {
     /* background: red; */
     bottom: 8px;
 }
@@ -134,7 +162,7 @@ body{
 }
 
 /* ナビゲーションのデザイン*/
-.nav {
+.navContent {
     list-style: none;
     display: none;
     width: 100%;
@@ -145,35 +173,38 @@ body{
     padding: 0 0 10px 0;
     clear: both;
     z-index: 1000;
-    background: rgba(127, 54, 54, 0.95);
+    background: rgba(59, 163, 228, 0.95);
     text-align: center;
     padding-top: 20px;
     transition: opacity 1s ease-in-out;
 }
 
 /* アイコンがクリックされたらメニューを表示 */
-#drawerInput:checked ~ .nav {
+#drawerInput:checked ~ .navContent {
     display: block;
     opacity: 1;
     transition: 0.5s;
 }
 
-.nav a {
+.navList a {
     text-decoration: none;
     font-weight: 600;
     letter-spacing: 2px;
     font-size: 16px;
     text-transform: capitalize;
+    display: inline-block;
 }
 
-.nav li {
-    padding: 15px 0;
+.navList li {
+    padding: 19px 5px;
     margin: 0 54px;
     transition: 0.5s;
+    background-color: #5FBFED;
+
 }
 
-#drawerInput:checked ~ .nav a,
-#drawerInput:checked ~ .nav li {
+#drawerInput:checked ~ .navList a,
+#drawerInput:checked ~ .navList li {
     opacity: 1;
     transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.2s;
 }
@@ -182,9 +213,67 @@ body{
     display: none;
 }
 
+/* メディアクエリ */
+@media screen and (min-width: 999px) {
+    .header{
+        border-top: 5px solid#D6A923;
+    }
+
+    .container {
+        height: 144px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+    }
+
+    .header img {
+        width: 120px;
+    }
+
+    .headerLogo a {
+        width: 130%;
+    }
+    .drawerOpen span,
+    .drawerOpen span:after,
+    .drawerOpen span:before {
+        display: none;
+    }
+
+    .navContent {
+        display: inline-block;
+        margin-top: 0;
+        width: auto;
+        position: static;
+        padding: 0;
+        background-color: #26567C;
+    }
+    .navList {
+        display: flex;
+    }
+
+    .navList li {
+        margin: 0 0 0 10px;
+        border-radius: 10px;
+    }
+
+    .navList a {
+        font-size: 16px;
+        width: 119px;
+
+    }
+}
+
 /* フッター */
+footer{
+    display: flex;
+}
 
-
+.footerLogo {
+width: 200px;
+height: 49px;
+background-color: #fff;
+}
 
 
 
