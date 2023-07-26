@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>テンプレート</title>
+    <title>ランキング</title>
 
     <!-- 共通CSS -->
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/common.css">
-    <!-- <link rel="stylesheet" href="../assets/css/my.css"> -->
+    <link rel="stylesheet" href="../assets/css/ranking.css">
 
     <!-- slick -->
     <!-- <link rel="stylesheet" href="../assets/css/slick.css">
@@ -65,7 +65,7 @@
                         <li class="ranking">
                             <a href="">ランキング</a>
                         </li>
-                        <li class="myScore">
+                        <li class="MyScore">
                             <a href="">MyScore</a>
                         </li>
                         <li class="shittoku">
@@ -82,11 +82,24 @@
         </div>
     </header>
 
+    <!-- ここからメイン -->
     <main id="main" class="main">
+        <div class="breadCrumb">パンくずリスト</div>
 
-        <div class="kv">
-            <h1>ページのタイトル</h1>
-            <img src="" alt="" srcset="">
+        <h2>ランキング</h2>
+        <p>ランキングコースに挑戦し、ユーザーネームを登録するとこのページに反映されます。ランキング1位目指して自分の限界に挑戦しよう！</p>
+
+        <!-- プルダウンメニュー -->
+        <div class="selectWrap">
+            <!-- <select name="word"> -->
+            <select name="word" required> <!-- required：選択必須を指定 -->
+                <option value="" disabled>言語を選ぶ 　　　</option>
+                <option value="HTML">HTML　　　</option>
+                <option value="CSS">CSS　　　</option>
+                <option value="JavaScript">JavaScript　　　</option>
+                <option value="PHP">PHP　　　</option>
+                <option value="Python">Python　　　</option>
+            </select>
         </div>
 
         <section>
