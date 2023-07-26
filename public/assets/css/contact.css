@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+h2{
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.contactWarning{
+    text-align: center;
+}
+
+.contact {
+    width:280px;/*横幅*/
+    margin:0 auto;/*中央寄せ*/
+    padding:60px 0;
+}
+
+.contactTable{
+    width: 100vw;
+    margin-bottom:20px;
+}
+
+.contactItem{
+    margin:auto;
+    border:1px solid #8B8B8B;
+    /* text-align: left; */
+    background-color:#fff;
+    width:50vw;
+}
+
+.contactBody {
+    padding: 20px;
+    border: 1px solid #8B8B8B;
+    width: 100vw;
+}
+
+.formText {
+    width: 132px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    max-width: 400px;
+}
+
+.formTextarea {
+    width: 100%;
+    padding: 10px;
+    height: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.grayLine{
+    border:solid 1.5px #8B8B8B;
+    margin:10px;
+}
+
+.termsBtn{
+    text-decoration: underline;
+    color:#3168D2;
+    text-align: center;
+    margin:10px;
+
+}
+
+form a:hover{
+    opacity:70%;
+}
+
+.contactSubmit {
+    width: 250px; /* 横幅指定 */
+    background-color: #EAB624; /* 背景色 */
+    color: #FBFF1F; /* 文字色 */
+    font-weight: bold; /* 文字の太さ */
+    display: block; /* インライン要素をブロック要素に変更 */
+    margin: 0 auto; /* 中央寄せ */
+    font-size: 16px; /* 文字の大きさ */
+    padding: 15px; /* 内側の余白 */
+    border-radius:10px; /* 角丸指定 */
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    text-align: center;
+}
