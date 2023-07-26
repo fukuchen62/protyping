@@ -213,72 +213,6 @@ ul {
     display: none;
 }
 
-/* メディアクエリ */
-@media screen and (min-width: 999px) {
-    .header{
-        border-top: 5px solid#D6A923;
-    }
-
-    .container {
-        height: 144px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 30px;
-    }
-
-    .header img {
-        width: 120px;
-    }
-
-    .headerLogo a {
-        width: 130%;
-    }
-    .drawerOpen span,
-    .drawerOpen span:after,
-    .drawerOpen span:before {
-        display: none;
-    }
-
-    .navContent {
-        display: inline-block;
-        margin-top: 0;
-        width: auto;
-        position: static;
-        padding: 0;
-        background-color: #26567C;
-    }
-    .navList {
-        display: flex;
-    }
-
-    .navList li {
-        margin: 0 0 0 10px;
-        border-radius: 10px;
-    }
-
-    .navList a {
-        font-size: 16px;
-        width: 119px;
-
-    }
-}
-
-/* フッター */
-footer{
-    display: flex;
-}
-
-.footerLogo {
-width: 200px;
-height: 49px;
-background-color: #fff;
-}
-
-
-
-
-
 
 /* フォントサイズ */
 h2{
@@ -344,15 +278,162 @@ p{
 
 
 /* 一覧を見るボタン */
-/* <a href="" class="btn btn--orange btn--radius">PUSH</a> */
-.linkBtn {
+/* .linkBtn {
+    font-size: 1rem;
     color: #fff;
     background-color: #5FBFED;
-    border-radius: 25%;
+    display: block;
+    width: 5.6rem;
+    height: 2.5rem;
+    border-radius: 100vh;
+    text-decoration: none;
+    text-align: center;
+    line-height: 2.5rem;
 }
 .linkBtn:hover {
     color: #fff;
-    background: lightblue;
+    background: #78cff7;
+} */
+
+
+/* プルダウンメニュー */
+
+.select_wrap {
+    overflow: hidden;
+    width: 20%;
+    text-align:left;
+    /* width: 11.9375rem;
+    height: 2.5rem; */
+
 }
 
-/* 一覧を見るボタン */
+.select_wrap select {
+    /* width: 11.9375em ;
+    height: 2.5rem; */
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+
+}
+
+.select_wrap select::-ms-expand {
+    display: none;
+}
+
+.select_wrap {
+    position: relative;
+    border-radius: 10px;
+    background: #F0F0F0;
+    border: 0.5px solid #625858;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5), inset 0px -3px 6px -2px rgba(0, 0, 0, 0.3);
+}
+
+.select_wrap:before {
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    padding: 0;
+    content: '';
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid #625858;
+    pointer-events: none;
+
+}
+.select_wrap select {
+    padding: 10px;
+    color: #625858;
+}
+
+/* ランキング、マイスコアボタン */
+
+.gameBtn {
+    color: #fff;
+    background-color: r;
+    border-bottom: 6px solid #DEC597;
+    width:  11.875rem ;
+    height: 4rem ;
+    display: block;
+    border-radius:100vh;
+    background: linear-gradient(to bottom right,#FFD533,#DCAC2D,#BB6617 );
+
+    text-decoration: none;
+    text-align: center;
+    line-height: 3.4375rem;
+}
+
+.gameBtn:hover {
+    margin-top: 3px;
+    background: #DCAC2D;
+    border-bottom: 2px solid #DEC597;
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+}
+
+
+/* メディアクエリ */
+@media screen and (min-width: 999px) {
+    .header{
+        border-top: 5px solid#D6A923;
+    }
+
+    .container {
+        height: 144px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+    }
+
+    .header img {
+        width: 120px;
+    }
+
+    .headerLogo a {
+        width: 130%;
+    }
+    .drawerOpen span,
+    .drawerOpen span:after,
+    .drawerOpen span:before {
+        display: none;
+    }
+
+    .navContent {
+        display: inline-block;
+        margin-top: 0;
+        width: auto;
+        position: static;
+        padding: 0;
+        background-color: #26567C;
+    }
+    .navList {
+        display: flex;
+    }
+
+    .navList li {
+        margin: 0 0 0 10px;
+        border-radius: 10px;
+    }
+
+    .navList a {
+        font-size: 16px;
+        width: 119px;
+
+    }
+}
+
+/* フッター */
+footer{
+    display: flex;
+}
+
+.footerLogo {
+width: 200px;
+height: 49px;
+background-color: #fff;
+}
