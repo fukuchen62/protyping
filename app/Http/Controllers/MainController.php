@@ -61,26 +61,60 @@ class MainController extends Controller
             'items9' => $items9,
         ];
 
-        // JavaScriptでスコアが高い順にデータを３件分取得
+        // JavaScriptで難易度１(ゆっくりコース)スコアが高い順にデータを３件分取得
         // 3：JavaScript
-        $items5 = Score::where('language_id', 3)->orderBy('score', 'desc')->take(3)->get();
+        $items5 = Score::where('language_id', 3)->where('level_id', 1)->orderBy('score', 'desc')->take(3)->get();
         $scoresJS = [
             'items5' => $items5,
         ];
 
-        // PHPでスコアが高い順にデータを３件分取得
+        // JavaScriptで難易度２(ダッシュコース)スコアが高い順にデータを３件分取得
+        // 3：JavaScript
+        $items10 = Score::where('language_id', 3)->where('level_id', 2)->orderBy('score', 'desc')->take(3)->get();
+        $scoresJS2 = [
+            'items10' => $items10,
+        ];
+
+        // PHPで難易度１(ゆっくりコース)スコアが高い順にデータを３件分取得
         // 4：PHP
-        $items6 = Score::where('language_id', 4)->orderBy('score', 'desc')->take(3)->get();
+        $items6 = Score::where('language_id', 4)->where('level_id', 1)->orderBy('score', 'desc')->take(3)->get();
         $scoresPHP = [
             'items6' => $items6,
         ];
 
+        // PHPで難易度２(ダッシュコース)スコアが高い順にデータを３件分取得
+        // 4：PHP
+        $items11 = Score::where('language_id', 4)->where('level_id', 2)->orderBy('score', 'desc')->take(3)->get();
+        $scoresPHP2 = [
+            'items11' => $items11,
+        ];
 
-        // pythonでスコアが高い順にデータを３件分取得
+        // pythonで難易度(のんびりコース)スコアが高い順にデータを３件分取得
         // 5：python
-        $items7 = Score::where('language_id', 5)->orderBy('score', 'desc')->take(3)->get();
+        $items7 = Score::where('language_id', 5)->where('level_id', 1)->orderBy('score', 'desc')->take(3)->get();
         $scoresPython = [
             'items7' => $items7,
+        ];
+
+        // pythonで難易度(ダッシュコース)スコアが高い順にデータを３件分取得
+        // 5：python
+        $items12 = Score::where('language_id', 5)->where('level_id', 2)->orderBy('score', 'desc')->take(3)->get();
+        $scoresPython2 = [
+            'items12' => $items12,
+        ];
+
+        // よく使う英単語で難易度(のんびりコース)スコアが高い順にデータを３件分取得
+        // 6：よく使う英単語
+        $items13 = Score::where('language_id', 6)->where('level_id', 1)->orderBy('score', 'desc')->take(3)->get();
+        $scoresEnglish = [
+            'items13' => $items13,
+        ];
+
+        // よく使う英単語で難易度(ダッシュコース)スコアが高い順にデータを３件分取得
+        // 6：よく使う英単語
+        $items14 = Score::where('language_id', 6)->where('level_id', 2)->orderBy('score', 'desc')->take(3)->get();
+        $scoresEnglish2 = [
+            'items14' => $items14,
         ];
 
         // データベースから渡したいデータを配列変数に入れて一括で渡す
@@ -94,6 +128,11 @@ class MainController extends Controller
             'scoresPython' => $scoresPython,
             'scoresHTML2' => $scoresHTML2,
             'scoresCSS2' => $scoresCSS2,
+            'scoresJS2' => $scoresJS2,
+            'scoresPHP2' => $scoresPHP2,
+            'scoresPython2' => $scoresPython2,
+            'scoresEnglish' => $scoresEnglish,
+            'scoresEnglish2' => $scoresEnglish2,
         ];
 
         // viewの引数っていくつでも増やせる
