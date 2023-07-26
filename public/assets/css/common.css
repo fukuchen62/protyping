@@ -6,7 +6,8 @@
 
 /* html */
 html{
-    /* font-size: 62.5%; 16pxを10pxにしてる */
+    /* 16pxを10pxにしてる */
+    font-size: 62.5%;
     -webkit-locale: "ja"; /* 日本語のロケールを使用するように指定（日本語の曜日名や通貨単位、数値の桁区切りなどを適切に表示） */
     -webkit-text-size-adjust: 100%; /* ブラウザによるテキストの自動拡大、縮小を無効にし、常に指定されたフォントサイズで表示する */
 }
@@ -27,6 +28,7 @@ body{
     margin: 0 20px;
     background-color: #fff;
     padding: 10px;
+    height: 100vh;
 }
 /* デバッグ用 */
 /* .debug{
@@ -216,7 +218,7 @@ ul {
 
 
 /* フォントサイズ */
-h2{
+/* h2{
     font-size: 2rem;
 }
 
@@ -238,7 +240,7 @@ h6{
 
 p{
     font-size: 1rem;
-}
+} */
 
 /* 上に戻るボタン */
 #btn{
@@ -432,9 +434,13 @@ p{
 
 
 .footer{
-
+margin: 10px 0 0 0;
     background-color: #5FBFED;
     height: 141px;
+}
+
+.footerWrap{
+    padding: 27px;
 }
 
 .footerLogo {
@@ -443,12 +449,13 @@ height: 49px;
 background-color: #fff;
 }
 
-.copyright p{
+.copyright{
     text-align: center;
 }
 
-.footer p {
+.footer small {
     color: #fff;
+    font-size: 5%;
 }
 
 .footerLogo {
