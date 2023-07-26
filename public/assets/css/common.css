@@ -278,7 +278,7 @@ p{
 
 
 /* 一覧を見るボタン */
-/* .linkBtn {
+.listBtn {
     font-size: 1rem;
     color: #fff;
     background-color: #5FBFED;
@@ -290,10 +290,10 @@ p{
     text-align: center;
     line-height: 2.5rem;
 }
-.linkBtn:hover {
+.listBtn:hover {
     color: #fff;
     background: #78cff7;
-} */
+}
 
 
 /* プルダウンメニュー */
