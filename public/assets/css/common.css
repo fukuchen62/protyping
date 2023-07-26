@@ -24,8 +24,9 @@ body{
 
 /* メイン */
 .main{
-    margin: 20px;
+    margin: 0 20px;
     background-color: #fff;
+    padding: 10px;
 }
 /* デバッグ用 */
 /* .debug{
@@ -430,10 +431,20 @@ p{
 /* フッター */
 footer{
     display: flex;
+    background-color: #5FBFED;
+    height: 141px;
 }
 
 .footerLogo {
 width: 200px;
 height: 49px;
 background-color: #fff;
+}
+
+.footer p {
+    color: #fff;
+}
+
+.footerLogo {
+justify-content: space-around;
 }
