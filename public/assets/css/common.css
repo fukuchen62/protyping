@@ -6,7 +6,7 @@
 
 /* html */
 html{
-    font-size: 62.5%; /* 16pxを10pxにしてる */
+    /* font-size: 62.5%; 16pxを10pxにしてる */
     -webkit-locale: "ja"; /* 日本語のロケールを使用するように指定（日本語の曜日名や通貨単位、数値の桁区切りなどを適切に表示） */
     -webkit-text-size-adjust: 100%; /* ブラウザによるテキストの自動拡大、縮小を無効にし、常に指定されたフォントサイズで表示する */
 }
@@ -429,8 +429,10 @@ p{
 }
 
 /* フッター */
-footer{
-    display: flex;
+
+
+.footer{
+
     background-color: #5FBFED;
     height: 141px;
 }
@@ -441,10 +443,14 @@ height: 49px;
 background-color: #fff;
 }
 
+.copyright p{
+    text-align: center;
+}
+
 .footer p {
     color: #fff;
 }
 
 .footerLogo {
-justify-content: space-around;
+margin: 0 auto;
 }
