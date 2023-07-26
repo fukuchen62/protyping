@@ -35,28 +35,28 @@ class MainController extends Controller
         // HTMLでスコアが高い順にデータを３件分取得
         // $items3 = Score::all();
         // 1：HTML
-        $items3 = Score::where('game_id', 1)->orderBy('score', 'desc')->take(3)->get();
+        $items3 = Score::where('language_id', 1)->orderBy('score', 'desc')->take(3)->get();
         $scoresHTML = [
             'items3' => $items3,
         ];
 
         // CSSでスコアが高い順にデータを３件分取得
         // 2：CSS
-        $items4 = Score::where('game_id', 2)->orderBy('score', 'desc')->take(3)->get();
+        $items4 = Score::where('language_id', 2)->orderBy('score', 'desc')->take(3)->get();
         $scoresCSS = [
             'items4' => $items4,
         ];
 
         // JavaScriptでスコアが高い順にデータを３件分取得
         // 3：JavaScript
-        $items5 = Score::where('game_id', 3)->orderBy('score', 'desc')->take(3)->get();
+        $items5 = Score::where('language_id', 3)->orderBy('score', 'desc')->take(3)->get();
         $scoresJS = [
             'items5' => $items5,
         ];
 
         // PHPでスコアが高い順にデータを３件分取得
         // 4：PHP
-        $items6 = Score::where('game_id', 4)->orderBy('score', 'desc')->take(3)->get();
+        $items6 = Score::where('language_id', 4)->orderBy('score', 'desc')->take(3)->get();
         $scoresPHP = [
             'items6' => $items6,
         ];
@@ -64,7 +64,7 @@ class MainController extends Controller
 
         // pythonでスコアが高い順にデータを３件分取得
         // 5：python
-        $items7 = Score::where('game_id', 5)->orderBy('score', 'desc')->take(3)->get();
+        $items7 = Score::where('language_id', 5)->orderBy('score', 'desc')->take(3)->get();
         $scoresPython = [
             'items7' => $items7,
         ];
