@@ -76,6 +76,6 @@
 
     </div>
 
-    <p class="copyright">Copyright@protyping.com</p>
+    <p class="copyright">Copyright@typecode.com</p>
 
 </footer>

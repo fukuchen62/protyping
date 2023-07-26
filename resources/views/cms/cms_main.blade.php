@@ -44,22 +44,24 @@
         <h3>データの件数</h3>
         <table class="info tbl-count">
             <tr>
+                <th>投稿カテゴリ―</th>
                 <th>ニュース</th>
+                <th>知っトク情報</th>
                 <th>問い合わせ</th>
                 <th>タイピングゲーム</th>
-                <th>知っトク情報</th>
-                <th>言語</th>
                 <th>ランキング</th>
+                <th>言語</th>
                 <th>辞書の単語</th>
                 <th>ユーザー</th>
             </tr>
             <tr>
+                <td>{{ $counts['postcategory_count'] }}</td>
                 <td>{{ $counts['news_count'] }}</td>
+                <td>{{ $counts['knowhow_count'] }}</td>
                 <td>{{ $counts['contact_count'] }}</td>
                 <td>{{ $counts['game_count'] }}</td>
-                <td>{{ $counts['knowhow_count'] }}</td>
-                <td>{{ $counts['language_count'] }}</td>
                 <td>{{ $counts['score_count'] }}</td>
+                <td>{{ $counts['language_count'] }}</td>
                 <td>{{ $counts['vocabulary_count'] }}</td>
                 <td>{{ $counts['user_count'] }}</td>
             </tr>

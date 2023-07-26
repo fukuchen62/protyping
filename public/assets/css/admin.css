@@ -301,11 +301,11 @@ table.tbl-count {
 }
 
 table.tbl-count th {
-    width: 12.5%;
+    width: 10%;
 }
 
 table.tbl-count td {
-    width: 12.5%;
+    width: 10%;
     text-align: center;
 }
 

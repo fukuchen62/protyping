@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 use App\Models\News;
-use App\Models\Category;
+// use App\Models\Category;
 use App\Models\PostCategory;
 use App\Models\Contact;
 // use App\Models\Favorite;
@@ -41,7 +41,7 @@ class AdminController extends Controller
     public function __construct()
     {
         // ログインチェック
-        // $this->middleware('auth');
+        $this->middleware('auth');
     }
 
     /**
@@ -66,6 +66,8 @@ class AdminController extends Controller
         $news_count = News::whereNull('deleted_at')->count();
         // Contact件数
         $contact_count = Contact::count();
+        // PostCategory件数
+        $postcategory_count = PostCategory::count();
         // Game件数
         $game_count = Game::whereNull('deleted_at')->count();
         // Knowhow件数
@@ -82,6 +84,7 @@ class AdminController extends Controller
         $counts = [
             'news_count' => $news_count,
             'contact_count' => $contact_count,
+            'postcategory_count' => $postcategory_count,
             'game_count' => $game_count,
             'knowhow_count' => $knowhow_count,
             'language_count' => $language_count,

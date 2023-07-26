@@ -6,10 +6,10 @@
 
     {{-- ディスカッション --}}
     <!-- <meta name="description" content="@yield('description')"> -->
-    <meta name="description" content="休日や週末に徳島で魚を釣ってみたいけど…そんなあなたに「サイト名」。徳島県内の釣れる魚やおすすめスポットを初心者向けにわかりやすく発信中！">
+    <meta name="description" content="">
     {{-- キーワード --}}
     <!-- <meta name="keywords" content="@yield('keywords')"> -->
-    <meta name="keywords" content="釣り、徳島、コース、初心者、ファミリー、フィッシング、海、川、遊び、スポット、アジ、イワシ">
+    <meta name="keywords" content="">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
