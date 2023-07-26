@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Level extends Model
+class PostCategory extends Model
 {
     // use HasFactory;
 
@@ -14,12 +14,14 @@ class Level extends Model
 
     // バリデーションルール
     public static $rules = [
-        'level' => 'required',
+        'category_name' => 'required|max:60',
+        'is_show' => 'requried',
+        'created_at' => 'required',
     ];
 
     public function getTitle()
     {
-        $ret = $this->id . ':' . $this->level;
+        $ret = $this->id . ':' . $this->category_name;
         return $ret;
     }
 }

@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('categories', function (Blueprint $table) {
+        Schema::create('post_categories', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('category', 60)->nullable(false);
+            $table->string('category_name', 60)->nullable(false);
             $table->boolean('is_show')->default(true);
             // created_atをNOT NULLに設定するため、個別に記載
             $table->timestamp('created_at')->nullable(false);
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('categories');
+        Schema::dropIfExists('post_categories');
     }
 };

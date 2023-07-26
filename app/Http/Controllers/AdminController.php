@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\DB;
 
 use App\Models\News;
 use App\Models\Category;
+use App\Models\PostCategory;
 use App\Models\Contact;
 // use App\Models\Favorite;
 use App\Models\Game;

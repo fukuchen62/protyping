@@ -9,16 +9,13 @@ class News extends Model
 {
     // use HasFactory;
 
-    // newsに対するカスタムmodel
-    protected $table = 'news';
-
     // IDは自動生成するものなので、書き換えることはできない
     protected $guarded = array('id');
 
     // バリデーションルール
     public static $rules = [
         'title' => 'required|max:60',
-        'category_id' => 'required',
+        'post_category_id' => 'required',
         'thumbnail' => 'max:200',
         'summary' => 'required|max:250',
         'content' => 'required|max:1024',
@@ -34,14 +31,20 @@ class News extends Model
     }
 
     /**
-     * newsCategory function
+     * postCategory function
      * ニュースカテゴリーテーブルとのリレーション
      *
      * @return void
      */
-    public function newsCategory()
+    public function postCategory()
     {
-        $items = $this->belongsTo('App\Models\Category');
+        $items = $this->belongsTo('App\Models\PostCategory');
         return $items;
+    }
+
+    public function getCategoryName()
+    {
+        $data = $this->postCategory->category_name;
+        return $data;
     }
 }
