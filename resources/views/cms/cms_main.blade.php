@@ -30,7 +30,7 @@
             @foreach ($news_list as $key => $news)
                 <tr>
                     <td>{{ $news->id }}</td>
-                    <td>{{ $news->newsCategory->category_name }}</td>
+                    <td>{{ $news->getCategoryName() }}</td>
                     <td>{{ $news->title }}</td>
                     <td>{{ $news->summary }}</td>
                     <td class="dt">{{ $news->created_at }}</td>

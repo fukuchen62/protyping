@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('knowhows', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title', 60)->nullable(false);
-            $table->integer('category_id')->nullable(false);
+            $table->integer('post_category_id')->nullable(false);
             $table->string('thumbnail', 200)->nullable(true);
             $table->string('summary', 250)->nullable(false);
             $table->string('content', 10000)->nullable(false);

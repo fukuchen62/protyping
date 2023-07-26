@@ -25,7 +25,7 @@
     <!-- reset.cssファイルを読み込む -->
     <link rel=" stylesheet" href="{{ asset('assets/css/reset.css') }}">
     <!-- 共通のCSSファイル -->
-    <link rel="stylesheet" href="{{ asset('assets/css/common.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('assets/css/common.css') }}"> --}}
 
     {{-- バックエンドテスト用CSS --}}
     <link rel="stylesheet" href="{{ asset('assets/css/test.css') }}">
