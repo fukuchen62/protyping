@@ -33,6 +33,7 @@
 
 </head>
 
+
 <body>
     <!-- ヘッダー -->
     <header id="header" class="header">
@@ -44,7 +45,7 @@
             </h1>
 
             <!-- ハンバーガーメニュー部分 -->
-            <div id="hanmburger">
+            <div class="hanmburger">
                 <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
                 <input id="drawerInput" class="drawerHidden" type="checkbox" />
                 <!-- ハンバーガーメニュー -->
@@ -53,22 +54,24 @@
                 </label>
 
                 <!-- ナビゲーション -->
-                <nav id="nav">
-                    <ul>
-                        <li>
+                <nav class="navContent">
+                    <ul class="navList">
+                        <li class="home">
                             <a href="">HOME</a>
                         </li>
-                        <li>
+                        <li class="dictionary">
                             <a href="">辞書</a>
                         </li>
-                        <li><a href="">ランキング</a></li>
-                        <li>
+                        <li class="ranking">
+                            <a href="">ランキング</a>
+                        </li>
+                        <li class="MyScore">
                             <a href="">MyScore</a>
                         </li>
-                        <li>
+                        <li class="shittoku">
                             <a href="">知っトク情報</a>
                         </li>
-                        <li>
+                        <li class="contact">
                             <a href="">お問い合わせ</a>
                         </li>
                     </ul>
@@ -95,9 +98,10 @@
     <footer>
         <div class="footer">
             <div class="footerLogo">
+                <a href=""><img src="" alt="タイプコード" srcset=""></a>
             </div>
             <div>
-                <p>Copyright©<a href="">タイプコード</a>, All Rights Reserved.</p>
+                <p>Copyright©<a href="">タイプコード</a> All Rights Reserved.</p>
             </div>
         </div>
     </footer>
