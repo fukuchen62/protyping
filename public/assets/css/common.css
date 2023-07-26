@@ -27,8 +27,8 @@ body{
 .main{
     margin: 0 20px;
     background-color: #fff;
-    padding: 10px;
-    height: 100vh;
+    /* padding: 10px; */
+    /* height: 100vh; */
 }
 /* デバッグ用 */
 /* .debug{
@@ -218,11 +218,11 @@ ul {
 
 
 /* フォントサイズ */
-/* h2{
-    font-size: 2rem;
+h2{
+    font-size: 2.2rem;
 }
 
-h3{
+/* h3{
     font-size: 1.375rem;
 }
 

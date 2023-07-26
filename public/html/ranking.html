@@ -84,48 +84,111 @@
 
     <!-- ここからメイン -->
     <main id="main" class="main">
+
+        <!-- パンくずリスト -->
         <div class="breadCrumb">パンくずリスト</div>
 
-        <h2>ランキング</h2>
-        <p>ランキングコースに挑戦し、ユーザーネームを登録するとこのページに反映されます。ランキング1位目指して自分の限界に挑戦しよう！</p>
+        <!-- タイトル -->
+        <section class="info">
+            <h2>ランキング</h2>
+            <p>ランキングコースに挑戦し、ユーザーネームを登録するとこのページに反映されます。ランキング1位目指して自分の限界に挑戦しよう！</p>
+        </section>
 
         <!-- プルダウンメニュー -->
         <div class="selectWrap">
             <!-- <select name="word"> -->
             <select name="word" required> <!-- required：選択必須を指定 -->
-                <option value="" disabled>言語を選ぶ 　　　</option>
-                <option value="HTML">HTML　　　</option>
-                <option value="CSS">CSS　　　</option>
-                <option value="JavaScript">JavaScript　　　</option>
-                <option value="PHP">PHP　　　</option>
-                <option value="Python">Python　　　</option>
+                <option value="初級">初級</option>
+                <option value="中級">中級</option>
             </select>
         </div>
 
-        <section>
-            <h2>サブタイトル</h2>
-            <!-- ここから各ページのメインコンテンツ -->
+        <nav class="word">
+            <div>
+                <a href="#engword">プログラミングで使う英単語</a>
+            </div>
+            <div>
+                <a href="#html">HTML</a>
+            </div>
+            <div>
+                <a href="#css">css</a>
+            </div>
+            <div>
+                <a href="#javascript">JavaScript</a>
+            </div>
+            <div>
+                <a href="#php">PHP</a>
+            </div>
+            <div>
+                <a href="#python">Python</a>
+            </div>
+        </nav>
+
+        <!-- ここから動的 -->
+        <section class="rankingWrap">
+
+            <div class="card">
+                <h3 id="engword">プログラミングで使う英単語</h3>
+                <div>
+                    <p>1位　しんちゃん</p>
+                    <p class="score">00点</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 id="html">HTML</h3>
+                <div>
+                    <p>1位　しんちゃん</p>
+                    <p class="score">00点</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 id="css">css</h3>
+                <div>
+                    <p>1位　しんちゃん</p>
+                    <p class="score">00点</p>
+                </div>
+            </div>
+            <div class="card">
+                <h3 id="javascript">JavaScript</h3>
+                <div>
+                    <p>1位　しんちゃん</p>
+                    <p class="score">00点</p>
+                </div>
+            </div>
+            <div class="card">
+                <h3 id="php">PHP</h3>
+                <div>
+                    <p>1位　しんちゃん</p>
+                    <p class="score">00点</p>
+                </div>
+            </div>
+            <div class="card">
+                <h3 id="python">Python</h3>
+                <div>
+                    <p>1位　しんちゃん</p>
+                    <p class="score">00点</p>
+                </div>
+            </div>
         </section>
 
-        <!-- 一覧を見る -->
-        <a href="" class="listBtn">一覧を見る</a>
 
         <!-- ランキング、マイスコアボタン -->
-        <a href="" class="gameBtn">ゲームに挑戦</a>
-
-        <!-- プルダウンメニュー -->
-        <div class="select_wrap">
-            <!-- <select name="word"> -->
-            <select name="word" required> <!-- required：選択必須を指定 -->
-                <option value="" disabled>言語を選ぶ 　　　</option>
-                <option value="HTML">HTML　　　</option>
-                <option value="CSS">CSS　　　</option>
-                <option value="JavaScript">JavaScript　　　</option>
-                <option value="PHP">PHP　　　</option>
-                <option value="Python">Python　　　</option>
-            </select>
+        <div class="gameChallenge">
+            <a href="" class="challengeBtn">ゲームに挑戦</a>
+        </div>
+        <div class="viewMyscore">
+            <a href="" class="viewBtn">MyScoreを見る</a>
         </div>
 
+
+
+            <div id="btn">
+                <a href="#">
+                    <div class="arrow_up"></div><!-- クラス名変更必要 -->
+                </a>
+            </div>
 
     </main>
 
