@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="../assets/css/index.css">
 
     <!-- slick -->
-    <link rel="stylesheet" href="../assets/css/slick.css">
-    <link rel="stylesheet" href="../assets/css/slick-theme.css">
+    <!-- <link rel="stylesheet" href="../assets/css/slick.css">
+    <link rel="stylesheet" href="../assets/css/slick-theme.css"> -->
 
     <!-- jqueryの読み込み -->
     <script src="../assets/js/vendor/jquery-3.6.3.min.js"></script>
@@ -26,30 +26,34 @@
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;800;900&family=Montserrat:wght@500&display=swap" rel="stylesheet">
 
     <!-- ファビコン -->
-    <link rel="shortcut icon" href="../assets/images/favicon/favicon.ico">
+    <!-- <link rel="shortcut icon" href="../assets/images/favicon/favicon.ico"> -->
 
     <!-- アイコンフォント -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-    <script defer src="https://use.fontawesome.com/releases/v6.4.0/js/all.js"></script>
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <script defer src="https://use.fontawesome.com/releases/v6.4.0/js/all.js"></script> -->
 </head>
 
 
 <body>
-    <header>
-
-    </header>
+<header>
+</header>
 
     <!-- ここからメイン -->
-    <main class="main">
+<main class="main">
             <!-- ゲーム画面１ -->
     <section id="gameBody">
-        <div id="game-title">GAME</div>
-            <img src="../assets/images/cat.jpg" alt="">
-                <button id="start-button" type="button"><a href="../html/typing_game.html">スタートするにゃー</a></button>
-                <p>※こちらはパソコンで遊べるゲームです。</p>
-    </section>
+        <div id="gameTitle">GAME</div>
 
-    <section class="topRanking">
+            <button id="startBtn" type="button">
+                <a href="../html/typing_game.html">ゲームをする</a>
+            </button>
+            <p class="warning">※こちらはパソコンで遊べるゲームです。</p>
+            <img class="gameChara"src="../assets/images/cat.jpg" alt="">
+    </section>
+<section class="gameSummary">
+    <p>プログラミングでよく使う英単語のタイピングゲームができるWEBアプリです。基本的な動きはJavaScriptで実装しております。何度も繰り返し挑戦することで、プログラミングで使う英単語のスペル習得、専門用語とタイピング速度の向上と意味の3つの力がつくと共にIT業界で、役立つ基本的な情報(知っトク情報)も喝采しておりますので、WEB関係の仕事を目指す方々の助けになれれば幸いです。</p>
+</section>
+    <!-- <section class="topRanking">
         <img src="../assets/images/Group.jpg" alt="">
         <h6>ランキング</h6>
         <img src="../assets/images/Group.jpg" alt="">
@@ -57,8 +61,7 @@
             <option value="のんびりコース">のんびりコース</option>
             <option value="駆け足コース">駆け足コース</option>
     </select>
-
-        <section>
+    <section>
             <p>HTML
                 <ul class="topHtmlRanking">
                     1位<li>しんちゃん</li>
@@ -103,29 +106,13 @@
                 </ul>
             </p>
         </section>
-</section>
-            <!-- 更新情報 -->
-            <section class="updateNews"><h5>更新情報</h5>
-            <a class="listBtn" href="../html/update.html">一覧を見る</a>
-            <p>サイト内の日々の更新をUPしていきます</p>
-            <ul class="updateList">
-                <li> <a href="../html/update.html">2023/08/18<br>
-                        <span>Python単語追加</span></a>
-                </li>
-                <li> <a href="../html/update.html">2023/08/18<br>
-                        <span>Python単語追加</span></a>
-                </li>
-                <li> <a href="../html/update.html">2023/08/18<br>
-                        <span>Python単語追加</span></a>
-                </li>
-
-            </ul></section>
-
+    </section> -->
             <!-- 知っトク情報 -->
             <section class="infoNews">
-                <h5>知っトク情報</h5>
-                <a class="listBtn" href="../html/shittoku.html">一覧を見る</a>
-                <p>サイト内の日々の更新をUPしていきます</p>
+                    <h5>知っトク情報</h5>
+                        <div class="listBtn"><a href="../html/shittoku.html">一覧を見る</a></div>
+                    <p>サイト内の日々の更新をUPしていきます</p>
+                <div class="yellowLine"></div>
                 <ul class="infoList">
                     <li> <a href="../html/shittoku.html"><img src="../assets/images/cat.jpg" alt="">
                             <span>【ショートカット】</span></a>
@@ -139,6 +126,28 @@
 
                 </ul>
             </section>
+
+                <!-- 更新情報 -->
+                <section class="updateNews">
+                    <h5>更新情報</h5>
+                    <div  class="listBtn"><a href="../html/update.html">一覧を見る</a></div>
+                    <p>サイト内の日々の更新をUPしていきます</p>
+                    <div class="yellowLine"></div>
+                    <ul class="updateList">
+                        <li> <a href="../html/update.html">2023/08/18<br>
+                                <span>Python単語追加</span></a>
+                        </li>
+                        <div class="updateLine"></div>
+                        <li> <a href="../html/update.html">2023/08/18<br>
+                                <span>Python単語追加</span></a>
+                        </li>
+                        <div class="updateLine"></div>
+                        <li> <a href="../html/update.html">2023/08/18<br>
+                                <span>Python単語追加</span></a>
+                        </li>
+
+                    </ul>
+                </section>
 
             <div id="btn"><a href="#"><div class="arrow_up"></div></a></div>
 
