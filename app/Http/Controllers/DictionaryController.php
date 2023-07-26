@@ -25,7 +25,6 @@ class DictionaryController extends Controller
         // モデルからデータを取得
         $items = Vocabulary::all();
         $data = [
-            'param' => '',
             'items' => $items,
         ];
         return view('fronts.languages_dictionary', $data);

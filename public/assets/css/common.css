@@ -6,7 +6,8 @@
 
 /* html */
 html{
-    font-size: 62.5%; /* 16pxを10pxにしてる */
+    /* 16pxを10pxにしてる */
+    font-size: 62.5%;
     -webkit-locale: "ja"; /* 日本語のロケールを使用するように指定（日本語の曜日名や通貨単位、数値の桁区切りなどを適切に表示） */
     -webkit-text-size-adjust: 100%; /* ブラウザによるテキストの自動拡大、縮小を無効にし、常に指定されたフォントサイズで表示する */
 }
@@ -24,8 +25,10 @@ body{
 
 /* メイン */
 .main{
-    margin: 20px;
+    margin: 0 20px;
     background-color: #fff;
+    padding: 10px;
+    height: 100vh;
 }
 /* デバッグ用 */
 /* .debug{
@@ -213,6 +216,169 @@ ul {
     display: none;
 }
 
+
+/* フォントサイズ */
+/* h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.375rem;
+}
+
+h4{
+    font-size:1.25rem;
+}
+
+h5{
+    font-size: 1.125rem;
+}
+
+h6{
+    font-size: 1.0625rem;
+}
+
+p{
+    font-size: 1rem;
+} */
+
+/* 上に戻るボタン */
+#btn{
+    width: 3.25rem;
+    height: 3.25rem;
+    /* margin-right:15px;
+    margin-bottom:15px; */
+    border-radius:50%;
+    position: fixed;
+    bottom: 0;
+    right: 40px;
+    background-color: #BAB624;
+    }
+
+    /* 上に戻るボタンの矢印 */
+    /* 長方形 */
+.arrow_up {
+	font-size: 30px;
+	position: relative;
+	width: 0.6rem;
+	height: 1rem;
+	background-color: #ffff;
+}
+/* 三角 */
+.arrow_up::before {
+	position: absolute;
+	top: -0.6rem;
+	left: -0.5rem;
+	width: 0;
+	height: 0;
+	content: "";
+	border-bottom: 0.8rem solid #ffff;
+	border-left: 0.8rem solid transparent;
+	border-right: 0.8rem solid transparent;
+}
+
+/* ページネーション */
+
+
+/* 一覧を見るボタン */
+.listBtn {
+    font-size: 1rem;
+    color: #fff;
+    background-color: #5FBFED;
+    display: block;
+    width: 5.6rem;
+    height: 2.5rem;
+    border-radius: 100vh;
+    text-decoration: none;
+    text-align: center;
+    line-height: 2.5rem;
+}
+.listBtn:hover {
+    color: #fff;
+    background: #78cff7;
+}
+
+
+/* プルダウンメニュー */
+
+.select_wrap {
+    overflow: hidden;
+    width: 20%;
+    text-align:left;
+    /* width: 11.9375rem;
+    height: 2.5rem; */
+
+}
+
+.select_wrap select {
+    /* width: 11.9375em ;
+    height: 2.5rem; */
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+
+}
+
+.select_wrap select::-ms-expand {
+    display: none;
+}
+
+.select_wrap {
+    position: relative;
+    border-radius: 10px;
+    background: #F0F0F0;
+    border: 0.5px solid #625858;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5), inset 0px -3px 6px -2px rgba(0, 0, 0, 0.3);
+}
+
+.select_wrap:before {
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    padding: 0;
+    content: '';
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid #625858;
+    pointer-events: none;
+
+}
+.select_wrap select {
+    padding: 10px;
+    color: #625858;
+}
+
+/* ランキング、マイスコアボタン */
+
+.gameBtn {
+    color: #fff;
+    background-color: r;
+    border-bottom: 6px solid #DEC597;
+    width:  11.875rem ;
+    height: 4rem ;
+    display: block;
+    border-radius:100vh;
+    background: linear-gradient(to bottom right,#FFD533,#DCAC2D,#BB6617 );
+
+    text-decoration: none;
+    text-align: center;
+    line-height: 3.4375rem;
+}
+
+.gameBtn:hover {
+    margin-top: 3px;
+    background: #DCAC2D;
+    border-bottom: 2px solid #DEC597;
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+}
+
+
 /* メディアクエリ */
 @media screen and (min-width: 999px) {
     .header{
@@ -265,8 +431,16 @@ ul {
 }
 
 /* フッター */
-footer{
-    display: flex;
+
+
+.footer{
+margin: 10px 0 0 0;
+    background-color: #5FBFED;
+    height: 141px;
+}
+
+.footerWrap{
+    padding: 27px;
 }
 
 .footerLogo {
@@ -275,84 +449,15 @@ height: 49px;
 background-color: #fff;
 }
 
-
-
-
-
-
-/* フォントサイズ */
-h2{
-    font-size: 2rem;
+.copyright{
+    text-align: center;
 }
 
-h3{
-    font-size: 1.375rem;
-}
-
-h4{
-    font-size:1.25rem;
-}
-
-h5{
-    font-size: 1.125rem;
-}
-
-h6{
-    font-size: 1.0625rem;
-}
-
-p{
-    font-size: 1rem;
-}
-
-/* 上に戻るボタン */
-#btn{
-    width: 3.25rem;
-    height: 3.25rem;
-    /* margin-right:15px;
-    margin-bottom:15px; */
-    border-radius:50%;
-    position: fixed;
-    bottom: 0;
-    right: 40px;
-    background-color: #BAB624;
-    }
-
-    /* 上に戻るボタンの矢印 */
-    /* 長方形 */
-.arrow_up {
-	font-size: 30px;
-	position: relative;
-	width: 0.6rem;
-	height: 1rem;
-	background-color: #ffff;
-}
-/* 三角 */
-.arrow_up::before {
-	position: absolute;
-	top: -0.6rem;
-	left: -0.5rem;
-	width: 0;
-	height: 0;
-	content: "";
-	border-bottom: 0.8rem solid #ffff;
-	border-left: 0.8rem solid transparent;
-	border-right: 0.8rem solid transparent;
-}
-
-/* ページネーション */
-
-
-/* 一覧を見るボタン */
-/* <a href="" class="btn btn--orange btn--radius">PUSH</a> */
-.linkBtn {
+.footer small {
     color: #fff;
-    background-color: #5FBFED;
-    border-radius: 25%;
-}
-.linkBtn:hover {
-    color: #fff;
-    background: lightblue;
+    font-size: 5%;
 }
 
-/* 一覧を見るボタン */
+.footerLogo {
+margin: 0 auto;
+}

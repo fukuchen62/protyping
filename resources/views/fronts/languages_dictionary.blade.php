@@ -23,15 +23,8 @@
     </form>
     <table>
         <tr>
-            <th>種別ID</th>
-            <th>言語種別ID</th>
             <th>英単語(スペル)</th>
             <th>日本語発音(ルビ)</th>
-            <th>英語発音記号</th>
-            <th>意味(プログラミング言語)</th>
-            <th>意味(日本語)</th>
-            <th>使用例</th>
-            <th>難易度ID</th>
         </tr>
 
         @foreach($items as $item)
@@ -39,15 +32,9 @@
                 {{-- 言語別に絞り込まれた場合 --}}
                 @if($item->language_id == $_GET['param'])
                 <tr>
-                    <th>{{ $item->id }}</th>
-                    <th>{{ $item->language_id }}</th>
                     <th>{{ $item->word_spell }}</th>
                     <th>{{ $item->japanese }}</th>
-                    <th>{{ $item->pronunciation }}</th>
-                    <th>{{ $item->meaning }}</th>
-                    <th>{{ $item->notion }}</th>
                     <th>{{ $item->usage }}</th>
-                    <th>{{ $item->level_id }}</th>
                 </tr>
                 @endif
             @else
@@ -55,15 +42,9 @@
                 {{-- 1:HTML --}}
                 @if($item->language_id == 1)
                 <tr>
-                    <th>{{ $item->id }}</th>
-                    <th>{{ $item->language_id }}</th>
                     <th>{{ $item->word_spell }}</th>
                     <th>{{ $item->japanese }}</th>
-                    <th>{{ $item->pronunciation }}</th>
-                    <th>{{ $item->meaning }}</th>
-                    <th>{{ $item->notion }}</th>
                     <th>{{ $item->usage }}</th>
-                    <th>{{ $item->level_id }}</th>
                 </tr>
                 @endif
             @endif

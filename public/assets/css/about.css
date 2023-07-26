@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+/* .aboutDescription {
+    display: flex;
+} */
+
+/* 作業時に使うアウトラインプロパティ
+------------------------------ */
+
+/* * {
+    outline: 1px solid red;
+} */
+
+/* Aboutページ
+------------------------------ */
+
+.breadCrumb {
+    color: #8b8b8b;
+    left: 10px;
+}
+
+.main {
+    height:100%;
+    background-color: #fff;
+}
+
+/* .landingAbout , .landingHowto {
+    display: inline-block;
+
+} */
+
+.aboutTitle {
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+}
+
+.landingAboutSub ,.landingHowtoSub {
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.aboutText {
+    line-height: 1.6;
+    font-size: 1.6rem;
+}
+
+
+.landingHowto {
+    margin-top: 60px;
+    margin-bottom: 138px;
+}
+
+
+.aboutImageBox {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+}
+
+.aboutImage {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    aspect-ratio: 15/7;
+    object-fit: cover;
+    max-width: 300px;
+    box-shadow: 10px 10px 0px 0 rgb(96,200,218);
+}
+
+@media screen and (min-width: 768px) {
+    .aboutImage {
+        max-width: 552px;
+    }
+}
