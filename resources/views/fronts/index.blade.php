@@ -66,6 +66,18 @@
 @section('sidecontents')
     <h2>ランキング</h2>
     <div>コース選択</div>
+    {{-- 検索フォーム --}}
+    <form action="{{ route('top') }}" method="get">
+        <div>
+            {{-- <input type="text" name='param' value='{{  $param }}'> --}}
+            <select name="param">
+                <option value=""selected>選択してください</option>
+                <option value="1">のんびりコース</option>
+                <option value="2">ダッシュコース</option>
+            </select>
+            <input type="submit" value="コース選択">
+        </div>
+    </form>
     <p>HTML</p>
     <table>
         <tr>
@@ -74,12 +86,23 @@
         </tr>
         <!-- $items を使った表示や処理 -->
         @if(isset($scoresHTML))
-            @foreach($scoresHTML['items3'] as $item3)
-                    <tr>
-                        <th>{{ $item3->username }}</th>
-                        <th>{{ $item3->score }}</th>
-                    </tr>
-            @endforeach
+            {{-- ダッシュコースが選ばれていたら難易度idが２の情報のみ表示する --}}
+            @if(isset($_GET['param'])==2)
+                @foreach($scoresHTML2['items8'] as $item8)
+                        <tr>
+                            <th>{{ $item8->username }}</th>
+                            <th>{{ $item8->score }}</th>
+                        </tr>
+                @endforeach
+            @else
+            {{-- pramがダッシュコース以外ならゆっくりをコース(難易度１)のみ表示する --}}
+                @foreach($scoresHTML['items3'] as $item3)
+                        <tr>
+                            <th>{{ $item3->username }}</th>
+                            <th>{{ $item3->score }}</th>
+                        </tr>
+                @endforeach
+            @endif
         @endif
     </table>
     <p>CSS</p>
