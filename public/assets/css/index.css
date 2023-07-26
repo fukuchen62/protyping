@@ -3,7 +3,6 @@
 .main{
     font-family: 'M PLUS Rounded 1c', sans-serif;
     background-color:#26567C;
-    height:100%;
 }
 
 /* ゲーム画面 */
@@ -105,11 +104,14 @@ h5{
     text-align: left;
 }
 
-.listBtn{
-    font-size: 14px;
-    color:white;
+.listBtn {
     float:right;
-    display:inline;
+    /* display:inline; */
+}
+
+.listBtn:hover {
+    color: #fff;
+    background: #78cff7;
 }
 
 .clearfix::after {
