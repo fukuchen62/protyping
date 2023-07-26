@@ -9,6 +9,9 @@ class News extends Model
 {
     // use HasFactory;
 
+    // newsに対するカスタムmodel
+    protected $table = 'news';
+
     // IDは自動生成するものなので、書き換えることはできない
     protected $guarded = array('id');
 
@@ -31,20 +34,14 @@ class News extends Model
     }
 
     /**
-     * postCategory function
+     * newsCategory function
      * ニュースカテゴリーテーブルとのリレーション
      *
      * @return void
      */
-    public function postCategory()
+    public function newsCategory()
     {
-        $items = $this->belongsTo('App\Models\PostCategory');
+        $items = $this->belongsTo('App\Models\Category');
         return $items;
-    }
-
-    public function getCategoryName()
-    {
-        $data = $this->postCategory->category_name;
-        return $data;
     }
 }
