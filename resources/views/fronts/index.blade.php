@@ -71,8 +71,7 @@
         <div>
             {{-- <input type="text" name='param' value='{{  $param }}'> --}}
             <select name="param">
-                <option value=""selected>選択してください</option>
-                <option value="1">のんびりコース</option>
+                <option value="1"selected>のんびりコース</option>
                 <option value="2">ダッシュコース</option>
             </select>
             <input type="submit" value="コース選択">
@@ -86,21 +85,31 @@
         </tr>
         <!-- $items を使った表示や処理 -->
         @if(isset($scoresHTML))
-            {{-- ダッシュコースが選ばれていたら難易度idが２の情報のみ表示する --}}
-            @if(isset($_GET['param'])==2)
-                @foreach($scoresHTML2['items8'] as $item8)
-                        <tr>
-                            <th>{{ $item8->username }}</th>
-                            <th>{{ $item8->score }}</th>
-                        </tr>
-                @endforeach
+            @if(isset($_GET['param']))
+                {{-- ダッシュコースが選ばれていたら難易度idが２の情報のみ表示する --}}
+                @if($_GET['param']==2)
+                    @foreach($scoresHTML2['items8'] as $item8)
+                            <tr>
+                                <th>{{ $item8->username }}</th>
+                                <th>{{ $item8->score }}</th>
+                            </tr>
+                    @endforeach
+                @else
+                {{-- paramがダッシュコース以外ならゆっくりをコース(難易度１)のみ表示する --}}
+                    @foreach($scoresHTML['items3'] as $item3)
+                            <tr>
+                                <th>{{ $item3->username }}</th>
+                                <th>{{ $item3->score }}</th>
+                            </tr>
+                    @endforeach
+                @endif
             @else
-            {{-- pramがダッシュコース以外ならゆっくりをコース(難易度１)のみ表示する --}}
+                {{-- paramが入力されていない場合はゆっくりコース(難易度１)を表示する --}}
                 @foreach($scoresHTML['items3'] as $item3)
-                        <tr>
-                            <th>{{ $item3->username }}</th>
-                            <th>{{ $item3->score }}</th>
-                        </tr>
+                    <tr>
+                        <th>{{ $item3->username }}</th>
+                        <th>{{ $item3->score }}</th>
+                    </tr>
                 @endforeach
             @endif
         @endif
@@ -112,14 +121,44 @@
             <th>スコア</th>
         </tr>
         <!-- $items を使った表示や処理 -->
-        @if(isset($scoresCSS))
+        @if(isset($scoresHTML))
+            @if(isset($_GET['param']))
+                {{-- ダッシュコースが選ばれていたら難易度idが２の情報のみ表示する --}}
+                @if($_GET['param']==2)
+                    @foreach($scoresCSS2['items9'] as $item9)
+                            <tr>
+                                <th>{{ $item9->username }}</th>
+                                <th>{{ $item9->score }}</th>
+                            </tr>
+                    @endforeach
+                @else
+                {{-- paramがダッシュコース以外ならゆっくりをコース(難易度１)のみ表示する --}}
+                    @foreach($scoresCSS['items4'] as $item4)
+                            <tr>
+                                <th>{{ $item4->username }}</th>
+                                <th>{{ $item4->score }}</th>
+                            </tr>
+                    @endforeach
+                @endif
+            @else
+                {{-- paramが入力されていない場合はゆっくりコース(難易度１)を表示する --}}
+                @foreach($scoresCSS['items4'] as $item4)
+                    <tr>
+                        <th>{{ $item4->username }}</th>
+                        <th>{{ $item4->score }}</th>
+                    </tr>
+                @endforeach
+            @endif
+        @endif
+
+        {{-- @if(isset($scoresCSS))
             @foreach($scoresCSS['items4'] as $item4)
                     <tr>
                         <th>{{ $item4->username }}</th>
                         <th>{{ $item4->score }}</th>
                     </tr>
             @endforeach
-        @endif
+        @endif --}}
     </table>
     <p>JavaScript</p>
     <table>

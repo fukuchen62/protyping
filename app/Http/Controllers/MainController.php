@@ -47,11 +47,18 @@ class MainController extends Controller
             'items8' => $items8,
         ];
 
-        // CSSでスコアが高い順にデータを３件分取得
+        // CSSで難易度１(ゆっくりコース)スコアが高い順にデータを３件分取得
         // 2：CSS
-        $items4 = Score::where('language_id', 2)->orderBy('score', 'desc')->take(3)->get();
+        $items4 = Score::where('language_id', 2)->where('level_id', 1)->orderBy('score', 'desc')->take(3)->get();
         $scoresCSS = [
             'items4' => $items4,
+        ];
+
+        // CSSで難易度２(ダッシュコース)スコアが高い順にデータを３件分取得
+        // 2：CSS
+        $items9 = Score::where('language_id', 2)->where('level_id', 2)->orderBy('score', 'desc')->take(3)->get();
+        $scoresCSS2 = [
+            'items9' => $items9,
         ];
 
         // JavaScriptでスコアが高い順にデータを３件分取得
@@ -86,6 +93,7 @@ class MainController extends Controller
             'scoresPHP' => $scoresPHP,
             'scoresPython' => $scoresPython,
             'scoresHTML2' => $scoresHTML2,
+            'scoresCSS2' => $scoresCSS2,
         ];
 
         // viewの引数っていくつでも増やせる
