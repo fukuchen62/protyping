@@ -16,7 +16,9 @@ class ArticleController extends Controller
     public function getarticle(Request $request)
     {
         // 更新情報の一覧を表示する
-        $items = News::all();
+        $items = News::where('is_show', 1)
+            ->paginate(1);
+
         $data = [
             'items' => $items,
         ];

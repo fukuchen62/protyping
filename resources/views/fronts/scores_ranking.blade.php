@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('title','ランキング')
-@section('mycss')
+{{-- @section('mycss') --}}
 
 {{-- メインコンテンツの内容 --}}
 @section('maincontents')
@@ -19,32 +19,29 @@
     </div>
 </form>
 <table>
-    <tr>
-        <th>順位</th>
-        <th>名前</th>
-        <th>得点</th>
-    </tr>
-    @foreach($items as $item)
+    @foreach($items as $key => $item)
+
     @if(isset($_GET['level_id']))
-    {{-- 言語別に絞り込まれた場合 --}}
+    {{-- コース別に絞り込まれた場合 --}}
     @if($item->level_id == $_GET['level_id'])
     <tr>
-        <td>{{ $loop->iteration }}位</td>
+        {{-- <td>{{ $key + 1 }}</td> --}}
         <td>{{$item->username}}</td>
         <td>{{$item->score}}</td>
     </tr>
     @endif
     @else
-    {{-- 選択されていなければデフォルトでHTMLを表示する --}}
-    {{-- 1:HTML --}}
+    {{-- 選択されていなければデフォルトでのんびりコースを表示する --}}
+    {{-- 1:のんびりコース --}}
     @if($item->level_id == 1)
     <tr>
-        <td>{{ $loop->iteration }}位</td>
+        {{-- <td>{{ $key + 1 }}</td> --}}
         <td>{{$item->username}}</td>
         <td>{{$item->score}}</td>
     </tr>
     @endif
     @endif
+
     @endforeach
     {{-- @foreach ($items as $item)
     <tr>
@@ -54,4 +51,30 @@
     </tr>
     @endforeach --}}
 </table>
+
+
+@foreach ($languages as $language)
+<h2>コース{{ $language }}のランキング</h2>
+<table>
+    <tr>
+        <th>順位</th>
+        <th>名前</th>
+        <th>得点</th>
+    </tr>
+    @foreach ($itemsByCourse[$language] as $key => $item)
+    <tr>
+        <td>{{ $key + 1 }}</td>
+        <td>{{ $item->username }}</td>
+        <td>{{ $item->score }}</td>
+    </tr>
+    @endforeach
+</table>
+
+
+
+
+
+@endforeach
+
+
 @endsection

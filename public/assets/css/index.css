@@ -3,6 +3,7 @@
 .main{
     font-family: 'M PLUS Rounded 1c', sans-serif;
     background-color:#26567C;
+    height:100%;
 }
 
 /* ゲーム画面 */
@@ -18,7 +19,7 @@
 #gameTitle{
     margin:50px auto;
     opacity:70%;
-    font-size:5em;
+    /* font-size:5em; */
 	line-height:0.95em;
 	font-weight:bold;
 	color: #fff;
@@ -108,6 +109,7 @@ h5{
     font-size: 14px;
     color:white;
     float:right;
+    display:inline;
 }
 
 .clearfix::after {
@@ -180,6 +182,11 @@ h5{
     border-radius:16px;
     border:1px solid #5FBFED;
     background-color:#5FBFED;
+}
+
+.updateList{
+    display:block;
+    text-align: left;
 }
 /* 更新情報 */
 
