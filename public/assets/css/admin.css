@@ -367,13 +367,31 @@ table.new_info td {
     border: none;
 }
 
+
+td.category select {
+    width: 300px;
+}
+
+
+td.isshow input {
+    width: 30px;
+}
+
+td.isshow {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 /* 編集画面と新規登録画面の入力欄に枠線をつける */
 table.edit_info input,
 table.edit_info textarea,
 table.new_info input,
 table.new_info textarea,
 table.new_info select,
-table.new_info select,
+table.edit_info select,
 .selectcategory {
     border: 1px #b9adc3 solid;
     background-color: lightgoldenrodyellow;
@@ -386,7 +404,7 @@ table.edit_info textarea:hover,
 table.new_info input:hover,
 table.new_info textarea:hover,
 table.new_info select:hover,
-table.new_info select:hover,
+table.edit_info select:hover,
 .selectcategory:hover {
     border: 2px blueviolet solid;
 }

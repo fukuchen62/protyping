@@ -1,8 +1,8 @@
 @extends('layouts.layout_back')
 
-@section('title', '釣徳コンテンツ管理システム')
+@section('title', 'タイプコード管理システム')
 
-@section('subtitle', 'ニュース')
+@section('subtitle', '新着ニュース')
 
 @section('login_name', 'QLIP')
 
@@ -13,37 +13,43 @@
 
 
 @section('content')
-    <h3>ニュース一覧</h3>
-    {{-- 以下はshowのところにはめ込む --}}
+    <h3>ニュース一覧 ({{ $count }})</h3>
+
+    {{-- サブメニュー --}}
     <ul class="menubar">
-        <li><a href="./newsshow">HOME</a></li>
-        <li><a href="./newsentry">新規登録</a></li>
+        <li><a href="{{ route('indexarticle') }}">一覧画面</a></li>
+        <li><a href="{{ route('addarticle') }}">新規登録</a></li>
     </ul>
 
     {{-- 検索条件入力フォーム --}}
-    <form action="{{ route('newsshow') }}" method="get" class="search">
-        検索条件 :&nbsp;<input type="text" name="s" id="s"><br>
-        <input type="submit" value="検索" class="search_btn">
+    <form action="{{ route('indexarticle') }}" method="get" class="search">
+        <div>
+            検索条件&nbsp;<input type="text" value="{{ $s }}" name="s">
+            <input type="submit" value="検索" class="search_btn">
+        </div>
     </form>
     <table class="info">
         <tr>
+            <th width="5%">No</th>
             <th width="5%">ID</th>
-            <th>カテゴリー名前</th>
-            <th>タイトル</th>
-            <th width="100px">修正</th>
+            <th width="10%">カテゴリー名</th>
+            <th width="20%">タイトル</th>
+            <th>記事内容</th>
+            <th width="10%">修正</th>
         </tr>
-        @foreach ($newslist as $item)
+        @foreach ($news_list as $key => $item)
             <tr>
+                <td>{{ $key + 1 }}</td>
                 <td>{{ $item->id }}</td>
-                <td>{{ $item->name }}</td>
+                <td>{{ $item->getCategoryName() }}</td>
                 <td>{{ $item->title }}</td>
-                <td class="edit"><a href="{{ route('newsedit', ['id' => $item->id]) }}">編集</a></td>
+                <td>{{ $item->content }}</td>
+                <td class="edit"><a href="{{ route('editarticle', ['id' => $item->id]) }}">編集</a></td>
             </tr>
         @endforeach
     </table>
 @endsection
 
-
 @section('footer')
-    copyright 2020 tuyano.
+
 @endsection

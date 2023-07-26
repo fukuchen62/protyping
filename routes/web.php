@@ -408,37 +408,37 @@ Route::get('adminfindarticle', [App\Http\Controllers\AdminController::class, 'se
  * 管理画面
  * 登録してある記事情報の一覧を表示する
  */
-Route::get('adminindexarticle', [App\Http\Controllers\AdminController::class, 'showarticle'])->name('indexarticle');
+Route::get('adminindexarticle', [App\Http\Controllers\AdminNewsController::class, 'showarticle'])->name('indexarticle');
 
 /**
  * 管理画面
  * 記事情報の新規登録画面を表示する
  */
-Route::get('adminaddarticle', [App\Http\Controllers\AdminController::class, 'newarticle'])->name('addarticle');
+Route::get('adminaddarticle', [App\Http\Controllers\AdminNewsController::class, 'newarticle'])->name('addarticle');
 
 /**
  * 管理画面
  * 記事情報を新規で登録する
  */
-Route::post('adminaddarticle', [App\Http\Controllers\AdminController::class, 'storearticle'])->name('addarticle');
+Route::post('adminaddarticle', [App\Http\Controllers\AdminNewsController::class, 'storearticle'])->name('addarticle');
 
 /**
  * 管理画面
  * 登録済みの記事情報の編集画面を表示する
  */
-Route::get('admineditarticle', [App\Http\Controllers\AdminController::class, 'editarticle'])->name('editarticle');
+Route::get('admineditarticle', [App\Http\Controllers\AdminNewsController::class, 'editarticle'])->name('editarticle');
 
 /**
  * 管理画面
  * 登録済みの記事情報を編集する
  */
-Route::post('admineditarticle', [App\Http\Controllers\AdminController::class, 'updatearticle'])->name('editarticle');
+Route::post('admineditarticle', [App\Http\Controllers\AdminNewsController::class, 'updatearticle'])->name('editarticle');
 
 /**
  * 管理画面
  * 登録済みの記事情報を削除する
  */
-Route::get('admineditarticle', [App\Http\Controllers\AdminController::class, 'deletearticle'])->name('editarticle');
+Route::get('admindeletearticle', [App\Http\Controllers\AdminNewsController::class, 'deletearticle'])->name('deletearticle');
 
 /**
  * 管理画面

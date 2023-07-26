@@ -1,6 +1,6 @@
 @extends('layouts.layout_back')
 
-@section('title', '釣徳コンテンツ管理システム')
+@section('title', 'タイプコード管理システム')
 
 @section('subtitle', 'ニュース')
 
@@ -15,10 +15,10 @@
 @section('content')
     <h3>ニュースの編集画面</h3>
 
-    {{-- 以下はshowのところにはめ込む --}}
+    {{-- サブメニュー --}}
     <ul class="menubar">
-        <li><a href="./newsshow">HOME</a></li>
-        <li><a href="./newsentry">新規登録</a></li>
+        <li><a href="{{ route('indexarticle') }}">一覧画面</a></li>
+        <li><a href="{{ route('addarticle') }}">新規登録</a></li>
     </ul>
 
     @if (count($errors) > 0)
@@ -31,15 +31,25 @@
         </div>
     @endif
 
-    <!-- <form action="admin/newsedit" method="post"> -->
-    <form method="post" action="{{ route('newsedit') }}">
+    <form method="post" action="{{ route('editarticle') }}">
         <table class="info edit_info">
             @csrf
             <input type="hidden" name="id" value="{{ $news->id }}">
             <tr>
-                <th width="15%"> <span>*</span> カテゴリー名: </th>
-                <td><input type="text" name="name" value="{{ $news->name }}" required></td>
+                <th width="15%"> <span>*</span> カテゴリー: </th>
+                <td class="category">
+                    <select name="post_category_id">
+                        @foreach ($category_items as $item)
+                            @if ($news->post_category_id == $item->id)
+                                <option value="{{ $item->id }}" selected>{{ $item->category_name }}</option>
+                            @else
+                                <option value="{{ $item->id }}">{{ $item->category_name }}</option>
+                            @endif
+                        @endforeach
+                    </select>
+                </td>
             </tr>
+
             <tr>
                 <th> <span>*</span> タイトル: </th>
                 <td><input type="text" name="title" value="{{ $news->title }}" required></td>
@@ -47,7 +57,7 @@
             <tr>
                 <th> <span>*</span> 概要: </th>
                 <td>
-                    <textarea name="overview" cols="50" rows="5" required> {{ $news->overview }} </textarea>
+                    <textarea name="summary" cols="50" rows="5" required> {{ $news->summary }} </textarea>
                 </td>
             </tr>
             <tr>
@@ -57,15 +67,22 @@
                 </td>
             </tr>
             <tr>
-                <th>アイキャッチ画像:</th>
+                <th>サムネール画像:</th>
                 <td>
-                    <input type="text" name="eyecatch" value="{{ $news->eyecatch }}">
+                    <input type="text" name="thumbnail" value="{{ $news->thumbnail }}">
                 </td>
             </tr>
             <tr>
                 <th> <span>*</span> 表示フラグ:</th>
-                <td>
-                    <input type="boolean" name="is_show" value="{{ $news->is_show }}" required>
+                <td class="isshow">
+                    @if ($news->is_show == 1)
+                        <input type="radio" name="is_show" value="1" checked>表示&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="is_show" value="0">非表示
+                    @else
+                        <input type="radio" name="is_show" value="1">表示&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="is_show" value="0" checked>非表示
+                    @endif
+
                 </td>
             </tr>
         </table>
@@ -73,17 +90,18 @@
         <div class="change_btn">
             @php
                 $title = $news->title;
-                $url = route('newsremove', ['id' => $news->id]);
+                $url = route('deletearticle', ['id' => $news->id]);
             @endphp
-            <input type="submit"value="修正" class="submit_btn" onclick="return saveComfirm('{{ $title }}')">
+            <input type="submit"value="修正" class="submit_btn"
+                onclick="return confirm_dialog('{{ $title }}を編集します。よろしいでしょうか。')">
 
             <input type="button"value="削除" class="delete_btn"
-                onclick="return deleteComfirm('{{ $title }}','{{ $url }}')">
+                onclick="return delete_confirm_dialog('{{ $title }}を削除します。よろしいでしょうか。','{{ $url }}')">
         </div>
 
     </form>
 @endsection
 
 @section('footer')
-    copyright 2020 tuyano.
+    {{-- copyright 2020 tuyano. --}}
 @endsection
