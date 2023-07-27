@@ -105,18 +105,53 @@
                     ※架空のメールアドレスでの報告は規約違反となり、読まれずに破棄されます。ご注意ください。
                     </div>
                 </div>
+                <table class="contactCategory" align="left">
                     <tr>
                         <th class="contactItem">問い合わせ種別<p> *</p></th>
-                            <td class="contactBody">
-                                <input type="radio" name="category" value="言語追加依頼" required
-                                checked>言語追加依頼
+                            <td class="categoryFirst">
+                                <input id="selectRadio1" type="radio" name="category" value="言語追加依頼" required checked>
+                                    <label for="selectRadio1">言語追加依頼</label>
                             </td>
-                            <td class="contactBody">
-                                <input type="radio" name="category" value="不具合報告">不具合報告
+                            <td class="category">
+                                <input id="selectRadio2" type="radio" name="category" value="不具合報告">
+                                    <label for="selectRadio2">不具合報告</label>
                             </td>
-                            <td class="contactBody">
-                                <input type="radio" name="category" value="その他のお問い合わせ">その他のお問い合わせ
+                            <td class="category">
+                                <input id="selectRadio3" type="radio" name="category" value="その他のお問い合わせ">
+                                    <label for="selectRadio3">その他のお問い合わせ</label>
                             </td>
+                    </tr>
+                </table>
+                <table class="contactContent" align="left">
+                    <tr class="languageName">
+                        <th class="contactItem">言語名</th>
+                        <td class="contactBody">
+                            <input type="text" name="言語名" class="formText">
+                        </td>
+                    </tr>
+                    <tr class="wordName">
+                        <th class="contactItem">単語名</th>
+                        <td class="contactBody">
+                            <input type="text" name="単語名" class="formText">
+                        </td>
+                    </tr>
+                    <tr class="readingName">
+                        <th class="contactItem">読み方</th>
+                        <td class="contactBody">
+                            <input type="text" name="読み方" class="formText">
+                        </td>
+                    </tr>
+                    <tr class="meaningName">
+                        <th class="contactItem">意味</th>
+                        <td class="contactBody">
+                            <input type="text" name="意味" class="formText">
+                        </td>
+                    </tr>
+                    <tr class="example">
+                        <th class="contactItem">使用例</th>
+                        <td class="contactBody">
+                            <textarea name="textarea" class="formTextarea"></textarea>
+                        </td>
                     </tr>
                     <tr>
                         <th class="contactItem">問い合わせ内容</th>
@@ -124,18 +159,18 @@
                                 <textarea name="textarea" class="formTextarea"></textarea>
                             </td>
                     </tr>
-            </form>
-        <!-- </div> -->
-
-
-            <p class="grayLine"></p>
-            <p>詳細についてはご利用規約を確認ください</p>
-            <div class="termsBtn">
-                <a href="../html/terms.html">ご利用規約</a>
-            </div>
+                </table>
+            <div class="contactBottom">
+                <p class="grayLine"></p>
+                <p>詳細についてはご利用規約を確認ください</p>
+                <div class="termsBtn">
+                    <a href="../html/terms.html">ご利用規約</a>
+                </div>
                 <input class="contactSubmit" type="submit" value="確認画面へ進む">
+            </div>
+            </form>
 
-
+        <!-- </div> -->
     </main>
 
     <footer class="footer">

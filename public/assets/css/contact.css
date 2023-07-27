@@ -53,7 +53,7 @@ h2{
 
 /* 共通のパーツ */
 .contactItem{
-    border:1px solid #8B8B8B;
+    /* border:1px solid #8B8B8B; */
     text-align: left;
     background-color:#fff;
     width:50vw;
@@ -70,13 +70,13 @@ h2{
 
 .contactBody {
     padding: 10px;
-    border: 1px solid #8B8B8B;
-    width: 50vw;
+    /* border: 1px solid #8B8B8B; */
+    width: 70vw;
     display: block;
 }
 
 .formText {
-    width: 132px;
+    width: 70vw;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -98,9 +98,61 @@ h2{
 }
 /* 共通のパーツ */
 
-.grayLine{
-    border:solid 1.5px #8B8B8B;
+.contactCategory{
+    width:50vw;
+    /* margin:0 auto; */
+    padding:30px;
+}
+
+.categoryFirst{
+    padding: 10px;
+    background-color:#5FBFED;
+    border-radius: 5px;
+    width: 70vw;
+    display: block;
     margin:10px;
+}
+
+.categoryFirst:checked{
+    opacity:70%;
+}
+
+.category {
+    padding: 10px;
+    background-color:#5FBFED;
+    border-radius: 5px;
+    width: 70vw;
+    display: block;
+    margin:10px;
+}
+
+.category:hover{
+    opacity:70%;
+}
+
+.contactContent{
+    width:50vw;
+    /* margin:0 auto; */
+    padding:30px;
+}
+
+.contactCategory td{
+    font-size:1.8rem;
+}
+
+.contactBottom{
+    text-align: center;
+    display:inline-block;
+}
+
+.contactBottom p{
+    font-size:1.6rem;
+}
+
+.grayLine{
+    border-top:solid 1.5px #8B8B8B;
+    margin:10px;
+    /* font-size:1.6rem; */
 }
 
 .termsBtn{
@@ -108,7 +160,7 @@ h2{
     color:#3168D2;
     text-align: center;
     margin:10px;
-
+    font-size:1.6rem;
 }
 
 form a:hover{
