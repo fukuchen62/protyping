@@ -1,13 +1,76 @@
 @charset "utf-8";
 
 .main{
+    height: 100%;
     text-align: center;
     margin: 10px;
-    padding-top: 50px;
+    padding: 15px;
+}
+
+
+h2{
+    font-size: 2.2rem;
+}
+h3{
+    margin-bottom: 10px;
+}
+
+p{
+
+}
+
+/* パンくずリスト */
+.breadCrumb {
+    color: #8b8b8b;
+    left: 10px;
 }
 
   /* table */
-.table{
+
+table.dictionary{
+    margin: 0 auto;
+    margin-top: 20px;
+    border-spacing: 1px 0;
+    font-size: 17px;
+}
+
+table.dictionary td{
+    text-align: center;
+    padding-top: 15px;
+    border: none;
+    height: 50px;
+    width: 260px;
+
+}
+
+table.dictionary tr:nth-child(2n+1) td.c1{
+    background: #5fbfed;
+    opacity: 50%;
+    display: block;
+    padding: 0;
+
+}
+
+table.dictionary tr:nth-child(2n+0) td.c1{
+    background: #5fbfed;
+    display: block;
+    padding: 0;
+}
+
+table.dictionary tr:nth-child(2n+1) td.c2{
+    background: #5fbfed;
+    display: block;
+}
+
+table.dictionary tr:nth-child(2n+0) td.c2{
+    background: #5fbfed;
+    display: block;
+}
+
+
+
+
+/* .table{
     width: 280px;
     height: 300px;
     margin-top: 30px;
@@ -49,7 +112,7 @@ div p{
 
 p{
     margin-bottom: 30px;
-}
+} */
 
 /* 検索フォーム */
 .searchForm001 {
@@ -99,7 +162,69 @@ p{
 }
 
 /* プルダウンメニュー */
-.select_wrap{
-    margin: auto;
-    margin-top: 20px;
+
+.selectWrap {
+    overflow: hidden;
+    width: 19rem;
+  text-align: left;
+    height: 4rem;
+cursor: pointer;
+display: inline-block;
+}
+
+.selectWrap select {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+
+}
+
+.selectWrap select::-ms-expand {
+    display: none;
+}
+
+.selectWrap {
+    position: relative;
+    border-radius: 10px;
+    background: #F0F0F0;
+    border: 0.5px solid #625858;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5), inset 0px -3px 6px -2px rgba(0, 0, 0, 0.3);
+}
+
+.selectWrap:before {
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    padding: 0;
+    content: '';
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid #625858;
+    pointer-events: none;
+
+}
+.selectWrap select {
+    color: #625858;
+    font-size: 1.6rem;
+}
+
+.word div{
+    background-color: #B6F2FF;
+    border-radius: 13px;
+    margin-top: 15px;
+    text-align: center;
+    height: 3.6rem;
+    padding-top: 8px;
+}
+
+.word a{
+color: #26567c;
+font-weight: 500 ;
+font-size: 1.7rem;
+padding: 15px;
 }

@@ -24,7 +24,7 @@ return new class extends Migration
             // created_atをNOT NULLに設定するため、個別に記載
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP')); // デフォルト値を明示的に指定
             $table->timestamp('updated_at')->nullable(true);
-            $table->softDeletes('deleted_at')->default(null);
+            $table->softDeletes('deleted_at')->nullable(true);
         });
     }
 
