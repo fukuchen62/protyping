@@ -17,14 +17,20 @@ class Knowhow extends Model
 
     // バリデーションルール
     public static $rules = [
-        'title' => 'required|max:60',
-        'post_category_id' => 'required',
-        'thumbnail' => 'max:200',
-        'summary' => 'required|max:250',
-        'content' => 'required|max:10000',
-        'is_show' => 'required',
-        'created_at' => 'required',
-        'created_user_id' => 'required',
+        'post_category_id' => 'required|integer',
+        'title'       => 'required|string|max:32',
+        'summary'    => 'max:200',
+        'content'    => 'required',
+        'thumbnail'   => 'max:200',
+        'is_show'     => 'required|boolean'
+        // 'title' => 'required|max:60',
+        // 'post_category_id' => 'required',
+        // 'thumbnail' => 'max:200',
+        // 'summary' => 'required|max:250',
+        // 'content' => 'required|max:10000',
+        // 'is_show' => 'required',
+        // 'created_at' => 'required',
+        // 'created_user_id' => 'required',
     ];
 
     public function getTitle()

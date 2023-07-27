@@ -29,7 +29,7 @@ class AdminKnowhowController extends Controller
 
     /**
      * index function
-     * ニュースの一覧ページ
+     * 知っトク情報の一覧ページ
      *
      * @return void
      */
@@ -44,7 +44,7 @@ class AdminKnowhowController extends Controller
             $s = $request->s;
         }
 
-        // ニュースを読み込む
+        // 知っトク情報を読み込む
         if ($s != '') {
             $items = Knowhow::where('title', 'like', '%' . $s . '%')
                 ->orWhere('summary', 'like', '%' . $s . '%')
@@ -72,18 +72,18 @@ class AdminKnowhowController extends Controller
     }
 
     /**
-     * addarticle function
+     * newknowhow function
      * 新規投稿画面を表示
      *
      * @param Request $request
      * @return void
      */
-    public function newarticle(Request $request)
+    public function newknowhow(Request $request)
     {
         // ログインユーザーの情報取得
         $login_user = Auth::user();
 
-        // ニュースカテゴリー
+        // 知っトク情報カテゴリー
         $category_items = PostCategory::All();
         $data = [
             'login_user' => $login_user,
@@ -93,13 +93,13 @@ class AdminKnowhowController extends Controller
     }
 
     /**
-     * storearticle function
-     * ニュース投稿処理
+     * storeknowhow function
+     * 知っトク情報投稿処理
      *
      * @param Request $request
      * @return void
      */
-    public function storearticle(Request $request)
+    public function storeknowhow(Request $request)
     {
         // ログインユーザーの情報取得
         $login_user = Auth::user();
@@ -107,7 +107,7 @@ class AdminKnowhowController extends Controller
         // バリデーション
         $this->validate($request, Knowhow::$rules);
 
-        // 登録用ニュースのインスタンスを生成
+        // 登録用知っトク情報のインスタンスを生成
         $knowhow = new Knowhow();
 
         // 入力データを取得
@@ -123,14 +123,14 @@ class AdminKnowhowController extends Controller
         // インスタンスを保存
         $knowhow->fill($form)->save();
 
-        return redirect(route('indexarticle'));
+        return redirect(route('indexknowhow'));
 
-        // // ニュースを読み込む
+        // // 知っトク情報を読み込む
         // $items = News::where('deleted_at', null)
         //     ->orderBy('id', 'desc')
         //     ->get();
 
-        // // ニュースの件数
+        // // 知っトク情報の件数
         // $news_count = count($items);
 
         // // 渡すデータ
@@ -145,13 +145,13 @@ class AdminKnowhowController extends Controller
     }
 
     /**
-     * editarticle function
-     * ニュース変更画面を表示
+     * editknowhow function
+     * 知っトク情報変更画面を表示
      *
      * @param Request $request
      * @return void
      */
-    public function editarticle(Request $request)
+    public function editknowhow(Request $request)
     {
         // ログインユーザーの情報取得
         $login_user = Auth::user();
@@ -159,7 +159,7 @@ class AdminKnowhowController extends Controller
         // idによる編集するデータを取得
         $item = Knowhow::find($request->id);
 
-        // ニュースカテゴリー
+        // 知っトク情報カテゴリー
         $category_items = PostCategory::All();
 
         // 渡すデータ
@@ -174,13 +174,13 @@ class AdminKnowhowController extends Controller
     }
 
     /**
-     * updatearticle function
-     * ニュース編集の登録処理
+     * updateknowhow function
+     * 知っトク情報編集の登録処理
      *
      * @param Request $request
      * @return void
      */
-    public function updatearticle(Request $request)
+    public function updateknowhow(Request $request)
     {
         // ログインユーザーの情報取得
         $login_user = Auth::user();
@@ -204,14 +204,14 @@ class AdminKnowhowController extends Controller
         // インスタンスに編集結果を入れ替え、保存
         $knowhow->fill($form)->save();
 
-        return redirect(route('indexarticle'));
+        return redirect(route('indexknowhow'));
 
-        // // ニュースを読み直す
+        // // 知っトク情報を読み直す
         // $items = News::where('deleted_at', null)
         //     ->orderBy('id', 'desc')
         //     ->get();
 
-        // // ニュースの件数
+        // // 知っトク情報の件数
         // $news_count = count($items);
 
         // // 渡すデータ
@@ -226,13 +226,13 @@ class AdminKnowhowController extends Controller
     }
 
     /**
-     * deletearticle function
-     * ニュースを削除
+     * deleteknowhow function
+     * 知っトク情報を削除
      *
      * @param Request $request
      * @return void
      */
-    public function deletearticle(Request $request)
+    public function deleteknowhow(Request $request)
     {
         // ログインユーザーの情報取得
         $login_user = Auth::user();
@@ -247,17 +247,17 @@ class AdminKnowhowController extends Controller
         ];
 
         // DBクリエターで更新処理
-        DB::table('knowhow')->where('id', $request->id)
+        DB::table('knowhows')->where('id', $request->id)
             ->update($param);
 
-        return redirect(route('indexarticle'));
+        return redirect(route('indexknowhow'));
 
-        // // ニュースを読み直す
+        // // 知っトク情報を読み直す
         // $items = News::where('deleted_at', null)
         //     ->orderBy('id', 'desc')
         //     ->get();
 
-        // // ニュースの件数
+        // // 知っトク情報の件数
         // $news_count = count($items);
 
         // // 渡すデータ
