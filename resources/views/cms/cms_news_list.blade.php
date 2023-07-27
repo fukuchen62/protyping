@@ -32,10 +32,10 @@
         <tr>
             <th width="5%">No</th>
             <th width="5%">ID</th>
-            <th width="10%">カテゴリー名</th>
+            <th width="15%">カテゴリー名</th>
             <th width="20%">タイトル</th>
-            <th>記事内容</th>
-            <th width="10%">修正</th>
+            <th width="40%">記事内容</th>
+            <th width="15%">修正</th>
         </tr>
         @foreach ($news_list as $key => $item)
             <tr>
