@@ -9,8 +9,8 @@ class Knowhow extends Model
 {
     // use HasFactory;
 
-    // newsに対するカスタムmodel
-    protected $table = 'news';
+    // knowhowsに対するカスタムmodel
+    protected $table = 'knowhows';
 
     // IDは自動生成するものなので、書き換えることはできない
     protected $guarded = array('id');
@@ -31,5 +31,24 @@ class Knowhow extends Model
     {
         $ret = $this->id . ':' . $this->title;
         return $ret;
+    }
+
+
+    /**
+     * newsCategory function
+     * ニュースカテゴリーテーブルとのリレーション
+     *
+     * @return void
+     */
+    public function postCategory()
+    {
+        $items = $this->belongsTo('App\Models\PostCategory');
+        return $items;
+    }
+
+    public function getCategoryName()
+    {
+        $name = $this->postCategory->category_name;
+        return $name;
     }
 }

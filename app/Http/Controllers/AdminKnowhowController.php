@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Auth;
 // DBクラスをインポートする
 use Illuminate\Support\Facades\DB;
 
-use App\Models\News;
+use App\Models\Knowhow;
 use App\Models\PostCategory;
 
 class AdminKnowhowController extends Controller
@@ -33,7 +33,7 @@ class AdminKnowhowController extends Controller
      *
      * @return void
      */
-    public function showarticle(Request $request)
+    public function showknowhow(Request $request)
     {
         // ログインユーザーの情報取得
         $login_user = Auth::user();
@@ -46,29 +46,29 @@ class AdminKnowhowController extends Controller
 
         // ニュースを読み込む
         if ($s != '') {
-            $items = News::where('title', 'like', '%' . $s . '%')
+            $items = Knowhow::where('title', 'like', '%' . $s . '%')
                 ->orWhere('summary', 'like', '%' . $s . '%')
                 ->orWhere('content', 'like', '%' . $s . '%')
                 ->get();
         } else {
-            $items = News::where('deleted_at', null)
+            $items = Knowhow::where('deleted_at', null)
                 ->orderBy('id', 'desc')
                 ->get();
         }
 
         // 件数
-        $news_count = count($items);
+        $knowhow_count = count($items);
 
         // Bladeファイルに渡すデータ（連想配列）
         $data = [
-            'news_list' => $items,
-            'count' => $news_count,
+            'knowhow_list' => $items,
+            'count' => $knowhow_count,
             'login_user' => $login_user,
             's' => $s,
         ];
 
         // Bladeファイルを呼び出す
-        return view('cms.cms_news_list', $data);
+        return view('cms.cms_knowhow_list', $data);
     }
 
     /**
@@ -89,7 +89,7 @@ class AdminKnowhowController extends Controller
             'login_user' => $login_user,
             'category_items' => $category_items
         ];
-        return view('cms.cms_news_new', $data);
+        return view('cms.cms_knowhow_new', $data);
     }
 
     /**
@@ -105,10 +105,10 @@ class AdminKnowhowController extends Controller
         $login_user = Auth::user();
 
         // バリデーション
-        $this->validate($request, News::$rules);
+        $this->validate($request, Knowhow::$rules);
 
         // 登録用ニュースのインスタンスを生成
-        $news = new News();
+        $knowhow = new Knowhow();
 
         // 入力データを取得
         $form = $request->all();
@@ -117,11 +117,11 @@ class AdminKnowhowController extends Controller
         unset($form['_token']);
 
         // インスタンスのuser_idプロパティにログイン中のユーザーIDを代入
-        $news->created_user_id = $login_user->id;
-        $news->updated_user_id = $login_user->id;
+        $knowhow->created_user_id = $login_user->id;
+        $knowhow->updated_user_id = $login_user->id;
 
         // インスタンスを保存
-        $news->fill($form)->save();
+        $knowhow->fill($form)->save();
 
         return redirect(route('indexarticle'));
 
@@ -157,20 +157,20 @@ class AdminKnowhowController extends Controller
         $login_user = Auth::user();
 
         // idによる編集するデータを取得
-        $item = News::find($request->id);
+        $item = Knowhow::find($request->id);
 
         // ニュースカテゴリー
         $category_items = PostCategory::All();
 
         // 渡すデータ
         $data = [
-            'news' => $item,
+            'knowhow' => $item,
             'category_items' => $category_items,
             'login_user' => $login_user,
         ];
 
         // ブレッドファイルを呼び出す
-        return view('cms.cms_news_edit', $data);
+        return view('cms.cms_knowhow_edit', $data);
     }
 
     /**
@@ -186,10 +186,10 @@ class AdminKnowhowController extends Controller
         $login_user = Auth::user();
 
         // バリデーション
-        $this->validate($request, News::$rules);
+        $this->validate($request, Knowhow::$rules);
 
         // 編集する元のデータを読み込む
-        $news = News::find($request->id);
+        $knowhow = Knowhow::find($request->id);
 
         // 編集結果を取得
         $form = $request->all();
@@ -198,11 +198,11 @@ class AdminKnowhowController extends Controller
         unset($form['_token']);
 
         // 更新日時を刷新
-        $news->updated_at = date("Y-m-d H:i:s");
-        $news->updated_user_id = $login_user->id;
+        $knowhow->updated_at = date("Y-m-d H:i:s");
+        $knowhow->updated_user_id = $login_user->id;
 
         // インスタンスに編集結果を入れ替え、保存
-        $news->fill($form)->save();
+        $knowhow->fill($form)->save();
 
         return redirect(route('indexarticle'));
 
@@ -247,7 +247,7 @@ class AdminKnowhowController extends Controller
         ];
 
         // DBクリエターで更新処理
-        DB::table('news')->where('id', $request->id)
+        DB::table('knowhow')->where('id', $request->id)
             ->update($param);
 
         return redirect(route('indexarticle'));
