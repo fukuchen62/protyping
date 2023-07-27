@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+main{
+    padding:15px;
+}
+
+h2{
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+    /* 上に戻るボタンの矢印 */
+    /* 長方形 */
+.arrow_up {
+	font-size: 30px;
+	position: relative;
+	width: 0.6rem;
+	height: 1rem;
+	background-color: #ffff;
+}
+/* 三角 */
+.arrow_up::before {
+	position: absolute;
+	top: -0.6rem;
+	left: -0.5rem;
+	width: 0;
+	height: 0;
+	content: "";
+	border-bottom: 0.8rem solid #ffff;
+	border-left: 0.8rem solid transparent;
+	border-right: 0.8rem solid transparent;
+}
