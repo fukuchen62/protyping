@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>トップページ</title>
+
+    <!-- 共通CSS -->
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/shittoku.css">
+
+    <!-- slick -->
+    <!-- <link rel="stylesheet" href="../assets/css/slick.css">
+    <link rel="stylesheet" href="../assets/css/slick-theme.css"> -->
+
+    <!-- jqueryの読み込み -->
+    <script src="../assets/js/vendor/jquery-3.6.3.min.js"></script>
+
+    <!-- フォント設定 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- ファビコン -->
+    <!-- <link rel="shortcut icon" href="../assets/images/favicon/favicon.ico"> -->
+
+    <!-- アイコンフォント -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <script defer src="https://use.fontawesome.com/releases/v6.4.0/js/all.js"></script> -->
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header id="header" class="header">
+        <div class="container">
+
+            <!-- ヘッダーロゴ -->
+            <h1 class="headerLogo">
+                <a href=""><img src="" alt="タイプコード" srcset=""></a>
+            </h1>
+
+            <!-- ハンバーガーメニュー部分 -->
+            <div class="hanmburger">
+                <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+                <input id="drawerInput" class="drawerHidden" type="checkbox" />
+                <!-- ハンバーガーメニュー -->
+                <label for="drawerInput" class="drawerOpen">
+                    <span></span>
+                </label>
+
+                <!-- ナビゲーション -->
+                <nav class="navContent">
+                    <ul class="navList">
+                        <li class="home">
+                            <a href="">HOME</a>
+                        </li>
+                        <li class="dictionary">
+                            <a href="">辞書</a>
+                        </li>
+                        <li class="ranking">
+                            <a href="">ランキング</a>
+                        </li>
+                        <li class="MyScore">
+                            <a href="">MyScore</a>
+                        </li>
+                        <li class="shittoku">
+                            <a href="">知っトク情報</a>
+                        </li>
+                        <li class="contact">
+                            <a href="">お問い合わせ</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <main id="main" class="main">
+
+        <!-- パンくずリスト -->
+        <div class="breadCrumb">パンくず入る</div>
+
+        <!-- メインコンテンツ -->
+        <div class="mainBox">
+            <div class="mainBoxInner">
+
+                <div class="titleBox">
+                    <h2 class="title">知っ得情報一覧</h2>
+
+                    <p class="overview">こんにちは！私たちのサイトにお越しいただきありがとうございます！
+                                        このページではIT業界に進んでいく上で知っトクと便利な情報を載せています！ぜひ活用して下さい(^^)!
+                                    </p>
+                </div>
+
+
+
+                <!-- --------- flexboxのコンテナ（親）---------  -->
+                <div class="flexContainer">
+
+
+                    <!-- flexのアイテム（子） -->
+
+                    <!--  1 開発環境セットアップ  -->
+                    <div class="flexItem flexItem1">
+                        <h3 class="flexItemTitle">開発環境セットアップ</h3>
+                        <a href="">
+                            <img src="../assets/images/shittoku_dami-.jpg" alt="" class="flexItemImage" />
+                        </a>
+                        <p class="flexItemText">
+                            一言説明入れる一言説明入れる一言説明入れる一言説明入れる
+                        </p>
+                    </div>
+
+                    <!-- 2  WordPress  -->
+                    <div class="flexItem flexItem2">
+                        <h3 class="flexItemTitle">WordPress</h3>
+                        <a href="">
+                            <img src="../assets/images/shittoku_dami-.jpg" alt="" class="flexItemImage" />
+                        </a>
+                        <p class="flexItemText">
+                                                一言説明入れる一言説明入れる一言説明入れる一言説明入れる
+                                            </p>
+                    </div>
+
+                    <!-- 3 おすすめWebアプリ  -->
+                    <div class="flexItem flexItem3">
+                        <h3 class="flexItemTitle">おすすめWebアプリ</h3>
+                        <a href="">
+                            <img src="../assets/images/shittoku_dami-.jpg" alt="" class="flexItemImage" />
+                        </a>
+                        <p class="flexItemText">
+                                                一言説明入れる一言説明入れる一言説明入れる一言説明入れる
+                                            </p>
+                    </div>
+
+                    <!--  4 おすすめWebサイト-->
+                    <div class="flexItem flexItem4">
+                        <h3 class="flexItemTitle">おすすめWebサイト</h3>
+                        <a href="">
+                            <img src="../assets/images/shittoku_dami-.jpg" alt="" class="flexItemImage" />
+                        </a>
+                        <p class="flexItemText">
+                                                一言説明入れる一言説明入れる一言説明入れる一言説明入れる
+                                            </p>
+                    </div>
+
+                    <!-- 5 ショートカット -->
+                    <div class="flexItem flexItem5">
+                        <h3 class="flexItemTitle">ショートカット</h3>
+                        <a href="">
+                            <img src="../assets/images/shittoku_dami-.jpg" alt="" class="flexItemImage" />
+                        </a>
+                        <p class="flexItemText">
+                                                一言説明入れる一言説明入れる一言説明入れる一言説明入れる
+                                            </p>
+                    </div>
+
+                    <!-- 6 資格 -->
+
+                    <div class="flexItem flexItem6">
+                        <h3 class="flexItemTitle">資格</h3>
+                        <a href="">
+                            <img src="../assets/images/shittoku_dami-.jpg" alt="" class="flexItemImage" />
+                        </a>
+                        <p class="flexItemText">
+                                                一言説明入れる一言説明入れる一言説明入れる一言説明入れる
+                        </p>
+                    </div>
+
+                    <!-- 7 Chrome拡張機能 -->
+                    <div class="flexItem flexItem7">
+                        <h3 class="flexItemTitle">Chrome拡張機能</h3>
+                        <a href="">
+                            <img src="../assets/images/shittoku_dami-.jpg" alt="" class="flexItemImage" />
+                        </a>
+                        <p class="flexItemText">
+                                                一言説明入れる一言説明入れる一言説明入れる一言説明入れる
+                                            </p>
+                    </div>
+
+                    <!-- 8 卒業生の作品 -->
+                    <div class="flexItem flexItem8">
+                        <h3 class="flexItemTitle">卒業生の作品</h3>
+                        <a href="">
+                            <img src="../assets/images/shittoku_dami-.jpg" alt="" class="flexItemImage" />
+                        </a>
+                        <p class="flexItemText">
+                                                一言説明入れる一言説明入れる一言説明入れる一言説明入れる
+                                            </p>
+                    </div>
+
+
+                </div>
+                <!-- --------- / gridのコンテナ（親）--------- -->
+
+            </div>
+        </div>
+
+
+
+        <!-- サイドバー 幅固定 176px（PCのみ表示）-->
+        <aside id="side" class="side">
+            <div class="asideInner">
+                <ul>
+                    <li>開発環境セットアップ</li>
+                    <li>WordPress</li>
+                    <li>おすすめWebアプリ</li>
+                    <li>おすすめWebサイト</li>
+                    <li>ショートカット</li>
+                    <li>資格</li>
+                    <li>Clrome拡張機能</li>
+                    <li>卒業生の作品</li>
+                </ul>
+            </div>
+        </aside>
+
+    </main>
+
+
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="footerWrap">
+            <div class="footerLogo">
+                <a href=""><img src="" alt="タイプコード" srcset=""></a>
+            </div>
+
+        </div>
+        <div class="copyright">
+            <small>Copyright©タイプコード All Rights Reserved.</small>
+        </div>
+    </footer>
+
+</body>
