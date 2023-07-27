@@ -444,43 +444,43 @@ Route::get('admindeletearticle', [App\Http\Controllers\AdminNewsController::clas
  * 管理画面
  * 登録してある知っトク情報を検索する
  */
-Route::get('adminfindknowhow', [App\Http\Controllers\AdminController::class, 'searchknowhow'])->name('findknowhow');
+Route::get('adminfindknowhow', [App\Http\Controllers\AdminKnowhowController::class, 'searchknowhow'])->name('findknowhow');
 
 /**
  * 管理画面
  * 登録してある知っトク情報の一覧を表示する
  */
-Route::get('adminindexknowhow', [App\Http\Controllers\AdminController::class, 'showknowhow'])->name('indexknowhow');
+Route::get('adminindexknowhow', [App\Http\Controllers\AdminKnowhowController::class, 'showknowhow'])->name('indexknowhow');
 
 /**
  * 管理画面
  * 知っトク情報の新規登録画面を表示する
  */
-Route::get('adminaddknowhow', [App\Http\Controllers\AdminController::class, 'newknowhow'])->name('addknowhow');
+Route::get('adminaddknowhow', [App\Http\Controllers\AdminKnowhowController::class, 'newknowhow'])->name('addknowhow');
 
 /**
- * 管理画面
+ * 管理画面AdminKnowhowController
  * 知っトク情報を新規で登録する
  */
-Route::post('adminaddknowhow', [App\Http\Controllers\AdminController::class, 'storeknowhow'])->name('addknowhow');
+Route::post('adminaddknowhow', [App\Http\Controllers\AdminKnowhowController::class, 'storeknowhow'])->name('addknowhow');
 
 /**
  * 管理画面
  * 登録済みの知っトク情報の編集画面を表示する
  */
-Route::get('admineditknowhow', [App\Http\Controllers\AdminController::class, 'editknowhow'])->name('editknowhow');
+Route::get('admineditknowhow', [App\Http\Controllers\AdminKnowhowController::class, 'editknowhow'])->name('editknowhow');
 
-/**
+/**AdminKnowhowController
  * 管理画面
  * 登録済みの知っトク情報を編集する
  */
-Route::post('admineditknowhow', [App\Http\Controllers\AdminController::class, 'updateknowhow'])->name('editknowhow');
+Route::post('admineditknowhow', [App\Http\Controllers\AdminKnowhowController::class, 'updateknowhow'])->name('editknowhow');
 
 /**
  * 管理画面
  * 登録済みの知っトク情報を削除する
  */
-Route::get('admineditknowhow', [App\Http\Controllers\AdminController::class, 'deleteknowhow'])->name('editknowhow');
+Route::get('admindeleteknowhow', [App\Http\Controllers\AdminKnowhowController::class, 'deleteknowhow'])->name('deleteknowhow');
 
 /**
  * 管理画面
