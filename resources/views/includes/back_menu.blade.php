@@ -6,8 +6,8 @@
         <li><a href="{{ route('indexarticle') }}">新着ニュース</a></li>
         <li><a href="{{ route('indexknowhow') }}">知ットク情報</a></li>
         <li><a href="{{ route('indexgame') }}">タイピングゲーム</a></li>
-        <li><a href="{{ route('indexlanguage') }}">辞書（言語）一覧</a></li>
-        {{-- <li><a href="{{ route('indexvocabulary') }}">辞書</a></li> --}}
+        <li><a href="{{ route('indexlanguage') }}">言語一覧</a></li>
+        <li><a href="{{ route('indexvocabulary') }}">辞書</a></li>
         <li><a href="{{ route('indexuser') }}">ユーザー</a></li>
     </ul>
 </section>
