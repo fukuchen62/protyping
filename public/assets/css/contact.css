@@ -11,31 +11,64 @@ h2{
 
 .contactWarning{
     text-align: center;
+    margin-bottom:10px;
 }
 
-.contact {
-    width:280px;/*横幅*/
-    margin:0 auto;/*中央寄せ*/
-    padding:60px 0;
+/* .contact {
+    width:280px;
+    margin:0 auto;
+    padding:30px 0;
+} */
+
+.requiredTable{
+    width:50vw;
+    /* margin:0 auto; */
+    padding:30px;
 }
 
-.contactTable{
-    width: 100vw;
-    margin-bottom:20px;
+/* .contactName{
+    display: block;
+} */
+
+.mailWarning{
+    margin-top:10px;
+    text-align:center;
+    font-size:1.6rem;
 }
 
+.mailWarning div{
+    display: inline-block;
+    text-align:left;
+}
+
+.domainName{
+    color:#FF02D7;
+    font-size:1.6rem;
+    display: inline;
+}
+
+/* 共通のパーツ */
 .contactItem{
-    margin:auto;
     border:1px solid #8B8B8B;
-    /* text-align: left; */
+    text-align: left;
     background-color:#fff;
     width:50vw;
+    font-size:1.8rem;
+    padding:10px;
+    display: block;
+
+}
+
+.contactItem p{
+    color:#EA5151;
+    display: inline;
 }
 
 .contactBody {
-    padding: 20px;
+    padding: 10px;
     border: 1px solid #8B8B8B;
-    width: 100vw;
+    width: 50vw;
+    display: block;
 }
 
 .formText {
@@ -59,6 +92,7 @@ h2{
     -webkit-appearance: none;
     -moz-appearance: none;
 }
+/* 共通のパーツ */
 
 .grayLine{
     border:solid 1.5px #8B8B8B;
