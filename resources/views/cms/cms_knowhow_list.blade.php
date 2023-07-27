@@ -32,10 +32,10 @@
     <tr>
         <th width="5%">No</th>
         <th width="5%">ID</th>
-        <th width="10%">カテゴリー名</th>
+        <th width="15%">カテゴリー名</th>
         <th width="20%">タイトル</th>
-        <th>記事内容</th>
-        <th width="10%">修正</th>
+        <th width="40%">概要</th>
+        <th width="15%">修正</th>
     </tr>
     @foreach ($knowhow_list as $key => $item)
     <tr>
@@ -43,7 +43,7 @@
         <td>{{ $item->id }}</td>
         <td>{{ $item->getCategoryName() }}</td>
         <td>{{ $item->title }}</td>
-        <td>{{ $item->content }}</td>
+        <td>{{ $item->summary }}</td>
         <td class="edit"><a href="{{ route('editknowhow', ['id' => $item->id]) }}">編集</a></td>
     </tr>
     @endforeach
