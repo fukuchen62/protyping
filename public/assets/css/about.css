@@ -1,8 +1,5 @@
 @charset "utf-8";
 
-/* .aboutDescription {
-    display: flex;
-} */
 
 /* 作業時に使うアウトラインプロパティ
 ------------------------------ */
@@ -14,31 +11,35 @@
 /* Aboutページ
 ------------------------------ */
 
+
+.main {
+    height:100%;
+    background-color: #fff;
+    padding: 15px;
+}
+
+/* パンくず */
 .breadCrumb {
     color: #8b8b8b;
     left: 10px;
 }
 
-.main {
-    height:100%;
-    background-color: #fff;
-}
-
-/* .landingAbout , .landingHowto {
-    display: inline-block;
-
-} */
-
-.aboutTitle {
-    font-size: 2.2rem;
+/* Aboutページのタイトル */
+.title {
     font-weight: 800;
     text-align: center;
     letter-spacing: 0.1rem;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 40px;
-
 }
 
+@media screen and (min-width: 768px) {
+    .title {
+        font-size: 4.4rem;
+    }
+}
+
+/* Aboutページ内のセクション毎のタイトル */
 .landingAboutSub ,.landingHowtoSub {
     font-size: 1.8rem;
     font-weight: 500;
@@ -46,37 +47,70 @@
     margin-bottom: 20px;
 }
 
-.aboutText {
-    line-height: 1.6;
-    font-size: 1.6rem;
+@media screen and (min-width: 768px) {
+    .landingAboutSub ,.landingHowtoSub {
+        font-size: 2.4rem;
+    }
 }
 
-
-.landingHowto {
-    margin-top: 60px;
-    margin-bottom: 138px;
+/* sectionの配置、枠線、色 */
+.landingHowto , .landingAbout {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 20px;
+    border: 2px solid #817F6E;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
-
+/* 画像の位置 */
 .aboutImageBox {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 40px;
     display: block;
     text-align: center;
 }
 
+/* 画像の大きさ、シャドウ */
 .aboutImage {
     width: 100%;
     height: auto;
     box-sizing: border-box;
     aspect-ratio: 15/7;
     object-fit: cover;
-    max-width: 300px;
+    max-width: 200px;
     box-shadow: 10px 10px 0px 0 rgb(96,200,218);
 }
+
 
 @media screen and (min-width: 768px) {
     .aboutImage {
         max-width: 552px;
     }
+}
+
+
+
+/* セクション毎の説明文章 */
+.aboutText {
+    line-height: 1.6;
+    font-size: 1.6rem;
+}
+
+.aboutTextBox {
+    padding: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .aboutTextBox{
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+}
+
+
+/* 下部の空白 */
+.landingHowto {
+    margin-bottom: 130px;
 }

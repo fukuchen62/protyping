@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+
+
+/* 作業時に使うアウトラインプロパティ
+------------------------------ */
+
+/* * {
+    outline: 1px solid red;
+} */
+
+
+
+/* 知っ得ページ
+------------------------------ */
+
+
+.main {
+    height:100%;
+    background-color: #fff;
+    padding: 15px;
+
+}
+
+/* パンくず */
+.breadCrumb {
+    color: #8b8b8b;
+    left: 10px;
+}
+
+/* 知っっとくページのタイトル */
+.title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+
+.overview {
+    /* padding-left: 100px;
+    padding-right: 100px; */
+    display: inline-block;
+    margin-bottom: 30px;
+
+}
+
+
+/* flexコンテナ
+------------------------------ */
+
+.flexContainer {
+    max-width: 234px;
+    margin: 0 auto;
+}
+
+.flexItem {
+    margin-top: 30px;
+    margin-bottom: 40px;
+
+}
+
+.flexItemTitle {
+    font-weight: 600;
+}
+
+.flexItemText {
+    font-weight: 400;
+}
+
+.flexItemImage {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    aspect-ratio: 27/16;
+    object-fit: cover;
+    max-width: 234px;
+    margin-top: 11px;
+    margin-bottom: 11px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 0px 0 rgb(96,200,218);
+
+}
