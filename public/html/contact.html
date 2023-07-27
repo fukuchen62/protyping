@@ -84,82 +84,88 @@
         <h2>お問い合わせ</h2>
         <p class="contactWarning">下記の項目にすべて入力頂き、確認画面へ進むボタンを押してください</p>
         <!-- <div class="contact"> -->
-            <form action="">
-                <table class="requiredTable" align="left">
-                    <tr class="contactName">
-                        <th class="contactItem">名前<p> *</p></th>
-                        <td class="contactBody">
-                            <input type="text" name="名前" class="formText" required>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="contactItem">メールアドレス<p> *</p></th>
-                            <td class="contactBody">
-                                <input type="email" name="メール" class="formText"
-                                required>
-                            </td>
-                    </tr>
-                </table>
-                <div class="mailWarning">
-                    <div>※携帯などで受信制限されている方は「<p class="domainName">ドメイン名</p>」からのメールを受信できるように設定してください。<br>
+        <form action="">
+            <table class="requiredTable" align="left">
+                <tr class="contactName">
+                    <th class="contactItem">名前
+                        <p> *</p>
+                    </th>
+                    <td class="contactBody">
+                        <input type="text" name="名前" class="formText" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="contactItem">メールアドレス
+                        <p> *</p>
+                    </th>
+                    <td class="contactBody">
+                        <input type="email" name="メール" class="formText" required>
+                    </td>
+                </tr>
+            </table>
+            <div class="mailWarning">
+                <div>※携帯などで受信制限されている方は「
+                    <p class="domainName">ドメイン名</p>」からのメールを受信できるように設定してください。<br>
                     ※架空のメールアドレスでの報告は規約違反となり、読まれずに破棄されます。ご注意ください。
-                    </div>
                 </div>
-                <table class="contactCategory" align="left">
-                    <tr>
-                        <th class="contactItem">問い合わせ種別<p> *</p></th>
-                            <td class="categoryFirst">
-                                <input id="selectRadio1" type="radio" name="category" value="言語追加依頼" required checked>
-                                    <label for="selectRadio1">言語追加依頼</label>
-                            </td>
-                            <td class="category">
-                                <input id="selectRadio2" type="radio" name="category" value="不具合報告">
-                                    <label for="selectRadio2">不具合報告</label>
-                            </td>
-                            <td class="category">
-                                <input id="selectRadio3" type="radio" name="category" value="その他のお問い合わせ">
-                                    <label for="selectRadio3">その他のお問い合わせ</label>
-                            </td>
-                    </tr>
-                </table>
-                <table class="contactContent" align="left">
-                    <tr class="languageName">
-                        <th class="contactItem">言語名</th>
-                        <td class="contactBody">
-                            <input type="text" name="言語名" class="formText">
-                        </td>
-                    </tr>
-                    <tr class="wordName">
-                        <th class="contactItem">単語名</th>
-                        <td class="contactBody">
-                            <input type="text" name="単語名" class="formText">
-                        </td>
-                    </tr>
-                    <tr class="readingName">
-                        <th class="contactItem">読み方</th>
-                        <td class="contactBody">
-                            <input type="text" name="読み方" class="formText">
-                        </td>
-                    </tr>
-                    <tr class="meaningName">
-                        <th class="contactItem">意味</th>
-                        <td class="contactBody">
-                            <input type="text" name="意味" class="formText">
-                        </td>
-                    </tr>
-                    <tr class="example">
-                        <th class="contactItem">使用例</th>
-                        <td class="contactBody">
-                            <textarea name="textarea" class="formTextarea"></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="contactItem">問い合わせ内容</th>
-                            <td class="contactBody">
-                                <textarea name="textarea" class="formTextarea"></textarea>
-                            </td>
-                    </tr>
-                </table>
+            </div>
+            <table class="contactCategory" align="left">
+                <tr>
+                    <th class="contactItem">問い合わせ種別
+                        <p> *</p>
+                    </th>
+                    <td class="categoryFirst">
+                        <input id="selectRadio1" type="radio" name="category" value="言語追加依頼" required checked>
+                        <label for="selectRadio1">言語追加依頼</label>
+                    </td>
+                    <td class="category">
+                        <input id="selectRadio2" type="radio" name="category" value="不具合報告">
+                        <label for="selectRadio2">不具合報告</label>
+                    </td>
+                    <td class="category">
+                        <input id="selectRadio3" type="radio" name="category" value="その他のお問い合わせ">
+                        <label for="selectRadio3">その他のお問い合わせ</label>
+                    </td>
+                </tr>
+            </table>
+            <table class="contactContent" align="left">
+                <tr class="languageName">
+                    <th class="contactItem">言語名</th>
+                    <td class="contactBody">
+                        <input type="text" name="言語名" class="formText">
+                    </td>
+                </tr>
+                <tr class="wordName">
+                    <th class="contactItem">単語名</th>
+                    <td class="contactBody">
+                        <input type="text" name="単語名" class="formText">
+                    </td>
+                </tr>
+                <tr class="readingName">
+                    <th class="contactItem">読み方</th>
+                    <td class="contactBody">
+                        <input type="text" name="読み方" class="formText">
+                    </td>
+                </tr>
+                <tr class="meaningName">
+                    <th class="contactItem">意味</th>
+                    <td class="contactBody">
+                        <input type="text" name="意味" class="formText">
+                    </td>
+                </tr>
+                <tr class="example">
+                    <th class="contactItem">使用例</th>
+                    <td class="contactBody">
+                        <textarea name="textarea" class="formTextarea"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="contactItem">問い合わせ内容</th>
+                    <td class="contactBody">
+                        <textarea name="textarea" class="formTextarea"></textarea>
+                    </td>
+                </tr>
+            </table>
             <div class="contactBottom">
                 <p class="grayLine"></p>
                 <p>詳細についてはご利用規約を確認ください</p>
@@ -168,7 +174,7 @@
                 </div>
                 <input class="contactSubmit" type="submit" value="確認画面へ進む">
             </div>
-            </form>
+        </form>
 
         <!-- </div> -->
     </main>
@@ -177,9 +183,9 @@
         <div class="footerWrap">
             <div class="footerLogo">
                 <a href=""><img src="" alt="タイプコード" srcset=""></a>
-                </div>
-
             </div>
+
+        </div>
         <div class="copyright">
             <small>Copyright©タイプコード All Rights Reserved.</small>
         </div>
