@@ -47,7 +47,7 @@
         @include('includes.back_header')
 
         {{-- メインコンテンツ --}}
-        <main class="main container">
+        <main class="main">
             {{-- メニュー --}}
             @include('includes.back_menu')
 

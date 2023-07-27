@@ -178,6 +178,7 @@ h3 {
 
 .g-nav {
     width: 250px;
+    min-width: 250px;
     padding: 0 10px 10px 0;
 }
 
