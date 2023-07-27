@@ -18,7 +18,8 @@ return new class extends Migration
             $table->integer('news_id');
             $table->integer('knowhow_id');
             $table->timestamp('created_at')->nullable(false);
-            $table->softDeletes(); // softDeletes()メソッドを使ってdeleted_atカラムを定義する
+            $table->softDeletes('deleted_at')->nullable(true);
+            // softDeletes()メソッドを使ってdeleted_atカラムを定義する
             //$table->timestamp('deleted_at')->default(null);
         });
     }
