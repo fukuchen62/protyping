@@ -74,6 +74,7 @@ a:hover img {
 /* ヘッダー */
 #header {
     width: 100%;
+    min-width: 1500px;
     /* height: 100px; */
     background-color: #30add1;
 }
@@ -152,6 +153,8 @@ a:hover img {
 }
 
 .main {
+    width: 100%;
+    min-width: 1500px;
     display: flex;
     flex-direction: row;
     padding: 10px 0px;
@@ -413,6 +416,7 @@ table.edit_info select:hover,
 /* フッター */
 #footer {
     width: 100%;
+    min-width: 1500px;
     background-color: #30add1;
 }
 
