@@ -22,20 +22,20 @@
     margin-bottom: 50px;
 }
 
-.scoreWrap {
+/* .scoreWrap {
     border: 3px solid #fff;
     border-radius: 5px;
     margin: 30px 0;
     padding: 20px 10px;
-}
+} */
 
 /* プルダウンメニュー */
 
 .selectWrap {
     overflow: hidden;
-    width: 19rem;
+    width: 22.8rem;
     text-align:left;
-    height: 4rem;
+    height: 4.5rem;
 cursor: pointer;
 }
 
@@ -58,6 +58,7 @@ cursor: pointer;
 .selectWrap {
     position: relative;
     border-radius: 10px;
+    margin-bottom: 20px;
     background: #F0F0F0;
     border: 0.5px solid #625858;
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5), inset 0px -3px 6px -2px rgba(0, 0, 0, 0.3);
@@ -80,25 +81,58 @@ cursor: pointer;
 .selectWrap select {
     color: #625858;
     font-size: 1.6rem;
+    letter-spacing: 6px;
 }
 
-.word div{
+
+
+
+/* 言語選択 */
+.word div {
     background-color: #B6F2FF;
-    border-radius: 13px;
-    margin-top: 15px;
+    /* border-radius: 13px; */
+    /* margin-top: 15px; */
     text-align: center;
-    height: 3.6rem;
-    padding-top: 8px;
+    height: 5rem;
+    padding: 12px;
+    border: 2px solid #5DBEEC;
 }
 
 .word a{
 color: #26567c;
-font-weight: 500 ;
+font-weight: 400 ;
 font-size: 1.7rem;
-padding: 15px;
 }
 
-.cardWrap {
+
+/* ユーザーネーム */
+.usernameWrap {
+display: flex;
+}
+
+.icon {
+    width: 70px;
+    height: 70px;
+    background-color: #91B5D2;
+    padding: 10px;
+}
+
+.usernameWrap p {
+    font-size: 1.6rem;
+    font-weight: 200;
+}
+
+/* .usernameInner name {
+
+} */
+
+.usernameWrap username{
+font-size: 2rem;
+    font-weight: 700;
+}
+
+
+.scoreWrap {
     margin: 60px 0;
 }
 
@@ -151,9 +185,11 @@ display: flex;
 }
 
 .cardInner {
-    background-color: #fff;
+    /* background-color: #fff; */
     width: 217px;
     height: 117px;
+    border: 3px solid #fff;
+    border-radius: 5px;
 }
 
 .cardInner p {
