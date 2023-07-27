@@ -23,14 +23,6 @@ class Knowhow extends Model
         'content'    => 'required',
         'thumbnail'   => 'max:200',
         'is_show'     => 'required|boolean'
-        // 'title' => 'required|max:60',
-        // 'post_category_id' => 'required',
-        // 'thumbnail' => 'max:200',
-        // 'summary' => 'required|max:250',
-        // 'content' => 'required|max:10000',
-        // 'is_show' => 'required',
-        // 'created_at' => 'required',
-        // 'created_user_id' => 'required',
     ];
 
     public function getTitle()
