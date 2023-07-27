@@ -240,79 +240,79 @@ Route::get('adminfindlanguage', [App\Http\Controllers\AdminController::class, 's
  * 管理画面
  * 登録してある言語種別情報の一覧を表示する
  */
-Route::get('adminindexlanguage', [App\Http\Controllers\AdminController::class, 'showlanguage'])->name('indexlanguage');
+Route::get('adminindexlanguage', [App\Http\Controllers\AdminLanguageController::class, 'showlanguage'])->name('indexlanguage');
 
 /**
  * 管理画面
  * 言語種別情報の新規登録画面を表示する
  */
-Route::get('adminaddlanguage', [App\Http\Controllers\AdminController::class, 'newlanguage'])->name('addlanguage');
+Route::get('adminaddlanguage', [App\Http\Controllers\AdminLanguageController::class, 'newlanguage'])->name('addlanguage');
 
 /**
  * 管理画面
  * 言語種別情報を新規で登録する
  */
-Route::post('adminaddlanguage', [App\Http\Controllers\AdminController::class, 'storelanguage'])->name('addlanguage');
+Route::post('adminaddlanguage', [App\Http\Controllers\AdminLanguageController::class, 'storelanguage'])->name('addlanguage');
 
 /**
  * 管理画面
  * 登録済みの言語種別情報の編集画面を表示する
  */
-Route::get('admineditlanguage', [App\Http\Controllers\AdminController::class, 'editlanguage'])->name('editlanguage');
+Route::get('admineditlanguage', [App\Http\Controllers\AdminLanguageController::class, 'editlanguage'])->name('editlanguage');
 
 /**
  * 管理画面
  * 登録済みの言語種別情報を編集する
  */
-Route::post('admineditlanguage', [App\Http\Controllers\AdminController::class, 'updatelanguage'])->name('editlanguage');
+Route::post('admineditlanguage', [App\Http\Controllers\AdminLanguageController::class, 'updatelanguage'])->name('editlanguage');
 
 /**
  * 管理画面
  * 登録済みの言語種別情報を削除する
  */
-Route::get('admineditlanguage', [App\Http\Controllers\AdminController::class, 'deletelanguage'])->name('editlanguage');
+Route::get('admindeletelanguage', [App\Http\Controllers\AdminLanguageController::class, 'deletelanguage'])->name('deletelanguage');
 
 /**
  * 管理画面
  * 登録してある単語情報を検索する
  */
-Route::get('adminfindvocabulary', [App\Http\Controllers\AdminController::class, 'searchvocabulary'])->name('findvocabulary');
+Route::get('adminfindvocabulary', [App\Http\Controllers\AdminVocabularyController::class, 'searchvocabulary'])->name('findvocabulary');
 
 /**
  * 管理画面
  * 登録してある単語情報の一覧を表示する
  */
-Route::get('adminindexvocabulary', [App\Http\Controllers\AdminController::class, 'showvocabulary'])->name('indexvocabulary');
+Route::get('adminindexvocabulary', [App\Http\Controllers\AdminVocabularyController::class, 'showvocabulary'])->name('indexvocabulary');
 
 /**
  * 管理画面
  * 単語情報の新規登録画面を表示する
  */
-Route::get('adminaddvocabulary', [App\Http\Controllers\AdminController::class, 'newvocabulary'])->name('addvocabulary');
+Route::get('adminaddvocabulary', [App\Http\Controllers\AdminVocabularyController::class, 'newvocabulary'])->name('addvocabulary');
 
 /**
  * 管理画面
  * 単語情報を新規で登録する
  */
-Route::post('adminaddvocabulary', [App\Http\Controllers\AdminController::class, 'storevocabulary'])->name('addvocabulary');
+Route::post('adminaddvocabulary', [App\Http\Controllers\AdminVocabularyController::class, 'storevocabulary'])->name('addvocabulary');
 
 /**
  * 管理画面
  * 登録済みの単語情報の編集画面を表示する
  */
-Route::get('admineditvocabulary', [App\Http\Controllers\AdminController::class, 'editvocabulary'])->name('editvocabulary');
+Route::get('admineditvocabulary', [App\Http\Controllers\AdminVocabularyController::class, 'editvocabulary'])->name('editvocabulary');
 
 /**
  * 管理画面
  * 登録済みの単語情報を編集する
  */
-Route::post('admineditvocabulary', [App\Http\Controllers\AdminController::class, 'updatevocabulary'])->name('editvocabulary');
+Route::post('admineditvocabulary', [App\Http\Controllers\AdminVocabularyController::class, 'updatevocabulary'])->name('editvocabulary');
 
 /**
  * 管理画面
  * 登録済みの単語情報を削除する
  */
-Route::get('admineditvocabulary', [App\Http\Controllers\AdminController::class, 'deletevocabulary'])->name('editvocabulary');
+Route::get('admindeletevocabulary', [App\Http\Controllers\AdminVocabularyController::class, 'deletevocabulary'])->name('deletevocabulary');
 
 /**
  * 管理画面

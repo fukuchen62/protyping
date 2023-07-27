@@ -22,8 +22,6 @@ class Vocabulary extends Model
         'notion' => 'required|max:200',
         'usage' => 'max:500',
         'is_show' => 'required',
-        'created_at' => 'required',
-        'created_user_id' => 'required',
     ];
 
     public function getTitle()
