@@ -17,6 +17,7 @@ return new class extends Migration
             $table->integer('post_category_id')->nullable(false);
             $table->string('thumbnail', 200)->nullable(true);
             $table->string('summary', 250)->nullable(false);
+            $table->string('summary_detail', 500)->nullable(false);
             $table->string('content', 10000)->nullable(false);
             $table->boolean('is_show')->default(true);
 

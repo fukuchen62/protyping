@@ -34,9 +34,11 @@ class KnowhowController extends Controller
     public function getdetails(Request $request)
     {
         // 知っトク記事情報の一覧を表示する
-        $items = Knowhow::all();
+        // getで渡したparamでカテゴリーを限定する
+        $param = $request->input('param');
+
+        $items = Knowhow::where('post_category_id', $param)->get();
         $data = [
-            'param' => '',
             'items' => $items,
         ];
 

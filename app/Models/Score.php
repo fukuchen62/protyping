@@ -14,10 +14,10 @@ class Score extends Model
 
     // バリデーションルール
     public static $rules = [
-        'game_id' => 'required',
-        'language_id' => 'required',
-        'level_id' => 'required',
-        'user_id' => 'required',
+        // 'game_id' => 'required',
+        // 'language_id' => 'required',
+        // 'level_id' => 'required',
+        // 'user_id' => 'required',
         'username' => 'min:0|max:30',
         'score' => 'max:10000',
         'is_show' => 'required',
