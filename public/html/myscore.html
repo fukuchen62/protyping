@@ -96,18 +96,18 @@
 
 
 
-            <!-- プルダウンメニュー -->
-            <div class="selectWrap">
-                <!-- <select name="word"> -->
-                <select name="word" required> <!-- required：選択必須を指定 -->
-                    <option value="初級">初級</option>
-                    <option value="中級">中級</option>
-                </select>
-            </div>
+        <!-- プルダウンメニュー -->
+        <div class="selectWrap">
+            <!-- <select name="word"> -->
+            <select name="word" required> <!-- required：選択必須を指定 -->
+                <option value="初級">初級</option>
+                <option value="中級">中級</option>
+            </select>
+        </div>
 
 
 
-            <!-- 言語選択 -->
+        <!-- 言語選択 -->
         <nav class="word">
             <div>
                 <a href="#engword">プログラミングで使う英単語</a>
@@ -131,23 +131,30 @@
 
 
         <!-- ここから動的 -->
-            <section class="scoreWrap">
-                <!-- ユーザーネーム -->
-                <!-- 人とゆーざーを囲うdiv -->
-                <div class="usernameWrap">
-                    <!-- 人のシルエット背景 -->
-                    <div class="icon">
-                        <img src="../assets/images/human.png" alt="人アイコン">
-                    </div>
-                    <div class="usernameInner">
-                        <p class="">ユーザーネーム</p>
-                        <div class="username">
-                            <p>しんちゃん</p>
-                        </div>
+        <section class="scoreWrap">
 
-                    </div>
+            <!-- ユーザーネーム -->
+            <!-- 人とゆーざーを囲うdiv -->
+            <div class="usernameWrap">
+                <!-- <div class="usernameInner"> -->
+                <!-- 人のシルエット背景 -->
+                <div class="icon">
+                    <img src="../assets/images/human.png" alt="人アイコン">
                 </div>
 
+                <div class="usernameItem">
+                    <div class="itemFirst">
+                        <p>ユーザーネーム</p>
+                    </div>
+                    <div class="itemSecond">
+                        <p>しんちゃん</p>
+                    </div>
+                </div>
+                <!-- </div> -->
+            </div>
+
+            <!--カード全体を囲う枠 -->
+            <div class="cardWrap">
                 <div class="cardList">
                     <h3 id="engword">プログラミングで使う英単語</h3>
                     <div class="cardInner">
@@ -405,7 +412,8 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
         </section>
 
         <!-- ランキング、マイスコアボタン -->
