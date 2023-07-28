@@ -486,43 +486,43 @@ Route::get('admindeleteknowhow', [App\Http\Controllers\AdminKnowhowController::c
  * 管理画面
  * 登録してあるカテゴリ情報を検索する
  */
-Route::get('adminfindcategory', [App\Http\Controllers\AdminController::class, 'searchcategory'])->name('findcategory');
+Route::get('adminfindcategory', [App\Http\Controllers\AdminPostCategoryController::class, 'searchcategory'])->name('findcategory');
 
 /**
  * 管理画面
  * 登録してあるカテゴリ情報の一覧を表示する
  */
-Route::get('adminindexcategory', [App\Http\Controllers\AdminController::class, 'showcategory'])->name('indexcategory');
+Route::get('adminindexcategory', [App\Http\Controllers\AdminPostCategoryController::class, 'showcategory'])->name('indexcategory');
 
 /**
  * 管理画面
  * カテゴリ情報の新規登録画面を表示する
  */
-Route::get('adminaddcategory', [App\Http\Controllers\AdminController::class, 'newcategory'])->name('addcategory');
+Route::get('adminaddcategory', [App\Http\Controllers\AdminPostCategoryController::class, 'newcategory'])->name('addcategory');
 
 /**
  * 管理画面
  * カテゴリ情報を新規で登録する
  */
-Route::post('adminaddcategory', [App\Http\Controllers\AdminController::class, 'storecategory'])->name('addcategory');
+Route::post('adminaddcategory', [App\Http\Controllers\AdminPostCategoryController::class, 'storecategory'])->name('addcategory');
 
 /**
  * 管理画面
  * 登録済みのカテゴリ情報の編集画面を表示する
  */
-Route::get('admineditcategory', [App\Http\Controllers\AdminController::class, 'editcategory'])->name('editcategory');
+Route::get('admineditcategory', [App\Http\Controllers\AdminPostCategoryController::class, 'editcategory'])->name('editcategory');
 
 /**
  * 管理画面
  * 登録済みのカテゴリ情報を編集する
  */
-Route::post('admineditcategory', [App\Http\Controllers\AdminController::class, 'updatecategory'])->name('editcategory');
+Route::post('admineditcategory', [App\Http\Controllers\AdminPostCategoryController::class, 'updatecategory'])->name('editcategory');
 
 /**
  * 管理画面
  * 登録済みのカテゴリ情報を削除する
  */
-Route::get('admineditcategory', [App\Http\Controllers\AdminController::class, 'deletecategory'])->name('editcategory');
+Route::get('admindeletecategory', [App\Http\Controllers\AdminPostCategoryController::class, 'deletecategory'])->name('deletecategory');
 
 /**
  * 管理画面
