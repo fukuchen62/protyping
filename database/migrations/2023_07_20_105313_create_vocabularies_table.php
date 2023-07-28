@@ -25,8 +25,11 @@ return new class extends Migration
             //create_atはNOT NULLにし、update_atはNULLを許容する
             //$table->timestamps();
             $table->timestamp('created_at')->nullable(false);
+            $table->integer('created_user_id')->default(null);
             $table->timestamp('updated_at')->nullable(true);
+            $table->integer('updated_user_id')->nullable(true)->default(null);
             $table->softDeletes('deleted_at')->nullable(true);
+            $table->integer('deleted_user_id')->nullable(true)->default(null);
             // softDeletes()メソッドを使ってdeleted_atカラムを定義する
             //$table->timestamp('deleted_at')->default(null);
         });

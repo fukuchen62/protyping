@@ -18,8 +18,6 @@ class Language extends Model
         'lang_icon' => 'max:50',
         'discription' => 'max:200',
         'is_show' => 'required',
-        'created_at' => 'required',
-        'created_user_id' => 'required',
     ];
 
     public function getTitle()

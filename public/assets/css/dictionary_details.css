@@ -1,12 +1,9 @@
 @charset "utf-8";
 
 .main{
-    height: 100%;
     text-align: center;
     margin: 10px;
-    padding: 15px;
 }
-
 
 h2{
     font-size: 2.2rem;
@@ -16,7 +13,14 @@ h3{
 }
 
 p{
+color: #8b8b8b;
+margin-bottom: 10px;
+font-size: 1.6rem;
+margin-bottom: 30px;
+}
 
+a{
+    color: #8b8b8b;
 }
 
 /* パンくずリスト */
@@ -25,94 +29,48 @@ p{
     left: 10px;
 }
 
-  /* table */
+/* テーブル */
 
-table.dictionary{
-    margin: 0 auto;
-    margin-top: 20px;
-    border-spacing: 1px 0;
-    font-size: 17px;
-}
-
-table.dictionary td{
+.dictionary{
     text-align: center;
-    padding-top: 15px;
-    border: none;
-    height: 50px;
-    width: 260px;
-
+    margin-left: auto;
+    margin-right: auto;
 }
 
-table.dictionary tr:nth-child(2n+1) td.c1{
-    background: #5fbfed;
-    opacity: 50%;
-    display: block;
-    padding: 0;
-
+.dictionary p{
+    margin: 5px;
 }
 
-table.dictionary tr:nth-child(2n+0) td.c1{
-    background: #5fbfed;
-    display: block;
-    padding: 0;
-}
-
-table.dictionary tr:nth-child(2n+1) td.c2{
-    background: #5fbfed;
-    display: block;
-}
-
-table.dictionary tr:nth-child(2n+0) td.c2{
-    background: #5fbfed;
-    display: block;
-}
-
-
-
-
-/* .table{
+.dictionaryBox1{
+    display: flex;
     width: 280px;
-    height: 300px;
+    height: 80px;
+    background:rgba(95,191,237,0.15);
+}
+
+.dictionaryBox2{
+    display: flex;
+    width: 280px;
+    height: 80px;
+    background:rgba(95,191,237,0.3);
+}
+
+.englishWord {
+    display: block;
+}
+
+.box2{
+    font-size: 1.6rem;
     margin-top: 30px;
-}
-.table1{
-    background-color: #5FBFED;
-    opacity: 15%;
-    display: block;
-    max-width: 260px;
-    height: 90px;
-    margin: 0% auto;
+    width: 50px;
 }
 
-
-.table2{
-    background-color: #5FBFED;
-    opacity: 30%;
-    display: block;
-    max-width: 260px;
-    height: 90px;
-    margin: 0% auto;
+.box2.detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
-a{
-    text-decoration: none;
-}
-
-.table1 p{
-    text-align: center;
-}
-
-h3{
-    margin-bottom: 20px;
-}
-
-div p{
-    margin-bottom: 5px;
-}
-
-p{
-    margin-bottom: 30px;
-} */
 
 /* 検索フォーム */
 .searchForm001 {
@@ -126,6 +84,7 @@ p{
     border-radius: 3px;
     text-align: center;
     margin: auto;
+    margin-bottom: 30px;
 }
 
 .searchForm001 input {
@@ -166,10 +125,11 @@ p{
 .selectWrap {
     overflow: hidden;
     width: 19rem;
-  text-align: left;
+    text-align: left;
     height: 4rem;
-cursor: pointer;
-display: inline-block;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 20px;
 }
 
 .selectWrap select {
