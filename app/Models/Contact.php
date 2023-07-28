@@ -14,7 +14,7 @@ class Contact extends Model
 
     // バリデーションルール
     public static $rules = [
-        'contact_id' => 'required',
+        'contact_type' => 'required',
         'language_id' => 'required',
         'word_spell' => 'max:200',
         'japanese' => 'max:200',

@@ -10,7 +10,7 @@ class Knowhow extends Model
     // use HasFactory;
 
     // knowhowsに対するカスタムmodel
-    protected $table = 'knowhows';
+    // protected $table = 'knowhows';
 
     // IDは自動生成するものなので、書き換えることはできない
     protected $guarded = array('id');
@@ -34,7 +34,7 @@ class Knowhow extends Model
 
     /**
      * newsCategory function
-     * ニュースカテゴリーテーブルとのリレーション
+     * カテゴリーテーブルとのリレーション
      *
      * @return void
      */

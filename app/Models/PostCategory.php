@@ -14,9 +14,8 @@ class PostCategory extends Model
 
     // バリデーションルール
     public static $rules = [
-        'category_name' => 'required|max:60',
-        'is_show' => 'requried',
-        'created_at' => 'required',
+        'category_name'    => 'required|string|max:200',
+        'is_show'     => 'required|boolean'
     ];
 
     public function getTitle()

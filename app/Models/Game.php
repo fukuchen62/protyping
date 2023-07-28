@@ -19,8 +19,6 @@ class Game extends Model
         'game_icon' => 'max:50',
         'language_id' => 'required',
         'level_id' => 'required',
-        'created_at' => 'required',
-        'created_user_id' => 'required',
     ];
 
     public function getTitle()

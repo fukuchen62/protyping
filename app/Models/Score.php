@@ -21,7 +21,6 @@ class Score extends Model
         'username' => 'min:0|max:30',
         'score' => 'max:10000',
         'is_show' => 'required',
-        'created_at' => 'required',
     ];
 
     public function getTitle()
