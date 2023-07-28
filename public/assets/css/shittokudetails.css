@@ -61,7 +61,8 @@
 
     border: 1px solid #8B8B8B;
     text-decoration: none;
-    box-shadow: 10px 10px 5px 0 rgb(96,200,218);
+    box-shadow: 5px 5px 5px 0 rgba(98, 88, 88, 0.5);
+    border-radius: 3px;
 }
 
 
