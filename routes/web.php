@@ -186,55 +186,55 @@ Route::post('adminadduser', [App\Http\Controllers\AdminController::class, 'updat
  * 管理画面
  * 登録済みのユーザ情報を削除する
  */
-Route::get('adminadduser', [App\Http\Controllers\AdminController::class, 'deleteuser'])->name('edituser');
+Route::get('adminadduser', [App\Http\Controllers\AdminGameController::class, 'deleteuser'])->name('edituser');
 
 /**
  * 管理画面
  * 登録済みのユーザ情報を削除する
  */
-Route::get('adminfindgame', [App\Http\Controllers\AdminController::class, 'searchgame'])->name('findgame');
+Route::get('adminfindgame', [App\Http\Controllers\AdminGameController::class, 'searchgame'])->name('findgame');
 
 /**
  * 管理画面
  * 登録してあるゲーム設定情報の一覧を表示する
  */
-Route::get('adminindexgame', [App\Http\Controllers\AdminController::class, 'showgame'])->name('indexgame');
+Route::get('adminindexgame', [App\Http\Controllers\AdminGameController::class, 'showgame'])->name('indexgame');
 
 /**
  * 管理画面
  * ゲーム設定情報の新規登録画面を表示する
  */
-Route::get('adminaddgame', [App\Http\Controllers\AdminController::class, 'newgame'])->name('addgame');
+Route::get('adminaddgame', [App\Http\Controllers\AdminGameController::class, 'newgame'])->name('addgame');
 
 /**
  * 管理画面
  * ゲーム設定情報を新規で登録する
  */
-Route::post('adminaddgame', [App\Http\Controllers\AdminController::class, 'storegame'])->name('addgame');
+Route::post('adminaddgame', [App\Http\Controllers\AdminGameController::class, 'storegame'])->name('addgame');
 
 /**
  * 管理画面
  * 登録済みのゲーム設定情報の編集画面を表示する
  */
-Route::get('adminaddgame', [App\Http\Controllers\AdminController::class, 'editgame'])->name('editgame');
+Route::get('admineditgame', [App\Http\Controllers\AdminGameController::class, 'editgame'])->name('editgame');
 
 /**
  * 管理画面
  * 登録済みのゲーム設定情報を編集する
  */
-Route::post('adminaddgame', [App\Http\Controllers\AdminController::class, 'updategame'])->name('editgame');
+Route::post('admineditgame', [App\Http\Controllers\AdminGameController::class, 'updategame'])->name('editgame');
 
 /**
  * 管理画面
  * 登録済みのゲーム設定情報を削除する
  */
-Route::get('adminaddgame', [App\Http\Controllers\AdminController::class, 'deletegame'])->name('editgame');
+Route::get('admindeletegame', [App\Http\Controllers\AdminGameController::class, 'deletegame'])->name('deletegame');
 
 /**
  * 管理画面
  * 登録してある言語種別情報を検索する
  */
-Route::get('adminfindlanguage', [App\Http\Controllers\AdminController::class, 'searchlanguage'])->name('findlanguage');
+Route::get('adminfindlanguage', [App\Http\Controllers\AdminLanguageController::class, 'searchlanguage'])->name('findlanguage');
 
 /**
  * 管理画面
@@ -318,85 +318,85 @@ Route::get('admindeletevocabulary', [App\Http\Controllers\AdminVocabularyControl
  * 管理画面
  * 登録してあるゲームレベルの情報を検索する
  */
-Route::get('adminfindlevel', [App\Http\Controllers\AdminController::class, 'searchlevel'])->name('findlevel');
+Route::get('adminfindlevel', [App\Http\Controllers\AdminLevelController::class, 'searchlevel'])->name('findlevel');
 
 /**
  * 管理画面
  * 登録してあるゲームレベルの情報の一覧を表示する
  */
-Route::get('adminindexlevel', [App\Http\Controllers\AdminController::class, 'showlevel'])->name('indexlevel');
+Route::get('adminindexlevel', [App\Http\Controllers\AdminLevelController::class, 'showlevel'])->name('indexlevel');
 
 /**
  * 管理画面
  * ゲームレベルの情報の新規登録画面を表示する
  */
-Route::get('adminaddlevel', [App\Http\Controllers\AdminController::class, 'newlevel'])->name('addlevel');
+Route::get('adminaddlevel', [App\Http\Controllers\AdminLevelController::class, 'newlevel'])->name('addlevel');
 
 /**
  * 管理画面
  * ゲームレベルの情報を新規で登録する
  */
-Route::post('adminaddlevel', [App\Http\Controllers\AdminController::class, 'storelevel'])->name('addlevel');
+Route::post('adminaddlevel', [App\Http\Controllers\AdminLevelController::class, 'storelevel'])->name('addlevel');
 
 /**
  * 管理画面
  * 登録済みのゲームレベルの情報の編集画面を表示する
  */
-Route::get('admineditlevel', [App\Http\Controllers\AdminController::class, 'editlevel'])->name('editlevel');
+Route::get('admineditlevel', [App\Http\Controllers\AdminLevelController::class, 'editlevel'])->name('editlevel');
 
 /**
  * 管理画面
  * 登録済みのゲームレベルの情報を編集する
  */
-Route::post('admineditlevel', [App\Http\Controllers\AdminController::class, 'updatelevel'])->name('editlevel');
+Route::post('admineditlevel', [App\Http\Controllers\AdminLevelController::class, 'updatelevel'])->name('editlevel');
 
 /**
  * 管理画面
  * 登録済みのゲームレベルの情報を削除する
  */
-Route::get('admineditlevel', [App\Http\Controllers\AdminController::class, 'deletelevel'])->name('editlevel');
+Route::get('admindeletelevel', [App\Http\Controllers\AdminLevelController::class, 'deletelevel'])->name('deletelevel');
 
 /**
  * 管理画面
  * 登録してあるゲームスコアの情報を検索する
  */
-Route::get('adminfindscore', [App\Http\Controllers\AdminController::class, 'searchscore'])->name('findscore');
+Route::get('adminfindscore', [App\Http\Controllers\AdminScoreController::class, 'searchscore'])->name('findscore');
 
 /**
  * 管理画面
  * 登録してあるゲームスコアの情報の一覧を表示する
  */
-Route::get('adminindexscore', [App\Http\Controllers\AdminController::class, 'showscore'])->name('indexscore');
+Route::get('adminindexscore', [App\Http\Controllers\AdminScoreController::class, 'showscore'])->name('indexscore');
 
 /**
  * 管理画面
  * ゲームスコアの情報の新規登録画面を表示する
  */
-Route::get('adminaddscore', [App\Http\Controllers\AdminController::class, 'newscore'])->name('addscore');
+Route::get('adminaddscore', [App\Http\Controllers\AdminScoreController::class, 'newscore'])->name('addscore');
 
 /**
  * 管理画面
  * ゲームスコアの情報を新規で登録する
  */
-Route::post('adminaddscore', [App\Http\Controllers\AdminController::class, 'storescore'])->name('addscore');
+Route::post('adminaddscore', [App\Http\Controllers\AdminScoreController::class, 'storescore'])->name('addscore');
 
 /**
  * 管理画面
  * 登録済みのゲームスコアの情報の編集画面を表示する
  */
-Route::get('admineditscore', [App\Http\Controllers\AdminController::class, 'editscore'])->name('editscore');
+Route::get('admineditscore', [App\Http\Controllers\AdminScoreController::class, 'editscore'])->name('editscore');
 
 /**
  * 管理画面
  * 登録済みのゲームスコアの情報を編集する
  */
-Route::post('admineditscore', [App\Http\Controllers\AdminController::class, 'updatescore'])->name('editscore');
+Route::post('admineditscore', [App\Http\Controllers\AdminScoreController::class, 'updatescore'])->name('editscore');
 
 /**
  * 管理画面
  * 登録済みのゲームスコアの情報を削除する
  */
-Route::get('admineditscore', [App\Http\Controllers\AdminController::class, 'deletescore'])->name('editscore');
+Route::get('admindeletescore', [App\Http\Controllers\AdminScoreController::class, 'deletescore'])->name('deletecore');
 
 /**
  * 管理画面
@@ -612,40 +612,40 @@ Route::get('admineditfavorite', [App\Http\Controllers\AdminController::class, 'd
  * 管理画面
  * 登録してあるお問い合わせ情報を検索する
  */
-Route::get('adminfindcontact', [App\Http\Controllers\AdminController::class, 'searchcontact'])->name('findcontact');
+Route::get('adminfindcontact', [App\Http\Controllers\AdminContactController::class, 'searchcontact'])->name('findcontact');
 
 /**
  * 管理画面
  * 登録してあるお問い合わせ情報の一覧を表示する
  */
-Route::get('adminindexcontact', [App\Http\Controllers\AdminController::class, 'showcontact'])->name('indexcontact');
+Route::get('adminindexcontact', [App\Http\Controllers\AdminContactController::class, 'showcontact'])->name('indexcontact');
 
 /**
  * 管理画面
  * お問い合わせ情報の新規登録画面を表示する
  */
-Route::get('adminaddcontact', [App\Http\Controllers\AdminController::class, 'newcontact'])->name('addcontact');
+Route::get('adminaddcontact', [App\Http\Controllers\AdminContactController::class, 'newcontact'])->name('addcontact');
 
 /**
  * 管理画面
  * お問い合わせ情報を新規で登録する
  */
-Route::post('adminaddcontact', [App\Http\Controllers\AdminController::class, 'storecontact'])->name('addcontact');
+Route::post('adminaddcontact', [App\Http\Controllers\AdminContactController::class, 'storecontact'])->name('addcontact');
 
 /**
  * 管理画面
  * 登録済みのお問い合わせ情報の編集画面を表示する
  */
-Route::get('admineditcontact', [App\Http\Controllers\AdminController::class, 'editcontact'])->name('editcontact');
+Route::get('admineditcontact', [App\Http\Controllers\AdminContactController::class, 'editcontact'])->name('editcontact');
 
 /**
  * 管理画面
  * 登録済みのお問い合わせ情報を編集する
  */
-Route::post('admineditcontact', [App\Http\Controllers\AdminController::class, 'updatecontact'])->name('editcontact');
+Route::post('admineditcontact', [App\Http\Controllers\AdminContactController::class, 'updatecontact'])->name('editcontact');
 
 /**
  * 管理画面
  * 登録済みのお問い合わせ情報を削除する
  */
-Route::get('admineditcontact', [App\Http\Controllers\AdminController::class, 'deletecontact'])->name('editcontact');
+Route::get('admindeletecontact', [App\Http\Controllers\AdminContactController::class, 'deletecontact'])->name('deletecontact');

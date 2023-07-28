@@ -24,7 +24,9 @@ return new class extends Migration
             $table->integer('status')->default(1);
             // created_atをNOT NULLに設定するため、個別に記載
             $table->timestamp('created_at')->nullable(false);
+            $table->integer('created_user_id')->default(1);
             $table->timestamp('updated_at')->nullable(true);
+            $table->integer('updated_user_id')->nullable(true)->default(null);
         });
     }
 
