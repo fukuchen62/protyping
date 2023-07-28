@@ -13,9 +13,17 @@ h2{
     margin-bottom: 10px;
 }
 
+.basic{
+    text-align: center;
+    border:#D9D9D9 1px solid;
+    padding:5px;
+    margin-top:20px;
+    margin-bottom:10px;
+}
+
 .contactWarning{
     text-align: center;
-    margin-bottom:10px;
+    margin-bottom:20px;
 }
 
 /* .contact {
@@ -136,6 +144,10 @@ h2{
     padding:30px;
 }
 
+/* .contactContent input::placeholder{
+    color: #a4a5a4;
+} */
+
 .contactCategory td{
     font-size:1.8rem;
 }
@@ -174,7 +186,7 @@ form a:hover{
     font-weight: bold; /* 文字の太さ */
     display: block; /* インライン要素をブロック要素に変更 */
     margin: 0 auto; /* 中央寄せ */
-    font-size: 16px; /* 文字の大きさ */
+    font-size: 1.8rem; /* 文字の大きさ */
     padding: 15px; /* 内側の余白 */
     border-radius:10px; /* 角丸指定 */
     border: none;

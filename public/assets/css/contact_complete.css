@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+main{
+    height:80vh;
+padding:15px;
+}
+
+p{
+    text-align: center;
+    margin:30px;
+}
+
+.homeBack {
+    width: 150px; /* 横幅指定 */
+    background-color: #5FC0ED; /* 背景色 */
+    color: #fff; /* 文字色 */
+    font-weight: bold; /* 文字の太さ */
+    display: block; /* インライン要素をブロック要素に変更 */
+    margin: 0 auto; /* 中央寄せ */
+    font-size: 16px; /* 文字の大きさ */
+    padding: 15px; /* 内側の余白 */
+    border-radius:10px; /* 角丸指定 */
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    text-align: center;
+}

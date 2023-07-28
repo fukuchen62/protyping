@@ -84,6 +84,7 @@
         <h2>お問い合わせ</h2>
         <p class="contactWarning">下記の項目にすべて入力頂き、確認画面へ進むボタンを押してください</p>
         <!-- <div class="contact"> -->
+        <p class="basic">基本情報</p>
         <form action="">
             <table class="requiredTable" align="left">
                 <tr class="contactName">
@@ -91,7 +92,7 @@
                         <p> *</p>
                     </th>
                     <td class="contactBody">
-                        <input type="text" name="名前" class="formText" required>
+                        <input type="text" name="名前" class="formText" placeholder="山田太郎" required>
                     </td>
                 </tr>
                 <tr>
@@ -99,7 +100,7 @@
                         <p> *</p>
                     </th>
                     <td class="contactBody">
-                        <input type="email" name="メール" class="formText" required>
+                        <input type="email" name="メール" class="formText" placeholder="typing@mail.com" required>
                     </td>
                 </tr>
             </table>
@@ -109,6 +110,7 @@
                     ※架空のメールアドレスでの報告は規約違反となり、読まれずに破棄されます。ご注意ください。
                 </div>
             </div>
+            <p class="basic">問い合わせ内容</p>
             <table class="contactCategory" align="left">
                 <tr>
                     <th class="contactItem">問い合わせ種別
@@ -132,25 +134,25 @@
                 <tr class="languageName">
                     <th class="contactItem">言語名</th>
                     <td class="contactBody">
-                        <input type="text" name="言語名" class="formText">
+                        <input type="text" name="言語名" class="formText" placeholder="HTML">
                     </td>
                 </tr>
                 <tr class="wordName">
                     <th class="contactItem">単語名</th>
                     <td class="contactBody">
-                        <input type="text" name="単語名" class="formText">
+                        <input type="text" name="単語名" class="formText" placeholder="Math">
                     </td>
                 </tr>
                 <tr class="readingName">
                     <th class="contactItem">読み方</th>
                     <td class="contactBody">
-                        <input type="text" name="読み方" class="formText">
+                        <input type="text" name="読み方" class="formText" placeholder="マス">
                     </td>
                 </tr>
                 <tr class="meaningName">
                     <th class="contactItem">意味</th>
                     <td class="contactBody">
-                        <input type="text" name="意味" class="formText">
+                        <input type="text" name="意味" class="formText" placeholder="数字">
                     </td>
                 </tr>
                 <tr class="example">
@@ -160,7 +162,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th class="contactItem">問い合わせ内容</th>
+                    <th class="contactItem">問い合わせ</th>
                     <td class="contactBody">
                         <textarea name="textarea" class="formTextarea"></textarea>
                     </td>
@@ -172,7 +174,7 @@
                 <div class="termsBtn">
                     <a href="../html/terms.html">ご利用規約</a>
                 </div>
-                <input class="contactSubmit" type="submit" value="確認画面へ進む">
+                <input onclick="location.href='../html/contact_result.html'" class="contactSubmit" type="submit" value="確認画面へ進む">
             </div>
         </form>
 
