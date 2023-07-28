@@ -22,39 +22,81 @@
 
 }
 
+.mainBoxInner {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse; /* サイドバーを右側にする */
+}
+
+
+
+.shittokuContainer :nth-child(1){
+    width: calc(100% - 200px);
+    background-color: aqua;
+}
+
+.side :nth-child(2){
+    width: 200px;
+    background-color: burlywood;
+}
+
+.shittokuContainer {
+    display: flex;
+    flex-wrap:wrap;
+     justify-content:space-between;
+}
+
 /* パンくず */
 .breadCrumb {
     color: #8b8b8b;
     left: 10px;
 }
 
-/* 知っっとくページのタイトル */
+
+/* .side {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .side {
+
+        width: 176px;
+    }
+} */
+
+
+/* タイトル */
 .title {
-    font-size: 2.2rem;
     font-weight: 800;
     text-align: center;
     letter-spacing: 0.1rem;
     margin-top: 30px;
     margin-bottom: 40px;
 }
+@media screen and (min-width: 768px) {
+    .title {
+        font-size: 4rem;
+    }
+}
 
 
+/* タイトル下のPタグの文章 */
 .overview {
-    /* padding-left: 100px;
-    padding-right: 100px; */
     display: inline-block;
     margin-bottom: 30px;
-
+}
+@media screen and (min-width: 768px) {
+    .overview{
+        padding-left: 100px;
+        padding-right: 100px;
+    }
 }
 
 
-/* flexコンテナ
------------------------------- */
 
-.flexContainer {
-    max-width: 234px;
-    margin: 0 auto;
-}
+
+
+
 
 .flexItem {
     margin-top: 30px;
@@ -78,7 +120,7 @@
     object-fit: cover;
     max-width: 234px;
     margin-top: 11px;
-    margin-bottom: 11px;
+    margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 10px 10px 0px 0 rgb(96,200,218);
 
