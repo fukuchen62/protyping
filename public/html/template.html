@@ -94,22 +94,38 @@
             <!-- ここから各ページのメインコンテンツ -->
         </section>
 
+        <!-- パンくずリスト html-->
+        <ol class="breadCrumb-001">
+            <li><a href="#">ホーム</a></li>
+            <li><a href="#">カテゴリー</a></li>
+            <li><a href="#">タイトル</a></li>
+        </ol>
+
         <!-- 一覧を見る -->
         <a href="" class="listBtn">一覧を見る</a>
 
         <!-- ランキング、マイスコアボタン -->
-        <a href="" class="gameBtn">ゲームに挑戦</a>
+        <div class="gameChallenge">
+            <a href="" class="challengeBtn">ゲームに挑戦</a>
+        </div>
+        <div class="viewMyscore">
+            <a href="" class="viewBtn">MyScoreを見る</a>
+        </div>
 
+        <section id="gameBody">
+            <button id="startBtn" type="button">
+                <a href="../html/typing_game.html">ゲームをする</a>
+            </button>
+        </section>
         <!-- プルダウンメニュー -->
         <div class="selectWrap">
-            <!-- <select name="word"> -->
             <select name="word" required> <!-- required：選択必須を指定 -->
-                <option value="" disabled>言語を選ぶ 　　　</option>
-                <option value="HTML">HTML　　　</option>
-                <option value="CSS">CSS　　　</option>
-                <option value="JavaScript">JavaScript　　　</option>
-                <option value="PHP">PHP　　　</option>
-                <option value="Python">Python　　　</option>
+                <option value="よく使われる英単語">よく使われる英単語</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="PHP">PHP</option>
+                <option value="Python">Python</option>
             </select>
         </div>
 
