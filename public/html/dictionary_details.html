@@ -64,16 +64,56 @@
         </div>
     </header>
 
+    <!-- サイドバー -->
+    <!-- <aside id="sidebar">
+        <nav id="global-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li class="sub-menu"><a href="#">About</a></li>
+                <li class="sub-menu"><a href="#">Products</a></li>
+                <li class="sub-menu"><a href="#">Link</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="sub-nav">
+            <div id="sub-nav2" class="sub-menu-nav">
+                <h3 class="sub-menu-head">About</h3>
+                <ul>
+                    <li><a href="#">About 1</a></li>
+                    <li><a href="#">About 2</a></li>
+                </ul>
+            </div>
+            <div id="sub-nav3" class="sub-menu-nav">
+                <h3 class="sub-menu-head">Products</h3>
+                <ul>
+                    <li><a href="#">Product 1</a></li>
+                    <li><a href="#">Product 2</a></li>
+                </ul>
+            </div>
+            <div id="sub-nav4" class="sub-menu-nav">
+                <h3 class="sub-menu-head">Link</h3>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                </ul>
+            </div>
+        </div>
+    </aside> -->
+
     <main class="main">
 
         <!-- パンくずリスト -->
-        <div class="breadCrumb">パンくずリスト</div>
+
+        <ol class="breadCrumb-001">
+            <li><a href="#">ホーム</a></li>
+            <!-- <li><a href="#">カテゴリー</a></li> -->
+            <li><a href="#">プログラミングでよく使う英単語</a></li>
+        </ol>
 
 
-        <div>
-            <p>-辞書-</p>
-        </div>
-        <h3>プログラミングでよく使う英単語</h3>
+        <h2>-辞書-</h2>
+
+        <h3>プログラミングでよく使う<br>英単語</h3>
         <p>ここから辞書検索ができます。活用してね(^^)</p>
 
         <!-- 検索ボックス -->
@@ -86,7 +126,6 @@
 
         <!-- プルダウンメニュー -->
         <div class="selectWrap">
-            <!-- <select name="word"> -->
             <select name="word" required> <!-- required：選択必須を指定 -->
                 <option value="よく使われる英単語">よく使われる英単語</option>
                 <option value="HTML">HTML</option>
@@ -111,11 +150,11 @@
                 <tr class="box2">
                     <td class="detail">
                         <!---------- ポップアップ ---------->
-                        <label class="open" for="popUp">詳細</label>
+                        <label class="open" for="popUp">詳細 <img src="../assets/images/dictionary.png" alt=""></label>
                         <input type="checkbox" id="popUp">
                         <div class="overlay">
                             <div class="window">
-                                <label class="close" for="popUp"><img src="../assets/images/dictionary.jpg" alt=""></label>
+                                <label class="close" for="popUp"><img src="../assets/images/dictionary.jpg" alt="閉じるボタン"></label>
                                 <!---------- ポップアップ ---------->
                                 <h2>getElementByid</h2>
                                 <h5>読み方</h5>
@@ -146,7 +185,7 @@
                     </td>
                 </tr>
                 <tr class="box2">
-                    <td class="detail"><label class="open" for="popUp">詳細</label>
+                    <td class="detail"><label class="open" for="popUp">詳細 <img src="../assets/images/dictionary.png" alt=""></label>
                         <input type="checkbox" id="popUp">
                         <div class="overlay">
                             <div class="window">
@@ -180,7 +219,7 @@
                     </td>
                 </tr>
                 <tr class="box2">
-                    <td class="detail"><label class="open" for="popUp">詳細</label>
+                    <td class="detail"><label class="open" for="popUp">詳細 <img src="../assets/images/dictionary.png" alt=""></label>
                         <input type="checkbox" id="popUp">
                         <div class="overlay">
                             <div class="window">
@@ -214,7 +253,7 @@
                     </td>
                 </tr>
                 <tr class="box2">
-                    <td class="detail"><label class="open" for="popUp">詳細</label>
+                    <td class="detail"><label class="open" for="popUp">詳細 <img src="../assets/images/dictionary.png" alt=""></label>
                         <input type="checkbox" id="popUp">
                         <div class="overlay">
                             <div class="window">
@@ -248,7 +287,7 @@
                     </td>
                 </tr>
                 <tr class="box2">
-                    <td class="detail"><label class="open" for="popUp">詳細</label>
+                    <td class="detail"><label class="open" for="popUp">詳細 <img src="../assets/images/dictionary.png" alt=""></label>
                         <input type="checkbox" id="popUp">
                         <div class="overlay">
                             <div class="window">
@@ -282,7 +321,7 @@
                     </td>
                 </tr>
                 <tr class="box2">
-                    <td class="detail"><label class="open" for="popUp">詳細</label>
+                    <td class="detail"><label class="open" for="popUp">詳細 <img src="../assets/images/dictionary.png" alt=""></label>
                         <input type="checkbox" id="popUp">
                         <div class="overlay">
                             <div class="window">
@@ -316,7 +355,7 @@
                     </td>
                 </tr>
                 <tr class="box2">
-                    <td class="detail"><label class="open" for="popUp">詳細</label>
+                    <td class="detail"><label class="open" for="popUp">詳細 <img src="../assets/images/dictionary.png" alt=""></label>
                         <input type="checkbox" id="popUp">
                         <div class="overlay">
                             <div class="window">
@@ -350,7 +389,7 @@
                     </td>
                 </tr>
                 <tr class="box2">
-                    <td class="detail"><label class="open" for="popUp">詳細</label>
+                    <td class="detail"><label class="open" for="popUp">詳細 <img src="../assets/images/dictionary.png" alt=""></label>
                         <input type="checkbox" id="popUp">
                         <div class="overlay">
                             <div class="window">
@@ -384,7 +423,7 @@
                     </td>
                 </tr>
                 <tr class="box2">
-                    <td class="detail"><label class="open" for="popUp">詳細</label>
+                    <td class="detail"><label class="open" for="popUp">詳細 <img src="../assets/images/dictionary.png" alt=""></label>
                         <input type="checkbox" id="popUp">
                         <div class="overlay">
                             <div class="window">
@@ -419,7 +458,7 @@
                 </tr>
 
                 <tr class="box2">
-                    <td class="detail"><label class="open" for="popUp">詳細</label>
+                    <td class="detail"><label class="open" for="popUp">詳細 <img src="../assets/images/dictionary.png" alt=""></label>
                         <input type="checkbox" id="popUp">
                         <div class="overlay">
                             <div class="window">
