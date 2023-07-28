@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+
+
 .main{
     text-align: center;
     margin: 10px;
@@ -17,6 +19,7 @@ color: #8b8b8b;
 margin-bottom: 10px;
 font-size: 1.6rem;
 margin-bottom: 30px;
+writing-mode: horizontal-tb;
 }
 
 a{
@@ -166,8 +169,8 @@ a{
     border-right: 6px solid transparent;
     border-top: 10px solid #625858;
     pointer-events: none;
-
 }
+
 .selectWrap select {
     color: #625858;
     font-size: 1.6rem;
@@ -187,4 +190,78 @@ color: #26567c;
 font-weight: 500 ;
 font-size: 1.7rem;
 padding: 15px;
+}
+
+
+/* ポップアップ表示 */
+.open {
+	cursor:pointer; /* マウスオーバーでカーソルの形状を変えることで、クリックできる要素だとわかりやすいように */
+}
+#popUp {
+	display: none; /* label でコントロールするので input は非表示に */
+}
+.overlay {
+	display: none; /* input にチェックが入るまでは非表示に */
+}
+#popUp:checked + .overlay {
+	display: block;
+	z-index: 9999;
+	background-color: #00000070;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+}
+.window {
+	width: 90vw;
+	/* max-width: 380px; */
+	height: auto;
+	background-color:#ffff;
+	border-radius: 6px;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+}
+.text {
+	font-size: 18px;
+	margin: 0;
+}
+/* ************************ */
+
+/* ×画像 */
+.close img {
+	cursor:pointer;
+	position: absolute;
+	right: 4px;
+	width: 35px;
+    height: 35px;
+}
+
+.window h2{
+    margin-bottom:20px;
+}
+
+.mean{
+    margin: auto;
+    text-align: center;
+    width: 270px;
+    margin-top: 10px;
+    /* border: 1px solid #8b8b8b; */
+    border-radius:15px;
+    border:#817F6E 2px solid;
+}
+
+.example{
+    margin: auto;
+    text-align: center;
+    width: 270px;
+    margin-top: 10px;
+    border:#817F6E 2px solid;
+    border-radius:15px;
+    margin-bottom: 10px;
 }
