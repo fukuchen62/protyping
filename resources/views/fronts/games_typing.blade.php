@@ -8,10 +8,32 @@
 {{-- ゲーム画面の内容 --}}
 @section('maincontents')
     <h1>ゲーム画面</h1>
+        {{-- デバッグ用 --}}
+        {{-- <p>言語は {{ $language }} が選択されています。</p>
+        <p>レベルは {{ $level }} が選択されています。</p> --}}
+    <table>
+        <tr>
+            <th>英単語(スペル)</th>
+        </tr>
+        {{-- 遊ぶ文字列をJavaScriptに渡す --}}
+        @php
+            $json_array = []; // 空の配列として初期化
+            foreach($items as $item) {
+                $json_array[] = $item->word_spell; // 配列にJSON形式の文字列を追加
+                //var_dump($json_array); // デバッグ用に配列を表示（必要に応じてコメントアウト）
+            }
+            $json_array = json_encode($json_array); // PHPの配列をJSON形式の文字列に変換
+            //var_dump($json_array); // デバッグ用に配列を表示（必要に応じてコメントアウト）
+        @endphp
+        @foreach($items as $item)
+            <tr>
+                <th>{{ $item->word_spell }}</th>
+            </tr>
+        @endforeach
+    </table>
     <div id="game-screen">
         <div id="game-header">
             <h2 class="description">システムエンジニアのためのタイピングゲーム</h2>
-            <!-- <div id="close-button1"></div> -->
         </div>
 
         <div id="game-body">
@@ -23,19 +45,19 @@
                 {{-- 言語とレベルを選択してゲームスタート --}}
                 <form action="{{ route('game') }}" method="get">
                     {{-- 言語の選択 --}}
-                    <select id="language-select" name="param">
-                        <option value=""selected>選択してください</option>
-                        <option value="1">HTML</option>
+                    <select id="language-select" name="language">
+                        <option value="1"selected>HTML</option>
                         <option value="2">CSS</option>
                         <option value="3">JavaScript</option>
                         <option value="4">PHP</option>
+                        <option value="5">Python</option>
+                        <option value="6">よく使う英単語</option>
                         <!-- 他の言語のオプションを追加 -->
                     </select>
 
                     {{-- レベルの選択 --}}
-                    <select id="level-select" name="param">
-                        <option value=""selected>選択してください</option>
-                        <option value="1">初級</option>
+                    <select id="level-select" name="level">
+                        <option value="1"selected>初級</option>
                         <option value="2">中級</option>
                         <!-- 他のレベルのオプションを追加 -->
                     </select>
@@ -182,102 +204,6 @@
             </div>
         </div>
     </div>
-    <table>
-        <tr>
-            <th>種別ID</th>
-            <th>言語種別ID</th>
-            <th>英単語(スペル)</th>
-            <th>日本語発音(ルビ)</th>
-            <th>英語発音記号</th>
-            <th>意味(プログラミング言語)</th>
-            <th>意味(日本語)</th>
-            <th>使用例</th>
-            <th>難易度ID</th>
-        </tr>
-        @php
-            $json_array = json_encode(NULL);
-        @endphp
-        @foreach($items as $item)
-            @if(isset($_GET['param']))
-                {{-- 言語別・レベルに絞り込まれた場合 --}}
-                @if($item->language_id == $_GET['param'] && $item->level_id == $_GET['param'])
-                    <tr>
-                        <th>{{ $item->id }}</th>
-                        <th>{{ $item->language_id }}</th>
-                        <th>{{ $item->word_spell }}</th>
-                        <th>{{ $item->japanese }}</th>
-                        <th>{{ $item->pronunciation }}</th>
-                        <th>{{ $item->meaning }}</th>
-                        <th>{{ $item->notion }}</th>
-                        <th>{{ $item->usage }}</th>
-                        <th>{{ $item->level_id }}</th>
-                    </tr>
-                    @php
-                        $json_array = json_encode($item->word_spell);
-                    @endphp
-                @elseif($item->language_id == $_GET['param'])
-                {{-- 言語だけが選択された場合はレベルのデフォルト(初級)を取得する --}}
-                    @if($item->level_id == 1)
-                        <tr>
-                            <th>{{ $item->id }}</th>
-                            <th>{{ $item->language_id }}</th>
-                            <th>{{ $item->word_spell }}</th>
-                            <th>{{ $item->japanese }}</th>
-                            <th>{{ $item->pronunciation }}</th>
-                            <th>{{ $item->meaning }}</th>
-                            <th>{{ $item->notion }}</th>
-                            <th>{{ $item->usage }}</th>
-                            <th>{{ $item->level_id }}</th>
-                        </tr>
-                        @php
-                            $json_array = json_encode($item->word_spell);
-                        @endphp
-                    @endif
-                @elseif($item->language_id == $_GET['param'])
-                {{-- 難易度だけが選択された場合は言語のデフォルト(HTML)を取得する --}}
-                    @if($item->language_id == 1)
-                        <tr>
-                            <th>{{ $item->id }}</th>
-                            <th>{{ $item->language_id }}</th>
-                            <th>{{ $item->word_spell }}</th>
-                            <th>{{ $item->japanese }}</th>
-                            <th>{{ $item->pronunciation }}</th>
-                            <th>{{ $item->meaning }}</th>
-                            <th>{{ $item->notion }}</th>
-                            <th>{{ $item->usage }}</th>
-                            <th>{{ $item->level_id }}</th>
-                        </tr>
-                        @php
-                            $json_array = json_encode($item->word_spell);
-                        @endphp
-                    @endif
-                @endif
-            @else
-                {{-- 選択されていなければデフォルトでHTMLを表示する --}}
-                {{-- 1:HTML --}}
-                @if($item->language_id == 1)
-                    <tr>
-                        <th>{{ $item->id }}</th>
-                        <th>{{ $item->language_id }}</th>
-                        <th>{{ $item->word_spell }}</th>
-                        <th>{{ $item->japanese }}</th>
-                        <th>{{ $item->pronunciation }}</th>
-                        <th>{{ $item->meaning }}</th>
-                        <th>{{ $item->notion }}</th>
-                        <th>{{ $item->usage }}</th>
-                        <th>{{ $item->level_id }}</th>
-                    </tr>
-                    @php
-                        $json_array = json_encode($item->word_spell);
-                        var_dump($json_array);
-                    @endphp
-                @endif
-            @endif
-        @endforeach
-    </table>
-    <div>
-        <p>結果を表示させる</p>
-    </div>
 @endsection
 @section('myjs')
     {{-- ゲーム用js --}}
@@ -307,11 +233,13 @@
             const keyboard = document.getElementById('virtual-keyboard');
             const space = keyboard.querySelector('.key_space');
 
-
-            let wordJP1 = <?php echo $json_array; ?>; // 表示文章
-            let wordJP2 = <?php echo $json_array; ?>; // ひらがな文章
-            console.log(wordJP1);
-            console.log(wordJP2);
+            // 遊ぶ文字列をデータベースから取得
+            let wordJPArray = {!! $json_array !!};
+            // console.log(wordJPArray); // 配列の中身を確認（デバッグ用）
+            let wordJP1 = wordJPArray; // 表示要素
+            let wordJP2 = wordJPArray; // 読み仮名文章
+            // console.log(wordJP1); // 配列の中身を確認（デバッグ用
+            // console.log(wordJP2); // 配列の中身を確認（デバッグ用
 
             let wordRs; // ローマ字データ1
             let wordR; // ローマ字データ2
