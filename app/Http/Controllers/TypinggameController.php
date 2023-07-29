@@ -10,6 +10,8 @@ use App\Models\Vocabulary;
 use App\Models\Language;
 use App\Models\Game;
 
+use Illuminate\Support\Facades\Log;
+
 class TypinggameController extends Controller
 {
 
@@ -70,17 +72,22 @@ class TypinggameController extends Controller
     public function gameresult(Request $request)
     {
         // ゲーム結果(スコア)の送信(ランキング作成のため)
-
-        // リクエストから得点とプレイヤー名を取得
         $score = $request->input('score');
-        // $playerName = $request->input('player_name');
+
+        // デバッグ用にログに出力して確認
+        Log::info('Score received: ' . $score);
 
         // データベースに登録
+        // 現状スコア以外はダミーデータを登録しておく
         $scoreModel = new Score();
+        $scoreModel->language_id = 1;
+        $scoreModel->level_id = 1;
+        $scoreModel->user_id = 999;
+        $scoreModel->username = "test";
         $scoreModel->score = $score;
         $scoreModel->save();
 
         // 必要な場合はレスポンスを返す
-        return response()->json(['message' => 'Score saved successfully']);
+        return response()->json(['message' => 'Score saved successfully'], 200);
     }
 }

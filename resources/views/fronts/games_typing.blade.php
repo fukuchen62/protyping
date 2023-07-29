@@ -11,10 +11,10 @@
         {{-- デバッグ用 --}}
         {{-- <p>言語は {{ $language }} が選択されています。</p>
         <p>レベルは {{ $level }} が選択されています。</p> --}}
-    <table>
-        <tr>
+    <div>
+        {{-- <tr>
             <th>英単語(スペル)</th>
-        </tr>
+        </tr> --}}
         {{-- 遊ぶ文字列をJavaScriptに渡す --}}
         @php
             $json_array = []; // 空の配列として初期化
@@ -25,12 +25,13 @@
             $json_array = json_encode($json_array); // PHPの配列をJSON形式の文字列に変換
             //var_dump($json_array); // デバッグ用に配列を表示（必要に応じてコメントアウト）
         @endphp
-        @foreach($items as $item)
+        {{-- デバッグ用使うときは親タグのdivをtableにすること --}}
+        {{-- @foreach($items as $item)
             <tr>
                 <th>{{ $item->word_spell }}</th>
             </tr>
-        @endforeach
-    </table>
+        @endforeach --}}
+    </div>
     <div id="game-screen">
         <div id="game-header">
             <h2 class="description">システムエンジニアのためのタイピングゲーム</h2>
@@ -419,6 +420,7 @@
             function wordSet() {
                 if (count == limit) {
                     finish();
+                    setscore();
                 } else {
                     example.innerHTML = '<div>' + wordJP1[ridx[count]] + '</div>';
                     kana.innerHTML = '<div>' + wordJP2[ridx[count]] + '</div>';
@@ -460,23 +462,7 @@
                 let speed, accuracy, score;
                 speed = correct / time * 60 * 1000;
                 accuracy = correct / (correct + miss);
-                score = isStopped ? '-' : Math.floor(speed * accuracy ** 3);
-
-                // scoreをデータベースに登録したい
-                // AJAXリクエストを送信してデータを登録
-                fetch('/typinggame', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-CSRF-TOKEN': '{{ csrf_token() }}', // CSRFトークンを取得（LaravelのBladeテンプレート内で使用する場合）
-                },
-                body: JSON.stringify({ score: score }), // scoreをJSON形式に変換して送信
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data); // データベースに登録された結果などのレスポンスを表示（必要に応じて）
-                })
-                .catch(error => console.error('データの登録に失敗しました:', error));
+                score = isStopped ? '-' : Math.floor(speed * accuracy ** 3); // スコアを数値として設定
 
                 let html;
                 html = '<ul>';
@@ -616,6 +602,38 @@
                         moBtn.remove();
                     }
                 }
+            }
+
+            // 得点をデータベースに保存
+            function setscore() {
+                let time = new Date() - begin;
+                let speed, accuracy, score;
+                speed = correct / time * 60 * 1000;
+                accuracy = correct / (correct + miss);
+                score = isStopped ? '-' : Math.floor(speed * accuracy ** 3);
+
+                // scoreをデータベースに登録したい
+                // JavaScriptのデータをオブジェクトに格納してJSON形式に変換
+                let dataToSend = { score: score };
+
+                // デバッグ用にコンソールに出力して確認
+                console.log(score); // スコア
+                console.log(dataToSend); // 送信するJSONデータ
+
+                // AJAXリクエストを送信してデータを登録
+                fetch('typinggame', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}', // CSRFトークンを取得（LaravelのBladeテンプレート内で使用する場合）
+                    },
+                    body: JSON.stringify(dataToSend), // scoreをJSON形式に変換して送信
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data); // データベースに登録された結果などのレスポンスを表示（必要に応じて）
+                })
+                .catch(error => console.error('データの登録に失敗しました:', error));
             }
 
             // かな->ローマ変換
@@ -1025,6 +1043,7 @@
                         if (key == 'Escape') { // Escを押した場合
                             isStopped = true;
                             finish();
+                            setscore();
                         } else {
                             temp += key;
                             if (key == wordR[idx1][pattern[idx1]][idx2]) {
