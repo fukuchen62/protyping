@@ -37,3 +37,20 @@ function delete_confirm_dialog(msg, url) {
         return false;
     }
 }
+
+// サイドバー
+var $subNav = $('#sub-nav');
+
+$('.sub-menu > a').on('click', function (e) {
+    e.preventDefault();
+    var index = $(this).parent().index() + 1;
+    $subNav.find('#sub-nav' + index).addClass('is-active');
+
+    $('#sidebar').addClass('is-open-submenu');
+});
+
+// サブメニューのタイトルをクリックすると閉じる
+$('.sub-menu-head').on('click', function () {
+    $(this).parent().removeClass('is-active');
+    $('#sidebar').removeClass('is-open-submenu');
+});

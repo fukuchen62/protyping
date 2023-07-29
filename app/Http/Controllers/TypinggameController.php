@@ -19,12 +19,41 @@ class TypinggameController extends Controller
      * @param Request $request
      * @return void
      */
-    public function gamestart(Request $request, $language = null, $level = null)
+    public function gamestart(Request $request)
     {
-        // モデルからデータを取得
-        $items = Vocabulary::all();
+        // ゲーム条件を取得
+        $s1 = $request->input('language');
+        $s2 = $request->input('level');
+
+        // ゲーム条件に応じてデータを取得する
+        if ($s1) {
+            // HTML
+            if ($s2 == 1) {
+                // ゆっくりコース
+                $items = Vocabulary::where('language_id', $s1)
+                    ->Where('level_id', $s2)
+                    ->get();
+            } elseif ($s2 == 2) {
+                // ダッシュコース
+                $items = Vocabulary::where('language_id', $s1)
+                    ->Where('level_id', $s2)
+                    ->get();
+            } else {
+                // 不明な値の場合はデフォルト(HTMLののんびりコース)設定にする
+                $items = Vocabulary::where('language_id', 1)
+                    ->Where('level_id', 1)
+                    ->get();
+            }
+        } else {
+            // 指定がない場合はデフォルト(HTMLののんびりコース)設定にする
+            $items = Vocabulary::where('language_id', 1)
+                ->Where('level_id', 1)
+                ->get();
+        }
+
         $data = [
-            'param' => '',
+            'language' => $s1,
+            'level' => $s2,
             'items' => $items,
         ];
 

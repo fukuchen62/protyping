@@ -28,6 +28,23 @@
             <input type="submit" value="検索" class="search_btn">
         </div>
     </form>
+
+    {{-- 言語選択フォーム --}}
+    <form action="{{ route('indexscore') }}" method="get">
+        <div>
+            <input type="hidden" name="form_identifier" value="form2">
+            <select name="language">
+                <option value="1"selected>HTML</option>
+                <option value="2">CSS</option>
+                <option value="3">JavaScript</option>
+                <option value="4">PHP</option>
+                <option value="5">Python</option>
+                <option value="6">よく使う英単語</option>
+            </select>
+            <input type="submit" value="言語種別選択" class="search_btn">
+        </div>
+    </form>
+
     <table class="info">
         <tr>
             <th width="5%">No</th>
@@ -36,7 +53,7 @@
             <th width="5%">ユーザID</th>
             <th width="10%">ユーザ名</th>
             <th>スコア</th>
-            {{-- <th width="10%">修正</th> --}}
+            <th width="10%">修正</th>
         </tr>
         @foreach ($score_list as $key => $item)
             <tr>
@@ -46,10 +63,11 @@
                 <td>{{ $item->user_id }}</td>
                 <td>{{ $item->username }}</td>
                 <td>{{ $item->score }}</td>
-                {{-- <td class="edit"><a href="{{ route('editlanguage', ['id' => $item->id]) }}">編集</a></td> --}}
+                <td class="edit"><a href="{{ route('editscore', ['id' => $item->id]) }}">編集</a></td>
             </tr>
         @endforeach
     </table>
+
 @endsection
 
 @section('footer')

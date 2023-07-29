@@ -43,6 +43,9 @@ class AdminScoreController extends Controller
             $s = $request->s;
         }
 
+        // 言語選択された場合
+        $formIdentifier = $request->input('form_identifier');
+
         // 言語を読み込む
         if ($s != '') {
             $items = Score::where('language_id', 'like', '%' . $s . '%')
@@ -51,6 +54,10 @@ class AdminScoreController extends Controller
                 ->orWhere('username', 'like', '%' . $s . '%')
                 ->orWhere('score', 'like', '%' . $s . '%')
                 ->get();
+        } elseif ($formIdentifier === 'form2') {
+            // 言語選択された場合
+            $language_id = $request->input('language');
+            $items = Score::where('language_id', $language_id)->get();
         } else {
             // $items = Score::where('deleted_at', null)
             //     ->orderBy('id', 'desc')
@@ -200,8 +207,8 @@ class AdminScoreController extends Controller
         unset($form['_token']);
 
         // 更新日時を刷新
-        // $score->updated_at = date("Y-m-d H:i:s");
-        // $score->updated_user_id = $login_user->id;
+        $score->updated_at = date("Y-m-d H:i:s");
+        $score->updated_user_id = $login_user->id;
 
         // インスタンスに編集結果を入れ替え、保存
         $score->fill($form)->save();

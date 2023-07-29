@@ -18,10 +18,11 @@ class Knowhow extends Model
     // バリデーションルール
     public static $rules = [
         'post_category_id' => 'required|integer',
-        'title'       => 'required|string|max:32',
-        'summary'    => 'max:200',
-        'content'    => 'required',
+        'title'       => 'required|string|max:60',
         'thumbnail'   => 'max:200',
+        'summary'    => 'required|max:250',
+        'summary_detail'    => 'required|max:500',
+        'content'    => 'required|max:10000',
         'is_show'     => 'required|boolean'
     ];
 

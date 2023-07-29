@@ -7,41 +7,69 @@
 @section('maincontents')
     <h1>知っトク記事一覧</h1>
 
-    {{-- 検索フォーム --}}
-    <form action="{{ route('knowhow') }}" method="get">
-        <div>
-            <select name="param">
-                <option value=""selected>選択してください</option>
-                <option value="1">更新情報</option>
-                <option value="2">新着ニュース</option>
-                <option value="3">イベント情報</option>
-                <option value="4">エメット</option>
-                <option value="5">ショートカット</option>
-                <option value="6">資格</option>
-                <option value="7">おすすめWEBアプリ</option>
-            </select>
-            <input type="submit" value="言語種別選択">
-        </div>
-    </form>
-
-    <p class="margin"><a href="{{ route('details') }}">知っトク情報詳細</a></p>
-    <table>
-        <tr>
-            <th>タイトル</th>
-            <th>サムネイル</th>
-            <th>概要</th>
-        </tr>
-
-        @foreach($items as $item)
-        @if(isset($_GET['param']))
-            {{-- カテゴリ別に --}}
-            <tr>
-                <th>{{ $item->title }}</th>
-                <th>{{ $item->thumbnail }}</th>
-                <th>{{ $item->summary }}</th>
-        @else
-
-        @endif
+    {{-- アイコンは暫定的に表示 --}}
+    <p><a href="{{ route('details', ['param' => '4']) }}">
+        <img src="assets/images/icon/favicon.png" alt="環境開発セットアップ"></a>
+        @foreach($items as $key => $item)
+            @if($key == 3)
+                {{ $item->summary }}
+            @endif
         @endforeach
-    </table>
+    </p>
+    <p><a href="{{ route('details', ['param' => '5']) }}">
+        <img src="assets/images/icon/favicon.png" alt="wordpress"></a>
+        @foreach($items as $key => $item)
+            @if($key == 4)
+                {{ $item->summary }}
+            @endif
+        @endforeach
+    </p>
+    <p><a href="{{ route('details', ['param' => '6']) }}">
+        <img src="assets/images/icon/favicon.png" alt="おすすめWebアプリ"></a>
+        @foreach($items as $key => $item)
+            @if($key == 5)
+                {{ $item->summary }}
+            @endif
+        @endforeach
+    </p>
+    <p><a href="{{ route('details', ['param' => '7']) }}">
+        <img src="assets/images/icon/favicon.png" alt="おすすめWebサイト"></a>
+        @foreach($items as $key => $item)
+            @if($key == 6)
+                {{ $item->summary }}
+            @endif
+        @endforeach
+    </p>
+    <p><a href="{{ route('details', ['param' => '8']) }}">
+        <img src="assets/images/icon/favicon.png" alt="ショートカット"></a>
+        @foreach($items as $key => $item)
+            @if($key == 7)
+                {{ $item->summary }}
+            @endif
+        @endforeach
+    </p>
+    <p><a href="{{ route('details', ['param' => '9']) }}">
+        <img src="assets/images/icon/favicon.png" alt="資格"></a>
+        @foreach($items as $key => $item)
+            @if($key == 8)
+                {{ $item->summary }}
+            @endif
+        @endforeach
+    </p>
+    <p><a href="{{ route('details', ['param' => '10']) }}">
+        <img src="assets/images/icon/favicon.png" alt="Chrome拡張機能"></a>
+        @foreach($items as $key => $item)
+            @if($key == 9)
+                {{ $item->summary }}
+            @endif
+        @endforeach
+    </p>
+    <p><a href="{{ route('details', ['param' => '11']) }}">
+        <img src="assets/images/icon/favicon.png" alt="卒業生の作品"></a>
+        @foreach($items as $key => $item)
+            @if($key == 10)
+                {{ $item->summary }}
+            @endif
+        @endforeach
+    </p>
 @endsection
