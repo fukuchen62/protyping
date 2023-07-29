@@ -61,6 +61,12 @@
             </td>
         </tr>
         <tr>
+            <th> <span>*</span> 詳細な概要: </th>
+            <td>
+                <textarea name="summary_detail" cols="50" rows="5" required> {{ $knowhow->summary_detail }} </textarea>
+            </td>
+        </tr>
+        <tr>
             <th> <span>*</span> 詳細内容:</th>
             <td>
                 <textarea name="content" id="content" cols="50" rows="5" required> {{ $knowhow->content }} </textarea>

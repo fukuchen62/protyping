@@ -150,47 +150,47 @@ Route::get(
  * 管理画面
  * 登録してあるユーザ情報を検索する
  */
-Route::get('adminfinduser', [App\Http\Controllers\AdminController::class, 'searchuser'])->name('finduser');
+Route::get('adminfinduser', [App\Http\Controllers\AdminUserController::class, 'searchuser'])->name('finduser');
 
 /**
  * 管理画面
  * 登録してあるユーザ情報の一覧を表示する
  */
-Route::get('adminindexuser', [App\Http\Controllers\AdminController::class, 'showuser'])->name('indexuser');
+Route::get('adminindexuser', [App\Http\Controllers\AdminUserController::class, 'showuser'])->name('indexuser');
 
 /**
  * 管理画面
  * ユーザ情報の新規登録画面を表示する
  */
-Route::get('adminadduser', [App\Http\Controllers\AdminController::class, 'newuser'])->name('adduser');
+Route::get('adminadduser', [App\Http\Controllers\AdminUserController::class, 'newuser'])->name('adduser');
 
 /**
  * 管理画面
  * ユーザ情報を新規で登録する
  */
-Route::post('adminadduser', [App\Http\Controllers\AdminController::class, 'storeuser'])->name('adduser');
+Route::post('adminadduser', [App\Http\Controllers\AdminUserController::class, 'storeuser'])->name('adduser');
 
 /**
  * 管理画面
  * 登録済みのユーザ情報の編集画面を表示する
  */
-Route::get('adminadduser', [App\Http\Controllers\AdminController::class, 'edituser'])->name('edituser');
+Route::get('adminadduser', [App\Http\Controllers\AdminUserController::class, 'edituser'])->name('edituser');
 
 /**
  * 管理画面
  * 登録済みのユーザ情報を編集する
  */
-Route::post('adminadduser', [App\Http\Controllers\AdminController::class, 'updateuser'])->name('edituser');
+Route::post('adminadduser', [App\Http\Controllers\AdminUserController::class, 'updateuser'])->name('edituser');
 
 /**
  * 管理画面
  * 登録済みのユーザ情報を削除する
  */
-Route::get('adminadduser', [App\Http\Controllers\AdminGameController::class, 'deleteuser'])->name('edituser');
+Route::get('adminadduser', [App\Http\Controllers\AdminUserController::class, 'deleteuser'])->name('edituser');
 
 /**
  * 管理画面
- * 登録済みのユーザ情報を削除する
+ * 登録してあるゲーム情報を検索する
  */
 Route::get('adminfindgame', [App\Http\Controllers\AdminGameController::class, 'searchgame'])->name('findgame');
 

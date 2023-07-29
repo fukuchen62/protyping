@@ -13,5 +13,6 @@
         <li><a href="{{ route('indexlike') }}">いいね</a></li>
         <li><a href="{{ route('indexfavorite') }}">お気に入り</a></li>
         <li><a href="{{ route('indexcontact') }}">お問い合わせ</a></li>
+        <li><a href="{{ route('indexuser') }}">ユーザー</a></li>
     </ul>
 </section>
