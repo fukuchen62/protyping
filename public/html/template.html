@@ -15,9 +15,6 @@
     <!-- <link rel="stylesheet" href="../assets/css/slick.css">
 <link rel="stylesheet" href="../assets/css/slick-theme.css"> -->
 
-    <!-- jqueryの読み込み -->
-    <script src="../assets/js/vendor/jquery-3.6.3.min.js"></script>
-
     <!-- フォント設定 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +29,6 @@
 
 
 </head>
-
 
 <body>
     <!-- ヘッダー -->
@@ -113,9 +109,15 @@
         </div>
 
         <section id="gameBody">
-            <button id="startBtn" type="button">
-                <a href="../html/typing_game.html">ゲームをする</a>
-            </button>
+            <div class="box" id="makeImg">
+                <div class="circle"></div>
+                <button id="startBtn" type="button">
+                    <a href="../html/typing_game.html">
+                        <p>ゲームをする</p>
+                    </a>
+                </button>
+                <div class="circleBottom"></div>
+            </div>
         </section>
         <!-- プルダウンメニュー -->
         <div class="selectWrap">
@@ -149,7 +151,9 @@
             <small>Copyright©タイプコード All Rights Reserved.</small>
         </div>
     </footer>
-
+    <!-- jqueryの読み込み -->
+    <script src="../assets/js/vendor/jquery-3.6.3.min.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>
