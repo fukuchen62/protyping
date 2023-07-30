@@ -87,7 +87,11 @@ class TypinggameController extends Controller
         $scoreModel->score = $score;
         $scoreModel->save();
 
+        $response = response()->json(['message' => 'Score saved successfully'], 200);
+        // クッキーに値を保存する
+        $response->cookie('saved_data', $score, 600); // 60分 = 1時間
+
         // 必要な場合はレスポンスを返す
-        return response()->json(['message' => 'Score saved successfully'], 200);
+        return $response;
     }
 }

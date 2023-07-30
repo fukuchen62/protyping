@@ -36,7 +36,7 @@ class MyscoreController extends Controller
 
         // クッキーにデータを保存 (ここでは1時間の有効期限を設定しています)
 
-        $response = response()->view('fronts.myscoreresult', ['data' => $data]);
+        $response = response()->view('fronts.myscore', ['data' => $data]);
         $response->cookie('saved_data', $data, 60); // 60分 = 1時間
 
         // 保存完了メッセージを表示するなど、適宜リダイレクトやレスポンスを返す
@@ -51,6 +51,6 @@ class MyscoreController extends Controller
     {
         // コース(難易度)別に各言語カテゴリーのハイスコアを表示させる(デフォルトはのんびりコース)
 
-        return view('fronts.myscoreresult');
+        return view('fronts.myscore');
     }
 }
