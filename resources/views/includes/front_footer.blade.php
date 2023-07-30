@@ -12,63 +12,52 @@
             {{-- <li><a href="{{ route('top') }}">
                     <img src="{{ asset('assets/images/menu_icon/station_list_icon_w.svg') }}" alt="道の駅一覧"
                         width="30" height="20">
-                    道の駅一覧</a></li>
+                    道の駅一覧</a></li> --}}
 
             <li><a href="{{ route('top') }}">
-                    <img src="{{ asset('assets/images/menu_icon/station_area_icon_w.svg') }}" alt="エリア検索"
+                    <img src="{{ asset('assets/images/menu_icon/station_area_icon_w.svg') }}" alt="トップ画面"
                         width="30" height="20">
-                    エリア検索</a></li>
+                    TOP</a></li>
 
-            <li><a href="{{ route('top') }}">
-                    <img src="{{ asset('assets/images/menu_icon/station_detail_icon_w.svg') }}" alt="詳細検索"
+            <li><a href="{{ route('game') }}">
+                    <img src="{{ asset('assets/images/menu_icon/station_detail_icon_w.svg') }}" alt="ゲーム"
                         width="30" height="20">
-                    詳細検索</a></li>
-            <li><a href="{{ route('top') }}">
-                    <img src="{{ asset('assets/images/menu_icon/news_icon_w.svg') }}" alt="ニュース" width="30"
+                    ゲーム</a></li>
+            <li><a href="{{ route('dictionary') }}">
+                    <img src="{{ asset('assets/images/menu_icon/news_icon_w.svg') }}" alt="辞書" width="30"
                         height="20">
-                    ニュース</a></li>
-
-        </ul>
-
-        <ul class="footer-menu-list">
-
-            <li><a href="{{ route('top') }}">
-                    <img src="{{ asset('assets/images/menu_icon/goods_list_icon_w.svg') }}" alt="特産品"
+                    辞書</a></li>
+            <li><a href="{{ route('ranking') }}">
+                    <img src="{{ asset('assets/images/menu_icon/goods_list_icon_w.svg') }}" alt="ランキング"
                         width="30" height="20">
-                    特産品</a></li>
-
-            <li><a href="{{ route('top') }}">
-                    <img src="{{ asset('assets/images/menu_icon/activity_list_icon_w.svg') }}" alt="体験"
+                    ランキング</a></li>
+            <li><a href="{{ route('myscore') }}">
+                    <img src="{{ asset('assets/images/menu_icon/activity_list_icon_w.svg') }}" alt="マイスコア"
                         width="30" height="20">
-                    体験</a></li>
+                    マイスコア</a></li>
 
-            <li><a href="{{ route('top') }}">
-                    <img src="{{ asset('assets/images/menu_icon/blog_list_icon_w.svg') }}" alt="ブログ"
+            <li><a href="{{ route('knowhow') }}">
+                    <img src="{{ asset('assets/images/menu_icon/blog_list_icon_w.svg') }}" alt="知っトク情報"
                         width="30" height="20">
-                    ブログ</a></li>
-
+                    知っトク情報</a></li>
             <li>
-                <a href="{{ route('top') }}">
-                    <img src="{{ asset('assets/images/menu_icon/like_icon_w.svg') }}" alt="お気に入り" width="30"
+                <a href="{{ route('about') }}">
+                    <img src="{{ asset('assets/images/menu_icon/like_icon_w.svg') }}" alt="アバウト" width="30"
                         height="20">
-                    お気に入り</a>
-            </li>
-        </ul>
-
-        <ul>
-            <li><a href="{{ route('top') }}">
-                    <img src="{{ asset('assets/images/menu_icon/contact_icon_w.svg') }}" alt="お問い合わせ"
+                    アバウト</a></li>
+            <li><a href="{{ route('article') }}">
+                    <img src="{{ asset('assets/images/menu_icon/contact_icon_w.svg') }}" alt="更新情報"
                         width="30" height="20">
-                    お問い合わせ</a></li>
-            <li><a href="{{ route('top') }}">
-                    <img src="{{ asset('assets/images/menu_icon/about-this-website_icon_w.svg') }}" alt="このサイトについて"
+                    更新情報</a></li>
+            <li><a href="{{ route('terms') }}">
+                    <img src="{{ asset('assets/images/menu_icon/about-this-website_icon_w.svg') }}" alt="利用規約"
                         width="30" height="20">
-                    このサイトについて</a></li>
-            <li><a href="{{ route('top') }}">
+                    利用規約</a></li>
+            <li><a href="{{ route('privacypolicy') }}">
                     <img src="{{ asset('assets/images/menu_icon/privacy-policy_icon_w.svg') }}" alt="プライバシーポリシー"
                         width="30" height="20">
-                    プライバシーポリシー</a></li> --}}
-            <li><a href="{{ route('top') }}" target="_blank">
+                    プライバシーポリシー</a></li>
+            <li><a href="{{ route('admintop') }}" target="_blank">
                     <img src="{{ asset('assets/images/menu_icon/station_list_icon.svg') }}" alt="ログイン" width="30"
                         height="30">
                     ログイン</a></li>

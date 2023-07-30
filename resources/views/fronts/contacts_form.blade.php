@@ -1,10 +1,17 @@
-@extends('layouts.layout')
+@extends('layouts.layout_front')
+
+@section('discription')
+
+@section('keywords')
 
 @section('title','お問い合わせ')
-@section('mycss')
+
+@section('PPageCss')
+
+@section('key_visual')
 
 {{-- メインコンテンツの内容 --}}
-@section('maincontents')
+@section('content')
     <h1>お問い合わせ</h1>
 
     @if(session('success'))
@@ -60,5 +67,7 @@
     </form>
 
     {{-- 暫定的にリンクを貼っておく --}}
-    <p class="margin"><a href="{{ route('verification') }}">お問い合わせ確認画面</a></p>
+    {{-- <p class="margin"><a href="{{ route('verification') }}">お問い合わせ確認画面</a></p> --}}
 @endsection
+
+@section('pageJs')

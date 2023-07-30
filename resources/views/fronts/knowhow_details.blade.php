@@ -1,7 +1,14 @@
-@extends('layouts.layout')
+@extends('layouts.layout_front')
+
+@section('discription')
+
+@section('keywords')
 
 @section('title','知っトク記事詳細')
-@section('mycss')
+
+@section('pageCss')
+
+@section('key_visual')
 
 {{-- メインコンテンツの内容 --}}
 @section('maincontents')
@@ -26,3 +33,5 @@
         @endforeach
     </table>
 @endsection
+
+@section('pageJs')

@@ -1,10 +1,17 @@
-@extends('layouts.layout')
+@extends('layouts.layout_front')
+
+@section('discription')
+
+@section('keywords')
 
 @section('title','更新情報')
-@section('mycss')
+
+@section('pageCss')
+
+@section('key_visual')
 
 {{-- メインコンテンツの内容 --}}
-@section('maincontents')
+@section('content')
 <h1>更新情報</h1>
 
 <table>
@@ -28,3 +35,5 @@
 </table>
 {{ $items->links() }}
 @endsection
+
+@section('pageJs')

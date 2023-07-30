@@ -1,12 +1,16 @@
-@extends('layouts.layout')
+@extends('layouts.layout_front')
+
+@section('discription')
+
+@section('keywords')
 
 @section('title','ゲーム画面')
-@section('mycss')
+@section('pageCss')
     <link rel="stylesheet" href="assets/css/typingstyle.css" />
 @endsection
 
 {{-- ゲーム画面の内容 --}}
-@section('maincontents')
+@section('content')
     <h1>ゲーム画面</h1>
         {{-- デバッグ用 --}}
         {{-- <p>言語は {{ $language }} が選択されています。</p>

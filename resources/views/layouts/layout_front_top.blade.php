@@ -50,6 +50,9 @@
     {{-- メインコンテンツ --}}
     @yield('content')
 
+    {{-- サイドコンテンツ --}}
+    @yield('sidecontent')
+
     {{-- フッター --}}
     @include('includes.front_footer')
 

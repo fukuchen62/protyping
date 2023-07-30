@@ -1,10 +1,17 @@
-@extends('layouts.layout')
+@extends('layouts.layout_front')
+
+@section('discription')
+
+@section('keywords')
 
 @section('title','個人情報保護')
-@section('mycss')
+
+@section('pageCss')
+
+@section('key_visual')
 
 {{-- メインコンテンツの内容 --}}
-@section('maincontents')
+@section('content')
     <h1>プライバシーポリシー</h1>
 
     <h2>1. 収集する情報</h2>
@@ -40,3 +47,5 @@
     <p>〒123-4567 住所都道府県市町村 1-2-3<br>TEL: 012-3456-7890<br>Email: privacy@example.com</p>
 
 @endsection
+
+@section('pageJs')

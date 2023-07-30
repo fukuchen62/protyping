@@ -1,10 +1,17 @@
-@extends('layouts.layout')
+@extends('layouts.layout_front')
+
+@section('discription')
+
+@section('keywords')
 
 @section('title','知っトク記事一覧')
-@section('mycss')
+
+@section('pageCss')
+
+@section('key_visual')
 
 {{-- メインコンテンツの内容 --}}
-@section('maincontents')
+@section('content')
     <h1>知っトク記事一覧</h1>
 
     {{-- アイコンは暫定的に表示 --}}
@@ -73,3 +80,5 @@
         @endforeach
     </p>
 @endsection
+
+@section('pageJs')

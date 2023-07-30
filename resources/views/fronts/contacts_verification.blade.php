@@ -1,10 +1,17 @@
-@extends('layouts.layout')
+@extends('layouts.layout_front')
+
+@section('discription')
+
+@section('keywords')
 
 @section('title','お問い合わせ内容確認')
-@section('mycss')
+
+@section('pageCss')
+
+@section('key_visual')
 
 {{-- メインコンテンツの内容 --}}
-@section('maincontents')
+@section('content')
     <h1>お問い合わせ内容確認</h1>
 
     @if(session('success'))
@@ -20,14 +27,14 @@
     </div>
     @endif
 
-<p><strong>コンタクトID:</strong> {{ $contactData['contact_id'] }}</p>
-<p><strong>言語種別:</strong> {{ $contactData['language_id'] }}</p>
-<p><strong>単語(スペル):</strong> {{ $contactData['word_spell'] }}</p>
-<p><strong>発音(ルビ):</strong> {{ $contactData['japanese'] }}</p>
-<p><strong>意味:</strong> {{ $contactData['meaning'] }}</p>
-<p><strong>使用例:</strong> {{ $contactData['usage'] }}</p>
-<p><strong>備考欄:</strong> {{ $contactData['memo'] }}</p>
-<p><strong>メールアドレス:</strong> {{ $contactData['email'] }}</p>
+    <p><strong>コンタクトID:</strong> {{ $contactData['contact_id'] }}</p>
+    <p><strong>言語種別:</strong> {{ $contactData['language_id'] }}</p>
+    <p><strong>単語(スペル):</strong> {{ $contactData['word_spell'] }}</p>
+    <p><strong>発音(ルビ):</strong> {{ $contactData['japanese'] }}</p>
+    <p><strong>意味:</strong> {{ $contactData['meaning'] }}</p>
+    <p><strong>使用例:</strong> {{ $contactData['usage'] }}</p>
+    <p><strong>備考欄:</strong> {{ $contactData['memo'] }}</p>
+    <p><strong>メールアドレス:</strong> {{ $contactData['email'] }}</p>
 
     <form action="{{ route('verification') }}" method="POST">
         @csrf <!-- LaravelのCSRFトークンをフォームに追加 -->
@@ -44,5 +51,7 @@
     </form>
 
     {{-- 暫定的にリンクを貼っておく --}}
-    <p class="margin"><a href="{{ route('contact') }}">お問い合わせ確認画面</a></p>
+    {{-- <p class="margin"><a href="{{ route('contact') }}">お問い合わせ確認画面</a></p> --}}
 @endsection
+
+@section('pageJs')

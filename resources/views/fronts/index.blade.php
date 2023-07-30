@@ -1,11 +1,17 @@
-@extends('layouts.layout')
+@extends('layouts.layout_front_top')
+
+@section('discription')
+
+@section('keywords')
 
 @section('title','TOPページ')
-@section('mycss')
 
+@section('pageCss')
+
+@section('key_visual')
 
 {{-- メインコンテンツの内容 --}}
-@section('maincontents')
+@section('content')
     {{-- タイピングゲーム画面 --}}
     <p>これは卒業制作の練習用プロジェクトです。</p>
 
@@ -63,7 +69,7 @@
 @endsection
 
 {{-- サイドバーの内容 --}}
-@section('sidecontents')
+@section('sidecontent')
     <h2>ランキング</h2>
     <div>コース選択</div>
     {{-- 検索フォーム --}}
@@ -325,3 +331,5 @@
         @endif
     </table>
 @endsection
+
+@section('pageJs')

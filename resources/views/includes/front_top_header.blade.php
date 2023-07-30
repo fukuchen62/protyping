@@ -1,6 +1,6 @@
 <header id="header">
     <div class="header-inner container">
-        <h1>プログラミンタイピング練習</h1>
+        <h1>タイプコード</h1>
         <!-- g-nav mobile -->
         <nav id="menu-sp">
         </nav>
@@ -15,23 +15,23 @@
                 <li>
                     <a href="{{ route('top') }}">
                         <div>
-                            <img src="{{ asset('assets/images/menu_icon/station_list_icon.svg') }}" alt="ゲーム"
+                            <img src="{{ asset('assets/images/menu_icon/station_list_icon.svg') }}" alt="タイプコード"
                                 width="30" height="30">
                         </div>
-                        ゲーム開始
+                        タイプコード
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('about') }}">
+                    <a href="{{ route('game') }}">
                         <div>
-                            <img src="{{ asset('assets/images/menu_icon/station_area_icon.svg') }}" alt="辞書"
+                            <img src="{{ asset('assets/images/menu_icon/station_area_icon.svg') }}" alt="About"
                                 width="30" height="30">
                         </div>
-                        About
+                        ゲーム画面
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('top') }}">
+                    <a href="{{ route('dictionary') }}">
                         <div>
                             <img src="{{ asset('assets/images/menu_icon/station_area_icon.svg') }}" alt="辞書"
                                 width="30" height="30">
@@ -40,39 +40,39 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('top') }}">
+                    <a href="{{ route('ranking') }}">
                         <div>
-                            <img src="{{ asset('assets/images/menu_icon/station_detail_icon.svg') }}" alt="知ットク情報"
-                                width="30" height="30">
-                        </div>
-                        知ットク情報
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('top') }}">
-                        <div>
-                            <img src="{{ asset('assets/images/menu_icon/activity_list_icon.svg') }}" alt="更新情報"
-                                width="30" height="30">
-                        </div>
-                        更新情報
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('top') }}">
-                        <div>
-                            <img src="{{ asset('assets/images/menu_icon/blog_list_icon.svg') }}" alt="ランキング"
+                            <img src="{{ asset('assets/images/menu_icon/station_detail_icon.svg') }}" alt="ランキング"
                                 width="30" height="30">
                         </div>
                         ランキング
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('top') }}">
+                    <a href="{{ route('myscore') }}">
                         <div>
-                            <img src="{{ asset('assets/images/menu_icon/like_icon.svg') }}" alt="MyScore"
+                            <img src="{{ asset('assets/images/menu_icon/activity_list_icon.svg') }}" alt="マイスコア"
                                 width="30" height="30">
                         </div>
-                        My Score
+                        マイスコア
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('knowhow') }}">
+                        <div>
+                            <img src="{{ asset('assets/images/menu_icon/blog_list_icon.svg') }}" alt="知っトク情報"
+                                width="30" height="30">
+                        </div>
+                        知っトク情報
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('contact') }}">
+                        <div>
+                            <img src="{{ asset('assets/images/menu_icon/like_icon.svg') }}" alt="お問い合わせ"
+                                width="30" height="30">
+                        </div>
+                        お問い合わせ
                     </a>
                 </li>
             </ul>

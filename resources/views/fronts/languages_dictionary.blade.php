@@ -1,10 +1,17 @@
-@extends('layouts.layout')
+@extends('layouts.layout_front')
+
+@section('discription')
+
+@section('keywords')
 
 @section('title','辞書')
-@section('mycss')
+
+@section('pageCss')
+
+@section('key_visual')
 
 {{-- メインコンテンツの内容 --}}
-@section('maincontents')
+@section('content')
     <h1>辞書</h1>
 
     {{-- 検索フォーム --}}
@@ -62,3 +69,5 @@
         @endforeach
     </table>
 @endsection
+
+@section('pageJs')

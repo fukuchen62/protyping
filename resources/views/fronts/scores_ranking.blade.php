@@ -1,10 +1,17 @@
-@extends('layouts.layout')
+@extends('layouts.layout_front')
+
+@section('discription')
+
+@section('keywords')
 
 @section('title','ランキング')
-{{-- @section('mycss') --}}
+
+@section('pageCss')
+
+@section('key_visual')
 
 {{-- メインコンテンツの内容 --}}
-@section('maincontents')
+@section('content')
 <h1>ランキング</h1>
 
 <form action="{{ route('ranking') }}" method="get">
@@ -273,3 +280,5 @@
 </table>
 
 @endsection
+
+@section('pageJs')

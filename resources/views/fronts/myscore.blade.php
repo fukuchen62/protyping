@@ -1,15 +1,23 @@
-@extends('layouts.layout')
+@extends('layouts.layout_front')
+
+@section('discription')
+
+@section('keywords')
 
 @section('title','マイスコア')
-@section('mycss')
+
+@section('pageCss')
+
+@section('key_visual')
 
 {{-- メインコンテンツの内容 --}}
-@section('maincontents')
+@section('content')
     <h1>マイスコア</h1>
 
     @if(request()->hasCookie('saved_data'))
-        <p>クッキーに保存された値: {{ request()->cookie('saved_data') }}</p>
+        <p>クッキーに保存された直近の値: {{ request()->cookie('saved_data') }}</p>
     @endif
+
 
     {{-- テスト用 --}}
     {{-- @if(isset($data))
@@ -21,3 +29,5 @@
         <button type="submit">保存</button>
     </form> --}}
 @endsection
+
+@section('pageJs')
