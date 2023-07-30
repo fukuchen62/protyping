@@ -22,30 +22,6 @@
 
 }
 
-.mainBoxInner {
-    width: 100%;
-    display: flex;
-    flex-direction: row-reverse; /* サイドバーを右側にする */
-}
-
-
-
-.shittokuContainer :nth-child(1){
-    width: calc(100% - 200px);
-    background-color: aqua;
-}
-
-.side :nth-child(2){
-    width: 200px;
-    background-color: burlywood;
-}
-
-.shittokuContainer {
-    display: flex;
-    flex-wrap:wrap;
-     justify-content:space-between;
-}
-
 /* パンくず */
 .breadCrumb {
     color: #8b8b8b;
@@ -53,16 +29,74 @@
 }
 
 
-/* .side {
-    display: none;
+.shittokuFlex {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse; /* サイドバーを右側にする */
 }
 
-@media screen and (min-width: 768px) {
-    .side {
 
-        width: 176px;
+
+.mainContainer {
+    width: calc(100% - 176px);
+}
+
+
+
+
+/* サイドバー */
+
+.side {
+    width: 176px;
+    background: #fff;
+    width: 176px;
+    height: 100%;
+    /* transition: all 0.5s; */
+    /* display: block; */
+}
+
+@media screen and (max-width: 1000px) {
+    .side {
+        display: none;
     }
-} */
+}
+
+.gnavSide  {
+    font-size: 1.7rem;
+    color: #8B8B8B;
+    text-align: center;
+    line-height: 40px;
+    /* background: #6ac3ee; */
+    user-select: none;
+    /* display: block; */
+}
+
+.side ul a {
+    display: inline-block;
+    width: 100%;
+    line-height: 40px;
+    font-size: 20px;
+    color: #8B8B8B;
+    padding-left: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid black;
+    /* transition: 0.4s; */
+}
+
+
+
+
+
+
+
+
+.imgFlex{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    max-width: 742px;
+}
+
 
 
 /* タイトル */
@@ -75,10 +109,9 @@
 }
 @media screen and (min-width: 768px) {
     .title {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 }
-
 
 /* タイトル下のPタグの文章 */
 .overview {
@@ -94,13 +127,11 @@
 
 
 
-
-
-
-
-.flexItem {
+.flexItem{
     margin-top: 30px;
     margin-bottom: 40px;
+    padding: 30px;
+
 
 }
 
@@ -110,6 +141,7 @@
 
 .flexItemText {
     font-weight: 400;
+    max-width: 295px;
 }
 
 .flexItemImage {
@@ -118,7 +150,7 @@
     box-sizing: border-box;
     aspect-ratio: 27/16;
     object-fit: cover;
-    max-width: 234px;
+    max-width: 311px;
     margin-top: 11px;
     margin-bottom: 20px;
     border-radius: 10px;
