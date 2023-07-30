@@ -290,11 +290,20 @@ h3 {
         justify-content: center;
     }
 
-    .btnWrap div {
-        margin: o 15px;
+    .challengeBtn {
+        font-size: 2.4rem;
+        width: 350px;
+        height: 95px;
+        line-height: 3;
+    }
+
+    .viewBtn {
+        font-size: 2.4rem;
+        width: 350px;
+        height: 95px;
+        line-height: 3;
     }
 }
-
 
 /* @media screen and (min-width: 1000px) .rankingInner {
     display: flex;
