@@ -307,24 +307,35 @@ padding: 15px;
 /* サイドバー */
 
 .sidebar {
-    position: fixed;
+    position: relative;
+    /* position: fixed; */
     right: 10px;
     background: #fff;
-    width: 150px;
+    width: 176px;
     height: 100%;
     /* transition: all 0.5s; */
+    /* display: block; */
+    /* display: flex;
+    justify-content: end; */
     display: block;
+    margin-right: 0;
+    margin-left: auto;
 }
 
-.globalNav  {
+.sidebar ul{
+    position: absolute;
+    margin-top: 30px;
+}
+
+
+/* .globalNav  {
     font-size: 22px;
     color: #8B8B8B;
     text-align: center;
-    line-height: 40px;
     background: #6ac3ee;
     user-select: none;
     display: block;
-}
+} */
 
 .sidebar ul a {
     display: block;
@@ -332,24 +343,30 @@ padding: 15px;
     line-height: 40px;
     font-size: 20px;
     color: #8B8B8B;
-    padding-left: 10px;
+    padding-left: 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #8B8B8B;
     /* transition: 0.4s; */
 }
 
-.subMenu1{
-    font-size: 15px;
+ul .subMenu1 a{
+    font-size: 1.6rem;
+    line-height: 20px;
+    padding-bottom: 7px;
 }
 
-/* 
-ul li:hover a {
-    padding-left: 50px;
+.sidebar ul li a:hover{
+    background: rgba(4, 199, 243, 0.1);
 }
 
-.sidebar ul a i {
+.sidebar ul li.active{
+    background-color: #04C7F3;
+}
+    
+
+/* .sidebar ul a i {
     margin-right: 16px;
-} */
+} */ */
 
 
 /* 詳細ボタンホバーした時 */
@@ -396,4 +413,4 @@ img:hover{
 .subMenu{
     font-size: 1.7rem;
     border-bottom: 1px solid #625858;
-} */ */
+} */ 
