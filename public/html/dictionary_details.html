@@ -64,8 +64,8 @@
         </div>
     </header>
 
-    <input type="checkbox" id="btn02" class="checkbox">
-    <label for="btn02" class="btn02">BTN</label>
+    <!-- <input type="checkbox" id="btn02" class="checkbox">
+    <label for="btn02" class="btn02">BTN</label> -->
 
 
     <!-- サイドバー --> 
@@ -73,7 +73,7 @@
         <!-- <nav class="globalNav">辞書</nav> -->
             <ul>
                 <li class="subMenu1 active"><a href="../html/dictionary_details.html">プログラミングでよく使う英単語</a></li>
-                <li class="subMenu2"><a href="">HTML</a></li>
+                <li class="subMenu2"><a href="#">HTML</a></li>
                 <li class="subMenu3"><a href="#">CSS</a></li>
                 <li class="subMenu4"><a href="#">JavaScript</a></li>
                 <li class="subMenu5"><a href="#">PHP</a></li> 
@@ -121,6 +121,10 @@
         <table class="dictionary">
             <tbody class="dictionaryBox1">
                 <tr class="primary">
+                    <th>単語名</th>
+                    <th>読み方</th>
+                    <th>使用例</th>
+                    
                     <td class="englishWord">
                         <p>getElementByid</p>
                     </td>
@@ -464,6 +468,11 @@
                 </tr>
             </tbody>
         </table>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+        <div id="page_top"><a href="#"></a></div>
+
+
     </main>
 
     <footer class="footer">
@@ -481,21 +490,33 @@
     <!-- <script src="../assets/js/slick.min.js"></script> -->
     <script src="../assets/js/main.js"></script>
 
-    <script>
-        const list = document.querySelectorAll(".list");
-        console.log(list);
+    <!-- <script>
+        const list = document.querySelectorAll(".sidebar li");
+    
         function activeLink() {
-            list.forEach((item) =>
-            // console.log(item);
-            item.classList.remove("active")
-        );
+            list.forEach((item) => item.classList.remove("active"));
             this.classList.add("active");
         }
-
+    
         list.forEach((item) => {
             item.addEventListener("click", activeLink);
         });
-    </script>
+    </script> -->
+
+<!-- サイドバークリックしたら色変わる -->
+<script>
+    const listItems = document.querySelectorAll(".sidebar li");
+
+    function activeLink() {
+        listItems.forEach((item) => item.classList.remove("active"));
+        this.classList.add("active");
+    }
+
+    listItems.forEach((item) => {
+        item.addEventListener("click", activeLink);
+    });
+</script>
+    
 
 
 </body>
