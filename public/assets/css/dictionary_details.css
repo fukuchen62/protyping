@@ -95,13 +95,13 @@ a{
     font-weight: bold;
 }
 
-.box2{
+.secondary{
     font-size: 1.3rem;
     margin-top: 15px;
     width: 50px;
 }
 
-.box2.detail{
+.secondary.detail{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -305,32 +305,95 @@ padding: 15px;
 }
 
 /* サイドバー */
-#sidebar {
-    width: 260px;
-    height: 100%;
+
+.sidebar {
     position: fixed;
-    color: #8b8b8b;
+    right: 10px;
     background: #fff;
-    overflow: hidden;
+    width: 150px;
+    height: 100%;
+    /* transition: all 0.5s; */
+    display: block;
 }
 
-#global-nav {
-    position: relative;
-    right: 0;
-    transition: right .3s linear;
+.globalNav  {
+    font-size: 22px;
+    color: #8B8B8B;
+    text-align: center;
+    line-height: 40px;
+    background: #6ac3ee;
+    user-select: none;
+    display: block;
 }
-.is-open-submenu #global-nav {
+
+.sidebar ul a {
+    display: block;
+    width: 100%;
+    line-height: 40px;
+    font-size: 20px;
+    color: #8B8B8B;
+    padding-left: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid black;
+    /* transition: 0.4s; */
+}
+
+.subMenu1{
+    font-size: 15px;
+}
+
+/* 
+ul li:hover a {
+    padding-left: 50px;
+}
+
+.sidebar ul a i {
+    margin-right: 16px;
+} */
+
+
+/* 詳細ボタンホバーした時 */
+img:hover{
+    opacity: 0.75; 
+} 
+
+/* サイドバー */
+/* .sidebar {
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    right: 10px;
+    color: #8b8b8b;
+    background: #ffff;
+    /* padding-right: 5px;
+    padding-left: 10px; */
+    /* border-top: 1px solid #a4a5a4;
+    border-bottom: 1px solid #a4a5a4;
+    border:1px solid #a4a5a4;
+}
+
+.globalNav{
+    font-size: large;
+    text-align: center;
+    height: 30px;
+    margin-top: 15px;
+}
+
+.sidebar ul a{
+    display: block;
+    height: auto;
+    line-height: 40px;
+    border-bottom: 0.5px solid #a4a5a4;
+    padding-left: 10px;
+    font-size: 1.6rem;
+    border-top: 1px solid #a4a5a4;
+}  */ 
+
+/* .is-open-submenu #globalNav {
     right: -100px;
 }
-#sub-nav .sub-menu-nav {
-    position: relative;
-    top: 0;
-    right: 300px;
-    width: 300px;
-    height: 100%;
-    z-index: 2;
-    transition: left .3s linear;
-}
-#sub-nav .sub-menu-nav.is-active {
-    right: 0;
-}
+
+.subMenu{
+    font-size: 1.7rem;
+    border-bottom: 1px solid #625858;
+} */ */
