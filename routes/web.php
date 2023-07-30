@@ -528,43 +528,43 @@ Route::get('admindeletecategory', [App\Http\Controllers\AdminPostCategoryControl
  * 管理画面
  * 登録してあるいいね情報を検索する
  */
-Route::get('adminfindlike', [App\Http\Controllers\AdminController::class, 'searchlike'])->name('findlike');
+Route::get('adminfindlike', [App\Http\Controllers\AdminlikeController::class, 'searchlike'])->name('findlike');
 
 /**
  * 管理画面
  * 登録してあるいいね情報の一覧を表示する
  */
-Route::get('adminindexlike', [App\Http\Controllers\AdminController::class, 'showlike'])->name('indexlike');
+Route::get('adminindexlike', [App\Http\Controllers\AdminlikeController::class, 'showlike'])->name('indexlike');
 
 /**
  * 管理画面
  * いいね情報の新規登録画面を表示する
  */
-Route::get('adminaddlike', [App\Http\Controllers\AdminController::class, 'newlike'])->name('addlike');
+Route::get('adminaddlike', [App\Http\Controllers\AdminlikeController::class, 'newlike'])->name('addlike');
 
 /**
  * 管理画面
  * いいね情報を新規で登録する
  */
-Route::post('adminaddlike', [App\Http\Controllers\AdminController::class, 'storelike'])->name('addlike');
+Route::post('adminaddlike', [App\Http\Controllers\AdminlikeController::class, 'storelike'])->name('addlike');
 
 /**
  * 管理画面
  * 登録済みのいいね情報の編集画面を表示する
  */
-Route::get('dmineditlike', [App\Http\Controllers\AdminController::class, 'editlike'])->name('editlike');
+Route::get('admineditlike', [App\Http\Controllers\AdminlikeController::class, 'editlike'])->name('editlike');
 
 /**
  * 管理画面
  * 登録済みのいいね情報を編集する
  */
-Route::post('admineditlike', [App\Http\Controllers\AdminController::class, 'updatelike'])->name('editlike');
+Route::post('admineditlike', [App\Http\Controllers\AdminlikeController::class, 'updatelike'])->name('editlike');
 
 /**
  * 管理画面
  * 登録済みのいいね情報を削除する
  */
-Route::get('admineditlike', [App\Http\Controllers\AdminController::class, 'deletelike'])->name('editlike');
+Route::get('admindeletelike', [App\Http\Controllers\AdminlikeController::class, 'deletelike'])->name('deletelike');
 
 /**
  * 管理画面
