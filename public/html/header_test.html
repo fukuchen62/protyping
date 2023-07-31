@@ -36,10 +36,10 @@
     <header>
         <input type="checkbox" id="menuNavbtn">
         <nav id="nav" role="navigation" aria-label="メインメニュー">
-            <div>
+            <div class="navInner">
                 <label id="navBtn" for="menuNavbtn">
                     <span>
-                        <span>"メニューを開く"</span>
+                        <span id="openMenu"></span>
                     </span>
                 </label>
                 <div class="memuLeft">
@@ -245,12 +245,24 @@
 
     </main>
 
-    <footer class="footer">
-        <div class="footerWrap">
-            <div class="footerLogo">
-                <a href=""><img src="" alt="タイプコード" srcset=""></a>
-            </div>
 
+    <!-- フッター -->
+    <footer id="footer" class="footer outerBlock">
+        <div class="innerBlock">
+            <div class="footerWrap footerContent">
+                <div class="footerLogo">
+                    <a href=""><img src="" alt="タイプコード" srcset=""></a>
+                </div>
+                <div class="contentItem">
+                    <div class="footerNav">
+                        <div class="footerTitle"><a href="">ホーム</a></div>
+                        <div class="footerTitle"><a href="">アバウト</a></div>
+                        <div class="footerTitle"><a href="">ランキング</a></div>
+                        <div class="footerTitle"><a href="">マイスコア</a></div>
+
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="copyright">
             <small>Copyright©タイプコード All Rights Reserved.</small>
@@ -262,3 +274,97 @@
 </body>
 
 </html>
+
+
+<footer id="footer04" class="outer-block footer">
+    <div class="inner-block">
+        <div class="cont">
+            <div class="cont-item">
+                <div class="nav">
+                    <div class="ttl"><span>社長日記</span></div>
+                    <ul>
+                        <li><a href="https://b-risk.jp/category/president-diary/">社長日記一覧</a></li>
+                    </ul>
+                    <div class="ttl"><span>新卒ブログ</span></div>
+                    <ul>
+                        <li><a href="https://b-risk.jp/category/new-grad/">新卒ブログ一覧</a></li>
+                    </ul>
+                    <div class="ttl"><a href="https://b-risk.jp/engineer_recruit/">エンジニア採用2020</a></div>
+                    <div class="ttl"><a href="https://b-risk.jp/faq/">よくある質問</a></div>
+                    <div class="ttl"><a href="https://b-risk.jp/contact/">お問い合わせ</a></div>
+                </div>
+            </div>
+            <div class="cont-item">
+                <div class="nav">
+                    <div class="ttl">
+                        <a href="https://b-risk.jp/about/">会社概要</a>
+                    </div>
+                    <ul>
+                        <li><a href="https://b-risk.jp/about/">株式会社BRISKとは</a></li>
+                    </ul>
+                    <div class="ttl">
+                        <span>制作実績</span>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="https://b-risk.jp/works/">コーポレートサイト</a>
+                            <ul>
+                                <li><a href="https://b-risk.jp/works/">制作事例</a></li>
+                                <li><a href="https://b-risk.jp/works/">制作事例</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="https://b-risk.jp/works/">ポータルサイト</a>
+                            <ul>
+                                <li><a href="https://b-risk.jp/works/">制作事例</a></li>
+                                <li><a href="https://b-risk.jp/works/">制作事例</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="https://b-risk.jp/contact/">無料相談はこちら</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cont-item">
+                <div class="nav">
+                    <div class="ttl"><a href="https://b-risk.jp/works/">制作実績</a></div>
+                    <ul>
+                        <li><a href="https://b-risk.jp/works/">制作実績1</a></li>
+                        <li><a href="https://b-risk.jp/works/">制作実績2</a></li>
+                        <li><a href="https://b-risk.jp/works/">制作実績3</a></li>
+                        <li><a href="https://b-risk.jp/works/">制作実績4</a></li>
+                        <li><a href="https://b-risk.jp/works/">制作実績5</a></li>
+                    </ul>
+                    <div class="ttl"><span>ブログ</span></div>
+                    <ul>
+                        <li>
+                            <a href="https://b-risk.jp/blog/">ブログ一覧</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cont-item">
+                <div class="nav">
+                    <div class="ttl"><a href="https://b-risk.jp/company/">会社概要</a></div>
+                    <ul>
+                        <li><a href="https://b-risk.jp/about/">沿革</a></li>
+                        <li><a href="https://b-risk.jp/about/">沿革</a></li>
+                        <li><a href="https://b-risk.jp/about/">沿革</a></li>
+                    </ul>
+                </div>
+                <div class="company">
+                    <a href="https://b-risk.jp/" class="logo">
+                        <img src="img/logo.svg" alt="BRISK">
+                    </a>
+                    <div class="address">
+                        〒135-0002<br>
+                        東京都江東区住吉1丁目17-20<br>
+                        住吉ビル7F
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        COPYRIGHT © BRISK Inc. All rights Reserved.
+    </div>
+</footer>

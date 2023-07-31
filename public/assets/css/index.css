@@ -6,12 +6,16 @@
 }
 
 /* ゲーム画面 */
+h2{
+    font-size:6.4rem;
+}
+
 #gameBody{
     border:#817F6E 2px solid;
     border-radius:10px;
     text-align: center;
-    background:linear-gradient(to bottom,#B6F2FF ,#A4E9FF,#B6E5FF);
-    margin-bottom:40px;
+    background:linear-gradient(to bottom,#B6F2FF 0%,#2E94CE 100%);
+    margin-bottom:0.4rem;
 }
 
 #gameTitle{
@@ -25,37 +29,20 @@
 		0.08em 0.05em 0 #5FBFED;
 }
 
-/* #startBtn {
-    width: 160px;
-    height: 45px;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: #FFDA56;
-    box-shadow: 0 5px 0 #A53C01;
-    border-radius: 60px;
-    color: #fff;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.3s;
-    margin:0 0 20px 0;
+.gameExplain{
+    display:none;
 }
-
-#startBtn:hover{
-    box-shadow: none;
-    transform: translateY(5px);
-}
-
-#startBtn:active {
-    box-shadow: none;
-    transform: translateY(5px);
-} */
 
 .warning{
-    color: #fff;
+    font-size:2.4rem;
+    color: #CD3939;
     margin:20px;
+    font-weight:500;
 }
 
 .gameChara{
+    width:14.5rem;
+    height:14.5rem;
     margin-bottom:20px;
 }
 /* ゲーム画面 */
@@ -65,45 +52,220 @@
     padding:10px;
     border:#817F6E 2px solid;
     border-radius:10px;
-    margin-bottom:40px;
+    margin:40px auto;
     background-color: #fff;
 }
 
 .gameSummary p{
     color:#8B8B8B;
 }
-
 /* ゲーム概要 */
 
 /* サイドバーランキング */
 .topRanking{
+    width: 24rem;
     padding:10px;
     border:#817F6E 2px solid;
-    border-radius:10px;
+    display: none;
 }
 
-select{
-    padding:10px;
-    border:#817F6E 2px solid;
-    border-radius:10px;
+.topRanking img{
+    width: 20px;
+    height: 20px;
+}
+
+.ranking{
+    display: flex;
+    justify-content: space-around;
+}
+
+h6{
+    font-size: 2rem;
+    color: #F5F5F5;
+    font-weight: 800;
+    text-align: center;
+}
+
+.selectWrap {
+    overflow: hidden;
+    width: 20rem;
+    text-align: left;
+    height: 4rem;
+    cursor: pointer;
+    /* display: inline-block; */
+    margin:10px;
+    position: relative;
+    background: #ADEEFF;
+    border: 1px solid #A5A5A5;
+    border-radius:0;
+}
+
+.selectWrap select {
+    width:20rem;
+    /* border: none;
+    outline: none; */
+    /* background: transparent; */
+    /* -webkit-appearance: none; */
+    /* appearance: none; */
+    padding: 10px;
+}
+.selectWrap select::-ms-expand {
+    display: none;
+}
+
+.selectWrap:before {
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    padding: 0;
+    content: '';
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid #625858;
+    pointer-events: none;
+}
+.selectWrap select {
+    color: #625858;
+    font-size: 1.6rem;
 }
 
 .topRanking section{
-    padding:10px;
+    /* padding:10px; */
     border:#817F6E 2px solid;
-    border-radius:10px;
+    /* border-radius:10px; */
 }
+
+.rankingCategory{
+    height: 50px;
+    padding-top:15px;
+    text-align: center;
+    background:
+    linear-gradient(to bottom, #2C9DC1 0%,#51C7EC 20%,#2C8BC1 100%);
+    color: #fff;
+}
+
+.rankingWordCategory{
+    height: 50px;
+    text-align: center;
+    padding:5px;
+    background:
+    linear-gradient(to bottom, #2C9DC1 0%,#51C7EC 20%,#2C8BC1 100%);
+    color: #fff;
+}
+
+.rankingColumn{
+    display:flex;
+    justify-content: space-around;
+    padding-top:15px;
+}
+
+.score{
+    color: #F96F50;
+}
+
+.rankingArea{
+    margin-bottom:10px;
+}
+
+.topWordRanking{
+    width:100%;
+    height: 13rem;
+    background-color: #fff;
+    font-size:1.6rem;
+    margin:0 auto;
+}
+
+.topWordRanking li{
+    font-weight:800;
+    font-size:1.6rem;
+}
+
+.topHtmlRanking{
+    width: 100%;
+    height: 13rem;
+    background-color: #fff;
+    font-size:1.6rem;
+    margin:0 auto;
+}
+
+.topHtmlRanking li{
+    font-weight:800;
+    font-size:1.6rem;
+}
+
+.topCssRanking{
+    width: 100%;
+    height: 13rem;
+    background-color: #fff;
+    font-size:1.6rem;
+    margin:0 auto;
+}
+
+.topCssRanking li{
+    font-weight:800;
+    font-size:1.6rem;
+}
+
+.topJavascriptRanking{
+    width: 100%;
+    height: 13rem;
+    background-color: #fff;
+    font-size:1.6rem;
+    margin:0 auto;
+}
+
+.topJavascriptRanking li{
+    font-weight:800;
+    font-size:1.6rem;
+}
+
+.topPhpRanking{
+    width: 100%;
+    height: 13rem;
+    background-color: #fff;
+    font-size:1.6rem;
+    margin:0 auto;
+}
+
+.topPhpRanking li{
+    font-weight:800;
+    font-size:1.6rem;
+}
+
+.topPythonRanking{
+    width: 100%;
+    height: 13rem;
+    background-color: #fff;
+    font-size:1.6rem;
+    margin:0 auto;
+}
+
+.topPythonRanking li{
+    font-weight:800;
+    font-size:1.6rem;
+}
+
 /* サイドバーランキング */
 
 /* newsの共通ボタンとタイトル */
 h5{
+    font-size:1.8rem;
     color: #5FBFED;
-    font-weight: bold;
+    font-weight:800;
     text-align: left;
 }
 
 .listBtn {
-    float:right;
+    position: absolute;
+    right:8px;
+    top:5px;
+}
+
+.listBtn a{
+    font-weight:300;
+    font-size: 1.4rem;
 }
 
 .listBtn:hover {
@@ -128,6 +290,14 @@ h5{
     border: 0;
     border-top:1px dashed #817F6E;
 }
+
+.explain{
+    margin:10px auto ;
+}
+
+span{
+    font-size:1.6rem;
+}
 /* newsの共通ボタンとタイトル */
 
 /* 知っトク情報 */
@@ -139,6 +309,7 @@ h5{
     text-align: center;
     background-color: #fff;
     box-shadow: 3px 5px 3px #60C8DA;
+    position: relative;
 
 }
 
@@ -148,8 +319,8 @@ h5{
 }
 
 .infoNews div{
-    width: 91px;
-    height: 28px;
+    width: 9.1rem;
+    height: 2.8rem;
     border-radius:16px;
     border:1px solid #5FBFED;
     background-color:#5FBFED;
@@ -157,6 +328,11 @@ h5{
 
 .infoList span{
     display:block;
+}
+
+.infoList img{
+    width: 20rem;
+    height: 8.5rem;
 }
 /* 知っトク情報 */
 
@@ -169,6 +345,7 @@ h5{
     text-align: center;
     background-color: #fff;
     box-shadow: 5px 5px 5px #60C8DA;
+    position: relative;
 }
 
 .updateNews p{
@@ -176,8 +353,8 @@ h5{
 }
 
 .updateNews div{
-    width: 91px;
-    height: 28px;
+    width: 9.1rem;
+    height: 2.8rem;
     border-radius:16px;
     border:1px solid #5FBFED;
     background-color:#5FBFED;
@@ -187,14 +364,101 @@ h5{
     display:block;
     text-align: left;
 }
+
+.updateList li{
+        margin-top:10px;
+        margin-bottom: 10px;
+    }
+
+.updateList a{
+    font-size:1.6rem;
+}
 /* 更新情報 */
 
-#btn{
-    text-align: right;
+/* パソコン1000px~ */
+@media (min-width:1000px) {
+
+    .wrap{
+        margin:0 auto;
+        max-width:1080px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main{
+
+        /* flex-basis: 104rem; */
+        /* float: left; */
+    }
+
+    .box{
+    margin:50px auto;
 }
 
-/* パソコン768px~ */
-@media (min-width:768px) {
-
+.topLeftArea{
+    max-width:680px;
+    float: left;
 }
-/* パソコン768px~ */
+
+    .gameExplain{
+    display: block;
+    color: #26567c;
+    font-size:1.6rem;
+    font-weight:800;
+    margin-bottom: 40px;
+}
+
+    .warning{
+        display:none;
+    }
+
+    .explain{
+        text-align:left;
+    }
+
+.infoList {
+        display: flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        align-content: center;
+        max-width: 580px;
+        width: 100%;
+        margin:0 auto;
+}
+
+.infoList li{
+    margin:10px;
+    }
+
+    .updateList li{
+        margin-top:40px;
+        margin-bottom: 5px;
+    }
+
+    .updateList a{
+        display:flex;
+    }
+
+    .updateList span{
+        margin-left:20px;
+    }
+
+    .topRanking{
+        position:relative;
+        display:inline-block;
+        flex-basis:240px;
+        background-color:#5FBFED;
+        /* margin-right:0;
+        margin-left: auto; */
+        float:right;
+        margin-left:112px;
+    }
+
+    .topRankingArea{
+        /* position: absolute; */
+        /* left:0; */
+        background-color:#5FBFED;
+        flex-basis: 240px;
+    }
+/* パソコン1000px~ */
+}

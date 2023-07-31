@@ -29,6 +29,7 @@
 }
 
 
+/* 大枠の Flexbox（親） */
 .shittokuFlex {
     width: 100%;
     display: flex;
@@ -36,13 +37,19 @@
 }
 
 
-
+/* メインコンテイナー */
 .mainContainer {
     width: calc(100% - 176px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
-
+@media screen and (max-width: 1000px) {
+    .mainContainer {
+        width: 100%;
+    }
+}
 
 /* サイドバー */
 
@@ -51,6 +58,7 @@
     background: #fff;
     width: 176px;
     height: 100%;
+    border: 1px solid #8B8B8B;
     /* transition: all 0.5s; */
     /* display: block; */
 }
@@ -83,18 +91,17 @@
     /* transition: 0.4s; */
 }
 
+/* メインコンテナーを最大742pxに収める */
+.mainContainerInner {
+    max-width: 742px;
+}
 
-
-
-
-
-
-
+/* 画像たちのフレックスボックス */
 .imgFlex{
     display: flex;
     flex-wrap:wrap;
     justify-content:center;
-    max-width: 742px;
+    width: 100%;
 }
 
 
