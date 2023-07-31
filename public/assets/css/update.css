@@ -11,9 +11,21 @@ h2{
     margin-bottom: 30px;
 }
 
+@media screen and (min-width: 768px) {
+h2{
+        font-size: 4rem;
+    }
+    }
+
 p{
     font-size: 1.6rem;
     text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+p{
+    font-size: 1.8rem;
+}
 }
 
 .updateInformation{
@@ -24,8 +36,8 @@ p{
     text-align: center;
     background-color: #fff;
     box-shadow: 3px 5px 3px #60C8DA;
-
 }
+
 
 img{
     width: 80px;
@@ -34,6 +46,26 @@ img{
     float: right;
 }
 
+@media screen and (min-width: 768px){
+    img{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .updateInformation{
+        width: 1000px;
+        height: 150px;
+        margin-right: auto;
+        margin-left: auto;
+        line-height: 30px;
+    }    
+}
+
+
 .footer{
     width: 100%
 }
+
