@@ -7,12 +7,19 @@
 @section('title','利用規約')
 
 @section('pageCss')
+<link rel="stylesheet" href="{{ asset('assets/css/terms.css') }}">
+@endsection
 
 @section('key_visual')
+@endsection
 
 {{-- メインコンテンツの内容 --}}
 @section('content')
 <main class="main">
+    {{-- <ol class="breadCrumb-001">
+        <li><a href="#">ホーム</a></li>
+        <li><a href="#">利用規約</a></li>
+    </ol> --}}
     <h2>ご利用規約</h2>
     <p>この利用規約（以下，「本規約」といいます。）は，＿＿＿＿＿（以下，「当社」といいます
             。）がこのウェブサイト上で提供するサービス（以下，「本サービス」といいます。）の利用
@@ -96,14 +103,8 @@
 
             以上</p>
 </main>
-<div id="btn">
-    <a href="#">
-        <div class="arrow_up"></div>
-    </a>
-</div>
-
 @endsection
 
 @section('pageJs')
-<script src="{{ asset('./assets/js/main.js') }}"></script>
+<script src="{{ asset('assets/js/main.js') }}"></script>
 @endsection

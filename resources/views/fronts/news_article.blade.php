@@ -57,7 +57,7 @@ $timestamp = \Carbon\Carbon::parse($item->created_at);
             <p>{{ $timestamp->format('Y年m月d日') }}<br>
             {{-- {{ $item->created_at }} --}}
             {{ $item->title }}｜
-            {{ $item->content }}</p>
+                                {{ $item->content }}</p>
         </li>
     </ul>
 </section>
