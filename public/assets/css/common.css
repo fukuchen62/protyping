@@ -85,11 +85,14 @@ ul, div, img {
 
 
 /* ヘッダー */
+header {
+    border-top: 4px solid#D6A923;
+}
+
 #nav {
     background-color: #26567C;
-    border-top: 4px solid#D6A923;
     color: #fff;
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     height: 50px;
@@ -163,6 +166,7 @@ ul, div, img {
     #nav {
         height: 144px;
         padding: 0;
+        margin: 0 auto;
     }
 
     .menuParent {
