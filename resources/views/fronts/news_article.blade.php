@@ -7,11 +7,18 @@
 @section('title','更新情報')
 
 @section('pageCss')
+<link rel="stylesheet" href="{{ asset('assets/css/update.css') }}">
+@endsection
 
 @section('key_visual')
 
+@endsection
+
 {{-- メインコンテンツの内容 --}}
 @section('content')
+
+
+
 <h1>更新情報</h1>
 
 {{-- <table>
@@ -36,14 +43,21 @@
 {{-- {{ $items->links() }} --}}
 
 @foreach($items as $item)
+
+@php
+$timestamp = \Carbon\Carbon::parse($item->created_at);
+@endphp
+
 <section class="updateInformation">
 
     <ul class="updateList">
         <li>
             <img src="{{ asset('assets/images/' . $item->thumbnail) }}" alt="{{ $item->title }}">
-            <p>{{ $item->created_at }}<br>
-                {{ $item->title }}｜
-                {{ $item->content }}</p>
+
+            <p>{{ $timestamp->format('Y年m月d日') }}<br>
+            {{-- {{ $item->created_at }} --}}
+            {{ $item->title }}｜
+                                {{ $item->content }}</p>
         </li>
     </ul>
 </section>
@@ -52,3 +66,4 @@
 @endsection
 
 @section('pageJs')
+@endsection

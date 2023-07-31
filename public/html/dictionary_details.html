@@ -18,51 +18,109 @@
 <body>
 
     <!-- ヘッダー -->
-    <header id="header" class="header">
-        <div class="container">
-
-            <!-- ヘッダーロゴ -->
-            <h1 class="headerLogo">
-                        <a href=""><img src="" alt="タイプコード" srcset=""></a>
-                    </h1>
-
-            <!-- ハンバーガーメニュー部分 -->
-            <div class="hanmburger">
-                <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
-                <input id="drawerInput" class="drawerHidden" type="checkbox" />
-                <!-- ハンバーガーメニュー -->
-                <label for="drawerInput" class="drawerOpen">
-                    <span></span>
+    <header>
+        <input type="checkbox" id="menuNavbtn">
+        <nav id="nav" role="navigation" aria-label="メインメニュー">
+            <div class="navInner">
+                <label id="navBtn" for="menuNavbtn">
+                    <span>
+                        <span id="openMenu"></span>
+                    </span>
                 </label>
+                <div class="memuLeft">
+                    <a href="∠">
+                        <span class="headerLogo">
+                            <img src="" alt="タイプコード">
+                        </span>
+                    </a>
+                </div>
 
-                <!-- ナビゲーション -->
-                <nav class="navContent">
-                    <ul class="navList">
-                        <li class="home">
-                            <a href="">HOME</a>
-                        </li>
-                        <li class="dictionary">
-                            <a href="">辞書</a>
-                        </li>
-                        <li class="ranking">
-                            <a href="">ランキング</a>
-                        </li>
-                        <li class="MyScore">
-                            <a href="">MyScore</a>
-                        </li>
-                        <li class="shittoku">
-                            <a href="">知っトク情報</a>
-                        </li>
-                        <li class="contact">
-                            <a href="">お問い合わせ</a>
-                        </li>
-                    </ul>
-                </nav>
+                <ul class="menu">
 
+                    <!-- HOME(0) -->
+                    <li class="menuParent">
+                        <a href="">ゲーム
+                        </a>
+                    </li>
+
+                    <!-- 辞書(1) -->
+                    <li class="menuParent">
+                        <a href="">辞書</a><!-- デフォルトプログラミングでよく使う英単語 -->
+                        <input type="checkbox" id="menuParent1">
+                        <label for="menuParent1">
+                            <span class="pd">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </label>
+                        <ul class="menuChild">
+                            <li><a href="">プログラミングでよく使う英単語</a></li>
+                            <li><a href="">HTML</a></li>
+                            <li><a href="">CSS</a></li>
+                            <li><a href="">JavaScript</a></li>
+                            <li><a href="">PHP</a></li>
+                            <li><a href="">Python</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- ランキング(2) -->
+                    <li class="menuParent">
+                        <a href="">ランキング</a>
+                    </li>
+
+                    <!-- マイスコア(3) -->
+                    <li class="menuParent">
+                        <a href="">マイスコア</a>
+                    </li>
+
+                    <!-- 知っトク情報(4) -->
+                    <li class="menuParent">
+                        <a href="">知っトク情報</a>
+                        <input type="checkbox" id="menuParent4">
+                        <label for="menuParent4">
+                            <span class="pd">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </label>
+                        <ul class="menuChild">
+                            <li>
+                                <a href="">知っトク情報一覧</a>
+                            </li>
+                            <li>
+                                <a href="">開発環境セットアップ</a>
+                            </li>
+                            <li>
+                                <a href="">WordPress</a>
+                            </li>
+                            <li>
+                                <a href="">おすすめWebアプリ</a>
+                            </li>
+                            <li>
+                                <a href="">おすすめWebサイト</a>
+                            </li>
+                            <li>
+                                <a href="">ショートカット</a>
+                            </li>
+                            <li>
+                                <a href="">資格</a>
+                            </li>
+                            <li>
+                                <a href="">Chrome拡張機能</a>
+                            </li>
+                            <li>
+                                <a href="">卒業生の作品</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- お問合わせ(5) -->
+                    <li class="menuParent">
+                        <a href="">お問合わせ</a>
+                    </li>
+                </ul>
             </div>
-
-        </div>
+        </nav>
     </header>
+
 
     <!-- <input type="checkbox" id="btn02" class="checkbox">
     <label for="btn02" class="btn02">BTN</label> -->
@@ -120,12 +178,16 @@
 
         <!-- テーブル -->
         <table class="dictionary">
-            <tbody class="dictionaryBox1">
+            <thead>
                 <tr class="primary">
                     <th>単語名</th>
                     <th>読み方</th>
                     <th>使用例</th>
+                </tr>
+            </thead>
 
+            <tbody class="dictionaryBox1">
+                <tr>
                     <td class="englishWord">
                         <p>getElementByid</p>
                     </td>
@@ -160,9 +222,9 @@
                     </td>
                 </tr>
             </tbody>
-
             <!-- <table class="dictionary"> -->
             <!-- <tbody> -->
+
             <tbody class="dictionaryBox2">
                 <tr class="primary">
                     <td class="englishWord">
@@ -201,6 +263,7 @@
 
             <!-- <table class="dictionary"> -->
             <!-- <tbody> -->
+
             <tbody class="dictionaryBox1">
                 <tr class="primary">
                     <td class="englishWord">
@@ -239,6 +302,7 @@
 
             <!-- <table class="dictionary"> -->
             <!-- <tbody> -->
+
             <tbody class="dictionaryBox2">
                 <tr class="primary">
                     <td class="englishWord">
@@ -277,6 +341,7 @@
 
             <!-- <table class="dictionary"> -->
             <!-- <tbody> -->
+
             <tbody class="dictionaryBox1">
                 <tr class="primary">
                     <td class="englishWord">
@@ -314,6 +379,7 @@
 
             <!-- <table class="dictionary"> -->
             <!-- <tbody> -->
+
             <tbody class="dictionaryBox2">
                 <tr class="primary">
                     <td class="englishWord">
@@ -351,6 +417,7 @@
 
             <!-- <table class="dictionary"> -->
             <!-- <tbody> -->
+
             <tbody class="dictionaryBox1">
                 <tr class="primary">
                     <td class="englishWord">
@@ -386,9 +453,9 @@
                     </td>
                 </tr>
             </tbody>
-
             <!-- <table class="dictionary"> -->
             <!-- <tbody> -->
+
             <tbody class="dictionaryBox2">
                 <tr class="primary">
                     <td class="englishWord">
@@ -426,6 +493,7 @@
 
             <!-- <table class="dictionary"> -->
             <!-- <tbody> -->
+
             <tbody class="dictionaryBox1">
                 <tr class="primary">
                     <td class="englishWord">
@@ -463,6 +531,7 @@
 
             <!-- <table class="dictionary"> -->
             <!-- <tbody> -->
+
             <tbody class="dictionaryBox2">
                 <tr class="primary">
                     <td class="englishWord">
@@ -499,12 +568,12 @@
             </tbody>
         </table>
 
-        <!-- トップへ戻るボタン -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
-        <div id="pageTop"><a href="#"></a></div>
-        <!------------- -->
-
     </main>
+
+    <!-- トップへ戻るボタン -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+    <div id="pageTop"><a href="#"></a></div>
+    <!------------- -->
 
     <!-- フッター -->
     <footer class="footer">
@@ -517,6 +586,7 @@
         <div class="copyright">
             <small>Copyright©タイプコード All Rights Reserved.</small>
         </div>
+
     </footer>
 
     <!-- <script src="../assets/js/slick.min.js"></script> -->
