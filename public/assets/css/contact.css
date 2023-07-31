@@ -9,42 +9,30 @@ padding:15px;
 }
 
 h2{
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: 800;
     text-align: center;
     letter-spacing: 0.1rem;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin:20px auto;
 }
 
 .basic{
+    max-width:250px;
     text-align: center;
     border:#D9D9D9 1px solid;
     padding:5px;
-    margin-top:20px;
-    margin-bottom:10px;
+    margin:20px auto;
 }
 
 .contactWarning{
     text-align: center;
-    margin-bottom:20px;
+    /* margin-bottom:20px; */
 }
-
-/* .contact {
-    width:280px;
-    margin:0 auto;
-    padding:30px 0;
-} */
 
 .requiredTable{
     width:50vw;
-    /* margin:0 auto; */
     padding:30px;
 }
-
-/* .contactName{
-    display: block;
-} */
 
 .mailWarning{
     margin-top:10px;
@@ -65,7 +53,6 @@ h2{
 
 /* 共通のパーツ */
 .contactItem{
-    /* border:1px solid #8B8B8B; */
     text-align: left;
     background-color:#fff;
     width:50vw;
@@ -82,13 +69,21 @@ h2{
 
 .contactBody {
     padding: 10px;
-    /* border: 1px solid #8B8B8B; */
     width: 70vw;
     display: block;
 }
 
+form{
+    max-width:250px;
+}
+
+.formPart{
+        max-width: 250px;
+        margin:0 auto;
+    }
+
 .formText {
-    width: 70vw;
+    width: 60vw;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -99,7 +94,7 @@ h2{
 }
 
 .formTextarea {
-    width: 100%;
+    width: 93%;
     padding: 10px;
     height: 200px;
     border-radius: 5px;
@@ -112,7 +107,6 @@ h2{
 
 .contactCategory{
     width:50vw;
-    /* margin:0 auto; */
     padding:30px;
 }
 
@@ -144,13 +138,8 @@ h2{
 
 .contactContent{
     width:50vw;
-    /* margin:0 auto; */
     padding:30px;
 }
-
-/* .contactContent input::placeholder{
-    color: #a4a5a4;
-} */
 
 .contactCategory td{
     font-size:1.8rem;
@@ -168,7 +157,6 @@ h2{
 .grayLine{
     border-top:solid 1.5px #8B8B8B;
     margin:10px;
-    /* font-size:1.6rem; */
 }
 
 .termsBtn{
@@ -199,4 +187,53 @@ form a:hover{
     -moz-appearance: none;
     cursor: pointer;
     text-align: center;
+}
+
+/* パソコン1000px~ */
+@media (min-width:1000px) {
+
+    .breadCrumb-001 a{
+    font-size: 1.2rem;
+    }
+
+    h2{
+        font-size: 4rem
+    }
+
+    .main{
+        margin:0 auto;
+        max-width:1080px;
+    }
+
+    .basic{
+        max-width:250px;
+        margin:20px auto;
+    }
+
+    /* form{
+        max-width:1080px;
+    } */
+
+    .formPart{
+        max-width: 700px;
+        margin:0 auto;
+    }
+
+    .contactName{
+        display: inline;
+    }
+
+    .contactItem{
+        max-width:1000px;
+        text-align: center;
+    }
+
+    .contactBody{
+        text-align: center;
+        margin:0 auto;
+    }
+
+    .categoryFirst{
+        max-width:1080px;
+    }
 }

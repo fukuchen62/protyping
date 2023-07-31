@@ -8,6 +8,7 @@
 /* ゲーム画面 */
 h2{
     font-size:6.4rem;
+    /* text-align: center; */
 }
 
 #gameBody{
@@ -380,15 +381,13 @@ span{
 
     .wrap{
         margin:0 auto;
-        max-width:1000px;
+        max-width:1080px;
         display: flex;
         justify-content: space-between;
     }
 
     .main{
 
-        /* flex-basis: 104rem; */
-        /* float: left; */
     }
 
     .box{
