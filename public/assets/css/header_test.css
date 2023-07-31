@@ -74,6 +74,7 @@ ul {
     padding-inline-start: 40px;
 }
 
+/* スマホ */
 /* 新 */
 ul, div, img {
     margin: 0;
@@ -90,10 +91,12 @@ ul, div, img {
     position: fixed;
     top: 0;
     left: 0;
-    height: 60px;
+    height: 50px;
     width: 100%;
     z-index: 100;
+    /* padding: 0 30px; */
 }
+
 
 /* チェックボックスを非表示２ */
 #nav input[type="checkbox"] {
@@ -109,21 +112,30 @@ ul, div, img {
 .memuLeft img {
     vertical-align: middle;
     margin-left: 10px;
+    margin-top: 30px;
+    padding: 10px;
 }
 
 /* PCメニュー */
 .menu {
     float: right;
     margin-right: 10px;
+    padding: 10px;
+    margin-top: 30px;
 }
 
 .menuParent {
     float: left;
-    margin-right: 30px;
-    line-height: 60px;
-    font-size: 17px;
+    margin: 0 0 0 10px;
+    line-height: 40px;
+    font-size: 1.6rem;
     font-weight: bold;
     white-space: nowrap;
+    background-color: #5FBFED;
+    border-radius: 10px;
+    padding: 10px;
+    height: 56px;
+
 }
 
 /* パソコンでは V を非表示 */
@@ -142,16 +154,41 @@ ul, div, img {
     cursor: hand;
 }
 
+
+
+/* PCメディアクエリ */
+@media screen and (min-width: 1000px) {
+    #nav {
+        height: 144px;
+        padding: 0;
+    }
+
+    .menuParent {
+        width: 110px;
+        text-align: center;
+    }
+
+
+}
+
+
 @media screen and (max-width: 999px) {
 
     /* スマホの際に V を表示 */
     .menuParent .pd {
         display: inline-block;
         width: 100%;
+        padding: 0 0 0 10px;
     }
 
     .menu {
         display: none;
+        margin: 0;
+    }
+
+    .memuLeft img {
+        margin-top: 0;
+        padding: 0;
     }
 
     .menuParent {
@@ -159,6 +196,8 @@ ul, div, img {
         width: 100%;
         padding: 0px 20px;
         border-bottom: 1px solid #DDD;
+        border-radius: 0;
+        margin: 0;
     }
 
     .menuParent:first-child {
@@ -191,8 +230,10 @@ ul, div, img {
     width: auto;
     box-sizing: border-box;
     padding: 0px 20px;
-    background-color: #FFF;
-    border: 1px solid #000;
+    background-color: #90CEEC;
+    /* border: 1px solid #000; */
+    border-radius: 10px;
+    margin-top: 10px;
 }
 
 /* パソコン用 */
@@ -236,6 +277,7 @@ ul, div, img {
         margin-left: auto;
         left: auto;
         width: auto;
+        border-radius: 0;
     }
 
     .menuParent>label:hover {
@@ -291,7 +333,7 @@ ul, div, img {
         display: block;
         width: 40px;
         height: 40px;
-        background-color: #333;
+        /* background-color: #333; */
     }
 
     #navBtn span span {
@@ -1062,4 +1104,13 @@ padding: 15px;
 
 .footerLogo {
     margin: 0 auto;
+}
+
+
+/* フッターメディアクエリ */
+@media screen and (min-width: 1000px) {
+
+    .footer {
+        height: 817px;
+    }
 }
