@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>トップページ</title>
+    <title>知っ得一覧</title>
 
     <!-- 共通CSS -->
     <link rel="stylesheet" href="../assets/css/reset.css">
@@ -85,139 +85,139 @@
         <!-- パンくずリスト -->
         <div class="breadCrumb">パンくず入る</div>
 
+        <!-- 大枠の Flexbox（親） -->
+        <div class="shittokuFlex">
 
-        <div class="titleBox">
-            <h2 class="title">知っ得情報一覧</h2>
+            <!-- サイドバー 176px-->
+            <aside id="side" class="side">
+                <nav class="gnavSide">
+                    <ul>
+                        <li><a href="#"></a>開発環境セットアップ</li>
+                        <li><a href="#"></a>WordPress</li>
+                        <li><a href="#"></a>おすすめWebアプリ</li>
+                        <li><a href="#"></a>おすすめWebサイト</li>
+                        <li><a href="#"></a>ョートカット</li>
+                        <li><a href="#"></a>資格</li>
+                        <li><a href="#"></a>Clrome拡張機能</li>
+                        <li><a href="#"></a>卒業生の作品</li>
+                    </ul>
+                </nav>
+            </aside>
 
-            <p class="overview">こんにちは！私たちのサイトにお越しいただきありがとうございます！
-                                                このページではIT業界に進んでいく上で知っトクと便利な情報を載せています！ぜひ活用して下さい(^^)!
-                                            </p>
-        </div>
+            <!-- メインコンテンツ 100%-176px -->
+            <div class="mainContainer">
 
-        <!-- メインコンテンツ -->
-        <div class="mainBox">
+                <div class="mainContainerInner">
+                    <section>
+                        <h2 class="title">知っ得情報一覧</h2>
 
-            <!-- flexBOX -->
-            <div class="mainBoxInner">
+                        <p class="overview">こんにちは！私たちのサイトにお越しいただきありがとうございます！このページではIT業界に進んでいく上で知っトクと便利な情報を載せています！ぜひ活用して下さい(^^)!
+                                        </p>
+                    </section>
 
+                    <!-- 画像の Flexbox（親） -->
+                    <div class="imgFlex">
 
-                <!-- サイドバー 200px-->
-                <aside id="side" class="side">
-                    <div class="asideInner">
-                        <ul>
-                            <li>開発環境セットアップ</li>
-                            <li>WordPress</li>
-                            <li>おすすめWebアプリ</li>
-                            <li>おすすめWebサイト</li>
-                            <li>ショートカット</li>
-                            <li>資格</li>
-                            <li>Clrome拡張機能</li>
-                            <li>卒業生の作品</li>
-                        </ul>
+                        <!--  1 開発環境セットアップ  -->
+                        <section class="flexItem flexItem1">
+                            <h3 class="flexItemTitle">開発環境セットアップ</h3>
+                            <a href="">
+                                <img src="../assets/images/shittoku_dami-.jpg" alt="" class="flexItemImage" />
+                            </a>
+                            <p class="flexItemText">
+                                                                                            一言説明入れる一言説明入れる一言説明入れる一言説明入れる
+                                                                                        </p>
+                        </section>
+
+                        <!-- 2  WordPress  -->
+                        <section class="flexItem flexItem2">
+                            <h3 class="flexItemTitle">WordPress</h3>
+                            <a href="">
+                                <img src="../assets/images/shittoku_dami-.jpg" alt="" class="flexItemImage" />
+                            </a>
+                            <p class="flexItemText">
+                                                                                                                一言説明入れる一言説明入れる一言説明入れる一言説明入れる
+                                                                                                            </p>
+                        </section>
+
+                        <!-- 3 おすすめWebアプリ  -->
+                        <section class="flexItem flexItem3">
+                            <h3 class="flexItemTitle">おすすめWebアプリ</h3>
+                            <a href="">
+                                <img src="../assets/images/shittoku_dami-.jpg" alt="" class="flexItemImage" />
+                            </a>
+                            <p class="flexItemText">
+                                                                                                                一言説明入れる一言説明入れる一言説明入れる一言説明入れる
+                                                                                                            </p>
+                        </section>
+
+                        <!--  4 おすすめWebサイト-->
+                        <section class="flexItem flexItem4">
+                            <h3 class="flexItemTitle">おすすめWebサイト</h3>
+                            <a href="">
+                                <img src="../assets/images/shittoku_dami-.jpg" alt="" class="flexItemImage" />
+                            </a>
+                            <p class="flexItemText">
+                                                                    一言説明入れる一言説明入れる一言説明入れる一言説明入れる
+                                                                                                            </p>
+                        </section>
+
+                        <!-- 5 ショートカット -->
+                        <section class="flexItem flexItem5">
+                            <h3 class="flexItemTitle">ショートカット</h3>
+                            <a href="">
+                                <img src="../assets/images/shittoku_dami-.jpg" alt="" class="flexItemImage" />
+                            </a>
+                            <p class="flexItemText">
+                                                                    一言説明入れる一言説明入れる一言説明入れる一言説明入れる
+                                                                                                            </p>
+                        </section>
+
+                        <!-- 6 資格 -->
+
+                        <dsection class="flexItem flexItem6">
+                            <h3 class="flexItemTitle">資格</h3>
+                            <a href="">
+                                <img src="../assets/images/shittoku_dami-.jpg" alt="" class="flexItemImage" />
+                            </a>
+                            <p class="flexItemText">
+                                                                                                                一言説明入れる一言説明入れる一言説明入れる一言説明入れる
+                                                                                        </p>
+                        </dsection>
+
+                        <!-- 7 Chrome拡張機能 -->
+                        <section class="flexItem flexItem7">
+                            <h3 class="flexItemTitle">Chrome拡張機能</h3>
+                            <a href="">
+                                <img src="../assets/images/shittoku_dami-.jpg" alt="" class="flexItemImage" />
+                            </a>
+                            <p class="flexItemText">
+                                                                                                                一言説明入れる一言説明入れる一言説明入れる一言説明入れる
+                                                                                                            </p>
+                        </section>
+
+                        <!-- 8 卒業生の作品 -->
+                        <section class="flexItem flexItem8">
+                            <h3 class="flexItemTitle">卒業生の作品</h3>
+                            <a href="">
+                                <img src="../assets/images/shittoku_dami-.jpg" alt="" class="flexItemImage" />
+                            </a>
+                            <p class="flexItemText">
+                                                                                                                一言説明入れる一言説明入れる一言説明入れる一言説明入れる
+                                                                                                            </p>
+                        </section>
                     </div>
-                </aside>
-
-                <!-- コンテンツ 100%-200px -->
-                <div class="shittokuContainer">
-
-
-
-
-                    <!--  1 開発環境セットアップ  -->
-                    <div class="flexItem flexItem1">
-                        <h3 class="flexItemTitle">開発環境セットアップ</h3>
-                        <a href="">
-                            <img src="../assets/images/shittoku_dami-.jpg" alt="" class="flexItemImage" />
-                        </a>
-                        <p class="flexItemText">
-                                                    一言説明入れる一言説明入れる一言説明入れる一言説明入れる
-                                                </p>
-                    </div>
-
-                    <!-- 2  WordPress  -->
-                    <div class="flexItem flexItem2">
-                        <h3 class="flexItemTitle">WordPress</h3>
-                        <a href="">
-                            <img src="../assets/images/shittoku_dami-.jpg" alt="" class="flexItemImage" />
-                        </a>
-                        <p class="flexItemText">
-                                                                        一言説明入れる一言説明入れる一言説明入れる一言説明入れる
-                                                                    </p>
-                    </div>
-
-                    <!-- 3 おすすめWebアプリ  -->
-                    <div class="flexItem flexItem3">
-                        <h3 class="flexItemTitle">おすすめWebアプリ</h3>
-                        <a href="">
-                            <img src="../assets/images/shittoku_dami-.jpg" alt="" class="flexItemImage" />
-                        </a>
-                        <p class="flexItemText">
-                                                                        一言説明入れる一言説明入れる一言説明入れる一言説明入れる
-                                                                    </p>
-                    </div>
-
-                    <!--  4 おすすめWebサイト-->
-                    <div class="flexItem flexItem4">
-                        <h3 class="flexItemTitle">おすすめWebサイト</h3>
-                        <a href="">
-                            <img src="../assets/images/shittoku_dami-.jpg" alt="" class="flexItemImage" />
-                        </a>
-                        <p class="flexItemText">
-                                                                        一言説明入れる一言説明入れる一言説明入れる一言説明入れる
-                                                                    </p>
-                    </div>
-
-                    <!-- 5 ショートカット -->
-                    <div class="flexItem flexItem5">
-                        <h3 class="flexItemTitle">ショートカット</h3>
-                        <a href="">
-                            <img src="../assets/images/shittoku_dami-.jpg" alt="" class="flexItemImage" />
-                        </a>
-                        <p class="flexItemText">
-                                                                        一言説明入れる一言説明入れる一言説明入れる一言説明入れる
-                                                                    </p>
-                    </div>
-
-                    <!-- 6 資格 -->
-
-                    <div class="flexItem flexItem6">
-                        <h3 class="flexItemTitle">資格</h3>
-                        <a href="">
-                            <img src="../assets/images/shittoku_dami-.jpg" alt="" class="flexItemImage" />
-                        </a>
-                        <p class="flexItemText">
-                                                                        一言説明入れる一言説明入れる一言説明入れる一言説明入れる
-                                                </p>
-                    </div>
-
-                    <!-- 7 Chrome拡張機能 -->
-                    <div class="flexItem flexItem7">
-                        <h3 class="flexItemTitle">Chrome拡張機能</h3>
-                        <a href="">
-                            <img src="../assets/images/shittoku_dami-.jpg" alt="" class="flexItemImage" />
-                        </a>
-                        <p class="flexItemText">
-                                                                        一言説明入れる一言説明入れる一言説明入れる一言説明入れる
-                                                                    </p>
-                    </div>
-
-                    <!-- 8 卒業生の作品 -->
-                    <div class="flexItem flexItem8">
-                        <h3 class="flexItemTitle">卒業生の作品</h3>
-                        <a href="">
-                            <img src="../assets/images/shittoku_dami-.jpg" alt="" class="flexItemImage" />
-                        </a>
-                        <p class="flexItemText">
-                                                                        一言説明入れる一言説明入れる一言説明入れる一言説明入れる
-                                                                    </p>
-                    </div>
-
-
-
 
                 </div>
 
+
+
+
+
+
+
             </div>
+
         </div>
 
     </main>

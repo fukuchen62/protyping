@@ -209,8 +209,7 @@
             </div>
         </div>
     </div>
-@endsection
-@section('myjs')
+
     {{-- ゲーム用js --}}
     {{-- jsファイルに分けると<はてなphp ?>が書けないので直接ここにタイピングゲームのコードを書く --}}
     {{-- <script src="assets/js/typing.js"></script> --}}

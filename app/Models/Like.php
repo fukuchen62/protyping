@@ -14,7 +14,10 @@ class Like extends Model
 
     // バリデーションルール
     public static $rules = [
-        'like' => 'required',
+        'users_id' => 'integer',
+        'games_id' => 'integer',
+        'news_id' => 'integer',
+        'knowhow_id' => 'integer',
     ];
 
     public function getTitle()
