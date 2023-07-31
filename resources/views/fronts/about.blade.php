@@ -7,6 +7,7 @@
 @section('title','アバウト')
 
 @section('pageCss')
+<link rel="stylesheet" href="{{ asset('./assets/css/about.css') }}">
 
 @section('key_visual')
 
