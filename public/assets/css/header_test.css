@@ -83,7 +83,7 @@ ul, div, img {
     font-weight: normal;
 }
 
-/* ヘッダー２ */
+/* ヘッダー */
 #nav {
     background-color: #26567C;
     border-top: 4px solid#D6A923;
@@ -97,6 +97,10 @@ ul, div, img {
     /* padding: 0 30px; */
 }
 
+.navInner {
+    max-width: 1080px;
+    margin-inline: auto;
+}
 
 /* チェックボックスを非表示２ */
 #nav input[type="checkbox"] {
@@ -1081,10 +1085,12 @@ padding: 15px;
     margin: 10px 0 0 0;
     background-color: #5FBFED;
     height: 141px;
+    padding-top: 40px;
 }
 
 .footerWrap {
-    padding: 27px;
+    max-width: 1080px;
+    margin-inline: auto;
 }
 
 .footerLogo {
@@ -1094,6 +1100,7 @@ padding: 15px;
 }
 
 .copyright {
+    margin-block-start: 30px;
     text-align: center;
 }
 
@@ -1106,16 +1113,22 @@ padding: 15px;
     margin: 0 auto;
 }
 
+#footer .innerBlock {
+    display: none;
+}
+
 
 /* フッターメディアクエリ */
 @media screen and (min-width: 1000px) {
 
     .footer {
-        padding: 50px;
+        padding-top: 50px;
         height: 817px;
+
     }
 
-    .innerBlock {
+    #footer .innerBlock {
+        display: block;
         margin: 40px 0 0 0;
         line-height: 5;
     }
