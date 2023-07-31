@@ -17,7 +17,7 @@ class ArticleController extends Controller
     {
         // 更新情報の一覧を表示する
         $items = News::where('is_show', 1)
-            ->paginate(1);
+            ->paginate(4);
 
         $data = [
             'items' => $items,
