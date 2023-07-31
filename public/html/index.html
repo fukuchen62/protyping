@@ -83,131 +83,183 @@
     </header>
 
     <!-- ここからメイン -->
-    <main class="main">
-        <!-- ゲーム画面１ -->
-        <section id="gameBody">
-            <h2 id="gameTitle">GAME</h2>
-            <div class="box" id="makeImg">
-                <div class="circle"></div>
-                <button id="startBtn" type="button">
-                    <a href="../html/typing_game.html">
-                        <p>ゲームをする</p>
-                    </a>
-                </button>
-                <div class="circleBottom"></div>
-            </div>
-            <!-- <button id="startBtn" type="button">
+    <div class="wrap">
+        <main class="main">
+            <!-- ゲーム画面１ -->
+            <section id="gameBody">
+                <h2 id="gameTitle">GAME</h2>
+                <p class="gameExplain">プログラミングでよく使う英単語のタイピングゲームができるWEBアプリです</p>
+                <div class="box" id="makeImg">
+                    <div class="circle"></div>
+                    <button id="startBtn" type="button">
+                        <a href="../html/typing_game.html">
+                            <p>ゲームをする</p>
+                        </a>
+                    </button>
+                    <div class="circleBottom"></div>
+                </div>
+                <!-- <button id="startBtn" type="button">
                 <a href="../html/typing_game.html">ゲームをする</a>
             </button> -->
-            <p class="warning">※こちらはパソコンで遊べるゲームです。</p>
-            <img class="gameChara" src="../assets/images/cat.jpg" alt="">
-        </section>
-        <section class="gameSummary">
-            <p>プログラミングでよく使う英単語のタイピングゲームができるWEBアプリです。基本的な動きはJavaScriptで実装しております。何度も繰り返し挑戦することで、プログラミングで使う英単語のスペル習得、専門用語とタイピング速度の向上と意味の3つの力がつくと共にIT業界で、役立つ基本的な情報(知っトク情報)も喝采しておりますので、WEB関係の仕事を目指す方々の助けになれれば幸いです。</p>
-        </section>
-        <!-- <section class="topRanking">
-        <img src="../assets/images/Group.jpg" alt="">
-        <h6>ランキング</h6>
-        <img src="../assets/images/Group.jpg" alt="">
-            <select>
-            <option value="のんびりコース">のんびりコース</option>
-            <option value="駆け足コース">駆け足コース</option>
-    </select>
-    <section>
-            <p>HTML
-                <ul class="topHtmlRanking">
-                    1位<li>しんちゃん</li>
-                    2位<li>エリザベス</li>
-                    3位<li>michiru</li>
-                </ul>
-            </p>
-        </section>
-        <section>
-            <p>CSS
-                <ul class="topCssRanking">
-                    1位<li>しんちゃん</li>
-                    2位<li>エリザベス</li>
-                    3位<li>michiru</li>
-                </ul>
-            </p>
-        </section>
-        <section>
-            <p>JavaScript
-                <ul class="topJavascriptRanking">
-                    1位<li>しんちゃん</li>
-                    2位<li>エリザベス</li>
-                    3位<li>michiru</li>
-                </ul>
-            </p>
-        </section>
-        <section>
-            <p>PHP
-                <ul class="topPhpRanking">
-                    1位<li>しんちゃん</li>
-                    2位<li>エリザベス</li>
-                    3位<li>michiru</li>
-                </ul>
-            </p>
-        </section>
-        <section>
-            <p>Python
-                <ul class="topPythonRanking">
-                    1位<li>しんちゃん</li>
-                    2位<li>エリザベス</li>
-                    3位<li>michiru</li>
-                </ul>
-            </p>
-        </section>
-    </section> -->
-        <!-- 知っトク情報 -->
-        <section class="infoNews">
-            <h5>知っトク情報</h5>
-            <div class="listBtn"><a href="../html/shittoku.html">一覧を見る</a></div>
-            <p>サイト内の日々の更新をUPしていきます</p>
-            <p class="yellowLine"></p>
-            <ul class="infoList">
-                <li> <a href="../html/shittoku.html"><img src="../assets/images/cat.jpg" alt="">
-                        <span>【ショートカット】</span></a>
-                </li>
-                <li> <a href="../html/shittoku.html"><img src="../assets/images/cat.jpg" alt="">
-                        <span>【エメット】</span></a>
-                </li>
-                <li> <a href="../html/shittoku.html"><img src="../assets/images/cat.jpg" alt="">
-                        <span>【エメット】</span></a>
-                </li>
+                <p class="warning">※こちらはパソコンで遊べるゲームです。</p>
+                <img class="gameChara" src="../assets/images/cat.jpg" alt="">
+            </section>
+            <section class="gameSummary">
+                <p>プログラミングでよく使う英単語のタイピングゲームができるWEBアプリです。基本的な動きはJavaScriptで実装しております。何度も繰り返し挑戦することで、プログラミングで使う英単語のスペル習得、専門用語とタイピング速度の向上と意味の3つの力がつくと共にIT業界で、役立つ基本的な情報(知っトク情報)も喝采しておりますので、WEB関係の仕事を目指す方々の助けになれれば幸いです。</p>
+            </section>
 
-            </ul>
-        </section>
+            <!-- 知っトク情報 -->
+            <section class="infoNews">
+                <h5>知っトク情報</h5>
+                <div class="listBtn"><a href="../html/shittoku.html">一覧を見る</a></div>
+                <p class="explain">サイト内の日々の更新をUPしていきます</p>
+                <p class="yellowLine"></p>
+                <ul class="infoList">
+                    <li> <a href="../html/shittoku.html"><img src="../assets/images/shittoku_dami-.jpg" alt="">
+                            <span>【ショートカット】</span></a>
+                    </li>
+                    <li> <a href="../html/shittoku.html"><img src="../assets/images/shittoku_dami-.jpg" alt="">
+                            <span>【エメット】</span></a>
+                    </li>
+                    <li> <a href="../html/shittoku.html"><img src="../assets/images/shittoku_dami-.jpg" alt="">
+                            <span>【エメット】</span></a>
+                    </li>
 
-        <!-- 更新情報 -->
-        <section class="updateNews">
-            <h5>更新情報</h5>
-            <div class="listBtn"><a href="../html/update.html">一覧を見る</a></div>
-            <p>サイト内の日々の更新をUPしていきます</p>
-            <p class="yellowLine"></p>
-            <ul class="updateList">
-                <li> <a href="../html/update.html">2023/08/18<br>
-                        <span>Python単語追加</span></a>
-                </li>
-                <p class="updateLine"></p>
-                <li> <a href="../html/update.html">2023/08/18<br>
-                        <span>Python単語追加</span></a>
-                </li>
-                <p class="updateLine"></p>
-                <li> <a href="../html/update.html">2023/08/18<br>
-                        <span>Python単語追加</span></a>
-                </li>
+                </ul>
+            </section>
 
-            </ul>
-        </section>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
-        <div id="page_top"><a href="#"></a></div>
+            <!-- 更新情報 -->
+            <section class="updateNews">
+                <h5>更新情報</h5>
+                <div class="listBtn"><a href="../html/update.html">一覧を見る</a></div>
+                <p class="explain">サイト内の日々の更新をUPしていきます</p>
+                <p class="yellowLine"></p>
+                <ul class="updateList">
+                    <li> <a href="../html/update.html">2023/08/18<br>
+                            <span>Python単語追加</span></a>
+                    </li>
+                    <p class="updateLine"></p>
+                    <li> <a href="../html/update.html">2023/08/18<br>
+                            <span>Python単語追加</span></a>
+                    </li>
+                    <p class="updateLine"></p>
+                    <li> <a href="../html/update.html">2023/08/18<br>
+                            <span>Python単語追加</span></a>
+                    </li>
 
-        </a>
-        </div>
+                </ul>
+            </section>
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+            <div id="page_top"><a href="#"></a></div>
+
+            </a>
+    </div>
     </main>
-
-    <footer class="footer">
+    <section class="topRanking">
+        <div class="ranking">
+            <img src="../assets/images/whitecrown.png" alt="">
+            <h6>ランキング</h6>
+            <img src="../assets/images/whitecrown.png" alt="">
+        </div>
+        <div class="selectWrap">
+            <select name="word" required> <!-- required：選択必須を指定 -->
+                <option value="初級コース">初級コース</option>
+                <option value="中級コース">中級コース</option>
+            </select>
+        </div>
+        <section class="rankingArea">
+            <p class="rankingWordCategory">プログラミングで<br>よく使われる英単語
+                            <ul class="topWordRanking">
+                                <div class="rankingColumn">1位<li>しんちゃん</li>
+                                    <p class="score">〇〇点</p>
+            </div>
+            <div class="rankingColumn">2位<li>エリザベス</li>
+                <p class="score">〇〇点</p>
+            </div>
+            <div class="rankingColumn">3位<li>michiru</li>
+                <p class="score">〇〇点</p>
+            </div>
+            </ul>
+            </p>
+        </section>
+        <section class="rankingArea">
+            <p class="rankingCategory">HTML
+                    <ul class="topHtmlRanking">
+                        <div class="rankingColumn">1位<li>しんちゃん</li>
+                            <p class="score">〇〇点</p>
+            </div>
+            <div class="rankingColumn">2位<li>エリザベス</li>
+                <p class="score">〇〇点</p>
+            </div>
+            <div class="rankingColumn">3位<li>michiru</li>
+                <p class="score">〇〇点</p>
+            </div>
+            </ul>
+            </p>
+        </section>
+        <section class="rankingArea">
+            <p class="rankingCategory">CSS
+                    <ul class="topCssRanking">
+                        <div class="rankingColumn">1位<li>しんちゃん</li>
+                            <p class="score">〇〇点</p>
+            </div>
+            <div class="rankingColumn">2位<li>エリザベス</li>
+                <p class="score">〇〇点</p>
+            </div>
+            <div class="rankingColumn">3位<li>michiru</li>
+                <p class="score">〇〇点</p>
+            </div>
+            </ul>
+            </p>
+        </section>
+        <section class="rankingArea">
+            <p class="rankingCategory">JavaScript
+                    <ul class="topJavascriptRanking">
+                        <div class="rankingColumn">1位<li>しんちゃん</li>
+                            <p class="score">〇〇点</p>
+            </div>
+            <div class="rankingColumn">2位<li>エリザベス</li>
+                <p class="score">〇〇点</p>
+            </div>
+            <div class="rankingColumn">3位<li>michiru</li>
+                <p class="score">〇〇点</p>
+            </div>
+            </ul>
+            </p>
+        </section>
+        <section class="rankingArea">
+            <p class="rankingCategory">PHP
+                    <ul class="topPhpRanking">
+                        <div class="rankingColumn">1位<li>しんちゃん</li>
+                            <p class="score">〇〇点</p>
+            </div>
+            <div class="rankingColumn">2位<li>エリザベス</li>
+                <p class="score">〇〇点</p>
+            </div>
+            <div class="rankingColumn">3位<li>michiru</li>
+                <p class="score">〇〇点</p>
+            </div>
+            </ul>
+            </p>
+        </section>
+        <section class="rankingArea">
+            <p class="rankingCategory">Python
+                    <ul class="topPythonRanking">
+                        <div class="rankingColumn">1位<li>しんちゃん</li>
+                            <p class="score">〇〇点</p>
+            </div>
+            <div class="rankingColumn">2位<li>エリザベス</li>
+                <p class="score">〇〇点</p>
+            </div>
+            <div class="rankingColumn">3位<li>michiru</li>
+                <p class="score">〇〇点</p>
+            </div>
+            </ul>
+            </p>
+        </section>
+    </section>
+    </div>
+    <footer class="footer clearfix">
         <div class="footerWrap">
             <div class="footerLogo">
                 <a href=""><img src="" alt="タイプコード" srcset=""></a>
