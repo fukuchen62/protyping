@@ -4,7 +4,7 @@
 
 @section('keywords')
 
-@section('title','TOPページ')
+@section('title','トップページ')
 
 @section('pageCss')
 
