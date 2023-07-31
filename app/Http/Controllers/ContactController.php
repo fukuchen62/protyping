@@ -31,7 +31,7 @@ class ContactController extends Controller
         // お問い合わせフォームからメールを送信してもらう
         // バリデーションのルールを定義すると良いでしょう
         $validatedData = $request->validate([
-            'contact_id' => 'required',
+            'contact_type' => 'required',
             'language_id' => 'required',
             'word_spell' => 'max:200',
             'japanese' => 'max:200',
@@ -94,6 +94,13 @@ class ContactController extends Controller
         $verification->fill($form)->save();
 
         // お問い合わせフォームに遷移する
-        return redirect()->route('contact')->with('success', 'お問い合わせが送信されました！');
+        return redirect()->route('complete')->with('success', 'お問い合わせが送信されました！');
+    }
+
+    public function getcomplete(Request $request)
+    {
+        // お問い合わせ画面の表示
+
+        return view('fronts.contacts_complete');
     }
 }

@@ -90,6 +90,13 @@ Route::get('verification', [App\Http\Controllers\ContactController::class, 'getv
 Route::post('verification', [App\Http\Controllers\ContactController::class, 'sendverification'])->name('verification');
 
 /**
+ * お問い合わせの送信後画面
+ * ユーザがフォームから問い合わせ内容を送ってもらった後の画面
+ * カテゴリが単語追加要望ならDBに登録する
+ */
+Route::get('complete', [App\Http\Controllers\ContactController::class, 'getcomplete'])->name('complete');
+
+/**
  * 更新情報一覧画面
  * 更新情報の一覧を表示する
  */
