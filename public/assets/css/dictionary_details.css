@@ -55,12 +55,13 @@
 
 
 h2{
-    margin: 150px 0 5px 0;
+    margin: 30px 0 5px 0;
 }
 
 @media screen and (min-width: 768px) {
 h2{
     font-size: 4rem;
+    margin: 150px 0 5px 0;
 }
 }
 
@@ -98,7 +99,6 @@ a{
     color: #8b8b8b;
 }
 
-
 /* テーブル */
 
 th{
@@ -129,10 +129,6 @@ th{
     background:rgba(95,191,237,0.3);
 }
 
-.englishWord {
-    display: block;
-}
-
 .englishWord p{
     font-weight: bold;
 }
@@ -150,21 +146,59 @@ th{
     align-items: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px){
 
-    th{
-        font-size: 2rem;
-        width: 50px;
-        color: #8b8b8b;
+.dictionary{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dictionaryBox1{
+    width: 750px;
+}
+
+.dictionaryBox2{
+width: 750px;
+}
+
+.englishWord{
+    width: 300px;
+}
+
+.englishWord p{
+    margin-block-start: 30px;
+    font-size: 2rem;
+}
+
+.read{
+    width: 400px;
+}
+
+.read p{
+    margin-block-start: 30px;
+    margin-right: 50px;
+    font-size: 1.8rem;
+}
+
+.secondary{
+    font-size: 1.6rem;
+    width: 100px;
+}
+
+
+label .open{
+    margin: 50px;
     }
 
-    td{
+.dictionary.englishWord{
+    display: block;
+}
 
-    }
-
-
-
-
+thead tr th {
+font-size: 1.8rem;
+color: #000;
+}
 
 }
 
@@ -282,21 +316,6 @@ th{
         display: none;
     }
 }
-/* .word div{
-    background-color: #B6F2FF;
-    border-radius: 13px;
-    margin-top: 15px;
-    text-align: center;
-    height: 3.6rem;
-    padding-top: 8px;
-} */
-
-/* .word a{
-color: #26567c;
-font-weight: 500 ;
-font-size: 1.7rem;
-padding: 15px;
-} */
 
 
 /* ポップアップ表示 */
@@ -351,6 +370,13 @@ padding: 15px;
 .open img{
     width: 40px;
     height: 40px;
+}
+
+@media screen and (min-width: 768px) {
+.open img{
+    width: 60px;
+    height: 60px;
+    }
 }
 
 .window h2{
@@ -445,7 +471,7 @@ img:hover{
 
 
 @media screen and (min-width: 768px) {
-    #page_top{
+    #pagTop{
         right: 20px;
     }
 }
