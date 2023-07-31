@@ -5,12 +5,10 @@
     <meta charset="UTF-8">
 
     {{-- ディスカッション --}}
-    {{-- <meta name="description" content="@yield('description')"> --}}
-    <meta name="description" content="徳島県内の「道の駅」情報を発信していています。施設一覧やお土産特集などおさえておきたいコンテンツが盛りだくさんで観光やドライブに役立つこと間違いなし。">
+    <meta name="description" content="">
 
     {{-- キーワード --}}
-    {{-- <meta name="keywords" content="@yield('keywords')"> --}}
-    <meta name="keywords" content="道の駅、情報、施設、一覧、お土産、観光">
+    <meta name="keywords" content="">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,9 +24,7 @@
     <!-- 共通CSS -->
     <!-- reset.cssファイルを読み込む -->
     <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/common.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/typingstyle.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/index.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/common.css') }}">
 
     {{-- 独自のCSSファイルを読み込む --}}
     @yield('pageCss')
@@ -39,6 +35,12 @@
     {{-- トークンを読み込む --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <!-- フォント設定 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
