@@ -380,7 +380,7 @@ span{
 
     .wrap{
         margin:0 auto;
-        max-width:1080px;
+        max-width:1000px;
         display: flex;
         justify-content: space-between;
     }
@@ -451,12 +451,12 @@ span{
         /* margin-right:0;
         margin-left: auto; */
         float:right;
-        margin-left:112px;
+        margin-left:40px;
     }
 
     .topRankingArea{
-        /* position: absolute; */
-        /* left:0; */
+        /* position: absolute;
+        right:0; */
         background-color:#5FBFED;
         flex-basis: 240px;
     }

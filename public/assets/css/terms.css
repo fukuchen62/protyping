@@ -34,3 +34,11 @@ h2{
 	border-left: 0.8rem solid transparent;
 	border-right: 0.8rem solid transparent;
 }
+
+@media (min-width:1000px) {
+
+    .wrap{
+        margin:0 auto;
+        max-width:1000px;
+	}
+}
