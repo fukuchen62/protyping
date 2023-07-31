@@ -1111,6 +1111,101 @@ padding: 15px;
 @media screen and (min-width: 1000px) {
 
     .footer {
+        padding: 50px;
         height: 817px;
+    }
+
+    .innerBlock {
+        margin: 40px 0 0 0;
+        line-height: 5;
+    }
+
+
+    #footer .footerContent {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 30px 60px;
+        margin: 0 auto;
+    }
+
+    #footer .contentItem {
+        display: block;
+        width: calc(100% / 4);
+        margin: 0 0 0 40px;
+    }
+
+
+
+    .footerTitle {
+        display: block;
+        /* margin: 30px 0 6px; */
+        font-size: 1.6rem;
+        color: #fff;
+        font-weight: 500;
+    }
+
+
+
+    #footer .footerNav .footerTitle:first-child {
+        margin-top: 0;
+    }
+
+    #footer .footerNav .footerTitle+.footerTitle {
+        margin-top: 10px;
+    }
+
+    #footer .footerNav ul {
+        display: block;
+        font-size: 1.6rem;
+
+    }
+
+    #footer .footerNav li {
+        display: block;
+        line-height: 3;
+    }
+
+    #footer .footerNav .engWord {
+        line-height: 1;
+    }
+
+
+    #footer .footerNav li:first-child {
+        margin-top: 0;
+    }
+
+    #footer .footerNav li ul {
+        margin: 0 0 0 2em;
+    }
+
+    #footer .footerNav li li {
+        position: relative;
+    }
+
+    #footer .footerNav li li:before {
+        position: absolute;
+        top: 50%;
+        left: -10px;
+        content: "";
+        display: block;
+        width: 4px;
+        height: 1px;
+        background-color: #fff;
+    }
+
+    #footer .company {
+        display: block;
+        margin-top: 62px;
+    }
+
+    .copyright {
+        margin-block-start: 70px;
+    }
+
+    .footerTitle .engWord {
+        line-height: 0;
+        padding: 10px;
     }
 }
