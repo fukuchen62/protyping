@@ -375,8 +375,8 @@ span{
 }
 /* 更新情報 */
 
-/* パソコン768px~ */
-@media (min-width:768px) {
+/* パソコン1000px~ */
+@media (min-width:1000px) {
 
     .wrap{
         margin:0 auto;
@@ -386,12 +386,18 @@ span{
     }
 
     .main{
-        flex-basis: 68rem;
-        float: left;
+
+        /* flex-basis: 104rem; */
+        /* float: left; */
     }
 
     .box{
     margin:50px auto;
+}
+
+.topLeftArea{
+    max-width:680px;
+    float: left;
 }
 
     .gameExplain{
@@ -407,7 +413,21 @@ span{
     }
 
     .explain{
-        text-align: left;
+        text-align:left;
+    }
+
+.infoList {
+        display: flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        align-content: center;
+        max-width: 580px;
+        width: 100%;
+        margin:0 auto;
+}
+
+.infoList li{
+    margin:10px;
     }
 
     .updateList li{
@@ -424,9 +444,21 @@ span{
     }
 
     .topRanking{
+        position:relative;
         display:inline-block;
-        flex-basis: 240px;
+        flex-basis:240px;
         background-color:#5FBFED;
+        /* margin-right:0;
+        margin-left: auto; */
+        float:right;
+        margin-left:112px;
     }
-/* パソコン768px~ */
+
+    .topRankingArea{
+        /* position: absolute; */
+        /* left:0; */
+        background-color:#5FBFED;
+        flex-basis: 240px;
+    }
+/* パソコン1000px~ */
 }
