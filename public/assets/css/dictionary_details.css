@@ -55,7 +55,7 @@
 
 
 h2{
-    margin: 30px 0 5px 0;
+    margin: 150px 0 5px 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -390,7 +390,7 @@ img:hover{
     /* width: 100px; */
     height: 5rem;
     position: fixed;
-    right: 20px;
+    right: 0px;
     bottom:100px;
     background: #EAB624;
     /* opacity: 0.8; */
@@ -435,10 +435,14 @@ img:hover{
     text-align: center;
     transform: translateY(-50%);
 }
+/* *********************** */
 
+/* サイドバーモバイル */
 .sidebar ul a {
     display: none;
 }
+/* *********************** */
+
 
 @media screen and (min-width: 768px) {
     #page_top{
@@ -451,44 +455,48 @@ img:hover{
 
 .sidebar {
     position: relative;
-    /* position: fixed; */
     right: 20px;
     background: #fff;
     width: 176px;
     height: 100%;
-    /* transition: all 0.5s; */
-    /* display: block; */
-    /* display: flex;
-    justify-content: end; */
     display: block;
     margin-right: 0;
     margin-left: auto;
+    top: 150px;
 }
 
 .sidebar ul{
     position: absolute;
-    margin-top: 30px;
+    /* margin-top: 30px; */
 }
 
 
-/* .globalNav  {
-    font-size: 22px;
-    color: #8B8B8B;
+.globalNav {
+    font-size: 2.2rem;
+    color: #ffff;
     text-align: center;
-    background: #6ac3ee;
+    background: rgba(95, 191, 237,1);
     user-select: none;
     display: block;
-} */
+    height: 55px;
+    pointer-events: none;
+    padding: 15px;
+    /* box-shadow: 0 1px 3px rgba(0,0,0,0.2); */
+    box-shadow: -2px -2px 5px 0px rgba(255, 255, 255, 0.5), 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
+}
 
 .sidebar ul a {
     display: block;
     width: 100%;
-    line-height: 40px;
+    line-height: 50px;
     font-size: 20px;
     color: #8B8B8B;
     padding-left: 15px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid #8B8B8B;
+    box-shadow: -2px -2px 5px 0px rgba(255, 255, 255, 0.5), 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
+    /* box-shadow: -1px -1px 1px #668AD8 inset; */
+    /* box-shadow: 0 1px 1px rgba(0,0,0,0.2), 0 -2px 3px -1px #6d95ce inset; */
+    /* border-top: 1px solid rgba(139, 139, 139, 0.3);
+    border-bottom: 1px solid rgba(139, 139, 139, 0.3);; */
     /* transition: 0.4s; */
 }
 
@@ -496,6 +504,7 @@ ul .subMenu1 a{
     font-size: 1.6rem;
     line-height: 20px;
     padding-bottom: 7px;
+    padding-top: 7px;
 }
 
 .sidebar ul li a:hover{
@@ -503,9 +512,6 @@ ul .subMenu1 a{
 }
 
 .sidebar ul li.active{
-    background-color: rgba(59, 163, 228, 0.7);
+    background-color: rgba(59, 163, 228, 0.3);
 }
-
-
-
     }
