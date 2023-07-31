@@ -1,35 +1,41 @@
 @charset "utf-8";
 
-*{
+* {
     box-sizing: border-box;
 }
 
 /* html */
-html{
+html {
     /* 16pxを10pxにしてる */
     font-size: 62.5%;
-    -webkit-locale: "ja"; /* 日本語のロケールを使用するように指定（日本語の曜日名や通貨単位、数値の桁区切りなどを適切に表示） */
-    -webkit-text-size-adjust: 100%; /* ブラウザによるテキストの自動拡大、縮小を無効にし、常に指定されたフォントサイズで表示する */
+    -webkit-locale: "ja";
+    /* 日本語のロケールを使用するように指定（日本語の曜日名や通貨単位、数値の桁区切りなどを適切に表示） */
+    -webkit-text-size-adjust: 100%;
+    /* ブラウザによるテキストの自動拡大、縮小を無効にし、常に指定されたフォントサイズで表示する */
 }
 
 /* body */
-body{
+body {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     background-color: #26567C;
     color: #8B8B8B;
     min-width: 320px;
-    overflow-x: hidden; /* 横スクロールを表示しなくなる設定 */
-    overflow-y: scroll; /* 要素内のコンテンツが要素をの高さを超えた場合に垂直方向のスクロールバーを表示する（ブログ記事内に長いコメント欄がある場合などに使用する） */
-    text-rendering: optimizeLegibility; /* フォントがなめらかに表示されます（ブラウザによってもフォントの見え方が統一され、読みやすさが向上する） */
+    overflow-x: hidden;
+    /* 横スクロールを表示しなくなる設定 */
+    overflow-y: scroll;
+    /* 要素内のコンテンツが要素をの高さを超えた場合に垂直方向のスクロールバーを表示する（ブログ記事内に長いコメント欄がある場合などに使用する） */
+    text-rendering: optimizeLegibility;
+    /* フォントがなめらかに表示されます（ブラウザによってもフォントの見え方が統一され、読みやすさが向上する） */
 }
 
 /* メイン */
-.main{
+.main {
     margin: 0 20px;
     background-color: #fff;
     /* padding: 10px; */
     /* height: 100vh; */
 }
+
 /* デバッグ用 */
 /* .debug{
     background-color: skyblue;
@@ -65,160 +71,325 @@ ul {
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+    padding-inline-start: 40px;
 }
+
+/* スマホ */
+/* 新 */
+ul, div, img {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: normal;
+}
+
 
 /* ヘッダー */
-.header {
+#nav {
     background-color: #26567C;
-    width: 100%;
     border-top: 4px solid#D6A923;
     color: #fff;
-    /* position: fixed; */
-    /* top: 0;
-    left: 0; */
-    z-index: 9999;
-}
-
-/* ロゴのクリックできる範囲を拡大 (54pxサイズ)*/
-.headerLogo a {
-    display: inline-block;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-/* ロゴのサイズ (40pxサイズ）*/
-/* .headerLogo img {
-    width: 50px;
-} */
-
-/* ロゴとハンバーガーメニューを横並びにする */
-.container {
-    display: flex; /* flexboxレイアウトを適用したい領域を囲む要素に「display: flex;」と設定すると、この要素が「flexコンテナ」になり */
-    /* 直下の子要素は「flexアイテム」として機能するようになる */
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    width: 100%;
-    height: 50px;
-    max-width: 1080px;
-    margin: 0 auto;
-}
-
-/* チェックボックスを非表示にする */
-.drawerHidden {
-    display: none;
-}
-
-/* ハンバーガーメニューの設置スペース */
-.drawerOpen {
-    display: flex;
-    /* width: 54%; */
-    justify-content: flex-end;
-    align-items: center;
-    position: relative;
-    z-index: 100; /* 重なり順を一番上にする */
-    /* background: burlywood; */
-}
-
-/* ハンバーガーメニューの線のデザイン */
-.drawerOpen span,
-.drawerOpen span:after,
-.drawerOpen span:before {
-    content: "";
-    display: block;
-    height: 2px;
-    width: 20px;
-    border-radius: 3px;
-    background: #fff; /* 箱(線)の色 */
-    transition: 0.5s;
-    position: absolute;
-}
-
-/* 上の線の位置調整 */
-.drawerOpen span:after {
-    /* background: red; */
-    bottom: 8px;
-}
-
-/* 下の線の位置調整 */
-.drawerOpen span:before {
-    /* background: blue; */
-    top: 8px;
-}
-
-/* ハンバーガーメニューがクリックされたら真ん中の線は透明に */
-#drawerInput:checked ~ .drawerOpen span {
-    background-color: rgba(255, 255, 255, 0);
-    transition: 0.1s;
-}
-
-/* ハンバーガーメニューがクリックされたら×印になように上下の線を回転 */
-#drawerInput:checked ~ .drawerOpen span::after {
-    bottom: 0;
-    transform: rotate(45deg);
-}
-
-#drawerInput:checked ~ .drawerOpen span::before {
-    top: 0;
-    transform: rotate(-45deg);
-}
-
-/* ナビゲーションのデザイン*/
-.navContent {
-    list-style: none;
-    display: none;
-    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    margin-top: 54px;
-    padding: 0 0 10px 0;
-    clear: both;
-    z-index: 1000;
-    background: rgba(59, 163, 228, 0.95);
-    text-align: center;
-    padding-top: 20px;
-    transition: opacity 1s ease-in-out;
+    height: 50px;
+    width: 100%;
+    z-index: 100;
+    /* padding: 0 30px; */
 }
 
-/* アイコンがクリックされたらメニューを表示 */
-#drawerInput:checked ~ .navContent {
-    display: block;
-    opacity: 1;
-    transition: 0.5s;
-}
 
-.navList a {
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 2px;
-    font-size: 16px;
-    text-transform: capitalize;
-    display: inline-block;
-}
-
-.navList li {
-    padding: 19px 5px;
-    margin: 0 54px;
-    transition: 0.5s;
-    background-color: #5FBFED;
-
-}
-
-#drawerInput:checked ~ .navList a,
-#drawerInput:checked ~ .navList li {
-    opacity: 1;
-    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.2s;
-}
-
-#drawerInput {
+/* チェックボックスを非表示２ */
+#nav input[type="checkbox"] {
     display: none;
+}
+
+/* ロゴ */
+.memuLeft {
+    float: left;
+    line-height: 60px;
+}
+
+.memuLeft img {
+    vertical-align: middle;
+    margin-left: 10px;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+/* PCメニュー */
+.menu {
+    float: right;
+    margin-right: 10px;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.menuParent {
+    float: left;
+    margin: 0 0 0 10px;
+    line-height: 40px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    white-space: nowrap;
+    background-color: #5FBFED;
+    border-radius: 10px;
+    padding: 10px;
+    height: 56px;
+
+}
+
+/* パソコンでは V を非表示 */
+.menuParent .pd {
+    display: none;
+}
+
+/* PCメニューの最後の項目 */
+.menuParent:last-child {
+    margin-right: 0px;
+}
+
+#menuNavbtn {
+    display: none;
+    cursor: pointer;
+    cursor: hand;
+}
+
+
+
+/* PCメディアクエリ */
+@media screen and (min-width: 1000px) {
+    #nav {
+        height: 144px;
+        padding: 0;
+    }
+
+    .menuParent {
+        width: 110px;
+        text-align: center;
+    }
+
+
+}
+
+
+@media screen and (max-width: 999px) {
+
+    /* スマホの際に V を表示 */
+    .menuParent .pd {
+        display: inline-block;
+        width: 100%;
+        padding: 0 0 0 10px;
+    }
+
+    .menu {
+        display: none;
+        margin: 0;
+    }
+
+    .memuLeft img {
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .menuParent {
+        height: auto;
+        width: 100%;
+        padding: 0px 20px;
+        border-bottom: 1px solid #DDD;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    .menuParent:first-child {
+        border-top: 1px solid #DDD;
+    }
+
+    .menu-parent i {
+        padding: 0px 6px;
+    }
+
+    /* メニューを移動させないため */
+    #menuNavbtn:checked~#nav {
+        position: fixed;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        height: 100%;
+    }
+}
+
+/* ドロップダウンメニュー */
+.menuParent {
+    position: relative;
+}
+
+.menuParent .menuChild {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    margin-left: -40px;
+    width: auto;
+    box-sizing: border-box;
+    padding: 0px 20px;
+    background-color: #90CEEC;
+    /* border: 1px solid #000; */
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* パソコン用 */
+@media screen and (min-width: 1000px) {
+    .menuParent:hover .menuChild {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+/* スマホ用 */
+@media screen and (max-width: 999px) {
+
+    /* ハンバーガーメニューがクリックされた時 */
+    #menuNavbtn:checked~* .menu {
+        display: block;
+        opacity: 1;
+    }
+
+    #menuNavbtn:checked~* .menuParent {
+        max-height: inherit;
+        overflow-y: visible;
+    }
+
+    #menuNavbtn:checked~* .menuChild {
+        max-height: 0;
+        overflow-y: hidden;
+        visibility: hidden;
+    }
+
+    /* 子メニュー */
+    .menuParent .menuChild {
+        border-top: 1px solid #DDD;
+        border-left: 1px solid #FFF;
+        border-right: 1px solid #FFF;
+        border-bottom: 1px solid #FFF;
+        position: relative;
+        padding: 0 20px;
+        opacity: 1;
+        top: 0;
+        margin-left: auto;
+        left: auto;
+        width: auto;
+        border-radius: 0;
+    }
+
+    .menuParent>label:hover {
+        cursor: pointer;
+        cursor: hand;
+    }
+
+    /* 子メニューがクリックされた時 */
+    #nav input[type="checkbox"]:checked~.menuChild {
+        max-height: inherit;
+        overflow-y: visible;
+        visibility: visible;
+    }
+
+    .angletoggle:before {
+        content: "\f107";
+    }
+
+    #nav input[type="checkbox"]:checked~* .angletoggle:before {
+        content: "\f106";
+    }
+}
+
+/* 子メニュー */
+.menuChild li {
+    font-size: 14px;
+    border-bottom: 1px solid #DDD;
+}
+
+/* 余分な最後の線を消去 */
+.menuChild li:last-child {
+    border: none;
+}
+
+.menuChild li i {
+    margin-right: 3px;
+}
+
+/* ハンバーガー */
+#nav #navBtn {
+    display: none;
+}
+
+@media screen and (max-width: 999px) {
+    #nav #navBtn {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    #navBtn span {
+        display: block;
+        width: 40px;
+        height: 40px;
+        /* background-color: #333; */
+    }
+
+    #navBtn span span {
+        display: block;
+        overflow: hidden;
+        width: 1px;
+        height: 1px;
+    }
+
+    #navBtn span span::before,
+    #navBtn span span::after,
+    #navBtn span::after {
+        position: absolute;
+        left: 10px;
+        content: "";
+        width: 20px;
+        height: 3px;
+        background-color: #FFF;
+    }
+
+    /* 上の棒 */
+    #navBtn span span::before {
+        top: 10px;
+    }
+
+    #menuNavbtn:checked~#nav label#navBtn span span::before {
+        top: 19px;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+    }
+
+    /* 下の棒 */
+    #navBtn span::after {
+        bottom: 10px;
+    }
+
+    #menuNavbtn:checked~#nav label#navBtn>span::after {
+        bottom: 18px;
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+    }
+
+    /* 中の棒 */
+    #navBtn span span::after {
+        top: 18px;
+    }
+
+    #menuNavbtn:checked~#nav label#navBtn span span::after {
+        display: none;
+    }
 }
 
 
 /* フォントサイズ */
-h2{
+h2 {
     font-size: 2.2rem;
     font-weight: 800;
     text-align: center;
@@ -227,15 +398,15 @@ h2{
     margin-bottom: 40px;
 }
 
-h3{
+h3 {
     font-size: 1.8rem;
 }
 
-h4{
-    font-size:1.7rem;
+h4 {
+    font-size: 1.7rem;
 }
 
-p{
+p {
     font-size: 1.6rem;
 }
 
@@ -247,10 +418,12 @@ p{
     padding: 0;
     font-size: .9em;
 }
+
 .breadCrumb-001 li {
     display: flex;
     align-items: center;
 }
+
 .breadCrumb-001 li:not(:last-child)::after {
     display: inline-block;
     transform: rotate(45deg);
@@ -261,6 +434,7 @@ p{
     border-right: 1px solid #8B8B8B;
     content: '';
 }
+
 .breadCCrumb-001 a {
     color: #8B8B8B;
     text-decoration: none;
@@ -272,15 +446,15 @@ p{
     height: 3.25rem;
     /* margin-right:15px;
     margin-bottom:15px; */
-    /* border-radius:50%;
+/* border-radius:50%;
     position: fixed;
     bottom: 0;
     right: 40px;
     background-color: #BAB624;
     }  */
 
-    /* 上に戻るボタンの矢印 */
-    /* 長方形 */
+/* 上に戻るボタンの矢印 */
+/* 長方形 */
 /* .arrow_up {
 	font-size: 30px;
 	position: relative;
@@ -302,19 +476,19 @@ p{
 } */
 
 /* トップへ戻る */
-#pageTop{
-    border-radius:50%;
+#pageTop {
+    border-radius: 50%;
     width: 5rem;
     /* width: 100px; */
     height: 5rem;
     position: fixed;
     right: 20px;
-    bottom:100px;
+    bottom: 100px;
     background: #EAB624;
     /* opacity: 0.8; */
 }
 
-#pageTop a{
+#pageTop a {
     position: relative;
     display: block;
     width: 7rem;
@@ -322,7 +496,7 @@ p{
     text-decoration: none;
 }
 
-#pageTop a::before{
+#pageTop a::before {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     content: '\f102';
@@ -340,13 +514,13 @@ p{
     transform: translateX(-50%);
 }
 
-#pageTop a::after{
+#pageTop a::after {
     content: 'TOP';
     font-size: 13px;
     color: #fff;
     position: absolute;
     top: 42px;
-    bottom:0;
+    bottom: 0;
     right: 18px;
     left: 0;
     margin: auto;
@@ -371,6 +545,7 @@ p{
     text-align: center;
     line-height: 2.5rem;
 }
+
 .listBtn:hover {
     color: #fff;
     background: #78cff7;
@@ -388,6 +563,7 @@ p{
     display: inline-block;
     /* margin-bottom: 20px; */
 }
+
 .selectWrap select {
     width: 100%;
     border: none;
@@ -397,9 +573,11 @@ p{
     appearance: none;
     padding: 10px;
 }
+
 .selectWrap select::-ms-expand {
     display: none;
 }
+
 .selectWrap {
     position: relative;
     border-radius: 10px;
@@ -407,6 +585,7 @@ p{
     border: 0.5px solid #625858;
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5), inset 0px -3px 6px -2px rgba(0, 0, 0, 0.3);
 }
+
 .selectWrap:before {
     position: absolute;
     top: 13px;
@@ -420,10 +599,12 @@ p{
     border-top: 10px solid #625858;
     pointer-events: none;
 }
+
 .selectWrap select {
     color: #625858;
     font-size: 1.6rem;
 }
+
 /* .word div{
     background-color: #B6F2FF;
     border-radius: 13px;
@@ -517,192 +698,189 @@ padding: 15px;
 
 
 /* w230そのいち てかりあり*/
-#gameBody{
+#gameBody {
     text-align: center;
 }
 
 .box {
-    margin       : auto;
-    width        : 230px;
-    height       : 75px;
+    margin: auto;
+    width: 230px;
+    height: 75px;
     border-radius: 15px;
-    background   :
-    linear-gradient(to bottom, #EAC851 0%,#E4BB29 70%, #FDE285 90%,#fff 100%);
-    box-shadow:0 3px 3px #fff;
-    position:relative;
+    background:
+        linear-gradient(to bottom, #EAC851 0%, #E4BB29 70%, #FDE285 90%, #fff 100%);
+    box-shadow: 0 3px 3px #fff;
+    position: relative;
 }
 
 #startBtn {
-    margin:5px auto;
+    margin: 5px auto;
     width: 216px;
     height: 63px;
 
     font-weight: bold;
-    background: linear-gradient(
-        to bottom,
-        #FFDA56 0%, #DDA107 75%, #EC905C 100%);
+    background: linear-gradient(to bottom,
+            #FFDA56 0%, #DDA107 75%, #EC905C 100%);
     box-shadow: 0 1px 0 #A53C01;
     border-radius: 15px;
     color: #fff;
     cursor: pointer;
     text-decoration: none;
-    transition-duration:0.5s;
+    transition-duration: 0.5s;
 }
 
-#startBtn p{
-    font-size:2.4rem;
+#startBtn p {
+    font-size: 2.4rem;
     text-align: center;
     text-shadow: 0px 3px 0.5px gray;
 }
 
-.circle{
+.circle {
     position: absolute;
-    top:5px;
-    left:8.5px;
+    top: 5px;
+    left: 8.5px;
     width: 15px;
     height: 15px;
-    border-radius:75% 25% 91% 9% / 74% 20% 80% 26%;
-    background-color:#fff;
-    opacity:75%;
-    z-index:99;
+    border-radius: 75% 25% 91% 9% / 74% 20% 80% 26%;
+    background-color: #fff;
+    opacity: 75%;
+    z-index: 99;
 }
 
-.circleBottom{
+.circleBottom {
     position: absolute;
-    bottom:7px;
-    right:12px;
+    bottom: 7px;
+    right: 12px;
     width: 14px;
     height: 8px;
-    border-radius:70% 30% 66% 34% / 92% 23% 77% 8% ;
-    background-color:#fff;
-    opacity:50%;
+    border-radius: 70% 30% 66% 34% / 92% 23% 77% 8%;
+    background-color: #fff;
+    opacity: 50%;
 }
 
-#startBtn:hover{
+#startBtn:hover {
     background: #eac851;
     box-shadow: none;
-    z-index:999;
+    z-index: 999;
 }
 
 
 /* w230 そのに てかりなし*/
-#gameBody2{
+#gameBody2 {
     text-align: center;
 }
 
 .box2 {
-    margin       : auto;
-    width        : 230px;
-    height       : 75px;
+    margin: auto;
+    width: 230px;
+    height: 75px;
     border-radius: 15px;
-    background   :
-    linear-gradient(to bottom, #EAC851 0%,#E4BB29 70%, #FDE285 90%,#fff 100%);
-    box-shadow:0 3px 3px #fff;
-    position:relative;
+    background:
+        linear-gradient(to bottom, #EAC851 0%, #E4BB29 70%, #FDE285 90%, #fff 100%);
+    box-shadow: 0 3px 3px #fff;
+    position: relative;
 }
 
 #startBtn2 {
-    margin:5px auto;
+    margin: 5px auto;
     width: 216px;
     height: 63px;
 
     font-weight: bold;
-    background: linear-gradient(
-        to bottom,
-        #FFDA56 0%, #DDA107 75%, #EC905C 100%);
+    background: linear-gradient(to bottom,
+            #FFDA56 0%, #DDA107 75%, #EC905C 100%);
     box-shadow: 0 1px 0 #A53C01;
     border-radius: 15px;
     color: #fff;
     cursor: pointer;
     text-decoration: none;
-    transition-duration:0.5s;
+    transition-duration: 0.5s;
 }
 
-#startBtn2 p{
-    font-size:2.4rem;
+#startBtn2 p {
+    font-size: 2.4rem;
     text-align: center;
     text-shadow: 0px 3px 0.5px gray;
 }
 
-#startBtn2:hover{
+#startBtn2:hover {
     background: #eac851;
     box-shadow: none;
-    z-index:999;
+    z-index: 999;
 }
 
 /* w190 てかりあり*/
-#gameBody3{
+#gameBody3 {
     text-align: center;
 }
 
 .box3 {
-    margin       : auto;
-    width        : 190px;
-    height       : 55px;
+    margin: auto;
+    width: 190px;
+    height: 55px;
     border-radius: 15px;
-    background   :
-    linear-gradient(to bottom, #EAC851 0%,#E4BB29 70%, #FDE285 90%,#fff 100%);
-    box-shadow:0 3px 3px #fff;
-    position:relative;
+    background:
+        linear-gradient(to bottom, #EAC851 0%, #E4BB29 70%, #FDE285 90%, #fff 100%);
+    box-shadow: 0 3px 3px #fff;
+    position: relative;
 }
 
 #startBtn3 {
-    margin:5px auto;
+    margin: 5px auto;
     width: 176px;
     height: 43px;
 
     font-weight: bold;
-    background: linear-gradient(
-        to bottom,
-        #FFDA56 0%, #DDA107 75%, #EC905C 100%);
+    background: linear-gradient(to bottom,
+            #FFDA56 0%, #DDA107 75%, #EC905C 100%);
     box-shadow: 0 1px 0 #A53C01;
     border-radius: 15px;
     color: #fff;
     cursor: pointer;
     text-decoration: none;
-    transition-duration:0.5s;
+    transition-duration: 0.5s;
 }
 
-#startBtn3 p{
-    font-size:2.4rem;
+#startBtn3 p {
+    font-size: 2.4rem;
     text-align: center;
     text-shadow: 0px 3px 0.5px gray;
 }
 
-.circle3{
+.circle3 {
     position: absolute;
-    top:5px;
-    left:8.5px;
+    top: 5px;
+    left: 8.5px;
     width: 15px;
     height: 15px;
-    border-radius:75% 25% 91% 9% / 74% 20% 80% 26%;
-    background-color:#fff;
-    opacity:75%;
-    z-index:99;
+    border-radius: 75% 25% 91% 9% / 74% 20% 80% 26%;
+    background-color: #fff;
+    opacity: 75%;
+    z-index: 99;
 }
 
-.circleBottom3{
+.circleBottom3 {
     position: absolute;
-    bottom:7px;
-    right:12px;
+    bottom: 7px;
+    right: 12px;
     width: 14px;
     height: 8px;
-    border-radius:70% 30% 66% 34% / 92% 23% 77% 8% ;
-    background-color:#fff;
-    opacity:50%;
+    border-radius: 70% 30% 66% 34% / 92% 23% 77% 8%;
+    background-color: #fff;
+    opacity: 50%;
 }
 
-#startBtn3:hover{
+#startBtn3:hover {
     background: #eac851;
     box-shadow: none;
-    z-index:999;
+    z-index: 999;
 }
 
 /* w190 てかりなし*/
 
 /* メディアクエリ */
 @media screen and (min-width: 999px) {
-    .header{
+    .header {
         border-top: 5px solid#D6A923;
     }
 
@@ -721,6 +899,7 @@ padding: 15px;
     .headerLogo a {
         width: 130%;
     }
+
     .drawerOpen span,
     .drawerOpen span:after,
     .drawerOpen span:before {
@@ -735,6 +914,7 @@ padding: 15px;
         padding: 0;
         background-color: #26567C;
     }
+
     .navList {
         display: flex;
     }
@@ -754,23 +934,23 @@ padding: 15px;
 /* フッター */
 
 
-.footer{
-margin: 10px 0 0 0;
+.footer {
+    margin: 10px 0 0 0;
     background-color: #5FBFED;
     height: 141px;
 }
 
-.footerWrap{
+.footerWrap {
     padding: 27px;
 }
 
 .footerLogo {
-width: 200px;
-height: 49px;
-background-color: #fff;
+    width: 200px;
+    height: 49px;
+    background-color: #fff;
 }
 
-.copyright{
+.copyright {
     text-align: center;
 }
 
@@ -780,5 +960,5 @@ background-color: #fff;
 }
 
 .footerLogo {
-margin: 0 auto;
+    margin: 0 auto;
 }
