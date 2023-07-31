@@ -45,7 +45,7 @@
 
             <!-- ゲーム画面１ -->
             <div id="game-view1">
-                <div id="game-title">ボカロ曲名</div>
+                <div id="game-title">GAME</div>
 
                 {{-- 言語とレベルを選択してゲームスタート --}}
                 <form action="{{ route('game') }}" method="get">
@@ -104,6 +104,7 @@
             <!-- ゲーム画面２ -->
             <div id="game-view2">
                 <div id="text-container">
+                    <div id="timer">00:00:00</div>
                     <div id="miss-type-screen"></div>
                     <div id="start-msg">
                         <p>日本語入力モードをオフにしてください</p>
@@ -236,6 +237,7 @@
             const progress = document.getElementById('progress-bar');
             const keyboard = document.getElementById('virtual-keyboard');
             const space = keyboard.querySelector('.key_space');
+            const countdownTime = 180; //ゲーム用タイマー 180秒固定
 
             // 遊ぶ文字列をデータベースから取得
             let wordJPArray = {!! $json_array !!};
@@ -263,7 +265,7 @@
             let missFlag = false;
             let isStopped = false;
             let moPlay = false;
-            let maxNum = 10; // 出題数の上限
+            let maxNum = 1000; // 出題数の上限
             let random = true; // ランダム出題
             let resCmt = true; // 結果画面のコメント
             let flagR = true; // ローマ字表示
@@ -277,8 +279,8 @@
 
             // スタート処理
             function start() {
-                view1.style.display = 'none';
-                view2.style.display = 'block';
+                view1.style.display = 'none'; //画面１をオフ
+                view2.style.display = 'block'; //画面２をオン
                 startMsg.style.display = 'block';
 
                 startFlag = true;
@@ -313,6 +315,38 @@
                 }, 1000);
             }
 
+            // タイマー
+            function startTimer() {
+                let timeLeft = countdownTime;
+
+                const timerDisplay = document.getElementById('timer');
+
+                const timerInterval = setInterval(updateTimer, 1000);
+
+                function updateTimer() {
+                    const hours = Math.floor(timeLeft / 3600);
+                    const minutes = Math.floor((timeLeft % 3600) / 60);
+                    const seconds = timeLeft % 60;
+
+                    const formattedTime = `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)}`;
+                    timerDisplay.textContent = formattedTime;
+
+                    timeLeft--;
+
+                    if (timeLeft < 0) {
+                    clearInterval(timerInterval);
+                    finish();
+                    setscore();
+                    timerDisplay.textContent = "タイムアップ!";
+                    // タイマー終了後の処理をここに記述する（例：アラートを表示する、他の処理を実行する等）
+                    }
+                }
+
+                function padZero(value) {
+                    return value.toString().padStart(2, '0');
+                }
+            }
+
             // ゲーム開始処理
             function gameInit() {
                 count = 0;
@@ -327,6 +361,8 @@
                 weakKeys = [];
                 nFlag = false;
                 missFlag = false;
+
+                startTimer(); //タイマースタート
 
                 // 『ミスだけ』を選択した場合
                 if (moPlay) {
@@ -1047,7 +1083,9 @@
                             isStopped = true;
                             finish();
                             setscore();
-                        } else {
+                        }else if(key == 'Shift'){
+                            //Shiftは何もしない
+                        }else {
                             temp += key;
                             if (key == wordR[idx1][pattern[idx1]][idx2]) {
                                 sentence.innerHTML = colorTyped();
