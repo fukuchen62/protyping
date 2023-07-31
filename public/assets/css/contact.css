@@ -4,6 +4,10 @@ main{
 padding:15px;
 }
 
+.breadCrumb-001 a{
+    font-size: 1rem;
+}
+
 h2{
     font-size: 1.8rem;
     font-weight: 800;

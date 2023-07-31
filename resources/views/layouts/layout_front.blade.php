@@ -25,12 +25,12 @@
     <!-- 共通CSS -->
     <!-- reset.cssファイルを読み込む -->
     <link rel=" stylesheet" href="{{ asset('assets/css/reset.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/common.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/typingstyle.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/index.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/common.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('assets/css/typingstyle.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/index.css')}}"> --}}
 
     {{-- バックエンドテスト用CSS --}}
-    <link rel="stylesheet" href="{{ asset('assets/css/test.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('assets/css/test.css') }}"> --}}
 
     {{-- 独自のCSSファイルを読み込む --}}
     @yield('pageCss')
