@@ -165,7 +165,7 @@ th{
 
 
 
-    
+
 }
 
 /* 検索フォーム */
@@ -380,58 +380,60 @@ padding: 15px;
 
 /* 詳細ボタンホバーした時 */
 img:hover{
-    opacity: 0.75; 
-} 
+    opacity: 0.75;
+}
 
 /* トップへ戻る */
-#page_top{
+#pageTop{
     border-radius:50%;
-    width: 70px;
+    width: 5rem;
     /* width: 100px; */
-    height: 70px;
+    height: 5rem;
     position: fixed;
-    right: 10px;
-    bottom:50px;
+    right: 20px;
+    bottom:100px;
     background: #EAB624;
     /* opacity: 0.8; */
 }
 
-#page_top a{
+#pageTop a{
     position: relative;
     display: block;
-    width: 70px;
-    height: 70px;
+    width: 7rem;
+    height: 7rem;
     text-decoration: none;
 }
 
-#page_top a::before{
+#pageTop a::before{
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     content: '\f102';
-    font-size: 25px;
+    font-size: 17px;
     color: #fff;
     position: absolute;
-    width: 25px;
-    height: 25px;
-    top: -25px;
-    bottom: 0;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    bottom: 40px;
     right: 0;
     left: 0;
     margin: auto;
     text-align: center;
+    transform: translateX(-50%);
 }
 
-#page_top a::after{
+#pageTop a::after{
     content: 'TOP';
     font-size: 13px;
     color: #fff;
     position: absolute;
-    top: 40px;
-    bottom: 0;
-    right: 0;
+    top: 42px;
+    bottom:0;
+    right: 18px;
     left: 0;
     margin: auto;
     text-align: center;
+    transform: translateY(-50%);
 }
 
 .sidebar ul a {
@@ -503,7 +505,7 @@ ul .subMenu1 a{
 .sidebar ul li.active{
     background-color: rgba(59, 163, 228, 0.7);
 }
-    
+
 
 
     }
