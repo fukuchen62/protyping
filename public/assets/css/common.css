@@ -109,29 +109,30 @@ header {
 }
 
 /* ロゴ */
-.memuLeft {
+.menuLeft {
     float: left;
     line-height: 60px;
 }
 
-.memuLeft img {
+.menuLeft img {
     vertical-align: middle;
     margin-left: 10px;
     margin-top: 30px;
-    padding: 10px;
+    /* padding: 10px; */
+    width: 270px;
 }
 
 /* PCメニュー */
 .menu {
     float: right;
     margin-right: 10px;
-    padding: 10px;
+    /* padding: 10px; */
     margin-top: 30px;
 }
 
 .menuParent {
     float: left;
-    margin: 0 0 0 10px;
+    margin: 0 0 0 5px;
     line-height: 40px;
     font-size: 1.6rem;
     font-weight: bold;
@@ -174,11 +175,25 @@ header {
         text-align: center;
     }
 
+    .headerAbout {
+        display: none;
+    }
 
+    .headerUpdate {
+        display: none;
+    }
+
+    .headerTerms {
+        display: none;
+    }
+
+    .headerPrivacy {
+        display: none;
+    }
 }
 
-
-@media screen and (max-width: 999px) {
+/* スマホ */
+@media screen and (max-width: 1000px) {
 
     /* スマホの際に V を表示 */
     .menuParent .pd {
@@ -192,9 +207,12 @@ header {
         margin: 0;
     }
 
-    .memuLeft img {
+    .menuLeft img {
         margin-top: 0;
         padding: 0;
+        width: 174px;
+        margin-bottom: 10px;
+        padding-left: 10px;
     }
 
     .menuParent {
@@ -243,7 +261,7 @@ header {
 }
 
 /* パソコン用 */
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 999px) {
     .menuParent:hover .menuChild {
         visibility: visible;
         opacity: 1;
@@ -884,7 +902,7 @@ padding: 15px;
 /* w190 てかりなし*/
 
 /* メディアクエリ */
-@media screen and (min-width: 999px) {
+@media screen and (min-width: 1000px) {
     .header {
         border-top: 5px solid#D6A923;
     }
@@ -943,10 +961,12 @@ padding: 15px;
     margin: 10px 0 0 0;
     background-color: #5FBFED;
     height: 141px;
+    padding-top: 40px;
 }
 
 .footerWrap {
-    padding: 27px;
+    max-width: 1080px;
+    margin-inline: auto;
 }
 
 .footerLogo {
@@ -955,7 +975,12 @@ padding: 15px;
     background-color: #fff;
 }
 
+.footerLogo img {
+    width: 200px;
+}
+
 .copyright {
+    margin-block-start: 30px;
     text-align: center;
 }
 
@@ -966,4 +991,118 @@ padding: 15px;
 
 .footerLogo {
     margin: 0 auto;
+}
+
+#footer .innerBlock {
+    display: none;
+}
+
+
+/* フッターメディアクエリ */
+@media screen and (min-width: 1000px) {
+
+    .footer {
+        padding-top: 50px;
+        height: 817px;
+
+    }
+
+    #footer .innerBlock {
+        display: block;
+        margin: 40px 0 0 0;
+        line-height: 5;
+    }
+
+
+    #footer .footerContent {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 30px 60px;
+        margin: 0 auto;
+    }
+
+    #footer .contentItem {
+        display: block;
+        width: calc(100% / 4);
+        margin: 0 0 0 40px;
+    }
+
+    .footerLogo img {
+        margin: 0 auto;
+        width: 200px;
+    }
+
+
+    .footerTitle {
+        display: block;
+        /* margin: 30px 0 6px; */
+        font-size: 1.6rem;
+        color: #fff;
+        font-weight: 500;
+    }
+
+
+
+    #footer .footerNav .footerTitle:first-child {
+        margin-top: 0;
+    }
+
+    #footer .footerNav .footerTitle+.footerTitle {
+        margin-top: 10px;
+    }
+
+    #footer .footerNav ul {
+        display: block;
+        font-size: 1.6rem;
+
+    }
+
+    #footer .footerNav li {
+        display: block;
+        line-height: 3;
+    }
+
+    #footer .footerNav .engWord {
+        line-height: 1;
+    }
+
+
+    #footer .footerNav li:first-child {
+        margin-top: 0;
+    }
+
+    #footer .footerNav li ul {
+        margin: 0 0 0 2em;
+    }
+
+    #footer .footerNav li li {
+        position: relative;
+    }
+
+    #footer .footerNav li li:before {
+        position: absolute;
+        top: 50%;
+        left: -10px;
+        content: "";
+        display: block;
+        width: 4px;
+        height: 1px;
+        background-color: #fff;
+    }
+
+    #footer .company {
+        display: block;
+        margin-top: 62px;
+    }
+
+    .copyright {
+        margin-block-start: 70px;
+    }
+
+    .footerTitle .engWord {
+        line-height: 0;
+        padding: 10px;
+    }
 }
