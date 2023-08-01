@@ -45,10 +45,10 @@
 
             <!-- ゲーム画面１ -->
             <div id="game-view1">
-                <div id="game-title">GAME</div>
+                <div id="game-title" class="game-position1">GAME</div>
 
                 {{-- 言語とレベルを選択してゲームスタート --}}
-                <form action="{{ route('game') }}" method="get">
+                <form action="{{ route('game') }}" method="get" class="game-position2">
                     {{-- 言語の選択 --}}
                     <select id="language-select" name="language">
                         <option value="1"selected>HTML</option>
@@ -70,13 +70,16 @@
                 </form>
                 {{-- スタートボタン --}}
                 <div id="game-explain"></div>
-                <button id="start-button" type="button">スタート</button>
+                <button id="start-button" type="button" class="game-position3">スタート</button>
 
                 {{-- 遊び方 --}}
-                <p><button id="howto-playing" type="button">遊び方</button></p>
+                <button id="howto-playing" type="button" class="game-position4">遊び方</button>
+
+                {{-- 設定 --}}
+                <button id="howto-setting" type="button" class="game-position5">設定</button>
 
                 <div id="game-func">
-                    <span>ローマ字表示(R)</span>
+                    {{-- <span>ローマ字表示(R)</span>
                     <div class="switch-btn">
                         <button class="on-btn btn show" type="button">ON</button>
                         <button class="off-btn btn" type="button">OFF</button>
@@ -100,14 +103,32 @@
                     <div class="switch-btn">
                         <button class="on-btn btn show" type="button">ON</button>
                         <button class="off-btn btn" type="button">OFF</button>
-                    </div>
+                    </div> --}}
                 </div>
+            </div>
+
+            {{-- モードとコース選択画面 --}}
+            <div id="game-view5" style="display: none;">
+                <p>選択中の言語</p>
+                <p>モードとコースを選んでください</p>
+                <p>練習モード</p>
+                <button id="open-practise1" type="button" class="game-position6">初級コース プレイ時間3分 1単語:7文字以下</button><br>
+                <button id="open-practise2" type="button" class="game-position7">中級コース プレイ時間3分 1単語:8文字以下</button><br>
+                <p>ランキングモード</p>
+                <button id="open-ranking1" type="button" class="game-position9">初級コース プレイ時間2分 1単語:7文字以下</button><br>
+                <button id="open-ranking2" type="button" class="game-position10">中級コース プレイ時間1分 1単語:8文字以下</button><br>
+                <button id="close-selectmode" type="button" class="game-position8">言語を選び直す ▶トップへ戻る</button>
             </div>
 
             <!-- ゲーム画面２ -->
             <div id="game-view2">
+                <div>
+                    <p>選択中の言語　▶　プログラン民具でよく使う英単語</p>
+                    <p>モード・コース　▶　練習モード/初級</p>
+                </div>
                 <div id="text-container">
                     <div id="timer">00:00:00</div>
+                    <div>スコア</div>
                     <div id="miss-type-screen"></div>
                     <div id="start-msg">
                         <p>日本語入力モードをオフにしてください</p>
@@ -203,17 +224,19 @@
                     <div class="result-title">前回の結果</div>
                     <div class="result-data"></div>
                 </div>
-                <div id="result-comment">
+                {{-- <div id="result-comment">
                     <div class="container">---</div>
-                </div>
+                </div> --}}
                 <div id="btn-area">
-                    <button id="replay-button" class="btn" type="button">もう1回</button>
-                    <!-- <button id="close-button2" class="btn" type="button">閉じる</button> -->
+                    <button id="set-ranking" class="btn" type="button">ランキングに登録する</button>
+                    <button id="game-finish" class="btn" type="button">登録せずにゲームを終了する</button>
+                    <button id="replay-button" class="btn" type="button">もう一度プレイする</button>
+                    <button id="close-button2" class="btn" type="button">プレイした単語を見る</button>
                 </div>
             </div>
 
             {{-- 遊び方説明画面 --}}
-            <div id="game-view3"style="display: none;">
+            <div id="game-view3" style="display: none;">
                 <div>
                     <p>遊び方</p>
                     <p>タイプコードはプログラミングを学習している人のための練習ゲームです。</p>
@@ -230,6 +253,25 @@
                     </div>
                 </div>
             </div>
+
+            {{-- 設定画面 --}}
+            <div id="game-view4" style="display: none;">
+                <div>
+                    <p>設定</p>
+                    <p>ゲーム中の音楽や背景映像などの設定ができます。</p>
+                    <p>BGM</p>
+                    <p>タイプ音</p>
+                    <p>ミス音</p>
+                    <p>ゲーム画面の背景</p>
+                    <div>
+                        <button id="close-setting" type="button">閉じる</button>
+                    </div>
+                </div>
+            </div>
+
+            {{-- ランキング登録画面 --}}
+
+            {{-- ランキング登録完了画面 --}}
         </div>
     </div>
 
@@ -246,9 +288,9 @@
             const button3 = document.getElementById('start-button'); // 『スタート』ボタンクリック時
             const button4 = document.getElementById('replay-button'); // 『もう１回』ボタンクリック時
             const view1 = document.getElementById('game-view1');
-            const gameFunc = document.getElementById('game-func');
-            const onBtns = gameFunc.querySelectorAll('.on-btn');
-            const offBtns = gameFunc.querySelectorAll('.off-btn');
+            //const gameFunc = document.getElementById('game-func');
+            //const onBtns = gameFunc.querySelectorAll('.on-btn');
+            //const offBtns = gameFunc.querySelectorAll('.off-btn');
             const view2 = document.getElementById('game-view2');
             const result = document.getElementById('game-result');
             const mScreen = document.getElementById('miss-type-screen');
@@ -260,10 +302,18 @@
             const keyboard = document.getElementById('virtual-keyboard');
             const space = keyboard.querySelector('.key_space');
             const countdownTime = 180; //ゲーム用タイマー 180秒固定
-            const button5 = document.getElementById('howto-playing'); //『遊び方』ボタンクリック時
+            const button5 = document.getElementById('howto-playing'); //スタート画面の『遊び方』ボタンクリック時
             const view3 = document.getElementById('game-view3'); //遊び方画面表示
-            const button7 = document.getElementById('close-howto'); //『遊び方』ボタンクリ
-
+            const button7 = document.getElementById('close-howto'); //遊び方画面の『戻る』ボタンクリック時
+            const button8 = document.getElementById('howto-setting'); //スタート画面の『設定』ボタンクリック時
+            const view4 = document.getElementById('game-view4'); //設定画面表示
+            const button9 = document.getElementById('close-setting'); //遊び方画面の『戻る』ボタンクリック時
+            const view5 = document.getElementById('game-view5'); //コース・モード設定画面表示
+            const button10 = document.getElementById('close-selectmode'); //遊び方画面の『戻る』ボタンクリック時
+            const button11 = document.getElementById('open-practise1'); //遊び方画面の『戻る』ボタンクリック時
+            const button12 = document.getElementById('open-practise2'); //遊び方画面の『戻る』ボタンクリック時
+            const button13 = document.getElementById('open-ranking1'); //遊び方画面の『戻る』ボタンクリック時
+            const button14 = document.getElementById('open-ranking2'); //遊び方画面の『戻る』ボタンクリック時
             // 遊ぶ文字列をデータベースから取得
             let wordJPArray = {!! $json_array !!};
             // console.log(wordJPArray); // 配列の中身を確認（デバッグ用）
@@ -292,7 +342,7 @@
             let moPlay = false;
             let maxNum = 1000; // 出題数の上限
             let random = true; // ランダム出題
-            let resCmt = true; // 結果画面のコメント
+            //let resCmt = true; // 結果画面のコメント
             let flagR = true; // ローマ字表示
             let flagK = true; // かな表示
             let flagG = true; // キーガイド
@@ -304,7 +354,7 @@
 
             // スタート処理
             function start() {
-                view1.style.display = 'none'; //画面１をオフ
+                view5.style.display = 'none'; //コースモード選択画面をオフ
                 view2.style.display = 'block'; //画面２をオン
                 startMsg.style.display = 'block';
 
@@ -619,47 +669,47 @@
                 resData[0].innerHTML = html;
                 gameData = [score, getLevel(score), convTime(time), correct, miss, convStr(speed.toFixed(2)), convStr((accuracy * 100).toFixed(2)) + '%', getWeaks(weakKeys)];
 
-                if (resCmt) {
-                    const resComment = document.getElementById('result-comment');
-                    const container = resComment.querySelector('.container');
-                    const comment1 = 'ノーミス達成！おめでとうございます。';
-                    const comment2 = '惜しい！あと1文字。次はミス0を狙いましょう。';
-                    const comments = ['日々の練習が結果に繋がります。', '速さよりも正確性のほうがスコアに響きます。'];
-                    if (!isStopped) {
-                        if (miss == 0) {
-                            container.innerHTML = comment1;
-                        } else if (miss == 1) {
-                            container.innerHTML = comment2;
-                        } else {
-                            let idx = Math.floor(Math.random() * comments.length);
-                            container.innerHTML = comments[idx];
-                        }
-                    } else {
-                        container.innerHTML = '---';
-                    }
-                }
+                // if (resCmt) {
+                //     const resComment = document.getElementById('result-comment');
+                //     const container = resComment.querySelector('.container');
+                //     const comment1 = 'ノーミス達成！おめでとうございます。';
+                //     const comment2 = '惜しい！あと1文字。次はミス0を狙いましょう。';
+                //     const comments = ['日々の練習が結果に繋がります。', '速さよりも正確性のほうがスコアに響きます。'];
+                //     if (!isStopped) {
+                //         if (miss == 0) {
+                //             container.innerHTML = comment1;
+                //         } else if (miss == 1) {
+                //             container.innerHTML = comment2;
+                //         } else {
+                //             let idx = Math.floor(Math.random() * comments.length);
+                //             container.innerHTML = comments[idx];
+                //         }
+                //     } else {
+                //         container.innerHTML = '---';
+                //     }
+                // }
 
                 isStopped = false;
 
                 const moBtn = document.getElementById('miss-only-button');
                 if (recordM.length > 0) {
-                    if (!moBtn) {
-                        const button6 = document.createElement('button');
-                        button6.type = 'button';
-                        button6.id = 'miss-only-button';
-                        button6.classList.add('btn');
-                        button6.innerHTML = 'ミスだけ';
-                        button6.addEventListener('click', () => {
-                            moPlay = true;
-                            sWait = true;
-                            result.style.display = 'none';
-                            view2.style.display = 'block';
-                            startMsg.style.display = 'block';
-                            space.classList.add('active');
-                        });
-                        const btnArea = document.getElementById('btn-area');
-                        btnArea.appendChild(button6);
-                    }
+                    // if (!moBtn) {
+                    //     const button6 = document.createElement('button');
+                    //     button6.type = 'button';
+                    //     button6.id = 'miss-only-button';
+                    //     button6.classList.add('btn');
+                    //     button6.innerHTML = 'ミスだけ';
+                    //     button6.addEventListener('click', () => {
+                    //         moPlay = true;
+                    //         sWait = true;
+                    //         result.style.display = 'none';
+                    //         view2.style.display = 'block';
+                    //         startMsg.style.display = 'block';
+                    //         space.classList.add('active');
+                    //     });
+                    //     const btnArea = document.getElementById('btn-area');
+                    //     btnArea.appendChild(button6);
+                    // }
                 } else {
                     if (moBtn) {
                         moPlay = false;
@@ -1046,13 +1096,13 @@
             }
 
             // スイッチ処理
-            function toggle(idx, flag) {
-                if (flag) {
-                    onBtns[idx].click();
-                } else {
-                    offBtns[idx].click();
-                }
-            }
+            // function toggle(idx, flag) {
+            //     if (flag) {
+            //         onBtns[idx].click();
+            //     } else {
+            //         offBtns[idx].click();
+            //     }
+            // }
 
             // リプレイ処理
             function replay() {
@@ -1073,41 +1123,73 @@
 
             //遊び方からスタート画面に戻る
             function backstart(){
-                view1.style.display = 'block'; //スタート画面１をオン
                 view3.style.display = 'none'; //遊び方画面３をオフ
+                view1.style.display = 'block'; //スタート画面１をオン
+            }
+
+            // 設定画面表示
+            function gamesetting(){
+                view1.style.display = 'none'; //スタート画面１をオフ
+                view4.style.display = 'block'; //設定画面４をオン
+            }
+
+            //遊び方からスタート画面に戻る
+            function backstart2(){
+                view4.style.display = 'none'; //設定画面４をオフ
+                view1.style.display = 'block'; //スタート画面１をオン
+            }
+
+            //遊び方からコース・モード選択画面に戻る
+            function selectmode(){
+                view1.style.display = 'none'; //スタート画面１をオフ
+                view5.style.display = 'block'; //スタート画面１をオン
+            }
+
+            //コース・モードからスタート画面に戻る
+            function backstart3(){
+                view5.style.display = 'none'; //コース・モード選択画面４をオフ
+                view1.style.display = 'block'; //スタート画面１をオン
             }
 
             window.addEventListener('DOMContentLoaded', open);//最初からゲーム画面を開きっぱなしにしておく
-            button3.addEventListener('click', start);
+            button3.addEventListener('click', selectmode);
             button4.addEventListener('click', replay);
             button5.addEventListener('click', howtoplaying);//遊び方画面
             button7.addEventListener('click', backstart);//遊び方からスタート画面に戻る
+            button8.addEventListener('click', gamesetting);//設定画面
+            button9.addEventListener('click', backstart2);//設定からスタート画面に戻る
+            button10.addEventListener('click', backstart3);//設定からスタート画面に戻る
+            button11.addEventListener('click', start);//モード・コース選択画面からゲーム開始前画面に遷移
+            button12.addEventListener('click', start);//モード・コース選択画面からゲーム開始前画面に遷移
+            button13.addEventListener('click', start);//モード・コース選択画面からゲーム開始前画面に遷移
+            button14.addEventListener('click', start);//モード・コース選択画面からゲーム開始前画面に遷移
 
-            for (let i = 0; i < onBtns.length; i++) {
-                onBtns[i].addEventListener('click', () => {
-                    onBtns[i].classList.remove('show');
-                    offBtns[i].classList.add('show');
-                    flags[i] = false;
-                });
-            }
-            for (let i = 0; i < offBtns.length; i++) {
-                offBtns[i].addEventListener('click', () => {
-                    offBtns[i].classList.remove('show');
-                    onBtns[i].classList.add('show');
-                    flags[i] = true;
-                });
-            }
+            // 設定のスイッチ切り替え sccのshowを付けたり外したりする
+            // for (let i = 0; i < onBtns.length; i++) {
+            //     onBtns[i].addEventListener('click', () => {
+            //         onBtns[i].classList.remove('show');
+            //         offBtns[i].classList.add('show');
+            //         flags[i] = false;
+            //     });
+            // }
+            // for (let i = 0; i < offBtns.length; i++) {
+            //     offBtns[i].addEventListener('click', () => {
+            //         offBtns[i].classList.remove('show');
+            //         onBtns[i].classList.add('show');
+            //         flags[i] = true;
+            //     });
+            // }
 
             // キー押下時
             window.addEventListener('keydown', (event) => {
                 let key = event.key;
                 if (isOpen && !startFlag) {
-                    if (key == ' ') event.preventDefault();
-                    if (key == 'r') toggle(0, flags[0]);
-                    if (key == 'k') toggle(1, flags[1]);
-                    if (key == 'g') toggle(2, flags[2]);
-                    if (key == 'w') toggle(3, flags[3]);
-                    if (key == 's') toggle(4, flags[4]);
+                     if (key == ' ') event.preventDefault();
+                //     if (key == 'r') toggle(0, flags[0]);
+                //     if (key == 'k') toggle(1, flags[1]);
+                //     if (key == 'g') toggle(2, flags[2]);
+                //     if (key == 'w') toggle(3, flags[3]);
+                //     if (key == 's') toggle(4, flags[4]);
                 }
                 if (startFlag) { // ゲーム開始
                     if (key == ' ') event.preventDefault();
