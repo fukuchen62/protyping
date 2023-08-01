@@ -72,6 +72,9 @@
                 <div id="game-explain"></div>
                 <button id="start-button" type="button">スタート</button>
 
+                {{-- 遊び方 --}}
+                <p><button id="howto-playing" type="button">遊び方</button></p>
+
                 <div id="game-func">
                     <span>ローマ字表示(R)</span>
                     <div class="switch-btn">
@@ -208,6 +211,25 @@
                     <!-- <button id="close-button2" class="btn" type="button">閉じる</button> -->
                 </div>
             </div>
+
+            {{-- 遊び方説明画面 --}}
+            <div id="game-view3"style="display: none;">
+                <div>
+                    <p>遊び方</p>
+                    <p>タイプコードはプログラミングを学習している人のための練習ゲームです。</p>
+                    <p>始め方</p>
+                    <p>１．タイピングしたい言語を選びます。</p>
+                    <p>２．必要であれば「設定」で効果音のON・OFFができます。</p>
+                    <p>３．スタートを押します。</p>
+                    <p>４．モードとコースを選択します。</p>
+                    <p>※タイピングには制限時間があります。</p>
+                    <p>設定ボタン</p>
+                    <p>BGM、タイプ音、ミス音、背景のON・OFFが選択できます。</p>
+                    <div>
+                        <button id="close-howto" type="button">閉じる</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -238,6 +260,9 @@
             const keyboard = document.getElementById('virtual-keyboard');
             const space = keyboard.querySelector('.key_space');
             const countdownTime = 180; //ゲーム用タイマー 180秒固定
+            const button5 = document.getElementById('howto-playing'); //『遊び方』ボタンクリック時
+            const view3 = document.getElementById('game-view3'); //遊び方画面表示
+            const button7 = document.getElementById('close-howto'); //『遊び方』ボタンクリ
 
             // 遊ぶ文字列をデータベースから取得
             let wordJPArray = {!! $json_array !!};
@@ -1040,9 +1065,24 @@
                 space.classList.add('active'); // スペースキーをactiveにする
             }
 
+            // 遊び方画面表示
+            function howtoplaying(){
+                view1.style.display = 'none'; //スタート画面１をオフ
+                view3.style.display = 'block'; //遊び方画面３をオン
+            }
+
+            //遊び方からスタート画面に戻る
+            function backstart(){
+                view1.style.display = 'block'; //スタート画面１をオン
+                view3.style.display = 'none'; //遊び方画面３をオフ
+            }
+
             window.addEventListener('DOMContentLoaded', open);//最初からゲーム画面を開きっぱなしにしておく
             button3.addEventListener('click', start);
             button4.addEventListener('click', replay);
+            button5.addEventListener('click', howtoplaying);//遊び方画面
+            button7.addEventListener('click', backstart);//遊び方からスタート画面に戻る
+
             for (let i = 0; i < onBtns.length; i++) {
                 onBtns[i].addEventListener('click', () => {
                     onBtns[i].classList.remove('show');
