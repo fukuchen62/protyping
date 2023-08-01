@@ -44,9 +44,9 @@
                 </label>
                 <div class="menuLeft">
                     <a href="∠">
-                        <span class="headerLogo">
+                        <h1 class="headerLogo">
                             <img src="../assets/images/logo.jpg" alt="タイプコード">
-                        </span>
+                        </h1>
                     </a>
                 </div>
 
@@ -61,20 +61,20 @@
                     <!-- 辞書(1) -->
                     <li class="menuParent">
                         <a href="">辞書</a><!-- デフォルトプログラミングでよく使う英単語 -->
-                        <input type="checkbox" id="menuParent1">
+                        <!-- <input type="checkbox" id="menuParent1">
                         <label for="menuParent1">
                             <span class="pd">
                                 <i class="fa-solid fa-chevron-down"></i>
                             </span>
-                        </label>
-                        <ul class="menuChild">
+                        </label> -->
+                        <!-- <ul class="menuChild">
                             <li><a href="">プログラミングでよく使う英単語</a></li>
                             <li><a href="">HTML</a></li>
                             <li><a href="">CSS</a></li>
                             <li><a href="">JavaScript</a></li>
                             <li><a href="">PHP</a></li>
                             <li><a href="">Python</a></li>
-                        </ul>
+                        </ul> -->
                     </li>
 
                     <!-- ランキング(2) -->
@@ -100,7 +100,7 @@
                             <li>
                                 <a href="">知っトク情報一覧</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="">開発環境セットアップ</a>
                             </li>
                             <li>
@@ -123,7 +123,7 @@
                             </li>
                             <li>
                                 <a href="">卒業生の作品</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </li>
 
@@ -162,7 +162,7 @@
 
         <div class="kv">
             <h1>ページのタイトル</h1>
-            <img src="" alt="" srcset="">
+            <!-- <img src="" alt="" srcset=""> -->
         </div>
 
         <section>
@@ -188,62 +188,54 @@
             <a href="" class="viewBtn">MyScoreを見る</a>
         </div> -->
 
-        <section id="gameBody">
+        <div id="gameBody">
             テカリあるバージョン(w230)
             <div class="box" id="makeImg">
                 <div class="circle"></div>
-                <button id="startBtn" type="button">
-                    <a href="../html/typing_game.html">
-                        <p>ゲームをする</p>
-                    </a>
+                <button id="startBtn" type="button" onclick="location.href='../../resources/views/fronts/games_typing.blade.php'">
+                    ゲームをする
                 </button>
                 <div class="circleBottom"></div>
             </div>
-        </section>
+        </div>
 
-        <section id="gameBody2">
+        <div id="gameBody2">
             テカリなしバージョン(w230)
             <div class="box2" id="makeImg">
-                <button id="startBtn2" type="button">
-                    <a href="../html/typing_game.html">
-                        <p>ゲームをする</p>
-                    </a>
+                <button id="startBtn2" type="button" onclick="location.href='../../resources/views/fronts/games_typing.blade.php'">
+                    ゲームをする
                 </button>
             </div>
-        </section>
+        </div>
 
-        <section id="gameBody3">
+        <div id="gameBody3">
             テカリありバージョン(w190)
             <div class="box3" id="makeImg">
                 <div class="circle3"></div>
-                <button id="startBtn3" type="button">
-                    <a href="../html/typing_game.html">
-                        <p>ゲームをする</p>
-                    </a>
+                <button id="startBtn3" type="button" onclick="location.href='../../resources/views/fronts/games_typing.blade.php'">
+                    ゲームをする
                 </button>
                 <div class="circleBottom3"></div>
             </div>
-        </section>
+        </div>
 
-        <section id="gameBody3">
+        <div id="gameBody3">
             テカリなしバージョン(w190)
             <div class="box3" id="makeImg">
-                <button id="startBtn3" type="button">
-                    <a href="../html/typing_game.html">
-                        <p>ゲームをする</p>
-                    </a>
+                <button id="startBtn3" type="button" onclick="location.href='../../resources/views/fronts/games_typing.blade.php'">
+                    ゲームをする
                 </button>
             </div>
-        </section>
+        </div>
         <!-- プルダウンメニュー -->
         <div class="selectWrap">
             <select name="word" required> <!-- required：選択必須を指定 -->
-                <option value="よく使われる英単語">よく使われる英単語</option>
-                <option value="HTML">HTML</option>
-                <option value="CSS">CSS</option>
-                <option value="JavaScript">JavaScript</option>
-                <option value="PHP">PHP</option>
-                <option value="Python">Python</option>
+                <option value="">よく使われる英単語</option>
+                <option value="">HTML</option>
+                <option value="">CSS</option>
+                <option value="">JavaScript</option>
+                <option value="">PHP</option>
+                <option value="">Python</option>
             </select>
         </div>
 
@@ -270,46 +262,41 @@
                     <div class="contentItem">
                         <div class="footerNav">
                             <div class="footerTitle"><a href="">ゲーム</a></div>
-                            <div class="footerTitle"><a href="">アバウト</a></div>
-                            <div class="footerTitle"><a href="">ランキング</a></div>
-                            <div class="footerTitle"><a href="">マイスコア</a></div>
-                        </div>
-                    </div>
-
-                    <div class="contentItem">
-                        <div class="footerNav">
-                            <div class="footerTitle"><span>辞書</span></div>
-                            <ul>
+                            <div class="footerTitle"><a href="">辞書</a></div>
+                            <!-- <ul>
                                 <li class="engWord"><a href="">プログラミングでよく使う英単語</a></li>
                                 <li><a href="">HTML</a></li>
                                 <li><a href="">CSS</a></li>
                                 <li><a href="">JavaScrip</a></li>
                                 <li><a href="">PHP</a></li>
                                 <li><a href="">Python</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="contentItem">
-                        <div class="footerNav">
+                            </ul> -->
                             <div class="footerTitle"><span>知っトク情報</span></div>
                             <ul>
                                 <li><a href="">知っトク情報一覧</a></li>
-                                <li><a href="">開発環境セットアップ</a></li>
-                                <li><a href="">WordPress</a></li>
-                                <li><a href="">おすすめWebアプリ</a></li>
-                                <li><a href="">おすすめWebサイト</a></li>
-                                <li><a href="">ショートカット</a></li>
-                                <li><a href="">資格</a></li>
-                                <li><a href="">Chrome拡張機能</a></li>
-                                <li><a href="">卒業生の作品</a></li>
+                                <!-- <li><a href="">開発環境セットアップ</a></li>
+                                    <li><a href="">WordPress</a></li>
+                                    <li><a href="">おすすめWebアプリ</a></li>
+                                    <li><a href="">おすすめWebサイト</a></li>
+                                    <li><a href="">ショートカット</a></li>
+                                    <li><a href="">資格</a></li>
+                                    <li><a href="">Chrome拡張機能</a></li>
+                                    <li><a href="">卒業生の作品</a></li> -->
                             </ul>
                         </div>
                     </div>
 
                     <div class="contentItem">
                         <div class="footerNav">
+                            <div class="footerTitle"><a href="">ランキング</a></div>
+                            <div class="footerTitle"><a href="">マイスコア</a></div>
+                            <div class="footerTitle"><a href="">アバウト</a></div>
                             <div class="footerTitle"><a href="">更新情報</a></div>
+                        </div>
+                    </div>
+
+                    <div class="contentItem">
+                        <div class="footerNav">
                             <div class="footerTitle"><a href="">問い合わせ</a></div>
                             <div class="footerTitle"><a href="">利用規約</a></div>
                             <div class="footerTitle"><a href="">プライバシーポリシー</a></div>
