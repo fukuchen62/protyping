@@ -27,10 +27,7 @@ class MainController extends Controller
 
         // 知っトク情報を最新の６件分取得
         // $items2 = Knowhow::all();
-        $items2 = Knowhow::orderBy('created_at', 'desc')
-            ->where('is_show', 1)
-            ->take(6)
-            ->get();
+        $items2 = Knowhow::orderBy('created_at', 'desc')->take(6)->get();
         $knowhows = [
             'items2' => $items2,
         ];

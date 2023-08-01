@@ -46,7 +46,7 @@ p{
     }
 
 
-img{
+.updateImg{
     /* width: 80px;
     height: 70px;
     text-align: right;
@@ -59,9 +59,9 @@ img{
     float: right;
 }
 
-@media screen and (min-width: 768px)
+@media screen and (min-width: 1000px)
 {
-    img{
+    .updateImg{
         max-width: 100px;
         height: 100px;
         object-fit: cover;
@@ -89,7 +89,7 @@ img{
         }
 } */
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1000px) {
     .updateInformation{
         /* width: 1000px; */
         height: 150px;
