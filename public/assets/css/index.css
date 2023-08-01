@@ -44,7 +44,13 @@ h2{
 .gameChara{
     width:14.5rem;
     height:14.5rem;
-    margin-bottom:20px;
+    margin-bottom:40px;
+}
+
+.gameChara2{
+    width:14.5rem;
+    height:14.5rem;
+    margin-bottom:40px;
 }
 /* ゲーム画面 */
 

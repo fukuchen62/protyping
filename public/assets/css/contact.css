@@ -243,10 +243,9 @@ form a:hover{
 }
 
 @media (min-width:1000px) {
-
     .wrap{
         margin:0 auto;
-        max-width:1000px;
+        max-width:1080px;
         /* display: flex;
         justify-content: space-between; */
     }
@@ -271,7 +270,7 @@ h2{
 } */
 
 .contactName{
-    max-width:1000px;
+    max-width:1080px;
     margin:0 auto;
 }
 
@@ -290,13 +289,13 @@ h2{
 
 .contactBody {
     text-align: left;
-    max-width:1000px;
+    max-width:1080px;
     padding: 10px;
     width: 50vw;
     float:left;
     margin:0 auto;
-    /* display: block;
-} */
+    /* display: block;*/
+}
 
 .categoryFirst{
     text-align: left;
@@ -311,7 +310,7 @@ h2{
 
 .category {
     text-align: left;
-    max-width:1000px;
+    /* max-width:1080px; */
     padding: 10px;
     width: 70vw;
     float:left;
@@ -321,22 +320,22 @@ h2{
     border-radius: 5px;
 }
 
-.contentTableArea{
-    max-width:1000px;
-    margin:10px auto;
+/* .contentTableArea{
+    max-width:1080px;
+    margin:10px auto; */
     /* display:flex;
     justify-content: center; */
-}
+/* } */
 
-.contactContentTableArea{
-    max-width:1000px;
-    margin:10px auto;
+/* .contactContentTableArea{
+    max-width:1080px;
+    margin:10px auto; */
     /* display:flex;
     justify-content: center; */
-}
+/* } */
 
 .contactBottomArea{
-    max-width:1000px;
+    max-width:1080px;
     margin:10px auto;
     text-align: center;
     padding:5px;
@@ -351,5 +350,15 @@ h2{
     font-size:2.4rem;
     width: 300px;
     height: 92px;
+}
+}
+
+@media (min-width:1600px) {
+
+.contentTableArea{
+    /* max-width:1080px; */
+    margin:10px auto;
+    display:flex;
+    justify-content: center;
 }
 }
