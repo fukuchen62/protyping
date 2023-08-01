@@ -116,7 +116,7 @@
                     <!-- $items を使った表示や処理 -->
                     @if (isset($knowhows))
                     @foreach ($knowhows['items2'] as $item2)
-                    <li> <a href="../html/shittoku.html"><img src="assets/images/thumbnail/{{ $item2->thumbnail }}" alt="{{ $item2->title }}">
+                    <li> <a href="{{ route('knowhow') }}"><img src="assets/images/thumbnail/{{ $item2->thumbnail }}" alt="{{ $item2->title }}">
                             <span>【{{ $item2->title }}】</span></a>
                     </li>
 
