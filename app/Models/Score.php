@@ -28,4 +28,25 @@ class Score extends Model
         $ret = $this->id . ':' . $this->score;
         return $ret;
     }
+
+
+
+    // モデルと関連するテーブル名を指定
+    protected $table = 'scores';
+
+    // 主キーのカラム名を指定
+    protected $primaryKey = 'id';
+
+    // モデルと関連するテーブルのカラム名を指定
+    protected $fillable = ['language_id', 'score']; // カラム名を追加
+
+    // モデルと関連する他のモデルを定義
+    public function language()
+    {
+        return $this->belongsTo(
+            Language::class,
+            'language_id',
+            'id'
+        );
+    }
 }
