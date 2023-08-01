@@ -1,7 +1,10 @@
 @charset "utf-8";
 
-main{
-    padding:15px;
+.main{
+	width: calc(100vw - 40px);
+    margin-bottom: 20px;
+	margin-left: 20x;
+    padding: 10px;
 }
 
 h2{
@@ -11,7 +14,14 @@ h2{
     letter-spacing: 0.1rem;
     margin-top: 20px;
     margin-bottom: 10px;
+    line-height: 3rem;
 }
+h3{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    line-height: 2rem;
+}
+
 
     /* 上に戻るボタンの矢印 */
     /* 長方形 */
@@ -35,10 +45,58 @@ h2{
 	border-right: 0.8rem solid transparent;
 }
 
+@media (min-width:1040px) {
+	.main {
+	width: 1000px;
+    margin-bottom: 20px;
+	margin-left: calc((100vw - 1000px) / 2);
+    padding: 20px;
+}
+}
 @media (min-width:1000px) {
 
     .wrap{
         margin:0 auto;
         max-width:1000px;
+	}
+}
+
+a{
+	font-size: 14px;
+	margin-left: 15px;
+}
+
+p{
+	margin-left: 10px;
+	text-indent: 10px;
+	line-height: 2rem;
+}
+ol {
+	list-style: disc;
+	padding-inline-start: 25px;
+}
+li{
+	font-size: 15px;
+    margin-bottom: 10px;
+	padding-inline-start: 5px
+	line-height: 2rem;
+
+}
+​
+​
+@media screen and (min-width: 768px) {
+    /* 共通 */
+
+    li{
+
+		font-size:17px;
+        margin-bottom: 10px;
+		padding-inline-start: 10px
+		line-height: 2rem;
+    }
+
+	a{
+	font-size: 10px;
+	margin-left: 20px;
 	}
 }
