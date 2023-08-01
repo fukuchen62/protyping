@@ -250,6 +250,10 @@ form a:hover{
         justify-content: space-between; */
     }
 
+    .breadCrumb-001 {
+    font-size: 1.2rem;
+}
+
 h2{
     font-size:4rem;
 }

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>問い合わせページ</title>
+    <title>確認画面</title>
 
     <!-- 共通CSS -->
     <link rel="stylesheet" href="../assets/css/reset.css">
@@ -35,102 +35,243 @@
 
 <body>
     <!-- ヘッダー -->
-    <header id="header" class="header">
-        <div class="container">
-
-            <!-- ヘッダーロゴ -->
-            <h1 class="headerLogo">
-                    <a href=""><img src="" alt="タイプコード" srcset=""></a>
-                </h1>
-
-            <!-- ハンバーガーメニュー部分 -->
-            <div class="hanmburger">
-                <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
-                <input id="drawerInput" class="drawerHidden" type="checkbox" />
-                <!-- ハンバーガーメニュー -->
-                <label for="drawerInput" class="drawerOpen">
-                    <span></span>
+    <header>
+        <input type="checkbox" id="menuNavbtn">
+        <nav id="nav" role="navigation" aria-label="メインメニュー">
+            <div class="navInner">
+                <label id="navBtn" for="menuNavbtn">
+                    <span>
+                        <span id="openMenu"></span>
+                    </span>
                 </label>
+                <div class="menuLeft">
+                    <a href="∠">
+                        <span class="headerLogo">
+                            <img src="../assets/images/logo.jpg" alt="タイプコード">
+                        </span>
+                    </a>
+                </div>
 
-                <!-- ナビゲーション -->
-                <nav class="navContent">
-                    <ul class="navList">
-                        <li class="home">
-                            <a href="">HOME</a>
-                        </li>
-                        <li class="dictionary">
-                            <a href="">辞書</a>
-                        </li>
-                        <li class="ranking">
-                            <a href="">ランキング</a>
-                        </li>
-                        <li class="MyScore">
-                            <a href="">MyScore</a>
-                        </li>
-                        <li class="shittoku">
-                            <a href="">知っトク情報</a>
-                        </li>
-                        <li class="contact">
-                            <a href="">お問い合わせ</a>
-                        </li>
-                    </ul>
-                </nav>
+                <ul class="menu">
+
+                    <!-- HOME(0) -->
+                    <li class="menuParent">
+                        <a href="">ゲーム
+                        </a>
+                    </li>
+
+                    <!-- 辞書(1) -->
+                    <li class="menuParent">
+                        <a href="">辞書</a><!-- デフォルトプログラミングでよく使う英単語 -->
+                        <input type="checkbox" id="menuParent1">
+                        <label for="menuParent1">
+                            <span class="pd">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </label>
+                        <ul class="menuChild">
+                            <li><a href="">プログラミングでよく使う英単語</a></li>
+                            <li><a href="">HTML</a></li>
+                            <li><a href="">CSS</a></li>
+                            <li><a href="">JavaScript</a></li>
+                            <li><a href="">PHP</a></li>
+                            <li><a href="">Python</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- ランキング(2) -->
+                    <li class="menuParent">
+                        <a href="">ランキング</a>
+                    </li>
+
+                    <!-- マイスコア(3) -->
+                    <li class="menuParent">
+                        <a href="">マイスコア</a>
+                    </li>
+
+                    <!-- 知っトク情報(4) -->
+                    <li class="menuParent">
+                        <a href="">知っトク情報</a>
+                        <input type="checkbox" id="menuParent4">
+                        <label for="menuParent4">
+                            <span class="pd">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </label>
+                        <ul class="menuChild">
+                            <li>
+                                <a href="">知っトク情報一覧</a>
+                            </li>
+                            <li>
+                                <a href="">開発環境セットアップ</a>
+                            </li>
+                            <li>
+                                <a href="">WordPress</a>
+                            </li>
+                            <li>
+                                <a href="">おすすめWebアプリ</a>
+                            </li>
+                            <li>
+                                <a href="">おすすめWebサイト</a>
+                            </li>
+                            <li>
+                                <a href="">ショートカット</a>
+                            </li>
+                            <li>
+                                <a href="">資格</a>
+                            </li>
+                            <li>
+                                <a href="">Chrome拡張機能</a>
+                            </li>
+                            <li>
+                                <a href="">卒業生の作品</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- アバウト(5) -->
+                    <li class="menuParent headerAbout">
+                        <a href="">アバウト</a>
+                    </li>
+
+                    <!-- 更新情報(6) -->
+                    <li class="menuParent headerUpdate">
+                        <a href="">更新情報</a>
+                    </li>
+
+                    <!-- お問合わせ(7) -->
+                    <li class="menuParent">
+                        <a href="">お問合わせ</a>
+                    </li>
+
+                    <!-- 利用規約(8) -->
+                    <li class="menuParent headerTerms">
+                        <a href="">利用規約</a>
+                    </li>
+
+                    <!-- 利用規約(9) -->
+                    <li class="menuParent headerPrivacy">
+                        <a href="">プライバシーポリシー</a>
+                    </li>
+                </ul>
             </div>
-        </div>
+        </nav>
     </header>
 
     <!-- ここからメイン -->
-    <main class="main">
-        <h2>確認画面</h2>
-        <p class="contactWarning">下記の内容で、
+    <div class="wrap">
+        <main class="main">
+            <ol class="breadCrumb-001">
+                <li><a href="../html/index.html">ホーム</a></li>
+                <li><a href="../html/contact.html">お問い合わせ</a></li>
+                <li><a href="#">確認</a></li>
+            </ol>
+            <h2>確認画面</h2>
+            <p class="contactWarning">下記の内容で、
         お間違いないでしょうか？</p>
-        <p class="basic">基本情報</p>
-        <section class="confirm">
-            <label>名前</label>
-            <p>山田太郎</p>
-            <p class="grayLine"></p>
-            <label>メールアドレス</label>
-            <p>typing@mail.com</p>
-            <p class="grayLine"></p>
-            <div class="basic">問い合わせ内容</div>
-            <label>問い合わせ種別</label>
-            <p>単語追加依頼</p>
-            <p class="grayLine"></p>
-            <label>言語名</label>
-            <p>HTML</p>
-            <p class="grayLine"></p>
-            <label>単語名</label>
-            <p>Math</p>
-            <p class="grayLine"></p>
-            <label>読み方</label>
-            <p>マス</p>
-            <p class="grayLine"></p>
-            <label>意味</label>
-            <p>数字</p>
-            <p class="grayLine"></p>
-            <label>使用例</label>
-            <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-            <p class="grayLine"></p>
-            <label>問い合わせ</label>
-            <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            <p class="basic">基本情報</p>
+            <section class="confirm">
+                <label>名前</label>
+                <p>山田太郎</p>
+                <p class="grayLine"></p>
+                <label>メールアドレス</label>
+                <p>typing@mail.com</p>
+                <p class="grayLine"></p>
+                <div class="basic">問い合わせ内容</div>
+                <label>問い合わせ種別</label>
+                <p>単語追加依頼</p>
+                <p class="grayLine"></p>
+                <label>言語名</label>
+                <p>HTML</p>
+                <p class="grayLine"></p>
+                <label>単語名</label>
+                <p>Math</p>
+                <p class="grayLine"></p>
+                <label>読み方</label>
+                <p>マス</p>
+                <p class="grayLine"></p>
+                <label>意味</label>
+                <p>数字</p>
+                <p class="grayLine"></p>
+                <label>使用例</label>
+                <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                <p class="grayLine"></p>
+                <label>問い合わせ</label>
+                <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                <p class="grayLine"></p>
 
-        </section>
-        <div class="contactBottom">
-            <input onclick="location.href='../html/contact_complete.html'" class="contactSubmit" type="submit" value="送信する">
-            <input class="contactBack" onclick="location.href='../html/contact.html'" type="submit" name="btn_back" value="戻る">
-        </div>
-        </form>
+            </section>
+            <div class="contactBottom">
+                <input onclick="location.href='../html/contact_complete.html'" class="contactSubmit" type="submit" value="送信する">
+                <input class="contactBack" onclick="location.href='../html/contact.html'" type="submit" name="btn_back" value="戻る">
+            </div>
+            </form>
 
-    </main>
-    <footer class="footer">
+        </main>
+    </div>
+    <footer id="footer" class="footer outerBlock">
         <div class="footerWrap">
             <div class="footerLogo">
-                <a href=""><img src="" alt="タイプコード" srcset=""></a>
+                <a href=""><img src="../assets/images/logo.jpg" alt="タイプコード"></a>
             </div>
+            <div class="innerBlock">
+                <div class="footerContent">
 
-        </div>
-        <div class="copyright">
-            <small>Copyright©タイプコード All Rights Reserved.</small>
+                    <div class="contentItem">
+                        <div class="footerNav">
+                            <div class="footerTitle"><a href="">ゲーム</a></div>
+                            <div class="footerTitle"><a href="">アバウト</a></div>
+                            <div class="footerTitle"><a href="">ランキング</a></div>
+                            <div class="footerTitle"><a href="">マイスコア</a></div>
+                        </div>
+                    </div>
+
+                    <div class="contentItem">
+                        <div class="footerNav">
+                            <div class="footerTitle"><span>辞書</span></div>
+                            <ul>
+                                <li class="engWord"><a href="">プログラミングでよく使う英単語</a></li>
+                                <li><a href="">HTML</a></li>
+                                <li><a href="">CSS</a></li>
+                                <li><a href="">JavaScrip</a></li>
+                                <li><a href="">PHP</a></li>
+                                <li><a href="">Python</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="contentItem">
+                        <div class="footerNav">
+                            <div class="footerTitle"><span>知っトク情報</span></div>
+                            <ul>
+                                <li><a href="">知っトク情報一覧</a></li>
+                                <li><a href="">開発環境セットアップ</a></li>
+                                <li><a href="">WordPress</a></li>
+                                <li><a href="">おすすめWebアプリ</a></li>
+                                <li><a href="">おすすめWebサイト</a></li>
+                                <li><a href="">ショートカット</a></li>
+                                <li><a href="">資格</a></li>
+                                <li><a href="">Chrome拡張機能</a></li>
+                                <li><a href="">卒業生の作品</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="contentItem">
+                        <div class="footerNav">
+                            <div class="footerTitle"><a href="">更新情報</a></div>
+                            <div class="footerTitle"><a href="">問い合わせ</a></div>
+                            <div class="footerTitle"><a href="">利用規約</a></div>
+                            <div class="footerTitle"><a href="">プライバシーポリシー</a></div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="copyright">
+                <small>Copyright©タイプコード All Rights Reserved.</small>
+            </div>
         </div>
     </footer>
 
