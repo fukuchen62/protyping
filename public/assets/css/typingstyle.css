@@ -149,6 +149,42 @@
     display: table-cell;
     text-align: center;
     vertical-align: middle;
+    height: 100%;
+}
+
+#game-view1 > .game-position1 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#game-view1 > .game-position2 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#game-view1 > .game-position3 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#game-view1 > .game-position4 {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+#game-view1 > .game-position5 {
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    transform: translate(-50%, -50%);
 }
 
 #game-title {
@@ -177,9 +213,9 @@
     appearance: none;
 }
 
-#game-func {
+/* #game-func {
     position: absolute;
-    bottom: 0;
+    bottom: 20%;
     left: 50%;
     transform: translateX(-50%);
     height: 28px;
@@ -235,7 +271,7 @@
 
 #game-func .switch-btn .off-btn {
     background-color: #ff4032;
-}
+} */
 
 .show {
     display: block !important;
@@ -895,6 +931,16 @@
     clear: both;
 }
 
+.result-comment {
+    position: relative;
+    width: 728px;
+    height: 53px;
+    text-align: center;
+    border: 1px solid #d0d0d0;
+    margin: 12px 0 0;
+    clear: both;
+}
+
 #result-comment .container {
     position: absolute;
     width: 726px;
@@ -926,17 +972,28 @@
     appearance: none;
 }
 
+#set-ranking {
+    top: 340px;
+    right: 40%;
+    background-color: #027fff;
+}
+
+#game-finish {
+    top: 380px;
+    right: 40%;
+    background-color: #027fff;
+}
+
 #replay-button {
-    top: 0;
-    right: 289px;
+    top: 420px;
+    right: 50%;
     background-color: #027fff;
 }
 
 #close-button2 {
-    top: 0;
-    right: 0;
-    color: #7b7a7a !important;
-    background-color: #f4f5f5;
+    top: 420px;
+    right: 30%;
+    background-color: #027fff;
 }
 
 #miss-only-button {
