@@ -28,18 +28,12 @@
                     <img src="../assets/images/whitecrown.png" alt="王冠">
                 </div>
                 <div class="selectWrap">
-                    <nav class="word">
-                        <div style="display: inline-block;">
-                            <a href="{{ route('top', ['level_id' => 1]) }}" style="display: inline-block; padding: 10px 20px; background-color: #3490dc; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 16px;">
-                                初級
-                            </a>
-                        </div>
-                        <div style="display: inline-block;">
-                            <a href="{{ route('top', ['level_id' => 2]) }}" style="display: inline-block; padding: 10px 20px; background-color: #3490dc; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 16px;">
-                                中級
-                            </a>
-                        </div>
-                    </nav>
+                    <form action="{{ route('top') }}" method="GET">
+                        <select name="level_id" required onchange="this.form.submit()">
+                            <option value="1" {{ $selectedLevel==1 ? 'selected' : '' }}>初級コース</option>
+                            <option value="2" {{ $selectedLevel==2 ? 'selected' : '' }}>中級コース</option>
+                        </select>
+                    </form>
                 </div>
 
 
