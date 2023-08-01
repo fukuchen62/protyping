@@ -270,8 +270,24 @@
             </div>
 
             {{-- ランキング登録画面 --}}
+            <div id="game-view6" style="display: none;">
+                <p>ランキングに登録する</p>
+                <p>ペンネーム入力</p>
+                <p>本名は入れないでください</p>
+                <div>
+                    <button id="register-ranking" type="button">登録する</button>
+                </div>
+            </div>
 
             {{-- ランキング登録完了画面 --}}
+            <div id="game-view7" style="display: none;">
+                <p>ランキングに登録完了</p>
+                <p>ペンネーム</p>
+                <p>で登録しました</p>
+                <div>
+                    <button id="return-start" type="button">スタートに戻る</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -314,6 +330,13 @@
             const button12 = document.getElementById('open-practise2'); //遊び方画面の『戻る』ボタンクリック時
             const button13 = document.getElementById('open-ranking1'); //遊び方画面の『戻る』ボタンクリック時
             const button14 = document.getElementById('open-ranking2'); //遊び方画面の『戻る』ボタンクリック時
+            const button15 = document.getElementById('set-ranking'); // 『ランキングに登録する』ボタンクリック時
+            const button16 = document.getElementById('game-finish'); // 『登録せずゲームを終了する』ボタンクリック時
+            const view6 = document.getElementById('game-view6'); //ランキング登録画面表示
+            const button17 = document.getElementById('register-ranking'); // 『登録する』ボタンクリック時
+            const view7 = document.getElementById('game-view7'); //ランキング登録完了画面表示
+            const button18 = document.getElementById('return-start'); // 『スタートに戻る』ボタンクリック時
+
             // 遊ぶ文字列をデータベースから取得
             let wordJPArray = {!! $json_array !!};
             // console.log(wordJPArray); // 配列の中身を確認（デバッグ用）
@@ -1151,6 +1174,29 @@
                 view1.style.display = 'block'; //スタート画面１をオン
             }
 
+            function setranking(){
+                result.style.display = 'none'; //ゲーム終了画面をオフ
+                view6.style.display = 'block'; //ランキング登録画面をオン
+            }
+
+            //コース・モードからスタート画面に戻る
+            function backstart4(){
+                result.style.display = 'none'; //ゲーム終了画面をオフ
+                view1.style.display = 'block'; //スタート画面１をオン
+            }
+
+            //ランキング登録画面からランキング登録完了画面に遷移
+            function setregist(){
+                view6.style.display = 'none'; //ランキング登録画面をオフ
+                view7.style.display = 'block'; //ランキング登録完了画面をオン
+            }
+
+            //コース・モードからスタート画面に戻る
+            function backstart5(){
+                view7.style.display = 'none'; //ゲーム終了画面をオフ
+                view1.style.display = 'block'; //スタート画面１をオン
+            }
+
             window.addEventListener('DOMContentLoaded', open);//最初からゲーム画面を開きっぱなしにしておく
             button3.addEventListener('click', selectmode);
             button4.addEventListener('click', replay);
@@ -1163,6 +1209,10 @@
             button12.addEventListener('click', start);//モード・コース選択画面からゲーム開始前画面に遷移
             button13.addEventListener('click', start);//モード・コース選択画面からゲーム開始前画面に遷移
             button14.addEventListener('click', start);//モード・コース選択画面からゲーム開始前画面に遷移
+            button15.addEventListener('click', setranking);//ゲーム終了画面からランキング登録画面に遷移
+            button16.addEventListener('click', backstart4);//ゲーム終了画面からスタート画面に遷移
+            button17.addEventListener('click', setregist);//ランキング登録画面からランキング登録完了画面に遷移
+            button18.addEventListener('click', backstart5);//ランキング登録完了画面からスタート画面に遷移
 
             // 設定のスイッチ切り替え sccのshowを付けたり外したりする
             // for (let i = 0; i < onBtns.length; i++) {
