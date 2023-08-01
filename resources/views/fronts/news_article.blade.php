@@ -52,7 +52,7 @@ $timestamp = \Carbon\Carbon::parse($item->created_at);
 
     <ul class="updateList">
         <li>
-            <img src="{{ asset('assets/images/' . $item->thumbnail) }}" alt="{{ $item->title }}">
+            <img class="updateImg" src="{{ asset('assets/images/' . $item->thumbnail) }}" alt="{{ $item->title }}">
 
             <p>{{ $timestamp->format('Y年m月d日') }}<br>
             {{-- {{ $item->created_at }} --}}
