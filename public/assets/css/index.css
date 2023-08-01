@@ -126,6 +126,7 @@ h6{
     /* appearance: none; */
     padding: 10px;
 }
+
 .selectWrap select::-ms-expand {
     display: none;
 }
@@ -441,7 +442,7 @@ span{
     margin:50px auto;
 }
 
-.topLeftArea{
+    .topLeftArea{
     max-width:680px;
     float: left;
 }
