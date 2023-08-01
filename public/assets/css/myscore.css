@@ -48,7 +48,7 @@
 }
 
 .course:hover {
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 
@@ -421,6 +421,7 @@ h3 {
 
     .selectCourse {
         display: flex;
+        justify-content: center;
     }
 
     .course {
@@ -429,10 +430,122 @@ h3 {
         padding: 25px;
         border-bottom: 8px solid #8B8B8B;
         font-size: 2rem;
+        margin: 0;
+        margin-inline: 20px;
     }
 
 
     .word {
         display: none;
+    }
+
+    .scoreWrap {
+        margin-top: 70px;
+    }
+
+    .usernameWrap {
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    .icon {
+        width: 108px;
+        height: 108px;
+        margin-inline-end: 20px;
+    }
+
+    .usernameItem {
+        width: 578px;
+        margin-inline-start: 20px;
+    }
+
+    .itemFirst {
+        height: 40px;
+    }
+
+    .itemFirst p {
+        line-height: 2.5;
+    }
+
+    .itemSecond {
+        height: 68px;
+    }
+
+    .itemSecond p {
+        font-size: 2rem;
+        line-height: 3;
+    }
+
+
+
+    .cardList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .listInner {
+        width: 470px;
+        height: 490px;
+        padding: 60px 30px;
+    }
+
+    .cardWrap h3 {
+        font-size: 2.4rem;
+        margin-bottom: 50px;
+    }
+
+    .cardInner {
+        width: 408px;
+        height: 282px;
+    }
+
+    .history {
+        height: 84px;
+        line-height: 4;
+    }
+
+    .history p {
+        font-size: 2rem;
+    }
+
+    .scoreLine {
+        width: 222px;
+        line-height: 1.5;
+    }
+
+    .scoreItem>p {
+        font-size: 2rem;
+    }
+
+    .scoreItem .triangle {
+        font-size: 1.6rem;
+    }
+
+    .scoreItem .score {
+        font-weight: 500;
+    }
+
+    .btnWrap {
+        display: flex;
+        justify-content: center;
+        font-weight: 800;
+    }
+
+    .challengeBtn {
+        font-size: 2.4rem;
+        width: 350px;
+        height: 95px;
+        line-height: 3;
+        margin-inline-end: 20px;
+    }
+
+    .viewBtn {
+        margin: 30px 0 15px 0;
+        margin-inline-start: 20px;
+        font-size: 2.4rem;
+        width: 350px;
+        height: 95px;
+        line-height: 3;
     }
 }
