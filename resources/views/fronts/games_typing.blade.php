@@ -317,7 +317,7 @@
             const progress = document.getElementById('progress-bar');
             const keyboard = document.getElementById('virtual-keyboard');
             const space = keyboard.querySelector('.key_space');
-            const countdownTime = 180; //ゲーム用タイマー 180秒固定
+            const countdownTime = 180; //ゲーム用タイマー 180秒
             const button5 = document.getElementById('howto-playing'); //スタート画面の『遊び方』ボタンクリック時
             const view3 = document.getElementById('game-view3'); //遊び方画面表示
             const button7 = document.getElementById('close-howto'); //遊び方画面の『戻る』ボタンクリック時
@@ -375,8 +375,86 @@
             let ridx, limit, begin, count, idx1, idx2, pattern, temp, correct, miss;
             let over1, over2, over3, left1, left2, left3;
 
-            // スタート処理
-            function start() {
+
+            // 遊び方画面表示
+            function howtoplaying(){
+                view1.style.display = 'none'; //スタート画面１をオフ
+                view3.style.display = 'block'; //遊び方画面３をオン
+            }
+
+            //遊び方からスタート画面に戻る
+            function backstart(){
+                view3.style.display = 'none'; //遊び方画面３をオフ
+                view1.style.display = 'block'; //スタート画面１をオン
+            }
+
+            // 設定画面表示
+            function gamesetting(){
+                view1.style.display = 'none'; //スタート画面１をオフ
+                view4.style.display = 'block'; //設定画面４をオン
+            }
+
+            //遊び方からスタート画面に戻る
+            function backstart2(){
+                view4.style.display = 'none'; //設定画面４をオフ
+                view1.style.display = 'block'; //スタート画面１をオン
+            }
+
+            //遊び方からコース・モード選択画面に戻る
+            function selectmode(){
+                view1.style.display = 'none'; //スタート画面１をオフ
+                view5.style.display = 'block'; //スタート画面１をオン
+            }
+
+            //コース・モードからスタート画面に戻る
+            function backstart3(){
+                view5.style.display = 'none'; //コース・モード選択画面４をオフ
+                view1.style.display = 'block'; //スタート画面１をオン
+            }
+
+            function setranking(){
+                result.style.display = 'none'; //ゲーム終了画面をオフ
+                view6.style.display = 'block'; //ランキング登録画面をオン
+            }
+
+            //コース・モードからスタート画面に戻る
+            function backstart4(){
+                result.style.display = 'none'; //ゲーム終了画面をオフ
+                view1.style.display = 'block'; //スタート画面１をオン
+            }
+
+            //ランキング登録画面からランキング登録完了画面に遷移
+            function setregist(){
+                view6.style.display = 'none'; //ランキング登録画面をオフ
+                view7.style.display = 'block'; //ランキング登録完了画面をオン
+                setscore();
+            }
+
+            //コース・モードからスタート画面に戻る
+            function backstart5(){
+                view7.style.display = 'none'; //ゲーム終了画面をオフ
+                view1.style.display = 'block'; //スタート画面１をオン
+            }
+
+            window.addEventListener('DOMContentLoaded', open);//最初からゲーム画面を開きっぱなしにしておく
+            button3.addEventListener('click', selectmode);
+            button4.addEventListener('click', replay);
+            button5.addEventListener('click', howtoplaying);//遊び方画面
+            button7.addEventListener('click', backstart);//遊び方からスタート画面に戻る
+            button8.addEventListener('click', gamesetting);//設定画面
+            button9.addEventListener('click', backstart2);//設定からスタート画面に戻る
+            button10.addEventListener('click', backstart3);//設定からスタート画面に戻る
+            button11.addEventListener('click', start1);//モード・コース選択画面(練習・初級)からゲーム開始前画面に遷移
+            button12.addEventListener('click', start1);//モード・コース選択画面(練習・中級)からゲーム開始前画面に遷移
+            button13.addEventListener('click', start2);//モード・コース選択画面(ランキング・初級)からゲーム開始前画面に遷移
+            button14.addEventListener('click', start3);//モード・コース選択画面(ランキング・中級)からゲーム開始前画面に遷移
+            button15.addEventListener('click', setranking);//ゲーム終了画面からランキング登録画面に遷移
+            button16.addEventListener('click', backstart4);//ゲーム終了画面からスタート画面に遷移
+            button17.addEventListener('click', setregist);//ランキング登録画面からランキング登録完了画面に遷移
+            button18.addEventListener('click', backstart5);//ランキング登録完了画面からスタート画面に遷移
+
+            // スタート処理 練習コース
+            function start1() {
                 view5.style.display = 'none'; //コースモード選択画面をオフ
                 view2.style.display = 'block'; //画面２をオン
                 startMsg.style.display = 'block';
@@ -384,6 +462,48 @@
                 startFlag = true;
                 sWait = true;
                 space.classList.add('active');
+
+                flagR = flags[0];
+                flagK = flags[1];
+                flagG = flags[2];
+                flagW = flags[3];
+                flagS = flags[4];
+                flags = [flagR, flagK, flagG, flagW, flagS];
+                localStorage.setItem('flags', JSON.stringify(flags));
+            }
+
+            // スタート処理 ランキングコース・初級
+            function start2() {
+                view5.style.display = 'none'; //コースモード選択画面をオフ
+                view2.style.display = 'block'; //画面２をオン
+                startMsg.style.display = 'block';
+
+                startFlag = true;
+                sWait = true;
+                space.classList.add('active');
+
+                countdownTime = 60;
+
+                flagR = flags[0];
+                flagK = flags[1];
+                flagG = flags[2];
+                flagW = flags[3];
+                flagS = flags[4];
+                flags = [flagR, flagK, flagG, flagW, flagS];
+                localStorage.setItem('flags', JSON.stringify(flags));
+            }
+
+            // スタート処理 ランキングコース・中級
+            function start3() {
+                view5.style.display = 'none'; //コースモード選択画面をオフ
+                view2.style.display = 'block'; //画面２をオン
+                startMsg.style.display = 'block';
+
+                startFlag = true;
+                sWait = true;
+                space.classList.add('active');
+
+                countdownTime = 120;
 
                 flagR = flags[0];
                 flagK = flags[1];
@@ -434,7 +554,6 @@
                     if (timeLeft < 0) {
                     clearInterval(timerInterval);
                     finish();
-                    setscore();
                     timerDisplay.textContent = "タイムアップ!";
                     // タイマー終了後の処理をここに記述する（例：アラートを表示する、他の処理を実行する等）
                     }
@@ -557,7 +676,6 @@
             function wordSet() {
                 if (count == limit) {
                     finish();
-                    setscore();
                 } else {
                     example.innerHTML = '<div>' + wordJP1[ridx[count]] + '</div>';
                     kana.innerHTML = '<div>' + wordJP2[ridx[count]] + '</div>';
@@ -1138,81 +1256,6 @@
                 space.classList.add('active'); // スペースキーをactiveにする
             }
 
-            // 遊び方画面表示
-            function howtoplaying(){
-                view1.style.display = 'none'; //スタート画面１をオフ
-                view3.style.display = 'block'; //遊び方画面３をオン
-            }
-
-            //遊び方からスタート画面に戻る
-            function backstart(){
-                view3.style.display = 'none'; //遊び方画面３をオフ
-                view1.style.display = 'block'; //スタート画面１をオン
-            }
-
-            // 設定画面表示
-            function gamesetting(){
-                view1.style.display = 'none'; //スタート画面１をオフ
-                view4.style.display = 'block'; //設定画面４をオン
-            }
-
-            //遊び方からスタート画面に戻る
-            function backstart2(){
-                view4.style.display = 'none'; //設定画面４をオフ
-                view1.style.display = 'block'; //スタート画面１をオン
-            }
-
-            //遊び方からコース・モード選択画面に戻る
-            function selectmode(){
-                view1.style.display = 'none'; //スタート画面１をオフ
-                view5.style.display = 'block'; //スタート画面１をオン
-            }
-
-            //コース・モードからスタート画面に戻る
-            function backstart3(){
-                view5.style.display = 'none'; //コース・モード選択画面４をオフ
-                view1.style.display = 'block'; //スタート画面１をオン
-            }
-
-            function setranking(){
-                result.style.display = 'none'; //ゲーム終了画面をオフ
-                view6.style.display = 'block'; //ランキング登録画面をオン
-            }
-
-            //コース・モードからスタート画面に戻る
-            function backstart4(){
-                result.style.display = 'none'; //ゲーム終了画面をオフ
-                view1.style.display = 'block'; //スタート画面１をオン
-            }
-
-            //ランキング登録画面からランキング登録完了画面に遷移
-            function setregist(){
-                view6.style.display = 'none'; //ランキング登録画面をオフ
-                view7.style.display = 'block'; //ランキング登録完了画面をオン
-            }
-
-            //コース・モードからスタート画面に戻る
-            function backstart5(){
-                view7.style.display = 'none'; //ゲーム終了画面をオフ
-                view1.style.display = 'block'; //スタート画面１をオン
-            }
-
-            window.addEventListener('DOMContentLoaded', open);//最初からゲーム画面を開きっぱなしにしておく
-            button3.addEventListener('click', selectmode);
-            button4.addEventListener('click', replay);
-            button5.addEventListener('click', howtoplaying);//遊び方画面
-            button7.addEventListener('click', backstart);//遊び方からスタート画面に戻る
-            button8.addEventListener('click', gamesetting);//設定画面
-            button9.addEventListener('click', backstart2);//設定からスタート画面に戻る
-            button10.addEventListener('click', backstart3);//設定からスタート画面に戻る
-            button11.addEventListener('click', start);//モード・コース選択画面からゲーム開始前画面に遷移
-            button12.addEventListener('click', start);//モード・コース選択画面からゲーム開始前画面に遷移
-            button13.addEventListener('click', start);//モード・コース選択画面からゲーム開始前画面に遷移
-            button14.addEventListener('click', start);//モード・コース選択画面からゲーム開始前画面に遷移
-            button15.addEventListener('click', setranking);//ゲーム終了画面からランキング登録画面に遷移
-            button16.addEventListener('click', backstart4);//ゲーム終了画面からスタート画面に遷移
-            button17.addEventListener('click', setregist);//ランキング登録画面からランキング登録完了画面に遷移
-            button18.addEventListener('click', backstart5);//ランキング登録完了画面からスタート画面に遷移
 
             // 設定のスイッチ切り替え sccのshowを付けたり外したりする
             // for (let i = 0; i < onBtns.length; i++) {
@@ -1254,7 +1297,6 @@
                         if (key == 'Escape') { // Escを押した場合
                             isStopped = true;
                             finish();
-                            setscore();
                         }else if(key == 'Shift'){
                             //Shiftは何もしない
                         }else {
