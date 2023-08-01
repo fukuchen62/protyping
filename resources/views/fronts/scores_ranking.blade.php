@@ -7,508 +7,137 @@
 @section('title', 'ランキング')
 
 @section('pageCss')
-    <link rel="stylesheet" href="{{ asset('assets/css/ranking.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/ranking.css') }}">
+<style>
+    .levelButtons {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .levelButton {
+        display: inline-block;
+        padding: 5px 10px;
+        margin-right: 10px;
+        text-decoration: none;
+        color: #fff;
+        background-color: #26567c;
+        border-radius: 5px;
+        font-size: 2em;
+    }
+
+    .levelButton.active {
+        background-color: #5FBFED;
+    }
+</style>
 @endsection
 
 @section('key_visual')
-    {{-- メインコンテンツの内容 --}}
+{{-- メインコンテンツの内容 --}}
 @endsection
 
 @section('content')
 
-    <!-- ここからメイン -->
-    <main id="main" class="main">
-        <div class="mainContent">
-            <!-- パンくずリスト -->
-            <div class="breadCrumb">パンくずリスト</div>
+<!-- ここからメイン -->
+<main id="main" class="main">
+    <div class="mainContent">
+        <!-- パンくずリスト -->
+        <div class="breadCrumb">パンくずリスト</div>
 
-            <!-- タイトル -->
-            <section class="info">
-                <h2>ランキング</h2>
-                <p>ランキングコースに挑戦し、ユーザーネームを登録するとこのページに反映されます。<br>ランキング1位目指して自分の限界に挑戦しよう！</p>
-            </section>
+        <!-- タイトル -->
+        <section class="info">
+            <h2>ランキング</h2>
+            <p>ランキングコースに挑戦し、ユーザーネームを登録するとこのページに反映されます。<br>ランキング1位目指して自分の限界に挑戦しよう！</p>
+        </section>
 
-            <!-- プルダウンメニュー -->
-            <div class="selectWrap">
-                <!-- <select name="word"> -->
-                <select name="word" required>
-                    <!-- required：選択必須を指定 -->
-                    <option value="初級">初級</option>
-                    <option value="中級">中級</option>
-                </select>
+        <!-- プルダウンメニュー -->
+        {{-- <div class="selectWrap">
+            <!-- <select name="word"> -->
+            <select name="word" required>
+                <!-- required：選択必須を指定 -->
+                <option value="初級">初級</option>
+                <option value="中級">中級</option>
+            </select>
+        </div> --}}
+
+        <div class="levelButtons">
+            <a href="{{ route('ranking', ['level_id' => 1]) }}" class="levelButton {{ request()->query('level_id') == 1 ? 'active' : '' }}">初級</a>
+            <a href="{{ route('ranking', ['level_id' => 2]) }}" class="levelButton {{ request()->query('level_id') == 2 ? 'active' : '' }}">中級</a>
+        </div>
+
+
+
+        <!-- 言語選択 -->
+        <nav class="word">
+            <div>
+                <img src="../assets/images/arrow.png" alt="↓ボタン">
+                <a href="#language_6">プログラミングで使う英単語</a>
             </div>
+            <div>
+                <img src="../assets/images/arrow.png" alt="↓ボタン">
+                <a href="#language_1">HTML</a>
+            </div>
+            <div>
+                <img src="../assets/images/arrow.png" alt="↓ボタン">
+                <a href="#language_2">css</a>
+            </div>
+            <div>
+                <img src="../assets/images/arrow.png" alt="↓ボタン">
+                <a href="#language_3">JavaScript</a>
+            </div>
+            <div>
+                <img src="../assets/images/arrow.png" alt="↓ボタン">
+                <a href="#language_4">PHP</a>
+            </div>
+            <div>
+                <img src="../assets/images/arrow.png" alt="↓ボタン">
+                <a href="#language_5">Python</a>
+            </div>
+        </nav>
 
-            <!-- 言語選択 -->
-            <nav class="word">
-                <div>
-                    <img src="../assets/images/arrow.png" alt="↓ボタン">
-                    <a href="#engword">プログラミングで使う英単語</a>
-                </div>
-                <div>
-                    <img src="../assets/images/arrow.png" alt="↓ボタン">
-                    <a href="#html">HTML</a>
-                </div>
-                <div>
-                    <img src="../assets/images/arrow.png" alt="↓ボタン">
-                    <a href="#css">css</a>
-                </div>
-                <div>
-                    <img src="../assets/images/arrow.png" alt="↓ボタン">
-                    <a href="#javascript">JavaScript</a>
-                </div>
-                <div>
-                    <img src="../assets/images/arrow.png" alt="↓ボタン">
-                    <a href="#php">PHP</a>
-                </div>
-                <div>
-                    <img src="../assets/images/arrow.png" alt="↓ボタン">
-                    <a href="#python">Python</a>
-                </div>
-            </nav>
+        <!-- ここから動的 -->
+        <section class="rankingWrap">
+            <div class="rankingInner">
 
-            <!-- ここから動的 -->
-            <section class="rankingWrap">
-                <div class="rankingInner">
-                    <!-- プログラミングでよく使う英単語 -->
-                    <div class="card">
-                        <h3 id="engword">プログラミングでよく使う英単語</h3>
-                        <div class="cardInner">
-                            <div class="cardItem">
-                                <div class="position">
-                                    <img src="../assets/images/gold_crown.png" alt="1位王冠">
-                                    <p>1位</p>
-                                </div>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-                            <div class="cardItem">
-                                <div class="position">
-                                    <img src="../assets/images/silver_crown.png" alt="2位王冠">
-                                    <p>2位</p>
-                                </div>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-                            <div class="cardItem">
-                                <div class="position">
-                                    <img src="../assets/images/bronze_crown.png" alt="3位王冠">
-                                    <p>3位</p>
-                                </div>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
 
-                            <div class="cardItem">
-                                <p>4位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
+                @foreach ($languages as $language)
+                <div class="card">
+                    <h3 id="language_{{ $language->id }}">{{ $language->language_name }}</h3>
+                    <div class="cardInner">
+                        @if (count($scoresByLanguage[$language->id]) > 0)
+                        @foreach ($scoresByLanguage[$language->id] as $index => $score)
+                        <div class="cardItem">
+                            <div class="position">
+                                @if ($index === 0)
+                                <img src="../assets/images/gold_crown.png" alt="1位王冠">
+                                <p>1位</p>
+                                @elseif ($index === 1)
+                                <img src="../assets/images/silver_crown.png" alt="2位王冠">
+                                <p>2位</p>
+                                @elseif ($index === 2)
+                                <img src="../assets/images/bronze_crown.png" alt="3位王冠">
+                                <p>3位</p>
+                                @else
+                                <p>{{ $index + 1 }}位</p>
+                                @endif
                             </div>
-
-                            <div class="cardItem">
-                                <p>5位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>6位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>7位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>8位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>9位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>10位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
+                            <p class="userName">{{ $score->username }}</p>
+                            <p class="score">{{ $score->score }}点</p>
                         </div>
+                        @endforeach
+                        @else
+                        <!-- 代替テキストを表示するためのダミーデータ -->
+                        @for ($i = 0; $i < 10; $i++) <div class="cardItem">
+                            <div class="position">
+                                <p>{{ $i + 1 }}位</p>
+                            </div>
+                            <p class="userName">挑戦してね！</p>
+                            <p class="score">00点</p>
                     </div>
-
-                    <!-- HTML -->
-                    <div class="card">
-                        <h3 id="html">HTML</h3>
-                        <div class="cardInner">
-                            <div class="cardItem">
-                                <div class="position">
-                                    <img src="../assets/images/gold_crown.png" alt="1位王冠">
-                                    <p>1位</p>
-                                </div>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-                            <div class="cardItem">
-                                <div class="position">
-                                    <img src="../assets/images/silver_crown.png" alt="2位王冠">
-                                    <p>2位</p>
-                                </div>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-                            <div class="cardItem">
-                                <div class="position">
-                                    <img src="../assets/images/bronze_crown.png" alt="3位王冠">
-                                    <p>3位</p>
-                                </div>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>4位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>5位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>6位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>7位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>8位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>9位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>10位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CSS -->
-                    <div class="card">
-                        <h3 id="css">CSS</h3>
-                        <div class="cardInner">
-                            <div class="cardItem">
-                                <div class="position">
-                                    <img src="../assets/images/gold_crown.png" alt="1位王冠">
-                                    <p>1位</p>
-                                </div>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-                            <div class="cardItem">
-                                <div class="position">
-                                    <img src="../assets/images/silver_crown.png" alt="2位王冠">
-                                    <p>2位</p>
-                                </div>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-                            <div class="cardItem">
-                                <div class="position">
-                                    <img src="../assets/images/bronze_crown.png" alt="3位王冠">
-                                    <p>3位</p>
-                                </div>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>4位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>5位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>6位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>7位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>8位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>9位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>10位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Javascrip -->
-                    <div class="card">
-                        <h3 id="javascript">JavaScrip</h3>
-                        <div class="cardInner">
-                            <div class="cardItem">
-                                <div class="position">
-                                    <img src="../assets/images/gold_crown.png" alt="1位王冠">
-                                    <p>1位</p>
-                                </div>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-                            <div class="cardItem">
-                                <div class="position">
-                                    <img src="../assets/images/silver_crown.png" alt="2位王冠">
-                                    <p>2位</p>
-                                </div>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-                            <div class="cardItem">
-                                <div class="position">
-                                    <img src="../assets/images/bronze_crown.png" alt="3位王冠">
-                                    <p>3位</p>
-                                </div>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>4位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>5位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>6位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>7位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>8位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>9位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>10位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- PHP -->
-                    <div class="card">
-                        <h3 id="php">PHP</h3>
-                        <div class="cardInner">
-                            <div class="cardItem">
-                                <div class="position">
-                                    <img src="../assets/images/gold_crown.png" alt="1位王冠">
-                                    <p>1位</p>
-                                </div>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-                            <div class="cardItem">
-                                <div class="position">
-                                    <img src="../assets/images/silver_crown.png" alt="2位王冠">
-                                    <p>2位</p>
-                                </div>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-                            <div class="cardItem">
-                                <div class="position">
-                                    <img src="../assets/images/bronze_crown.png" alt="3位王冠">
-                                    <p>3位</p>
-                                </div>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>4位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>5位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>6位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>7位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>8位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>9位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>10位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Python -->
-                    <div class="card">
-                        <h3 id="python">Python</h3>
-                        <div class="cardInner">
-                            <div class="cardItem">
-                                <div class="position">
-                                    <img src="../assets/images/gold_crown.png" alt="1位王冠">
-                                    <p>1位</p>
-                                </div>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-                            <div class="cardItem">
-                                <div class="position">
-                                    <img src="../assets/images/silver_crown.png" alt="2位王冠">
-                                    <p>2位</p>
-                                </div>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-                            <div class="cardItem">
-                                <div class="position">
-                                    <img src="../assets/images/bronze_crown.png" alt="3位王冠">
-                                    <p>3位</p>
-                                </div>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>4位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>5位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>6位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>7位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>8位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>9位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-
-                            <div class="cardItem">
-                                <p>10位</p>
-                                <p class="userName">しんちゃん</p>
-                                <p class="score">00点</p>
-                            </div>
-                        </div>
-                    </div>
+                    @endfor
+                    @endif
                 </div>
-            </section>
-
+            </div>
+            @endforeach
 
             <!-- ランキング、マイスコアボタン -->
             <div class="btnWrap">
@@ -520,17 +149,11 @@
                 </div>
             </div>
 
-
-
-            <div id="btn">
-                <a href="#">
-                    <div class="arrow_up"></div><!-- クラス名変更必要 -->
-                </a>
-            </div>
-        </div>
-    </main>
+    </div>
+</main>
 
 
 @endsection
 
 @section('pageJs')
+@endsection
