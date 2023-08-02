@@ -146,10 +146,6 @@ writing-mode: horizontal-tb;
     }
 }
 
-a{
-    color: #8b8b8b;
-}
-
 /* テーブル */
 
 th{
@@ -824,7 +820,7 @@ img:hover{
     line-height: 50px;
     font-size: 20px;
     color: #8B8B8B;
-    padding-left: 15px;
+    /* padding-left: 15px; */
     box-shadow: -2px -2px 5px 0px rgba(255, 255, 255, 0.5), 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
     /* box-shadow: -1px -1px 1px #668AD8 inset; */
     /* box-shadow: 0 1px 1px rgba(0,0,0,0.2), 0 -2px 3px -1px #6d95ce inset; */
@@ -838,6 +834,7 @@ ul .subMenu1 a{
     line-height: 20px;
     padding-bottom: 7px;
     padding-top: 7px;
+    padding: 10px;
 }
 
 .sidebar ul li a:hover{
