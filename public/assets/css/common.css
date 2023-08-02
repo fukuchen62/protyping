@@ -30,10 +30,11 @@ body {
 
 /* メイン */
 .main {
-    margin: 0 20px;
+    margin: 0 auto;
     background-color: #fff;
-    /* padding: 10px; */
-    /* height: 100vh; */
+    /* width: 320px; */
+    /* padding: 10px 20px; */
+    /* height: 60vh; */
 }
 
 /* デバッグ用 */
@@ -71,610 +72,180 @@ ul {
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    padding-inline-start: 40px;
+    /* padding-inline-start: 40px; */
 }
-
-/* スマホ */
-/* 新 */
-ul, div, img {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-weight: normal;
-}
-
 
 /* ヘッダー */
-header {
+.header {
+    background-color: #26567C;
+    width: 100%;
     border-top: 4px solid#D6A923;
+    color: #fff;
+    /* position: fixed; */
+    /* top: 0;
+    left: 0; */
+    z-index: 100;
 }
 
-/* #nav {
-    background-color: #26567C;
-    color: #fff;
 
+
+/* ロゴのクリックできる範囲を拡大 (54pxサイズ)*/
+.headerLogo a {
+    display: inline-block;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+/* ロゴのサイズ (40pxサイズ）*/
+.headerLogo img {
+    width: 174px;
+}
+
+
+/* ロゴとハンバーガーメニューを横並びにする */
+.container {
+    display: flex;
+    /* flexboxレイアウトを適用したい領域を囲む要素に「display: flex;」と設定すると、この要素が「flexコンテナ」になり */
+    /* 直下の子要素は「flexアイテム」として機能するようになる */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    height: 50px;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+
+
+/* チェックボックスを非表示にする */
+.drawerHidden {
+    display: none;
+}
+
+
+/* ハンバーガーメニューの設置スペース */
+.drawerOpen {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    /* 重なり順を一番上にする */
+    /* background: burlywood; */
+}
+
+
+
+/* ハンバーガーメニューの線のデザイン */
+.drawerOpen span,
+.drawerOpen span:after,
+.drawerOpen span:before {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 20px;
+    border-radius: 3px;
+    background: #fff;
+    /* 箱(線)の色 */
+    transition: 0.5s;
+    position: absolute;
+}
+
+
+
+/* 上の線の位置調整 */
+.drawerOpen span:after {
+    /* background: red; */
+    bottom: 8px;
+}
+
+
+
+/* 下の線の位置調整 */
+.drawerOpen span:before {
+    /* background: blue; */
+    top: 8px;
+}
+
+
+
+/* ハンバーガーメニューがクリックされたら真ん中の線は透明に */
+#drawerInput:checked~.drawerOpen span {
+    background-color: rgba(255, 255, 255, 0);
+    transition: 0.1s;
+}
+
+
+
+/* ハンバーガーメニューがクリックされたら×印になように上下の線を回転 */
+#drawerInput:checked~.drawerOpen span::after {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+#drawerInput:checked~.drawerOpen span::before {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+
+
+/* ナビゲーションのデザイン*/
+.navContent {
+    list-style: none;
+    display: none;
+    width: 100%;
+    position: fixed;
     top: 0;
     left: 0;
-    height: 50px;
-    width: 100%;
-    z-index: 100;
-
-    max-width: 1080px;
-} */
-#nav {
-    background-color: #26567C;
-    color: #fff;
-    height: 50px;
-    width: 100%;
-    z-index: 100;
-    /* max-width: 320px; */
-}
-
-/* チェックボックスを非表示 */
-#nav input[type="checkbox"] {
-    display: none;
-}
-
-/* ロゴ */
-.menuLeft {
-    float: left;
-    line-height: 60px;
-}
-
-/* .menuLeft img {
-    vertical-align: middle;
-    margin-left: 10px;
-    margin-top: 30px; */
-/* padding: 10px; */
-/* width: 270px;
-} */
-
-.menuLeft img {
-    vertical-align: middle;
-    margin-left: 10px;
-    margin-top: 0;
-    padding: 0;
-    width: 174px;
-    margin-bottom: 10px;
-    padding-left: 10px;
+    margin-top: 54px;
+    padding: 20px 0;
+    clear: both;
+    z-index: 1000;
+    background: rgba(59, 163, 228, 0.95);
+    text-align: center;
 }
 
 
 
-
-/* PCメニュー */
-/* .menu {
-    float: right;
-    margin-right: 10px; */
-/* padding: 10px; */
-/* margin-top: 30px;
-} */
-
-/* .menuParent {
-    float: left;
-    margin: 0 0 0 5px;
-    line-height: 40px;
-    font-size: 1.6rem;
-    font-weight: bold;
-    white-space: nowrap;
-    background-color: #5FBFED;
-    border-radius: 10px;
-    padding: 10px;
-    height: 56px;
-
-} */
-
-.menu {
-    margin: 0;
-    display: none;
+/* アイコンがクリックされたらメニューを表示 */
+#drawerInput:checked~.navContent {
+    display: block;
+    opacity: 1;
+    transition: 0.5s;
 }
 
-.menuParent {
-    float: left;
-    line-height: 40px;
-    font-size: 1.6rem;
-    font-weight: bold;
-    white-space: nowrap;
-    background-color: #5FBFED;
-    height: auto;
-    width: 100%;
-    padding: 0px 20px;
-    border-bottom: 1px solid #DDD;
-    border-radius: 0;
-    margin: 0;
-}
-
-
-
-.menuParent .pd {
+.navList a {
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 16px;
+    text-transform: capitalize;
     display: inline-block;
-    width: 100%;
-    padding: 0 0 0 10px;
 }
 
-.menuParent:first-child {
-    border-top: 1px solid #DDD;
+.navList li {
+    padding: 19px 5px;
+    margin: 0 54px;
+    transition: 0.5s;
+    background-color: #5FBFED;
 }
 
-.menu-parent i {
-    padding: 0px 6px;
-}
-
-#menuNavbtn:checked~#nav {
-    position: fixed;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    height: 100%;
-}
-
-/* ハンバーガーメニューがクリックされた時 */
-#menuNavbtn:checked~* .menu {
-    display: block;
+#drawerInput:checked~.navList a,
+#drawerInput:checked~.navList li {
     opacity: 1;
+    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.2s;
 }
 
-#menuNavbtn:checked~* .menuParent {
-    max-height: inherit;
-    overflow-y: visible;
-}
-
-#menuNavbtn:checked~* .menuChild {
-    max-height: 0;
-    overflow-y: hidden;
-    visibility: hidden;
-}
-
-/* 子メニュー */
-.menuParent .menuChild {
-    border-top: 1px solid #DDD;
-    border-left: 1px solid #FFF;
-    border-right: 1px solid #FFF;
-    border-bottom: 1px solid #FFF;
-    position: relative;
-    padding: 0 20px;
-    opacity: 1;
-    top: 0;
-    margin-left: auto;
-    left: auto;
-    width: auto;
-    border-radius: 0;
-}
-
-.menuParent>label:hover {
-    cursor: pointer;
-    cursor: hand;
-}
-
-/* 子メニューがクリックされた時 */
-#nav input[type="checkbox"]:checked~.menuChild {
-    max-height: inherit;
-    overflow-y: visible;
-    visibility: visible;
-}
-
-.angletoggle:before {
-    content: "\f107";
-}
-
-#nav input[type="checkbox"]:checked~* .angletoggle:before {
-    content: "\f106";
-}
-
-/* 子メニュー */
-.menuChild li {
-    font-size: 14px;
-    border-bottom: 1px solid #DDD;
-}
-
-/* 余分な最後の線を消去 */
-.menuChild li:last-child {
-    border: none;
-}
-
-.menuChild li i {
-    margin-right: 3px;
-}
-
-
-/* パソコンでは V を非表示 */
-/* .menuParent .pd {
-    display: none;
-} */
-
-
-
-/* PCメニューの最後の項目 */
-/* .menuParent:last-child {
-    margin-right: 0px;
-} */
-
-
-
-/* #menuNavbtn {
-    display: none;
-    cursor: pointer;
-    cursor: hand;
-} */
-
-#menuNavbtn {
-    display: none;
-    cursor: pointer;
-    cursor: hand;
-}
-
-#nav #navBtn {
-    display: block;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
-#navBtn span {
-    display: block;
-    width: 40px;
-    height: 40px;
-    /* background-color: #333; */
-}
-
-#navBtn span span {
-    display: block;
-    overflow: hidden;
-    width: 1px;
-    height: 1px;
-}
-
-#navBtn span span::before,
-#navBtn span span::after,
-#navBtn span::after {
-    position: absolute;
-    left: 10px;
-    content: "";
-    width: 20px;
-    height: 3px;
-    background-color: #FFF;
-}
-
-/* 上の棒 */
-#navBtn span span::before {
-    top: 10px;
-}
-
-#menuNavbtn:checked~#nav label#navBtn span span::before {
-    top: 19px;
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-}
-
-/* 下の棒 */
-#navBtn span::after {
-    bottom: 10px;
-}
-
-#menuNavbtn:checked~#nav label#navBtn>span::after {
-    bottom: 18px;
-    transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
-}
-
-/* 中の棒 */
-#navBtn span span::after {
-    top: 18px;
-}
-
-#menuNavbtn:checked~#nav label#navBtn span span::after {
+#drawerInput {
     display: none;
 }
-
-
-
-/* PCメディアクエリ */
-@media screen and (min-width: 1000px) {
-    #nav {
-        height: 144px;
-        padding: 0;
-        margin: 0 auto;
-        max-width: 1080px;
-    }
-
-    .menuLeft img {
-        margin-top: 30px;
-        width: 270px;
-    }
-
-    .menu {
-        float: right;
-        margin-right: 10px;
-        /* padding: 10px; */
-        margin-top: 30px;
-    }
-
-    .menuParent {
-        width: 110px;
-        text-align: center;
-        margin: 0 0 0 5px;
-        border-radius: 10px;
-        padding: 10px;
-        height: 56px;
-    }
-
-    .menuParent .pd {
-        display: none;
-    }
-
-    .menuParent:last-child {
-        margin-right: 0px;
-    }
-
-    /* ドロップダウンメニュー */
-    .menuParent {
-        position: relative;
-    }
-
-    .menuParent .menuChild {
-        visibility: hidden;
-        opacity: 0;
-        position: absolute;
-        margin-left: -40px;
-        width: auto;
-        box-sizing: border-box;
-        padding: 0px 20px;
-        background-color: #90CEEC;
-        /* border: 1px solid #000; */
-        border-radius: 10px;
-        margin-top: 10px;
-    }
-
-    .menuParent:hover .menuChild {
-        visibility: visible;
-        opacity: 1;
-    }
-
-
-
-
-    #nav #navBtn {
-        display: none;
-    }
-
-    .headerAbout {
-        display: none;
-    }
-
-    .headerUpdate {
-        display: none;
-    }
-
-    .headerTerms {
-        display: none;
-    }
-
-    .headerPrivacy {
-        display: none;
-    }
-
-}
-
-/* スマホ */
-@media screen and (max-width: 999px) {
-    /* 🌟1000px */
-
-    /* スマホの際に V を表示 */
-    /* .menuParent .pd {
-        display: inline-block;
-        width: 100%;
-        padding: 0 0 0 10px;
-    } */
-
-    /* .menu {
-        display: none;
-        margin: 0;
-    } */
-
-    /* .menuLeft img {
-        margin-top: 0;
-        padding: 0;
-        width: 174px;
-        margin-bottom: 10px;
-        padding-left: 10px;
-    } */
-
-    /* .menuParent {
-        height: auto;
-        width: 100%;
-        padding: 0px 20px;
-        border-bottom: 1px solid #DDD;
-        border-radius: 0;
-        margin: 0;
-    } */
-
-    /* .menuParent:first-child {
-        border-top: 1px solid #DDD;
-    } */
-
-    /* .menu-parent i {
-        padding: 0px 6px;
-    } */
-
-    /* メニューを移動させないため */
-    /* #menuNavbtn:checked~#nav {
-        position: fixed;
-        overflow-y: scroll;
-        overflow-x: hidden;
-        height: 100%;
-    } */
-}
-
-/* ドロップダウンメニュー */
-/* .menuParent {
-    position: relative;
-} */
-
-/* .menuParent .menuChild {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    margin-left: -40px;
-    width: auto;
-    box-sizing: border-box;
-    padding: 0px 20px;
-    background-color: #90CEEC; */
-/* border: 1px solid #000; */
-/* border-radius: 10px;
-    margin-top: 10px;
-} */
-
-/* パソコン用 */
-@media screen and (min-width: 1000px) {
-
-    /* 🌟999 */
-    /* .menuParent:hover .menuChild {
-        visibility: visible;
-        opacity: 1;
-    } */
-}
-
-/* スマホ用 */
-@media screen and (max-width: 999px) {
-
-    /* ハンバーガーメニューがクリックされた時 */
-    /* #menuNavbtn:checked~* .menu {
-        display: block;
-        opacity: 1;
-    } */
-
-    /* #menuNavbtn:checked~* .menuParent {
-        max-height: inherit;
-        overflow-y: visible;
-    } */
-
-    /* #menuNavbtn:checked~* .menuChild {
-        max-height: 0;
-        overflow-y: hidden;
-        visibility: hidden;
-    } */
-
-    /* 子メニュー */
-    /* .menuParent .menuChild {
-        border-top: 1px solid #DDD;
-        border-left: 1px solid #FFF;
-        border-right: 1px solid #FFF;
-        border-bottom: 1px solid #FFF;
-        position: relative;
-        padding: 0 20px;
-        opacity: 1;
-        top: 0;
-        margin-left: auto;
-        left: auto;
-        width: auto;
-        border-radius: 0;
-    } */
-
-    /* .menuParent>label:hover {
-        cursor: pointer;
-        cursor: hand;
-    } */
-
-    /* 子メニューがクリックされた時 */
-    /* #nav input[type="checkbox"]:checked~.menuChild {
-        max-height: inherit;
-        overflow-y: visible;
-        visibility: visible;
-    } */
-
-    /* .angletoggle:before {
-        content: "\f107";
-    }
-
-    #nav input[type="checkbox"]:checked~* .angletoggle:before {
-        content: "\f106";
-    } */
-}
-
-/* 子メニュー */
-/* .menuChild li {
-    font-size: 14px;
-    border-bottom: 1px solid #DDD;
-} */
-
-/* 余分な最後の線を消去 */
-/* .menuChild li:last-child {
-    border: none;
-}
-
-.menuChild li i {
-    margin-right: 3px;
-} */
-
-/* ハンバーガー */
-/* #nav #navBtn {
-    display: none;
-} */
-
-@media screen and (max-width: 999px) {
-    /* #nav #navBtn {
-        display: block;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-    }
-
-    #navBtn span {
-        display: block;
-        width: 40px;
-        height: 40px; */
-    /* background-color: #333; */
-    /* }
-
-    #navBtn span span {
-        display: block;
-        overflow: hidden;
-        width: 1px;
-        height: 1px;
-    }
-
-    #navBtn span span::before,
-    #navBtn span span::after,
-    #navBtn span::after {
-        position: absolute;
-        left: 10px;
-        content: "";
-        width: 20px;
-        height: 3px;
-        background-color: #FFF;
-    } */
-
-    /* 上の棒 */
-    /* #navBtn span span::before {
-        top: 10px;
-    }
-
-    #menuNavbtn:checked~#nav label#navBtn span span::before {
-        top: 19px;
-        transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
-    } */
-
-    /* 下の棒 */
-    /* #navBtn span::after {
-        bottom: 10px;
-    }
-
-    #menuNavbtn:checked~#nav label#navBtn>span::after {
-        bottom: 18px;
-        transform: rotate(-135deg);
-        -webkit-transform: rotate(-135deg);
-    } */
-
-    /* 中の棒 */
-    /* #navBtn span span::after {
-        top: 18px;
-    }
-
-    #menuNavbtn:checked~#nav label#navBtn span span::after {
-        display: none;
-    } */
-}
-
 
 /* フォントサイズ */
 h2 {
@@ -1159,10 +730,11 @@ padding: 15px;
 
 /* w190 てかりなし*/
 
-/* メディアクエリ */
+/* メディアクエリ(PC) */
 @media screen and (min-width: 1000px) {
     .header {
         border-top: 5px solid#D6A923;
+        margin-inline: auto;
     }
 
     .container {
@@ -1170,11 +742,13 @@ padding: 15px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 30px;
+        padding: 0 10px;
+        max-width: 1080px;
+        margin-inline: auto;
     }
 
     .header img {
-        width: 120px;
+        width: 270px;
     }
 
     .headerLogo a {
@@ -1201,14 +775,23 @@ padding: 15px;
     }
 
     .navList li {
-        margin: 0 0 0 10px;
+        margin: 0 0 0 5px;
         border-radius: 10px;
+        width: 110px;
+        padding: 19px 0;
+    }
+
+    .navList .upDate,
+    .navList .about,
+    .navList .terms,
+    .navList .privacy {
+        display: none;
     }
 
     .navList a {
         font-size: 16px;
-        width: 119px;
-
+        /* width: 119px; */
+        text-align: center;
     }
 
     .breadCrumb-001 {
@@ -1229,7 +812,7 @@ padding: 15px;
 }
 
 .footerWrap {
-    max-width: 1080px;
+    max-width: 320px;
     margin-inline: auto;
 }
 
@@ -1271,9 +854,13 @@ padding: 15px;
 
     }
 
+    .footerWrap {
+        max-width: 1080px;
+    }
+
     #footer .innerBlock {
         display: block;
-        margin: 40px 0 0 0;
+        margin-top: 40px;
         line-height: 3;
     }
 
@@ -1365,6 +952,7 @@ padding: 15px;
     .copyright {
         margin-block-start: 70px;
         font-size: 1.6rem;
+        padding: 20px;
     }
 
     .footerTitle .engWord {

@@ -61,21 +61,21 @@ h3{
 	}
 }
 
-a{
+.boxTerms a{
 	font-size: 14px;
 	margin-left: 15px;
 }
 
-p{
+.boxTerms p{
 	margin-left: 10px;
 	text-indent: 10px;
 	line-height: 2rem;
 }
-ol {
+.boxTerms ol {
 	list-style: disc;
 	padding-inline-start: 25px;
 }
-li{
+.boxTerms ol li{
 	font-size: 15px;
     margin-bottom: 10px;
 	padding-inline-start: 5px
@@ -87,7 +87,7 @@ li{
 @media screen and (min-width: 768px) {
     /* 共通 */
 
-    li{
+    .boxTerms ol li{
 
 		font-size:17px;
         margin-bottom: 10px;
@@ -95,7 +95,7 @@ li{
 		line-height: 2rem;
     }
 
-	a{
+	.boxTerms a{
 	font-size: 10px;
 	margin-left: 20px;
 	}
