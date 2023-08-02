@@ -6,7 +6,6 @@
 
     {{-- ディスカッション --}}
     <meta name="description" content="">
-
     {{-- キーワード --}}
     <meta name="keywords" content="">
 
@@ -21,9 +20,9 @@
     {{-- ページタイトル --}}
     <title>@yield('title')</title>
 
-    <!-- 共通CSS -->
     <!-- reset.cssファイルを読み込む -->
     <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
+    <!-- 共通CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/common.css') }}">
 
     {{-- 独自のCSSファイルを読み込む --}}
@@ -41,11 +40,17 @@
     <link
         href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap"
         rel="stylesheet">
+
+    <!-- アイコンフォント -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <script defer src="https://use.fontawesome.com/releases/v6.4.0/js/all.js"></script>
+
 </head>
 
 <body>
     {{-- ヘッダー --}}
-    @include('includes.front_top_header')
+    {{-- @include('includes.front_top_header') --}}
+    @include('includes.front_header')
 
     {{-- メインコンテンツ --}}
     @yield('content')
