@@ -437,7 +437,7 @@
             }
 
             window.addEventListener('DOMContentLoaded', open);//最初からゲーム画面を開きっぱなしにしておく
-            button3.addEventListener('click', selectmode);
+            button3.addEventListener('click', start1);
             button4.addEventListener('click', replay);
             button5.addEventListener('click', howtoplaying);//遊び方画面
             button7.addEventListener('click', backstart);//遊び方からスタート画面に戻る
@@ -455,7 +455,7 @@
 
             // スタート処理 練習コース
             function start1() {
-                view5.style.display = 'none'; //コースモード選択画面をオフ
+                view1.style.display = 'none'; //コースモード選択画面をオフ
                 view2.style.display = 'block'; //画面２をオン
                 startMsg.style.display = 'block';
 
