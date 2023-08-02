@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-
 .main{
     background-color: #26567C;
     /* margin-left: 20px;
@@ -33,6 +32,7 @@ h2{
 @media screen and (min-width: 1000px) {
 h2{
         font-size: 4rem;
+        margin-top: 150px;
     }
 }
 
@@ -48,12 +48,11 @@ p{
 }
 
 .updateInformation .updateList li{
-display: flex;
-justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
-
-    .updateInformation{
+.updateInformation{
         /* width: 1000px; */
         /* height: 150px; */
         /* margin-right: auto;
@@ -70,45 +69,8 @@ justify-content: space-between;
         box-shadow: 3px 5px 3px #60C8DA;
     }
 
-.updateList .updateImg{
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-}
-
 @media screen and (min-width: 1000px) {
-.updateList .updateImg{
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-}
-}
-.updateImg{
-    /* width: 80px;
-    height: 70px;
-    text-align: right;
-    float: right; */
-     /* aspect-ratio: 11/4; */
-    object-fit: cover;
-    /* max-width: 80px; */
-    height: auto;
-    text-align: right;
-    float: right;
-}
-
-@media screen and (min-width: 1000px)
-{
-    .updateImg{
-        width: 600px;
-        height: 600px;
-        object-fit: cover;
-        aspect-ratio: 13 / 10;
-        }
-}
-
-
-@media screen and (min-width: 1000px) {
-    .updateInformation{
+.updateInformation{
         /* width: 1000px; */
         height: auto;
         /* height:auto; */
