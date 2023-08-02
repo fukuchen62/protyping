@@ -28,6 +28,11 @@
             $json_array = json_encode($json_array); // PHPの配列をJSON形式の文字列に変換
             //var_dump($json_array); // デバッグ用に配列を表示（必要に応じてコメントアウト）
         @endphp
+
+        @php
+            $languageValue = htmlspecialchars($_GET['language'] ?? '', ENT_QUOTES, 'UTF-8');
+            $levelValue = htmlspecialchars($_GET['level'] ?? '', ENT_QUOTES, 'UTF-8');
+        @endphp
         {{-- デバッグ用使うときは親タグのdivをtableにすること --}}
         {{-- @foreach($items as $item)
             <tr>
@@ -400,7 +405,12 @@
             let flags = [flagR, flagK, flagG, flagW, flagS];
             let ridx, limit, begin, count, idx1, idx2, pattern, temp, correct, miss;
             let over1, over2, over3, left1, left2, left3;
+            let score = 0; //スコアをグローバル変数として用意する
+            let speed = 0; //スピードをグローバル変数として用意する
+            let accuracy = 0; //精度をグローバル変数として用意する
 
+            let languageValue = @json($languageValue); //スーパーグローバル変数で得たlanguage_idの値をjavaに渡す
+            let levelValue = @json($levelValue); //スーパーグローバル変数で得たlevel_idの値をjavaに渡す
 
             // 遊び方画面表示
             function howtoplaying(){
@@ -740,7 +750,7 @@
                 const resList = document.getElementById('example-list');
                 const resData = result.querySelectorAll('.result-data');
 
-                let speed, accuracy, score;
+                // let speed, accuracy, score;
                 speed = correct / time * 60 * 1000;
                 accuracy = correct / (correct + miss);
                 score = isStopped ? '-' : Math.floor(speed * accuracy ** 3); // スコアを数値として設定
@@ -888,14 +898,20 @@
             // 得点をデータベースに保存
             function setscore() {
                 let time = new Date() - begin;
-                let speed, accuracy, score;
-                speed = correct / time * 60 * 1000;
-                accuracy = correct / (correct + miss);
-                score = isStopped ? '-' : Math.floor(speed * accuracy ** 3);
+                // let speed, accuracy, score;
+                // speed = correct / time * 60 * 1000;
+                // accuracy = correct / (correct + miss);
+                // score = isStopped ? '-' : Math.floor(speed * accuracy ** 3);
 
                 // scoreをデータベースに登録したい
                 // JavaScriptのデータをオブジェクトに格納してJSON形式に変換
-                let dataToSend = { score: score };
+                let dataToSend = {
+                    language_id:languageValue,
+                    level_id:levelValue,
+                    user_id:998,
+                    username:"testtest",
+                    score: score,
+                };
 
                 // デバッグ用にコンソールに出力して確認
                 console.log(score); // スコア

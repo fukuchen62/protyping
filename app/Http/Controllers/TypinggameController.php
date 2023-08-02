@@ -73,17 +73,20 @@ class TypinggameController extends Controller
     {
         // ゲーム結果(スコア)の送信(ランキング作成のため)
         $score = $request->input('score');
-
+        $language_id = $request->input('language_id');
+        $level_id = $request->input('level_id');
+        $user_id = $request->input('user_id');
+        $username = $request->input('username');
         // デバッグ用にログに出力して確認
         Log::info('Score received: ' . $score);
 
         // データベースに登録
         // 現状スコア以外はダミーデータを登録しておく
         $scoreModel = new Score();
-        $scoreModel->language_id = 1;
-        $scoreModel->level_id = 1;
-        $scoreModel->user_id = 999;
-        $scoreModel->username = "test";
+        $scoreModel->language_id = $language_id;
+        $scoreModel->level_id = $level_id;
+        $scoreModel->user_id = $user_id;
+        $scoreModel->username = $username;
         $scoreModel->score = $score;
         $scoreModel->save();
 
