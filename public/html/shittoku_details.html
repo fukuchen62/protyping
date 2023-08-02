@@ -94,28 +94,13 @@
             <!-- パンくずリスト  -->
             <ol class="breadCrumb-001">
                 <li><a href="#">ホーム</a></li>
-                <!-- <li><a href="#">カテゴリー</a></li> -->
-                <li><a href="#">プログラミングでよく使う英単語</a></li>
+                <li><a href="#">知っトク情報一覧</a></li>
+                <li><a href="#">開発環境セットアップ</a></li>
             </ol>
 
-            <!-- flexbox用 -->
+            <!-- flexbox -->
             <div class="mainInner">
 
-                <!-- サイドバー -->
-                <aside class="sidebar">
-                    <!-- <nav class="globalNav">辞書</nav> -->
-                    <ul>
-                        <!-- <li class="globalNav">辞書</li> -->
-                        <li class="subMenu1 active"><a href="../html/dictionary_details.html">開発環境セットアップ</a></li>
-                        <li class="subMenu2"><a href="#">WordPress</a></li>
-                        <li class="subMenu3"><a href="#">おすすめWebアプリ</a></li>
-                        <li class="subMenu4"><a href="#">おすすめWebサイト</a></li>
-                        <li class="subMenu5"><a href="#">ショートカット</a></li>
-                        <li class="subMenu6"><a href="#">資格</a></li>
-                        <li class="subMenu7"><a href="#">Chrome拡張機能</a></li>
-                        <li class="subMenu8"><a href="#">卒業生の作品</a></li>
-                    </ul>
-                </aside>
 
                 <article class="mainContainer">
 
@@ -124,7 +109,8 @@
 
                         <!-- タイトルコーナー -->
                         <h2 class="title">開発環境<br>セットアップ</h2>
-                        <p class="overview">このページについての説明文。このページについての説明ページについての説明文。
+                        <p class="overview">このページについての説明文。このページについての説明文。このページについての説明文。このページについて説明文。
+                        このページについての説明文。このページについての説明文。
                                         </p>
 
                     </section>
@@ -134,6 +120,10 @@
 
                     <!-- 目次 -->
                     <section>
+
+                        <h3>見出しテストです</h3>
+
+                        <h4>小見出しテストです</h4>
 
                     </section>
 
@@ -149,11 +139,30 @@
 
                 </article>
 
+                <!-- サイドバー -->
+                <aside class="sidebar">
+                    <!-- <nav class="globalNav">辞書</nav> -->
+                    <ul>
+                        <!-- <li class="globalNav">辞書</li> -->
+                        <li class="subMenu1 active"><a href="../html/shittoku_details.html">開発環境<br>セットアップ</a></li>
+                        <li class="subMenu2"><a href="#">WordPress</a></li>
+                        <li class="subMenu3"><a href="#">おすすめ<br>Webアプリ</a></li>
+                        <li class="subMenu4"><a href="#">おすすめ<br>Webサイト</a></li>
+                        <li class="subMenu5"><a href="#">ショートカット</a></li>
+                        <li class="subMenu6"><a href="#">資格</a></li>
+                        <li class="subMenu7"><a href="#">Chrome拡張機能</a></li>
+                        <li class="subMenu8"><a href="#">卒業生の作品</a></li>
+                    </ul>
+                </aside>
+
+
             </div>
             <!-- 一覧を見る -->
+
             <div class="linkBtnBox">
                 <a href="" class="linkBtn">一覧に戻る</a>
             </div>
+
         </div>
 
     </main>
@@ -172,17 +181,6 @@
     </footer>
 
     <!-- サイドバークリックしたら色変わる -->
-    <script>
-        const listItems = document.querySelectorAll(".sidebar li");
-
-        function activeLink() {
-            listItems.forEach((item) => item.classList.remove("active"));
-            this.classList.add("active");
-        }
-
-        listItems.forEach((item) => {
-            item.addEventListener("click", activeLink);
-        });
-    </script>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>
