@@ -51,7 +51,7 @@ class MainController extends Controller
                 ->where('level_id', $selectedLevel) // レベル別のスコアを取得
                 ->where('is_show', 1)
                 ->orderBy('score', 'desc')
-                ->take(10)
+                ->take(3)
                 ->get();
 
             $scoresByLanguage[$language->id] = $scores;
