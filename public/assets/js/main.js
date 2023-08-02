@@ -38,19 +38,33 @@ function delete_confirm_dialog(msg, url) {
     }
 }
 
+
+// サイドバークリックしたら色変わる処理
+    const listItems = document.querySelectorAll(".sidebar li");
+// サイドバーの中のリストを取得する
+function activeLink() {
+    listItems.forEach((item) => item.classList.remove("active"));
+
+            this.classList.add("active");
+        }
+        listItems.forEach((item) => {
+            item.addEventListener("click", activeLink);
+        });
+
+
 // サイドバー
-var $subNav = $('#sub-nav');
+// var $subNav = $('#sub-nav');
 
-$('.sub-menu > a').on('click', function (e) {
-    e.preventDefault();
-    var index = $(this).parent().index() + 1;
-    $subNav.find('#sub-nav' + index).addClass('is-active');
+// $('.sub-menu > a').on('click', function (e) {
+//     e.preventDefault();
+//     var index = $(this).parent().index() + 1;
+//     $subNav.find('#sub-nav' + index).addClass('is-active');
 
-    $('#sidebar').addClass('is-open-submenu');
-});
+//     $('#sidebar').addClass('is-open-submenu');
+// });
 
 // サブメニューのタイトルをクリックすると閉じる
-$('.sub-menu-head').on('click', function () {
-    $(this).parent().removeClass('is-active');
-    $('#sidebar').removeClass('is-open-submenu');
-});
+// $('.sub-menu-head').on('click', function () {
+//     $(this).parent().removeClass('is-active');
+//     $('#sidebar').removeClass('is-open-submenu');
+// });
