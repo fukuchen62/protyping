@@ -12,16 +12,22 @@
 ------------------------------ */
 
 
-.main {
-    height:100%;
-    background-color: #fff;
-    padding: 15px;
+.main{
+    text-align: center;
+    width: calc(100vw - 40px);
+    margin-bottom: 20px;
+	margin-left: 20px;
+    padding: 10px;
 }
 
-/* パンくず */
-.breadCrumb {
-    color: #8b8b8b;
-    left: 10px;
+
+@media (min-width:1000px) {
+	.main {
+	width: 1000px;
+    margin-bottom: 20px;
+	margin-left: calc((100vw - 1000px) / 2);
+    padding: 20px;
+}
 }
 
 /* Aboutページのタイトル */
@@ -33,7 +39,7 @@
     margin-bottom: 40px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1000px) {
     .title {
         font-size: 4.4rem;
     }
@@ -47,7 +53,7 @@
     margin-bottom: 20px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1000px) {
     .landingAboutSub ,.landingHowtoSub {
         font-size: 2.4rem;
     }
@@ -62,6 +68,16 @@
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+
+@media screen and (min-width: 1000px) {
+.landingHowto , .landingAbout{
+    margin-left: 120px;
+    margin-right: 120px;
+    padding-left: 100px;
+    padding-right: 100px;
+    }
 }
 
 /* 画像の位置 */
@@ -84,13 +100,11 @@
 }
 
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1000px) {
     .aboutImage {
         max-width: 552px;
     }
 }
-
-
 
 /* セクション毎の説明文章 */
 .aboutText {
@@ -101,14 +115,6 @@
 .aboutTextBox {
     padding: 10px;
 }
-
-@media screen and (min-width: 768px) {
-    .aboutTextBox{
-        padding-left: 150px;
-        padding-right: 150px;
-    }
-}
-
 
 /* 下部の空白 */
 .landingHowto {
