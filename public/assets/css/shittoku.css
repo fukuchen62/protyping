@@ -22,10 +22,14 @@
 
 }
 
+h3{
+    font-size:2rem;
+}
+
 /* パンくず */
 .breadCrumb {
     color: #8b8b8b;
-    left: 10px;
+    /* left: 10px; */
 }
 
 
@@ -36,10 +40,16 @@
     flex-direction: row-reverse; /* サイドバーを右側にする */
 }
 
+@media screen and (min-width: 1000px) {
+    .wrap{
+        margin:0 auto;
+        max-width:1080px;
+    }
+}
 
 /* メインコンテイナー */
 .mainContainer {
-    width: calc(100% - 176px);
+    /* width: calc(100% - 176px); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,7 +66,6 @@
 .side {
     width: 176px;
     background: #fff;
-    width: 176px;
     height: 100%;
     border: 1px solid #8B8B8B;
     /* transition: all 0.5s; */
@@ -113,24 +122,33 @@
     letter-spacing: 0.1rem;
     margin-top: 30px;
     margin-bottom: 40px;
+    font-size: 2.2rem;
 }
-@media screen and (min-width: 768px) {
+
+@media screen and (min-width: 1000px) {
     .title {
-        font-size: 3rem;
+        font-size: 4rem;
     }
+
+    /* #pageTop{
+    max-width:1080px;
+} */
 }
 
 /* タイトル下のPタグの文章 */
 .overview {
-    display: inline-block;
-    margin-bottom: 30px;
+    /* display: inline-block; */
+    /* margin-bottom: 30px; */
+    margin:30px auto;
+    max-width:425px;
 }
-@media screen and (min-width: 768px) {
+
+/* @media screen and (min-width: 768px) {
     .overview{
         padding-left: 100px;
         padding-right: 100px;
     }
-}
+} */
 
 
 
