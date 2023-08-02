@@ -36,12 +36,10 @@
     <!-- ヘッダー -->
     <header id="header" class="header">
         <div class="container">
-
             <!-- ヘッダーロゴ -->
             <h1 class="headerLogo">
-                    <a href=""><img src="" alt="タイプコード" srcset=""></a>
+                    <a href=""><img src="../assets/images/logo.jpg" alt="タイプコード"></a>
                 </h1>
-
             <!-- ハンバーガーメニュー部分 -->
             <div class="hanmburger">
                 <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
@@ -50,33 +48,42 @@
                 <label for="drawerInput" class="drawerOpen">
                     <span></span>
                 </label>
-
                 <!-- ナビゲーション -->
                 <nav class="navContent">
                     <ul class="navList">
-                        <li class="home">
-                            <a href="">HOME</a>
+                        <li class="game">
+                            <a href="">ゲーム</a>
                         </li>
                         <li class="dictionary">
-                            <a href="">辞書</a>
+                            <a href="">辞書</a><!-- リンク先はデフォルトを英単語にする -->
                         </li>
                         <li class="ranking">
                             <a href="">ランキング</a>
                         </li>
-                        <li class="MyScore">
-                            <a href="">MyScore</a>
+                        <li class="myScore">
+                            <a href="">マイスコア</a>
                         </li>
                         <li class="shittoku">
                             <a href="">知っトク情報</a>
                         </li>
+                        <li class="upDate">
+                            <a href="">更新情報</a>
+                        </li>
+                        <li class="about">
+                            <a href="">アバウト</a>
+                        </li>
                         <li class="contact">
                             <a href="">お問い合わせ</a>
                         </li>
+                        <li class="terms">
+                            <a href="">利用規約</a>
+                        </li>
+                        <li class="privacy">
+                            <a href="">プライバシーポリシー</a>
+                        </li>
                     </ul>
                 </nav>
-
             </div>
-
         </div>
     </header>
 
@@ -86,8 +93,8 @@
         <!-- パンくずリスト html-->
         <ol class="breadCrumb-001">
             <li><a href="#">ホーム</a></li>
-            <li><a href="#">カテゴリー</a></li>
-            <li><a href="#">タイトル</a></li>
+            <li><a href="#">About</a></li>
+            <!-- <li><a href="#">タイトル</a></li> -->
         </ol>
 
         <!-- タイトル -->
@@ -129,18 +136,66 @@
 
     </main>
 
-
-
-    <footer>
-        <div class="footer">
+    <!-- フッター -->
+    <footer id="footer" class="footer outerBlock">
+        <div class="footerWrap">
             <div class="footerLogo">
-                <a href=""><img src="" alt="タイプコード" srcset=""></a>
+                <a href=""><img src="../assets/images/logo.jpg" alt="タイプコード"></a>
             </div>
-            <div class="copyBox">
-                <p class="copyright">Copyright©タイプコード All Rights Reserved.
+            <div class="innerBlock">
+                <div class="footerContent">
 
-                </p>
+                    <div class="contentItem">
+                        <div class="footerNav">
+                            <div class="footerTitle"><a href="">ゲーム</a></div>
+                            <div class="footerTitle"><a href="">辞書</a></div>
+                            <!-- <ul>
+                                <li class="engWord"><a href="">プログラミングでよく使う英単語</a></li>
+                                <li><a href="">HTML</a></li>
+                                <li><a href="">CSS</a></li>
+                                <li><a href="">JavaScrip</a></li>
+                                <li><a href="">PHP</a></li>
+                                <li><a href="">Python</a></li>
+                            /ul> -->
+                            <div class="footerTitle"><a href="">ランキング</a></div>
+                            <div class="footerTitle"><a href="">マイスコア</a></div>
+                        </div>
+                    </div>
+
+                    <div class="contentItem">
+                        <div class="footerNav">
+                            <div class="footerTitle"><span>知っトク情報</span></div>
+                            <!-- <ul>
+                                    <li><a href="">知っトク情報一覧</a></li> -->
+                            <!-- <li><a href="">開発環境セットアップ</a></li>
+                                    <li><a href="">WordPress</a></li>
+                                    <li><a href="">おすすめWebアプリ</a></li>
+                                    <li><a href="">おすすめWebサイト</a></li>
+                                    <li><a href="">ショートカット</a></li>
+                                    <li><a href="">資格</a></li>
+                                    <li><a href="">Chrome拡張機能</a></li>
+                                    <li><a href="">卒業生の作品</a></li> -->
+                            <!-- </ul> -->
+                        </div>
+                        <div class="footerTitle"><a href="">更新情報</a></div>
+                        <div class="footerTitle"><a href="">アバウト</a></div>
+                    </div>
+
+
+                    <div class="contentItem">
+                        <div class="footerNav">
+                            <div class="footerTitle"><a href="">お問い合わせ</a></div>
+                            <div class="footerTitle"><a href="">利用規約</a></div>
+                            <div class="footerTitle"><a href="">プライバシーポリシー</a></div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+        </div>
+        <div class="copyright">
+            <small>Copyright©タイプコード All Rights Reserved.</small>
         </div>
     </footer>
 </body>
+</html>
