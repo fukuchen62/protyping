@@ -38,6 +38,9 @@ h3{
 	height: 1rem;
 	background-color: #ffff;
 }
+.PrivacyP{
+	margin-bottom:10px;
+}
 /* 三角 */
 .arrow_up::before {
 	position: absolute;
@@ -61,9 +64,7 @@ h3{
     font-size: 4rem;
 }
 
-.PrivacyP{
-	margin-bottom:10px;
-}
+
 
 	.boxPrivacy{
 		max-width:520px;
