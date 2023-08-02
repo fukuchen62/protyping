@@ -27,10 +27,22 @@
     }
 }
 
+
+.wrap {
+    margin-top: 80px;
+}
+@media screen and (min-width: 1000px) {
+    .wrap {
+        margin-top: 100px;
+    }
+}
+
+
 /* メインコンテナーとサイドバーのflexbox */
 .mainInner {
     width: 100%;
     display: flex;
+    margin-top: 60px;
 
 }
 /* 横幅1000px以下の時はフレックスボックスを止める */
@@ -44,7 +56,6 @@
 .mainContainer:nth-child(1)  {
     /* サイドバーを除いて横幅可変 */
     width: calc(100% - 176px);
-    padding-top: 100px;
     margin: auto;
 }
 
@@ -213,9 +224,10 @@
 }
 
 /* フォントサイズ */
-/* h2{
-    margin: 30px 0 5px 0;
-} */
+h2{
+    margin: 150px 0 5px 0;
+}
+
 
 @media screen and (min-width: 1000px) {
 h2{
@@ -307,7 +319,7 @@ ul .subMenu4 a{
     background-color: #5FBFED;
     padding: 10px;
     border-radius: 10px;
-    margin-top: 118px;
+    /* margin-top: 118px; */
     max-width: 648px;
     margin: auto;
 }
