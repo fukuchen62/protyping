@@ -1,61 +1,61 @@
 @charset "utf-8";
 
-.main{
+.main {
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    background-color:#26567C;
+    background-color: #26567C;
 }
 
 /* ゲーム画面 */
-h2{
-    font-size:6.4rem;
+h2 {
+    font-size: 6.4rem;
     /* text-align: center; */
 }
 
-#gameBody{
-    border:#817F6E 2px solid;
-    border-radius:10px;
+#gameBody {
+    border: #817F6E 2px solid;
+    border-radius: 10px;
     text-align: center;
-    background:linear-gradient(to bottom,#B6F2FF 0%,#2E94CE 100%);
-    margin-bottom:0.4rem;
+    background: linear-gradient(to bottom, #B6F2FF 0%, #2E94CE 100%);
+    margin-bottom: 0.4rem;
 }
 
-#gameTitle{
-    margin:50px auto;
-    opacity:70%;
-	line-height:0.95em;
-	font-weight:bold;
-	color: #fff;
-	text-shadow:
-		0.04em 0.02em 0 #B6F2FF,
-		0.08em 0.05em 0 #5FBFED;
+#gameTitle {
+    margin: 50px auto;
+    opacity: 70%;
+    line-height: 0.95em;
+    font-weight: bold;
+    color: #fff;
+    text-shadow:
+        0.04em 0.02em 0 #B6F2FF,
+        0.08em 0.05em 0 #5FBFED;
 }
 
-.gameExplain{
-    display:none;
+.gameExplain {
+    display: none;
 }
 
-.warning{
-    font-size:2.4rem;
+.warning {
+    font-size: 2.4rem;
     color: #CD3939;
-    margin:20px;
-    font-weight:500;
+    margin: 20px;
+    font-weight: 500;
 }
 
-.gameChara{
-    width:10rem;
-    height:10rem;
-    margin:10px;
-    margin-bottom:40px;
+.gameChara {
+    width: 10rem;
+    height: 10rem;
+    margin: 10px;
+    margin-bottom: 40px;
 }
 
-.gameChara2{
-    width:10rem;
-    height:10rem;
-    margin:10px;
-    margin-bottom:40px;
+.gameChara2 {
+    width: 10rem;
+    height: 10rem;
+    margin: 10px;
+    margin-bottom: 40px;
 }
 
-#startBtn{
+#startBtn {
     font-size: 2.4rem;
     text-align: center;
     text-shadow: 0px 3px 0.5px gray;
@@ -64,39 +64,63 @@ h2{
 /* ゲーム画面 */
 
 /* ゲーム概要 */
-.gameSummary{
-    padding:10px;
-    border:#817F6E 2px solid;
-    border-radius:10px;
-    margin:40px auto;
+.gameSummary {
+    width: 100%;
+    margin: 40px auto;
+    padding: 20px;
+    border: #817F6E 2px solid;
+    border-radius: 10px;
     background-color: #fff;
-    font-weight:300;
+    font-weight: 300;
+    line-height: 2.2em;
 }
 
-.gameSummary p{
-    color:#8B8B8B;
+.gameSummary p {
+    color: #8B8B8B;
 }
+
 /* ゲーム概要 */
 
 /* サイドバーランキング */
-.topRanking{
+.topRanking {
     width: 24rem;
-    padding:10px;
-    border:#817F6E 2px solid;
+    padding: 10px;
+    border: #817F6E 2px solid;
     display: none;
 }
 
-.topRanking img{
+.topRanking2 {
+    width: 100%;
+    margin: 10px auto;
+    padding: 20px;
+    border: #817F6E 2px solid;
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; */
+}
+
+
+.topRankingArea2 {
+    /* position: absolute;
+        right:0; */
+    background-color: #5FBFED;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 240px;
+}
+
+.topRanking img {
     width: 20px;
     height: 20px;
 }
 
-.ranking{
+.ranking {
     display: flex;
     justify-content: space-around;
 }
 
-h6{
+h6 {
     font-size: 2rem;
     color: #F5F5F5;
     font-weight: 800;
@@ -110,15 +134,15 @@ h6{
     height: 4rem;
     cursor: pointer;
     /* display: inline-block; */
-    margin:10px;
+    margin: 10px;
     position: relative;
     background: #ADEEFF;
     border: 1px solid #A5A5A5;
-    border-radius:0;
+    border-radius: 0;
 }
 
 .selectWrap select {
-    width:20rem;
+    width: 20rem;
     /* border: none;
     outline: none; */
     /* background: transparent; */
@@ -144,77 +168,78 @@ h6{
     border-top: 10px solid #625858;
     pointer-events: none;
 }
+
 .selectWrap select {
     color: #625858;
     font-size: 1.6rem;
-    font-weight:500;
+    font-weight: 500;
 }
 
-.topRanking section{
+.topRanking section {
     /* padding:10px; */
-    border:#817F6E 2px solid;
+    border: #817F6E 2px solid;
     /* border-radius:10px; */
 }
 
-.rankingCategory{
+.rankingCategory {
     height: 50px;
-    padding:15px;
+    padding: 15px;
     text-align: center;
     background:
-    linear-gradient(to bottom, #2C9DC1 0%,#51C7EC 20%,#2C8BC1 100%);
+        linear-gradient(to bottom, #2C9DC1 0%, #51C7EC 20%, #2C8BC1 100%);
     color: #fff;
 }
 
-.rankingWordCategory{
-    height: 50px;
+.rankingWordCategory {
+    /* height: 50px; */
     text-align: center;
-    padding:5px;
+    padding: 15px;
     background:
-    linear-gradient(to bottom, #2C9DC1 0%,#51C7EC 20%,#2C8BC1 100%);
+        linear-gradient(to bottom, #2C9DC1 0%, #51C7EC 20%, #2C8BC1 100%);
     color: #fff;
     font-size: 1.6rem;
 }
 
-.rank{
-    font-size:1.4rem;
-    font-weight:500;
-    display:inline;
-    margin:10px 10px;
+.rank {
+    font-size: 1.4rem;
+    font-weight: 500;
+    display: inline;
+    margin: 10px 10px;
 }
 
-.name{
-        font-size:1.4rem;
-    font-weight:800;
-    display:inline;
-    margin:10px 5px;
+.name {
+    font-size: 1.4rem;
+    font-weight: 800;
+    display: inline;
+    margin: 10px 5px;
     text-align: center;
 }
 
-.score{
+.score {
     color: #F96F50;
-    font-size:1.4rem;
-    font-weight:500;
-    display:inline;
-    margin:10px 10px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    display: inline;
+    margin: 10px 10px;
 }
 
-.rankingArea{
-    margin-bottom:10px;
+.rankingArea {
+    margin-bottom: 10px;
 }
 
-.topWordRanking{
-    padding-top:20px;
-    width:100%;
+.topWordRanking {
+    padding-top: 20px;
+    width: 100%;
     height: 13rem;
     background-color: #fff;
-    font-size:1.6rem;
-    margin:0 auto;
+    font-size: 1.6rem;
+    margin: 0 auto;
 }
 
-.topWordRanking li{
-    font-weight:800;
-    font-size:1.4rem;
-    margin:10px;
+.topWordRanking li {
+    font-weight: 800;
+    font-size: 1.4rem;
+    margin: 10px;
     /* display:inline; */
     /* padding:20px 10px; */
 }
@@ -223,99 +248,99 @@ h6{
     padding:20px;
 } */
 
-.topHtmlRanking{
-    padding-top:20px;
+.topHtmlRanking {
+    padding-top: 20px;
     width: 100%;
     height: 13rem;
     background-color: #fff;
-    font-size:1.6rem;
-    margin:0 auto;
+    font-size: 1.6rem;
+    margin: 0 auto;
 }
 
-.topHtmlRanking li{
-    font-weight:800;
-    font-size:1.4rem;
+.topHtmlRanking li {
+    font-weight: 800;
+    font-size: 1.4rem;
     margin: 10px;
 }
 
-.topCssRanking{
-    padding-top:20px;
+.topCssRanking {
+    padding-top: 20px;
     width: 100%;
     height: 13rem;
     background-color: #fff;
-    font-size:1.6rem;
-    margin:0 auto;
+    font-size: 1.6rem;
+    margin: 0 auto;
 }
 
-.topCssRanking li{
-    font-weight:800;
-    font-size:1.4rem;
-    margin:10px;
+.topCssRanking li {
+    font-weight: 800;
+    font-size: 1.4rem;
+    margin: 10px;
 }
 
-.topJavascriptRanking{
-    padding-top:20px;
+.topJavascriptRanking {
+    padding-top: 20px;
     width: 100%;
     height: 13rem;
     background-color: #fff;
-    font-size:1.6rem;
-    margin:0 auto;
+    font-size: 1.6rem;
+    margin: 0 auto;
 }
 
-.topJavascriptRanking li{
-    font-weight:800;
-    font-size:1.4rem;
-    margin:10px;
+.topJavascriptRanking li {
+    font-weight: 800;
+    font-size: 1.4rem;
+    margin: 10px;
 }
 
-.topPhpRanking{
-    padding-top:20px;
+.topPhpRanking {
+    padding-top: 20px;
     width: 100%;
     height: 13rem;
     background-color: #fff;
-    font-size:1.6rem;
-    margin:0 auto;
+    font-size: 1.6rem;
+    margin: 0 auto;
 }
 
-.topPhpRanking li{
-    font-weight:800;
-    font-size:1.4rem;
-    margin:10px;
+.topPhpRanking li {
+    font-weight: 800;
+    font-size: 1.4rem;
+    margin: 10px;
 }
 
-.topPythonRanking{
-    padding-top:20px;
+.topPythonRanking {
+    padding-top: 20px;
     width: 100%;
     height: 13rem;
     background-color: #fff;
-    font-size:1.6rem;
-    margin:0 auto;
+    font-size: 1.6rem;
+    margin: 0 auto;
 }
 
-.topPythonRanking li{
-    font-weight:800;
-    font-size:1.4rem;
-    margin:10px;
+.topPythonRanking li {
+    font-weight: 800;
+    font-size: 1.4rem;
+    margin: 10px;
 }
 
 /* サイドバーランキング */
 
 /* newsの共通ボタンとタイトル */
-h5{
-    font-size:1.8rem;
+h5 {
+    font-size: 1.8rem;
     color: #5FBFED;
-    font-weight:800;
+    font-weight: 800;
     text-align: left;
 }
 
 .listBtn {
     position: absolute;
-    right:8px;
-    top:5px;
+    right: 10px;
+    top: 20px;
 }
 
-.listBtn a{
-    font-weight:300;
+.listBtn a {
+    font-weight: 300;
     font-size: 1.4rem;
 }
 
@@ -330,34 +355,35 @@ h5{
     clear: both;
 }
 
-.yellowLine{
-    border:solid 1.5px #FFEBC5;
-    margin:10px auto;
+.yellowLine {
+    border: solid 1.5px #FFEBC5;
+    margin: 10px auto;
 }
 
-.updateLine{
+.updateLine {
     height: 0;
     margin: 0;
     padding: 0;
     border: 0;
-    border-top:1px dashed #817F6E;
+    border-top: 1px dashed #817F6E;
 }
 
-.explain{
-    margin:10px auto ;
+.explain {
+    margin: 10px auto;
 }
 
-span{
-    font-size:1.6rem;
+span {
+    font-size: 1.6rem;
 }
+
 /* newsの共通ボタンとタイトル */
 
 /* 知っトク情報 */
-.infoNews{
-    margin-bottom:40px;
-    padding:10px;
-    border:#817F6E 2px solid;
-    border-radius:10px;
+.infoNews {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: #817F6E 2px solid;
+    border-radius: 10px;
     text-align: center;
     background-color: #fff;
     box-shadow: 3px 5px 3px #60C8DA;
@@ -365,147 +391,209 @@ span{
 
 }
 
-.infoNews p{
-    color:#817F6E;
+.infoNews p {
+    color: #817F6E;
     display: block;
 }
 
-.infoNews div{
+.infoNews div {
     width: 9.1rem;
     height: 2.8rem;
-    border-radius:16px;
-    border:1px solid #5FBFED;
-    background-color:#5FBFED;
+    border-radius: 16px;
+    border: 1px solid #5FBFED;
+    background-color: #5FBFED;
 }
 
-.infoList span{
-    display:block;
-    margin-bottom:20px;
+.infoList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    width: 80%;
+    margin: 10px auto;
 }
 
-.infoList img{
-    width: 20rem;
-    height: 8.5rem;
+.infoList li {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 4px solid #5FBFED;
+    border-radius: 10px;
 }
+
+.infoList span {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.infoList img {
+    width: 90%;
+    /* width: 20rem;
+    height: 8.5rem; */
+}
+
 /* 知っトク情報 */
 
 /* 更新情報 */
-.updateNews{
-    margin-bottom:40px;
-    padding:10px;
-    border:#817F6E 2px solid;
-    border-radius:10px;
+.updateNews {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: #817F6E 2px solid;
+    border-radius: 10px;
     text-align: center;
     background-color: #fff;
     box-shadow: 5px 5px 5px #60C8DA;
     position: relative;
 }
 
-.updateNews p{
-    color:#817F6E;
+.updateNews p {
+    color: #817F6E;
 }
 
-.updateNews div{
+.updateNews div {
     width: 9.1rem;
     height: 2.8rem;
-    border-radius:16px;
-    border:1px solid #5FBFED;
-    background-color:#5FBFED;
+    border-radius: 16px;
+    border: 1px solid #5FBFED;
+    background-color: #5FBFED;
 }
 
-.updateList{
-    display:block;
+.updateList {
+    display: block;
     text-align: left;
 }
 
-.updateList li{
-        margin-top:10px;
-        margin-bottom: 10px;
+.updateList li {
+    margin: 10px;
+    border-bottom: 4px dotted #5FBFED;
+    padding: 10px 0px 20px;
+}
+
+
+.updateList a {
+    font-size: 1.6rem;
+}
+
+.updateList .info-content {
+    width: 100%;
+    margin-top: 15px;
+    word-wrap: break-word;
+}
+
+.info-title {
+    margin-left: 20px;
+    font-weight: bold;
+    color: blueviolet;
+}
+
+/*
+ */
+@media (min-width:765px) {
+
+    .infoList {
+        /* display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: center; */
+        width: 100%;
+        margin: 20px auto;
     }
 
-.updateList a{
-    font-size:1.6rem;
+    .infoList li {
+        width: 48%;
+        margin-bottom: 20px;
+        border: 4px solid #5FBFED;
+        border-radius: 10px;
+    }
 }
-/* 更新情報 */
 
 /* パソコン1000px~ */
 @media (min-width:1000px) {
+    /* .topRanking2 {
+        display: none;
+    } */
 
-    .wrap{
-        margin:0 auto;
-        max-width:1080px;
+    .wrap {
+        margin: 0 auto;
+        max-width: 1080px;
         display: flex;
         justify-content: space-between;
     }
 
-    .box{
-    margin:50px auto;
-}
-
-    .topLeftArea{
-    max-width:680px;
-    float: left;
-}
-
-    .gameExplain{
-    display: block;
-    color: #26567c;
-    font-size:1.6rem;
-    font-weight:800;
-    margin-bottom: 40px;
-}
-
-    .warning{
-        display:none;
+    .box {
+        margin: 50px auto;
     }
 
-    .explain{
-        text-align:left;
+    .topLeftArea {
+        max-width: 660px;
+        float: left;
     }
 
-.infoList {
+    .gameExplain {
+        display: block;
+        color: #26567c;
+        font-size: 1.6rem;
+        font-weight: 800;
+        margin-bottom: 40px;
+    }
+
+    .warning {
+        display: none;
+    }
+
+    .explain {
+        text-align: left;
+    }
+
+    /* .infoList {
         display: flex;
-        flex-wrap:wrap;
-        justify-content:center;
+        flex-wrap: wrap;
+        justify-content: space-between;
         align-content: center;
-        max-width: 580px;
         width: 100%;
-        margin:0 auto;
-}
-
-.infoList li{
-    margin:10px;
+        margin: 20px auto;
     }
 
-    .updateList li{
-        margin-top:40px;
+    .infoList li {
+        width: 48%;
+        margin-bottom: 20px;
+        border: 4px solid #5FBFED;
+        border-radius: 10px;
+    } */
+
+    .info-pho {
+        margin: 5px auto;
+    }
+
+    .updateList li {
+        margin-top: 40px;
         margin-bottom: 5px;
     }
 
-    .updateList a{
-        display:flex;
+    .updateList a {
+        display: flex;
     }
 
-    .updateList span{
-        margin-left:20px;
+    .updateList span {
+        margin-left: 20px;
     }
 
-    .topRanking{
-        position:relative;
-        display:inline-block;
-        flex-basis:240px;
-        background-color:#5FBFED;
+    .topRanking {
+        position: relative;
+        display: inline-block;
+        flex-basis: 240px;
+        background-color: #5FBFED;
         /* margin-right:0;
         margin-left: auto; */
-        float:right;
-        margin-left:40px;
+        float: right;
+        margin-left: 40px;
     }
 
-    .topRankingArea{
+    .topRankingArea {
         /* position: absolute;
         right:0; */
-        background-color:#5FBFED;
+        background-color: #5FBFED;
         flex-basis: 240px;
     }
-/* パソコン1000px~ */
+
+    /* パソコン1000px~ */
 }
