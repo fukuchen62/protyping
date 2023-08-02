@@ -25,7 +25,6 @@ h3{
 	font-weight: 700;
 }
 
-
     /* 上に戻るボタンの矢印 */
     /* 長方形 */
 .arrow_up {
@@ -73,6 +72,7 @@ h3{
 .boxTerms a{
 	font-size: 14px;
 	margin-left: 15px;
+
 }
 
 .boxTerms p{
