@@ -36,12 +36,10 @@
     <!-- ヘッダー -->
     <header id="header" class="header">
         <div class="container">
-
             <!-- ヘッダーロゴ -->
             <h1 class="headerLogo">
-                <a href=""><img src="" alt="タイプコード" srcset=""></a>
-            </h1>
-
+                    <a href=""><img src="../assets/images/logo.jpg" alt="タイプコード"></a>
+                </h1>
             <!-- ハンバーガーメニュー部分 -->
             <div class="hanmburger">
                 <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
@@ -50,81 +48,113 @@
                 <label for="drawerInput" class="drawerOpen">
                     <span></span>
                 </label>
-
                 <!-- ナビゲーション -->
                 <nav class="navContent">
                     <ul class="navList">
-                        <li class="home">
-                            <a href="">HOME</a>
+                        <li class="game">
+                            <a href="">ゲーム</a>
                         </li>
                         <li class="dictionary">
-                            <a href="">辞書</a>
+                            <a href="">辞書</a><!-- リンク先はデフォルトを英単語にする -->
                         </li>
                         <li class="ranking">
                             <a href="">ランキング</a>
                         </li>
                         <li class="myScore">
-                            <a href="">MyScore</a>
+                            <a href="">マイスコア</a>
                         </li>
                         <li class="shittoku">
                             <a href="">知っトク情報</a>
                         </li>
+                        <li class="upDate">
+                            <a href="">更新情報</a>
+                        </li>
+                        <li class="about">
+                            <a href="">アバウト</a>
+                        </li>
                         <li class="contact">
                             <a href="">お問い合わせ</a>
                         </li>
+                        <li class="terms">
+                            <a href="">利用規約</a>
+                        </li>
+                        <li class="privacy">
+                            <a href="">プライバシーポリシー</a>
+                        </li>
                     </ul>
                 </nav>
-
             </div>
-
         </div>
     </header>
 
     <main id="main" class="main">
 
+        <div class="wrap">
 
-        <article>
+            <!-- パンくずリスト  -->
+            <ol class="breadCrumb-001">
+                <li><a href="#">ホーム</a></li>
+                <!-- <li><a href="#">カテゴリー</a></li> -->
+                <li><a href="#">プログラミングでよく使う英単語</a></li>
+            </ol>
+
+            <!-- flexbox用 -->
+            <div class="mainInner">
+
+                <!-- サイドバー -->
+                <aside class="sidebar">
+                    <!-- <nav class="globalNav">辞書</nav> -->
+                    <ul>
+                        <!-- <li class="globalNav">辞書</li> -->
+                        <li class="subMenu1 active"><a href="../html/dictionary_details.html">開発環境セットアップ</a></li>
+                        <li class="subMenu2"><a href="#">WordPress</a></li>
+                        <li class="subMenu3"><a href="#">おすすめWebアプリ</a></li>
+                        <li class="subMenu4"><a href="#">おすすめWebサイト</a></li>
+                        <li class="subMenu5"><a href="#">ショートカット</a></li>
+                        <li class="subMenu6"><a href="#">資格</a></li>
+                        <li class="subMenu7"><a href="#">Chrome拡張機能</a></li>
+                        <li class="subMenu8"><a href="#">卒業生の作品</a></li>
+                    </ul>
+                </aside>
+
+                <article class="mainContainer">
 
 
-            <section class="titleArea">
+                    <section class="titleArea">
 
-                <!-- タイトルコーナー -->
-                <h2 class="title">開発環境<br>セットアップ</h2>
-                <p class="overview">このページについての説明文。このページについての説明ページについての説明文。
-                </p>
+                        <!-- タイトルコーナー -->
+                        <h2 class="title">開発環境<br>セットアップ</h2>
+                        <p class="overview">このページについての説明文。このページについての説明ページについての説明文。
+                                        </p>
 
-            </section>
-
-
-            <!-- ------ コンテンツ班が作る ------  -->
-
-            <!-- 目次 -->
-            <section>
-
-            </section>
-
-            <!-- 1.見出し -->
-            <section class="content">
+                    </section>
 
 
+                    <!-- ------ コンテンツ班が作る ------  -->
+
+                    <!-- 目次 -->
+                    <section>
+
+                    </section>
+
+                    <!-- 1.見出し -->
+                    <section class="content">
 
 
 
-            </section>
-            <!-- ------ /コンテンツ班が作る ------  -->
 
-        </article>
 
-        <!-- 一覧を見る -->
-        <div class="linkBtnBox">
-            <a href="" class="linkBtn">一覧に戻る</a>
+                    </section>
+                    <!-- ------ /コンテンツ班が作る ------  -->
+
+                </article>
+
+            </div>
+            <!-- 一覧を見る -->
+            <div class="linkBtnBox">
+                <a href="" class="linkBtn">一覧に戻る</a>
+            </div>
         </div>
-
-
-
-
-
-
 
     </main>
 
@@ -141,5 +171,18 @@
         </div>
     </footer>
 
+    <!-- サイドバークリックしたら色変わる -->
+    <script>
+        const listItems = document.querySelectorAll(".sidebar li");
+
+        function activeLink() {
+            listItems.forEach((item) => item.classList.remove("active"));
+            this.classList.add("active");
+        }
+
+        listItems.forEach((item) => {
+            item.addEventListener("click", activeLink);
+        });
+    </script>
 </body>
 </html>
