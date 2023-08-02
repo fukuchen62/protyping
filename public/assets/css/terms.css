@@ -65,11 +65,7 @@ h3{
 		max-width:520px;
 		margin:0 auto;
 	}
-	/* .main {
-	width: 1000px;
-    margin-bottom: 20px;
-	margin-left: calc((100vw - 1000px) / 2);
-    padding: 20px; */
+
 }
 
 
@@ -110,4 +106,55 @@ h3{
 	font-size: 10px;
 	margin-left: 20px;
 	}
+}
+
+/* トップへ戻る */
+#pageTop {
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    background: #EAB624;
+}
+
+#pageTop a {
+    position: relative;
+    display: block;
+    width: 7rem;
+    height: 7rem;
+    text-decoration: none;
+}
+
+#pageTop a::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f102';
+    font-size: 17px;
+    color: #fff;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    bottom: 40px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    transform: translateX(-50%);
+}
+
+#pageTop a::after {
+    content: 'TOP';
+    font-size: 13px;
+    color: #fff;
+    position: absolute;
+    top: 42px;
+    bottom: 0;
+    right: 18px;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    transform: translateY(-50%);
 }
