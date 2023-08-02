@@ -36,8 +36,6 @@ class MainController extends Controller
             'items2' => $items2,
         ];
 
-
-
         // リンクボタンによって指定されたレベルを取得（デフォルトは1：初級）
         $selectedLevel = $request->query('level_id', 1);
 
@@ -57,15 +55,14 @@ class MainController extends Controller
             $scoresByLanguage[$language->id] = $scores;
         }
 
-
         // データベースから渡したいデータを配列変数に入れて一括で渡す
-        $data = [
-            'news' => $news,
-            'knowhows' => $knowhows,
-        ];
+        // $data = [
+        //     'news' => $news,
+        //     'knowhows' => $knowhows,
+        // ];
 
         // viewの引数っていくつでも増やせる
         //return view('main.index', $data1,$data2…);
-        return view('fronts.index', $data, compact('languages', 'scoresByLanguage', 'selectedLevel'));
+        return view('fronts.index',compact('news', 'knowhows','languages', 'scoresByLanguage', 'selectedLevel'));
     }
 }
