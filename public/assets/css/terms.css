@@ -1,27 +1,33 @@
 @charset "utf-8";
 
 .main{
-	width: calc(100vw - 40px);
+	/* width: calc(100vw - 40px);
     margin-bottom: 20px;
-	margin-left: 20x;
-    padding: 10px;
+	margin-left: 20x; */
+    padding: 15px;
 }
 
 h2{
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: 800;
     text-align: center;
     letter-spacing: 0.1rem;
     margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     line-height: 3rem;
 }
+
 h3{
-    margin-top: 10px;
-    margin-bottom: 5px;
+    margin-top: 30px;
+    margin-bottom: 15px;
     line-height: 2rem;
+	font-size: 1.8rem;
+	font-weight: 700;
 }
 
+.boxTerms div{
+	padding-bottom:10px;
+}
 
     /* 上に戻るボタンの矢印 */
     /* 長方形 */
@@ -45,25 +51,28 @@ h3{
 	border-right: 0.8rem solid transparent;
 }
 
-@media (min-width:1040px) {
-	.main {
-	width: 1000px;
-    margin-bottom: 20px;
-	margin-left: calc((100vw - 1000px) / 2);
-    padding: 20px;
-}
-}
 @media (min-width:1000px) {
-
-    .wrap{
-        margin:0 auto;
-        max-width:1000px;
+	.wrap{
+		max-width:1080px;
+		margin:0 auto;
 	}
+
+	h2{
+    font-size: 4rem;
 }
+
+	.boxTerms{
+		max-width:520px;
+		margin:0 auto;
+	}
+
+}
+
 
 .boxTerms a{
 	font-size: 14px;
 	margin-left: 15px;
+
 }
 
 .boxTerms p{
@@ -76,27 +85,78 @@ h3{
 	padding-inline-start: 25px;
 }
 .boxTerms ol li{
-	font-size: 15px;
+	font-size: 16px;
     margin-bottom: 10px;
-	padding-inline-start: 5px
+	padding-inline-start: 5px;
 	line-height: 2rem;
 
 }
-​
-​
+.TermsP{
+	margin-bottom:10px;
+}
 @media screen and (min-width: 768px) {
-    /* 共通 */
 
     .boxTerms ol li{
 
-		font-size:17px;
+		font-size:16px;
         margin-bottom: 10px;
-		padding-inline-start: 10px
-		line-height: 2rem;
+		padding-inline-start:10px;
+		line-height:2rem;
     }
 
 	.boxTerms a{
 	font-size: 10px;
 	margin-left: 20px;
 	}
+}
+
+/* トップへ戻る */
+#pageTop {
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    background: #EAB624;
+}
+
+#pageTop a {
+    position: relative;
+    display: block;
+    width: 7rem;
+    height: 7rem;
+    text-decoration: none;
+}
+
+#pageTop a::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f102';
+    font-size: 17px;
+    color: #fff;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    bottom: 40px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    transform: translateX(-50%);
+}
+
+#pageTop a::after {
+    content: 'TOP';
+    font-size: 13px;
+    color: #fff;
+    position: absolute;
+    top: 42px;
+    bottom: 0;
+    right: 18px;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    transform: translateY(-50%);
 }

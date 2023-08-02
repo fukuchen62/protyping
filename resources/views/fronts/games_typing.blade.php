@@ -11,7 +11,6 @@
 
 {{-- ゲーム画面の内容 --}}
 @section('content')
-    <h1>ゲーム画面</h1>
         {{-- デバッグ用 --}}
         {{-- <p>言語は {{ $language }} が選択されています。</p>
         <p>レベルは {{ $level }} が選択されています。</p> --}}
@@ -123,12 +122,39 @@
             <!-- ゲーム画面２ -->
             <div id="game-view2">
                 <div>
-                    <p>選択中の言語　▶　プログラン民具でよく使う英単語</p>
-                    <p>モード・コース　▶　練習モード/初級</p>
+                    @if (isset($_GET['language']))
+                        @if ($_GET['language'] == 1)
+                            <p>選択中の言語　　▶　HTML</p>
+                        @elseif ($_GET['language'] == 2)
+                            <p>選択中の言語　　▶　CSS</p>
+                        @elseif ($_GET['language'] == 3)
+                            <p>選択中の言語　　▶　JavaScript</p>
+                        @elseif ($_GET['language'] == 4)
+                            <p>選択中の言語　　▶　PHP</p>
+                        @elseif ($_GET['language'] == 5)
+                            <p>選択中の言語　　▶　Python</p>
+                        @elseif ($_GET['language'] == 6)
+                            <p>選択中の言語　　▶　よく使う英単語</p>
+                        @else
+                            <p>???</p>
+                        @endif
+                    @else
+                        <p>選択中の言語　　▶　HTML</p>
+                    @endif
+                    @if (isset($_GET['language']))
+                        @if ($_GET['level'] == 1)
+                            <p>モード・コース　▶　初級</p>
+                        @elseif ($_GET['level'] == 2)
+                            <p>モード・コース　▶　中級</p>
+                        @else
+                            <p>???</p>
+                        @endif
+                    @else
+                        <p>モード・コース　▶　初級</p>
+                    @endif
                 </div>
                 <div id="text-container">
                     <div id="timer">00:00:00</div>
-                    <div>スコア</div>
                     <div id="miss-type-screen"></div>
                     <div id="start-msg">
                         <p>日本語入力モードをオフにしてください</p>
@@ -437,7 +463,7 @@
             }
 
             window.addEventListener('DOMContentLoaded', open);//最初からゲーム画面を開きっぱなしにしておく
-            button3.addEventListener('click', selectmode);
+            button3.addEventListener('click', start1);
             button4.addEventListener('click', replay);
             button5.addEventListener('click', howtoplaying);//遊び方画面
             button7.addEventListener('click', backstart);//遊び方からスタート画面に戻る
@@ -455,7 +481,7 @@
 
             // スタート処理 練習コース
             function start1() {
-                view5.style.display = 'none'; //コースモード選択画面をオフ
+                view1.style.display = 'none'; //コースモード選択画面をオフ
                 view2.style.display = 'block'; //画面２をオン
                 startMsg.style.display = 'block';
 
