@@ -11,7 +11,6 @@
 
 {{-- ゲーム画面の内容 --}}
 @section('content')
-    <h1>ゲーム画面</h1>
         {{-- デバッグ用 --}}
         {{-- <p>言語は {{ $language }} が選択されています。</p>
         <p>レベルは {{ $level }} が選択されています。</p> --}}
@@ -123,12 +122,39 @@
             <!-- ゲーム画面２ -->
             <div id="game-view2">
                 <div>
-                    <p>選択中の言語　▶　プログラン民具でよく使う英単語</p>
-                    <p>モード・コース　▶　練習モード/初級</p>
+                    @if (isset($_GET['language']))
+                        @if ($_GET['language'] == 1)
+                            <p>選択中の言語　　▶　HTML</p>
+                        @elseif ($_GET['language'] == 2)
+                            <p>選択中の言語　　▶　CSS</p>
+                        @elseif ($_GET['language'] == 3)
+                            <p>選択中の言語　　▶　JavaScript</p>
+                        @elseif ($_GET['language'] == 4)
+                            <p>選択中の言語　　▶　PHP</p>
+                        @elseif ($_GET['language'] == 5)
+                            <p>選択中の言語　　▶　Python</p>
+                        @elseif ($_GET['language'] == 6)
+                            <p>選択中の言語　　▶　よく使う英単語</p>
+                        @else
+                            <p>???</p>
+                        @endif
+                    @else
+                        <p>選択中の言語　　▶　HTML</p>
+                    @endif
+                    @if (isset($_GET['language']))
+                        @if ($_GET['level'] == 1)
+                            <p>モード・コース　▶　初級</p>
+                        @elseif ($_GET['level'] == 2)
+                            <p>モード・コース　▶　中級</p>
+                        @else
+                            <p>???</p>
+                        @endif
+                    @else
+                        <p>モード・コース　▶　初級</p>
+                    @endif
                 </div>
                 <div id="text-container">
                     <div id="timer">00:00:00</div>
-                    <div>スコア</div>
                     <div id="miss-type-screen"></div>
                     <div id="start-msg">
                         <p>日本語入力モードをオフにしてください</p>
