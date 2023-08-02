@@ -79,7 +79,7 @@ class TypinggameController extends Controller
         $username = $request->input('username');
         // デバッグ用にログに出力して確認
         Log::info('Score received: ' . $score);
-
+        Log::info('Received username: ' . $username);
         // データベースに登録
         // 現状スコア以外はダミーデータを登録しておく
         $scoreModel = new Score();

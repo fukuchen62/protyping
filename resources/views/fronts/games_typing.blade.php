@@ -14,6 +14,7 @@
         {{-- デバッグ用 --}}
         {{-- <p>言語は {{ $language }} が選択されています。</p>
         <p>レベルは {{ $level }} が選択されています。</p> --}}
+    <div style="margin: 80px 0;">余白を開ける</div>
     <div>
         {{-- <tr>
             <th>英単語(スペル)</th>
@@ -304,6 +305,7 @@
             <div id="game-view6" style="display: none;">
                 <p>ランキングに登録する</p>
                 <p>ペンネーム入力</p>
+                <input type="text" id="inputName" value="クリップ太郎">
                 <p>本名は入れないでください</p>
                 <div>
                     <button id="register-ranking" type="button">登録する</button>
@@ -412,6 +414,14 @@
             let languageValue = @json($languageValue); //スーパーグローバル変数で得たlanguage_idの値をjavaに渡す
             let levelValue = @json($levelValue); //スーパーグローバル変数で得たlevel_idの値をjavaに渡す
 
+
+            // ランキングに登録するときの登録ボタンクリック時
+            let inputUsername = '';
+            // document.getElementById("register-ranking").addEventListener("click", function() {
+            //     // <input> タグの値を取得
+            //     inputUsername = document.getElementById("inputName").value;
+            // });
+
             // 遊び方画面表示
             function howtoplaying(){
                 view1.style.display = 'none'; //スタート画面１をオフ
@@ -463,6 +473,10 @@
             function setregist(){
                 view6.style.display = 'none'; //ランキング登録画面をオフ
                 view7.style.display = 'block'; //ランキング登録完了画面をオン
+                // <input> タグの値を取得
+                inputUsername = document.getElementById("inputName").value;
+                console.log("inputUsername: " + inputUsername);
+
                 setscore();
             }
 
@@ -905,11 +919,20 @@
 
                 // scoreをデータベースに登録したい
                 // JavaScriptのデータをオブジェクトに格納してJSON形式に変換
+                if(languageValue == ''){
+                    languageValue = 1;//設定せずにゲームをしたらHTML
+                }
+
+                if(levelValue == ''){
+                    levelValue = 1;//設定せずにゲームしたら初級
+                }
+
+                // user_idは0:未登録で固定
                 let dataToSend = {
                     language_id:languageValue,
                     level_id:levelValue,
-                    user_id:998,
-                    username:"testtest",
+                    user_id:0,
+                    username:inputUsername,
                     score: score,
                 };
 
