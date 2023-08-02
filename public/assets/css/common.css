@@ -302,41 +302,6 @@ p {
     text-decoration: none;
 }
 
-/* 上に戻るボタン */
-/* #btn{
-    width: 3.25rem;
-    height: 3.25rem;
-    /* margin-right:15px;
-    margin-bottom:15px; */
-/* border-radius:50%;
-    position: fixed;
-    bottom: 0;
-    right: 40px;
-    background-color: #BAB624;
-    }  */
-
-/* 上に戻るボタンの矢印 */
-/* 長方形 */
-/* .arrow_up {
-	font-size: 30px;
-	position: relative;
-	width: 0.6rem;
-	height: 1rem;
-	background-color: #ffff;
-} */
-/* 三角 */
-/* .arrow_up::before {
-	position: absolute;
-	top: -0.6rem;
-	left: -0.5rem;
-	width: 0;
-	height: 0;
-	content: "";
-	border-bottom: 0.8rem solid #ffff;
-	border-left: 0.8rem solid transparent;
-	border-right: 0.8rem solid transparent;
-} */
-
 /* トップへ戻る */
 #pageTop {
     border-radius: 50%;
@@ -389,9 +354,6 @@ p {
     text-align: center;
     transform: translateY(-50%);
 }
-
-
-/* ページネーション */
 
 
 /* 一覧を見るボタン */
