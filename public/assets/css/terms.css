@@ -91,7 +91,9 @@ h3{
 	line-height: 2rem;
 
 }
-
+.TermsP{
+	margin-bottom:10px;
+}
 @media screen and (min-width: 768px) {
 
     .boxTerms ol li{
