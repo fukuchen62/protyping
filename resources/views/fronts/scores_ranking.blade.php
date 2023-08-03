@@ -50,21 +50,12 @@
         </section>
 
         <!-- プルダウンメニュー -->
-        {{-- <div class="selectWrap">
-            <!-- <select name="word"> -->
-            <select name="word" required>
-                <!-- required：選択必須を指定 -->
-                <option value="初級">初級</option>
-                <option value="中級">中級</option>
+        <div class="selectWrap">
+            <select onchange="window.location.href = this.value;">
+                <option value="{{ route('ranking', ['level_id' => 1]) }}" {{ request()->query('level_id') == 1 ? 'selected' : '' }}>初級</option>
+                <option value="{{ route('ranking', ['level_id' => 2]) }}" {{ request()->query('level_id') == 2 ? 'selected' : '' }}>中級</option>
             </select>
-        </div> --}}
-
-        <div class="levelButtons">
-            <a href="{{ route('ranking', ['level_id' => 1]) }}" class="levelButton {{ request()->query('level_id') == 1 ? 'active' : '' }}">初級</a>
-            <a href="{{ route('ranking', ['level_id' => 2]) }}" class="levelButton {{ request()->query('level_id') == 2 ? 'active' : '' }}">中級</a>
         </div>
-
-
 
         <!-- 言語選択 -->
         <nav class="word">
