@@ -15,24 +15,24 @@
 
 {{-- メインコンテンツの内容 --}}
 @section('content')
-<main class="main">
+    <!-- ここからメイン -->
+    <div class="wrap">
+        <main class="main">
+            <ol class="breadCrumb-001">
+                <li><a href="{{ route('top') }}">ホーム</a></li>
+                <li><a href="{{ route('contact') }}">お問い合わせ</a></li>
+                <li><a href="{{ route('verification') }}">確認</a></li>
+                <li><a href="#">送信完了</a></li>
+            </ol>
+            {{-- デバッグ用 --}}
+            {{-- @if(session('success'))
+            <div>{{ session('success') }}</div>
+            @endif --}}
+            <p>送信いたしました。<br>お問い合わせいただき誠にありがとうございます。</p>
+            <a class="homeBack" href="{{ route('top') }}">ホームに戻る</a>
+        </main>
+    </div>
 
-    @if(session('success'))
-    <div>{{ session('success') }}</div>
-    @endif
-    @if(count($errors) > 0)
-    <ul>
-        @foreach($errors->all() as $error)
-        <li>{{ $error }}</li>
-        @endforeach
-    </ul>
-    @endif
-    <p class="homeBack"><a href="{{ route('top') }}">HOMEに戻る</a></p>
-    {{-- <input class="homeBack" onclick="location.href={{ route('top') }}" type="submit" name="home_back" value="HOMEに戻る"> --}}
-</main>
-{{-- 暫定的にリンクを貼っておく --}}
-{{--
-<p class="margin"><a href="{{ route('contact') }}">お問い合わせ確認画面</a></p> --}}
 @endsection
 
 @section('pageJs')
