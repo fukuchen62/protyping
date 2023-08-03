@@ -8,6 +8,7 @@
 
 @section('pageCss')
 <link rel="stylesheet" href="{{ asset('assets/css/update.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/pagination.css') }}">
 @endsection
 
 @section('key_visual')
@@ -17,52 +18,36 @@
 {{-- メインコンテンツの内容 --}}
 @section('content')
 
+<main class="main">
 
+    <!-- パンくずリスト -->
+    <ol class="breadCrumb-001">
+        <li><a href="#">ホーム</a></li>
+        <li><a href="#">更新情報</a></li>
+    </ol>
 
-<h1>更新情報</h1>
-
-{{-- <table>
-    <tr>
-        <th>タイトル</th>
-        <th>サムネイル</th>
-        <th>概要</th>
-        <th>内容</th>
-        <th>新規作成日時</th>
-    </tr>
+    <h2>更新情報</h2>
 
     @foreach($items as $item)
-    <tr>
-        <th>{{ $item->title }}</th>
-        <th>{{ $item->thumbnail }}</th>
-        <th>{{ $item->summary }}</th>
-        <th>{{ $item->content }}</th>
-        <th>{{ $item->created_at }}</th>
-    </tr>
+        @php
+        $timestamp = \Carbon\Carbon::parse($item->created_at);
+        @endphp
+
+        <section class="updateInformation">
+
+            <ul class="updateList">
+                <li>
+                    <p>{{ $timestamp->format('Y年m月d日') }}<br>
+                    {{ $item->title }}｜
+                                        {{ $item->content }}</p>
+                </li>
+            </ul>
+        </section>
     @endforeach
-</table> --}}
-{{-- {{ $items->links() }} --}}
 
-@foreach($items as $item)
+    {{ $items->links() }}
 
-@php
-$timestamp = \Carbon\Carbon::parse($item->created_at);
-@endphp
-
-<section class="updateInformation">
-
-    <ul class="updateList">
-        <li>
-            <img class="updateImg" src="{{ asset('assets/images/' . $item->thumbnail) }}" alt="{{ $item->title }}">
-
-            <p>{{ $timestamp->format('Y年m月d日') }}<br>
-            {{-- {{ $item->created_at }} --}}
-            {{ $item->title }}｜
-                                {{ $item->content }}</p>
-        </li>
-    </ul>
-</section>
-@endforeach
-{{ $items->links() }}
+</main>
 @endsection
 
 @section('pageJs')
