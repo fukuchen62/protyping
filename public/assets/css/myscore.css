@@ -3,8 +3,13 @@
 .main {
     background-color: #26567c;
     color: #fff;
-    margin: 0 20px 50px 20px;
+    padding-top: 90px;
+}
 
+@media (min-width:1000px) {
+    .main {
+        padding-top: 120px;
+    }
 }
 
 .mainContent {
@@ -56,69 +61,36 @@ input[name="course_name"] {
     display: none;
 }
 
+/* パンくずリストcss */
+@media (min-width:1000px) {
+    .breadCrumb-001 {
+        font-size: 1rem;
+    }
 
+    .breadCrumb-001 li:not(:last-child)::after {
+        border-top: 1px solid #ffff;
+        border-right: 1px solid #ffff;
+    }
 
-/* .scoreWrap {
-    border: 3px solid #fff;
-    border-radius: 5px;
-    margin: 30px 0;
-    padding: 20px 10px;
-} */
-
-/* プルダウンメニュー */
-
-/* .selectWrap {
-    overflow: hidden;
-    width: 22.8rem;
-    text-align: left;
-    height: 4.5rem;
-    cursor: pointer;
-} */
-
-/* .selectWrap select {
-
-    width: 100%;
-    border: none;
-    outline: none;
-    background: transparent;
-    -webkit-appearance: none;
-    appearance: none;
-
-} */
-
-/* .selectWrap select::-ms-expand {
-    display: none;
+    .breadCrumb-001 a {
+        color: #ffff;
+    }
 }
 
-.selectWrap {
-    position: relative;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    background: #F0F0F0;
-    border: 0.5px solid #625858;
-    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5), inset 0px -3px 6px -2px rgba(0, 0, 0, 0.3);
+/* パンくずリストcss */
+.breadCrumb-001 {
+    font-size: 1.2rem;
 }
 
-.selectWrap:before {
-    position: absolute;
-    top: 13px;
-    right: 15px;
-    width: 0;
-    height: 0;
-    padding: 0;
-    content: '';
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 10px solid #625858;
-    pointer-events: none;
-
+.breadCrumb-001 li:not(:last-child)::after {
+    border-top: 1px solid #ffff;
+    border-right: 1px solid #ffff;
 }
 
-.selectWrap select {
-    color: #625858;
-    font-size: 1.6rem;
-    letter-spacing: 6px;
-} */
+.breadCrumb-001 a {
+    color: #ffff;
+}
+
 
 /* 言語選択 */
 .word {
