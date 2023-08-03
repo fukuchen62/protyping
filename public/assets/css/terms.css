@@ -13,6 +13,7 @@
     }
 }
 
+/* コモンができ次第被ってるところ消す */
 h2 {
     font-size: 2.2rem;
     font-weight: 800;
@@ -22,6 +23,7 @@ h2 {
     margin-bottom: 40px;
     line-height: 3rem;
 }
+/* コモンができ次第被ってるところ消す */
 
 @media (min-width:1000px) {
     h2 {
