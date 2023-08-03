@@ -1,37 +1,38 @@
 @charset "utf-8";
 
-.main{
+.main {
 	/* width: calc(100vw - 40px);
     margin-bottom: 20px;
 	margin-left: 20x; */
-    padding: 10px;
+	padding: 10px;
 	width: calc(100vw - 40px);
+	padding-top: 90px;
 }
 
-h2{
-    font-size: 2.2rem;
-    font-weight: 800;
-    text-align: center;
-    letter-spacing: 0.1rem;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    line-height: 3rem;
+h2 {
+	font-size: 2.2rem;
+	font-weight: 800;
+	text-align: center;
+	letter-spacing: 0.1rem;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	line-height: 3rem;
 }
 
-h3{
-    margin-top: 30px;
-    margin-bottom: 15px;
-    line-height: 2rem;
+h3 {
+	margin-top: 30px;
+	margin-bottom: 15px;
+	line-height: 2rem;
 	font-size: 1.8rem;
 	font-weight: 700;
 }
 
-.boxPrivacy div{
-	padding-bottom:10px;
+.boxPrivacy div {
+	padding-bottom: 10px;
 }
 
-    /* 上に戻るボタンの矢印 */
-    /* 長方形 */
+/* 上に戻るボタンの矢印 */
+/* 長方形 */
 .arrow_up {
 	font-size: 30px;
 	position: relative;
@@ -39,9 +40,11 @@ h3{
 	height: 1rem;
 	background-color: #ffff;
 }
-.PrivacyP{
-	margin-bottom:10px;
+
+.PrivacyP {
+	margin-bottom: 10px;
 }
+
 /* 三角 */
 .arrow_up::before {
 	position: absolute;
@@ -61,21 +64,23 @@ h3{
 		margin:0 auto;
 	} */
 
-	.main{
-		width:1000px;
-		margin:0 auto;
+	.main {
+		max-width: 1080px;
+		margin: 0 auto;
+		padding-top: 120px;
 	}
 
-	h2{
-    font-size: 4rem;
-}
-
-
-
-	.boxPrivacy{
-		max-width:520px;
-		margin:0 auto;
+	h2 {
+		font-size: 4rem;
 	}
+
+
+
+	.boxPrivacy {
+		max-width: 520px;
+		margin: 0 auto;
+	}
+
 	/* .main {
 	width: 1000px;
     margin-bottom: 20px;
@@ -84,13 +89,13 @@ h3{
 }
 
 
-.boxPrivacy a{
+.boxPrivacy a {
 	font-size: 14px;
 	margin-left: 15px;
 
 }
 
-.boxPrivacy p{
+.boxPrivacy p {
 	margin-left: 10px;
 	text-indent: 10px;
 	line-height: 2rem;
@@ -101,9 +106,10 @@ h3{
 	list-style: disc;
 	padding-inline-start: 25px;
 }
-.boxPrivacy ol li{
+
+.boxPrivacy ol li {
 	font-size: 16px;
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 	padding-inline-start: 5px;
 	line-height: 2rem;
 
@@ -111,16 +117,16 @@ h3{
 
 @media screen and (min-width: 768px) {
 
-    .boxPrivacy ol li{
+	.boxPrivacy ol li {
 
-		font-size:16px;
-        margin-bottom: 10px;
-		padding-inline-start:10px;
-		line-height:2rem;
-    }
+		font-size: 16px;
+		margin-bottom: 10px;
+		padding-inline-start: 10px;
+		line-height: 2rem;
+	}
 
-	.boxPrivacy a{
-	font-size: 10px;
-	margin-left: 20px;
+	.boxPrivacy a {
+		font-size: 10px;
+		margin-left: 20px;
 	}
 }
