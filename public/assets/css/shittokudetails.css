@@ -67,12 +67,14 @@
     /* サイドバーを除いて横幅可変 */
     width: calc(100% - 176px);
     margin: auto;
+
 }
 
 /* メインコンテナーのcalc関数を1000px以下の時に打ち消す */
 @media screen and (max-width: 1000px) {
     .mainContainer:nth-child(1) {
-    width: 100%
+    width: 100%;
+    padding:0.1px;
     }
 }
 
@@ -189,12 +191,9 @@
 } */
 
     /* 一覧へ戻るボタン */
-.linkBtnBox{
-    /* margin-bottom: 170px; */
-}
-
 .linkBtn{
     margin: 0 auto;
+    margin-top:63px;
     margin-bottom:170px;
     max-width: 199px;
     display: flex;
