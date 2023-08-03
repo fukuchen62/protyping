@@ -131,6 +131,8 @@
                         </div>
                     </div>
 
+
+                    <!-- ゲームスタートボタン -->
                     <div class="box" id="makeImg">
                         <div class="circle"></div>
                         <button id="startBtn" type="button" onclick="location.href='../../resources/views/fronts/games_typing.blade.php'">
@@ -140,14 +142,66 @@
                     </div>
 
 
+
+                    <!-- ポップアップ -->
+                    <div class="popupWrop">
+
+                        <!-- 設定のポップアップ -->
+                        <div class="Popup">
+                            <input id="open" type="checkbox">
+                            <label for="open" class="openBtn"><img src="../assets/images/gear.svg" alt="歯車アイコン">設定</label>
+                            <label for="open" class="overlay"></label>
+
+                            <div class="popupContent">
+                                <!-- <label for="open" class="closeBtn"></label> -->
+                            </div>
+                            <div class="close">
+                                <label for="open" class="closeBtn">閉じる</label>
+                            </div>
+
+                        </div>
+
+
+
+
+
+                        <!-- 遊び方のポップアップ -->
+                        <div class="Popup">
+                            <input id="open" type="checkbox">
+                            <label for="open" class="openBtn"><img src="../assets/images/memo.svg" alt="メモアイコン">遊び方</label>
+                            <label for="open" class="overlay"></label>
+
+                            <div class="popupContent">
+                                <label for="open" class="closeBtn"></label>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+
+
+
+
+
                     <div>
 
                     </div>
 
-                    <div class="toggle_button">
+
+                    <!-- オン・オフ切り替えボタン -->
+                    <!-- <div class="toggle_button">
                         <input id="toggle" class="toggle_input" type='checkbox' />
                         <label for="toggle" class="toggle_label">
-                    </div>
+                    </div> -->
 
 
                 </div>
