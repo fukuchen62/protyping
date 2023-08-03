@@ -112,9 +112,10 @@
                     </div>
                     <div class="topRankingArea2">
                         <div class="selectWrap2">
-                            <a href="{{ route('top') }}?level_id=1">初級コース</a>
-
-                            <a href="{{ route('top') }}?level_id=2">中級コース</a>
+                            <a class="{{ $selectedLevel == 1 ? 'selected' : '' }}"
+                                href="{{ route('top') }}?level_id=1">初級コース</a>
+                            <a class="{{ $selectedLevel == 2 ? 'selected' : '' }}"
+                                href="{{ route('top') }}?level_id=2">中級コース</a>
                         </div>
 
                         <div class="ranking-panel">
