@@ -85,15 +85,32 @@
 
         <h2 class="title">-辞書-</h2>
         <h3 class="subTitle">プログラミングでよく使う英単語</h3>
-        <p>ここから辞書検索ができます。活用してね(^^)</p>
+
+        <!-- プルダウンメニュー -->
+        <div class="selectWrap">
+            <select name="word" id="word-select">
+                <option value="HTML" selected>HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="PHP">PHP</option>
+                <option value="Python">Python</option>
+            </select>
+        </div>
+
+        <!-- 検索ボックス -->
+        <!-- <p>ここから辞書検索ができます。活用してね(^^)</p> -->
+        <form action="#" class="searchForm001">
+            <input type="text" name="s" placeholder="ここで辞書検索ができます">
+            <button type="submit"></button>
+        </form>
 
         <div class="contentBox">
             <!-- サイドバー -->
             <aside class="sidebar">
                 <!-- <nav class="globalNav">辞書</nav> -->
                 <ul>
-                    <li class="globalNav">辞書</li>
-                    <li class="subMenu1 active"><a href="../html/dictionary_details.html">プログラミングでよく使う英単語</a></li>
+                    <li class="globalNav">辞書選択</li>
+                    <!-- <li class="subMenu1 active"><a href="../html/dictionary_details.html">プログラミングでよく使う英単語</a></li> -->
                     <li class="subMenu2"><a href="#">HTML</a></li>
                     <li class="subMenu3"><a href="#">CSS</a></li>
                     <li class="subMenu4"><a href="#">JavaScript</a></li>
@@ -102,47 +119,19 @@
                 </ul>
             </aside>
 
-            <!-- 検索ボックス -->
-            <form action="#" class="searchForm001">
-
-                <input type="text" name="s" placeholder="キーワードを入力">
-                <button type="submit"></button>
-
-            </form>
-
-            <!-- プルダウンメニュー -->
-            <div class="selectWrap">
-                <select name="word" required> <!-- required：選択必須を指定 -->
-                    <option value="">よく使われる英単語</option>
-                    <option value="HTML">HTML</option>
-                    <option value="CSS">CSS</option>
-                    <option value="JavaScript">JavaScript</option>
-                    <option value="PHP">PHP</option>
-                    <option value="Python">Python</option>
-                </select>
-            </div>
-
             <!-- テーブル -->
             <table class="dictionary">
                 <thead class="headLine">
-                    <tr class="headLine1">
-                        <th class="headLine11">
-                            <p>No</p>
-                        </th>
-                        <th class="headLine11">
-                            <p>単語名</p>
-                        </th>
-                        <th class="headLine21">
-                            <p>読み方</p>
-                        </th>
-                        <th class="headLine31">
-                            <p>使用例</p>
-                        </th>
+                    <tr>
+                        <th class="no">No</th>
+                        <th class="wordCol">単語名<span class="description">・読み方</span></th>
+                        <th class="descrpCol">読み方</th>
+                        <th>使用例</th>
                     </tr>
                 </thead>
                 <tbody class="dictBody">
                     <tr class="dictRow">
-                        <td class="no">1aaaa</td>
+                        <td class="no">1</td>
                         <td class="wordCol">
                             <p class="phrase">getElementByid</p>
                             <p class="description">ゲットエレメントバイアイディー</p>
@@ -150,7 +139,7 @@
                         <td class="descrpCol">
                             <p>ゲットエレメントバイアイディー</p>
                         </td>
-                        <td class="detail1 secondary">
+                        <td class="detail secondary">
                             <p class="detailText">詳細</p>
                             <!---------- ポップアップ ---------->
                             <label class="open" for="popUp1">
@@ -158,7 +147,42 @@
                             </label>
                             <input type="checkbox" id="popUp1">
                             <div class="overlay">
-                                <div class="window">
+                                <div class="popWindow">
+                                    <label class="close" for="popUp1"><img src="../assets/images/dictionary.jpg" alt="閉じるボタン"></label>
+                                    <h2>getElementByid</h2>
+                                    <h5>読み方</h5>
+                                    <p>ゲットエレメントバイアイディー</p>
+                                    <div class="mean">
+                                        <h5>意味</h5>
+                                        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                    </div>
+                                    <div class="example">
+                                        <h5>使用例</h5>
+                                        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="dictRow">
+                        <td class="no">2</td>
+                        <td class="wordCol">
+                            <p class="phrase">getElementByid</p>
+                            <p class="description">ゲットエレメントバイアイディー</p>
+                        </td>
+                        <td class="descrpCol">
+                            <p>ゲットエレメントバイアイディー</p>
+                        </td>
+                        <td class="detail secondary">
+                            <p class="detailText">詳細</p>
+                            <!---------- ポップアップ ---------->
+                            <label class="open" for="popUp1">
+                                <img src="../assets/images/dictionary.png" alt="">
+                            </label>
+                            <input type="checkbox" id="popUp1">
+                            <div class="overlay">
+                                <div class="popWindow">
                                     <label class="close" for="popUp1"><img src="../assets/images/dictionary.jpg" alt="閉じるボタン"></label>
                                     <h2>getElementByid</h2>
                                     <h5>読み方</h5>
@@ -176,18 +200,14 @@
                         </td>
                     </tr>
                 </tbody>
-
             </table>
         </div>
-
-
     </main>
 
     <!-- トップへ戻るボタン -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
     <div id="pageTop"><a href="#"></a></div>
 
-    <!-- フッター -->
     <!-- フッター -->
     <footer id="footer" class="footer outerBlock">
         <div class="footerWrap">
