@@ -315,7 +315,7 @@
             {{-- ランキング登録完了画面 --}}
             <div id="game-view7" style="display: none;">
                 <p>ランキングに登録完了</p>
-                <p>ペンネーム</p>
+                <div id="userNameDisplay"></div>
                 <p>で登録しました</p>
                 <div>
                     <button id="return-start" type="button">スタートに戻る</button>
@@ -475,6 +475,7 @@
                 view7.style.display = 'block'; //ランキング登録完了画面をオン
                 // <input> タグの値を取得
                 inputUsername = document.getElementById("inputName").value;
+                document.getElementById("userNameDisplay").textContent = inputUsername;
                 console.log("inputUsername: " + inputUsername);
 
                 setscore();
