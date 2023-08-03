@@ -108,13 +108,13 @@
                         <div class="cardItem">
                             <div class="position">
                                 @if ($index === 0)
-                                <img src="../assets/images/gold_crown.png" alt="1位王冠">
+                                <img src="{{ asset('assets/images/gold_crown.png') }}" alt="1位王冠">
                                 <p>1位</p>
                                 @elseif ($index === 1)
-                                <img src="../assets/images/silver_crown.png" alt="2位王冠">
+                                <img src="{{ asset('assets/images/silver_crown.png') }}" alt="2位王冠">
                                 <p>2位</p>
                                 @elseif ($index === 2)
-                                <img src="../assets/images/bronze_crown.png" alt="3位王冠">
+                                <img src="{{ asset('assets/images/bronze_crown.png') }}" alt="3位王冠">
                                 <p>3位</p>
                                 @else
                                 <p>{{ $index + 1 }}位</p>
@@ -139,15 +139,19 @@
             </div>
             @endforeach
 
-            <!-- ランキング、マイスコアボタン -->
-            <div class="btnWrap">
-                <div class="gameChallenge">
-                    <a href="" class="challengeBtn">ゲームに挑戦</a>
-                </div>
-                <div class="viewMyscore">
-                    <a href="" class="viewBtn">マイスコアを見る</a>
-                </div>
-            </div>
+
+    </div>
+    </section>
+
+    <!-- ランキング、マイスコアボタン -->
+    <div class="btnWrap">
+        <div class="gameChallenge">
+            <a href="" class="challengeBtn">ゲームに挑戦</a>
+        </div>
+        <div class="viewMyscore">
+            <a href="" class="viewBtn">マイスコアを見る</a>
+        </div>
+    </div>
 
     </div>
 </main>

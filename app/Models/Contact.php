@@ -21,6 +21,7 @@ class Contact extends Model
         'meaning' => 'max:200',
         'usage' => 'max:200',
         'memo' => 'max:200',
+        'contact_name' => 'max:50',
         'email' => 'max:100|email',
         'status' => 'requried',
         // 'created_at' => 'required',
