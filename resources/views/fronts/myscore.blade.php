@@ -21,8 +21,8 @@
     <div class="mainContent">
         <!-- パンくずリスト -->
         <ol class="breadCrumb-001">
-            <li><a href="../html/index.html">ホーム</a></li>
-            <li><a href="#">マイスコア</a></li>
+            <li><a href="{{ route('top') }}">ホーム</a></li>
+            <li><a href="{{ route('myscore') }}">マイスコア</a></li>
         </ol>
 
 
@@ -42,15 +42,15 @@
                     <option value="中級">中級</option>
                 </select>
             </div> -->
-        <div class="selectCourse">
+        {{-- <div class="selectCourse">
             <input type="radio" name="course_name" id="beginner" checked>
             <label class="course" for="beginner">初級コース</label>
             <input type="radio" name="course_name" id="intermediate" checked>
             <label class="course" for="intermediate">中級コース</label>
-        </div>
+        </div> --}}
 
         <!-- 言語選択 -->
-        <nav class="word">
+        {{-- <nav class="word">
             <div>
                 <img src="../assets/images/arrow.png" alt="↓ボタン">
                 <a href="#engword">プログラミングで使う英単語</a>
@@ -75,7 +75,7 @@
                 <img src="../assets/images/arrow.png" alt="↓ボタン">
                 <a href="#python">Python</a>
             </div>
-        </nav>
+        </nav> --}}
 
 
         <!-- ここから動的 -->
@@ -87,17 +87,17 @@
                 <!-- <div class="usernameInner"> -->
                 <!-- 人のシルエット背景 -->
                 <div class="icon">
-                    <img src="../assets/images/human.png" alt="人アイコン">
+                    <img src="{{ asset('assets/images/human.png') }}" alt="人アイコン">
                 </div>
 
-                <div class="usernameItem">
+                {{-- <div class="usernameItem">
                     <div class="itemFirst">
                         <p>ユーザーネーム</p>
                     </div>
                     <div class="itemSecond">
                         <p>しんちゃん</p>
                     </div>
-                </div>
+                </div> --}}
                 <!-- </div> -->
             </div>
 
@@ -105,10 +105,12 @@
             <div class="cardWrap">
                 <div class="cardList">
                     <div class="listInner">
-                        <h3 id="engword">プログラミングで使う英単語</h3>
+                        {{--
+                        <h3 id="engword">プログラミングで使う英単語</h3> --}}
                         <div class="cardInner">
                             <div class="history">
-                                <p>履歴（過去Best3）</p>
+                                {{--
+                                <p>履歴（過去Best3）</p> --}}
                             </div>
                             <div class="scoreList">
                                 <div class="scoreLine">
@@ -119,11 +121,12 @@
                                         <p class="triangle">▶▶▶</p>
                                     </div>
                                     <div class="scoreItem">
-                                        <p class="score">00点</p>
+                                        @if(request()->hasCookie('saved_data'))
+                                        <p class="score">{{ request()->cookie('saved_data') }}点</p>
+                                        @endif
                                     </div>
                                 </div>
-                                <div class="scoreLine">
-
+                                {{-- <div class="scoreLine">
                                     <div class="scoreItem">
                                         <p>Score</p>
                                     </div>
@@ -144,13 +147,13 @@
                                     <div class="scoreItem">
                                         <p class="score">00点</p>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
 
 
-                    <div class="listInner">
+                    {{-- <div class="listInner">
                         <h3 id="html">HTML</h3>
                         <div class="cardInner">
                             <div class="history">
@@ -373,7 +376,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
                 </div>
 
@@ -383,31 +386,25 @@
         <!-- ランキング、マイスコアボタン -->
         <div class="btnWrap">
             <div class="gameChallenge">
-                <a href="" class="challengeBtn">ゲームに挑戦</a>
+                <a href="{{ route('game') }}" class="challengeBtn">ゲームに挑戦</a>
             </div>
             <div class="viewMyscore">
-                <a href="" class="viewBtn">ランキングを見る</a>
+                <a href="{{ route('ranking') }}" class="viewBtn">ランキングを見る</a>
             </div>
         </div>
 
-
-
-        <div id="btn">
-            <a href="#">
-                <div class="arrow_up"></div><!-- クラス名変更必要 -->
-            </a>
-        </div>
     </div>
 </main>
 
 
 
 
+{{--
 <h1>マイスコア</h1>
 
 @if(request()->hasCookie('saved_data'))
 <p>クッキーに保存された直近の値: {{ request()->cookie('saved_data') }}</p>
-@endif
+@endif --}}
 
 
 {{-- テスト用 --}}
