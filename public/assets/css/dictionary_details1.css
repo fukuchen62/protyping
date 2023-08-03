@@ -1,0 +1,847 @@
+@charset "utf-8";
+
+
+/* パンくずリストcss */
+.breadCrumb-001 {
+    width: 100%;
+    display: flex;
+    gap: 0 5px;
+    list-style: none;
+    padding: 0;
+    font-size: 1rem;
+    padding: 20px;
+    padding-top: 10px;
+}
+
+.breadCrumb-001 li {
+    display: flex;
+    align-items: center;
+}
+
+.breadCrumb-001 li:not(:last-child)::after {
+    display: inline-block;
+    transform: rotate(45deg);
+    width: 0.5em;
+    height: 0.5em;
+    margin-left: 10px;
+    border-top: 1px solid #8B8B8B;
+    border-right: 1px solid #8B8B8B;
+    content: '';
+}
+
+.breadCCrumb-001 a {
+    color: #8B8B8B;
+    text-decoration: none;
+}
+
+
+@media screen and (min-width: 1000px) {
+/* パンくずリストcss */
+.breadCrumb-001 {
+    width: 100%;
+    display: flex;
+    gap: 0 5px;
+    list-style: none;
+    padding: 0;
+    font-size: 1.2rem;
+    padding: 20px;
+    padding-top: 10px;
+}
+
+.breadCrumb-001 li {
+    display: flex;
+    align-items: center;
+}
+
+.breadCrumb-001 li:not(:last-child)::after {
+    display: inline-block;
+    transform: rotate(45deg);
+    width: 0.5em;
+    height: 0.5em;
+    margin-left: 10px;
+    border-top: 1px solid #8B8B8B;
+    border-right: 1px solid #8B8B8B;
+    content: '';
+}
+
+.breadCCrumb-001 a {
+    color: #8B8B8B;
+    text-decoration: none;
+}}
+
+/* *********************** */
+.main{
+    text-align: center;
+    width: calc(100vw - 40px);
+    margin-bottom: 20px;
+	margin-left: 20px;
+    min-width: 280px;
+    /* padding: 10px; */
+}
+
+
+@media (min-width:1000px) {
+	.main {
+	width: 1000px;
+    margin-bottom: 20px;
+	margin-left: calc((100vw - 1000px) / 2);
+    /* padding: 20px; */
+}
+}
+
+@media screen and (min-width: 1000px) {
+    body{
+        margin: 0;
+    }
+}
+
+h2{
+    margin-top: 30px;
+}
+
+h5{
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 1000px) {
+h2{
+    font-size: 4rem;
+    margin-top: 100px;
+}
+
+h5{
+    font-size: 2rem;
+    font-weight: bold;
+}
+}
+
+h3{
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 1000px) {
+    h3{
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    h3{
+        font-size: 3.2rem;
+    }
+}
+
+p{
+color: #8b8b8b;
+margin-bottom: 10px;
+font-size: 1.6rem;
+writing-mode: horizontal-tb;
+}
+
+@media screen and (min-width: 1000px) {
+    p{
+        font-size: 1.8rem;
+    }
+}
+
+/* テーブル */
+
+th{
+    display: none ;
+}
+
+.dictionary01{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dictionary01 p{
+    margin: 5px;
+    text-align: center;
+}
+
+.dictionaryBox1{
+    display: flex;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 270px;
+    height: 80px;
+    background:rgba(95,191,237,0.15);
+}
+
+.dictionaryBox2{
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    width: 270px;
+    height: 80px;
+    background:rgba(95,191,237,0.3);
+}
+
+@media screen and (min-width: 1000px) {
+
+.dictionary01{
+        border-collapse: separate;
+    }
+
+.read{
+    width: 400px;
+    display: inline;
+    }}
+
+.englishWord p{
+    font-weight: bold;
+}
+
+.dictionary01.englishWord{
+    display: block;
+}
+
+.secondary{
+    font-size: 1.3rem;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 50px;
+}
+
+.secondary.detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail p{
+    font-size: 1.3rem;
+}
+
+
+@media screen and (min-width: 1000px){
+.detail .detailText{
+    display: none;
+}}
+
+@media screen and (min-width: 1000px){
+.window p{
+    height: auto;
+    font-size: 1.8rem;
+}
+
+.headLine2{
+    width: 296px;
+}
+
+.headLine3{
+width: 100px;
+}
+
+.dictionary01{
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
+    margin-left: 150px;
+    margin-right: auto;
+    z-index: -1;
+    border-left: 1px solid #ffff;
+}
+
+.dictionaryBox1{
+    width: 600px;
+    height: 75px;
+    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dictionaryBox2{
+    width: 600px;
+    height: 75px;
+    display: inline-block;
+    display: flex;
+}
+
+.englishWord{
+    display: inline-block;
+    width: 200px;
+    height: 75px;
+}
+
+.englishWord p{
+    margin-block-start: 15px;
+    font-size: 2rem;
+    display: inline-block;
+}
+
+.read{
+    width: 298px;
+    height: 75px;
+    display: inline-block;
+    /* border-left: 3px solid #ffff;
+    border-right: 3px solid #fff; */
+}
+
+.read p{
+    margin-block-start: 15px;
+    font-size: 1.8rem;
+}
+
+.secondary{
+    font-size: 1.4rem;
+    width: 50px;
+    display: inline-block;
+}
+
+.secondary .detail .open{
+    display: inline-block;
+}
+
+.open p{
+    display: none;
+    }
+
+.dictionary.englishWord{
+    display: inline-block;
+}
+
+th {
+    font-size: 1.8rem;
+    color: #fff;
+    display: inline;
+    line-height: 30px;
+    background: #6ac3ee;
+    width: 197px;
+    height: 40px;
+    display: inline-flex;
+    margin: 1.5px;
+    margin-bottom: 0;
+    border-radius: 7px;
+}
+.headLine1 p{
+    margin: 0 auto;
+    margin-top: 5px;
+    color: #fff;
+}
+
+.headLine2 p{
+    margin: 0 auto;
+    margin-top: 5px;
+    color: #fff;
+}
+
+.headLine3 p{
+    margin: 0 auto;
+    margin-top: 5px;
+    color: #fff;
+}
+
+
+.primary .englishWord{
+    border-right: 3px solid #fff;
+}
+
+.primary .read{
+    border-right: 3px solid #fff;
+}
+}
+
+@media screen and (min-width: 1000px) {
+    /* .searchForm001 input{
+        font-size: 1.3rem; */
+}
+
+
+/* 検索フォーム */
+.searchForm001 {
+    width: 207px;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    border: 2px solid #6ac3ee;
+    border-radius: 3px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.searchForm001 input {
+    width: 160px;
+    height: 45px;
+    padding: 5px 15px;
+    border: none;
+    box-sizing: border-box;
+    font-size: 1rem;
+    outline: none;
+}
+
+.searchForm001 input::placeholder{
+    color: #a4a5a4;
+}
+
+.searchForm001 button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 45px;
+    border: none;
+    background-color: #6ac3ee;
+    cursor: pointer;
+
+}
+.searchForm001 button::after {
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%20%3Cpath%20d%3D%22M23.7%2020.8%2019%2016.1c-.2-.2-.5-.3-.8-.3h-.8c1.3-1.7%202-3.7%202-6C19.5%204.4%2015.1%200%209.7%200S0%204.4%200%209.7s4.4%209.7%209.7%209.7c2.3%200%204.3-.8%206-2v.8c0%20.3.1.6.3.8l4.7%204.7c.4.4%201.2.4%201.6%200l1.3-1.3c.5-.5.5-1.2.1-1.6zm-14-5.1c-3.3%200-6-2.7-6-6s2.7-6%206-6%206%202.7%206%206-2.6%206-6%206z%22%20fill%3D%22%23fff%22%3E%3C%2Fpath%3E%20%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    content: '';
+}
+
+
+
+/* プルダウンメニュー */
+
+@media screen and (min-width: 1000px) {
+/* .selectWrap select{
+    display: none; */
+}
+
+
+.selectWrap {
+    overflow: hidden;
+    width: 19rem;
+    text-align: left;
+    height: 4rem;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1000px) {
+.selectWrap{
+    display: none;
+}}
+
+
+.selectWrap select {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+
+}
+
+.selectWrap select::-ms-expand {
+    display: none;
+}
+
+.selectWrap {
+    position: relative;
+    border-radius: 10px;
+    background: #F0F0F0;
+    border: 0.5px solid #625858;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5), inset 0px -3px 6px -2px rgba(0, 0, 0, 0.3);
+}
+
+.selectWrap:before {
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    padding: 0;
+    content: '';
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid #625858;
+    pointer-events: none;
+}
+
+.selectWrap select {
+    color: #625858;
+    font-size: 1.6rem;
+}
+
+.detail input{
+    display: none;
+}
+
+/* ポップアップのスタイル */
+.overlay {
+    display: none; /* 最初は非表示にする */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3); /* ポップアップの背景色と透明度 */
+}
+
+.window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 280px; /* ポップアップの最大幅 */
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+/* ポップアップの表示切替アニメーション */
+input[type="checkbox"]:checked + .overlay {
+    display: block;
+    z-index: 100;
+}
+
+/* 単語名、読み方、使用例のスタイル */
+/* .dictionary01 {
+    width: 100%;
+    border-collapse: collapse;
+} */
+
+/* .headLine th {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+} */
+
+.primary td {
+    text-align: center;
+}
+
+.secondary td {
+    position: relative;
+}
+
+.secondary .overlay {
+    display: none;
+}
+
+.secondary label {
+    cursor: pointer;
+}
+
+
+.text {
+	font-size: 18px;
+	margin: 0;
+}
+
+
+@media screen and (min-width: 1000px) {
+
+/* ポップアップのスタイル */
+.overlay {
+    display: none; /* 最初は非表示にする */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3); /* ポップアップの背景色と透明度 */
+}
+
+.window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 600px; /* ポップアップの最大幅 */
+    height: auto;
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+/* ポップアップの表示切替アニメーション */
+input[type="checkbox"]:checked + .overlay {
+    display: block;
+    z-index: 100;
+}
+
+/* 単語名、読み方、使用例のスタイル */
+/* .dictionary01 {
+    width: 100%;
+    border-collapse: collapse;
+} */
+
+/* .headLine th {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+} */
+
+.primary td {
+    padding: 10px;
+    text-align: center;
+}
+
+.secondary td {
+    position: relative;
+}
+
+.secondary .overlay {
+    display: none;
+}
+
+.secondary label {
+    cursor: pointer;
+}
+
+
+.window h2{
+    margin-bottom:20px;
+    margin-top: 30px;
+}
+
+.mean p{
+    margin: auto;
+    text-align: center;
+    width: 270px;
+    height: auto;
+    margin-top: 10px;
+    font-size: 1.8rem;
+    /* border: 1px solid #8b8b8b; */
+    border-radius:15px;
+    /* border:#817F6E 2px solid; */
+}
+.detail.example p{
+    margin: auto;
+    text-align: center;
+    width: 270px;
+    height: auto;
+    margin-top: 10px;
+    border:#817F6E 2px solid;
+    border-radius:15px;
+    margin-bottom: 10px;
+}
+}
+/* ************************ */
+
+/* ×画像 */
+.close img {
+	cursor:pointer;
+	position: absolute;
+	right: 4px;
+	width: 35px;
+    height: 35px;
+}
+
+.open img{
+    width: 40px;
+    height: 40px;
+}
+
+@media screen and (min-width: 1000px) {
+.open img{
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    position: relative;
+    z-index: 99;
+    }
+
+.open p{
+    display: block;
+    display: none;
+}
+
+.secondary img{
+    margin: 0 auto;
+}
+}
+
+
+.window h2{
+    margin-bottom:20px;
+}
+
+.mean{
+    margin: auto;
+    text-align: center;
+    width: 250px;
+    margin-top: 10px;
+    /* border: 1px solid #8b8b8b; */
+    border-radius:15px;
+    border:#817F6E 2px solid;
+}
+
+.example{
+    margin: auto;
+    text-align: center;
+    width: 250px;
+    margin-top: 10px;
+    border:#817F6E 2px solid;
+    border-radius:15px;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1000px) {
+.mean{
+    width: 400px;
+}
+
+.example{
+    width: 400px;
+}
+}
+
+/* 詳細ボタンホバーした時 */
+img:hover{
+    opacity: 0.75;
+}
+
+/* トップへ戻る */
+#pageTop{
+    border-radius:50%;
+    width: 5rem;
+    /* width: 100px; */
+    height: 5rem;
+    position: fixed;
+    right: 0px;
+    bottom:100px;
+    background: #EAB624;
+    /* opacity: 0.8; */
+}
+
+#pageTop a{
+    position: relative;
+    display: block;
+    width: 7rem;
+    height: 7rem;
+    text-decoration: none;
+}
+
+#pageTop a::before{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f102';
+    font-size: 17px;
+    color: #fff;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    bottom: 40px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    transform: translateX(-50%);
+}
+
+#pageTop a::after{
+    content: 'TOP';
+    font-size: 13px;
+    color: #fff;
+    position: absolute;
+    top: 42px;
+    bottom:0;
+    right: 18px;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    transform: translateY(-50%);
+}
+/* *********************** */
+
+/* サイドバーpc */
+.sidebar ul a {
+    display: none;
+}
+
+.globalNav{
+    display: block;
+    display: none;
+}
+/* *********************** */
+
+@media screen and (min-width: 1000px) {
+    /* サイドバー */
+
+.sidebar {
+    position: relative;
+    right: 0;
+    background: #fff;
+    width: 176px;
+    height: 100%;
+    display: block;
+    margin-right: 0;
+    margin-left: auto;
+    top: 150px;
+}
+
+.sidebar ul{
+    position: absolute;
+    /* margin-top: 30px; */
+}
+
+
+.globalNav {
+    font-size: 2.2rem;
+    color: #ffff;
+    text-align: center;
+    background: rgba(95, 191, 237,1);
+    user-select: none;
+    display: block;
+    height: 55px;
+    pointer-events: none;
+    padding: 15px;
+    /* box-shadow: 0 1px 3px rgba(0,0,0,0.2); */
+    box-shadow: -2px -2px 5px 0px rgba(255, 255, 255, 0.5), 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar ul a {
+    display: block;
+    width: 100%;
+    line-height: 50px;
+    font-size: 20px;
+    color: #8B8B8B;
+    /* padding-left: 15px; */
+    box-shadow: -2px -2px 5px 0px rgba(255, 255, 255, 0.5), 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
+    /* box-shadow: -1px -1px 1px #668AD8 inset; */
+    /* box-shadow: 0 1px 1px rgba(0,0,0,0.2), 0 -2px 3px -1px #6d95ce inset; */
+    /* border-top: 1px solid rgba(139, 139, 139, 0.3);
+    border-bottom: 1px solid rgba(139, 139, 139, 0.3);; */
+    /* transition: 0.4s; */
+}
+
+ul .subMenu1 a{
+    font-size: 1.6rem;
+    line-height: 20px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    padding: 10px;
+}
+
+.sidebar ul li a:hover{
+    background: rgba(4, 199, 243, 0.1);
+}
+
+.sidebar ul li.active{
+    background-color: rgba(59, 163, 228, 0.3);
+}
+    }
