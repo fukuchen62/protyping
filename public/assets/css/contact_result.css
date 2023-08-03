@@ -1,7 +1,8 @@
 @charset "utf-8";
 
-main{
-padding:15px;
+.main{
+padding-top:30px;
+width: 90%;
 }
 
 h2{
@@ -101,16 +102,13 @@ h2{
 }
 
 @media (min-width:1000px) {
-    .wrap{
+    .main{
         margin:0 auto;
         max-width:1080px;
+        padding-top:120px;
         /* display: flex;
         justify-content: space-between; */
     }
-
-        .breadCrumb-001 {
-    font-size: 1.2rem;
-}
 
     h2{
     font-size:4rem;

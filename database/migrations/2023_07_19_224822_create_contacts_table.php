@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('meaning', 200)->nullable(true);
             $table->string('usage', 500)->nullable(true);
             $table->string('memo', 500)->nullable(true);
+            $table->string('contact_name', 50)->nullable(true);
             $table->string('email', 100)->nullable(true);
             $table->integer('status')->default(1);
             // created_atをNOT NULLに設定するため、個別に記載

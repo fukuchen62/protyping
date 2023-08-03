@@ -1,59 +1,64 @@
 @charset "utf-8";
 
-
-
 /* 作業時に使うアウトラインプロパティ
 ------------------------------ */
-
 /* * {
     outline: 1px solid red;
 } */
 
-
-
-/* 知っ得ページ
------------------------------- */
-
+/* ******** レイアウト ********  */
 
 .main {
     height:100%;
     background-color: #fff;
-    padding: 15px;
-
+    padding-top: 90px;
+    /* padding: 70px ; */
+    width: 90%;
+    /* margin-left: 15px;
+    margin-right: 15px; */
+    /* margin:20px; */
+    padding-left: 20px;
 }
 
-h3{
-    font-size:2rem;
+/* 横幅1000px以下の時に右側にpaddingを出す */
+@media screen and (min-width: 1000px) {
+    .main {
+        padding-top: 120px;
+        max-width: 1080px;
+    }
 }
 
-/* パンくず */
-.breadCrumb {
-    color: #8b8b8b;
-    /* left: 10px; */
+/* パンくずを出す */
+/* .wrap {
+    padding-top: 100px;
 }
+@media screen and (min-width: 1000px) {
+    .wrap {
+        padding-top: 120px;
+    }
+} */
 
-
-/* 大枠の Flexbox（親） */
+/* mainContainerとsideの Flexbox（親） */
 .shittokuFlex {
     width: 100%;
     display: flex;
-    flex-direction: row-reverse; /* サイドバーを右側にする */
+    margin-top: 70px;
 }
 
-@media screen and (min-width: 1000px) {
-    .wrap{
-        margin:0 auto;
-        max-width:1080px;
+/* 横幅1000px以下の時はフレックスボックスを止める */
+@media screen and (max-width: 1000px) {
+    .shittokuFlex {
+        display: block;
     }
 }
 
 /* メインコンテイナー */
 .mainContainer {
-    /* width: calc(100% - 176px); */
     display: flex;
+    width: calc(100% - 176px); /* サイドバーを除いて横幅可変 */
     justify-content: center;
-    align-items: center;
 }
+
 
 @media screen and (max-width: 1000px) {
     .mainContainer {
@@ -61,49 +66,72 @@ h3{
     }
 }
 
-/* サイドバー */
 
-.side {
-    width: 176px;
-    background: #fff;
-    height: 100%;
-    border: 1px solid #8B8B8B;
-    /* transition: all 0.5s; */
-    /* display: block; */
+/* サイドバー:モバイルの時は */
+.sidebar {
+    display: none;
 }
 
-@media screen and (max-width: 1000px) {
-    .side {
-        display: none;
+/* サイドバー PC */
+/* @media screen and (min-width: 1000px) {
+    #pagTop{
+        right: 20px;
     }
+} */
+
+@media screen and (min-width: 1000px) {
+
+.sidebar {
+    /* right: 20px; */
+    background: #fff;
+    width: 176px;
+    height: 100%;
+    display: block;
+    margin-right: 0;
+    top: 150px;
 }
 
-.gnavSide  {
-    font-size: 1.7rem;
-    color: #8B8B8B;
+
+
+.globalNav {
+    font-size: 2.2rem;
+    color: #ffff;
     text-align: center;
-    line-height: 40px;
-    /* background: #6ac3ee; */
+    background: rgba(95, 191, 237,1);
     user-select: none;
-    /* display: block; */
+    display: block;
+    pointer-events: none;
+    padding: 15px;
+    line-height: 2.5rem;
+
+    box-shadow: -2px -2px 5px 0px rgba(255, 255, 255, 0.5), 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
 }
 
-.side ul a {
-    display: inline-block;
+.sidebar ul a {
+    display: block;
     width: 100%;
-    line-height: 40px;
+    line-height: 50px;
     font-size: 20px;
     color: #8B8B8B;
-    padding-left: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid black;
-    /* transition: 0.4s; */
+    padding-left: 15px;
+    box-shadow: -2px -2px 5px 0px rgba(255, 255, 255, 0.5), 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
+
 }
 
-/* メインコンテナーを最大742pxに収める */
-.mainContainerInner {
-    max-width: 742px;
+
+
+
+
+.sidebar ul li a:hover{
+    background: rgba(4, 199, 243, 0.1);
 }
+
+/* .sidebar ul li.active{
+    background-color: rgba(59, 163, 228, 0.3);
+} */
+    }
+
+
 
 /* 画像たちのフレックスボックス */
 .imgFlex{
@@ -120,7 +148,6 @@ h3{
     font-weight: 800;
     text-align: center;
     letter-spacing: 0.1rem;
-    margin-top: 30px;
     margin-bottom: 40px;
     font-size: 2.2rem;
 }
@@ -130,43 +157,50 @@ h3{
         font-size: 4rem;
     }
 
-    /* #pageTop{
-    max-width:1080px;
-} */
+
 }
 
 /* タイトル下のPタグの文章 */
 .overview {
-    /* display: inline-block; */
-    /* margin-bottom: 30px; */
     margin:30px auto;
-    max-width:425px;
+    width: 75%;
 }
 
-/* @media screen and (min-width: 768px) {
-    .overview{
-        padding-left: 100px;
-        padding-right: 100px;
+@media screen and (min-width: 1000px) {
+    .overview {
+        font-size: 2rem;
     }
-} */
+}
 
 
+/* 画像コンテナー */
 
 .flexItem{
-    margin-top: 30px;
-    margin-bottom: 40px;
-    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
 
-
+@media screen and (min-width: 662px) {
+    .flexItem {
+        padding: 30px;
+    }
 }
 
 .flexItemTitle {
+    font-size: 2rem;
     font-weight: 600;
+}
+
+@media screen and (min-width: 1000px) {
+    .flexItemTitle {
+        font-size: 2.4rem;
+    }
 }
 
 .flexItemText {
     font-weight: 400;
     max-width: 295px;
+    line-height: 2rem;
 }
 
 .flexItemImage {
@@ -181,4 +215,81 @@ h3{
     border-radius: 10px;
     box-shadow: 10px 10px 0px 0 rgb(96,200,218);
 
+}
+
+.flexItemImage:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+/* ********** 部品 ***********/
+
+/* パンくず */
+/* .breadCrumb-001 {
+    display: flex;
+    gap: 0 5px;
+    list-style: none;
+    padding: 0;
+    font-size: .9em;
+}
+
+.breadCrumb-001 li {
+    display: flex;
+    align-items: center;
+}
+
+.breadCrumb-001 li:not(:last-child)::after {
+    display: inline-block;
+    transform: rotate(45deg);
+    width: 0.5em;
+    height: 0.5em;
+    margin-left: 10px;
+    border-top: 1px solid #8B8B8B;
+    border-right: 1px solid #8B8B8B;
+    content: '';
+}
+
+.breadCrumb-001 a {
+    color: #8B8B8B;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+    .breadCrumb-001{
+        font-size: 1.3rem;
+    }
+} */
+
+
+/* フォント */
+
+h2{
+    margin-bottom: 5px;
+}
+
+
+@media screen and (min-width: 1000px) {
+h2{
+    font-size: 4rem;
+    margin-bottom: 5px;
+}
+}
+
+
+ul .subMenu1 a{
+    line-height: 2.7rem;
+    padding-bottom: 7px;
+    padding-top: 7px;
+}
+
+ul .subMenu3 a{
+    line-height: 2.7rem;
+    padding-bottom: 7px;
+    padding-top: 7px;
+}
+
+ul .subMenu4 a{
+    line-height: 2.7rem;
+    padding-bottom: 7px;
+    padding-top: 7px;
 }

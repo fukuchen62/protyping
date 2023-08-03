@@ -275,10 +275,7 @@ p {
     display: flex;
     gap: 0 5px;
     list-style: none;
-    padding: 0;
     font-size: 1rem;
-    padding: 20px;
-    /* padding: 20px auto; */
 }
 
 .breadCrumb-001 li {

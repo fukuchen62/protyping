@@ -9,6 +9,7 @@
     margin-bottom: 20px;
 	margin-left: 20px;
     min-width: 280px;
+    padding-top: 90px;
     /* padding: 10px; */
 }
 
@@ -18,10 +19,74 @@
 	width: 1000px;
     margin-bottom: 20px;
 	margin-left: calc((100vw - 1000px) / 2);
-    padding: 20px;
+    padding-top: 120px;
 }
 }
 
+/* パンくずリストcss */
+.breadCrumb-001 {
+    width: 100%;
+    display: flex;
+    gap: 0 5px;
+    list-style: none;
+    padding: 0;
+    font-size: 1rem;
+}
+
+.breadCrumb-001 li {
+    display: flex;
+    align-items: center;
+}
+
+.breadCrumb-001 li:not(:last-child)::after {
+    display: inline-block;
+    transform: rotate(45deg);
+    width: 0.5em;
+    height: 0.5em;
+    margin-left: 10px;
+    border-top: 1px solid #ffff;
+    border-right: 1px solid #ffff;
+    content: '';
+}
+
+.breadCrumb-001 a {
+    color: #ffff;
+    text-decoration: none;
+}
+
+
+@media (min-width:1000px) {
+/* パンくずリストcss pc*/
+.breadCrumb-001 {
+    width: 100%;
+    display: flex;
+    gap: 0 5px;
+    list-style: none;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.breadCrumb-001 li {
+    display: flex;
+    align-items: center;
+}
+
+.breadCrumb-001 li:not(:last-child)::after {
+    display: inline-block;
+    transform: rotate(45deg);
+    width: 0.5em;
+    height: 0.5em;
+    margin-left: 10px;
+    border-top: 1px solid #ffff;
+    border-right: 1px solid #ffff;
+    content: '';
+}
+
+.breadCrumb-001 a {
+    color: #ffff;
+    text-decoration: none;
+
+}}
 
 h2{
     color:#fff;
@@ -32,7 +97,6 @@ h2{
 @media screen and (min-width: 1000px) {
 h2{
         font-size: 4rem;
-        margin-top: 150px;
     }
 }
 

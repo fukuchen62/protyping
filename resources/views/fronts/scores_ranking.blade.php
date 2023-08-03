@@ -50,21 +50,12 @@
         </section>
 
         <!-- プルダウンメニュー -->
-        {{-- <div class="selectWrap">
-            <!-- <select name="word"> -->
-            <select name="word" required>
-                <!-- required：選択必須を指定 -->
-                <option value="初級">初級</option>
-                <option value="中級">中級</option>
+        <div class="selectWrap">
+            <select onchange="window.location.href = this.value;">
+                <option value="{{ route('ranking', ['level_id' => 1]) }}" {{ request()->query('level_id') == 1 ? 'selected' : '' }}>初級</option>
+                <option value="{{ route('ranking', ['level_id' => 2]) }}" {{ request()->query('level_id') == 2 ? 'selected' : '' }}>中級</option>
             </select>
-        </div> --}}
-
-        <div class="levelButtons">
-            <a href="{{ route('ranking', ['level_id' => 1]) }}" class="levelButton {{ request()->query('level_id') == 1 ? 'active' : '' }}">初級</a>
-            <a href="{{ route('ranking', ['level_id' => 2]) }}" class="levelButton {{ request()->query('level_id') == 2 ? 'active' : '' }}">中級</a>
         </div>
-
-
 
         <!-- 言語選択 -->
         <nav class="word">
@@ -108,13 +99,13 @@
                         <div class="cardItem">
                             <div class="position">
                                 @if ($index === 0)
-                                <img src="../assets/images/gold_crown.png" alt="1位王冠">
+                                <img src="{{ asset('assets/images/gold_crown.png') }}" alt="1位王冠">
                                 <p>1位</p>
                                 @elseif ($index === 1)
-                                <img src="../assets/images/silver_crown.png" alt="2位王冠">
+                                <img src="{{ asset('assets/images/silver_crown.png') }}" alt="2位王冠">
                                 <p>2位</p>
                                 @elseif ($index === 2)
-                                <img src="../assets/images/bronze_crown.png" alt="3位王冠">
+                                <img src="{{ asset('assets/images/bronze_crown.png') }}" alt="3位王冠">
                                 <p>3位</p>
                                 @else
                                 <p>{{ $index + 1 }}位</p>
@@ -139,15 +130,19 @@
             </div>
             @endforeach
 
-            <!-- ランキング、マイスコアボタン -->
-            <div class="btnWrap">
-                <div class="gameChallenge">
-                    <a href="" class="challengeBtn">ゲームに挑戦</a>
-                </div>
-                <div class="viewMyscore">
-                    <a href="" class="viewBtn">マイスコアを見る</a>
-                </div>
-            </div>
+
+    </div>
+    </section>
+
+    <!-- ランキング、マイスコアボタン -->
+    <div class="btnWrap">
+        <div class="gameChallenge">
+            <a href="" class="challengeBtn">ゲームに挑戦</a>
+        </div>
+        <div class="viewMyscore">
+            <a href="" class="viewBtn">マイスコアを見る</a>
+        </div>
+    </div>
 
     </div>
 </main>

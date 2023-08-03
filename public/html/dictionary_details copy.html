@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/dictionary_details.css">
+
+    <!-- jqueryの読み込み -->
+    <script src="../assets/js/vendor/jquery-3.6.3.min.js"></script>
+
+    <!-- フォント設定 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+    <title>辞書</title>
+
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header id="header" class="header">
+        <div class="container">
+            <!-- ヘッダーロゴ -->
+            <h1 class="headerLogo">
+                <a href=""><img src="../assets/images/logo.jpg" alt="タイプコード"></a>
+            </h1>
+            <!-- ハンバーガーメニュー部分 -->
+            <div class="hanmburger">
+                <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+                <input id="drawerInput" class="drawerHidden" type="checkbox" />
+                <!-- ハンバーガーメニュー -->
+                <label for="drawerInput" class="drawerOpen">
+                    <span></span>
+                </label>
+                <!-- ナビゲーション -->
+                <nav class="navContent">
+                    <ul class="navList">
+                        <li class="game">
+                            <a href="">ゲーム</a>
+                        </li>
+                        <li class="dictionary">
+                            <a href="">辞書</a><!-- リンク先はデフォルトを英単語にする -->
+                        </li>
+                        <li class="ranking">
+                            <a href="">ランキング</a>
+                        </li>
+                        <li class="myScore">
+                            <a href="">マイスコア</a>
+                        </li>
+                        <li class="shittoku">
+                            <a href="">知っトク情報</a>
+                        </li>
+                        <li class="upDate">
+                            <a href="">更新情報</a>
+                        </li>
+                        <li class="about">
+                            <a href="">アバウト</a>
+                        </li>
+                        <li class="contact">
+                            <a href="">お問い合わせ</a>
+                        </li>
+                        <li class="terms">
+                            <a href="">利用規約</a>
+                        </li>
+                        <li class="privacy">
+                            <a href="">プライバシーポリシー</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <!-- サイドバー -->
+        <aside class="sidebar">
+            <!-- <nav class="globalNav">辞書</nav> -->
+            <ul>
+                <li class="globalNav">辞書</li>
+                <li class="subMenu1 active"><a href="../html/dictionary_details.html">プログラミングでよく使う英単語</a></li>
+                <li class="subMenu2"><a href="#">HTML</a></li>
+                <li class="subMenu3"><a href="#">CSS</a></li>
+                <li class="subMenu4"><a href="#">JavaScript</a></li>
+                <li class="subMenu5"><a href="#">PHP</a></li>
+                <li class="subMenu6"><a href="#">Python</a></li>
+            </ul>
+        </aside>
+
+        <!-- パンくずリスト  -->
+
+        <ol class="breadCrumb-001">
+            <li><a href="#">ホーム</a></li>
+            <li><a href="#">プログラミングでよく使う英単語</a></li>
+            <!-- <li><a href="#">タイトル</a></li> -->
+        </ol>
+
+        <h2>-辞書-</h2>
+
+        <h3>プログラミングでよく使う<br>英単語</h3>
+        <p>ここから辞書検索ができます。活用してね(^^)</p>
+
+        <!-- 検索ボックス -->
+        <form action="#" class="searchForm001">
+            <label>
+                <input type="text" placeholder="キーワードを入力">
+            </label>
+            <button type="submit" aria-label="検索"></button>
+        </form>
+
+        <!-- プルダウンメニュー -->
+        <div class="selectWrap">
+            <select name="word" required> <!-- required：選択必須を指定 -->
+                <option value="">よく使われる英単語</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="PHP">PHP</option>
+                <option value="Python">Python</option>
+            </select>
+        </div>
+
+        <!-- テーブル -->
+        <table class="dictionary01">
+            <thead>
+                <tr class="headLine">
+                    <th class="headLine1">
+                        <p>単語名</p>
+                    </th>
+                    <th class="headLine2">
+                        <p>読み方</p>
+                    </th>
+                    <th class="headLine3">
+                        <p>使用例</p>
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody class="dictionaryBox1">
+                <tr class="primary">
+                    <td class="englishWord">
+                        <p>getElementByid</p>
+                    </td>
+                    <td class="read">
+                        <p>ゲットエレメントバイアイディー</p>
+                    </td>
+                </tr>
+                <tr class="secondary">
+                    <td class="detail">
+                        <p class="detailText">詳細</p>
+
+                        <!---------- ポップアップ ---------->
+                        <label class="open" for="popUp1">
+                            <img src="../assets/images/dictionary.png" alt="">
+                        </label>
+
+                        <input type="checkbox" id="popUp1">
+                        <div class="overlay">
+
+                            <div class="window">
+                                <label class="close" for="popUp1"><img src="../assets/images/dictionary.jpg" alt="閉じるボタン"></label>
+
+
+                                <h2>getElementByid</h2>
+                                <h5>読み方</h5>
+                                <p>ゲットエレメントバイアイディー</p>
+                                <div class="mean">
+                                    <h5>意味</h5>
+                                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                </div>
+                                <div class="example">
+                                    <h5>使用例</h5>
+                                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+            <!-- <table class="dictionary"> -->
+            <!-- <tbody> -->
+
+            <tbody class="dictionaryBox2">
+                <tr class="primary">
+                    <td class="englishWord">
+                        <p>getElementByid</p>
+                    </td>
+                    <td class="read">
+                        <p>ゲットエレメントバイアイディー</p>
+                    </td>
+                </tr>
+                <tr class="secondary">
+                    <td class="detail">
+                        <p class="detailText">詳細</p>
+                        <!-- ポップアップ表示 -->
+                        <label class="open" for="popUp2">
+                            <img src="../assets/images/dictionary.png" alt="">
+                        </label>
+                        <input type="checkbox" id="popUp2">
+                        <div class="overlay">
+                            <div class="window">
+                                <label class="close" for="popUp2"><img src="../assets/images/dictionary.jpg" alt=""></label>
+                                <!-- --------------------------- -->
+
+                                <h2>getElementByid</h2>
+                                <h5>読み方</h5>
+                                <p>ゲットエレメントバイアイディー</p>
+                                <div class="mean">
+                                    <h5>意味</h5>
+                                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                </div>
+                                <div class="example">
+                                    <h5>使用例</h5>
+                                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+
+            <!-- <table class="dictionary"> -->
+            <!-- <tbody> -->
+
+            <tbody class="dictionaryBox1">
+                <tr class="primary">
+                    <td class="englishWord">
+                        <p>getElementByid</p>
+                    </td>
+                    <td class="read">
+                        <p>ゲットエレメントバイアイディー</p>
+                    </td>
+                </tr>
+                <tr class="secondary">
+                    <td class="detail">
+                        <p class="detailText">詳細</p>
+                        <!-- ポップアップ表示 -->
+                        <label class="open" for="popUp3">
+                            <img src="../assets/images/dictionary.png" alt="">
+                        </label>
+                        <input type="checkbox" id="popUp3">
+                        <div class="overlay">
+                            <div class="window">
+                                <label class="close" for="popUp3"><img src="../assets/images/dictionary.jpg" alt=""></label>
+                                <!-- ----------------- -->
+
+                                <h2>getElementByid</h2>
+                                <h5>読み方</h5>
+                                <p>ゲットエレメントバイアイディー</p>
+                                <div class="mean">
+                                    <h5>意味</h5>
+                                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                </div>
+                                <div class="example">
+                                    <h5>使用例</h5>
+                                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+
+            <!-- <table class="dictionary"> -->
+            <!-- <tbody> -->
+
+            <tbody class="dictionaryBox2">
+                <tr class="primary">
+                    <td class="englishWord">
+                        <p>getElementByid</p>
+                    </td>
+                    <td class="read">
+                        <p>ゲットエレメントバイアイディー</p>
+                    </td>
+                </tr>
+                <tr class="secondary">
+                    <td class="detail">
+                        <p class="detailText">詳細</p>
+                        <!-- ポップアップ表示 -->
+                        <label class="open" for="popUp4">
+                            <img src="../assets/images/dictionary.png" alt="">
+                        </label>
+                        <input type="checkbox" id="popUp4">
+                        <div class="overlay">
+                            <div class="window">
+                                <label class="close" for="popUp4"><img src="../assets/images/dictionary.jpg" alt=""></label>
+                                <!-- -------------------------- -->
+
+                                <h2>getElementByid</h2>
+                                <h5>読み方</h5>
+                                <p>ゲットエレメントバイアイディー</p>
+                                <div class="mean">
+                                    <h5>意味</h5>
+                                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                </div>
+                                <div class="example">
+                                    <h5>使用例</h5>
+                                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+
+            <!-- <table class="dictionary"> -->
+            <!-- <tbody> -->
+
+            <tbody class="dictionaryBox1">
+                <tr class="primary">
+                    <td class="englishWord">
+                        <p>getElementByid</p>
+                    </td>
+                    <td class="read">
+                        <p>ゲットエレメントバイアイディー</p>
+                    </td>
+                </tr>
+                <tr class="secondary">
+                    <td class="detail">
+                        <p class="detailText">詳細</p>
+                        <!-- ポップアップ表示 -->
+                        <label class="open" for="popUp5">
+                            <img src="../assets/images/dictionary.png" alt="">
+                        </label>
+                        <input type="checkbox" id="popUp5">
+                        <div class="overlay">
+                            <div class="window">
+                                <label class="close" for="popUp5"><img src="../assets/images/dictionary.jpg" alt=""></label>
+                                <!-- ----------------------- -->
+                                <h2>getElementByid</h2>
+                                <h5>読み方</h5>
+                                <p>ゲットエレメントバイアイディー</p>
+                                <div class="mean">
+                                    <h5>意味</h5>
+                                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                </div>
+                                <div class="example">
+                                    <h5>使用例</h5>
+                                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+
+            <!-- <table class="dictionary"> -->
+            <!-- <tbody> -->
+
+            <tbody class="dictionaryBox2">
+                <tr class="primary">
+                    <td class="englishWord">
+                        <p>getElementByid</p>
+                    </td>
+                    <td class="read">
+                        <p>ゲットエレメントバイアイディー</p>
+                    </td>
+                </tr>
+                <tr class="secondary">
+                    <td class="detail">
+                        <p class="detailText">詳細</p>
+                        <!-- ポップアップ表示 -->
+                        <label class="open" for="popUp6">
+                            <img src="../assets/images/dictionary.png" alt="">
+                        </label>
+                        <input type="checkbox" id="popUp6">
+                        <div class="overlay">
+                            <div class="window">
+                                <label class="close" for="popUp6"><img src="../assets/images/dictionary.jpg" alt=""></label>
+                                <!-- ------------------- -->
+                                <h2>getElementByid</h2>
+                                <h5>読み方</h5>
+                                <p>ゲットエレメントバイアイディー</p>
+                                <div class="mean">
+                                    <h5>意味</h5>
+                                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                </div>
+                                <div class="example">
+                                    <h5>使用例</h5>
+                                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+
+            <!-- <table class="dictionary"> -->
+            <!-- <tbody> -->
+
+            <tbody class="dictionaryBox1">
+                <tr class="primary">
+                    <td class="englishWord">
+                        <p>getElementByid</p>
+                    </td>
+                    <td class="read">
+                        <p>ゲットエレメントバイアイディー</p>
+                    </td>
+                </tr>
+                <tr class="secondary">
+                    <td class="detail">
+                        <p class="detailText">詳細</p>
+                        <!-- ポップアップ表示 -->
+                        <label class="open" for="popUp7">
+                            <img src="../assets/images/dictionary.png" alt="">
+                        </label>
+                        <input type="checkbox" id="popUp7">
+                        <div class="overlay">
+                            <div class="window">
+                                <label class="close" for="popUp7"><img src="../assets/images/dictionary.jpg" alt=""></label>
+                                <!-- --------------------->
+
+                                <h2>getElementByid</h2>
+                                <h5>読み方</h5>
+                                <p>ゲットエレメントバイアイディー</p>
+                                <div class="mean">
+                                    <h5>意味</h5>
+                                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                </div>
+                                <div class="example">
+                                    <h5>使用例</h5>
+                                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+            <!-- <table class="dictionary"> -->
+            <!-- <tbody> -->
+
+            <tbody class="dictionaryBox2">
+                <tr class="primary">
+                    <td class="englishWord">
+                        <p>getElementByid</p>
+                    </td>
+                    <td class="read">
+                        <p>ゲットエレメントバイアイディー</p>
+                    </td>
+                </tr>
+                <tr class="secondary">
+                    <td class="detail">
+                        <p class="detailText">詳細</p>
+                        <!-- ポップアップ表示 -->
+                        <label class="open" for="popUp8">
+                            <img src="../assets/images/dictionary.png" alt="">
+                        </label>
+                        <input type="checkbox" id="popUp8">
+                        <div class="overlay">
+                            <div class="window">
+                                <label class="close" for="popUp8"><img src="../assets/images/dictionary.jpg" alt=""></label>
+                                <!-- ------------------------ -->
+                                <h2>getElementByid</h2>
+                                <h5>読み方</h5>
+                                <p>ゲットエレメントバイアイディー</p>
+                                <div class="mean">
+                                    <h5>意味</h5>
+                                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                </div>
+                                <div class="example">
+                                    <h5>使用例</h5>
+                                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+
+            <!-- <table class="dictionary"> -->
+            <!-- <tbody> -->
+
+            <tbody class="dictionaryBox1">
+                <tr class="primary">
+                    <td class="englishWord">
+                        <p>getElementByid</p>
+                    </td>
+                    <td class="read">
+                        <p>ゲットエレメントバイアイディー</p>
+                    </td>
+                </tr>
+                <tr class="secondary">
+                    <td class="detail">
+                        <p class="detailText">詳細</p>
+                        <!-- ポップアップ表示 -->
+                        <label class="open" for="popUp9">
+                            <img src="../assets/images/dictionary.png" alt="">
+                        </label>
+                        <input type="checkbox" id="popUp9">
+                        <div class="overlay">
+                            <div class="window">
+                                <label class="close" for="popUp9"><img src="../assets/images/dictionary.jpg" alt=""></label>
+                                <!-- -------------------- -->
+                                <h2>getElementByid</h2>
+                                <h5>読み方</h5>
+                                <p>ゲットエレメントバイアイディー</p>
+                                <div class="mean">
+                                    <h5>意味</h5>
+                                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                </div>
+                                <div class="example">
+                                    <h5>使用例</h5>
+                                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+
+            <!-- <table class="dictionary"> -->
+            <!-- <tbody> -->
+
+            <tbody class="dictionaryBox2">
+                <tr class="primary">
+                    <td class="englishWord">
+                        <p>getElementByid</p>
+                    </td>
+                    <td class="read">
+                        <p>ゲットエレメントバイアイディー</p>
+                    </td>
+                </tr>
+                <tr class="secondary">
+                    <td class="detail">
+                        <p class="detailText">詳細</p>
+                        <!-- ポップアップ表示 -->
+                        <label class="open" for="popUp10">
+                            <img src="../assets/images/dictionary.png" alt="">
+                        </label>
+                        <input type="checkbox" id="popUp10">
+                        <div class="overlay">
+                            <div class="window">
+                                <label class="close" for="popUp10"><img src="../assets/images/dictionary.jpg" alt=""></label>
+                                <!-- ----------------------- -->
+                                <h2>getElementByid</h2>
+                                <h5>読み方</h5>
+                                <p>ゲットエレメントバイアイディー</p>
+                                <div class="mean">
+                                    <h5>意味</h5>
+                                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                </div>
+                                <div class="example">
+                                    <h5>使用例</h5>
+                                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </main>
+
+    <!-- トップへ戻るボタン -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+    <div id="pageTop"><a href="#"></a></div>
+
+    <!-- フッター -->
+    <!-- フッター -->
+    <footer id="footer" class="footer outerBlock">
+        <div class="footerWrap">
+            <div class="footerLogo">
+                <a href=""><img src="../assets/images/logo.jpg" alt="タイプコード"></a>
+            </div>
+            <div class="innerBlock">
+                <div class="footerContent">
+
+                    <div class="contentItem">
+                        <div class="footerNav">
+                            <div class="footerTitle"><a href="">ゲーム</a></div>
+                            <div class="footerTitle"><a href="">辞書</a></div>
+                            <!-- <ul>
+                                    <li class="engWord"><a href="">プログラミングでよく使う英単語</a></li>
+                                    <li><a href="">HTML</a></li>
+                                    <li><a href="">CSS</a></li>
+                                    <li><a href="">JavaScrip</a></li>
+                                    <li><a href="">PHP</a></li>
+                                    <li><a href="">Python</a></li>
+                                /ul> -->
+                            <div class="footerTitle"><a href="">ランキング</a></div>
+                            <div class="footerTitle"><a href="">マイスコア</a></div>
+                        </div>
+                    </div>
+
+                    <div class="contentItem">
+                        <div class="footerNav">
+                            <div class="footerTitle"><span>知っトク情報</span></div>
+                            <!-- <ul>
+                                        <li><a href="">知っトク情報一覧</a></li> -->
+                            <!-- <li><a href="">開発環境セットアップ</a></li>
+                                        <li><a href="">WordPress</a></li>
+                                        <li><a href="">おすすめWebアプリ</a></li>
+                                        <li><a href="">おすすめWebサイト</a></li>
+                                        <li><a href="">ショートカット</a></li>
+                                        <li><a href="">資格</a></li>
+                                        <li><a href="">Chrome拡張機能</a></li>
+                                        <li><a href="">卒業生の作品</a></li> -->
+                            <!-- </ul> -->
+                        </div>
+                        <div class="footerTitle"><a href="">更新情報</a></div>
+                        <div class="footerTitle"><a href="">アバウト</a></div>
+                    </div>
+
+
+                    <div class="contentItem">
+                        <div class="footerNav">
+                            <div class="footerTitle"><a href="">お問い合わせ</a></div>
+                            <div class="footerTitle"><a href="">利用規約</a></div>
+                            <div class="footerTitle"><a href="">プライバシーポリシー</a></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <small>Copyright©タイプコード All Rights Reserved.</small>
+        </div>
+    </footer>
+
+    <!-- jqueryの読み込み -->
+    <script src="../assets/js/vendor/jquery-3.6.3.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+</html>
