@@ -92,7 +92,30 @@ class TypinggameController extends Controller
 
         $response = response()->json(['message' => 'Score saved successfully'], 200);
         // クッキーに値を保存する
-        $response->cookie('saved_data', $score, 600); // 60分 = 1時間
+
+        switch ($scoreModel->language_id) {
+            case '1':
+                $response->cookie('saved_data1', $score, 600); // 60分 = 1時間
+                break;
+            case '2':
+                $response->cookie('saved_data2', $score, 600); // 60分 = 1時間
+                break;
+            case '3':
+                $response->cookie('saved_data3', $score, 600); // 60分 = 1時間
+                break;
+            case '4':
+                $response->cookie('saved_data4', $score, 600); // 60分 = 1時間
+                break;
+            case '5':
+                $response->cookie('saved_data4', $score, 600); // 60分 = 1時間
+                break;
+            case '6':
+                $response->cookie('saved_data4', $score, 600); // 60分 = 1時間
+                break;
+            default:
+                $response->cookie('saved_data1', $score, 600); // 60分 = 1時間
+                break;
+        }
 
         // 必要な場合はレスポンスを返す
         return $response;
