@@ -24,7 +24,7 @@
 }
 
 /* パンくずリストcss */
-.breadCrumb-001 {
+/* .breadCrumb-001 {
     width: 100%;
     display: flex;
     gap: 0 5px;
@@ -36,7 +36,7 @@
 .breadCrumb-001 li {
     display: flex;
     align-items: center;
-}
+} */
 
 .breadCrumb-001 li:not(:last-child)::after {
     display: inline-block;
@@ -57,7 +57,7 @@
 
 @media (min-width:1000px) {
 /* パンくずリストcss pc*/
-.breadCrumb-001 {
+/* .breadCrumb-001 {
     width: 100%;
     display: flex;
     gap: 0 5px;
@@ -69,9 +69,9 @@
 .breadCrumb-001 li {
     display: flex;
     align-items: center;
-}
+} */
 
-.breadCrumb-001 li:not(:last-child)::after {
+/* .breadCrumb-001 li:not(:last-child)::after {
     display: inline-block;
     transform: rotate(45deg);
     width: 0.5em;
@@ -86,12 +86,13 @@
     color: #ffff;
     text-decoration: none;
 
-}}
+} */
+}
 
 h2{
     color:#fff;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 @media screen and (min-width: 1000px) {
