@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('pronunciation', 200)->nullable(true);
             $table->string('meaning', 200)->nullable(false);
             $table->string('notion', 200)->nullable(true);
-            $table->string('usage', 500)->nullable(false);
+            $table->string('usage', 500)->nullable(true);
             $table->integer('level_id')->default(1);
             $table->boolean('is_show')->default(true);
             //create_atはNOT NULLにし、update_atはNULLを許容する
