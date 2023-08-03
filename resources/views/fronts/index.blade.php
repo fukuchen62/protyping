@@ -85,8 +85,10 @@
                     <p class="gameExplain">プログラミングでよく使う英単語のタイピングゲームができるWEBアプリです</p>
                     <div class="box" id="makeImg">
                         <div class="circle"></div>
-                        <button id="startBtn" type="button"
-                            onclick="location.href='../../resources/views/fronts/games_typing.blade.php'">
+                        @php
+                            $path = route('game');
+                        @endphp
+                        <button id="startBtn" type="button" onclick="location.href='{{ $path }}'">
                             ゲームをする
                         </button>
                         <div class="circleBottom"></div>
@@ -102,64 +104,61 @@
                     </p>
                 </section>
 
-                {{-- <section class="topRanking2">
+                <section class="topRanking2">
                     <div class="ranking2">
                         <img src="{{ asset('assets/images/whitecrown.png') }}" alt="王冠">
                         <h6>ランキング</h6>
                         <img src="{{ asset('assets/images/whitecrown.png') }}" alt="王冠">
                     </div>
                     <div class="topRankingArea2">
-
                         <div class="selectWrap2">
-                            <form action="{{ route('top') }}" method="GET">
-                                <select name="level_id" required onchange="this.form.submit()">
-                                    <option value="1" {{ $selectedLevel == 1 ? 'selected' : '' }}>初級コース</option>
-                                    <option value="2" {{ $selectedLevel == 2 ? 'selected' : '' }}>中級コース</option>
-                                </select>
-                            </form>
+                            <a href="{{ route('top') }}?level_id=1">初級コース</a>
+
+                            <a href="{{ route('top') }}?level_id=2">中級コース</a>
                         </div>
 
-                        @foreach ($languages as $language)
-                            <div class="rankingArea2">
-                                <p class="rankingWordCategory">{{ $language->language_name }}</p>
-                                <ul class="topWordRanking2">
-                                    @php
-                                        $scores = $scoresByLanguage[$language->id];
-                                        $dummyDataCount = 3 - count($scores); // 3位までの表示に足りないデータの数
-                                    @endphp
-
-                                    @for ($i = 0; $i < 3; $i++)
-                                        @if ($i === 0 && isset($scores[$i]))
-                                            <li class="firstRank">
-                                                <p class="rank">{{ $i + 1 }}位</p>
-                                                <p class="name">{{ $scores[$i]->username }}</p>
-                                                <p class="score">{{ $scores[$i]->score }}点</p>
-                                            </li>
-                                        @elseif ($i === 1 && isset($scores[$i]))
-                                            <li class="secondRank">
-                                                <p class="rank">{{ $i + 1 }}位</p>
-                                                <p class="name">{{ $scores[$i]->username }}</p>
-                                                <p class="score">{{ $scores[$i]->score }}点</p>
-                                            </li>
-                                        @elseif ($i === 2 && isset($scores[$i]))
-                                            <li class="thirdRank">
-                                                <p class="rank">{{ $i + 1 }}位</p>
-                                                <p class="name">{{ $scores[$i]->username }}</p>
-                                                <p class="score">{{ $scores[$i]->score }}点</p>
-                                            </li>
-                                        @else
-                                            <li>
-                                                <p class="rank">{{ $i + 1 }}位</p>
-                                                <p class="name">挑戦してね！</p>
-                                                <p class="score">00点</p>
-                                            </li>
-                                        @endif
-                                    @endfor
-                                </ul>
-                            </div>
-                        @endforeach
+                        <div class="ranking-panel">
+                            @foreach ($languages as $language)
+                                <div class="rankingArea2">
+                                    <p class="rankingWordCategory">{{ $language->language_name }}</p>
+                                    <table class="topWordRanking2">
+                                        @php
+                                            $scores = $scoresByLanguage[$language->id];
+                                            $dummyDataCount = 3 - count($scores); // 3位までの表示に足りないデータの数
+                                        @endphp
+                                        @for ($i = 0; $i < 3; $i++)
+                                            @if ($i === 0 && isset($scores[$i]))
+                                                <tr class="firstRank">
+                                                    <td class="rank">{{ $i + 1 }}位</td>
+                                                    <td class="name">{{ $scores[$i]->username }}</td>
+                                                    <td class="score">{{ $scores[$i]->score }}点</td>
+                                                </tr>
+                                            @elseif ($i === 1 && isset($scores[$i]))
+                                                <tr class="secondRank">
+                                                    <td class="rank">{{ $i + 1 }}位</td>
+                                                    <td class="name">{{ $scores[$i]->username }}</td>
+                                                    <td class="score">{{ $scores[$i]->score }}点</td>
+                                                </tr>
+                                            @elseif ($i === 2 && isset($scores[$i]))
+                                                <tr class="thirdRank">
+                                                    <td class="rank">{{ $i + 1 }}位</td>
+                                                    <td class="name">{{ $scores[$i]->username }}</td>
+                                                    <td class="score">{{ $scores[$i]->score }}点</td>
+                                                </tr>
+                                            @else
+                                                <tr>
+                                                    <td class="rank">{{ $i + 1 }}位</td>
+                                                    <td class="name">挑戦してね！</td>
+                                                    <td class="score">00点</td>
+                                                </tr>
+                                            @endif
+                                        @endfor
+                                    </table>
+                                </div>
+                            @endforeach
+                        </div>
                     </div>
-                </section> --}}
+                </section>
 
                 {{-- 知っトク情報 --}}
                 <section class="infoNews">
@@ -196,8 +195,12 @@
                                 $timestamp = \Carbon\Carbon::parse($item->created_at);
                             @endphp
                             <ul class="updateList">
-                                <li><a href="{{ route('article') }}">{{ $timestamp->format('Y年m月d日') }}
+                                {{-- <li><a href="{{ route('article') }}">{{ $timestamp->format('Y年m月d日') }}
                                         <span class="info-title">{{ $item->title }}</span></a>
+                                    <p class="info-content">{{ $item->content }}</p>
+                                </li> --}}
+                                <li>{{ $timestamp->format('Y年m月d日') }}
+                                    <span class="info-title">{{ $item->title }}</span>
                                     <p class="info-content">{{ $item->content }}</p>
                                 </li>
                                 {{-- <p class="updateLine"></p> --}}
