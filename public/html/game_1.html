@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAME</title>
+
+    <!-- 共通CSS -->
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/typingstyle.css">
+    <link rel="stylesheet" href="../assets/css/game_1.css">
+
+
+    <!-- slick -->
+    <!-- <link rel="stylesheet" href="../assets/css/slick.css">
+<link rel="stylesheet" href="../assets/css/slick-theme.css"> -->
+
+    <!-- jqueryの読み込み -->
+    <script src="../assets/js/vendor/jquery-3.6.3.min.js"></script>
+
+    <!-- フォント設定 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- ファビコン -->
+    <!-- <link rel="shortcut icon" href="../assets/images/favicon/favicon.ico"> -->
+
+    <!-- アイコンフォント -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <script defer src="https://use.fontawesome.com/releases/v6.4.0/js/all.js"></script>
+
+
+</head>
+<body>
+
+    <div id="game-screen">
+        <div id="game-header">
+            <h2 class="description">システムエンジニアのためのタイピングゲーム</h2>
+        </div>
+
+        <div id="game-body">
+
+            <!-- ゲーム画面１ -->
+            <div id="game-view1">
+                <div id="game-title" class="game-position1">GAME</div>
+
+
+                <form action="http://protyping.com/typinggame" method="get" class="game-position2">
+
+                    <select id="language-select" name="language">
+                        <option value="1" selected>HTML</option>
+                        <option value="2">CSS</option>
+                        <option value="3">JavaScript</option>
+                        <option value="4">PHP</option>
+                        <option value="5">Python</option>
+                        <option value="6">よく使う英単語</option>
+                        <!-- 他の言語のオプションを追加 -->
+                    </select>
+
+
+                    <select id="level-select" name="level">
+                        <option value="1" selected>初級</option>
+                        <option value="2">中級</option>
+                        <!-- 他のレベルのオプションを追加 -->
+                    </select>
+                    <input type="submit" value="言語・レベル決定ボタン">
+                </form>
+
+                <div id="game-explain"></div>
+
+                <div class="box" id="makeImg">
+                    <div class="circle"></div>
+                    <button id="start-button" type="button" class="game-position3">ゲームスタート</button>
+                    <div class="circleBottom"></div>
+                </div>
+
+
+
+
+
+
+
+                <button id="howto-playing" type="button" class="game-position4"><img src="../assets/images/memo.svg" alt="メモアイコン">遊び方</button>
+
+
+                <button id="howto-setting" type="button" class="game-position5"><img src="../assets/images/gear.svg" alt="歯車アイコン">設定</button>
+
+
+
+                <div id="game-func">
+
+                </div>
+            </div>
+
+
+            <div id="game-view5" style="display: none;">
+                <p>選択中の言語</p>
+                <p>モードとコースを選んでください</p>
+                <p>練習モード</p>
+                <button id="open-practise1" type="button" class="game-position6">初級コース プレイ時間3分 1単語:7文字以下</button><br>
+                <button id="open-practise2" type="button" class="game-position7">中級コース プレイ時間3分 1単語:8文字以下</button><br>
+                <p>ランキングモード</p>
+                <button id="open-ranking1" type="button" class="game-position9">初級コース プレイ時間2分 1単語:7文字以下</button><br>
+                <button id="open-ranking2" type="button" class="game-position10">中級コース プレイ時間1分 1単語:8文字以下</button><br>
+                <button id="close-selectmode" type="button" class="game-position8">言語を選び直す ▶トップへ戻る</button>
+            </div>
+</body>
