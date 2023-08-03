@@ -1,13 +1,13 @@
 @charset "utf-8";
 
-.main{
+.main {
     background-color: #26567C;
     /* margin-left: 20px;
     margin-right: 20px; */
     text-align: center;
     width: calc(100vw - 40px);
     margin-bottom: 20px;
-	margin-left: 20px;
+    margin-left: 20px;
     min-width: 280px;
     padding-top: 90px;
     /* padding: 10px; */
@@ -15,127 +15,93 @@
 
 
 @media (min-width:1000px) {
-	.main {
-	width: 1000px;
-    margin-bottom: 20px;
-	margin-left: calc((100vw - 1000px) / 2);
-    padding-top: 120px;
-}
+    .main {
+        width: 1000px;
+        margin-bottom: 20px;
+        margin-left: calc((100vw - 1000px) / 2);
+        padding-top: 120px;
+    }
 }
 
 /* パンくずリストcss */
-/* .breadCrumb-001 {
-    width: 100%;
-    display: flex;
-    gap: 0 5px;
-    list-style: none;
-    padding: 0;
+.breadCrumb-001 {
     font-size: 1rem;
 }
 
-.breadCrumb-001 li {
-    display: flex;
-    align-items: center;
-} */
-
 .breadCrumb-001 li:not(:last-child)::after {
-    display: inline-block;
-    transform: rotate(45deg);
-    width: 0.5em;
-    height: 0.5em;
-    margin-left: 10px;
     border-top: 1px solid #ffff;
     border-right: 1px solid #ffff;
-    content: '';
 }
 
 .breadCrumb-001 a {
     color: #ffff;
-    text-decoration: none;
 }
 
 
 @media (min-width:1000px) {
-/* パンくずリストcss pc*/
-/* .breadCrumb-001 {
-    width: 100%;
-    display: flex;
-    gap: 0 5px;
-    list-style: none;
-    padding: 0;
-    font-size: 1.2rem;
+
+    /* パンくずリストcss pc*/
+    .breadCrumb-001 {
+        font-size: 1.2rem;
+    }
+
+    .breadCrumb-001 li:not(:last-child)::after {
+        border-top: 1px solid #ffff;
+        border-right: 1px solid #ffff;
+    }
+
+    .breadCrumb-001 a {
+        color: #ffff;
+    }
 }
 
-.breadCrumb-001 li {
-    display: flex;
-    align-items: center;
-} */
-
-/* .breadCrumb-001 li:not(:last-child)::after {
-    display: inline-block;
-    transform: rotate(45deg);
-    width: 0.5em;
-    height: 0.5em;
-    margin-left: 10px;
-    border-top: 1px solid #ffff;
-    border-right: 1px solid #ffff;
-    content: '';
-}
-
-.breadCrumb-001 a {
-    color: #ffff;
-    text-decoration: none;
-
-} */
-}
-
-h2{
-    color:#fff;
+h2 {
+    color: #fff;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 @media screen and (min-width: 1000px) {
-h2{
+    h2 {
         font-size: 4rem;
     }
 }
 
-p{
+p {
     font-size: 1.6rem;
     text-align: left;
 }
 
 @media screen and (min-width: 1000px) {
-p{
-    font-size: 1.8rem;
+    p {
+        font-size: 1.8rem;
     }
 }
 
-.updateInformation .updateList li{
+.updateInformation .updateList li {
     display: flex;
     justify-content: space-between;
 }
 
-.updateInformation{
-        /* width: 1000px; */
-        /* height: 150px; */
-        /* margin-right: auto;
+.updateInformation {
+    /* width: 1000px; */
+    /* height: 150px; */
+    /* margin-right: auto;
         margin-left: auto; */
-        line-height: 30px;
-        width: 100%;
-        /* margin-left: calc(10vw / 2 - 20px); */
-        margin-bottom:40px;
-        padding:10px;
-        border:#817F6E 2px solid;
-        border-radius:10px;
-        text-align: center;
-        background-color: #fff;
-        box-shadow: 3px 5px 3px #60C8DA;
-    }
+    line-height: 30px;
+    width: 100%;
+    /* margin-left: calc(10vw / 2 - 20px); */
+    margin-bottom: 40px;
+    padding: 10px;
+    border: #817F6E 2px solid;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 3px 5px 3px #60C8DA;
+}
 
 @media screen and (min-width: 1000px) {
-.updateInformation{
+    .updateInformation {
         /* width: 1000px; */
         height: auto;
         /* height:auto; */
@@ -143,12 +109,16 @@ p{
         margin-left: auto; */
         line-height: 30px;
         /* margin-left: calc((100vw - 1080px) / 2 - 20px); */
-        margin-bottom:40px;
-        padding:10px;
-        border:#817F6E 2px solid;
-        border-radius:10px;
+        margin-bottom: 40px;
+        padding: 10px;
+        border: #817F6E 2px solid;
+        border-radius: 10px;
         text-align: center;
         background-color: #fff;
         box-shadow: 3px 5px 3px #60C8DA;
-        }
+    }
+}
+
+.updateList li p {
+    word-break: break-all;
 }
