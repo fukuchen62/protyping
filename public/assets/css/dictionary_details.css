@@ -514,7 +514,7 @@ td.detail {
         /* flex-direction: row; */
     }
 
-    td.description {
+    .description {
         display: none;
     }
 }
