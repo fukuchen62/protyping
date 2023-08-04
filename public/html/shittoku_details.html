@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/common.css">
     <link rel="stylesheet" href="../assets/css/shittoku_details.css">
+    <link rel="stylesheet" href="../assets/css/sittokubase.css">
 
     <!-- slick -->
     <!-- <link rel="stylesheet" href="../assets/css/slick.css">
@@ -108,39 +109,301 @@
                     <section class="titleArea">
 
                         <!-- タイトルコーナー -->
-                        <h2 class="title">開発環境<br>セットアップ</h2>
-                        <p class="overview">このページについての説明文。このページについての説明文。このページについての説明文。このページについて説明文。
-                        このページについての説明文。このページについての説明文。
-                                        </p>
+                        <h2 class="title">開発環境セットアップ</h2>
+                        <!-- 詳細な概要 -->
+                        <p class="overview">このページでは、ローカル開発環境について説明しています！</p>
 
                     </section>
 
 
-                    <!-- ------ コンテンツ班が作る ------  -->
 
-                    <!-- 目次 -->
                     <section>
+                        <!-- 内容 -->
+                        <section class="content">
+                            <div class="tips">
+                                <div class="boxTips">
+                                    <p>PHPでWebアプリを開発するには以下のものが必要になります。</p>
+                                    <ol class="boxList oList">
+                                        <li>Webサーバ (Apache HTTP Server)</li>
+                                        <li>データベースサーバ (MySQL, MariaDB)</li>
+                                        <li>PHP</li>
+                                        <li>コードエディタ (Visual Studio Code)</li>
+                                        <li>Chrome, Edgeなどのブラウザ</li>
+                                    </ol>
+                                    <p>これらのソフトウェア・ツール（フリーウェア）のうち、ブラウザとコードエディタ以外の、Apache、PHP、MySQL(MariaDB)をまとめてインストールしてくれる便利なパッケージソフトウェアがあります。それらが、『XAMPP』と『MAMP』です。</p>
+                                    <p>それぞれ、以下のようなOSに対応しています。</p>
+                                    <ul class="boxList uList">
+                                        <li>『XAMPP』　→　Windows, Mac, Linux</li>
+                                        <li>『MAMP』 → Windows, Mac</li>
+                                    </ul>
+                                    <p>XAMPPとMAMPは開発環境には重要なものなのでぜひ理解を深めて下さい！</p>
 
-                        <h3>見出しテストです</h3>
+                                    <nav>
+                                        <ul class="boxList uList">
+                                            <li><a href="#Vsocde">Visual Studio Code</a></li>
+                                            <li><a href="#XAMP">XAMP</a></li>
+                                            <li><a href="#MAMP">MAMP</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="boxTips">
+                                    <h3 id="Vscode">Visual Studio Code</h3>
+                                    <h4>通常のエディタとコードエディタの違い</h4>
+                                    <p>コードエディタは、Windowsのメモ帳、macのシンプルテキストとは違い、ソースコードの入力編集に特化したエディタです。</p>
 
-                        <h4>小見出しテストです</h4>
+                                    <h4>Visual Studio Codeについて</h4>
+                                    <p>コードエディタには、多くの種類が存在しますが、2023年現在Visual Studio Code(VSCode)が定番となっています。無償で使いやすく、様々な拡張機能を追加することで、使い勝手を自分好みにカスタマイズできるなど、多くの点で優れています。</p>
 
-                    </section>
+                                    <h4>VSCodeのセットアップ</h4>
+                                    <ol class="boxList oList">
+                                        <li>ダウンロード
+                                            <p>以下のサイトからダウンロードできます。<br>
+                                                <a href="https://azure.microsoft.com/ja-jp/products/visual-studio-code/" target="_blank">
+                                                https://azure.microsoft.com/ja-jp/products/visual-studio-code/</a></li>
+                                            <li>インストール<p>インストーラーの指示に従ってください。</li>
+                                            <li>インストールが終わったら、日本語化します。VSCodeを起動し、左の[Extensions]アイコンをクリックします。</li>
+                                            <li>検索ボックスから、「japan」と入力すると、日本語関連の拡張機能が一覧表示されます。ここでは、[Japanese Language Pack for Visual Studio Code]欄の[Install]ボタンをクリックします。</li>
+                                            <li>再起動を促すウィンドウが表示されたら、[Restart]をクリックします。</li>
+                                            <li>再起動が完了すると、メニューなどが日本語化されています。</li>
+                                        </ol>
 
-                    <!-- 1.見出し -->
-                    <section class="content">
+                                    <h4>ワークスペース</h4>
+                                        <p>VSCodeには、複数のフォルダをまとめて管理できる「ワークスペース」という機能があります。ワークスペースは、VSCode上の概念であり、また作業空間であり、その作業空間に、物理フォルダを紐づけた構造となっています。</p>
+                                            <p>ワークスペースは単純に複数のフォルダを1つのワークスペースにで使用する目的でも使えますが、１つのフォルダを複数のプロジェクトに登録することが可能です。つまり、複数のプロフェクトで１つのフォルダを共通利用することも可能となっています。
+                                            また、VSCodeの設定、拡張機能などをワークスペースごとに登録することで、ワークスペースごとに専用の環境を構築することが可能です。</p>
+
+                                            <p>ワークスペースの作り方</p>
+                                            <ol class="boxList oList" type=i>
+                                                <li>ソースコードなどを置くフォルダを作成します。</li>
+                                                <li>「ファイル」メニューから「名前を付けてワークスペースを保存」を選択し、ワークスペースを保存します。</li>
+                                                <li>ファイル名は、「workspace.code-workspace」となっています。「workspace」は任意の名前を指定します。</li>
+                                                <li>「ファイル」メニューから、「フォルダをワークスペースに追加」を選択し、１．で作ったフォルダを指定します。</li>
+                                            </ol>
+
+
+                                </div>
+                                <table class="tableTips">
+                                    <caption>
+                                        <p>
+                                                おすすめ拡張機能
+                                            </p>
+                                    </caption>
+                                    <thead class="theadTips">
+                                        <tr>
+                                            <th>拡張機能</th>
+                                            <th>機能</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="tbodyTips">
+                                        <tr>
+                                            <td>Japanese Language Pack for Visual Studio</td>
+                                            <td>VScodeを日本語化する拡張機能です。</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Auto Rename Tag</td>
+                                            <td>開始タグ名を変更したとき、閉じタグ名も自動で変更してくれます。</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CSS Formatter</td>
+                                            <td>CSSのコードを整形します。</td>
+                                        </tr>
+                                        <tr>
+                                            <td>DotENV</td>
+                                            <td>Foreman の提供している .env ファイルから環境変数をセットする機能を Foreman 環境以外でも利用できるようにしたものです。</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Evillnspector</td>
+                                            <td>テキスト内にある全角スペースを強調表示してくれます。</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Format HTML in PHP</td>
+                                            <td>PHPの中のHTMLのコードを整形します。</td>
+                                        </tr>
+                                        <tr>
+                                            <td>indent-rainbow </td>
+                                            <td>深さに応じて、インデントをカラーリングします。</td>
+                                        </tr>
+                                        <tr>
+                                            <td>open in browser</td>
+                                            <td>ブラウザで開けます。</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Path Autocomplete</td>
+                                            <td>ファイルパスを補完してくれます。</td>
+                                        </tr>
+                                        <tr>
+                                            <td>PHP Class Generator</td>
+                                            <td>空のPHPファイルから、namespaceとクラス名を補完したスケルトン(基本的なクラスの構造を提供し、開発者がクラスの具体的な実装を追加できるようにする)を作ってくれます。</td>
+                                        </tr>
+                                        <tr>
+                                            <td>PHP Constructor</td>
+                                            <td>クラスからオブジェクトがnewによって作成される時に自動的に呼び出されるメソッドです。</td>
+                                        </tr>
+                                        <tr>
+                                            <td>PHP cs fixer</td>
+                                            <td>コーディング規約に沿ってPHPコードを美しく整形してくれるオープンソースソフトウェアです。</td>
+                                        </tr>
+                                        <tr>
+                                            <td>PHP Debug</td>
+                                            <td>作成したPHPプログラムのエラーを訂正したり、プログラムが想定通りに動くかどうかのチェックなどをします。</td>
+                                        </tr>
+                                        <tr>
+                                            <td>PHP DocBlocker</td>
+                                            <td>DocBlock（/**入力でコメント）の記述を容易にしてくれます。</td>
+                                        </tr>
+                                        <tr>
+                                            <td>PHP Getters & Setters</td>
+                                            <td>返り値・引数の型も含めたgetter/setterを1コマンドで複数生成できます。</td>
+                                        </tr>
+                                        <tr>
+                                            <td>PHP import checker</td>
+                                            <td>使っていないクラスをハイライトする。</td>
+                                        </tr>
+                                        <tr>
+                                            <td>PHP Intelephense</td>
+                                            <td>生産的なPHP開発に不可欠な機能が満載の高性能PHP言語サーバーです。(例　キーワードを強調してくれたり、関数のヘルプを出してくれたりする)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Prettier-Code format</td>
+                                            <td>ソースコードを自動整形します。</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="boxTips">
+                                    <h3 id="XAMP">『XAMPP』（Windows版）</h3>
+                                    <p>以下、XAMPPのセットアップについて解説します。</p>
+                                    <p>参考までに、XAMPPの公式サイトには、
+                                    「XAMPP は最も人気のある PHP 開発環境です」
+                                    「XAMPP は、完全に無償で MariaDB、PHP、および Perl を含んだ、簡単にインストールできる Apache ディストリビューションです。XAMPP オープン ソース パッケージは、インストールと利用が非常に簡単できるよう設定されています」とあります。</p>
+
+                                    <h4>XAMPPのセットアップ手順</h4>
+                                    <ol class="boxList oList">
+                                        <li>インストール
+                                            <p>XAMPPは公式サイト、「Apache Friends」からダウンロードできます。<br>
+                                                <a href="https://www.apachefriends.org/jp/index.html" target="_blank">
+                                                https://www.apachefriends.org/jp/index.html</a></p>
+                                            <p>インストールは、インストーラーの案内に従ってください。<br>
+                                                途中、Windowsのファイアーウォールの許可を求める画面が出たら、プライベートネットワークにチェックを入れたまま、[アクセスを許可する]をクリックします。</p>
+                                            <p>XAMPPのコントロールパネルが表示されたら、インストールは完了です。コントロールパネルは、[x]をクリックして閉じます。</p>
+                                        </li>
+
+                                        <li>PHPの初期設定<br>
+                                            pho.iniファイルの設定値を変更します。<br>
+                                            ファイルのパスは以下の通りです。
+                                            <p>C:\xampp\php\php.ini</p>
+                                            PHPを以下のように設定してください。<br>
+                                            [Date]<br>
+                                            date.timezone=Asia/Tokyo<br>
+                                        </li>
+
+                                        <li>phpmyadminでパスワードを設定する<br>セキュリティ上、通常はデータベースMariaDBにパスワードを設定しますが、学習環境などで設定しない場合は、以下3,4の作業は必要ありません。
+                                            <ol class="boxList oList">
+                                                <li>Xamppを起動し、[Apache]と[MySQL]を起動し、[MySQL]の横の[Admin]を選びます。</li>
+                                                <li>[MySQL]が起動するので、[ユーザーアカウント]を選びます。</li>
+                                                <li>[localhost]の[権限を編集]を選びます。</li>
+                                                <li>[パスワードを変更する(Change password)]を選び、パスワードを変更します。</li>
+                                                <li>['root'@'localhost' のパスワードは正しく変更されました。]と表示されれば、パスワードの設定が完了です。</li>
+                                                <li>このままでは、Xamppを再起動し、[Apache]と[MySQL]を起動し、[MySQL]の横の[Admin]を選ぶと、以下の画面が表示され、パスワードが設定されていないため、エラーが出ます。</li>
+                                            </ol>
+                                        </li>
+
+                                        <li>[config.inc.php]ファイルにパスワードを追記
+                                            <ol class="boxList oList">
+                                                <li>[Apache]と[MySQL]を[stop]します。</li>
+                                                <li>[Apache」→「Config」→「phpMyAdmin(config.inc.php)」を選びます。</li>
+                                                <li>[config.inc.php]のなかの、 $cfg['Servers'][$i]['password'] = ''; の空白になっている部分「''」にphpMyAdminで設定したパスワードを書き込みます。（例）['password'] = '<i>password</i>';</li>
+                                                <li>[Apache]と[MySQL]を起動し、[MySQL]の横の[Admin]を選ぶと、画面が表示されログインできています。</li>
+                                            </ol>
+                                        </li>
+
+                                        <li>コマンドプロンプトからの実行環境セットアップ（環境変数にmysqlとphpフォルダを追加）
+                                            <p>コマンドラインから、SQLのコマンドを実行したり、PHPのコマンドを実行できるように、環境変数Pathに、[C:\xampp\mysql\bin]と[C:\xampp\php]を追加します。</p>
+                                            <ol class="boxList oList">
+                                                <li>[Windowsキー+Rキー]の同時押しで[ファイル名を指定して実行]ウィンドウを表示</li>
+                                                <li>[SystemPropertiesAdvanced.exe]とコマンドを入力して、[OK]を押します。</li>
+                                                <li>[システムのプロパティ]ウィンドウが開きます。</li>
+                                                <li>右下の[環境変数]をクリックします。</li>
+                                                <li>システム環境変数の[Path]を選択し、[編集]をクリックします。</li>
+                                                <li>[新規]をクリックし、 C:\xampp\mysql\bin を追加し、[OK]をクリックします。</li>
+                                                <li>[新規]をクリックし、 C:\xampp\php を追加し、[OK]をクリックします。</li>
+                                                <li>これでパスが通ったので、環境変数の設定は完了です。</li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </div>
+
+
+                                <div class="boxTips">
+                                    <h3 id="MAMP">『MAMP』（macOS版）</h3>
+                                    <p>以下、MAMPのセットアップについて解説します。</p>
+                                    <p>「Macintosh」＋「Apache」＋「MySQL」＋「PHP」の各頭文字を取った略称です。 これらのソフトウェアをまとめてインストールできる開発環境構築ツールです。</p>
+                                    <p>参考までに、MAMPの公式サイトには、「MAMP は、テストや開発などの目的で、デスクトップ PC でWordPress を実行するために必要なすべてのツールを提供します。</p>
+                                    <p>モバイル デバイス上でプロジェクトを簡単にテストすることもできます。</p>
+                                    <p>MAMP は無料で提供され、簡単にインストールできます。MAMP は、システム上で既に実行されている既存の Apache インストールを侵害しません。スクリプトを開始したり構成ファイルを変更したりすることなく、Apache、Nginx、PHP、MySQL をインストールできます。さらに、MAMP が不要になった場合は、MAMP フォルダーを削除するだけで、すべてが元の状態に戻ります (つまり、MAMP は「通常の」システムを一切変更しません)。</p>
+
+                                    <h4>『MAMP』のセットアップ手順</h4>
+                                    <ol class="boxList oList">
+                                        <li>インストール
+                                            <p>MAMPは公式サイトからダウンロードできます。<br>
+                                                <a href="https://www.mamp.info/en/mac/" target="_blank">
+                                                https://www.mamp.info/en/mac/</a></p>
+
+                                            <p>インストールは、インストーラーの案内に従ってください。<br>
+                                                    途中、macOSのファイアーウォールの許可を求める画面が出たら、プライベートネットワークにチェックを入れたまま、[アクセスを許可する]をクリックします。</p>
+                                            <p>MAMPのコントロールパネルが表示されたら、インストールは完了です。コントロールパネルは、[x]をクリックして閉じます。</p>
+                                        </li>
+
+                                        <li>PHPの初期設定<br>
+                                            pho.iniファイルの設定値を変更します。<br>
+                                            ファイルのパスは以下の通りです。
+                                            <p>Applications/mamp\php\php.ini</p>
+                                            PHPを以下のように設定してください。<br>
+                                            [Date]
+                                            date.timezone=Asia/Tokyo<br>
+                                        </li>
+
+                                        <li>phpmyadminでパスワードを設定する<br>セキュリティー上、通常はデータベースにパスワードを設定しますが、学習環境などで設定しない場合は、以下3,4の作業は必要ありません。
+                                            <ol class="boxList oList">
+                                                <li>MAMPを起動し、右上のWebStartとStartを起動し、[MySQL]の中の[phpAdmin]を選びます。</li>
+                                                <li>[MySQL]が起動するので、[ユーザーアカウント]を選びます。</li>
+                                                <li>[localhost]の[権限を編集]を選びます。</li>
+                                                <li>[パスワードを変更する(Change password)]を選び、パスワードを変更します。</li>
+                                                <li>['root'@'localhost' のパスワードは正しく変更されました。]と表示されれば、パスワードの設定が完了です。</li>
+                                                <li>このままで、MAMPを再起動し、右上の[Start]を起動し、[MySQL]の中の[phpAdmin]を選ぶと、以下の画面が表示され、パスワードが設定されていないため、エラーが出ます。</li>
+                                            </ol>
+                                        </li>
+
+                                        <li>[config.inc.php]ファイルにパスワードを追記
+                                            <ol class="boxList oList">
+                                                <li>[Start]を[stop]します。</li>
+                                                <li>「Apache」→[Config]→[phpMyAdmin(config.inc.php)]を選びます。</li>
+                                                <li>[config.inc.php]のなかの、$cfg['Servers'][$i]['password'] = ''; の空白になっている部分「''」にphpMyadminで設定したパスワードを書き込みます。 <br>（例）['password']='<i>password</i>';</li>
+                                                <li>[WebStart]と[Start]を起動し、[MySQL]の中の[phpAdmin]を選ぶと、画面が表示されログインできています。</li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                    <p>URLに[localhost:8888]を入れ、Welcom to MAMPと表示されればセットアップ完了です！</p>
+                                    <p>MAMPの中の[htdocs]が公開フォルダになるので、[htdocs]の直下にフォルダを入れていきます。</p>
+                                </div>
+                            </div>
+
+                        </section>
+
+                        <!-- 1.見出し -->
+                        <section class="content">
 
 
 
 
 
-                    </section>
-                    <!-- ------ /コンテンツ班が作る ------  -->
+                        </section>
+                        <!-- ------ /コンテンツ班が作る ------  -->
 
-                    <!-- 一覧を見る -->
-                    <div class="linkBtnBox">
-                        <a href="" class="linkBtn">一覧に戻る</a>
-                    </div>
+                        <!-- 一覧を見る -->
+                        <div class="linkBtnBox">
+                            <a href="" class="linkBtn">一覧に戻る</a>
+                        </div>
 
                 </article>
 
