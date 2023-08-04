@@ -7,7 +7,7 @@
 @section('title', '知っトク記事詳細')
 
 @section('pageCss')
-    <link rel="stylesheet" href="../assets/css/shittokudetails.css">
+    <link rel="stylesheet" href="../assets/css/shittoku_details.css">
     <link rel="stylesheet" href="../assets/css/sittokubase.css">
 @endsection
 
