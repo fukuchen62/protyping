@@ -8,7 +8,7 @@
 
 @section('pageCss')
     {{-- <link rel="stylesheet" href="{{ asset('assets/css/typingstyle.css') }}"> --}}
-    <link rel="stylesheet" href="{{ asset('assets/css/index.css') }}">
+    <link href="{{ asset('assets/css/index.css') }}" rel="stylesheet">
 @endsection
 
 @section('key_visual')
@@ -23,15 +23,15 @@
             <section class="topRanking">
                 <div class="topRankingArea">
                     <div class="ranking">
-                        <img src="{{ asset('assets/images/whitecrown.png') }}" alt="王冠">
+                        <img alt="王冠" src="{{ asset('assets/images/whitecrown.png') }}">
                         <h6>ランキング</h6>
-                        <img src="{{ asset('assets/images/whitecrown.png') }}" alt="王冠">
+                        <img alt="王冠" src="{{ asset('assets/images/whitecrown.png') }}">
                     </div>
                     <div class="selectWrap">
                         <form action="{{ route('top') }}" method="GET">
-                            <select name="level_id" required onchange="this.form.submit()">
-                                <option value="1" {{ $selectedLevel == 1 ? 'selected' : '' }}>初級コース</option>
-                                <option value="2" {{ $selectedLevel == 2 ? 'selected' : '' }}>中級コース</option>
+                            <select name="level_id" onchange="this.form.submit()" required>
+                                <option {{ $selectedLevel == 1 ? 'selected' : '' }} value="1">初級コース</option>
+                                <option {{ $selectedLevel == 2 ? 'selected' : '' }} value="2">中級コース</option>
                             </select>
                         </form>
                     </div>
@@ -88,15 +88,15 @@
                         @php
                             $path = route('game');
                         @endphp
-                        <button id="startBtn" type="button" onclick="location.href='{{ $path }}'">
+                        <button id="startBtn" onclick="location.href='{{ $path }}'" type="button">
                             ゲームをする
                         </button>
                         <div class="circleBottom"></div>
                     </div>
 
                     <p class="warning">※こちらはパソコンで遊べるゲームです。</p>
-                    <img class="gameChara" src="{{ asset('assets/images/cat.jpg') }}" alt="キャラクター">
-                    <img class="gameChara2" src="{{ asset('assets/images/cat.jpg') }}" alt="キャラクター">
+                    <img alt="キャラクター" class="gameChara" src="{{ asset('assets/images/ptag_teup.svg') }}">
+                    <img alt="キャラクター" class="gameChara2" src="{{ asset('assets/images/atag_teup.svg') }}">
                 </section>
 
                 <section class="gameSummary">
@@ -106,9 +106,9 @@
 
                 <section class="topRanking2">
                     <div class="ranking2">
-                        <img src="{{ asset('assets/images/whitecrown.png') }}" alt="王冠">
+                        <img alt="王冠" src="{{ asset('assets/images/whitecrown.png') }}">
                         <h6>ランキング</h6>
-                        <img src="{{ asset('assets/images/whitecrown.png') }}" alt="王冠">
+                        <img alt="王冠" src="{{ asset('assets/images/whitecrown.png') }}">
                     </div>
                     <div class="topRankingArea2">
                         <div class="selectWrap2">
@@ -172,8 +172,8 @@
                         @if (isset($knowhows))
                             @foreach ($knowhows['items2'] as $item2)
                                 <li><a href="{{ route('knowhow') }}?id={{ $item2->id }}">
-                                        <img class="info-pho" src="assets/images/thumbnail/{{ $item2->thumbnail }}"
-                                            alt="{{ $item2->title }}">
+                                        <img alt="{{ $item2->title }}" class="info-pho"
+                                            src="assets/images/thumbnail/{{ $item2->thumbnail }}">
                                         <span class="info-title">【{{ $item2->title }}】</span>
                                     </a>
                                 </li>
