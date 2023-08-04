@@ -54,14 +54,15 @@
                 <!-- <nav class="globalNav">辞書</nav> -->
                 <ul>
                     {{-- pram値の仕様を決めて入力する --}}
-                    <li class="subMenu1 active"><a href="{{ route('details') . '?param=' . 1 }}">開発環境<br>セットアップ</a></li>
-                    <li class="subMenu2"><a href="{{ route('details') . '?param=' . 2 }}">WordPress</a></li>
-                    <li class="subMenu3"><a href="{{ route('details') . '?param=' . 3 }}">おすすめ<br>Webアプリ</a></li>
-                    <li class="subMenu4"><a href="{{ route('details') . '?param=' . 4 }}">おすすめ<br>Webサイト</a></li>
-                    <li class="subMenu5"><a href="{{ route('details') . '?param=' . 5 }}">ショートカット</a></li>
-                    <li class="subMenu6"><a href="{{ route('details') . '?param=' . 6 }}">資格</a></li>
-                    <li class="subMenu7"><a href="{{ route('details') . '?param=' . 7 }}">Chrome拡張機能</a></li>
-                    <li class="subMenu8"><a href="{{ route('details') . '?param=' . 8 }}">卒業生の作品</a></li>
+                    <li class="subMenu1 {{ request()->query('param') == 1 ? 'active' : '' }}"><a href="{{ route('details') . '?param=' . 1 }}">開発環境<br>セットアップ</a></li>
+                    <li class="subMenu2 {{ request()->query('param') == 2 ? 'active' : '' }}"><a href="{{ route('details') . '?param=' . 2 }}">WordPress</a></li>
+                    <li class="subMenu3 {{ request()->query('param') == 3 ? 'active' : '' }}"><a href="{{ route('details') . '?param=' . 3 }}">おすすめ<br>Webアプリ</a></li>
+                    <li class="subMenu4 {{ request()->query('param') == 4 ? 'active' : '' }}"><a href="{{ route('details') . '?param=' . 4 }}">おすすめ<br>Webサイト</a></li>
+                    <li class="subMenu5 {{ request()->query('param') == 5 ? 'active' : '' }}"><a href="{{ route('details') . '?param=' . 5 }}">ショートカット</a></li>
+                    <li class="subMenu6 {{ request()->query('param') == 6 ? 'active' : '' }}"><a href="{{ route('details') . '?param=' . 6 }}">資格</a></li>
+                    <li class="subMenu7 {{ request()->query('param') == 7 ? 'active' : '' }}"><a href="{{ route('details') . '?param=' . 7 }}">Chrome拡張機能</a></li>
+                    <li class="subMenu8 {{ request()->query('param') == 8 ? 'active' : '' }}"><a href="{{ route('details') . '?param=' . 8 }}">卒業生の作品</a></li>
+
                 </ul>
             </aside>
         </div>
