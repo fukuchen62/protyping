@@ -35,8 +35,8 @@ class DictionaryController extends Controller
                     ->get();
             } elseif ($formIdentifier === 'form2') {
                 // 言語選択された場合
-                $language_id = $request->input('param');
-                $items = Vocabulary::where('language_id', $language_id)->get();
+                // $language_id = $request->input('param');
+                $items = Vocabulary::where('language_id', $s)->get();
             } else {
                 $items = Vocabulary::where('language_id', 1)->get();
             }
