@@ -118,10 +118,10 @@
                 <p>モードとコースを選んでください</p>
                 <p>練習モード</p>
                 <button id="open-practise1" type="button" class="game-position6">初級コース プレイ時間3分 1単語:7文字以下</button><br>
-                <button id="open-practise2" type="button" class="game-position7">中級コース プレイ時間3分 1単語:8文字以上</button><br>
+                <button id="open-practise2" type="button" class="game-position7">中級コース プレイ時間3分 1単語:8文字以下</button><br>
                 <p>ランキングモード</p>
                 <button id="open-ranking1" type="button" class="game-position9">初級コース プレイ時間2分 1単語:7文字以下</button><br>
-                <button id="open-ranking2" type="button" class="game-position10">中級コース プレイ時間1分 1単語:8文字以上</button><br>
+                <button id="open-ranking2" type="button" class="game-position10">中級コース プレイ時間1分 1単語:8文字以下</button><br>
                 <button id="close-selectmode" type="button" class="game-position8">言語を選び直す ▶トップへ戻る</button>
             </div>
 
@@ -350,6 +350,7 @@
             const progress = document.getElementById('progress-bar');
             const keyboard = document.getElementById('virtual-keyboard');
             const space = keyboard.querySelector('.key_space');
+            const countdownTime = 180; //ゲーム用タイマー 180秒
             const button5 = document.getElementById('howto-playing'); //スタート画面の『遊び方』ボタンクリック時
             const view3 = document.getElementById('game-view3'); //遊び方画面表示
             const button7 = document.getElementById('close-howto'); //遊び方画面の『戻る』ボタンクリック時
@@ -368,25 +369,6 @@
             const button17 = document.getElementById('register-ranking'); // 『登録する』ボタンクリック時
             const view7 = document.getElementById('game-view7'); //ランキング登録完了画面表示
             const button18 = document.getElementById('return-start'); // 『スタートに戻る』ボタンクリック時
-
-            let countdownTime = 180; //ゲーム用タイマー 180秒
-            // フォーム送信時に実行する関数
-            document.querySelector('.game-position2').addEventListener('submit', function(event) {
-                event.preventDefault(); // フォームの通常の送信をキャンセル
-
-                // レベルの選択値を取得
-                let selectedLevel = document.getElementById('level-select').value;
-
-                // countdownTimeの値を計算
-                if (selectedLevel === '1') {
-                    countdownTime = 90;
-                } else if (selectedLevel === '2') {
-                    countdownTime = 180;
-                }
-
-                // countdownTimeを表示
-                console.log(countdownTime);
-            });
 
             // 遊ぶ文字列をデータベースから取得
             let wordJPArray = {!! $json_array !!};

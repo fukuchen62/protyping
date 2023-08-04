@@ -18,6 +18,9 @@
 
 
 <main id="main" class="main">
+
+
+
     <div class="mainContent">
         <!-- パンくずリスト -->
         <ol class="breadCrumb-001">
@@ -25,7 +28,10 @@
             <li><a href="{{ route('myscore') }}">マイスコア</a></li>
         </ol>
 
-
+    <form action="{{ route('game') }}" method="POST">
+        @csrf
+        <input type="submit" value="test">
+    </form>
 
         <!-- タイトル -->
         <section class="info">
