@@ -20,8 +20,9 @@ return new class extends Migration
             $table->integer('score')->default(0);
             $table->boolean('is_show')->default(true);
             //create_atはNOT NULLにし、update_atはNULLを許容する
-            //$table->timestamps();
-            $table->timestamp('created_at')->nullable(false);
+            $table->timestamps();
+
+            //$table->timestams('created_at')->nullable(false);
             $table->integer('created_user_id')->default(1);
         });
     }

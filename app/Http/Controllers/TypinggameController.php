@@ -72,17 +72,17 @@ class TypinggameController extends Controller
     public function gameresult(Request $request)
     {
         // ゲーム結果(スコア)の送信(ランキング作成のため)
-        // $score = $request->input('score');
-        // $language_id = $request->input('language_id');
-        // $level_id = $request->input('level_id');
-        // $user_id = $request->input('user_id');
-        // $username = $request->input('username');
+        $score = $request->input('score');
+        $language_id = $request->input('language_id');
+        $level_id = $request->input('level_id');
+        $user_id = $request->input('user_id');
+        $username = $request->input('username');
 
-        $score = 88;
-        $language_id = 1;
-        $level_id = 1;
-        $user_id = 0;
-        $username = 'username';
+        // $score = 88;
+        // $language_id = 1;
+        // $level_id = 1;
+        // $user_id = 0;
+        // $username = 'username';
         // デバッグ用にログに出力して確認
         Log::info('Score received: ' . $score);
         Log::info('Received username: ' . $username);
