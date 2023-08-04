@@ -1,16 +1,16 @@
 <!-- ヘッダー -->
-<header id="header" class="header">
+<header class="header" id="header">
     <div class="container">
         <!-- ヘッダーロゴ -->
         <h1 class="headerLogo">
-            <a href="{{ route('top') }}"><img src="{{ asset('assets/images/logo.jpg') }}" alt="タイプコードLOGO"></a>
+            <a href="{{ route('top') }}"><img alt="タイプコードLOGO" src="{{ asset('assets/images/typecode-logo.svg') }}"></a>
         </h1>
         <!-- ハンバーガーメニュー部分 -->
         <div class="hanmburger">
             <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
-            <input id="drawerInput" class="drawerHidden" type="checkbox" />
+            <input class="drawerHidden" id="drawerInput" type="checkbox" />
             <!-- ハンバーガーメニュー -->
-            <label for="drawerInput" class="drawerOpen">
+            <label class="drawerOpen" for="drawerInput">
                 <span></span>
             </label>
             <!-- ナビゲーション -->
