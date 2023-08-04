@@ -316,7 +316,7 @@
 /* 疑似要素でアイコン追加 */
 
 .firstTitle::before {
-    content: url(../images/game_houto_first.svg);
+    content: url(../images/icon/game_houto_first.svg);
     position: absolute;
     top: 8%;
     left: -78px;
@@ -324,7 +324,7 @@
 }
 
 .settingTitle::before {
-    content: url(../images/game_houto_set.svg);
+    content: url(../images/icon/game_houto_set.svg);
     position: absolute;
     top: 8%;
     left: -54px;
