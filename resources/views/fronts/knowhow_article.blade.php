@@ -43,7 +43,7 @@
                             </a>
                             @foreach($items as $key => $item)
                             @if($key == 3)
-                            <p class="flexItemText">{{ $item->summary }}</p>
+                            <p class="flexItemText">{!! $item->summary !!}</p>
                             @endif
                             @endforeach
                         </section>
@@ -55,7 +55,7 @@
                             </a>
                             @foreach($items as $key => $item)
                             @if($key == 4)
-                            <p class="flexItemText">{{ $item->summary }}</p>
+                            <p class="flexItemText">{!! $item->summary !!}</p>
                             @endif
                             @endforeach
                         </section>
@@ -67,7 +67,7 @@
                             </a>
                             @foreach($items as $key => $item)
                             @if($key == 5)
-                            <p class="flexItemText">{{ $item->summary }}</p>
+                            <p class="flexItemText">{!! $item->summary !!}</p>
                             @endif
                             @endforeach
                         </section>
@@ -79,7 +79,7 @@
                             </a>
                             @foreach($items as $key => $item)
                             @if($key == 6)
-                            <p class="flexItemText">{{ $item->summary }}</p>
+                            <p class="flexItemText">{!! $item->summary !!}</p>
                             @endif
                             @endforeach
                         </section>
@@ -91,7 +91,7 @@
                             </a>
                             @foreach($items as $key => $item)
                             @if($key == 7)
-                            <p class="flexItemText">{{ $item->summary }}</p>
+                            <p class="flexItemText">{!! $item->summary !!}</p>
                             @endif
                             @endforeach
                         </section>
@@ -103,7 +103,7 @@
                             </a>
                             @foreach($items as $key => $item)
                             @if($key == 8)
-                            <p class="flexItemText">{{ $item->summary }}</p>
+                            <p class="flexItemText">{!! $item->summary !!}</p>
                             @endif
                             @endforeach
                         </section>
@@ -115,7 +115,7 @@
                             </a>
                             @foreach($items as $key => $item)
                             @if($key == 9)
-                            <p class="flexItemText">{{ $item->summary }}</p>
+                            <p class="flexItemText">{!! $item->summary !!}</p>
                             @endif
                             @endforeach
                         </section>
@@ -127,7 +127,7 @@
                             </a>
                             @foreach($items as $key => $item)
                             @if($key == 10)
-                            <p class="flexItemText">{{ $item->summary }}</p>
+                            <p class="flexItemText">{!! $item->summary !!}</p>
                             @endif
                             @endforeach
                         </section>
