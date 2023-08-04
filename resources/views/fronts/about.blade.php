@@ -7,7 +7,7 @@
 @section('title', 'アバウト')
 
 @section('pageCss')
-    <link rel="stylesheet" href="{{ asset('assets/css/about.css') }}">
+    <link href="{{ asset('assets/css/about.css') }}" rel="stylesheet">
 @endsection
 
 @section('key_visual')
@@ -15,7 +15,7 @@
 
 {{-- メインコンテンツの内容 --}}
 @section('content')
-    <main id="main" class="main">
+    <main class="main" id="main">
 
         <!-- パンくずリスト html-->
         <ol class="breadCrumb-001">
@@ -28,16 +28,16 @@
 
         <section class="landingAbout">
 
-            <h3 class="landingAboutSub">私達について</h3>
+            <h3 class="landingAboutSub">私たちについて</h3>
 
             <div class="aboutTextBox">
                 <p class="aboutText">
-                    私達は、徳島の職業訓練校のQLIPプログラミングスクールに通うアプリケーション制作科の第3期生の10名です。私たちの持てる技術を駆使して作ったサイトになります。楽しんで行ってください。
+                    私たちは、徳島県の職業訓練校 QLIPプログラミングスクールに通うアプリケーション制作科 第3期生の10名です。私たちの持てる技術を駆使して作ったサイトです。お楽しみください。
                 </p>
             </div>
 
             <div class="aboutImageBox">
-                <img class="aboutImage" src="{{ asset('assets/images/about_member.jpg') }}" alt="タイプコードを作ったメンバーの画像です">
+                <img alt="タイプコードを作ったメンバーの画像です" class="aboutImage" src="{{ asset('assets/images/about_member.jpg') }}">
             </div>
 
         </section>
@@ -47,12 +47,12 @@
 
             <div class="aboutTextBox">
                 <p class="aboutText">
-                    プログラミングでよく使う英単語のタイピングゲームができるWEBアプリです。基本的な動きはJavaScriptで実装しております。何度も繰り返し挑戦することで、プログラミングで使う英単語のスペル習得、専門用語とタイピング速度の向上と意味の3つの力がつくと共にIT業界で、役立つ基本的な情報(知っトク情報)も喝采しておりますので、WEB関係の仕事を目指す方々の助けになれれば幸いです。
+                    プログラミングでよく使う英単語のタイピングゲームができるWEBアプリです。基本的な動きはJavaScriptで実装しております。何度も繰り返し挑戦することで、プログラミングで使う英単語のスペル習得、専門用語とタイピング速度の向上と意味の3つの力がつくと共に、IT業界で役立つ基本的な情報(知っトク情報)も掲載しておりますので、WEB関係の仕事を目指す方々の助けになれば幸いです。
                 </p>
             </div>
 
             <div class="aboutImageBox">
-                <img class="aboutImage" src="{{ asset('assets/images/about_howto.jpg') }}" alt=" タイプコードのAboutのゲーム概要の画像です">
+                <img alt=" タイプコードのAboutのゲーム概要の画像です" class="aboutImage" src="{{ asset('assets/images/about_howto.jpg') }}">
             </div>
 
         </section>
