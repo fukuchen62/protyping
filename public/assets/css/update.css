@@ -9,6 +9,7 @@
     margin-bottom: 20px;
     margin-left: 20px;
     min-width: 280px;
+    padding: 0;
     padding-top: 90px;
     /* padding: 10px; */
 }
@@ -41,9 +42,6 @@
 @media (min-width:1000px) {
 
     /* パンくずリストcss pc*/
-    .breadCrumb-001 {
-        font-size: 1.2rem;
-    }
 
     .breadCrumb-001 li:not(:last-child)::after {
         border-top: 1px solid #ffff;
@@ -61,26 +59,38 @@ h2 {
     margin-bottom: 30px;
 }
 
-@media screen and (min-width: 1000px) {
-    h2 {
-        font-size: 4rem;
-    }
-}
-
 p {
     font-size: 1.6rem;
     text-align: left;
+}
+
+.title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    /* padding-left:15px; */
+    margin: 20px auto;
+    text-align: center;
 }
 
 @media screen and (min-width: 1000px) {
     p {
         font-size: 1.8rem;
     }
+
+    .title {
+        padding-left: 5px;
+    }
+
+}
+
+.updateList {
+    width: 100%;
 }
 
 .updateInformation .updateList li {
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
+    /* display: flex;
+    justify-content: space-between; */
 }
 
 .updateInformation {
@@ -119,6 +129,43 @@ p {
     }
 }
 
+.date {
+    text-align: right;
+}
+
 .updateList li p {
     word-break: break-all;
+}
+
+
+.updateList .pc {
+    display: none;
+    width: 100%;
+    /* margin: 0 auto; */
+}
+
+.updateList .pc p {
+    width: 100%;
+    margin-bottom: 20px;
+    /* margin: 0 auto; */
+}
+
+.updateList .mobile p {
+    width: 100%;
+    /* margin: 0 auto; */
+}
+
+@media screen and (min-width: 760px) {
+    .updateList .pc {
+        display: block;
+    }
+
+    .updateList .mobile {
+        display: none;
+    }
+
+    .updateList .title {
+        margin-left: 20px;
+    }
+
 }

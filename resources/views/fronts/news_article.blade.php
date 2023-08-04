@@ -37,9 +37,19 @@
 
                 <ul class="updateList">
                     <li>
-                        <p>{{ $timestamp->format('Y年m月d日') }}<br>
-                            {{ $item->title }}｜
-                            {{ $item->content }}</p>
+                        <div class="pc">
+                            <p>{{ $timestamp->format('Y年m月d日') }}
+                                <span class="title">{{ $item->title }}</span>
+                            </p>
+                            <p>{{ $item->content }}</p>
+                        </div>
+
+                        <div class="mobile">
+                            <p class="date">{{ $timestamp->format('Y年m月d日') }}</p>
+                            <p class="title">{{ $item->title }}</p>
+                            <p>{{ $item->content }}</p>
+                        </div>
+
                     </li>
                 </ul>
             </section>
