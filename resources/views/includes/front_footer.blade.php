@@ -1,12 +1,13 @@
 <!-- トップへ戻るボタン -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+<link href="https://use.fontawesome.com/releases/v5.6.4/css/all.css" rel="stylesheet">
 <div id="pageTop"><a href="#"></a></div>
 
 <!-- フッター -->
-<footer id="footer" class="footer outerBlock">
+<footer class="footer outerBlock" id="footer">
     <div class="footerWrap">
         <div class="footerLogo">
-            <a href=""><img src="{{ asset('assets/images/logo.jpg') }}" alt="タイプコード"></a>
+            {{-- <a href=""><img alt="タイプコード" src="{{ asset('assets/images/typecode-logo.svg') }}"></a> --}}
+            <a href="{{ route('top') }}"><img alt="タイプコードLOGO" src="{{ asset('assets/images/typecode-logo.svg') }}"></a>
         </div>
         <div class="innerBlock">
             <div class="footerContent">
@@ -36,6 +37,7 @@
                         <div class="footerTitle"><a href="{{ route('contact') }}">お問い合わせ</a></div>
                         <div class="footerTitle"><a href="{{ route('terms') }}">利用規約</a></div>
                         <div class="footerTitle"><a href="{{ route('privacypolicy') }}">プライバシーポリシー</a></div>
+                        {{-- <div class="footerTitle"><a href="{{ route('') }}">管理者ログイン</a></div> --}}
                     </div>
                 </div>
 
