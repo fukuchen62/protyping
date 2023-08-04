@@ -1,0 +1,126 @@
+@charset "utf-8";
+/* 共通 */
+h3 {
+    /* font-size: 2.5rem; */
+    text-align: center;
+    line-height: 2.5rem;
+    margin-top: 60px;
+}
+
+h4{
+    text-align: center;
+    line-height: 2.5rem;
+    margin-top: 40px;
+}
+
+a {
+    text-decoration: underline;
+}
+
+.tips{
+    margin: 0 auto;
+    text-align: left;
+    background-color: #ffffff;
+    /* color: #000; */
+}
+
+.boxTips {
+    margin-top: 30px; 
+    /* margin: 0 auto; */
+    padding: 0 5px;
+}
+
+.boxTips p {
+    font-size: 14px;
+    line-height: 2rem;
+    letter-spacing: 0.04em;
+}
+
+/* テーブルの共通 */
+.tableTips{
+    margin-bottom: 20px;
+    letter-spacing: 0.04em;
+    margin-top: 50px;
+}
+
+caption{
+    text-align: center;
+}
+
+.theadTips tr th{
+    border: solid 1px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 6px;
+}
+
+.tbodyTips tr td{
+    border: solid 1px;
+    text-align: left;
+    vertical-align: middle;
+    padding: 6px;
+}
+
+/* リストの共通 */
+.boxList{
+    font-size: 14px;
+    padding-inline-start: 20px;
+    list-style-position: outside;
+}
+
+.boxList li{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    word-wrap: break-word;
+}
+
+.boxList a{
+    word-wrap: break-word;
+}
+
+.oList{
+    list-style-type: decimal;
+}
+
+.oList ol li{
+    list-style-type: lower-roman;
+}
+
+.uList{
+    list-style-type: disc;
+}
+
+
+@media screen and (min-width: 768px) {
+    /* 共通 */
+    .tips{
+        width: 580px;
+    }
+
+    .boxTips {
+        /* width: 580px; */
+        margin-top: 40px;
+    }
+
+    .boxTips p{
+        font-size: 16px;
+        line-height: 2rem;
+        letter-spacing: 0.05em;
+    }
+
+    /* テーブルの共通 */
+    .tableTips{
+        width: 580px;
+        font-size: 16px;
+        letter-spacing: 0.05em;
+    }
+
+    /* リストの共通 */
+    .boxList{
+        font-size: 16px;
+    }
+
+    .boxList li{
+        margin-bottom: 10px;
+    }
+}
