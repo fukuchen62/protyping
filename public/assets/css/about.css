@@ -94,7 +94,7 @@
     width: 100%;
     height: auto;
     box-sizing: border-box;
-    aspect-ratio: 15/7;
+    /* aspect-ratio: 15/7; */
     object-fit: cover;
     max-width: 200px;
     box-shadow: 10px 10px 0px 0 rgb(96,200,218);
