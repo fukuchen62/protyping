@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('thumbnail', 200)->nullable(true);
             $table->string('summary', 250)->nullable(false);
             $table->string('summary_detail', 500)->nullable(false);
-            $table->string('content', 20000)->nullable(false);
+            $table->text('content')->nullable(false);
             $table->boolean('is_show')->default(true);
 
             // created_atをNOT NULLに設定するため、個別に記載
