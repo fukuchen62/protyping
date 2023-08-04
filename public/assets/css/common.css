@@ -767,7 +767,8 @@ padding: 15px;
     .navList .upDate,
     .navList .about,
     .navList .terms,
-    .navList .privacy {
+    .navList .privacy,
+    .navList .admin {
         display: none;
     }
 
