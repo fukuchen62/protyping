@@ -15,10 +15,10 @@ return new class extends Migration
             $table->increments('id');
             $table->string('title', 60)->nullable(false);
             $table->integer('post_category_id')->nullable(false);
-            $table->string('thumbnail', 200)->nullable(true);
             $table->string('summary', 250)->nullable(false);
             $table->string('summary_detail', 500)->nullable(false);
             $table->string('content', 10000)->nullable(false);
+            $table->string('thumbnail', 200)->nullable(true);
             $table->boolean('is_show')->default(true);
 
             // created_atをNOT NULLに設定するため、個別に記載
