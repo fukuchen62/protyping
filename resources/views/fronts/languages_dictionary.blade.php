@@ -28,7 +28,7 @@
             <li><a href="route('dictionary')">辞書</a></li>
         </ol>
 
-        <h2 class="title">-辞書-</h2>
+        <h2 class="title">辞書</h2>
         <h3 class="subTitle">プログラミングでよく使う英単語</h3>
 
         <!-- プルダウンメニュー -->
@@ -59,6 +59,10 @@
                     {{-- <input name="s" placeholder="ここで辞書検索ができます" type="text"> --}}
                     <ul>
                         <li class="globalNav">辞書選択</li>
+
+                        <li class="subMenu1">
+                            <button type="submit" name="s" value="6">プログラミングでよく使う英単語</button>
+                        </li>
                         <li class="subMenu2">
                             <button type="submit" name="s" value="1">HTML</button>
                         </li>
@@ -72,11 +76,11 @@
                             <button type="submit" name="s" value="4">PHP</button>
                         </li>
                         <li class="subMenu6">
-                            <button type="submit" name="s" value="5">Pytion</button>
+                            <button type="submit" name="s" value="5">Python</button>
                         </li>
-                        <li class="subMenu6">
+                        {{-- <li class="subMenu6">
                             <button type="submit" name="s" value="6">よく使う英単語</button>
-                        </li>
+                        </li> --}}
                     </ul>
                 </form>
             </aside>
@@ -93,44 +97,46 @@
                 </thead>
                 @foreach ($items as $item)
                     @if (isset($_GET['s']))
-                    <tbody class="dictBody">
-                        <tr class="dictRow">
-                            <td class="no">{{ $item->id }}</td>
-                            <td class="wordCol">
-                                <p class="phrase">{{ $item->word_spell }}</p>
-                                <p class="description">{{ $item->japanese }}</p>
-                            </td>
-                            <td class="descrpCol">
-                                <p>{{ $item->japanese }}</p>
-                            </td>
-                            <td class="detail secondary">
-                                <p class="detailText">詳細</p>
-                                <!---------- ポップアップ ---------->
-                                <label class="open" for="popUp1">
-                                    <img alt="" src="../assets/images/dictionary.png">
-                                </label>
-                                <input id="popUp1" type="checkbox">
-                                <div class="overlay">
-                                    <div class="popWindow">
-                                        <label class="close" for="popUp1"><img alt="閉じるボタン"
-                                                src="../assets/images/dictionary.jpg"></label>
-                                        <h2>{{ $item->word_spell }}</h2>
-                                        <h5>読み方</h5>
-                                        <p>{{ $item->japanese }}</p>
-                                        <div class="mean">
-                                            <h5>意味</h5>
-                                            <p>{{ $item->meaning }}
-                                            </p>
-                                        </div>
-                                        <div class="example">
-                                            <h5>使用例</h5>
-                                            <p>{{ $item->usage }}</p>
+                        <tbody class="dictBody">
+                            <tr class="dictRow">
+                                <td class="no">{{ $item->id }}</td>
+                                <td class="wordCol">
+                                    <p class="phrase">{{ $item->word_spell }}</p>
+                                    <p class="description">{{ $item->japanese }}</p>
+                                </td>
+                                <td class="descrpCol">
+                                    <p>{{ $item->japanese }}</p>
+                                </td>
+                                <td class="detail secondary">
+                                    <p class="detailText"></p>
+                                    <!---------- ポップアップ ---------->
+                                    <label class="open" for="popUp1">
+                                        <img alt="" src="../assets/images/dictionary.png">
+                                    </label>
+                                    <input id="popUp1" type="checkbox">
+                                    <div class="overlay">
+                                        <div class="popWindow">
+                                            <label class="close" for="popUp1"><img alt="閉じるボタン"
+                                                    src="../assets/images/dictionary.jpg"></label>
+                                            <h2>{{ $item->word_spell }}</h2>
+                                            <div class="read">
+                                                {{-- <h5>読み方</h5> --}}
+                                                <p>{{ $item->japanese }}</p>
+                                            </div>
+                                            <div class="mean">
+                                                {{-- <h5>意味</h5> --}}
+                                                <p>{{ $item->meaning }}
+                                                </p>
+                                            </div>
+                                            <div class="example">
+                                                {{-- <h5>使用例</h5> --}}
+                                                <p>{{ $item->usage }}</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
+                                </td>
+                            </tr>
+                        </tbody>
                     @else
                         @if ($item->language_id == 1)
                             <tbody class="dictBody">
@@ -144,7 +150,7 @@
                                         <p>{{ $item->japanese }}</p>
                                     </td>
                                     <td class="detail secondary">
-                                        <p class="detailText">詳細</p>
+                                        <p class="detailText"></p>
                                         <!---------- ポップアップ ---------->
                                         <label class="open" for="popUp1">
                                             <img alt="" src="../assets/images/dictionary.png">
@@ -155,15 +161,15 @@
                                                 <label class="close" for="popUp1"><img alt="閉じるボタン"
                                                         src="../assets/images/dictionary.jpg"></label>
                                                 <h2>{{ $item->word_spell }}</h2>
-                                                <h5>読み方</h5>
+                                                {{-- <h5>読み方</h5> --}}
                                                 <p>{{ $item->japanese }}</p>
                                                 <div class="mean">
-                                                    <h5>意味</h5>
+                                                    {{-- <h5>意味</h5> --}}
                                                     <p>{{ $item->meaning }}
                                                     </p>
                                                 </div>
                                                 <div class="example">
-                                                    <h5>使用例</h5>
+                                                    {{-- <h5>使用例</h5> --}}
                                                     <p>{{ $item->usage }}</p>
                                                 </div>
                                             </div>
