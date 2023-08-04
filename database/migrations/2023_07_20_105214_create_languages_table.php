@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('languages', function (Blueprint $table) {
             $table->increments('id');
             $table->string('language_name', 50)->nullable(false);
-            $table->string('lang_icon', 50);
-            $table->string('discription', 200);
+            $table->string('lang_icon', 50)->nullable(true);
+            $table->string('discription', 200)->nullable(true);
             $table->boolean('is_show')->default(true);
             //create_atはNOT NULLにし、update_atはNULLを許容する
             //$table->timestamps();
