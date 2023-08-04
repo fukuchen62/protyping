@@ -105,8 +105,8 @@
             <div class="cardWrap">
                 <div class="cardList">
                     <div class="listInner">
-                        {{--
-                        <h3 id="engword">プログラミングで使う英単語</h3> --}}
+
+                        <h3 id="engword">プログラミングで使う英単語</h3>
                         <div class="cardInner">
                             <div class="history">
                                 {{--
@@ -121,8 +121,8 @@
                                         <p class="triangle">▶▶▶</p>
                                     </div>
                                     <div class="scoreItem">
-                                        @if(request()->hasCookie('saved_data'))
-                                        <p class="score">{{ request()->cookie('saved_data') }}点</p>
+                                        @if(request()->hasCookie('saved_data6'))
+                                        <p class="score">{{ request()->cookie('saved_data6') }}点</p>
                                         @endif
                                     </div>
                                 </div>
@@ -153,11 +153,11 @@
                     </div>
 
 
-                    {{-- <div class="listInner">
+                    <div class="listInner">
                         <h3 id="html">HTML</h3>
                         <div class="cardInner">
                             <div class="history">
-                                <p>履歴（過去Best3）</p>
+                                {{-- <p>履歴（過去Best3）</p> --}}
                             </div>
                             <div class="scoreList">
                                 <div class="scoreLine">
@@ -168,10 +168,12 @@
                                         <p class="triangle">▶▶▶</p>
                                     </div>
                                     <div class="scoreItem">
-                                        <p class="score">00点</p>
+                                        @if(request()->hasCookie('saved_data1'))
+                                        <p class="score">{{ request()->cookie('saved_data1') }}点</p>
+                                        @endif
                                     </div>
                                 </div>
-                                <div class="scoreLine">
+                                {{-- <div class="scoreLine">
 
                                     <div class="scoreItem">
                                         <p>Score</p>
@@ -193,7 +195,7 @@
                                     <div class="scoreItem">
                                         <p class="score">00点</p>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -202,7 +204,7 @@
                         <h3 id="css">CSS</h3>
                         <div class="cardInner">
                             <div class="history">
-                                <p>履歴（過去Best3）</p>
+                                {{-- <p>履歴（過去Best3）</p> --}}
                             </div>
                             <div class="scoreList">
                                 <div class="scoreLine">
@@ -213,10 +215,12 @@
                                         <p class="triangle">▶▶▶</p>
                                     </div>
                                     <div class="scoreItem">
-                                        <p class="score">00点</p>
+                                        @if(request()->hasCookie('saved_data2'))
+                                        <p class="score">{{ request()->cookie('saved_data2') }}点</p>
+                                        @endif
                                     </div>
                                 </div>
-                                <div class="scoreLine">
+                                {{-- <div class="scoreLine">
 
                                     <div class="scoreItem">
                                         <p>Score</p>
@@ -238,7 +242,7 @@
                                     <div class="scoreItem">
                                         <p class="score">00点</p>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -247,7 +251,7 @@
                         <h3 id="javascrip">JavaScript</h3>
                         <div class="cardInner">
                             <div class="history">
-                                <p>履歴（過去Best3）</p>
+                                {{-- <p>履歴（過去Best3）</p> --}}
                             </div>
                             <div class="scoreList">
                                 <div class="scoreLine">
@@ -258,10 +262,12 @@
                                         <p class="triangle">▶▶▶</p>
                                     </div>
                                     <div class="scoreItem">
-                                        <p class="score">00点</p>
+                                        @if(request()->hasCookie('saved_data3'))
+                                        <p class="score">{{ request()->cookie('saved_data3') }}点</p>
+                                        @endif
                                     </div>
                                 </div>
-                                <div class="scoreLine">
+                                {{-- <div class="scoreLine">
 
                                     <div class="scoreItem">
                                         <p>Score</p>
@@ -283,7 +289,7 @@
                                     <div class="scoreItem">
                                         <p class="score">00点</p>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -292,7 +298,7 @@
                         <h3 id="php">PHP</h3>
                         <div class="cardInner">
                             <div class="history">
-                                <p>履歴（過去Best3）</p>
+                                {{-- <p>履歴（過去Best3）</p> --}}
                             </div>
                             <div class="scoreList">
                                 <div class="scoreLine">
@@ -303,10 +309,12 @@
                                         <p class="triangle">▶▶▶</p>
                                     </div>
                                     <div class="scoreItem">
-                                        <p class="score">00点</p>
+                                        @if(request()->hasCookie('saved_data4'))
+                                        <p class="score">{{ request()->cookie('saved_data4') }}点</p>
+                                        @endif
                                     </div>
                                 </div>
-                                <div class="scoreLine">
+                                {{-- <div class="scoreLine">
 
                                     <div class="scoreItem">
                                         <p>Score</p>
@@ -328,7 +336,7 @@
                                     <div class="scoreItem">
                                         <p class="score">00点</p>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -337,7 +345,7 @@
                         <h3 id="python">Python</h3>
                         <div class="cardInner">
                             <div class="history">
-                                <p>履歴（過去Best3）</p>
+                                {{-- <p>履歴（過去Best3）</p> --}}
                             </div>
                             <div class="scoreList">
                                 <div class="scoreLine">
@@ -348,10 +356,12 @@
                                         <p class="triangle">▶▶▶</p>
                                     </div>
                                     <div class="scoreItem">
-                                        <p class="score">00点</p>
+                                        @if(request()->hasCookie('saved_data5'))
+                                        <p class="score">{{ request()->cookie('saved_data5') }}点</p>
+                                        @endif
                                     </div>
                                 </div>
-                                <div class="scoreLine">
+                                {{-- <div class="scoreLine">
 
                                     <div class="scoreItem">
                                         <p>Score</p>
@@ -373,10 +383,10 @@
                                     <div class="scoreItem">
                                         <p class="score">00点</p>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
-                    </div> --}}
+                    </div>
 
                 </div>
 

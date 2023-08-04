@@ -91,8 +91,67 @@ class TypinggameController extends Controller
         $scoreModel->save();
 
         $response = response()->json(['message' => 'Score saved successfully'], 200);
+
         // クッキーに値を保存する
-        $response->cookie('saved_data', $score, 600); // 60分 = 1時間
+        switch ($scoreModel->language_id) {
+            case '1':
+                $response->cookie('saved_data1', $score, 600); // 60分 = 1時間
+                break;
+            case '2':
+                $response->cookie('saved_data2', $score, 600); // 60分 = 1時間
+                break;
+            case '3':
+                $response->cookie('saved_data3', $score, 600); // 60分 = 1時間
+                break;
+            case '4':
+                $response->cookie('saved_data4', $score, 600); // 60分 = 1時間
+                break;
+            case '5':
+                $response->cookie('saved_data4', $score, 600); // 60分 = 1時間
+                break;
+            case '6':
+                $response->cookie('saved_data4', $score, 600); // 60分 = 1時間
+                break;
+            default:
+                $response->cookie('saved_data1', $score, 600); // 60分 = 1時間
+                break;
+        }
+
+        // $score1 = 0;
+        // $score2 = 0;
+        // $score3 = 0;
+
+        // // 複数の値を配列として保存する
+        // $data = [
+        //     'score1' => $score1,
+        //     'score2' => $score2,
+        //     'score3' => $score3,
+        // ];
+
+        // // 言語ごとに前回の値と比べて何位に保存するか決める
+        // switch ($language_id) {
+        //     case '1':
+        //         if ((request()->hasCookie('saved_data1')) == true) {;
+        //             if ('score1' < $score) {
+        //                 $data['score1'] = $score;
+        //                 $response->cookie('saved_data1', $data['score1'], 600);
+        //             } elseif ('score2' < $score) {
+        //                 $data['score2'] = $score;
+        //                 $response->cookie('saved_data1', $data['score2'], 600);
+        //             } elseif ('score3' < $score) {
+        //                 $data['score3'] = $score;
+        //                 $response->cookie('saved_data1', $data['score3'], 600);
+        //             }
+        //         }
+        //         break;
+        //     case '2':
+        //         if ((request()->hasCookie('saved_data2')) == true) {;
+        //         }
+        //         break;
+        //     default:
+        //         # code...
+        //         break;
+        // }
 
         // 必要な場合はレスポンスを返す
         return $response;
