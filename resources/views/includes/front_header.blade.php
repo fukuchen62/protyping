@@ -47,6 +47,9 @@
                     <li class="privacy">
                         <a href="{{ route('privacypolicy') }}">プライバシーポリシー</a>
                     </li>
+                    <li class="admin">
+                        <a href="{{ route('admintop') }}">管理者ログイン</a>
+                    </li>
                 </ul>
             </nav>
         </div>

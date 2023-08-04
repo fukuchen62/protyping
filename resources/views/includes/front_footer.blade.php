@@ -37,7 +37,7 @@
                         <div class="footerTitle"><a href="{{ route('contact') }}">お問い合わせ</a></div>
                         <div class="footerTitle"><a href="{{ route('terms') }}">利用規約</a></div>
                         <div class="footerTitle"><a href="{{ route('privacypolicy') }}">プライバシーポリシー</a></div>
-                        {{-- <div class="footerTitle"><a href="{{ route('') }}">管理者ログイン</a></div> --}}
+                        <div class="footerTitle"><a href="{{ route('admintop') }}">管理者ログイン</a></div>
                     </div>
                 </div>
 
