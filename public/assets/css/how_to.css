@@ -209,8 +209,195 @@
 /* 遊び方画面の設定 */
 
 
+/* ****** 配置・レイアウト ****** */
 
 
+
+.howtoWrap * {
+    /* font-family: Meiryo, Arial, sans-serif; */
+    box-sizing: border-box;
+    margin: auto;
+}
+
+/* コンテンツを504pxに収める */
+.contentWrapper {
+    max-width: 504px;
+}
+
+
+/* 背景スタイル */
+.howtoWrap {
+    width: 748px;
+    height: 528px;
+    /* 枠を追加 */
+    border: 2px solid #817F6E;
+    background: linear-gradient(to bottom, #B6F2FF 0%, #2E94CE 100%);
+    border-radius: 2.4rem;
+    box-shadow:
+    0px 0px 5px 2px rgba(255, 255, 255, 0.59)inset,
+    0px 0px 20px 5px rgba(27, 54, 96, 0.45) inset;
+}
+
+
+
+/* h2タイトルの枠のスタイル */
+.howtoTitleBox {
+    background-color: #FFFFFF;
+    height: 64px;
+    box-shadow:0px 0px 20px 3px #5FBFED inset;
+    border-top-left-radius: 2.4rem;
+    border-top-right-radius: 2.4rem;
+
+    /* h2タイトルを上下左右中央に配置 */
+    display: grid;
+    place-items: center;
+    margin-bottom: 14px;
+}
+
+/* h2タイトル文字のスタイル */
+.howtoTitle {
+    margin:0;
+    font-size: 3.2rem;
+    color: #26567C;
+}
+
+/* h3サブタイトルの文字のスタイル */
+.subTitle {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #26567C;
+    text-align: center;
+    line-height:3rem;
+    margin-bottom: 8px;
+
+}
+
+
+
+/* ********* 始め方 ********* */
+
+/* 「始め方」と「設定方法」の見出し枠スタイル */
+.firstTitleWrap , .settingTitleWrap {
+    width: 264px;
+    height: 54px;
+    background-color: #58ABD3;
+    border-radius: 2.4rem;
+    box-shadow:
+    0 4px 4px rgba(0, 0, 0, 0.25),
+    0px 2px 5px rgba(255, 255, 255, 0.42) inset,
+    0px 4px 15px rgba(38, 86, 124, 0.63) inset;
+
+}
+
+/* 「始め方」と「設定方法」の見出し枠を下の土台に重ねる */
+.firstTitleWrap , .settingTitleWrap {
+    position: relative;
+    top:15px;
+    z-index: 10;
+    margin-bottom: -20px;
+
+    /* h4の遊び方を上下左右中央に配置 */
+    display: grid;
+    place-items: center;
+
+}
+
+/* 「遊び方」と「設定方法」の文字のスタイル */
+.firstTitle , .settingTitle {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(38, 86, 124, 0.79);
+    position: relative;
+
+}
+
+/* 疑似要素でアイコン追加 */
+
+.firstTitle::before {
+    content: url(../images/game_houto_first.svg);
+    position: absolute;
+    top: 8%;
+    left: -78px;
+    width: 16px;
+}
+
+.settingTitle::before {
+    content: url(../images/game_houto_set.svg);
+    position: absolute;
+    top: 8%;
+    left: -54px;
+    width: 16px;
+}
+
+
+/* 重ねられる方の下の土台（遊び方） */
+
+.firstTextWrap {
+    height: 175px;
+    background-color: #D4EBF6;
+    padding-left: 25px;
+    border-radius: 2.2rem;
+    box-shadow:0 4px 4px rgba(38, 86, 124, 0.49);
+
+
+    /* 始め方内のテキストを下揃えにする（親） */
+    position: relative;
+
+}
+/* 始め方の中のテキストを下揃えにする（子） */
+.firstTextInner {
+    position: absolute;
+    bottom: 10px;
+}
+
+/* 重ねられる方の下の土台（設定方法） */
+.settingTextWrap {
+    height: 78px;
+    background-color: #D4EBF6;
+    padding-left: 20px;
+    border-radius: 2.2rem;
+    box-shadow:0 4px 4px rgba(38, 86, 124, 0.49);
+
+    /* 設定方法の中のテキストを下揃えにする（親） */
+    position: relative;
+}
+/* 始め方の中のテキストを下揃えにする（子） */
+.settingTextInner {
+    position: absolute;
+    bottom: 10px;
+}
+
+
+/* 枠内文章のスタイル */
+.text {
+    color: #26567C;
+    line-height: 2.2rem;
+}
+
+/* 閉じるボタンのスタイル */
+.closeButton {
+    width: 165px;
+    height: 40px;
+    background-color: #EAB624;
+    display: block;
+    margin-top: 25px;
+    border-radius: 2.4rem;
+    box-shadow:
+    0 4px 4px rgba(0, 0, 0, 0.25),
+    0px 0px 12px rgba(255, 255, 255, 1) inset;
+
+    /* 閉じる文字のスタイル */
+    color: #26567C;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+}
+/* 閉じるボタンホバーしたら薄くなる */
+.closeButton:hover {
+    opacity: 0.7;
+}
 
 
 
