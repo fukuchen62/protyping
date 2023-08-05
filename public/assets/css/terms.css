@@ -2,31 +2,19 @@
 
 .main {
     width: 90%;
-    padding-top: 90px;
-    padding-bottom: 40px;
+    padding: 90px 10px 40px;
+    /* padding-top: 110px; */
 }
 
 @media (min-width:1000px) {
     .main {
-        padding-top: 120px;
-        padding-bottom: 40px;
+        padding: 165px 10px 10px;
+        /* padding-top: 120px; */
+        /* padding-bottom: 40px; */
     }
-}
 
-/* コモンができ次第被ってるところ消す */
-h2 {
-    font-size: 2.2rem;
-    font-weight: 800;
-    text-align: center;
-    letter-spacing: 0.1rem;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    line-height: 3rem;
-}
-/* コモンができ次第被ってるところ消す */
-
-@media (min-width:1000px) {
     h2 {
+        margin-top: 0;
         margin-bottom: 40px;
     }
 }
@@ -43,6 +31,18 @@ h3 {
     padding-bottom: 10px;
 }
 
+.toPrivacy {
+    text-decoration: underline;
+    color: #3168D2;
+    margin: 15px;
+    margin-left: 5px;
+}
+
+.boxTerms a {
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
 
 @media (min-width:1000px) {
     .wrap {
@@ -50,21 +50,12 @@ h3 {
         margin: 0 auto;
     }
 
-    h2 {
-        font-size: 4rem;
-    }
-
     .boxTerms {
         max-width: 520px;
         margin: 0 auto;
     }
 
-}
 
-
-.boxTerms a {
-    font-size: 14px;
-    margin-left: 15px;
 
 }
 
@@ -77,6 +68,7 @@ h3 {
 .boxTerms ol {
     list-style: disc;
     padding-inline-start: 25px;
+    margin-bottom: 90px;
 }
 
 .boxTerms ol li {
