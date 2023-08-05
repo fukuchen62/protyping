@@ -47,49 +47,41 @@
                 <p>ランキングコースに挑戦し、ユーザーネームを登録するとこのページに反映されます。<br>自己ベスト更新目指して頑張ろう！</p>
             </section>
 
-
-
-            <!-- プルダウンメニュー -->
-            <!-- <div class="selectWrap">
-                        <select name="word" required>
-                            <option value="初級">初級</option>
-                            <option value="中級">中級</option>
-                        </select>
-                    </div> -->
-            {{-- <div class="selectCourse">
-            <input type="radio" name="course_name" id="beginner" checked>
-            <label class="course" for="beginner">初級コース</label>
-            <input type="radio" name="course_name" id="intermediate" checked>
-            <label class="course" for="intermediate">中級コース</label>
-        </div> --}}
+            {{-- レベル切り替えボタン --}}
+            <div class="levelButtons">
+                <a href="{{ route('ranking', ['level_id' => 1]) }}"
+                    class="levelButton {{ request()->query('level_id') == 1 ? 'active' : '' }}">初級</a>
+                <a href="{{ route('ranking', ['level_id' => 2]) }}"
+                    class="levelButton {{ request()->query('level_id') == 2 ? 'active' : '' }}">中級</a>
+            </div>
 
             <!-- 言語選択 -->
-            {{-- <nav class="word">
-            <div>
-                <img src="../assets/images/arrow.png" alt="↓ボタン">
-                <a href="#engword">プログラミングで使う英単語</a>
-            </div>
-            <div>
-                <img src="../assets/images/arrow.png" alt="↓ボタン">
-                <a href="#html">HTML</a>
-            </div>
-            <div>
-                <img src="../assets/images/arrow.png" alt="↓ボタン">
-                <a href="#css">css</a>
-            </div>
-            <div>
-                <img src="../assets/images/arrow.png" alt="↓ボタン">
-                <a href="#javascript">JavaScript</a>
-            </div>
-            <div>
-                <img src="../assets/images/arrow.png" alt="↓ボタン">
-                <a href="#php">PHP</a>
-            </div>
-            <div>
-                <img src="../assets/images/arrow.png" alt="↓ボタン">
-                <a href="#python">Python</a>
-            </div>
-        </nav> --}}
+            <nav class="word">
+                <div>
+                    <img src="../assets/images/arrow.png" alt="↓ボタン">
+                    <a href="#engword">プログラミングで使う英単語</a>
+                </div>
+                <div>
+                    <img src="../assets/images/arrow.png" alt="↓ボタン">
+                    <a href="#html">HTML</a>
+                </div>
+                <div>
+                    <img src="../assets/images/arrow.png" alt="↓ボタン">
+                    <a href="#css">css</a>
+                </div>
+                <div>
+                    <img src="../assets/images/arrow.png" alt="↓ボタン">
+                    <a href="#javascript">JavaScript</a>
+                </div>
+                <div>
+                    <img src="../assets/images/arrow.png" alt="↓ボタン">
+                    <a href="#php">PHP</a>
+                </div>
+                <div>
+                    <img src="../assets/images/arrow.png" alt="↓ボタン">
+                    <a href="#python">Python</a>
+                </div>
+            </nav>
 
 
             <!-- ここから動的 -->

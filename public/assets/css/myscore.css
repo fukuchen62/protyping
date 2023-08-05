@@ -91,6 +91,30 @@ input[name="course_name"] {
     color: #ffff;
 }
 
+/* コース選択 */
+.levelButtons {
+    display: block;
+    margin: 30px;
+    text-align: center;
+}
+
+.levelButton {
+    display: inline-block;
+    background-color: #F0F0F0;
+    color: #625858;
+    font-size: 1.6rem;
+    width: 228px;
+    height: 45px;
+    margin: 20px auto;
+    padding: 10px 0;
+    border-radius: 5px;
+    font-weight: 500;
+    border-bottom: 6px solid #8B8B8B;
+}
+
+.levelButton:hover {
+    opacity: 0.7;
+}
 
 /* 言語選択 */
 .word {
@@ -406,6 +430,9 @@ h3 {
         margin-inline: 20px;
     }
 
+    .levelButton {
+        margin: 20px;
+    }
 
     .word {
         display: none;
