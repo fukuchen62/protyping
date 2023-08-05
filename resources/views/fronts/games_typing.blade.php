@@ -107,9 +107,9 @@
                         </div>
                         <!-- 遊び方のポップアップ -->
                         <div class="Popup">
-                            <input id="open" type="checkbox">
-                            <label for="open" class="openBtn"><img src="../assets/images/memo.svg" alt="メモアイコン">遊び方</label>
-                            <label for="open" class="overlay"></label>
+                            <input id="open2" type="checkbox">
+                            <label for="open2" class="openBtn"><img src="../assets/images/memo.svg" alt="メモアイコン">遊び方</label>
+                            <label for="open2" class="overlay"></label>
                             <div class="popupContent">
                                 <p>遊び方</p>
                                 <p>タイプコードはプログラミングを学習している人のための練習ゲームです。</p>
@@ -123,7 +123,7 @@
                                 <p>BGM、タイプ音、ミス音、背景のON・OFFが選択できます。</p>
                             </div>
                             <div class="close">
-                                <label for="open" class="closeBtn">閉じる</label>
+                                <label for="open2" class="closeBtn">閉じる</label>
                             </div>
                         </div>
                     </div>
@@ -289,6 +289,8 @@
                         <div class="deco_key17"></div>
                         <div class="deco_key18"></div>
                     </div>
+                    <!-- 音声再生用の<audio>要素 -->
+                    <audio id="sound" src="{{ asset('assets/music/typcode_bgm6.mp3')}}"></audio>
                 </div>
                 {{-- 消すとゲームが動かなくなる！ --}}
 
@@ -419,8 +421,9 @@
                 const button17 = document.getElementById('register-ranking'); // 『登録する』ボタンクリック時
                 const view7 = document.getElementById('game-view7'); //ランキング登録完了画面表示
                 const button18 = document.getElementById('return-start'); // 『スタートに戻る』ボタンクリック時
+                const audioElement = document.getElementById('sound'); //タイプ音
 
-                let countdownTime = 3; //ゲーム用タイマー 1=1秒
+                let countdownTime = 180; //ゲーム用タイマー 1=1秒
                 // 遊ぶ文字列をデータベースから取得
                 let wordJPArray = {!! $json_array !!};
                 // console.log(wordJPArray); // 配列の中身を確認（デバッグ用）
@@ -635,13 +638,16 @@
                     }, 1000);
                 }
 
+
+                let timerInterval; // グローバルスコープでtimerIntervalを宣言
+                let timerDisplay; //タイマー表示
                 // タイマー
                 function startTimer() {
                     let timeLeft = countdownTime;
 
-                    const timerDisplay = document.getElementById('timer');
+                    timerDisplay = document.getElementById('timer');
 
-                    const timerInterval = setInterval(updateTimer, 1000);
+                    timerInterval = setInterval(updateTimer, 1000);
 
                     function updateTimer() {
                         const hours = Math.floor(timeLeft / 3600);
@@ -666,6 +672,13 @@
                     }
                 }
 
+                // タイマーを途中で停止し、デフォルト値にリセットする
+                function stopAndResetTimer() {
+                    clearInterval(timerInterval);
+                    countdownTime = 180; // デフォルト値にリセット
+                    timerDisplay.textContent = "00:03:00"; // 表示もリセット
+                }
+
                 // ゲーム開始処理
                 function gameInit() {
                     count = 0;
@@ -682,6 +695,7 @@
                     missFlag = false;
 
                     startTimer(); //タイマースタート
+                    audioElement.play();//BGM
 
                     // 『ミスだけ』を選択した場合
                     if (moPlay) {
@@ -821,6 +835,9 @@
                     accuracy = correct / (correct + miss);
                     score = isStopped ? '-' : Math.floor(speed * accuracy ** 3); // スコアを数値として設定
 
+                    audioElement.pause(); // 音声を停止
+                    audioElement.currentTime = 0; // 音声を再生位置の初めに戻す
+
                     let html;
                     html = '<ul>';
                     for (let i = 0; i < limit; i++) {
@@ -959,6 +976,8 @@
                             moBtn.remove();
                         }
                     }
+
+                    stopAndResetTimer(); // タイマーを停止してリセット
                 }
 
                 // 得点をデータベースに保存
@@ -1368,6 +1387,7 @@
                     result.style.display = 'none'; // 結果画面を非表示に
                     view2.style.display = 'block'; // タイピング画面を表示
                     startMsg.style.display = 'block'; // メッセージを再表示
+                    countdownTime = 180;
 
                     sWait = true; // 開始前のスペース入力待ちフラグ
                     space.classList.add('active'); // スペースキーをactiveにする
