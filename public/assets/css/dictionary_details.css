@@ -63,6 +63,7 @@ p {
 
     p {
         font-size: 1.8rem;
+        margin-bottom: 0;
     }
 }
 
@@ -301,7 +302,7 @@ input[type="checkbox"]:checked+.overlay {
     .mean p {
         margin: auto;
         text-align: center;
-        width: 270px;
+        /* width: 270px; */
         height: auto;
 
         font-size: 1.8rem;
@@ -313,7 +314,7 @@ input[type="checkbox"]:checked+.overlay {
     .detail.example p {
         margin: auto;
         text-align: center;
-        width: 270px;
+        /* width: 270px; */
         height: auto;
         margin-top: 20px;
         border: #817F6E 2px solid;
@@ -384,7 +385,7 @@ input[type="checkbox"]:checked+.overlay {
     /* 線の太さ・種類・色 */
     margin: 15px auto;
     /* 外側の余白 上下・左右 */
-    padding: 20px 10px 10px;
+    padding: 20px 10px 15px;
     /* 内側の余白 */
     position: relative;
     width: 100%;
@@ -429,7 +430,7 @@ input[type="checkbox"]:checked+.overlay {
     /* 線の太さ・種類・色 */
     margin: 15px auto;
     /* 外側の余白 上下・左右 */
-    padding: 20px 10px 10px;
+    padding: 20px 10px 15px;
     /* 内側の余白 */
     position: relative;
     width: 100%;
@@ -467,7 +468,7 @@ input[type="checkbox"]:checked+.overlay {
     /* 線の太さ・種類・色 */
     margin: 15px auto;
     /* 外側の余白 上下・左右 */
-    padding: 20px 10px 10px;
+    padding: 20px 10px 15px;
     /* 内側の余白 */
     position: relative;
     width: 100%;
@@ -580,6 +581,10 @@ img:hover {
         padding: 10px;
     }
 
+    ul li.subMenu1 {
+        padding: 15px 15px;
+    }
+
     li:hover {
         background: rgba(4, 199, 243, 0.1);
     }
@@ -618,11 +623,13 @@ table.dictionary {
 
 .dictBody:nth-child(odd) {
     background-color: #d4ebf6;
+    /* background-color: rgba(255, 166, 235, 0.5); */
 }
 
 
 .dictBody:nth-child(even) {
     background-color: #f5f9fb;
+    /* background-color: rgba(255, 135, 199, 0.5); */
 }
 
 td.detail {
