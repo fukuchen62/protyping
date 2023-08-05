@@ -959,7 +959,7 @@
 #game-result .btn {
     position: absolute;
     display: block;
-    width: 129px;
+    width: 200px;
     height: 39px;
     color: #fff;
     font-size: 14px;
@@ -973,21 +973,21 @@
 }
 
 #set-ranking {
-    top: 340px;
-    right: 40%;
-    background-color: #027fff;
+    top: 380px;
+    right: 35%;
+    background: linear-gradient(to bottom, #FFDA56 0%, #DDA107 75%, #EC905C 100%);
 }
 
 #game-finish {
     top: 380px;
-    right: 40%;
-    background-color: #027fff;
+    right: 5%;
+    background: linear-gradient(to bottom, #FFDA56 0%, #DDA107 75%, #EC905C 100%);
 }
 
 #replay-button {
-    top: 420px;
-    right: 50%;
-    background-color: #027fff;
+    top: 380px;
+    right: 65%;
+    background: linear-gradient(to bottom, #FFDA56 0%, #DDA107 75%, #EC905C 100%);
 }
 
 #close-button2 {
@@ -1010,4 +1010,69 @@
     100% {
         opacity: 0;
     }
+}
+
+.set-ranking{
+    margin: 30px 30px;
+    text-align: center;
+}
+
+.regist-ranking{
+    width: 200px;
+    height: 39px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 3px;
+    background: linear-gradient(to bottom, #FFDA56 0%, #DDA107 75%, #EC905C 100%);
+}
+
+.ranking-title{
+    color: #26567C;
+    font-size: 36px;
+}
+
+.entry-ranking{
+    background-color: #fff;
+    padding:30px;
+    margin:30px 0;
+    border-radius: 50px;
+}
+
+
+.entry-ranking input
+.entry-ranking div {
+    text-align: left;
+}
+
+.entry-ranking p{
+    font-size: 24px;
+    padding: 10px;
+}
+.attention{
+    color: red;
+    font-size: 14px;
+}
+
+.entry-ranking input{
+    background-color: #26567C;
+    font-size: 24px;
+    color:#fff;
+    padding:10px;
+    margin:20px;
+    text-align: left;
+    border-radius: 20px;
+    width: 300px;
+    display: block; /* ブロックレベル要素として表示 */
+    text-align: left; /* テキストを左寄せ */
+    margin: 0; /* 余白をリセット */
+}
+
+.entry-ranking div{
+    font-size: 36px;
+    display: inline-block;
+}
+
+.regist-end{
+    text-align: left;
 }

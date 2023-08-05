@@ -8,6 +8,7 @@
 @section('pageCss')
     <link rel="stylesheet" href="{{ asset('assets/css/typingstyle.css')}}" />
     <link rel="stylesheet" href="{{ asset('assets/css/game_typing.css')}}" />
+    {{-- <link rel="stylesheet" href="{{ asset('assets/css/game_setting.css')}}" /> --}}
 @endsection
 
 {{-- ゲーム画面の内容 --}}
@@ -56,7 +57,8 @@
                     <form action="{{ route('game') }}" method="get" class="select">
                         {{-- 言語の選択 --}}
                         <select id="language-select" name="language" class="selectWrap">
-                            <option value="1"selected>HTML</option>
+                            <option value="1"selected>　言語を選択　　　　　　　▼</option>
+                            <option value="1">HTML</option>
                             <option value="2">CSS</option>
                             <option value="3">JavaScript</option>
                             <option value="4">PHP</option>
@@ -67,11 +69,12 @@
 
                         {{-- レベルの選択 --}}
                         <select id="level-select" name="level" class="selectWrap">
-                            <option value="1"selected>初級</option>
+                            <option value="1"selected>　モードを選択　　　　　　▼</option>
+                            <option value="1">初級</option>
                             <option value="2">中級</option>
                             <!-- 他のレベルのオプションを追加 -->
                         </select>
-                        <input type="submit" class="selectWrap" value="言語・レベル決定ボタン">
+                        <input type="submit" class="selectWrap" value="言語・モード決定ボタン">
                     </form>
                     {{-- スタートボタン --}}
                     {{-- <div id="game-explain"></div> --}}
@@ -154,6 +157,7 @@
                     </div> --}}
                 </div>
 
+                {{-- 消すとゲームが動かなくなる！ --}}
                 {{-- モードとコース選択画面 --}}
                 <div id="game-view5" style="display: none;">
                     <p>選択中の言語</p>
@@ -166,40 +170,40 @@
                     <button id="open-ranking2" type="button" class="game-position10">中級コース プレイ時間1分 1単語:8文字以下</button><br>
                     <button id="close-selectmode" type="button" class="game-position8">言語を選び直す ▶トップへ戻る</button>
                 </div>
-
                 <!-- ゲーム画面２ -->
                 <div id="game-view2">
                     <div>
                         @if (isset($_GET['language']))
                             @if ($_GET['language'] == 1)
-                                <p>選択中の言語　　▶　HTML</p>
+                                <p>　選択中の言語　　▶　HTML</p>
                             @elseif ($_GET['language'] == 2)
-                                <p>選択中の言語　　▶　CSS</p>
+                                <p>　選択中の言語　　▶　CSS</p>
                             @elseif ($_GET['language'] == 3)
-                                <p>選択中の言語　　▶　JavaScript</p>
+                                <p>　選択中の言語　　▶　JavaScript</p>
                             @elseif ($_GET['language'] == 4)
-                                <p>選択中の言語　　▶　PHP</p>
+                                <p>　選択中の言語　　▶　PHP</p>
                             @elseif ($_GET['language'] == 5)
-                                <p>選択中の言語　　▶　Python</p>
+                                <p>　選択中の言語　　▶　Python</p>
                             @elseif ($_GET['language'] == 6)
-                                <p>選択中の言語　　▶　よく使う英単語</p>
+                                <p>　選択中の言語　　▶　よく使う英単語</p>
                             @else
-                                <p>???</p>
+                                <p>　???</p>
                             @endif
                         @else
-                            <p>選択中の言語　　▶　HTML</p>
+                            <p>　選択中の言語　　▶　HTML</p>
                         @endif
-                        @if (isset($_GET['language']))
+                        @if (isset($_GET['level']))
                             @if ($_GET['level'] == 1)
-                                <p>モード・コース　▶　初級</p>
+                                <p>　モード・コース　▶　初級</p>
                             @elseif ($_GET['level'] == 2)
-                                <p>モード・コース　▶　中級</p>
+                                <p>　モード・コース　▶　中級</p>
                             @else
-                                <p>???</p>
+                                <p>　???</p>
                             @endif
                         @else
-                            <p>モード・コース　▶　初級</p>
+                            <p>　モード・コース　▶　初級</p>
                         @endif
+                        <br>
                     </div>
                     <div id="text-container">
                         <div id="timer">00:00:00</div>
@@ -286,6 +290,7 @@
                         <div class="deco_key18"></div>
                     </div>
                 </div>
+                {{-- 消すとゲームが動かなくなる！ --}}
 
                 <!-- ゲーム後結果画面 -->
                 <div id="game-result">
@@ -344,23 +349,28 @@
                 </div>
 
                 {{-- ランキング登録画面 --}}
-                <div id="game-view6" style="display: none;">
-                    <p>ランキングに登録する</p>
-                    <p>ペンネーム入力</p>
-                    <input type="text" id="inputName" value="クリップ太郎">
-                    <p>本名は入れないでください</p>
+                <div id="game-view6" style="display: none;" class="set-ranking">
+                    <p class="ranking-title">ランキングに登録する</p>
+                    <div class="entry-ranking">
+                        <p class="regist-end">ペンネーム入力欄</p>
+                        <input type="text" id="inputName" value="クリップ太郎" maxlength="8">
+                        <p class="attention regist-end">※８文字以内　本名は入れないでください</p>
+                    </div>
                     <div>
-                        <button id="register-ranking" type="button">登録する</button>
+                        <button id="register-ranking" type="button" class="regist-ranking">登録する</button>
                     </div>
                 </div>
 
                 {{-- ランキング登録完了画面 --}}
-                <div id="game-view7" style="display: none;">
-                    <p>ランキングに登録完了</p>
-                    <div id="userNameDisplay"></div>
-                    <p>で登録しました</p>
+                <div id="game-view7" style="display: none;" class="set-ranking">
+                    <p class="ranking-title">ランキングに登録完了</p>
+                    <div class="entry-ranking">
+                        <div>ペンネーム:</div>
+                        <div id="userNameDisplay"></div>
+                        <p>で登録しました</p>
+                    </div>
                     <div>
-                        <button id="return-start" type="button">スタートに戻る</button>
+                        <button id="return-start" type="button" class="regist-ranking">スタートに戻る</button>
                     </div>
                 </div>
             </div>
@@ -391,7 +401,6 @@
                 const progress = document.getElementById('progress-bar');
                 const keyboard = document.getElementById('virtual-keyboard');
                 const space = keyboard.querySelector('.key_space');
-                const countdownTime = 10; //ゲーム用タイマー 180秒
                 const button5 = document.getElementById('howto-playing'); //スタート画面の『遊び方』ボタンクリック時
                 const view3 = document.getElementById('game-view3'); //遊び方画面表示
                 const button7 = document.getElementById('close-howto'); //遊び方画面の『戻る』ボタンクリック時
@@ -411,6 +420,7 @@
                 const view7 = document.getElementById('game-view7'); //ランキング登録完了画面表示
                 const button18 = document.getElementById('return-start'); // 『スタートに戻る』ボタンクリック時
 
+                let countdownTime = 3; //ゲーム用タイマー 1=1秒
                 // 遊ぶ文字列をデータベースから取得
                 let wordJPArray = {!! $json_array !!};
                 // console.log(wordJPArray); // 配列の中身を確認（デバッグ用）
