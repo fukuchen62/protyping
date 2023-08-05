@@ -23,16 +23,21 @@
             </li>
             <li><a href="{{ route('knowhow') }}">知っトク情報一覧</a></li>
         </ol>
+
+
+        <section>
+            <h2 class="title">知っトク情報一覧</h2>
+
+            <p class="overview">こんにちは！私たちのサイトにお越しいただきありがとうございます！このページではIT業界に進んでいく上で知っトクと便利な情報を載せています！ぜひ活用して下さい(^^)!
+            </p>
+        </section>
+
         <!-- 大枠の Flexbox（親） -->
         <div class="shittokuFlex">
             <!-- メインコンテンツ 100%-176px -->
             <div class="mainContainer">
                 <div class="mainContainerInner">
-                    <section>
-                        <h2 class="title">知っトク情報一覧</h2>
 
-                        <p class="overview">こんにちは！私たちのサイトにお越しいただきありがとうございます！このページではIT業界に進んでいく上で知っトクと便利な情報を載せています！ぜひ活用して下さい(^^)!</p>
-                    </section>
                     <!-- 画像の Flexbox（親） -->
                     <div class="imgFlex">
                         <!--  1 開発環境セットアップ  -->
@@ -141,11 +146,11 @@
             <aside class="sidebar">
                 <!-- <nav class="globalNav">辞書</nav> -->
                 <ul>
-                    <li class="globalNav">知っトク<br>情報一覧</li>
-                    <li class="subMenu1"><a href="{{ route('details', ['param' => '4']) }}">開発環境<br>セットアップ</a></li>
+                    <li class="globalNav">知っトク情報一覧</li>
+                    <li class="subMenu1"><a href="{{ route('details', ['param' => '4']) }}">開発環境セットアップ</a></li>
                     <li class="subMenu2"><a href="{{ route('details', ['param' => '5']) }}">WordPress</a></li>
-                    <li class="subMenu3"><a href="{{ route('details', ['param' => '6']) }}">おすすめ<br>Webアプリ</a></li>
-                    <li class="subMenu4"><a href="{{ route('details', ['param' => '7']) }}">おすすめ<br>Webサイト</a></li>
+                    <li class="subMenu3"><a href="{{ route('details', ['param' => '6']) }}">おすすめWebアプリ</a></li>
+                    <li class="subMenu4"><a href="{{ route('details', ['param' => '7']) }}">おすすめWebサイト</a></li>
                     <li class="subMenu5"><a href="{{ route('details', ['param' => '8']) }}">ショートカット</a></li>
                     <li class="subMenu6"><a href="{{ route('details', ['param' => '9']) }}">資格</a></li>
                     <li class="subMenu7"><a href="{{ route('details', ['param' => '10']) }}">Chrome拡張機能</a></li>
