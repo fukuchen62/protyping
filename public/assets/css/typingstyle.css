@@ -197,7 +197,7 @@
     margin: 12px 0 74px;
 }
 
-#start-button {
+/* #start-button {
     width: 160px;
     height: 45px;
     line-height: 45px;
@@ -211,7 +211,7 @@
     margin: 0 auto;
     cursor: pointer;
     appearance: none;
-}
+} */
 
 /* #game-func {
     position: absolute;
