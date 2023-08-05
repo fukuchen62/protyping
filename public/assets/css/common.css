@@ -281,6 +281,10 @@ p {
     h3 {
         font-size: 2.2rem;
     }
+
+    h4 {
+        font-size: 2rem;
+    }
 }
 
 /* パンくずリストcss */
