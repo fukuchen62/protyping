@@ -52,6 +52,23 @@ function activeLink() {
         });
 
 
+
+        // ヘッダーの設定
+// ページが読み込まれた後に処理を実行する
+    window.onload = function () {
+        // ナビゲーションのリンク要素を取得
+        const navLinks = document.querySelectorAll(".navList a");
+
+        // リンク要素にクリックイベントを追加
+        navLinks.forEach(link => {
+            link.addEventListener("click", function (event) {
+                event.preventDefault(); // リンクのデフォルトの挙動（ページ遷移）をキャンセル
+                this.style.color = "white"; // クリックされたリンクの文字色を変更
+            });
+        });
+    };
+
+
 // サイドバー
 // var $subNav = $('#sub-nav');
 

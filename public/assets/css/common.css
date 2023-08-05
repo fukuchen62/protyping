@@ -230,6 +230,7 @@ ul {
     display: inline-block;
 }
 
+
 .navList li {
     padding: 15px 5px;
     margin: 0 5px;
@@ -241,6 +242,11 @@ ul {
 #drawerInput:checked~.navList li {
     opacity: 1;
     transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.2s;
+}
+
+.navList li:hover {
+    color: #5FBFED;
+    background-color: #fff;
 }
 
 #drawerInput {
@@ -869,6 +875,13 @@ padding: 15px;
         margin: 0 0 0 40px;
     }
 
+    .contentItem a:hover {
+        color: #26567C;
+    }
+
+
+
+
     .footerLogo img {
         margin: 0 auto;
         width: 200px;
@@ -883,68 +896,10 @@ padding: 15px;
         /* font-weight: bold; */
     }
 
-
-
-    #footer .footerNav .footerTitle:first-child {
-        margin-top: 0;
-    }
-
-    #footer .footerNav .footerTitle+.footerTitle {
-        margin-top: 0px;
-    }
-
-    #footer .footerNav ul {
-        display: block;
-        font-size: 1.6rem;
-
-    }
-
-    #footer .footerNav li {
-        display: block;
-        line-height: 2;
-    }
-
-    /* #footer .footerNav .engWord {
-        line-height: 1;
-    } */
-
-
-    #footer .footerNav li:first-child {
-        margin-top: 0;
-    }
-
-    #footer .footerNav li ul {
-        margin: 0 0 0 2em;
-    }
-
-    #footer .footerNav li li {
-        position: relative;
-    }
-
-    #footer .footerNav li li:before {
-        position: absolute;
-        top: 50%;
-        left: -10px;
-        content: "";
-        display: block;
-        width: 4px;
-        height: 1px;
-        background-color: #fff;
-    }
-
-    #footer .company {
-        display: block;
-        margin-top: 62px;
-    }
-
     .copyright {
         /* margin-block-start: 70px; */
         font-size: 1.6rem;
         padding: 20px;
     }
 
-    .footerTitle .engWord {
-        line-height: 0;
-        padding: 10px;
-    }
 }
