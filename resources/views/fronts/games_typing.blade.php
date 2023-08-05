@@ -75,41 +75,83 @@
                     </form>
                     {{-- スタートボタン --}}
                     {{-- <div id="game-explain"></div> --}}
-                    <button id="start-button" type="button" class="game-position3">スタート</button>
+                    <button id="start-button" type="button" class="box">スタート</button>
 
+                    {{-- 消すとゲームが動かなくなる！ --}}
                     {{-- 遊び方 --}}
-                    <button id="howto-playing" type="button" class="game-position4">遊び方</button>
-
+                    <button id="howto-playing" type="button" class="game-position4"></button>
                     {{-- 設定 --}}
-                    <button id="howto-setting" type="button" class="game-position5">設定</button>
-
-                    <div id="game-func">
-                    {{-- <span>ローマ字表示(R)</span>
-                    <div class="switch-btn">
-                        <button class="on-btn btn show" type="button">ON</button>
-                        <button class="off-btn btn" type="button">OFF</button>
+                    <button id="howto-setting" type="button" class="game-position5"></button>
+                    <!-- ポップアップ -->
+                    <div class="popupWrop">
+                        <!-- 設定のポップアップ -->
+                        <div class="Popup">
+                            <input id="open" type="checkbox">
+                            <label for="open" class="openBtn"><img src="../assets/images/gear.svg" alt="歯車アイコン">設定</label>
+                            <label for="open" class="overlay"></label>
+                            <div class="popupContent">
+                                <!-- <label for="open" class="closeBtn"></label> -->
+                                <p>設定</p>
+                                <p>ゲーム中の音楽や背景映像などの設定ができます。</p>
+                                <p>BGM</p>
+                                <p>タイプ音</p>
+                                <p>ミス音</p>
+                                <p>ゲーム画面の背景</p>
+                            </div>
+                            <div class="close">
+                                <label for="open" class="closeBtn">閉じる</label>
+                            </div>
+                        </div>
+                        <!-- 遊び方のポップアップ -->
+                        <div class="Popup">
+                            <input id="open" type="checkbox">
+                            <label for="open" class="openBtn"><img src="../assets/images/memo.svg" alt="メモアイコン">遊び方</label>
+                            <label for="open" class="overlay"></label>
+                            <div class="popupContent">
+                                <p>遊び方</p>
+                                <p>タイプコードはプログラミングを学習している人のための練習ゲームです。</p>
+                                <p>始め方</p>
+                                <p>１．タイピングしたい言語を選びます。</p>
+                                <p>２．必要であれば「設定」で効果音のON・OFFができます。</p>
+                                <p>３．スタートを押します。</p>
+                                <p>４．モードとコースを選択します。</p>
+                                <p>※タイピングには制限時間があります。</p>
+                                <p>設定ボタン</p>
+                                <p>BGM、タイプ音、ミス音、背景のON・OFFが選択できます。</p>
+                            </div>
+                            <div class="close">
+                                <label for="open" class="closeBtn">閉じる</label>
+                            </div>
+                        </div>
                     </div>
-                    <span>かな表示(K)</span>
-                    <div class="switch-btn">
-                        <button class="on-btn btn show" type="button">ON</button>
-                        <button class="off-btn btn" type="button">OFF</button>
-                    </div>
-                    <span>キーガイド(G)</span>
-                    <div class="switch-btn">
-                        <button class="on-btn btn show" type="button">ON</button>
-                        <button class="off-btn btn" type="button">OFF</button>
-                    </div>
-                    <span>WPM表示(W)</span>
-                    <div class="switch-btn">
-                        <button class="on-btn btn show" type="button">ON</button>
-                        <button class="off-btn btn" type="button">OFF</button>
-                    </div>
-                    <span>スピードバー(S)</span>
-                    <div class="switch-btn">
-                        <button class="on-btn btn show" type="button">ON</button>
-                        <button class="off-btn btn" type="button">OFF</button>
+                    {{-- 消すとゲームが動かなくなる！ --}}
+                    {{-- <div id="game-func">
+                        <span>ローマ字表示(R)</span>
+                        <div class="switch-btn">
+                            <button class="on-btn btn show" type="button">ON</button>
+                            <button class="off-btn btn" type="button">OFF</button>
+                        </div>
+                        <span>かな表示(K)</span>
+                        <div class="switch-btn">
+                            <button class="on-btn btn show" type="button">ON</button>
+                            <button class="off-btn btn" type="button">OFF</button>
+                        </div>
+                        <span>キーガイド(G)</span>
+                        <div class="switch-btn">
+                            <button class="on-btn btn show" type="button">ON</button>
+                            <button class="off-btn btn" type="button">OFF</button>
+                        </div>
+                        <span>WPM表示(W)</span>
+                        <div class="switch-btn">
+                            <button class="on-btn btn show" type="button">ON</button>
+                            <button class="off-btn btn" type="button">OFF</button>
+                        </div>
+                        <span>スピードバー(S)</span>
+                        <div class="switch-btn">
+                            <button class="on-btn btn show" type="button">ON</button>
+                            <button class="off-btn btn" type="button">OFF</button>
+                        </div>
                     </div> --}}
-                    </div>
                 </div>
 
                 {{-- モードとコース選択画面 --}}
