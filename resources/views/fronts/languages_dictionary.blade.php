@@ -29,7 +29,28 @@
         </ol>
 
         <h2 class="title">辞書</h2>
-        <h3 class="subTitle">プログラミングでよく使う英単語</h3>
+        <h3 class="subTitle">
+            @if (isset($_GET['s']) && $items->isNotEmpty())
+                @php
+                    $item = $items->first();
+                @endphp
+                @if($item->language_id == 1)
+                HTML
+                @elseif($item->language_id == 2)
+                CSS
+                @elseif($item->language_id == 3)
+                JavaScript
+                @elseif($item->language_id == 4)
+                PHP
+                @elseif($item->language_id == 5)
+                Python
+                @elseif($item->language_id == 6)
+                プログラミングでよく使う英単語
+                @endif
+            @else
+            HTML
+            @endif
+        </h3>
 
         <!-- プルダウンメニュー -->
         {{-- <div class="selectWrap">
@@ -60,9 +81,6 @@
                     <ul>
                         <li class="globalNav">辞書選択</li>
 
-                        <li class="subMenu1">
-                            <button type="submit" name="s" value="6">プログラミングでよく使う英単語</button>
-                        </li>
                         <li class="subMenu2">
                             <button type="submit" name="s" value="1">HTML</button>
                         </li>
@@ -77,6 +95,9 @@
                         </li>
                         <li class="subMenu6">
                             <button type="submit" name="s" value="5">Python</button>
+                        </li>
+                        <li class="subMenu1">
+                            <button type="submit" name="s" value="6">プログラミングでよく使う英単語</button>
                         </li>
                         {{-- <li class="subMenu6">
                             <button type="submit" name="s" value="6">よく使う英単語</button>

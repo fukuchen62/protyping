@@ -59,7 +59,7 @@
             <nav class="word">
                 <div>
                     <img src="../assets/images/arrow.png" alt="↓ボタン">
-                    <a href="#engword">プログラミングで使う英単語</a>
+                    <a href="#engword">プログラミングでよく使う英単語</a>
                 </div>
                 <div>
                     <img src="../assets/images/arrow.png" alt="↓ボタン">
@@ -348,7 +348,7 @@
 
                         <div class="listInner">
 
-                            <h3 id="engword">プログラミングで使う英単語</h3>
+                            <h3 id="engword">プログラミングでよく使う英単語</h3>
                             <div class="cardInner">
                                 <div class="history">
                                     {{--
