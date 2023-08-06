@@ -49,9 +49,9 @@
 
             {{-- レベル切り替えボタン --}}
             <div class="levelButtons">
-                <a href="{{ route('ranking', ['level_id' => 1]) }}"
+                <a href="{{ route('myscore', ['level_id' => 1]) }}"
                     class="levelButton {{ request()->query('level_id') == 1 ? 'active' : '' }}">初級</a>
-                <a href="{{ route('ranking', ['level_id' => 2]) }}"
+                <a href="{{ route('myscore', ['level_id' => 2]) }}"
                     class="levelButton {{ request()->query('level_id') == 2 ? 'active' : '' }}">中級</a>
             </div>
 
