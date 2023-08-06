@@ -110,54 +110,6 @@
                 <!--カード全体を囲う枠 -->
                 <div class="cardWrap">
                     <div class="cardList">
-                        <div class="listInner">
-
-                            <h3 id="engword">プログラミングで使う英単語</h3>
-                            <div class="cardInner">
-                                <div class="history">
-                                    {{--
-                                <p>履歴（過去Best3）</p> --}}
-                                </div>
-                                <div class="scoreList">
-                                    <div class="scoreLine">
-                                        <div class="scoreItem">
-                                            <p>Score</p>
-                                        </div>
-                                        <div class="scoreItem">
-                                            <p class="triangle">▶▶▶</p>
-                                        </div>
-                                        <div class="scoreItem">
-                                            @if (request()->hasCookie('saved_data6'))
-                                                <p class="score">{{ request()->cookie('saved_data6') }}点</p>
-                                            @endif
-                                        </div>
-                                    </div>
-                                    {{-- <div class="scoreLine">
-                                    <div class="scoreItem">
-                                        <p>Score</p>
-                                    </div>
-                                    <div class="scoreItem">
-                                        <p class="triangle">▶▶▶</p>
-                                    </div>
-                                    <div class="scoreItem">
-                                        <p class="score">00点</p>
-                                    </div>
-                                </div>
-                                <div class="scoreLine">
-                                    <div class="scoreItem">
-                                        <p>Score</p>
-                                    </div>
-                                    <div class="scoreItem">
-                                        <p class="triangle">▶▶▶</p>
-                                    </div>
-                                    <div class="scoreItem">
-                                        <p class="score">00点</p>
-                                    </div>
-                                </div> --}}
-                                </div>
-                            </div>
-                        </div>
-
 
                         <div class="listInner">
                             <h3 id="html">HTML</h3>
@@ -394,6 +346,53 @@
                             </div>
                         </div>
 
+                        <div class="listInner">
+
+                            <h3 id="engword">プログラミングで使う英単語</h3>
+                            <div class="cardInner">
+                                <div class="history">
+                                    {{--
+                                <p>履歴（過去Best3）</p> --}}
+                                </div>
+                                <div class="scoreList">
+                                    <div class="scoreLine">
+                                        <div class="scoreItem">
+                                            <p>Score</p>
+                                        </div>
+                                        <div class="scoreItem">
+                                            <p class="triangle">▶▶▶</p>
+                                        </div>
+                                        <div class="scoreItem">
+                                            @if (request()->hasCookie('saved_data6'))
+                                                <p class="score">{{ request()->cookie('saved_data6') }}点</p>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    {{-- <div class="scoreLine">
+                                    <div class="scoreItem">
+                                        <p>Score</p>
+                                    </div>
+                                    <div class="scoreItem">
+                                        <p class="triangle">▶▶▶</p>
+                                    </div>
+                                    <div class="scoreItem">
+                                        <p class="score">00点</p>
+                                    </div>
+                                </div>
+                                <div class="scoreLine">
+                                    <div class="scoreItem">
+                                        <p>Score</p>
+                                    </div>
+                                    <div class="scoreItem">
+                                        <p class="triangle">▶▶▶</p>
+                                    </div>
+                                    <div class="scoreItem">
+                                        <p class="score">00点</p>
+                                    </div>
+                                </div> --}}
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>

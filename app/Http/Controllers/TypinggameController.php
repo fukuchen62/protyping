@@ -113,10 +113,10 @@ class TypinggameController extends Controller
                 $response->cookie('saved_data4', $score, 600); // 60分 = 1時間
                 break;
             case '5':
-                $response->cookie('saved_data4', $score, 600); // 60分 = 1時間
+                $response->cookie('saved_data5', $score, 600); // 60分 = 1時間
                 break;
             case '6':
-                $response->cookie('saved_data4', $score, 600); // 60分 = 1時間
+                $response->cookie('saved_data6', $score, 600); // 60分 = 1時間
                 break;
             default:
                 $response->cookie('saved_data1', $score, 600); // 60分 = 1時間
