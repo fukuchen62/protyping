@@ -8,27 +8,6 @@
 
 @section('pageCss')
     <link rel="stylesheet" href="{{ asset('assets/css/ranking.css') }}">
-    {{-- <style>
-    .levelButtons {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .levelButton {
-        display: inline-block;
-        padding: 5px 10px;
-        margin-right: 10px;
-        text-decoration: none;
-        color: #fff;
-        background-color: #26567c;
-        border-radius: 5px;
-        font-size: 2em;
-    }
-
-    .levelButton.active {
-        background-color: #5FBFED;
-    }
-</style> --}}
 @endsection
 
 @section('key_visual')
@@ -44,7 +23,7 @@
             <!-- パンくずリスト html-->
             <ol class="breadCrumb-001">
                 <li><a href="../fronts/index.blade.php">ホーム</a></li>
-                <li><a href="#">アバウト</a></li>
+                <li><a href="#">ランキング</a></li>
             </ol>
 
             <!-- タイトル -->
@@ -119,6 +98,36 @@
                                             <p class="score">{{ $score->score }}点</p>
                                         </div>
                                     @endforeach
+
+                                    {{-- @foreach ($languages as $language)
+                        <div class="card">
+                            <h3 id="language_{{ $language->id }}">{{ $language->language_name }}</h3>
+                            <div class="cardInner">
+                                @if (count($scoresByLanguage[$language->id]) > 0)
+                                    @foreach ($scoresByLanguage[$language->id] as $index => $score)
+                                        <div class="cardItem">
+                                            <div class="position">
+                                                @if ($index === 0)
+                                                    <img src="{{ asset('assets/images/gold_crown.png') }}" alt="1位王冠">
+                                                    <p>1位</p>
+                                                @elseif ($index === 1)
+                                                    <img src="{{ asset('assets/images/silver_crown.png') }}" alt="2位王冠">
+                                                    <p>2位</p>
+                                                @elseif ($index === 2)
+                                                    <img src="{{ asset('assets/images/bronze_crown.png') }}" alt="3位王冠">
+                                                    <p>3位</p>
+                                                @else
+                                                    <div class="cardItemMoreThan">
+                                                        <p>{{ $index + 1 }}位</p>
+                                                    </div>
+                                                @endif
+                                            </div>
+                                            <div class="nameScore">
+                                                <p class="userName">{{ $score->username }}</p>
+                                                <p class="score">{{ $score->score }}点</p>
+                                            </div>
+                                        </div>
+                                    @endforeach --}}
                                 @else
                                     <!-- 代替テキストを表示するためのダミーデータ -->
                                     @for ($i = 0; $i < 10; $i++)
@@ -145,7 +154,7 @@
                     <a href="" class="challengeBtn">ゲームに挑戦</a>
                 </div>
                 <div class="viewMyscore">
-                    <a href="" class="viewBtn">マイスコアを見る</a>
+                    <a href="{{ route('myscore') }}" class="viewBtn">マイスコアを見る</a>
                 </div>
             </div>
 
