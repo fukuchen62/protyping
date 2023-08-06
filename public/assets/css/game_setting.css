@@ -217,6 +217,176 @@
 /* 設定の画面設定 */
 
 
+.settingWrap * {
+    /* font-family: Meiryo, Arial, sans-serif; */
+    box-sizing: border-box;
+    margin: auto;
+}
+
+
+/* 背景スタイル */
+.settingWrap {
+    width: 748px;
+    height: 528px;
+    /* 枠を追加 */
+    border: 2px solid #817F6E;
+    background: linear-gradient(to bottom, #B6F2FF 0%, #2E94CE 100%);
+    border-radius: 2.4rem;
+    box-shadow:
+    0px 0px 5px 2px rgba(255, 255, 255, 0.59)inset,
+    0px 0px 20px 5px rgba(27, 54, 96, 0.45) inset;
+}
+
+
+/* h2タイトルの枠のスタイル */
+.settingTitleBox {
+    background-color: #FFFFFF;
+    height: 64px;
+    box-shadow:0px 0px 20px 3px #5FBFED inset;
+    border-top-left-radius: 2.4rem;
+    border-top-right-radius: 2.4rem;
+
+    /* h2タイトルを上下左右中央に配置 */
+    display: grid;
+    place-items: center;
+    margin-bottom: 14px;
+}
+
+/* h2タイトル文字のスタイル */
+.settingTitle {
+    margin:0;
+    font-size: 3.2rem;
+    color: #26567C;
+}
+
+/* h3サブタイトルの文字のスタイル */
+.subTitle {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #26567C;
+    text-align: center;
+    line-height:3rem;
+    padding-top: 15px;
+
+}
+
+
+
+/* コンテンツ（薄い水色の枠の部分）を504pxに収める */
+.contentWrapper {
+    max-width: 504px;
+    height: auto;
+    background-color: #D4EBF6;
+    border-radius: 2.2rem;
+    box-shadow:0 4px 4px rgba(38, 86, 124, 0.49);
+    margin-top: 25px;
+}
+
+.settingTextInner {
+    padding: 15px 40px ;
+}
+
+.bgmContainer , .typeContainer , .missContainer {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.bgmContainer , .typeContainer  {
+    border-bottom: solid 2px #fff;
+}
+
+
+
+.settingMenuBox {
+    margin-left: 0;
+    max-width: 200px;
+}
+.settingMenu {
+    font-size: 2.4rem;
+    color: #26567C;
+    font-weight: 700;
+}
+
+/* トグル */
+
+.toggleBtn {
+    position: relative;
+    width: 140px;
+    height: 43px;
+    margin-right: 0;
+}
+
+
+.toggleLabel {
+    width: 140px;
+    height: 43px;
+    background-color: #ccc;
+    position: relative;
+    display: inline-block;
+    border-radius: 21px;
+    transition: 0.4s;
+
+}
+
+.toggleLabel::after {
+    content: "";
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    border-radius: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    transition: 0.4s;
+}
+
+.toggleInput {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.toggleInput:checked + .toggleLabel {
+    background-color: #4BD865;
+}
+
+.toggleInput:checked + .toggleLabel::after {
+    left:100px;
+}
+
+
+
+/* 閉じるボタンのスタイル */
+.closeSetting {
+    width: 165px;
+    height: 40px;
+    background-color: #EAB624;
+    display: block;
+    margin-top: 25px;
+    border-radius: 2.4rem;
+    box-shadow:
+    0 4px 4px rgba(0, 0, 0, 0.25),
+    0px 0px 12px rgba(255, 255, 255, 1) inset;
+
+    /* 閉じる文字のスタイル */
+    color: #26567C;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+}
+/* 閉じるボタンホバーしたら薄くなる */
+.closeSetting:hover {
+    opacity: 0.7;
+}
+
 
 
 

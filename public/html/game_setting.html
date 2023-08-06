@@ -38,29 +38,83 @@
 
 <body>
 
+    <main>
+
+        <!-- 土台の枠 -->
+        <div class="settingWrap">
+
+            <!-- タイトル -->
+            <section>
+                <div class="settingTitleBox">
+                    <h2 class="settingTitle">設定</h2>
+                </div>
+            </section>
+
+
+            <!-- 内容説明-->
+            <section>
+                <h3 class="subTitle">
+                    ゲーム中の音楽や背景映像などの設定ができます。
+                </h3>
+            </section>
 
 
 
-    <div id="game-view4" style="display: none;">
-        <div>
-            <p>設定</p>
-            <p>ゲーム中の音楽や背景映像などの設定ができます。</p>
-            <p>BGM</p>
-            <p>タイプ音</p>
-            <p>ミス音</p>
-            <p>ゲーム画面の背景</p>
+            <!-- 内側の土台（薄い水色） -->
+            <div class="contentWrapper">
+
+
+                <!-- 内側包む -->
+                <div class="settingTextInner">
+
+                    <!-- BGM コンテナー -->
+                    <div class="bgmContainer">
+                        <div class="settingMenuBox">
+                            <h4 class="settingMenu">BGM</h4>
+                        </div>
+                        <!-- オン・オフ切り替えボタン -->
+                        <div class="toggleBtn">
+                            <input id="bgmToggle" class="toggleInput" type="checkbox" />
+                            <label for="bgmToggle" class="toggleLabel"></label>
+                        </div>
+                    </div>
+
+                    <!-- タイプ音 コンテナー -->
+                    <div class="typeContainer">
+                        <div class="settingMenuBox">
+                            <h4 class="settingMenu">タイプ音</h4>
+                        </div>
+                        <!-- オン・オフ切り替えボタン -->
+                        <div class="toggleBtn">
+                            <input id="typeToggle" class="toggleInput" type="checkbox" />
+                            <label for="typeToggle" class="toggleLabel"></label>
+                        </div>
+                    </div>
+
+                    <!-- ミス音 コンテナー -->
+                    <div class="missContainer">
+                        <div class="settingMenuBox">
+                            <h4 class="settingMenu">ミス音</h4>
+                        </div>
+                        <!-- オン・オフ切り替えボタン -->
+                        <div class="toggleBtn">
+                            <input id="missToggle" class="toggleInput" type="checkbox" />
+                            <label for="missToggle" class="toggleLabel"></label>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
             <div>
-                <button id="close-setting" type="button">閉じる</button>
+                <button class="closeSetting" type="button">
+                    閉じる
+                </button>
             </div>
         </div>
-    </div>
 
-
-    <!-- オン・オフ切り替えボタン -->
-    <!-- <div class="toggle_button">
-                        <input id="toggle" class="toggle_input" type='checkbox' />
-                        <label for="toggle" class="toggle_label">
-                    </div> -->
+    </main>
 
 
 </body>
