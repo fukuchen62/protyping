@@ -24,7 +24,27 @@
         <ol class="breadCrumb-001">
             <li><a href="{{ route('top') }}">ホーム</a></li>
             <li><a href="{{ route('knowhow') }}">知っトク情報一覧</a></li>
-            <li><a href="{{ route('details') . '?param=' . request()->query('param') }}">カテゴリ詳細</a></li>
+            <li>
+                @if($_GET['param'] == 4)
+                <a href="{{ route('details') . '?param=' . request()->query('param') }}">環境セットアップ</a>
+                @elseif($_GET['param'] == 5)
+                <a href="{{ route('details') . '?param=' . request()->query('param') }}">WordPress</a>
+                @elseif($_GET['param'] == 6)
+                <a href="{{ route('details') . '?param=' . request()->query('param') }}">おすすめWebアプリ</a>
+                @elseif($_GET['param'] == 7)
+                <a href="{{ route('details') . '?param=' . request()->query('param') }}">おすすめWebサイト</a>
+                @elseif($_GET['param'] == 8)
+                <a href="{{ route('details') . '?param=' . request()->query('param') }}">ショートカット</a>
+                @elseif($_GET['param'] == 9)
+                <a href="{{ route('details') . '?param=' . request()->query('param') }}">資格</a>
+                @elseif($_GET['param'] == 10)
+                <a href="{{ route('details') . '?param=' . request()->query('param') }}">Chrome拡張機能</a>
+                @elseif($_GET['param'] == 11)
+                <a href="{{ route('details') . '?param=' . request()->query('param') }}">卒業生の作品</a>
+                @else
+                <a href="{{ route('details') . '?param=' . request()->query('param') }}">？？？</a>
+                @endif
+            </li>
         </ol>
 
         <!-- flexbox -->
@@ -43,6 +63,7 @@
                 </section>
                 @endforeach
 
+                {{ $items->links() }}
                 <!-- 一覧を見る -->
                 <div class="linkBtnBox">
                     <a href="{{ route('knowhow') }}" class="linkBtn">一覧に戻る</a>

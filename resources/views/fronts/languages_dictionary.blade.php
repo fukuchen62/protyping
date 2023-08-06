@@ -203,6 +203,7 @@
                 @endforeach
             </table>
         </div>
+        {{ $items->links() }}
     </main>
 
 @endsection

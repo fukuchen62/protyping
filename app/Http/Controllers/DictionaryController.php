@@ -28,21 +28,22 @@ class DictionaryController extends Controller
             if ($formIdentifier === 'form1') {
                 // 検索フォームからの自由検索
                 $items = Vocabulary::where('word_spell', 'like', '%' . $s . '%')
-                    ->orWhere('japanese', 'like', '%' . $s . '%')
-                    ->orWhere('meaning', 'like', '%' . $s . '%')
-                    ->orWhere('usage', 'like', '%' . $s . '%')
-                    ->orderBy('id', 'desc')
-                    ->get();
+                    // ->orWhere('japanese', 'like', '%' . $s . '%')
+                    // ->orWhere('meaning', 'like', '%' . $s . '%')
+                    // ->orWhere('usage', 'like', '%' . $s . '%')
+                    // ->orderBy('id', 'desc')
+                    ->simplePaginate(10);
             } elseif ($formIdentifier === 'form2') {
                 // 言語選択された場合
                 // $language_id = $request->input('param');
-                $items = Vocabulary::where('language_id', $s)->get();
+                $items = Vocabulary::where('language_id', $s)->simplePaginate(10);
             } else {
-                $items = Vocabulary::where('language_id', 1)->get();
+                $items = Vocabulary::where('language_id', 1)->simplePaginate(10);
             }
         } else {
             // 無条件で読み込む
-            $items = Vocabulary::all();
+            //$items = Vocabulary::all()->simplePaginate(10);
+            $items = Vocabulary::where('language_id', 1)->simplePaginate(10);
         }
 
         $data = [
