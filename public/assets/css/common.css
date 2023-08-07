@@ -381,7 +381,7 @@ p {
 .listBtn {
     font-size: 1rem;
     color: #fff;
-    background-color: #5FBFED;
+    background-color: #EAB624;
     display: block;
     width: 5.6rem;
     height: 2.5rem;
@@ -392,8 +392,8 @@ p {
 }
 
 .listBtn:hover {
-    color: #fff;
-    background: #78cff7;
+    opacity: 0.8;
+
 }
 
 
