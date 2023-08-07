@@ -56,16 +56,31 @@
             </div>
 
         </section>
-        <h3 class="landingSaitoSub">参考文献サイト</h3>
-        <p>Chromeの拡張機能参照：<a href="https://chrome.google.com/webstore/category/extensions?hl=ja&gl=JP">Chrome WebStore</a></p>
-        <p>アプリ内の写真集め：<a href="https://www.pakutaso.com/">ぱくたそ</a></p>
-        <p>ローカル開発環境(MAMP)の説明とインストール方法：<a href="https://codeforfun.jp/how-to-install-mamp-windows-and-mac/">Code for Fun</a></p>
-        <p>WordPressの説明：<a href="https://www.profuture.co.jp/mk/column/44628">MarkeTRUNK</a></p>
-        <p>pixabay</p>
-        <p>photoAC　写真のフリー素材サイト</p>
-        <p>VSCodeの紹介：<a href="https://www.javadrive.jp/vscode/install/index1.html">Visual Studio Codeのダウンロードとインストール</a></p>
-        <p>XAMPP のインストールと初期設定：<a href="https://a1-style.net/how-to-install-xampp-for-windows-v74x/">XAMPP for Windowsのインストール及び初期設定方法</a></p>
-        <p>Python[完全]入門松浦健一郎/司ゆき著：書籍</p>
+
+        <section class="landingSaito">
+            <div class="landingSaitobox">
+                <h3 class="landingSaitoSub">参考文献サイト</h3>
+                <ul>
+                    <li>Chromeの拡張機能参照</li>
+                        <p><a href="https://chrome.google.com/webstore/category/extensions?hl=ja&gl=JP">Chrome WebStore</a></p>
+                    <li>アプリ内の写真集め</li>
+                        <p><a href="https://www.pakutaso.com/">ぱくたそ</a></p>
+                    <li>ローカル開発環境(MAMP)の説明とインストール方法</li>
+                        <p><a href="https://codeforfun.jp/how-to-install-mamp-windows-and-mac/">Code for Fun</a></p>
+                    <li>WordPressの説明</li>
+                        <p><a href="https://www.profuture.co.jp/mk/column/44628">MarkeTRUNK</a></p>
+                    <li>写真関係</li>
+                        <p><a href="https://pixabay.com/ja/">pixabay</a></p>
+                    <li>写真のフリー素材サイト</li>
+                        <p><a href="https://www.photo-ac.com/">photoAC</a></p>
+                    <li>VSCodeの紹介</li>
+                        <p><a href="https://www.javadrive.jp/vscode/install/index1.html">JavaDrive</a></p>
+                    <li>XAMPP のインストールと初期設定</li>
+                        <p><a href="https://a1-style.net/how-to-install-xampp-for-windows-v74x/">A1 Style</a></p>
+                    <p>Python[完全]入門松浦健一郎/司ゆき著：書籍</p>
+                </ul>
+            </div>
+        </section>
 
     </main>
 

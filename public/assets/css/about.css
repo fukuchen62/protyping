@@ -21,6 +21,25 @@
     border: 1px solid transparent;
 }
 
+.landingSaitobox{
+    margin-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.landingSaitobox a{
+    text-decoration: underline;
+    color: #364e96;
+}
+
+.landingSaitobox p{
+    padding-bottom: 10px;
+}
+
+.landingSaitobox ul{
+    font-size: 1.6rem;
+}
+
 
 @media (min-width:1000px) {
     .main {
@@ -61,7 +80,7 @@
 }
 
 /* sectionの配置、枠線、色 */
-.landingHowto, .landingAbout {
+.landingHowto, .landingAbout, .landingSaito {
     margin-top: 30px;
     margin-bottom: 30px;
     padding-top: 20px;
@@ -73,7 +92,7 @@
 
 
 @media screen and (min-width: 1000px) {
-    .landingHowto, .landingAbout {
+    .landingHowto, .landingAbout, .landingSaito {
         margin-left: 120px;
         margin-right: 120px;
         padding-left: 100px;
