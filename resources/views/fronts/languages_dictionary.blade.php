@@ -10,7 +10,7 @@
 @section('title', '辞書')
 
 @section('pageCss')
-    <link href="../assets/css/dictionary_details.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/dictionary_details.css') }}" rel="stylesheet">
 
 @endsection
 
@@ -34,21 +34,21 @@
                 @php
                     $item = $items->first();
                 @endphp
-                @if($item->language_id == 1)
-                HTML
+                @if ($item->language_id == 1)
+                    HTML
                 @elseif($item->language_id == 2)
-                CSS
+                    CSS
                 @elseif($item->language_id == 3)
-                JavaScript
+                    JavaScript
                 @elseif($item->language_id == 4)
-                PHP
+                    PHP
                 @elseif($item->language_id == 5)
-                Python
+                    Python
                 @elseif($item->language_id == 6)
-                プログラミングでよく使う英単語
+                    プログラミングでよく使う英単語
                 @endif
             @else
-            HTML
+                HTML
             @endif
         </h3>
 
