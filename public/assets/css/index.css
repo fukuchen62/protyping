@@ -148,7 +148,7 @@ h6 {
     justify-content: space-around;
 }
 
-.selectWrap2 input {
+.selectWrap2 a {
     width: 40%;
     padding: 10px;
     background: #ADEEFF;
@@ -159,12 +159,17 @@ h6 {
     text-decoration: none;
 }
 
-.selectWrap2 a:active {
+/* .selectWrap2 a:active {
+    background-color: #D6A923;
+    color: #fff;
+} */
+
+.selectWrap2 a.selected {
     background-color: #D6A923;
     color: #fff;
 }
 
-.selectWrap2 label{
+.selectWrap2 label {
     display: block;
     width: 150px;
     background: #c8eac3;
