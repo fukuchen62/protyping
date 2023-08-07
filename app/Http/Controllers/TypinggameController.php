@@ -101,25 +101,88 @@ class TypinggameController extends Controller
         // クッキーに値を保存する
         switch ($scoreModel->language_id) {
             case '1':
-                $response->cookie('saved_data1', $score, 600); // 60分 = 1時間
+                if ($scoreModel->level_id == 1) {
+                    // ゆっくりコース
+                    $response->cookie('saved_data1', $score, 600); // 60分 = 1時間
+                } elseif ($scoreModel->level_id == 2) {
+                    // ダッシュコース
+                    $response->cookie('saved_data7', $score, 600); // 60分 = 1時間
+                } else {
+                    // ゆっくりコース
+                    $response->cookie('saved_data1', $score, 600); // 60分 = 1時間
+                }
                 break;
             case '2':
-                $response->cookie('saved_data2', $score, 600); // 60分 = 1時間
+                if ($scoreModel->level_id == 1) {
+                    // ゆっくりコース
+                    $response->cookie('saved_data2', $score, 600); // 60分 = 1時間
+                } elseif ($scoreModel->level_id == 2) {
+                    // ダッシュコース
+                    $response->cookie('saved_data8', $score, 600); // 60分 = 1時間
+                } else {
+                    // ゆっくりコース
+                    $response->cookie('saved_data2', $score, 600); // 60分 = 1時間
+                }
                 break;
             case '3':
-                $response->cookie('saved_data3', $score, 600); // 60分 = 1時間
+                if ($scoreModel->level_id == 1) {
+                    // ゆっくりコース
+                    $response->cookie('saved_data3', $score, 600); // 60分 = 1時間
+                } elseif ($scoreModel->level_id == 2) {
+                    // ダッシュコース
+                    $response->cookie('saved_data9', $score, 600); // 60分 = 1時間
+                } else {
+                    // ゆっくりコース
+                    $response->cookie('saved_data3', $score, 600); // 60分 = 1時間
+                }
                 break;
             case '4':
-                $response->cookie('saved_data4', $score, 600); // 60分 = 1時間
+                if ($scoreModel->level_id == 1) {
+                    // ゆっくりコース
+                    $response->cookie('saved_data4', $score, 600); // 60分 = 1時間
+                } elseif ($scoreModel->level_id == 2) {
+                    // ダッシュコース
+                    $response->cookie('saved_data10', $score, 600); // 60分 = 1時間
+                } else {
+                    // ゆっくりコース
+                    $response->cookie('saved_data4', $score, 600); // 60分 = 1時間
+                }
                 break;
             case '5':
-                $response->cookie('saved_data5', $score, 600); // 60分 = 1時間
+                if ($scoreModel->level_id == 1) {
+                    // ゆっくりコース
+                    $response->cookie('saved_data5', $score, 600); // 60分 = 1時間
+                } elseif ($scoreModel->level_id == 2) {
+                    // ダッシュコース
+                    $response->cookie('saved_data11', $score, 600); // 60分 = 1時間
+                } else {
+                    // ゆっくりコース
+                    $response->cookie('saved_data5', $score, 600); // 60分 = 1時間
+                }
                 break;
             case '6':
-                $response->cookie('saved_data6', $score, 600); // 60分 = 1時間
+                if ($scoreModel->level_id == 1) {
+                    // ゆっくりコース
+                    $response->cookie('saved_data6', $score, 600); // 60分 = 1時間
+                } elseif ($scoreModel->level_id == 2) {
+                    // ダッシュコース
+                    $response->cookie('saved_data12', $score, 600); // 60分 = 1時間
+                } else {
+                    // ゆっくりコース
+                    $response->cookie('saved_data6', $score, 600); // 60分 = 1時間
+                }
                 break;
             default:
-                $response->cookie('saved_data1', $score, 600); // 60分 = 1時間
+                if ($scoreModel->level_id == 1) {
+                    // ゆっくりコース
+                    $response->cookie('saved_data1', $score, 600); // 60分 = 1時間
+                } elseif ($scoreModel->level_id == 2) {
+                    // ダッシュコース
+                    $response->cookie('saved_data7', $score, 600); // 60分 = 1時間
+                } else {
+                    // ゆっくりコース
+                    $response->cookie('saved_data1', $score, 600); // 60分 = 1時間
+                }
                 break;
         }
 
