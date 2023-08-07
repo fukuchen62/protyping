@@ -40,14 +40,9 @@ class RankingController extends Controller
             $scoresByLanguage[$language->id] = $scores;
         }
 
-        // 他のデータを取得する処理
-        // ここでは例として空の配列を代入します
-        $otherData = [];
-
         $data = [
             'languages' => $languages,
             'scoresByLanguage' => $scoresByLanguage,
-            'otherData' => $otherData,
         ];
 
         return view('fronts.scores_ranking', $data);

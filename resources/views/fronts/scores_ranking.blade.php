@@ -38,33 +38,16 @@
             <a href="{{ route('ranking', ['level_id' => 2]) }}" class="levelButton {{ request()->query('level_id') == 2 ? 'active' : '' }}">中級</a>
         </div>
 
-        <!-- 言語選択 -->
+        {{-- 言語選択ボタン --}}
         <nav class="word">
+            @foreach($languages as $language)
             <div>
                 <img src="{{ asset('assets/images/arrow.png') }}" alt="↓ボタン">
-                <a href="#language_1">HTML</a>
+                <a href="#language_{{ $language['id'] }}">{{ $language['language_name'] }}</a>
             </div>
-            <div>
-                <img src="{{ asset('assets/images/arrow.png') }}" alt="↓ボタン">
-                <a href="#language_2">css</a>
-            </div>
-            <div>
-                <img src="{{ asset('assets/images/arrow.png') }}" alt="↓ボタン">
-                <a href="#language_3">JavaScript</a>
-            </div>
-            <div>
-                <img src="{{ asset('assets/images/arrow.png') }}" alt="↓ボタン">
-                <a href="#language_4">PHP</a>
-            </div>
-            <div>
-                <img src="{{ asset('assets/images/arrow.png') }}" alt="↓ボタン">
-                <a href="#language_5">Python</a>
-            </div>
-            <div>
-                <img src="{{ asset('assets/images/arrow.png') }}" alt="↓ボタン">
-                <a href="#language_6">プログラミングで使う英単語</a>
-            </div>
+            @endforeach
         </nav>
+
 
         <!-- ここから動的 -->
         <section class="rankingWrap">
