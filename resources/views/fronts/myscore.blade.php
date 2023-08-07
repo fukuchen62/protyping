@@ -126,8 +126,20 @@
                                         <p class="triangle">▶▶▶</p>
                                     </div>
                                     <div class="scoreItem">
-                                        @if (request()->hasCookie('saved_data1'))
-                                        <p class="score">{{ request()->cookie('saved_data1') }}点</p>
+                                        @if(isset($_GET['level_id']))
+                                            @if($_GET['level_id'] == 1)
+                                                @if (request()->hasCookie('saved_data1'))
+                                                <p class="score">{{ request()->cookie('saved_data1') }}点</p>
+                                                @endif
+                                            @elseif($_GET['level_id'] == 2)
+                                                @if (request()->hasCookie('saved_data7'))
+                                                <p class="score">{{ request()->cookie('saved_data7') }}点</p>
+                                                @endif
+                                            @else
+                                                @if (request()->hasCookie('saved_data1'))
+                                                <p class="score">{{ request()->cookie('saved_data1') }}点</p>
+                                                @endif
+                                            @endif
                                         @endif
                                     </div>
                                 </div>
@@ -174,8 +186,20 @@
                                         <p class="triangle">▶▶▶</p>
                                     </div>
                                     <div class="scoreItem">
-                                        @if (request()->hasCookie('saved_data2'))
-                                        <p class="score">{{ request()->cookie('saved_data2') }}点</p>
+                                        @if(isset($_GET['level_id']))
+                                            @if($_GET['level_id'] == 1)
+                                                @if (request()->hasCookie('saved_data2'))
+                                                <p class="score">{{ request()->cookie('saved_data1') }}点</p>
+                                                @endif
+                                            @elseif($_GET['level_id'] == 2)
+                                                @if (request()->hasCookie('saved_data8'))
+                                                <p class="score">{{ request()->cookie('saved_data7') }}点</p>
+                                                @endif
+                                            @else
+                                                @if (request()->hasCookie('saved_data2'))
+                                                <p class="score">{{ request()->cookie('saved_data1') }}点</p>
+                                                @endif
+                                            @endif
                                         @endif
                                     </div>
                                 </div>
@@ -222,8 +246,20 @@
                                         <p class="triangle">▶▶▶</p>
                                     </div>
                                     <div class="scoreItem">
-                                        @if (request()->hasCookie('saved_data3'))
-                                        <p class="score">{{ request()->cookie('saved_data3') }}点</p>
+                                        @if(isset($_GET['level_id']))
+                                            @if($_GET['level_id'] == 1)
+                                                @if (request()->hasCookie('saved_data3'))
+                                                <p class="score">{{ request()->cookie('saved_data1') }}点</p>
+                                                @endif
+                                            @elseif($_GET['level_id'] == 2)
+                                                @if (request()->hasCookie('saved_data9'))
+                                                <p class="score">{{ request()->cookie('saved_data7') }}点</p>
+                                                @endif
+                                            @else
+                                                @if (request()->hasCookie('saved_data3'))
+                                                <p class="score">{{ request()->cookie('saved_data1') }}点</p>
+                                                @endif
+                                            @endif
                                         @endif
                                     </div>
                                 </div>
@@ -270,8 +306,20 @@
                                         <p class="triangle">▶▶▶</p>
                                     </div>
                                     <div class="scoreItem">
-                                        @if (request()->hasCookie('saved_data4'))
-                                        <p class="score">{{ request()->cookie('saved_data4') }}点</p>
+                                        @if(isset($_GET['level_id']))
+                                            @if($_GET['level_id'] == 1)
+                                                @if (request()->hasCookie('saved_data4'))
+                                                <p class="score">{{ request()->cookie('saved_data1') }}点</p>
+                                                @endif
+                                            @elseif($_GET['level_id'] == 2)
+                                                @if (request()->hasCookie('saved_data10'))
+                                                <p class="score">{{ request()->cookie('saved_data7') }}点</p>
+                                                @endif
+                                            @else
+                                                @if (request()->hasCookie('saved_data4'))
+                                                <p class="score">{{ request()->cookie('saved_data1') }}点</p>
+                                                @endif
+                                            @endif
                                         @endif
                                     </div>
                                 </div>
@@ -318,8 +366,20 @@
                                         <p class="triangle">▶▶▶</p>
                                     </div>
                                     <div class="scoreItem">
-                                        @if (request()->hasCookie('saved_data5'))
-                                        <p class="score">{{ request()->cookie('saved_data5') }}点</p>
+                                        @if(isset($_GET['level_id']))
+                                            @if($_GET['level_id'] == 1)
+                                                @if (request()->hasCookie('saved_data5'))
+                                                <p class="score">{{ request()->cookie('saved_data1') }}点</p>
+                                                @endif
+                                            @elseif($_GET['level_id'] == 2)
+                                                @if (request()->hasCookie('saved_data11'))
+                                                <p class="score">{{ request()->cookie('saved_data7') }}点</p>
+                                                @endif
+                                            @else
+                                                @if (request()->hasCookie('saved_data5'))
+                                                <p class="score">{{ request()->cookie('saved_data1') }}点</p>
+                                                @endif
+                                            @endif
                                         @endif
                                     </div>
                                 </div>
@@ -367,8 +427,20 @@
                                         <p class="triangle">▶▶▶</p>
                                     </div>
                                     <div class="scoreItem">
-                                        @if (request()->hasCookie('saved_data6'))
-                                        <p class="score">{{ request()->cookie('saved_data6') }}点</p>
+                                        @if(isset($_GET['level_id']))
+                                            @if($_GET['level_id'] == 1)
+                                                @if (request()->hasCookie('saved_data6'))
+                                                <p class="score">{{ request()->cookie('saved_data1') }}点</p>
+                                                @endif
+                                            @elseif($_GET['level_id'] == 2)
+                                                @if (request()->hasCookie('saved_data12'))
+                                                <p class="score">{{ request()->cookie('saved_data7') }}点</p>
+                                                @endif
+                                            @else
+                                                @if (request()->hasCookie('saved_data6'))
+                                                <p class="score">{{ request()->cookie('saved_data1') }}点</p>
+                                                @endif
+                                            @endif
                                         @endif
                                     </div>
                                 </div>
