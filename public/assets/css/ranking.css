@@ -73,7 +73,7 @@
 }
 
 .levelButton.active {
-background-color: #B4EEFB;
+    background-color: #B4EEFB;
 }
 
 input[name="course_name"] {
@@ -260,6 +260,8 @@ h3 {
 
 
 /* メディアクエリ */
+@media screen and (min-width:760px) {}
+
 @media screen and (min-width: 1000px) {
     .mainContent {
         max-width: 1080px;
