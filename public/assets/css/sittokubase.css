@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 /* 共通 */
 h3 {
     /* font-size: 2.5rem; */
@@ -7,7 +8,7 @@ h3 {
     margin-top: 60px;
 }
 
-h4{
+h4 {
     text-align: center;
     line-height: 2.5rem;
     margin-top: 40px;
@@ -17,7 +18,7 @@ a {
     text-decoration: underline;
 }
 
-.tips{
+.tips {
     margin: 0 auto;
     text-align: left;
     background-color: #ffffff;
@@ -25,7 +26,7 @@ a {
 }
 
 .boxTips {
-    margin-top: 30px; 
+    margin-top: 30px;
     /* margin: 0 auto; */
     padding: 0 5px;
 }
@@ -37,24 +38,24 @@ a {
 }
 
 /* テーブルの共通 */
-.tableTips{
+.tableTips {
     margin-bottom: 20px;
     letter-spacing: 0.04em;
     margin-top: 50px;
 }
 
-caption{
+caption {
     text-align: center;
 }
 
-.theadTips tr th{
+.theadTips tr th {
     border: solid 1px;
     text-align: center;
     vertical-align: middle;
     padding: 6px;
 }
 
-.tbodyTips tr td{
+.tbodyTips tr td {
     border: solid 1px;
     text-align: left;
     vertical-align: middle;
@@ -62,39 +63,41 @@ caption{
 }
 
 /* リストの共通 */
-.boxList{
+.boxList {
     font-size: 14px;
     padding-inline-start: 20px;
     list-style-position: outside;
 }
 
-.boxList li{
+.boxList li {
     margin-bottom: 10px;
     margin-top: 10px;
     word-wrap: break-word;
 }
 
-.boxList a{
+.boxList a {
     word-wrap: break-word;
 }
 
-.oList{
+.oList {
     list-style-type: decimal;
 }
 
-.oList ol li{
+.oList ol li {
     list-style-type: lower-roman;
 }
 
-.uList{
+.uList {
     list-style-type: disc;
 }
 
 
 @media screen and (min-width: 768px) {
+
     /* 共通 */
-    .tips{
-        width: 580px;
+    .tips {
+        /* width: 580px; */
+        padding: 0 10px 0 0;
     }
 
     .boxTips {
@@ -102,25 +105,25 @@ caption{
         margin-top: 40px;
     }
 
-    .boxTips p{
+    .boxTips p {
         font-size: 16px;
         line-height: 2rem;
         letter-spacing: 0.05em;
     }
 
     /* テーブルの共通 */
-    .tableTips{
-        width: 580px;
+    .tableTips {
+        /* width: 580px; */
         font-size: 16px;
         letter-spacing: 0.05em;
     }
 
     /* リストの共通 */
-    .boxList{
+    .boxList {
         font-size: 16px;
     }
 
-    .boxList li{
+    .boxList li {
         margin-bottom: 10px;
     }
 }
