@@ -4,10 +4,10 @@
 
 @section('keywords')
 
-@section('title','お問い合わせ内容確認')
+@section('title', 'お問い合わせ内容確認')
 
 @section('pageCss')
-<link rel="stylesheet" href="{{ asset('assets/css/contact_result.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/contact_result.css') }}">
 @endsection
 
 @section('key_visual')
@@ -26,7 +26,7 @@
             </ol>
             <h2>確認画面</h2>
             <p class="contactWarning">下記の内容で、
-        お間違いないでしょうか？</p>
+                お間違いないでしょうか？</p>
             <p class="basic">基本情報</p>
             <section class="confirm">
                 <label>名前</label>
@@ -72,17 +72,18 @@
                 <input type="hidden" name="usage" value="{{ $contactData['usage'] }}">
                 <input type="hidden" name="memo" value="{{ $contactData['memo'] }}">
 
-                <div class="contactBottom">
-                    <input type="submit" class="contactSubmit" value="送信する" onclic="return confirm_dialog('記事を登録します。よろしいでしょうか？')">
+                <div class="contactBottom" align="center">
                     <p class="contactBack"><a href="{{ route('contact') }}">戻る</a></p>
+                    <input type="submit" class="contactSubmit" value="送信する"
+                        onclic="return confirm_dialog('記事を登録します。よろしいでしょうか？')">
                 </div>
 
                 {{-- <div class="contactBottom">
                     <input onclick="location.href='../html/contact_complete.html'" class="contactSubmit" type="submit" value="送信する">
                     <input class="contactBack" onclick="location.href='../html/contact.html'" type="submit" name="btn_back" value="戻る"> --}}
-                </div>
-            </form>
-        </main>
+    </div>
+    </form>
+    </main>
     </div>
 
 @endsection

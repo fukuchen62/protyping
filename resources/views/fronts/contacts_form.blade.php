@@ -4,10 +4,10 @@
 
 @section('keywords')
 
-@section('title','お問い合わせ')
+@section('title', 'お問い合わせ')
 
 @section('pageCss')
-    <link rel="stylesheet" href="{{ asset('assets/css/contact.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/contact.css') }}">
 
     <!-- jqueryの読み込み -->
     {{-- <script src="../assets/js/vendor/jquery-3.6.3.min.js"></script> --}}
@@ -16,7 +16,7 @@
 
 @section('key_visual')
 
-{{-- メインコンテンツの内容 --}}
+    {{-- メインコンテンツの内容 --}}
 @section('content')
     <div class="wrap">
         <main class="main">
@@ -34,13 +34,11 @@
                     <table class="requiredTable">
                         <tr class="contactName">
                             <th class="contactItem">名前
-                                {{-- 名前は必須としない --}}
                                 <p> *</p>
                             </th>
                             <td class="contactBody">
-                                <input type="text" name="contact_name"
-                                value="{{ old('contact_name') }}"
-                                class="formText" placeholder="山田太郎">
+                                <input type="text" name="contact_name" value="{{ old('contact_name') }}" class="formText"
+                                    placeholder="山田太郎" required>
                             </td>
                         </tr>
                         <tr>
@@ -48,7 +46,8 @@
                                 <p> *</p>
                             </th>
                             <td class="contactBody">
-                                <input type="email" name="email" class="formText" value="{{ old('email') }}" placeholder="typing@mail.com" required>
+                                <input type="email" name="email" class="formText" value="{{ old('email') }}"
+                                    placeholder="typing@mail.com" required>
                             </td>
                         </tr>
 
@@ -61,11 +60,11 @@
                     </div>
                 </div>
 
-                <p class="basic">問い合わせ内容</p>
+                <p class="basic">お問い合わせ内容</p>
                 <div class="contentTableArea">
                     <table class="contentTable">
                         <tr class="contactCategory">
-                            <th class="contactItem">問い合わせ種別
+                            <th class="contactItem">お問い合わせ種別
                                 <p> *</p>
                             </th>
                             <td class="categoryFirst">
@@ -86,39 +85,46 @@
                 <div class="contactContentTableArea">
                     <table class="contactContent">
                         <tr class="languageName">
-                            <th class="contactItem">言語名</th>
+                            <th class="contactItem">言語名<p>
+                            </th>
                             <td class="contactBody">
-                                <input type="text" name="language_id" class="formText"
-                                value="{{ old('language_id') }}"
-                                placeholder="HTML">
+                                <input type="text" name="language_id" class="formText" value="{{ old('language_id') }}"
+                                    placeholder="HTML">
                             </td>
                         </tr>
                         <tr class="wordName">
-                            <th class="contactItem">単語名</th>
+                            <th class="contactItem">単語名
+                            </th>
                             <td class="contactBody">
-                                <input type="text" name="word_spell" class="formText" value="{{ old('word_spell') }}"placeholder="Math">
+                                <input type="text" name="word_spell" class="formText"
+                                    value="{{ old('word_spell') }}"placeholder="Math">
                             </td>
                         </tr>
                         <tr class="readingName">
-                            <th class="contactItem">読み方</th>
+                            <th class="contactItem">読み方
+                            </th>
                             <td class="contactBody">
-                                <input type="text" name="japanese" class="formText" value="{{ old('japanese') }}" placeholder="マス">
+                                <input type="text" name="japanese" class="formText" value="{{ old('japanese') }}"
+                                    placeholder="マス">
                             </td>
                         </tr>
                         <tr class="meaningName">
-                            <th class="contactItem">意味</th>
+                            <th class="contactItem">意味
+                            </th>
                             <td class="contactBody">
-                                <input type="text" name="meaning" class="formText" value="{{ old('meaning') }}" placeholder="数字">
+                                <textarea name="meaning" class="formTextarea" value="{{ old('meaning') }}"" placeholder="数字"></textarea>
                             </td>
                         </tr>
                         <tr class="example">
-                            <th class="contactItem">使用例</th>
+                            <th class="contactItem">使用例
+                            </th>
                             <td class="contactBody">
                                 <textarea name="usage" class="formTextarea" value="{{ old('usage') }}"></textarea>
                             </td>
                         </tr>
                         <tr>
-                            <th class="contactItem">問い合わせ</th>
+                            <th class="contactItem">お問い合わせ
+                            </th>
                             <td class="contactBody">
                                 <textarea name="memo" class="formTextarea" value="{{ old('memo') }}"></textarea>
                             </td>
@@ -127,13 +133,15 @@
                 </div>
                 <div class="contactBottomArea">
                     <div class="contactBottom">
-                        <p class="grayLine"></p>
                         <p>詳細についてはご利用規約を確認ください</p>
                         <div class="termsBtn">
                             <a href="{{ route('terms') }}">ご利用規約</a>
                         </div>
-                        <input type="reset" value="クリア">&nbsp;&nbsp;
-                        <input onclick="return confirm_dialog('記事を送信します。よろしいでしょうか？')" class="contactSubmit" type="submit" value="確認画面へ進む">
+                        <div class="buttom" align="center">
+                            <p class="clear"><input type="reset" value="クリア">&nbsp;&nbsp;</p>
+                            <input onclick="return confirm_dialog('記事を送信します。よろしいでしょうか？')" class="contactSubmit"
+                                type="submit" value="確認画面へ進む">
+                        </div>
                     </div>
                 </div>
             </form>
