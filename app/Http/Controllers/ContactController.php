@@ -32,7 +32,7 @@ class ContactController extends Controller
         // バリデーションのルールを定義すると良いでしょう
         $validatedData = $request->validate([
             'contact_type' => 'required',
-            'language_id' => 'required',
+            'language_id' => '',
             'word_spell' => 'max:200',
             'japanese' => 'max:200',
             'meaning' => 'max:200',
