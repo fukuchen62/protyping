@@ -57,16 +57,15 @@
 
         </section>
         <h3 class="landingSaitoSub">参考文献サイト</h3>
-        <p class="aboutText">Chrome webstore</p>
-        <p class="aboutText">ぱくたそ</p>
-        <p class="aboutText">Filmora 12</p>
-        <p class="aboutText">Python[完全]入門松浦健一郎/司ゆき著</p>
-        <p class="aboutText">Code for Fun</p>
-        <p class="aboutText">MarkeTRUNK</p>
-        <p class="aboutText">pixabay</p>
-        <p class="aboutText">photoAC　写真のフリー素材サイト</p>
-        <p class="aboutText">Visual Studio Codeのダウンロードとインストール</p>
-        <p class="aboutText">XAMPP for Windowsのインストール及び初期設定方法</p>
+        <p>Chromeの拡張機能参照：<a href="https://chrome.google.com/webstore/category/extensions?hl=ja&gl=JP">Chrome WebStore</a></p>
+        <p>アプリ内の写真集め：<a href="https://www.pakutaso.com/">ぱくたそ</a></p>
+        <p>ローカル開発環境(MAMP)の説明とインストール方法：<a href="https://codeforfun.jp/how-to-install-mamp-windows-and-mac/">Code for Fun</a></p>
+        <p>WordPressの説明：<a href="https://www.profuture.co.jp/mk/column/44628">MarkeTRUNK</a></p>
+        <p>pixabay</p>
+        <p>photoAC　写真のフリー素材サイト</p>
+        <p>VSCodeの紹介：<a href="https://www.javadrive.jp/vscode/install/index1.html">Visual Studio Codeのダウンロードとインストール</a></p>
+        <p>XAMPP のインストールと初期設定：<a href="https://a1-style.net/how-to-install-xampp-for-windows-v74x/">XAMPP for Windowsのインストール及び初期設定方法</a></p>
+        <p>Python[完全]入門松浦健一郎/司ゆき著：書籍</p>
 
     </main>
 
