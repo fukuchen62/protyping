@@ -79,6 +79,7 @@ p {
 
     .title {
         padding-left: 5px;
+        font-size: 1.8rem;
     }
 
 }
@@ -155,6 +156,10 @@ p {
     /* margin: 0 auto; */
 }
 
+.updateList .title {
+    font-size: 1.8rem;
+}
+
 @media screen and (min-width: 760px) {
     .updateList .pc {
         display: block;
@@ -166,6 +171,7 @@ p {
 
     .updateList .title {
         margin-left: 20px;
+        font-size: 1.8rem;
     }
 
 }

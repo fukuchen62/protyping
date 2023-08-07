@@ -58,27 +58,27 @@
             <!-- 言語選択 -->
             <nav class="word">
                 <div>
-                    <img src="../assets/images/arrow.png" alt="↓ボタン">
+                    <img src="{{ asset('assets/images/arrow.png') }}" alt="↓ボタン">
                     <a href="#engword">プログラミングでよく使う英単語</a>
                 </div>
                 <div>
-                    <img src="../assets/images/arrow.png" alt="↓ボタン">
+                    <img src="{{ asset('assets/images/arrow.png') }}" alt="↓ボタン">
                     <a href="#html">HTML</a>
                 </div>
                 <div>
-                    <img src="../assets/images/arrow.png" alt="↓ボタン">
+                    <img src="{{ asset('assets/images/arrow.png') }}" alt="↓ボタン">
                     <a href="#css">css</a>
                 </div>
                 <div>
-                    <img src="../assets/images/arrow.png" alt="↓ボタン">
+                    <img src="{{ asset('assets/images/arrow.png') }}" alt="↓ボタン">
                     <a href="#javascript">JavaScript</a>
                 </div>
                 <div>
-                    <img src="../assets/images/arrow.png" alt="↓ボタン">
+                    <img src="{{ asset('assets/images/arrow.png') }}" alt="↓ボタン">
                     <a href="#php">PHP</a>
                 </div>
                 <div>
-                    <img src="../assets/images/arrow.png" alt="↓ボタン">
+                    <img src="{{ asset('assets/images/arrow.png') }}" alt="↓ボタン">
                     <a href="#python">Python</a>
                 </div>
             </nav>

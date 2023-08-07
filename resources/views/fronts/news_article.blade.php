@@ -22,8 +22,8 @@
 
         <!-- パンくずリスト -->
         <ol class="breadCrumb-001">
-            <li><a href="../fronts/index.blade.php">ホーム</a></li>
-            <li><a href="#">更新情報</a></li>
+            <li><a href="{{ route('top') }}">ホーム</a></li>
+            <li><a href="{{ route('article') }}">更新情報</a></li>
         </ol>
 
         <h2>更新情報</h2>
