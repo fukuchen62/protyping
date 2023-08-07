@@ -6,16 +6,18 @@
     padding-top: 90px;
 }
 
-@media screen and (min-width: 1000px) {
+/* @media screen and (min-width: 1000px) {
     .main {
         padding-top: 120px;
     }
-}
+} */
 
 .mainContent {
     max-width: 280px;
     margin: 0 auto;
 }
+
+
 
 /* パンくずリストcss */
 .breadCrumb-001 {
@@ -73,7 +75,7 @@
 }
 
 .levelButton.active {
-    background-color: #B4EEFB;
+    background-color: #D6A923;
 }
 
 input[name="course_name"] {
@@ -260,9 +262,48 @@ h3 {
 
 
 /* メディアクエリ */
-@media screen and (min-width:760px) {}
+@media screen and (min-width:760px) {
+    .mainContent {
+        max-width: 100%;
+    }
+
+    .info h2 {
+        font-size: 2.4rem;
+    }
+
+    .info p {
+        text-align: center;
+    }
+
+    .levelButton {
+        margin: 20px;
+    }
+
+    .word {
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    .rankingInner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .card {
+        width: 340px;
+    }
+}
+
+
+
+
 
 @media screen and (min-width: 1000px) {
+    .main {
+        padding-top: 120px;
+    }
+
     .mainContent {
         max-width: 1080px;
         /* padding: 0 24px; */
