@@ -49,10 +49,11 @@ class AdminKnowhowController extends Controller
             $items = Knowhow::where('title', 'like', '%' . $s . '%')
                 ->orWhere('summary', 'like', '%' . $s . '%')
                 ->orWhere('content', 'like', '%' . $s . '%')
+                ->orderBy('created_at', 'desc')
                 ->get();
         } else {
             $items = Knowhow::where('deleted_at', null)
-                ->orderBy('id', 'desc')
+                ->orderBy('created_at', 'desc')
                 ->get();
         }
 

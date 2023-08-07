@@ -21,8 +21,8 @@ class Knowhow extends Model
         'title'       => 'required|string|max:60',
         'thumbnail'   => 'max:200',
         'summary'    => 'required|max:250',
-        'summary_detail'    => 'required|max:500',
-        'content'    => 'required|max:10000',
+        'summary_detail' => 'required|max:500',
+        'content'    => 'required',
         'is_show'     => 'required|boolean'
     ];
 
