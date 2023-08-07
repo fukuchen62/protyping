@@ -3,7 +3,7 @@
 .main {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     background-color: #26567C;
-    /* padding-top: 90px; */
+    padding-top: 90px;
 }
 
 /* ゲーム画面 */
@@ -324,7 +324,7 @@ h6 {
 
 .topWordRanking2 tr {
     width: 100%;
-    height: 40px;
+    /* height: 40px; */
     font-weight: 800;
     font-size: 1.4rem;
     border: 1px lightskyblue solid;
@@ -632,7 +632,7 @@ span {
 @media (min-width:1000px) {
 
     .main {
-        /* padding: 120px; */
+        padding-top: 120px;
     }
 
     .topRanking2 {
@@ -713,7 +713,7 @@ span {
         margin-left: auto; */
         float: right;
         margin-left: 40px;
-        width:260px;
+        width: 260px;
     }
 
     .topRankingArea {
@@ -721,10 +721,10 @@ span {
         right:0; */
         background-color: #5FBFED;
         flex-basis: 240px;
-        width:240px;
+        width: 240px;
     }
 
-    .rankingFontSize{
+    .rankingFontSize {
         /* font-size: 14px; */
         margin: 0 12px 0 0;
         padding: 0 0 0 0;
