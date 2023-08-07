@@ -18,10 +18,10 @@
     <main class="main" id="main">
 
         <!-- パンくずリスト html-->
-        <ol class="breadCrumb-001">
+        {{-- <ol class="breadCrumb-001">
             <li><a href="../fronts/index.blade.php">ホーム</a></li>
             <li><a href="#">アバウト</a></li>
-        </ol>
+        </ol> --}}
 
         <!-- タイトル -->
         <h2 class="title">アバウト</h2>
