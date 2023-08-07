@@ -903,3 +903,14 @@ padding: 15px;
     }
 
 }
+
+/* モバイル時にはパンくずリストを表示しない */
+@media screen and (max-width: 1000px) {
+.breadCrumb-001 {
+    width: 100%;
+    display: none;
+    gap: 0 5px;
+    list-style: none;
+    font-size: 1rem;
+}
+}
