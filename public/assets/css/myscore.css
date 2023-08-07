@@ -116,6 +116,10 @@ input[name="course_name"] {
     opacity: 0.7;
 }
 
+.levelButton.active {
+background-color: #D6A923;
+}
+
 /* 言語選択 */
 .word {
     width: 280px;
