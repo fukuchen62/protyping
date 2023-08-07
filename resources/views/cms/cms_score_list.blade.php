@@ -30,30 +30,36 @@
     </form>
 
     {{-- 言語選択フォーム --}}
-    <form action="{{ route('indexscore') }}" method="get">
+    <form id='lang' action="{{ route('indexscore') }}" method="get">
         <div>
+            言語選択&nbsp;
             <input type="hidden" name="form_identifier" value="form2">
+
             <select name="language">
-                <option value="1"selected>HTML</option>
-                <option value="2">CSS</option>
-                <option value="3">JavaScript</option>
-                <option value="4">PHP</option>
-                <option value="5">Python</option>
-                <option value="6">よく使う英単語</option>
+                <option value="" selected></option>
+                @foreach ($langlist as $key => $item)
+                    @if ($language_id == $item->id)
+                        <option value="{{ $item->id }}" selected>{{ $item->language_name }}</option>
+                    @else
+                        <option value="{{ $item->id }}">{{ $item->language_name }}</option>
+                    @endif
+                @endforeach
             </select>
-            <input type="submit" value="言語種別選択" class="search_btn">
+            <input type="submit" value="言語で絞る" class="search_btn">
         </div>
     </form>
 
     <table class="info">
         <tr>
-            <th width="5%">No</th>
-            <th width="5%">言語種別ID</th>
-            <th width="5%">難易度ID</th>
-            <th width="5%">ユーザID</th>
-            <th width="10%">ユーザ名</th>
-            <th>スコア</th>
-            <th width="10%">修正</th>
+            <th width="10%">No</th>
+            <th width="10%">言語種別ID</th>
+            <th width="10%">難易度ID</th>
+            <th width="10%">ユーザID</th>
+            <th width="20%">ユーザ名</th>
+            <th width="10%">スコア</th>
+            <th width="15%">取得日時</th>
+            <th width="10%">表示</th>
+            {{-- <th width="10%">修正</th> --}}
         </tr>
         @foreach ($score_list as $key => $item)
             <tr>
@@ -63,8 +69,10 @@
                 <td>{{ $item->user_id }}</td>
                 <td>{{ $item->username }}</td>
                 <td>{{ $item->score }}</td>
-                <td class="edit"><a href="{{ route('editscore', ['id' => $item->id]) }}">編集</a></td>
-            </tr>
+                <td>{{ $item->created_at }}</td>
+                <td>{{ $item->is_show }}</td>
+                {{-- <td class="edit"><a href="{{ route('editscore', ['id' => $item->id]) }}">編集</a></td> --}}
+                {{-- </tr> --}}
         @endforeach
     </table>
 
