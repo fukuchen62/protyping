@@ -163,7 +163,7 @@
 
                 {{-- 知っトク情報 --}}
                 <section class="infoNews">
-                    <h5>知っトク情報</h5>
+                    <h3>知っトク情報</h3>
                     <div class="listBtn"><a href="{{ route('knowhow') }}">一覧を見る</a></div>
                     <p class="explain">サイト内の日々の更新をUPしていきます</p>
                     <p class="yellowLine"></p>
@@ -185,7 +185,7 @@
                 {{-- 新着情報 --}}
                 <section class="updateNews">
 
-                    <h5>更新情報</h5>
+                    <h3>更新情報</h3>
                     <div class="listBtn"><a href="{{ route('article') }}">一覧を見る</a></div>
                     <p class="explain">サイト内の日々の更新をUPしていきます</p>
                     <p class="yellowLine"></p>
