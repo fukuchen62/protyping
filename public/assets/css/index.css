@@ -613,7 +613,7 @@ span {
     }
 
     .info-title {
-        margin-top: 10px;
+        margin-top: 20px;
     }
 
     td.name {
@@ -707,12 +707,13 @@ span {
     .topRanking {
         position: relative;
         display: inline-block;
-        flex-basis: 240px;
+        flex-basis: 360px;
         background-color: #5FBFED;
         /* margin-right:0;
         margin-left: auto; */
         float: right;
         margin-left: 40px;
+        width:260px;
     }
 
     .topRankingArea {
@@ -720,6 +721,13 @@ span {
         right:0; */
         background-color: #5FBFED;
         flex-basis: 240px;
+        width:240px;
+    }
+
+    .rankingFontSize{
+        /* font-size: 14px; */
+        margin: 0 12px 0 0;
+        padding: 0 0 0 0;
     }
 
     /* パソコン1000px~ */

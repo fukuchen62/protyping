@@ -48,21 +48,21 @@
                                 @for ($i = 0; $i < 3; $i++)
                                     @if ($i === 0 && isset($scores[$i]))
                                         <li class="firstRank">
-                                            <p class="rank">{{ $i + 1 }}位</p>
-                                            <p class="name">{{ $scores[$i]->username }}</p>
-                                            <p class="score">{{ $scores[$i]->score }}点</p>
+                                            <p class="rank rankingFontSize">{{ $i + 1 }}位</p>
+                                            <p class="name rankingFontSize">{{ $scores[$i]->username }}</p>
+                                            <p class="score rankingFontSize">{{ $scores[$i]->score }}点</p>
                                         </li>
                                     @elseif ($i === 1 && isset($scores[$i]))
                                         <li class="secondRank">
-                                            <p class="rank">{{ $i + 1 }}位</p>
-                                            <p class="name">{{ $scores[$i]->username }}</p>
-                                            <p class="score">{{ $scores[$i]->score }}点</p>
+                                            <p class="rank  rankingFontSize">{{ $i + 1 }}位</p>
+                                            <p class="name rankingFontSize">{{ $scores[$i]->username }}</p>
+                                            <p class="score rankingFontSize">{{ $scores[$i]->score }}点</p>
                                         </li>
                                     @elseif ($i === 2 && isset($scores[$i]))
                                         <li class="thirdRank">
-                                            <p class="rank">{{ $i + 1 }}位</p>
-                                            <p class="name">{{ $scores[$i]->username }}</p>
-                                            <p class="score">{{ $scores[$i]->score }}点</p>
+                                            <p class="rank rankingFontSize">{{ $i + 1 }}位</p>
+                                            <p class="name rankingFontSize">{{ $scores[$i]->username }}</p>
+                                            <p class="score rankingFontSize">{{ $scores[$i]->score }}点</p>
                                         </li>
                                     @else
                                         <li>
