@@ -295,10 +295,6 @@ h3 {
     }
 }
 
-
-
-
-
 @media screen and (min-width: 1000px) {
     .main {
         padding-top: 120px;
@@ -307,6 +303,10 @@ h3 {
     .mainContent {
         max-width: 1080px;
         /* padding: 0 24px; */
+    }
+
+    .info h2 {
+        font-size: 4rem;
     }
 
     .info {
