@@ -36,14 +36,23 @@ class DictionaryController extends Controller
             } elseif ($formIdentifier === 'form2') {
                 // 言語選択された場合
                 // $language_id = $request->input('param');
-                $items = Vocabulary::where('language_id', $s)->simplePaginate(10);
+                $items = Vocabulary::where('language_id', $s)
+                    ->where('is_show', 1)
+                    ->orderBy('word_spell', 'asc')
+                    ->simplePaginate(10);
             } else {
-                $items = Vocabulary::where('language_id', 1)->simplePaginate(10);
+                $items = Vocabulary::where('language_id', 1)
+                    ->where('is_show', 1)
+                    ->orderBy('word_spell', 'asc')
+                    ->simplePaginate(10);
             }
         } else {
             // 無条件で読み込む
             //$items = Vocabulary::all()->simplePaginate(10);
-            $items = Vocabulary::where('language_id', 1)->simplePaginate(10);
+            $items = Vocabulary::where('language_id', 1)
+                ->where('is_show', 1)
+                ->orderBy('word_spell', 'asc')
+                ->simplePaginate(10);
         }
 
         $data = [
