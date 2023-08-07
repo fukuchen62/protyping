@@ -24,7 +24,7 @@
                 <div class="topRankingArea">
                     <div class="ranking">
                         <img alt="王冠" src="{{ asset('assets/images/whitecrown.png') }}">
-                        <h6>ランキング</h6>
+                        <h3>ランキング</h3>
                         <img alt="王冠" src="{{ asset('assets/images/whitecrown.png') }}">
                     </div>
                     <div class="selectWrap">
@@ -107,7 +107,7 @@
                 <section class="topRanking2">
                     <div class="ranking2">
                         <img alt="王冠" src="{{ asset('assets/images/whitecrown.png') }}">
-                        <h6>ランキング</h6>
+                        <h3>ランキング</h3>
                         <img alt="王冠" src="{{ asset('assets/images/whitecrown.png') }}">
                     </div>
                     <div class="topRankingArea2">

@@ -93,13 +93,17 @@ h2 {
 .topRanking2 {
     width: 100%;
     margin: 40px auto;
-    padding: 20px;
-    border: #817F6E 2px solid;
+    /* padding: 20px; */
+    /* border: #817F6E 2px solid; */
     border-radius: 10px;
 }
 
+.topRanking2 h3 {
+    color: #fff;
+}
 
 .topRankingArea2 {
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -119,13 +123,6 @@ h2 {
 .ranking, .ranking2 {
     display: flex;
     justify-content: space-around;
-}
-
-h6 {
-    font-size: 2rem;
-    color: #F5F5F5;
-    font-weight: 800;
-    text-align: center;
 }
 
 .selectWrap {
@@ -433,6 +430,13 @@ h3 {
     color: #5FBFED;
     font-weight: 800;
     text-align: left;
+    font-size: 2.2rem;
+}
+
+.ranking h3 {
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
 }
 
 .listBtn {
@@ -468,6 +472,7 @@ h3 {
 
 .explain {
     margin: 10px auto;
+    text-align: left;
 }
 
 span {
@@ -578,6 +583,7 @@ span {
 }
 
 .info-title {
+    margin-top: 20px;
     margin-left: 20px;
     font-weight: bold;
     /* color: blueviolet; */
