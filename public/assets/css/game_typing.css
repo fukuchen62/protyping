@@ -77,7 +77,7 @@ optgroup {
 
 .select {
     margin: 100px auto 70px;
-    width: 864px;
+    width: 724px;
     display: flex;
     justify-content: center;
 }
@@ -192,11 +192,22 @@ optgroup {
 
 
 
-.popupWrop {
+/* .popupWrop {
     display: flex;
     justify-content: center;
+} */
+
+.Popup1{
+    position: absolute;
+    top:-10px;
+    right:110px;
 }
 
+.Popup2{
+    position: absolute;
+    top:-10px;
+    right:0px;
+}
 
 .popupContent {
     visibility: hidden;
@@ -258,9 +269,9 @@ optgroup {
 
 .openBtn {
     display: block;
-    width: 200px;
-    margin: 48px 10px;
-    text-align: center;
+    width: 100px;
+    margin: 24px 10px;
+    text-align: center ;
     background-color: #D4EBF6;
     color: #26567C;
     padding: 14px 0px;
@@ -278,8 +289,8 @@ optgroup {
 
 label.closeBtn {
     position: absolute;
-    top: 320px;
-    right: 280px;
+    top: 270px;
+    right: 230px;
     text-align: center;
     background-color: #EAB624;
     width: 232px;
