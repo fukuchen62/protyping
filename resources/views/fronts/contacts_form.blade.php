@@ -155,3 +155,5 @@
 @endsection
 
 @section('pageJs')
+    <script src="{{ asset('assets/js/contact.js') }}"></script>
+@endsection

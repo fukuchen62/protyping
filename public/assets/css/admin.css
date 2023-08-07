@@ -399,7 +399,7 @@ table.edit_info select,
 .selectcategory {
     border: 1px #b9adc3 solid;
     background-color: lightgoldenrodyellow;
-    padding: 4px;
+    padding: 5px;
 }
 
 /* 編集画面と新規登録画面の入力欄にホバーすると枠線の色が変わる */
@@ -605,4 +605,18 @@ table.edit_info select:hover,
     -moz-transform: scale(1.2);
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
+}
+
+.language {
+    margin: 5px;
+    padding: 5px;
+}
+
+form#lang {
+    margin-bottom: 20px;
+}
+
+form#lang select {
+    border: 1px gray solid;
+    padding: 2px 5px;
 }

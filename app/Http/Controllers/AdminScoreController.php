@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 use App\Models\Score;
+use App\Models\Language;
 
 class AdminScoreController extends Controller
 {
@@ -43,6 +44,8 @@ class AdminScoreController extends Controller
             $s = $request->s;
         }
 
+        $language_id = 0;     //言語ID
+
         // 言語選択された場合
         $formIdentifier = $request->input('form_identifier');
 
@@ -57,13 +60,32 @@ class AdminScoreController extends Controller
         } elseif ($formIdentifier === 'form2') {
             // 言語選択された場合
             $language_id = $request->input('language');
-            $items = Score::where('language_id', $language_id)->get();
+            $items = Score::where('language_id', $language_id)
+                ->orderBy('score', 'desc')
+                ->get();
         } else {
-            // $items = Score::where('deleted_at', null)
-            //     ->orderBy('id', 'desc')
-            //     ->get();
-            $items = Score::all();
+            $items = Score::where('is_show', 1)
+                // ->where('language_id', $language_id)
+                ->orderBy('language_id', 'asc')
+                ->orderBy('level_id', 'asc')
+                ->orderBy('score', 'desc')
+                ->get();
+            // $items = Score::all()
+            //     ->orderBy('score', 'desc')
+            // ;
         }
+
+        // 言語一覧
+        $langlist =
+            Language::where('deleted_at', null)
+            ->orderBy('id', 'asc')
+            ->get();
+
+        // 言語一覧
+        $langlist =
+            Language::where('deleted_at', null)
+            ->orderBy('id', 'asc')
+            ->get();
 
         // 件数
         $score_count = count($items);
@@ -74,6 +96,8 @@ class AdminScoreController extends Controller
             'count' => $score_count,
             'login_user' => $login_user,
             's' => $s,
+            'language_id' => $language_id,
+            'langlist' => $langlist,
         ];
 
         // Bladeファイルを呼び出す

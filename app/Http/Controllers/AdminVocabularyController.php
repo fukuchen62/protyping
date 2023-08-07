@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 use App\Models\Vocabulary;
+use App\Models\Language;
+use Language_Pack_Upgrader_Skin;
 
 class AdminVocabularyController extends Controller
 {
@@ -44,6 +46,7 @@ class AdminVocabularyController extends Controller
         }
 
         $formIdentifier = $request->input('form_identifier');
+        $lang_id = 1;     //言語ID
 
         // 言語を読み込む
         if ($s != '') {
@@ -54,19 +57,29 @@ class AdminVocabularyController extends Controller
                 ->orWhere('meaning', 'like', '%' . $s . '%')
                 ->orWhere('notion', 'like', '%' . $s . '%')
                 ->orWhere('usage', 'like', '%' . $s . '%')
+                ->orderBy('word_spell', 'asc')
                 ->get();
         } elseif ($formIdentifier === 'form2') {
             // 言語が絞られた場合
-            $vocabulary = $request->input('language');
-            $items = Vocabulary::where('language_id', $vocabulary)->get();
+            $lang_id = $request->input('language');
+            $items = Vocabulary::where('language_id', $lang_id)
+                ->orderBy('word_spell', 'asc')
+                ->get();
         } else {
             $items = Vocabulary::where('deleted_at', null)
-                ->orderBy('id', 'desc')
+                ->where('language_id', $lang_id)
+                ->orderBy('word_spell', 'asc')
                 ->get();
         }
 
         // 件数
         $vocabulary_count = count($items);
+
+        // 言語一覧
+        $langlist =
+            Language::where('deleted_at', null)
+            ->orderBy('id', 'asc')
+            ->get();
 
         // Bladeファイルに渡すデータ（連想配列）
         $data = [
@@ -74,6 +87,8 @@ class AdminVocabularyController extends Controller
             'count' => $vocabulary_count,
             'login_user' => $login_user,
             's' => $s,
+            'langlist' => $langlist,
+            'language_id' => $lang_id,
         ];
 
         // Bladeファイルを呼び出す
@@ -94,9 +109,17 @@ class AdminVocabularyController extends Controller
 
         // 単語カテゴリー
         $vocabulary_items = Vocabulary::All();
+
+        // 言語一覧
+        $langlist =
+            Language::where('deleted_at', null)
+            ->orderBy('id', 'asc')
+            ->get();
+
         $data = [
             'login_user' => $login_user,
-            'vocabulary_items' => $vocabulary_items
+            'vocabulary_items' => $vocabulary_items,
+            'langlist' => $langlist,
         ];
         return view('cms.cms_vocabulary_new', $data);
     }
@@ -133,24 +156,6 @@ class AdminVocabularyController extends Controller
         $vocabulary->fill($form)->save();
 
         return redirect(route('indexvocabulary'));
-
-        // // ニュースを読み込む
-        // $items = News::where('deleted_at', null)
-        //     ->orderBy('id', 'desc')
-        //     ->get();
-
-        // // ニュースの件数
-        // $news_count = count($items);
-
-        // // 渡すデータ
-        // $data = [
-        //     'news_list' => $items,
-        //     'count' => $news_count,
-        //     'login_user' => $login_user,
-        // ];
-
-        // // ブレッドファイルを読み込む
-        // return view('cms.cms_news_list', $data);
     }
 
     /**
@@ -171,11 +176,18 @@ class AdminVocabularyController extends Controller
         // 単語カテゴリー
         $vocabulary_items = Vocabulary::All();
 
+        // 言語一覧
+        $langlist =
+            Language::where('deleted_at', null)
+            ->orderBy('id', 'asc')
+            ->get();
+
         // 渡すデータ
         $data = [
             'vocabulary' => $item,
             'category_items' => $vocabulary_items,
             'login_user' => $login_user,
+            'langlist' => $langlist,
         ];
 
         // ブレッドファイルを呼び出す

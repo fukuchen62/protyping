@@ -39,12 +39,19 @@
                 <th width="15%"> <span>*</span> 言語種別ID: </th>
                 <td class="category">
                     <select name="language_id">
-                        <option value="1">HTML</option>
+                        @foreach ($langlist as $key => $item)
+                            @if ($vocabulary->language_id == $item->id)
+                                <option value="{{ $item->id }}" selected>{{ $item->language_name }}</option>
+                            @else
+                                <option value="{{ $item->id }}">{{ $item->language_name }}</option>
+                            @endif
+                        @endforeach
+                        {{-- <option value="1">HTML</option>
                         <option value="2">CSS</option>
                         <option value="3">JavaScript</option>
                         <option value="4">PHP</option>
                         <option value="5">Python</option>
-                        <option value="6">よく使う英単語</option>
+                        <option value="6">よく使う英単語</option> --}}
                     </select>
                 </td>
             </tr>
@@ -60,7 +67,7 @@
                 <td><input type="text" name="japanese" value="{{ $vocabulary->japanese }}" required></td>
             </tr>
             <tr>
-                <th> <span>*</span> 英語発音記号: </th>
+                <th> <span></span> 英語発音記号: </th>
                 <td><input type="text" name="pronunciation" value="{{ $vocabulary->pronunciation }}"></td>
             </tr>
             <tr>
@@ -68,11 +75,11 @@
                 <td><input type="text" name="meaning" value="{{ $vocabulary->meaning }}" required></td>
             </tr>
             <tr>
-                <th> <span>*</span> 意味(日本語): </th>
+                <th> <span></span> 意味(日本語): </th>
                 <td><input type="text" name="notion" value="{{ $vocabulary->notion }}"></td>
             </tr>
             <tr>
-                <th> <span>*</span> 使用例: </th>
+                <th> <span></span> 使用例: </th>
                 <td>
                     <textarea name="usage" cols="50" rows="5"> {{ $vocabulary->usage }} </textarea>
                 </td>
@@ -81,8 +88,14 @@
                 <th> <span>*</span> 難易度ID: </th>
                 <td class="category">
                     <select name="level_id">
-                            <option value="1">ゆっくりコース</option>
+                        @if ($vocabulary->level_id == 1)
+                            <option value="1" selected>ゆっくりコース</option>
                             <option value="2">ダッシュコース</option>
+                        @else
+                            <option value="1">ゆっくりコース</option>
+                            <option value="2" selected>ダッシュコース</option>
+                        @endif
+
                     </select>
                 </td>
             </tr>

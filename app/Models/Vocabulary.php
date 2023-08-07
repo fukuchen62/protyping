@@ -19,7 +19,7 @@ class Vocabulary extends Model
         'japanese' => 'required|max:200',
         'pronunciation' => 'max:200',
         'meaning' => 'required|max:200',
-        'notion' => 'required|max:200',
+        'notion' => 'max:200',
         'usage' => 'max:500',
         'is_show' => 'required',
     ];

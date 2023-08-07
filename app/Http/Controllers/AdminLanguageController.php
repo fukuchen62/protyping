@@ -48,10 +48,11 @@ class AdminLanguageController extends Controller
             $items = Language::where('language_name', 'like', '%' . $s . '%')
                 ->orWhere('lang_icon', 'like', '%' . $s . '%')
                 ->orWhere('discription', 'like', '%' . $s . '%')
+                ->orderBy('id', 'asc')
                 ->get();
         } else {
             $items = Language::where('deleted_at', null)
-                ->orderBy('id', 'desc')
+                ->orderBy('id', 'asc')
                 ->get();
         }
 

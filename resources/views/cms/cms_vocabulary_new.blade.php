@@ -37,12 +37,15 @@
                 <th width="15%"> <span>*</span> 言語種別ID: </th>
                 <td class="category">
                     <select name="language_id">
-                        <option value="1">HTML</option>
+                        @foreach ($langlist as $key => $item)
+                            <option value="{{ $item->id }}">{{ $item->language_name }}</option>
+                        @endforeach
+                        {{-- <option value="1">HTML</option>
                         <option value="2">CSS</option>
                         <option value="3">JavaScript</option>
                         <option value="4">PHP</option>
                         <option value="5">Python</option>
-                        <option value="6">よく使う英単語</option>
+                        <option value="6">よく使う英単語</option> --}}
                     </select>
                 </td>
             </tr>
@@ -58,7 +61,7 @@
                 <td><input type="text" name="japanese" required></td>
             </tr>
             <tr>
-                <th> <span>*</span> 英語発音記号: </th>
+                <th> <span></span> 英語発音記号: </th>
                 <td><input type="text" name="pronunciation"></td>
             </tr>
             <tr>
@@ -66,11 +69,11 @@
                 <td><input type="text" name="meaning" required></td>
             </tr>
             <tr>
-                <th> <span>*</span> 意味(日本語): </th>
+                <th> <span></span> 意味(日本語): </th>
                 <td><input type="text" name="notion"></td>
             </tr>
             <tr>
-                <th> <span>*</span> 使用例: </th>
+                <th> <span></span> 使用例: </th>
                 <td>
                     <textarea name="usage" cols="50" rows="5"></textarea>
                 </td>
@@ -94,8 +97,7 @@
         </table>
 
         <div class="submit">
-            <input type="submit" value="登録" class="submit_btn"
-                onclick="return confirm_dialog('単語を登録します。よろしいでしょうか。')">
+            <input type="submit" value="登録" class="submit_btn" onclick="return confirm_dialog('単語を登録します。よろしいでしょうか。')">
         </div>
 
     </form>
