@@ -56,6 +56,17 @@
             </div>
 
         </section>
+        <h3 class="landingSaitoSub">参考文献サイト</h3>
+        <p class="aboutText">Chrome webstore</p>
+        <p class="aboutText">ぱくたそ</p>
+        <p class="aboutText">Filmora 12</p>
+        <p class="aboutText">Python[完全]入門松浦健一郎/司ゆき著</p>
+        <p class="aboutText">Code for Fun</p>
+        <p class="aboutText">MarkeTRUNK</p>
+        <p class="aboutText">pixabay</p>
+        <p class="aboutText">photoAC　写真のフリー素材サイト</p>
+        <p class="aboutText">Visual Studio Codeのダウンロードとインストール</p>
+        <p class="aboutText">XAMPP for Windowsのインストール及び初期設定方法</p>
 
     </main>
 
