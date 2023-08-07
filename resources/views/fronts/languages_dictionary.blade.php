@@ -132,7 +132,7 @@
                                     <p class="detailText"></p>
                                     <!---------- ポップアップ ---------->
                                     <label class="open" for="popUp1">
-                                        <img alt="" src="{{asset('assets/images/dictionary.png')}}">
+                                        <img alt="" src="{{ asset('assets/images/dictionary.png') }}">
                                     </label>
                                     <input id="popUp1" type="checkbox">
                                     <div class="overlay">
@@ -174,7 +174,7 @@
                                         <p class="detailText"></p>
                                         <!---------- ポップアップ ---------->
                                         <label class="open" for="popUp1">
-                                            <img alt="" src="{{asset('assets/images/dictionary.png')}}">
+                                            <img alt="" src="{{ asset('assets/images/dictionary.png') }}">
                                         </label>
                                         <input id="popUp1" type="checkbox">
                                         <div class="overlay">
