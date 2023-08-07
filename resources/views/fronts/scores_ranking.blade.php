@@ -32,7 +32,7 @@
             <p>ランキングコースに挑戦し、ユーザーネームを登録するとこのページに反映されます。<br>ランキング1位目指して自分の限界に挑戦しよう！</p>
         </section>
 
-        {{-- レベル切り替えボタン --}}
+        {{-- コース選択 --}}
         <div class="levelButtons">
             <a href="{{ route('ranking', ['level_id' => 1]) }}" class="levelButton {{ (request()->query('level_id') == 1 || !request()->has('level_id')) ? 'active' : '' }}">初級</a>
             <a href="{{ route('ranking', ['level_id' => 2]) }}" class="levelButton {{ request()->query('level_id') == 2 ? 'active' : '' }}">中級</a>
@@ -49,7 +49,7 @@
         </nav>
 
 
-        <!-- ここから動的 -->
+        <!-- ランキングカード -->
         <section class="rankingWrap">
             <div class="rankingInner">
 
@@ -59,73 +59,45 @@
                     <h3 id="language_{{ $language->id }}">{{ $language->language_name }}</h3>
                     <div class="cardInner">
                         @if (count($scoresByLanguage[$language->id]) > 0)
-                        @foreach ($scoresByLanguage[$language->id] as $index => $score)
-                        <div class="cardItem">
-                            <div class="position">
-                                @if ($index === 0)
-                                <img src="{{ asset('assets/images/gold_crown.png') }}" alt="1位王冠">
-                                <p>1位</p>
-                                @elseif ($index === 1)
-                                <img src="{{ asset('assets/images/silver_crown.png') }}" alt="2位王冠">
-                                <p>2位</p>
-                                @elseif ($index === 2)
-                                <img src="{{ asset('assets/images/bronze_crown.png') }}" alt="3位王冠">
-                                <p>3位</p>
-                                @else
-                                <p>{{ $index + 1 }}位</p>
-                                @endif
-                            </div>
-                            <p class="userName">{{ $score->username }}</p>
-                            <p class="score">{{ $score->score }}点</p>
-                        </div>
-                        @endforeach
-
-                        {{-- @foreach ($languages as $language)
-                        <div class="card">
-                            <h3 id="language_{{ $language->id }}">{{ $language->language_name }}</h3>
-                            <div class="cardInner">
-                                @if (count($scoresByLanguage[$language->id]) > 0)
+                        <table class="scoreTable">
+                            <tbody>
                                 @foreach ($scoresByLanguage[$language->id] as $index => $score)
-                                <div class="cardItem">
-                                    <div class="position">
+                                <tr>
+                                    <td class="rank position">
                                         @if ($index === 0)
-                                        <img src="{{ asset('assets/images/gold_crown.png') }}" alt="1位王冠">
+                                        <img src="../assets/images/gold_crown.png" alt="1位王冠">
                                         <p>1位</p>
                                         @elseif ($index === 1)
-                                        <img src="{{ asset('assets/images/silver_crown.png') }}" alt="2位王冠">
+                                        <img src="../assets/images/silver_crown.png" alt="2位王冠">
                                         <p>2位</p>
                                         @elseif ($index === 2)
-                                        <img src="{{ asset('assets/images/bronze_crown.png') }}" alt="3位王冠">
+                                        <img src="../assets/images/bronze_crown.png" alt="3位王冠">
                                         <p>3位</p>
                                         @else
-                                        <div class="cardItemMoreThan">
-                                            <p>{{ $index + 1 }}位</p>
-                                        </div>
+                                        {{ $index + 1 }}位
                                         @endif
-                                    </div>
-                                    <div class="nameScore">
-                                        <p class="userName">{{ $score->username }}</p>
-                                        <p class="score">{{ $score->score }}点</p>
-                                    </div>
-                                </div>
-                                @endforeach --}}
-                                @else
-                                <!-- 代替テキストを表示するためのダミーデータ -->
-                                @for ($i = 0; $i < 10; $i++) <div class="cardItem">
-                                    <div class="position">
-                                        <p>{{ $i + 1 }}位</p>
-                                    </div>
-                                    <p class="userName">挑戦してね！</p>
-                                    <p class="score">00点</p>
-                            </div>
+                                    </td>
+                                    <td class="userName">{{ $score->username }}</td>
+                                    <td class="score">{{ $score->score }}点</td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                        @else
+                        <!-- 代替テキストを表示するためのダミーデータ -->
+                        @for ($i = 0; $i < 10; $i++) <tr>
+                            <td class="rank">{{ $i + 1 }}位</td>
+                            <td class="userName">挑戦してね！</td>
+                            <td class="score">00点</td>
+                            </tr>
                             @endfor
                             @endif
-                        </div>
                     </div>
-                    @endforeach
-
-
                 </div>
+                @endforeach
+
+
+            </div>
         </section>
 
         <!-- ランキング、マイスコアボタン -->

@@ -113,13 +113,13 @@ input[name="course_name"] {
 /* ランキングのカード全部をくくっている */
 .rankingWrap {
     margin-top: 40px;
+    text-shadow: 0 4px 4px #26567C;
 }
 
 /* カードタイトル */
 h3 {
     font-size: 1.7rem;
     font-weight: 400;
-    text-shadow: 0 4px 4px #26567C;
     text-align: center;
 }
 
@@ -168,7 +168,7 @@ h3 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 36px;
+    width: 100%;
 }
 
 .cardItem {
@@ -177,39 +177,38 @@ h3 {
     padding-top: 6px;
 }
 
-/* .cardItemMoreThan {
-    position: absolute;
-    left: 18px;
-    top: 16px;
-} */
-
-.card p {
-    font-size: 1.6rem;
-    text-align: center;
-    display: inherit;
-    justify-content: space-around;
-    margin: 0 auto;
-    text-shadow: 0 4px 4px #26567C;
-    line-height: 2.2;
-}
-
-/* .nameScore {
-    position: relative;
-} */
-
 .score {
     color: #FFD56A;
-    /* position: absolute;
-    right: 0; */
+    text-align: right;
 }
 
-/* .userName {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-} */
+/* テーブル */
+.scoreTable {
+    width: 100%;
+    font-size: 1.6rem;
+}
 
+.scoreTable td{
+    vertical-align: middle;
+}
+
+.rank {
+    text-align: center;
+
+}
+
+.userName {
+    text-align: left;
+}
+
+td {
+    padding: 5px 4px;
+}
+
+
+
+
+/* ランキング、マイスコアボタン */
 .btnWrap div {
     margin: 30px 20px 15px;
 }
