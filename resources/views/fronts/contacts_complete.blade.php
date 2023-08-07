@@ -4,10 +4,10 @@
 
 @section('keywords')
 
-@section('title','お問い合わせ内容確認')
+@section('title', 'お問い合わせ内容確認')
 
 @section('pageCss')
-<link rel="stylesheet" href="{{ asset('assets/css/contact_complete.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/contact_complete.css') }}">
 @endsection
 
 @section('key_visual')
@@ -25,16 +25,20 @@
                 <li><a href="#">送信完了</a></li>
             </ol>
             {{-- デバッグ用 --}}
-            {{-- @if(session('success'))
+            {{-- @if (session('success'))
             <div>{{ session('success') }}</div>
             @endif --}}
             <p>送信いたしました。<br>お問い合わせいただき誠にありがとうございます。</p>
-            <a class="homeBack" href="{{ route('top') }}">ホームに戻る</a>
+            <div>
+                <a class="homeBack" href="{{ route('top') }}">
+                    ホームに戻る
+                </a>
+            </div>
         </main>
     </div>
 
 @endsection
 
 @section('pageJs')
-<script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
 @endsection
