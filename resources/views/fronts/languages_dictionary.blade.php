@@ -53,7 +53,7 @@
         </h3>
 
         <!-- プルダウンメニュー -->
-        {{-- <div class="selectWrap">
+        <div class="selectWrap">
             <select id="word-select" name="word">
                 <option selected value="HTML">HTML</option>
                 <option value="CSS">CSS</option>
@@ -61,7 +61,7 @@
                 <option value="PHP">PHP</option>
                 <option value="Python">Python</option>
             </select>
-        </div> --}}
+        </div>
 
         <!-- 検索ボックス -->
         <!-- <p>ここから辞書検索ができます。活用してね(^^)</p> -->
