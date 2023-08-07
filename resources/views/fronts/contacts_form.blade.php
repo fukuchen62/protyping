@@ -21,8 +21,8 @@
     <div class="wrap">
         <main class="main">
             <ol class="breadCrumb-001">
-                <li><a href="../html/index.html">ホーム</a></li>
-                <li><a href="#">お問い合わせ</a></li>
+                <li><a href="{{ route('top') }}">ホーム</a></li>
+                <li><a href="{{ route('contact') }}">お問い合わせ</a></li>
             </ol>
             <h2>お問い合わせ</h2>
             <p class="contactWarning">下記の項目にすべて入力頂き、確認画面へ進むボタンを押してください</p>

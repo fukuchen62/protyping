@@ -132,13 +132,13 @@
                                     <p class="detailText"></p>
                                     <!---------- ポップアップ ---------->
                                     <label class="open" for="popUp1">
-                                        <img alt="" src="../assets/images/dictionary.png">
+                                        <img alt="" src="{{asset('assets/images/dictionary.png')}}">
                                     </label>
                                     <input id="popUp1" type="checkbox">
                                     <div class="overlay">
                                         <div class="popWindow">
                                             <label class="close" for="popUp1"><img alt="閉じるボタン"
-                                                    src="../assets/images/dictionary.jpg"></label>
+                                                    src="{{ asset('assets/images/dictionary.jpg') }}"></label>
                                             <h2>{{ $item->word_spell }}</h2>
                                             <div class="read">
                                                 {{-- <h5>読み方</h5> --}}
@@ -174,13 +174,13 @@
                                         <p class="detailText"></p>
                                         <!---------- ポップアップ ---------->
                                         <label class="open" for="popUp1">
-                                            <img alt="" src="../assets/images/dictionary.png">
+                                            <img alt="" src="{{asset('assets/images/dictionary.png')}}">
                                         </label>
                                         <input id="popUp1" type="checkbox">
                                         <div class="overlay">
                                             <div class="popWindow">
                                                 <label class="close" for="popUp1"><img alt="閉じるボタン"
-                                                        src="../assets/images/dictionary.jpg"></label>
+                                                        src="{{ asset('assets/images/dictionary.jpg') }}"></label>
                                                 <h2>{{ $item->word_spell }}</h2>
                                                 {{-- <h5>読み方</h5> --}}
                                                 <p>{{ $item->japanese }}</p>
