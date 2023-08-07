@@ -23,7 +23,7 @@
         <!-- パンくずリスト html-->
         <ol class="breadCrumb-001">
             <li><a href="{{ route('top') }}">ホーム</a></li>
-            <li><a href="#">ランキング</a></li>
+            <li><a href="{{ route('ranking') }}">ランキング</a></li>
         </ol>
 
         <!-- タイトル -->
