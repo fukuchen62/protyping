@@ -112,7 +112,7 @@
                             <th class="contactItem">意味
                             </th>
                             <td class="contactBody">
-                                <textarea name="meaning" class="formTextarea" value="{{ old('meaning') }}"" placeholder="数字"></textarea>
+                                <textarea name="meaning" class="formTextarea" value="{{ old('meaning') }}" placeholder="数字"></textarea>
                             </td>
                         </tr>
                         <tr class="example">

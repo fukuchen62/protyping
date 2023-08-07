@@ -90,7 +90,7 @@
                         <!-- 設定のポップアップ -->
                         <div class="Popup">
                             <input id="open" type="checkbox">
-                            <label for="open" class="openBtn"><img src="../assets/images/gear.svg" alt="歯車アイコン">設定</label>
+                            <label for="open" class="openBtn"><img src="{{ asset('assets/images/gear.svg') }}" alt="歯車アイコン">設定</label>
                             <label for="open" class="overlay"></label>
                             <div class="popupContent">
                                 <!-- <label for="open" class="closeBtn"></label> -->
@@ -108,7 +108,7 @@
                         <!-- 遊び方のポップアップ -->
                         <div class="Popup">
                             <input id="open2" type="checkbox">
-                            <label for="open2" class="openBtn"><img src="../assets/images/memo.svg" alt="メモアイコン">遊び方</label>
+                            <label for="open2" class="openBtn"><img src="{{ asset('assets/images/memo.svg') }}" alt="メモアイコン">遊び方</label>
                             <label for="open2" class="overlay"></label>
                             <div class="popupContent">
                                 <p>遊び方</p>
