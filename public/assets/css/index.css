@@ -43,15 +43,15 @@ h2 {
 }
 
 .gameChara {
-    width: 10rem;
-    height: 10rem;
+    width: 11rem;
+    height: 11rem;
     margin: 10px;
     margin-bottom: 40px;
 }
 
 .gameChara2 {
-    width: 10rem;
-    height: 10rem;
+    width: 11rem;
+    height: 11rem;
     margin: 10px;
     margin-bottom: 40px;
 }
@@ -594,6 +594,18 @@ span {
         width: 48%;
     }
 
+    .gameChara {
+        width: 15rem;
+        height: 15rem;
+        margin: 20px;
+    }
+
+    .gameChara2 {
+        width: 15rem;
+        height: 15rem;
+        margin: 20px;
+    }
+
     .infoList {
         .rankingArea2 {
             margin-bottom: 20px;
@@ -644,6 +656,18 @@ span {
         max-width: 1080px;
         display: flex;
         justify-content: space-between;
+    }
+
+    .gameChara {
+        width: 20rem;
+        height: 20rem;
+        margin: 20px;
+    }
+
+    .gameChara2 {
+        width: 20rem;
+        height: 20rem;
+        margin: 20px;
     }
 
     .box {
