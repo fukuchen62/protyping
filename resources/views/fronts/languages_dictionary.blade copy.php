@@ -55,42 +55,42 @@
 
     <h2 class="title">辞書</h2>
     <h3 class="subTitle">
-    @if (isset($_GET['s']) && $items->isNotEmpty())
+        @if (isset($_GET['s']) && $items->isNotEmpty())
         @php
-            $item = $items->first();
-            $language_id = $item->language_id;
+        $item = $items->first();
+        $language_id = $item->language_id;
         @endphp
         @if ($_GET['form_identifier'] === 'form1' && isset($_GET['s']))
-            @if ($_GET['s'] === '1')
-                HTML
-            @elseif ($_GET['s'] === '2')
-                CSS
-            @elseif ($_GET['s'] === '3')
-                JavaScript
-            @elseif ($_GET['s'] === '4')
-                PHP
-            @elseif ($_GET['s'] === '5')
-                Python
-            @elseif ($_GET['s'] === '6')
-                プログラミングでよく使う英単語
-            @endif
-        @elseif ($language_id === 1)
-            HTML
-        @elseif ($language_id === 2)
-            CSS
-        @elseif ($language_id === 3)
-            JavaScript
-        @elseif ($language_id === 4)
-            PHP
-        @elseif ($language_id === 5)
-            Python
-        @elseif ($language_id === 6)
-            プログラミングでよく使う英単語
-        @endif
-    @else
+        @if ($_GET['s'] === '1')
         HTML
-    @endif
-</h3>
+        @elseif ($_GET['s'] === '2')
+        CSS
+        @elseif ($_GET['s'] === '3')
+        JavaScript
+        @elseif ($_GET['s'] === '4')
+        PHP
+        @elseif ($_GET['s'] === '5')
+        Python
+        @elseif ($_GET['s'] === '6')
+        プログラミングでよく使う英単語
+        @endif
+        @elseif ($language_id === 1)
+        HTML
+        @elseif ($language_id === 2)
+        CSS
+        @elseif ($language_id === 3)
+        JavaScript
+        @elseif ($language_id === 4)
+        PHP
+        @elseif ($language_id === 5)
+        Python
+        @elseif ($language_id === 6)
+        プログラミングでよく使う英単語
+        @endif
+        @else
+        HTML
+        @endif
+    </h3>
 
 
     <!-- プルダウンメニュー -->
@@ -194,7 +194,7 @@
                                     {{--
                                     <h5>意味</h5> --}}
                                     <p>{{ $item->meaning }}
-                                                </p>
+                                    </p>
                                 </div>
                                 <div class="example">
                                     {{--
@@ -236,7 +236,7 @@
                                     {{--
                                     <h5>意味</h5> --}}
                                     <p>{{ $item->meaning }}
-                                                    </p>
+                                    </p>
                                 </div>
                                 <div class="example">
                                     {{--
