@@ -18,8 +18,6 @@
 @section('content')
 <main id="main" class="main">
     <div class="wrap">
-        <p class="margin"><a href="{{ route('knowhow') }}">知っトク情報一覧</a></p>
-
         <!-- パンくずリスト  -->
         <ol class="breadCrumb-001">
             <li><a href="{{ route('top') }}">ホーム</a></li>
