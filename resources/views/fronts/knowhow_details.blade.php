@@ -24,27 +24,6 @@
             <ol class="breadCrumb-001">
                 <li><a href="{{ route('top') }}">ホーム</a></li>
                 <li><a href="{{ route('knowhow') }}">知っトク情報一覧</a></li>
-                <li>
-                    @if ($_GET['param'] == 4)
-                        <a href="{{ route('details') . '?param=' . request()->query('param') }}">環境セットアップ</a>
-                    @elseif($_GET['param'] == 5)
-                        <a href="{{ route('details') . '?param=' . request()->query('param') }}">WordPress</a>
-                    @elseif($_GET['param'] == 6)
-                        <a href="{{ route('details') . '?param=' . request()->query('param') }}">おすすめWebアプリ</a>
-                    @elseif($_GET['param'] == 7)
-                        <a href="{{ route('details') . '?param=' . request()->query('param') }}">おすすめWebサイト</a>
-                    @elseif($_GET['param'] == 8)
-                        <a href="{{ route('details') . '?param=' . request()->query('param') }}">ショートカット</a>
-                    @elseif($_GET['param'] == 9)
-                        <a href="{{ route('details') . '?param=' . request()->query('param') }}">資格</a>
-                    @elseif($_GET['param'] == 10)
-                        <a href="{{ route('details') . '?param=' . request()->query('param') }}">Chrome拡張機能</a>
-                    @elseif($_GET['param'] == 11)
-                        <a href="{{ route('details') . '?param=' . request()->query('param') }}">卒業生の作品</a>
-                    @else
-                        <a href="{{ route('details') . '?param=' . request()->query('param') }}">？？？</a>
-                    @endif
-                </li>
             </ol>
 
             <!-- flexbox -->
@@ -52,77 +31,39 @@
             <div class="mainInner">
                 <article class="mainContainer">
                     <!-- タイトルコーナー -->
-                    <h2 class="">{{ $items[0]->title }}</h2>
+                    <h2 class="">{{ $post->title }}</h2>
 
                     <section class="titleArea">
-                        <div class="">{!! $items[0]->summary_detail !!}</div>
+                        <div class="">{!! $post->summary_detail !!}</div>
                     </section>
 
-                    @foreach ($items as $item)
-                        <section class="shittokuFlex">
-                            <div class="contentBox">{!! $item->content !!}</div>
+                    <section class="shittokuFlex">
+                        <div class="contentBox">{!! $post->content !!}</div>
 
 
-                            <!-- サイドバー -->
-                            <aside class="sidebar">
-                                <!-- <nav class="globalNav">辞書</nav> -->
-                                <ul>
-                                    <li class="globalNav">知っトク情報一覧</li>
-                                    {{-- pram値の仕様を決めて入力する --}}
-                                    <li class="subMenu1 {{ request()->query('param') == 4 ? 'active' : '' }}"><a
-                                            href="{{ route('details') . '?param=' . 4 }}">開発環境<br>セットアップ</a></li>
-                                    <li class="subMenu2 {{ request()->query('param') == 5 ? 'active' : '' }}"><a
-                                            href="{{ route('details') . '?param=' . 5 }}">WordPress</a></li>
-                                    <li class="subMenu3 {{ request()->query('param') == 6 ? 'active' : '' }}"><a
-                                            href="{{ route('details') . '?param=' . 6 }}">おすすめ<br>Webアプリ</a></li>
-                                    <li class="subMenu4 {{ request()->query('param') == 7 ? 'active' : '' }}"><a
-                                            href="{{ route('details') . '?param=' . 7 }}">おすすめ<br>Webサイト</a></li>
-                                    <li class="subMenu5 {{ request()->query('param') == 8 ? 'active' : '' }}"><a
-                                            href="{{ route('details') . '?param=' . 8 }}">ショートカット</a></li>
-                                    <li class="subMenu6 {{ request()->query('param') == 9 ? 'active' : '' }}"><a
-                                            href="{{ route('details') . '?param=' . 9 }}">資格</a></li>
-                                    <li class="subMenu7 {{ request()->query('param') == 10 ? 'active' : '' }}"><a
-                                            href="{{ route('details') . '?param=' . 10 }}">Chrome拡張機能</a></li>
-                                    <li class="subMenu8 {{ request()->query('param') == 11 ? 'active' : '' }}"><a
-                                            href="{{ route('details') . '?param=' . 11 }}">卒業生の作品</a></li>
+                        <!-- サイドバー -->
+                        <aside class="sidebar">
+                            <!-- <nav class="globalNav">辞書</nav> -->
+                            <ul>
+                                <li class="globalNav">その他の知っトク情報</li>
 
-                                </ul>
-                            </aside>
+                                @foreach ($posts as $key => $item)
+                                    <li class="subMenu{{ $key + 1 }} }}"><a
+                                            href="{{ route('details') }}?id={{ $item->id }}">{{ $item->title }}</a>
+                                    </li>
+                                @endforeach
 
-                        </section>
-                    @endforeach
+                            </ul>
+                        </aside>
+                    </section>
 
-                    {{ $items->links() }}
+                    {{-- {{ $items->links() }} --}}
+
                     <!-- 一覧を見る -->
                     <div class="linkBtnBox">
                         <a class="linkBtn" href="{{ route('knowhow') }}">一覧に戻る</a>
                     </div>
                 </article>
-
-                {{-- <!-- サイドバー -->
-                <aside class="sidebar">
-                    <!-- <nav class="globalNav">辞書</nav> -->
-                    <ul>
-                        {{-- pram値の仕様を決めて入力する --}}
-                {{-- <li class="subMenu1 {{ request()->query('param') == 4 ? 'active' : '' }}"><a
-                                href="{{ route('details') . '?param=' . 4 }}">開発環境<br>セットアップ</a></li>
-                        <li class="subMenu2 {{ request()->query('param') == 5 ? 'active' : '' }}"><a
-                                href="{{ route('details') . '?param=' . 5 }}">WordPress</a></li>
-                        <li class="subMenu3 {{ request()->query('param') == 6 ? 'active' : '' }}"><a
-                                href="{{ route('details') . '?param=' . 6 }}">おすすめ<br>Webアプリ</a></li>
-                        <li class="subMenu4 {{ request()->query('param') == 7 ? 'active' : '' }}"><a
-                                href="{{ route('details') . '?param=' . 7 }}">おすすめ<br>Webサイト</a></li>
-                        <li class="subMenu5 {{ request()->query('param') == 8 ? 'active' : '' }}"><a
-                                href="{{ route('details') . '?param=' . 8 }}">ショートカット</a></li>
-                        <li class="subMenu6 {{ request()->query('param') == 9 ? 'active' : '' }}"><a
-                                href="{{ route('details') . '?param=' . 9 }}">資格</a></li>
-                        <li class="subMenu7 {{ request()->query('param') == 10 ? 'active' : '' }}"><a
-                                href="{{ route('details') . '?param=' . 10 }}">Chrome拡張機能</a></li>
-                        <li class="subMenu8 {{ request()->query('param') == 11 ? 'active' : '' }}"><a
-                                href="{{ route('details') . '?param=' . 11 }}">卒業生の作品</a></li>
-
-                    </ul>
-                </aside> --}}
             </div>
         </div>
     </main>

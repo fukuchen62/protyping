@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Knowhow;
+use App\Models\PostCategory;
 
 class KnowhowController extends Controller
 {
@@ -15,11 +16,39 @@ class KnowhowController extends Controller
      */
     public function getknowhow(Request $request)
     {
+        // 検索条件を取得
+        $cate_id = 0;
+        if (isset($request->cate_id)) {
+            $cate_id = $request->cate_id;
+        }
+
         // 知っトク記事情報の一覧を表示する
-        $items = Knowhow::all();
+        if ($cate_id != 0) {
+            $knowhows = Knowhow::where('post_category_id', $cate_id)
+                ->where('is_show', 1)
+                ->where('deleted_at', null)
+                ->get();
+        } else {
+            $knowhows = Knowhow::where('is_show', 1)
+                ->where('deleted_at', null)
+                ->get();
+        }
+
+        $count = count($knowhows);
+
+        // 知っトク情報のカテゴリ
+        $post_category = PostCategory::where('is_show', 1)
+            ->where('deleted_at', null)
+            ->where('id', '>=', 4)
+            ->orderBy('id', 'asc')
+            ->get();
+
         $data = [
             'param' => '',
-            'items' => $items,
+            'count' => $count,
+            'knowhows' => $knowhows,
+            'post_category' => $post_category,
+            'cate_id' => $cate_id,
         ];
 
         return view('fronts.knowhow_article', $data);
@@ -35,11 +64,28 @@ class KnowhowController extends Controller
     {
         // 知っトク記事情報の一覧を表示する
         // getで渡したparamでカテゴリーを限定する
-        $param = $request->input('param');
+        $id = $request->id;
+        $post = Knowhow::find($id);
 
-        $items = Knowhow::where('post_category_id', $param)->paginate(10);
+        // 知っトク情報のカテゴリ
+        // $post_category = PostCategory::where('is_show', 1)
+        //     ->where('deleted_at', null)
+        //     ->where('id', '>=', 4)
+        //     ->orderBy('id', 'asc')
+        //     ->get();
+
+        // 関連記事6つを取得
+        $posts = Knowhow::where('is_show', 1)
+            ->where('deleted_at', null)
+            ->where('id', '!=', $id)
+            ->orderBy('id', 'asc')
+            ->limit(6)
+            ->get();
+
+
         $data = [
-            'items' => $items,
+            'post' => $post,
+            'posts' => $posts,
         ];
 
         return view('fronts.Knowhow_details', $data);

@@ -95,8 +95,6 @@
 
     }
 
-
-
     .globalNav {
         font-size: 2.2rem;
         color: #ffff;
@@ -118,26 +116,25 @@
         /* line-height: 50px; */
         padding: 10px 15px;
         font-size: 1.6rem;
-        color: #8B8B8B;
+        /* color: #8B8B8B; */
         padding-left: 15px;
         box-shadow: -2px -2px 5px 0px rgba(255, 255, 255, 0.5), 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
 
     }
 
-
-
-
-
     .sidebar ul li a:hover {
         background: rgba(4, 199, 243, 0.1);
     }
 
-    /* .sidebar ul li.active{
-    background-color: rgba(59, 163, 228, 0.3);
-} */
+    /* .sidebar ul li.active {
+        background-color: rgba(59, 163, 228, 0.3);
+    } */
 }
 
-
+.sidebar ul li.active {
+    background-color: #D6A923;
+    color: #fff;
+}
 
 /* 画像たちのフレックスボックス */
 .imgFlex {
