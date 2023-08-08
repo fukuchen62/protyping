@@ -5,27 +5,29 @@
     <meta charset="UTF-8">
 
     {{-- デディスクリプション --}}
-    <meta name="description" content="@yield('description')">
+    <meta content="@yield('description')" name="description">
     {{-- <meta name="description" content="description"> --}}
     {{-- キーワード --}}
-    <meta name="keywords" content="@yield('keywords')">
+    <meta content="タイピング,Typing,Webプログラマー,HTMLタグ,CSS,JavaScript,WordPres,ワードプレス,PHP,Python,プログラミングでよく使う英単語"
+        name="keywords">
+    {{-- <meta name="keywords" content="@yield('keywords')"> --}}
     {{-- <meta name="keywords" content="keywords"> --}}
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="format-detection" content="telephone=no">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
 
     <!-- faviconを読み込む -->
-    <link rel="icon" href="{{ asset('assets/images/icon/favicon.ico') }}" id="favicon">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/images/icon/apple_touch_icon_180x180.png') }}">
+    <link href="{{ asset('assets/images/icon/favicon.ico') }}" id="favicon" rel="icon">
+    <link href="{{ asset('assets/images/icon/apple_touch_icon_180x180.png') }}" rel="apple-touch-icon" sizes="180x180">
 
     {{-- ページタイトル --}}
     <title>@yield('title')</title>
 
     <!-- reset.cssファイルを読み込む -->
-    <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
+    <link href="{{ asset('assets/css/reset.css') }}" rel="stylesheet">
     <!-- 共通CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/css/common.css') }}">
+    <link href="{{ asset('assets/css/common.css') }}" rel="stylesheet">
 
     {{-- 独自のCSSファイルを読み込む --}}
     @yield('pageCss')
@@ -34,17 +36,17 @@
     <script src="{{ asset('assets/js/vendor/jquery-3.6.3.min.js') }}"></script>
 
     {{-- トークンを読み込む --}}
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta content="{{ csrf_token() }}" name="csrf-token">
 
     <!-- フォント設定 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link
         href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap"
         rel="stylesheet">
 
     <!-- アイコンフォント -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v6.4.0/js/all.js"></script>
 
 </head>
