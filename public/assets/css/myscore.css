@@ -117,7 +117,7 @@ input[name="course_name"] {
 }
 
 .levelButton.active {
-background-color: #D6A923;
+    background-color: #D6A923;
 }
 
 /* 言語選択 */
@@ -132,7 +132,7 @@ background-color: #D6A923;
     /* margin-top: 15px; */
     text-align: center;
     height: 5rem;
-    padding: 12px;
+    padding: 12px 0;
     border: 2px solid #5DBEEC;
 }
 
@@ -145,7 +145,7 @@ background-color: #D6A923;
 .word a {
     color: #26567c;
     font-weight: 400;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
 }
 
 .word img {
