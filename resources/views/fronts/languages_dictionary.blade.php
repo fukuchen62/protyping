@@ -177,13 +177,13 @@
                     <td class="detail secondary">
                         <p class="detailText"></p>
                         <!---------- ポップアップ ---------->
-                        <label class="open" for="popUp1">
+                        <label class="open" for="popUp1{{ $item->id }}">
                             <img alt="" src="{{asset('assets/images/dictionary.png')}}">
                         </label>
-                        <input id="popUp1" type="checkbox">
+                        <input id="popUp1{{ $item->id }}" type="checkbox" style="display: none;">
                         <div class="overlay">
                             <div class="popWindow">
-                                <label class="close" for="popUp1"><img alt="閉じるボタン" src="{{ asset('assets/images/dictionary.jpg') }}"></label>
+                                <label class="close" for="popUp1{{ $item->id }}"><img alt="閉じるボタン" src="{{ asset('assets/images/dictionary.jpg') }}"></label>
                                 <h2>{{ $item->word_spell }}</h2>
                                 <div class="read">
                                     {{--
@@ -206,8 +206,7 @@
                     </td>
                 </tr>
             </tbody>
-            @else
-            @if ($item->language_id == 1)
+            @elseif ($item->language_id == 1)
             <tbody class="dictBody">
                 <tr class="dictRow">
                     <td class="no">{{ $item->id }}</td>
@@ -221,13 +220,13 @@
                     <td class="detail secondary">
                         <p class="detailText"></p>
                         <!---------- ポップアップ ---------->
-                        <label class="open" for="popUp1">
+                        <label class="open" for="popUp1{{ $item->id }}">
                             <img alt="" src="{{asset('assets/images/dictionary.png')}}">
                         </label>
-                        <input id="popUp1" type="checkbox">
+                        <input id="popUp1{{ $item->id }}" type="checkbox" style="display: none;">
                         <div class="overlay">
                             <div class="popWindow">
-                                <label class="close" for="popUp1"><img alt="閉じるボタン" src="{{ asset('assets/images/dictionary.jpg') }}"></label>
+                                <label class="close" for="popUp1{{ $item->id }}"><img alt="閉じるボタン" src="{{ asset('assets/images/dictionary.jpg') }}"></label>
                                 <h2>{{ $item->word_spell }}</h2>
                                 {{--
                                 <h5>読み方</h5> --}}
@@ -248,7 +247,6 @@
                     </td>
                 </tr>
             </tbody>
-            @endif
             @endif
             @endforeach
         </table>
