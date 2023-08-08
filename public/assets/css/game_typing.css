@@ -38,26 +38,40 @@
     font-size: 6.4rem;
 }
 
+/* ゲームの背景 */
+.gameBack {
+    background-color: rgba(255, 255, 255, 0.78);
+    border-radius: 21px;
+    width: 682px;
+    margin: auto;
+}
+
+
+
 /* <!-- プルダウンメニュー -->
 <!-- 言語選択 --> */
 
 .selectWrap {
-    width: 216px;
-    height: 63px;
+    width: 250px;
+    height: 72px;
     padding: 5px;
     background-color: #58ABD3;
     display: inline-block;
     margin: 20px 20px;
     border-radius: 15px;
-    font-size: 1.6rem;
+    font-size: 2rem;
     text-align: center;
     color: #fff;
     font-weight: bold;
     text-shadow: 0px 3px 0.5px gray;
 }
 
-.selectColor{
+.selectColor {
     background-color: #26567c;
+    border-radius: 50px;
+    width: 97px;
+    font-size: 2.4rem;
+    font-weight: 500;
 }
 
 .selectWrap option {
@@ -85,8 +99,7 @@ optgroup {
 
 .select {
     margin: 20px auto 20px;
-    width: 724px;
-    /* display: flex; */
+    display: flex;
     justify-content: center;
 }
 
@@ -205,16 +218,16 @@ optgroup {
     justify-content: center;
 } */
 
-.Popup1{
+.Popup1 {
     position: absolute;
-    top:-10px;
-    right:110px;
+    top: -10px;
+    right: 110px;
 }
 
-.Popup2{
+.Popup2 {
     position: absolute;
-    top:-10px;
-    right:0px;
+    top: -10px;
+    right: 0px;
 }
 
 .popupContent {
@@ -279,7 +292,7 @@ optgroup {
     display: block;
     width: 100px;
     margin: 24px 10px;
-    text-align: center ;
+    text-align: center;
     background-color: #D4EBF6;
     color: #26567C;
     padding: 14px 0px;
@@ -375,6 +388,7 @@ input#open {
 input#open2 {
     display: none;
 }
+
 /* ゲームスタートボタン */
 #start-button {
     width: 216px;
@@ -383,7 +397,7 @@ input#open2 {
     text-align: center;
     color: #fff;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 800;
     background: linear-gradient(to bottom, #FFDA56 0%, #DDA107 75%, #EC905C 100%);
     box-shadow: 0 1px 0 #A53C01;
     text-shadow: 0px 3px 0.5px gray;

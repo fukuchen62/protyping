@@ -55,6 +55,9 @@
 
                     {{-- 言語とレベルを選択してゲームスタート --}}
                     <div class="gameBack">
+                        <div class="gameExplanation">
+                            <p>言語とモードを選択して確定ボタンを押してください</p>
+                        </div>
                         <form action="{{ route('game') }}" class="select" method="get">
                             {{-- 言語の選択 --}}
                             <select class="selectWrap" id="language-select" name="language">
