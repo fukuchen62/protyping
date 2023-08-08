@@ -9,6 +9,7 @@
 @section('pageCss')
     <link href="{{ asset('assets/css/shittoku_details.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/sittokubase.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/pagination.css') }}" rel="stylesheet">
 @endsection
 
 @section('key_visual')

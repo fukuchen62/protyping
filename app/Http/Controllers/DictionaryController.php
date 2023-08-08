@@ -32,19 +32,19 @@ class DictionaryController extends Controller
                     // ->orWhere('meaning', 'like', '%' . $s . '%')
                     // ->orWhere('usage', 'like', '%' . $s . '%')
                     // ->orderBy('id', 'desc')
-                    ->simplePaginate(10);
+                    ->Paginate(10);
             } elseif ($formIdentifier === 'form2') {
                 // 言語選択された場合
                 // $language_id = $request->input('param');
                 $items = Vocabulary::where('language_id', $s)
                     ->where('is_show', 1)
                     ->orderBy('word_spell', 'asc')
-                    ->simplePaginate(10);
+                    ->Paginate(10);
             } else {
                 $items = Vocabulary::where('language_id', 1)
                     ->where('is_show', 1)
                     ->orderBy('word_spell', 'asc')
-                    ->simplePaginate(10);
+                    ->Paginate(10);
             }
         } else {
             // 無条件で読み込む
@@ -52,7 +52,7 @@ class DictionaryController extends Controller
             $items = Vocabulary::where('language_id', 1)
                 ->where('is_show', 1)
                 ->orderBy('word_spell', 'asc')
-                ->simplePaginate(10);
+                ->Paginate(10);
         }
 
         $data = [

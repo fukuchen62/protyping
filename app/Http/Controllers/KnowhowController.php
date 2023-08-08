@@ -37,7 +37,7 @@ class KnowhowController extends Controller
         // getで渡したparamでカテゴリーを限定する
         $param = $request->input('param');
 
-        $items = Knowhow::where('post_category_id', $param)->simplePaginate(10);
+        $items = Knowhow::where('post_category_id', $param)->paginate(10);
         $data = [
             'items' => $items,
         ];

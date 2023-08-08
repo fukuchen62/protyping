@@ -11,6 +11,7 @@
 
 @section('pageCss')
 <link href="{{ asset('assets/css/dictionary_details.css') }}" rel="stylesheet">
+<link href="{{ asset('assets/css/pagination.css') }}" rel="stylesheet">
 @endsection
 
 @section('key_visual')
