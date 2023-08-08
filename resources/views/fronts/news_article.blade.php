@@ -1,14 +1,14 @@
 @extends('layouts.layout_front')
 
-@section('discription')
+@section('description', '最新の情報をお届けします！追加項目やランキング更新のお知らせなどはここから！')
 
 @section('keywords')
 
-@section('title', '更新情報')
+@section('title', '更新情報｜タイプコード')
 
 @section('pageCss')
-    <link rel="stylesheet" href="{{ asset('assets/css/update.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/pagination.css') }}">
+    <link href="{{ asset('assets/css/update.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/pagination.css') }}" rel="stylesheet">
 @endsection
 
 @section('key_visual')
