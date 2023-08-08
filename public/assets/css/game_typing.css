@@ -34,7 +34,7 @@
         0.04em 0.02em 0 #B6F2FF,
         0.08em 0.05em 0 #5FBFED;
     text-align: center;
-    margin: 50px;
+    margin: 25px;
     font-size: 6.4rem;
 }
 
@@ -42,14 +42,22 @@
 <!-- 言語選択 --> */
 
 .selectWrap {
-    width: 328px;
-    height: 68px;
-    padding: 10px;
+    width: 216px;
+    height: 63px;
+    padding: 5px;
     background-color: #58ABD3;
     display: inline-block;
-    margin: 0 20px;
-    border-radius: 24px;
+    margin: 20px 20px;
+    border-radius: 15px;
     font-size: 1.6rem;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0px 3px 0.5px gray;
+}
+
+.selectColor{
+    background-color: #26567c;
 }
 
 .selectWrap option {
@@ -76,9 +84,9 @@ optgroup {
 }
 
 .select {
-    margin: 100px auto 70px;
+    margin: 20px auto 20px;
     width: 724px;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
 }
 
