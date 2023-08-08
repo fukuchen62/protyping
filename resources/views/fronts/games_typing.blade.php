@@ -423,7 +423,7 @@
                 const button18 = document.getElementById('return-start'); // 『スタートに戻る』ボタンクリック時
                 const audioElement = document.getElementById('sound'); //タイプ音
 
-                let countdownTime = 180; //ゲーム用タイマー 1=1秒
+                let countdownTime = 5; //ゲーム用タイマー 1=1秒
                 // 遊ぶ文字列をデータベースから取得
                 let wordJPArray = {!! $json_array !!};
                 // console.log(wordJPArray); // 配列の中身を確認（デバッグ用）
