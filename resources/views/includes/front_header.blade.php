@@ -3,7 +3,8 @@
     <div class="container">
         <!-- ヘッダーロゴ -->
         <h1 class="headerLogo">
-            <a href="{{ route('top') }}"><img alt="タイプコードLOGO" src="{{ asset('assets/images/typecode-logo.svg') }}"></a>
+            <a href="{{ route('top') }}"><img alt="@yield('title')"
+                    src="{{ asset('assets/images/typecode-logo.svg') }}"></a>
         </h1>
         <!-- ハンバーガーメニュー部分 -->
         <div class="hanmburger">

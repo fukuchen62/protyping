@@ -55,9 +55,15 @@
 
         <h2 class="title">辞書</h2>
         <h3 class="subTitle">
-            @if (isset($_GET['s']) && $items->isNotEmpty())
+            @foreach ($languages as $item)
+                @if ($item->id == $lang_id)
+                    {{ $item->language_name }}
+                @endif
+            @endforeach
+
+            {{-- @if (isset($_GET['s']) && $items->isNotEmpty())
                 @php
-                    $item = $items->first();
+                    $item = $$lang_nameitems->first();
                     $language_id = $item->language_id;
                 @endphp
                 @if ($_GET['form_identifier'] === 'form1' && isset($_GET['s']))
@@ -89,25 +95,38 @@
                 @endif
             @else
                 HTML
-            @endif
+            @endif --}}
         </h3>
 
-
         <!-- プルダウンメニュー -->
-        <div class="selectWrap">
-            <form action="{{ route('dictionary') }}" id="select-form" method="get">
-                <input name="form_identifier" type="hidden" value="form1">
-                <select id="dictionary-select" name="s">
-                    <option value="HTML">HTML</option>
+        <div class="selectWrap1">
+            <form action="{{ route('dictionary') }}" method="get">
+                <input name="form_identifier" type="hidden" value="form2">
+                {{-- <form action="{{ route('dictionary') }}" id="select-form" method="get"> --}}
+                {{-- <input name="form_identifier" type="hidden" value="form1"> --}}
+                <div id="langSelet">
+                    {{-- <div>言語：</div> --}}
+                    <select id="dictionary-select" name="s">
+                        @foreach ($languages as $item)
+                            @if ($item->id == $lang_id)
+                                <option value="{{ $item->id }}" selected>{{ $item->language_name }}</option>
+                            @else
+                                <option value="{{ $item->id }}">{{ $item->language_name }}</option>
+                            @endif
+                        @endforeach
+                        {{-- <option value="HTML">HTML</option>
                     <option value="CSS">CSS</option>
                     <option value="JavaScript">JavaScript</option>
                     <option value="PHP">PHP</option>
                     <option value="Python">Python</option>
-                    <option value="プログラミングでよく使う英単語">プログラミングでよく使う英単語</option>
-                </select>
-            </form>
-        </div>
+                    <option value="プログラミングでよく使う英単語">プログラミングでよく使う英単語</option> --}}
+                    </select>
+                    <input type="submit" value="検索">
+                </div>
 
+            </form>
+
+        </div>
 
         <!-- 検索ボックス -->
         <!-- <p>ここから辞書検索ができます。活用してね(^^)</p> -->
@@ -127,7 +146,20 @@
                     <ul>
                         <li class="globalNav">辞書選択</li>
 
-                        <li class="subMenu2">
+                        @foreach ($languages as $item)
+                            @if ($item->id == $lang_id)
+                                <li class="subMenu2 active">
+                                    <button name="s" type="submit"
+                                        value="{{ $item->id }}">{{ $item->language_name }}</button>
+                                </li>
+                            @else
+                                <li class="subMenu2">
+                                    <button name="s" type="submit"
+                                        value="{{ $item->id }}">{{ $item->language_name }}</button>
+                                </li>
+                            @endif
+                        @endforeach
+                        {{-- <li class="subMenu2">
                             <button name="s" type="submit" value="1">HTML</button>
                         </li>
                         <li class="subMenu3">
@@ -144,7 +176,7 @@
                         </li>
                         <li class="subMenu1">
                             <button name="s" type="submit" value="6">プログラミングでよく使う英単語</button>
-                        </li>
+                        </li> --}}
                         {{-- <li class="subMenu6">
                         <button type="submit" name="s" value="6">よく使う英単語</button>
                     </li> --}}

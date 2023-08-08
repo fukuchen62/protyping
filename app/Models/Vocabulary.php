@@ -29,4 +29,15 @@ class Vocabulary extends Model
         $ret = $this->id . ':' . $this->name;
         return $ret;
     }
+
+    /**
+     * language function
+     *
+     * @return void
+     */
+    public function language()
+    {
+        $items = $this->belongsTo('App\Models\Language');
+        return $items;
+    }
 }

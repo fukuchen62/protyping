@@ -20,12 +20,14 @@ class DictionaryController extends Controller
      */
     public function getdictionary(Request $request)
     {
-        // モデルからデータを取得
+        $lang_id = 1;
+        $s = "";
+        // モデルからデータを取得=0;
         if (isset($request->s)) {
-            // 指定IDを取得する
             $s = $request->s;
             $formIdentifier = $request->input('form_identifier');
             if ($formIdentifier === 'form1') {
+
                 // 検索フォームからの自由検索
                 $items = Vocabulary::where('word_spell', 'like', '%' . $s . '%')
                     // ->orWhere('japanese', 'like', '%' . $s . '%')
@@ -36,12 +38,14 @@ class DictionaryController extends Controller
             } elseif ($formIdentifier === 'form2') {
                 // 言語選択された場合
                 // $language_id = $request->input('param');
+                $lang_id = $s;
                 $items = Vocabulary::where('language_id', $s)
                     ->where('is_show', 1)
                     ->orderBy('word_spell', 'asc')
                     ->Paginate(10);
             } else {
-                $items = Vocabulary::where('language_id', 1)
+                // 初期は一つ目の言語を表示
+                $items = Vocabulary::where('language_id', $lang_id)
                     ->where('is_show', 1)
                     ->orderBy('word_spell', 'asc')
                     ->Paginate(10);
@@ -49,13 +53,21 @@ class DictionaryController extends Controller
         } else {
             // 無条件で読み込む
             //$items = Vocabulary::all()->simplePaginate(10);
-            $items = Vocabulary::where('language_id', 1)
+            $items = Vocabulary::where('language_id', $lang_id)
                 ->where('is_show', 1)
                 ->orderBy('word_spell', 'asc')
                 ->Paginate(10);
         }
 
+        // 言語のタイトルを取得
+        $languages = Language::where('deleted_at', null)
+            ->where('is_show', 1)
+            ->get();
+
         $data = [
+            's' => $s,
+            'languages' => $languages,
+            'lang_id' => $lang_id,
             'items' => $items,
         ];
         return view('fronts.languages_dictionary', $data);
