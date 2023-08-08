@@ -93,12 +93,18 @@
                         </button>
                         <div class="circleBottom"></div>
                     </div>
+
+                    {{-- モバイル注意書き --}}
+                    <p class="warning">※こちらはパソコンで<br class="nobr">
+                        遊べるゲームです。</p>
+
                     {{-- キャッチコピー --}}
-                    <div>
+                    <div class="catchcopy">
                         <p>学ぼう！遊ぼう！目指そう！<br>
-                            Webプログラマー育成タイピングゲーム!</p>
+                            Webプログラマー育成<br class="nobr">
+                            タイピングゲーム!</p>
                     </div>
-                    <p class="warning">※こちらはパソコンで遊べるゲームです。</p>
+
                     <img alt="キャラクター" class="gameChara" src="{{ asset('assets/images/ptag_teup.svg') }}">
                     <img alt="キャラクター" class="gameChara2" src="{{ asset('assets/images/atag_teup.svg') }}">
                 </section>

@@ -35,8 +35,25 @@ h2 {
     display: none;
 }
 
+.catchcopy {
+    background-color: #f0f8ff;
+    border-radius: 10px;
+    width: 250px;
+    height: 102px;
+    margin: 25px auto 10px;
+    padding: 20px;
+}
+
+.catchcopy p {
+    color: #26567C;
+    font-weight: 700;
+    margin: 5px 0;
+}
+
+
+
 .warning {
-    font-size: 2.4rem;
+    font-size: 2.0rem;
     color: #CD3939;
     margin: 20px;
     font-weight: 500;
@@ -44,16 +61,16 @@ h2 {
 
 .gameChara {
     width: 11rem;
-    height: 11rem;
+    /* height: 11rem; */
     margin: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .gameChara2 {
     width: 11rem;
-    height: 11rem;
+    /* height: 11rem; */
     margin: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 #startBtn {
@@ -600,16 +617,26 @@ span {
         width: 48%;
     }
 
+    br.nobr {
+        display: contents;
+    }
+
+    .catchcopy {
+        width: 400px;
+        margin: 40px auto 10px;
+        padding: 27px;
+    }
+
     .gameChara {
         width: 15rem;
-        height: 15rem;
-        margin: 20px;
+        /* height: 15rem; */
+        margin: 10px 25px 50px;
     }
 
     .gameChara2 {
         width: 15rem;
-        height: 15rem;
-        margin: 20px;
+        /* height: 15rem; */
+        margin: 10px 25px 50px;
     }
 
     .infoList {
@@ -666,14 +693,16 @@ span {
 
     .gameChara {
         width: 20rem;
-        height: 20rem;
+        /* height: 20rem; */
         margin: 20px;
+        margin-bottom: 50px;
     }
 
     .gameChara2 {
         width: 20rem;
-        height: 20rem;
+        /* height: 20rem; */
         margin: 20px;
+        margin-bottom: 50px;
     }
 
     .box {
@@ -760,41 +789,41 @@ span {
         padding: 0 0 0 0;
     }
 
-.topWordRanking {
-    padding-top: 20px;
-    width: 100%;
-    height: 13rem;
-    background-color: #fff;
-    font-size: 1.6rem;
-    margin: 0 auto;
-    /* vertical-align: middle; */
-    vertical-align: baseline;
-}
+    .topWordRanking {
+        padding-top: 20px;
+        width: 100%;
+        height: 13rem;
+        background-color: #fff;
+        font-size: 1.6rem;
+        margin: 0 auto;
+        /* vertical-align: middle; */
+        vertical-align: baseline;
+    }
 
-.rank1 {
-    font-size: 1.4rem;
-    font-weight: 500;
-    padding: 10px;
-    text-align: center;
-    vertical-align: middle;
-}
+    .rank1 {
+        font-size: 1.4rem;
+        font-weight: 500;
+        padding: 10px;
+        text-align: center;
+        vertical-align: middle;
+    }
 
-.name1 {
-    font-size: 1.4rem;
-    font-weight: 800;
-    text-align: left;
-    padding: 10px;
-    vertical-align: middle;
-}
+    .name1 {
+        font-size: 1.4rem;
+        font-weight: 800;
+        text-align: left;
+        padding: 10px;
+        vertical-align: middle;
+    }
 
-.score1 {
-    color: #F96F50;
-    font-size: 1.4rem;
-    font-weight: 500;
-    text-align: right;
-    padding: 10px;
-    vertical-align: middle;
-}
+    .score1 {
+        color: #F96F50;
+        font-size: 1.4rem;
+        font-weight: 500;
+        text-align: right;
+        padding: 10px;
+        vertical-align: middle;
+    }
 
     /* パソコン1000px~ */
 }
