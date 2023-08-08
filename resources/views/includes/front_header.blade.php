@@ -19,6 +19,9 @@
                     <li class="game">
                         <a href="{{ route('game') }}">ゲーム</a>
                     </li>
+                    <li class="home">
+                        <a href="{{ route('top') }}">HOME</a>
+                    </li>
                     <li class="dictionary">
                         <a href="{{ route('dictionary') }}">辞書</a><!-- リンク先はデフォルトを英単語にする -->
                     </li>
@@ -47,9 +50,9 @@
                     <li class="privacy">
                         <a href="{{ route('privacypolicy') }}">プライバシーポリシー</a>
                     </li>
-                    <li class="admin">
+                    {{-- <li class="admin">
                         <a href="{{ route('admintop') }}">管理者ログイン</a>
-                    </li>
+                    </li> --}}
                 </ul>
             </nav>
         </div>
