@@ -3,8 +3,6 @@
 @section('description',
     'タイピングゲームで出てきた英単語やプログラミングでよく使う英単語の辞書ページです。主にHTML、CSS、JavaScript、PHP、PythonのWEB系プログラム言語を中心に紹介しています。')
 
-@endsection
-
 @section('keywords')
 @endsection
 
