@@ -14,7 +14,7 @@ h4 {
     margin-top: 40px;
 }
 
-a {
+.tips a {
     text-decoration: underline;
 }
 
@@ -97,7 +97,6 @@ caption {
     /* 共通 */
     .tips {
         /* width: 580px; */
-        padding: 0 30px;
     }
 
     .boxTips {
