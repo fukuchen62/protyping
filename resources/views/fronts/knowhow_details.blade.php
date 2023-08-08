@@ -1,10 +1,11 @@
 @extends('layouts.layout_front')
 
-@section('discription')
+@section('description',
+    'WEB業界に進むための知識が欲しい、タイピング速度の向上のためのスキルを磨きたい人向けの知っトク情報！開発環境やWordPressの説明、おすすめのWEBアプリやサイトやショートカット、役立つ資格やChromの拡張機能、過去の卒業生の作品を提載中です！')
 
 @section('keywords')
 
-@section('title', '知っトク記事詳細')
+@section('title', '知っトク情報詳細｜情報')
 
 @section('pageCss')
     <link href="{{ asset('assets/css/shittoku_details.css') }}" rel="stylesheet">
