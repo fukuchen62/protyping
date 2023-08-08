@@ -34,8 +34,8 @@
 
         {{-- コース選択 --}}
         <div class="levelButtons">
-            <a href="{{ route('ranking', ['level_id' => 1]) }}" class="levelButton {{ (request()->query('level_id') == 1 || !request()->has('level_id')) ? 'active' : '' }}">初級</a>
-            <a href="{{ route('ranking', ['level_id' => 2]) }}" class="levelButton {{ request()->query('level_id') == 2 ? 'active' : '' }}">中級</a>
+            <a href="{{ route('ranking', ['level_id' => 1]) }}" class="levelButton {{ (request()->query('level_id') == 1 || !request()->has('level_id')) ? 'active' : '' }}">初級コース</a>
+            <a href="{{ route('ranking', ['level_id' => 2]) }}" class="levelButton {{ request()->query('level_id') == 2 ? 'active' : '' }}">中級コース</a>
         </div>
 
         {{-- 言語選択ボタン --}}
@@ -65,14 +65,14 @@
                                 <tr>
                                     <td class="rank position">
                                         @if ($index === 0)
-                                        <img src="../assets/images/gold_crown.png" alt="1位王冠">
-                                        <p>1位</p>
+                                        <img src="{{ asset('assets/images/gold_crown.png') }}" alt="1位王冠">
+                                        <div class="hirank">1位</div>
                                         @elseif ($index === 1)
-                                        <img src="../assets/images/silver_crown.png" alt="2位王冠">
-                                        <p>2位</p>
+                                        <img src="{{ asset('assets/images/silver_crown.png') }}" alt="2位王冠">
+                                        <div class="hirank">2位</div>
                                         @elseif ($index === 2)
-                                        <img src="../assets/images/bronze_crown.png" alt="3位王冠">
-                                        <p>3位</p>
+                                        <img src="{{ asset('assets/images/bronze_crown.png') }}" alt="3位王冠">
+                                        <div class="hirank">3位</div>
                                         @else
                                         {{ $index + 1 }}位
                                         @endif

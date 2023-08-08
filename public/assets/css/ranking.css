@@ -6,18 +6,10 @@
     padding-top: 90px;
 }
 
-/* @media screen and (min-width: 1000px) {
-    .main {
-        padding-top: 120px;
-    }
-} */
-
 .mainContent {
     max-width: 280px;
     margin: 0 auto;
 }
-
-
 
 /* パンくずリストcss */
 .breadCrumb-001 {
@@ -86,11 +78,9 @@ input[name="course_name"] {
 /* 言語選択 */
 .word div {
     background-color: #B6F2FF;
-    /* border-radius: 13px; */
-    /* margin-top: 15px; */
     text-align: center;
     height: 5rem;
-    padding: 12px;
+    padding: 12px 0;
     border: 2px solid #5DBEEC;
 }
 
@@ -101,12 +91,12 @@ input[name="course_name"] {
 .word a {
     color: #26567c;
     font-weight: 400;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
 }
 
 .word img {
     vertical-align: baseline;
-    padding: 0 5px;
+    padding: 0 5px 0 2px;
 }
 
 
@@ -119,67 +109,31 @@ input[name="course_name"] {
 /* カードタイトル */
 h3 {
     font-size: 1.7rem;
-    font-weight: 400;
+    font-weight: 500;
     text-align: center;
 }
 
 .card {
 
     width: 280px;
-    /* height: 573px; */
     margin-bottom: 30px;
     padding: 30px 10px;
     border-radius: 10px;
     background: linear-gradient(to bottom,
             #5FBFED 0%, #178CCE 60%, #105CB2 100%);
     box-shadow: 4px 4px 4px #082045;
-    /* margin: 0 auto 30px; */
 }
 
 .cardInner {
     border: 3px solid #fff;
     border-radius: 5px;
     margin: 30px 0 0 0;
-    /* height: 450px; */
     padding: 10px;
-    /* display: flex; */
-}
-
-/* .cardItem {
-    position: relative;
-} */
-
-.position {
-    /* position: absolute; */
-    position: relative;
-    /*left: 0; */
-    margin: 0 10px;
-}
-
-/* .position img {
-    position: absolute;
-    position: relative;
-    left: 5px;
-    margin: 0 10px;
-} */
-
-.position p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
 }
 
 .cardItem {
-    /* position: relative; */
     display: flex;
     padding-top: 6px;
-}
-
-.score {
-    color: #FFD56A;
-    text-align: right;
 }
 
 /* テーブル */
@@ -192,17 +146,37 @@ h3 {
     vertical-align: middle;
 }
 
+.position {
+    position: relative;
+    margin: 0 10px;
+}
+
+.hirank {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
 .rank {
     text-align: center;
-
+    font-weight: 500;
 }
 
 .userName {
     text-align: left;
+    font-weight: 800;
+}
+
+.score {
+    color: #FFD56A;
+    text-align: right;
+    font-weight: 500;
 }
 
 td {
-    padding: 5px 4px;
+    padding: 8px 4px;
 }
 
 
@@ -344,24 +318,20 @@ td {
         width: 47%;
     }
 
+    .scoreTable {
+        font-size: 2rem;
+    }
+
     h3 {
         font-size: 2.4rem;
     }
 
+    td {
+        padding: 13px 8px;
+    }
+
     .levelButton {
         margin: 20px;
-    }
-
-    .card p {
-        font-size: 2rem;
-    }
-
-    .position {
-        margin: 0 auto;
-    }
-
-    .position p {
-        width: 45px;
     }
 
     .btnWrap {
