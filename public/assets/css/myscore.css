@@ -236,8 +236,8 @@ input[name="course_name"] {
 .listInner {
     margin: 0 0 30px 0;
     width: 280px;
-    height: 300px;
-    padding: 30px 10px;
+    height: 200px;
+    padding: 35px 10px;
     border-radius: 10px;
     background: linear-gradient(to bottom,
             #5FBFED 0%, #178CCE 60%, #105CB2 100%);
@@ -246,7 +246,7 @@ input[name="course_name"] {
 
 
 h3 {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     font-weight: 400;
     text-shadow: 0 4px 4px #26567C;
     text-align: center;
@@ -290,8 +290,8 @@ h3 {
 
 .cardInner {
 
-    width: 250px;
-    height: 190px;
+    width: 258px;
+    height: 128px;
     border: 3px solid #fff;
     border-radius: 5px;
     margin: 0 auto;
@@ -347,7 +347,7 @@ h3 {
 }
 
 .scoreItem .triangle {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     letter-spacing: 3px;
 }
 

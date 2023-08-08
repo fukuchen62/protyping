@@ -113,11 +113,9 @@
                     <div class="cardList">
 
                         <div class="listInner">
-                            <h3 id="html">HTML</h3>
                             <div class="cardInner">
                                 <div class="history">
-                                    {{--
-                                <p>履歴（過去Best3）</p> --}}
+                                    <h3 id="html">HTML</h3>
                                 </div>
                                 <div class="scoreList">
                                     <div class="scoreLine">
@@ -149,37 +147,15 @@
                                             @endif
                                         </div>
                                     </div>
-                                    {{-- <div class="scoreLine">
-
-                                    <div class="scoreItem">
-                                        <p>Score</p>
-                                    </div>
-                                    <div class="scoreItem">
-                                        <p class="triangle">▶▶▶</p>
-                                    </div>
-                                    <div class="scoreItem">
-                                        <p class="score">00点</p>
-                                    </div>
-                                </div>
-                                <div class="scoreLine">
-                                    <div class="scoreItem">
-                                        <p>Score</p>
-                                    </div>
-                                    <div class="scoreItem">
-                                        <p class="triangle">▶▶▶</p>
-                                    </div>
-                                    <div class="scoreItem">
-                                        <p class="score">00点</p>
-                                    </div>
-                                </div> --}}
                                 </div>
                             </div>
                         </div>
 
                         <div class="listInner">
-                            <h3 id="css">CSS</h3>
+
                             <div class="cardInner">
                                 <div class="history">
+                                    <h3 id="css">CSS</h3>
                                     {{--
                                 <p>履歴（過去Best3）</p> --}}
                                 </div>
@@ -241,9 +217,10 @@
                         </div>
 
                         <div class="listInner">
-                            <h3 id="javascrip">JavaScript</h3>
+
                             <div class="cardInner">
                                 <div class="history">
+                                    <h3 id="javascrip">JavaScript</h3>
                                     {{--
                                 <p>履歴（過去Best3）</p> --}}
                                 </div>
@@ -305,9 +282,10 @@
                         </div>
 
                         <div class="listInner">
-                            <h3 id="php">PHP</h3>
+
                             <div class="cardInner">
                                 <div class="history">
+                                    <h3 id="php">PHP</h3>
                                     {{--
                                 <p>履歴（過去Best3）</p> --}}
                                 </div>
@@ -369,11 +347,9 @@
                         </div>
 
                         <div class="listInner">
-                            <h3 id="python">Python</h3>
                             <div class="cardInner">
                                 <div class="history">
-                                    {{--
-                                <p>履歴（過去Best3）</p> --}}
+                                    <h3 id="python">Python</h3>
                                 </div>
                                 <div class="scoreList">
                                     <div class="scoreLine">
@@ -432,11 +408,12 @@
                             </div>
                         </div>
 
-                        <div class="listInner">
 
-                            <h3 id="engword">プログラミングでよく使う英単語</h3>
+
+                        <div class="listInner">
                             <div class="cardInner">
                                 <div class="history">
+                                    <h3 id="engword">プログラミングでよく使う英単語</h3>
                                     {{--
                                 <p>履歴（過去Best3）</p> --}}
                                 </div>
@@ -495,9 +472,67 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
 
+                        {{-- テスト --}}
+                        {{-- <div class="listInner">
+                            <div class="cardInner">
+                                <table>
+                                    <tr>
+                                        <td colspan="3">
+                                            <div class="history">
+                                                <h3 id="html">TEST</h3>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tbody class="scoreList">
+                                        <tr class="scoreLine">
+                                            <td>
+                                                <div class="scoreItem">
+                                                    <p>Score</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="scoreItem">
+                                                    <p class="triangle">▶▶▶</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="scoreItem">5555点
+                                                    @if (isset($_GET['level_id']))
+                                                        @if ($_GET['level_id'] == 1)
+                                                            @if (request()->hasCookie('saved_data1'))
+                                                                <p class="score">{{ request()->cookie('saved_data1') }}点
+                                                                </p>
+                                                            @endif
+                                                        @elseif($_GET['level_id'] == 2)
+                                                            @if (request()->hasCookie('saved_data7'))
+                                                                <p class="score">{{ request()->cookie('saved_data7') }}点
+                                                                </p>
+                                                            @endif
+                                                        @else
+                                                            @if (request()->hasCookie('saved_data1'))
+                                                                <p class="score">{{ request()->cookie('saved_data1') }}点
+                                                                </p>
+                                                            @endif
+                                                        @endif
+                                                    @else
+                                                        @if (request()->hasCookie('saved_data1'))
+                                                            <p class="score">{{ request()->cookie('saved_data1') }}点</p>
+                                                        @endif
+                                                    @endif
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div> --}}
+
+
+
+                    </div>
                 </div>
+
             </section>
 
             <!-- ランキング、マイスコアボタン -->
