@@ -135,8 +135,8 @@ ul {
     justify-content: flex-end;
     align-items: center;
     position: relative;
-    right: 20px;
     z-index: 200;
+    /* right: 20px; */
     /* 重なり順を一番上にする */
     /* background: burlywood; */
 }
@@ -206,7 +206,7 @@ ul {
     top: -100px;
     left: 0;
     margin-top: 100px;
-    padding: 40px 0;
+    /* padding: 40px 0; */
     z-index: 100;
     background: rgba(59, 163, 228, 1);
     text-align: center;
@@ -250,6 +250,10 @@ ul {
 }
 
 #drawerInput {
+    display: none;
+}
+
+.navList .game {
     display: none;
 }
 
@@ -778,8 +782,12 @@ padding: 15px;
     .navList .about,
     .navList .terms,
     .navList .privacy,
-    .navList .admin {
+    .navList .home {
         display: none;
+    }
+
+    .navList .game {
+        display: block;
     }
 
     .navList a {
@@ -906,11 +914,11 @@ padding: 15px;
 
 /* モバイル時にはパンくずリストを表示しない */
 @media screen and (max-width: 1000px) {
-.breadCrumb-001 {
-    width: 100%;
-    display: none;
-    gap: 0 5px;
-    list-style: none;
-    font-size: 1rem;
-}
+    .breadCrumb-001 {
+        width: 100%;
+        display: none;
+        gap: 0 5px;
+        list-style: none;
+        font-size: 1rem;
+    }
 }
