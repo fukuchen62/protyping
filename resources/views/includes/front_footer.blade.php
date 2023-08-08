@@ -14,10 +14,11 @@
 
                 <div class="contentItem">
                     <div class="footerNav">
+                        <div class="footerTitle"><a href="{{ route('top') }}">HOME</a></div>
                         <div class="footerTitle"><a href="{{ route('game') }}">ゲーム</a></div>
                         <div class="footerTitle"><a href="{{ route('dictionary') }}">辞書</a></div>
                         <div class="footerTitle"><a href="{{ route('ranking') }}">ランキング</a></div>
-                        <div class="footerTitle"><a href="{{ route('myscore') }}">マイスコア</a></div>
+
                     </div>
                 </div>
 
@@ -25,6 +26,7 @@
                     {{-- <div class="footerNav">
                         <div class="footerTitle"><span>知っトク情報</span></div>
                     </div> --}}
+                    <div class="footerTitle"><a href="{{ route('myscore') }}">マイスコア</a></div>
                     <div class="footerTitle"><a href="{{ route('knowhow') }}">知っトク情報</a></div>
 
                     <div class="footerTitle"><a href="{{ route('article') }}">更新情報</a></div>
