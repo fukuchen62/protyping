@@ -5,7 +5,7 @@
 
 @section('keywords')
 
-@section('title', '知っトク情報一覧')
+@section('title', '知っトク情報一覧｜情報')
 
 @section('pageCss')
     <link href="{{ asset('assets/css/shittoku.css') }}" rel="stylesheet">
