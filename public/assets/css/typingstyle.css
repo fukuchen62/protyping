@@ -1076,3 +1076,16 @@
 .regist-end{
     text-align: left;
 }
+
+.sound_switch_box {
+    display: flex;
+    flex-direction: row; /* 要素を横並びに配置 */
+    justify-content: center; /* 要素を中央寄せ */
+    align-items: center; /* 要素を垂直方向に中央寄せ */
+}
+
+.sound_switch {
+    display: flex;
+    align-items: center;
+    margin-right: 10px; /* 要素間の間隔を調整 */
+}

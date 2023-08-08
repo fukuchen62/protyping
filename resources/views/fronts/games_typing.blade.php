@@ -91,7 +91,7 @@
                     <!-- ポップアップ -->
                     <div class="popupWrop">
                         <!-- 設定のポップアップ -->
-                        <div class="Popup1">
+                        {{-- <div class="Popup1">
                             <input id="open" type="checkbox">
                             <label class="openBtn" for="open"><img alt="歯車アイコン"
                                     src="{{ asset('assets/images/gear.svg') }}">設定</label>
@@ -100,15 +100,12 @@
                                 <!-- <label class="closeBtn" for="open"></label> -->
                                 <p>設定</p>
                                 <p>ゲーム中の音楽や背景映像などの設定ができます。</p>
-                                <p>BGM</p>
-                                <p>タイプ音</p>
-                                <p>ミス音</p>
-                                <p>ゲーム画面の背景</p>
+
                             </div>
                             <div class="close">
                                 <label class="closeBtn" for="open">閉じる</label>
                             </div>
-                        </div>
+                        </div> --}}
                         <!-- 遊び方のポップアップ -->
                         <div class="Popup2">
                             <input id="open2" type="checkbox">
@@ -160,8 +157,19 @@
                             <button class="off-btn btn" type="button">OFF</button>
                         </div>
                     </div> --}}
+                    <div class="audio_box">
+                        <div id="audio_box" class="audio_box">
+                            <audio type="audio/mpeg" controls autoplay loop="metadata" id="audio" style="display: none;">
+                                <source src="{{asset('assets/music/typcode_bgm6.mp3')}}" type="audio/mp3" />
+                            </audio>
+                            <p style="color:#fff;">SOUND</p>
+                            <div class="sound_switch_box">
+                                <div id="ON" class="sound_switchOn ON">ON</div>
+                                <div id="OFF" class="sound_switchOff OFF">OFF</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
                 {{-- 消すとゲームが動かなくなる！ --}}
                 {{-- モードとコース選択画面 --}}
                 <div id="game-view5" style="display: none;">
@@ -295,7 +303,7 @@
                         <div class="deco_key18"></div>
                     </div>
                     <!-- 音声再生用の<audio>要素 -->
-                    <audio id="sound" src="{{ asset('assets/music/typcode_bgm6.mp3') }}"></audio>
+                    {{-- <audio id="sound" src="{{ asset('assets/music/typcode_bgm6.mp3') }}"></audio> --}}
                 </div>
                 {{-- 消すとゲームが動かなくなる！ --}}
 
@@ -426,7 +434,7 @@
                         const button17 = document.getElementById('register-ranking'); // 『登録する』ボタンクリック時
                         const view7 = document.getElementById('game-view7'); //ランキング登録完了画面表示
                         const button18 = document.getElementById('return-start'); // 『スタートに戻る』ボタンクリック時
-                        const audioElement = document.getElementById('sound'); //タイプ音
+                        //const audioElement = document.getElementById('sound'); //タイプ音
 
                         let countdownTime = 5; //ゲーム用タイマー 1=1秒
                         // 遊ぶ文字列をデータベースから取得
@@ -700,7 +708,7 @@
                             missFlag = false;
 
                             startTimer(); //タイマースタート
-                            audioElement.play(); //BGM
+                            //audioElement.play(); //BGM
 
                             // 『ミスだけ』を選択した場合
                             if (moPlay) {
@@ -840,8 +848,8 @@
                             accuracy = correct / (correct + miss);
                             score = isStopped ? '-' : Math.floor(speed * accuracy ** 3); // スコアを数値として設定
 
-                            audioElement.pause(); // 音声を停止
-                            audioElement.currentTime = 0; // 音声を再生位置の初めに戻す
+                            //audioElement.pause(); // 音声を停止
+                            //audioElement.currentTime = 0; // 音声を再生位置の初めに戻す
 
                             let html;
                             html = '<ul>';
@@ -1717,6 +1725,21 @@
                         });
                     })(window, document);
 
+                });
+
+                // BGMのON・OFF切り替え
+                document.addEventListener("DOMContentLoaded", function() {
+                    let audio = document.getElementById("audio");
+                    let soundOnButton = document.getElementById("ON");
+                    let soundOffButton = document.getElementById("OFF");
+
+                    soundOnButton.addEventListener("click", function() {
+                        audio.play(); // 音を再生する
+                    });
+
+                    soundOffButton.addEventListener("click", function() {
+                        audio.pause(); // 音を停止する
+                    });
                 });
             </script>
         </div>
