@@ -54,29 +54,31 @@
                     <h2 class="gameTitle">GAME</h2>
 
                     {{-- 言語とレベルを選択してゲームスタート --}}
-                    <form action="{{ route('game') }}" class="select" method="get">
-                        {{-- 言語の選択 --}}
-                        <select class="selectWrap" id="language-select" name="language">
-                            <option value="1"selected>HTML</option>
-                            <option value="2">CSS</option>
-                            <option value="3">JavaScript</option>
-                            <option value="4">PHP</option>
-                            <option value="5">Python</option>
-                            <option value="6">よく使う英単語</option>
-                            <!-- 他の言語のオプションを追加 -->
-                        </select>
+                    <div class="gameBack">
+                        <form action="{{ route('game') }}" class="select" method="get">
+                            {{-- 言語の選択 --}}
+                            <select class="selectWrap" id="language-select" name="language">
+                                <option value="1"selected>HTML</option>
+                                <option value="2">CSS</option>
+                                <option value="3">JavaScript</option>
+                                <option value="4">PHP</option>
+                                <option value="5">Python</option>
+                                <option value="6">よく使う英単語</option>
+                                <!-- 他の言語のオプションを追加 -->
+                            </select>
 
-                        {{-- レベルの選択 --}}
-                        <select class="selectWrap" id="level-select" name="level">
-                            <option value="1"selected>初級</option>
-                            <option value="2">中級</option>
-                            <!-- 他のレベルのオプションを追加 -->
-                        </select>
-                        <input class="selectWrap selectColor" type="submit" value="言語・モード決定ボタン">
-                    </form>
-                    {{-- スタートボタン --}}
-                    {{-- <div id="game-explain"></div> --}}
-                    <button class="box" id="start-button" type="button">スタート</button>
+                            {{-- レベルの選択 --}}
+                            <select class="selectWrap" id="level-select" name="level">
+                                <option value="1"selected>初級</option>
+                                <option value="2">中級</option>
+                                <!-- 他のレベルのオプションを追加 -->
+                            </select>
+                            <input class="selectWrap selectColor" type="submit" value="確定">
+                        </form>
+                        {{-- スタートボタン --}}
+                        {{-- <div id="game-explain"></div> --}}
+                        <button class="box" id="start-button" type="button">スタート</button>
+                    </div>
 
                     {{-- 消すとゲームが動かなくなる！ --}}
                     {{-- 遊び方 --}}
@@ -172,7 +174,7 @@
                 </div>
                 <!-- ゲーム画面２ -->
                 <div id="game-view2">
-                    <div>
+                    <div class="display-mode">
                         @if (isset($_GET['language']))
                             @if ($_GET['language'] == 1)
                                 <p>　選択中の言語　　▶　HTML</p>
@@ -934,8 +936,7 @@
                             html += '</ul>';
                             resData[0].innerHTML = html;
                             gameData = [score, getLevel(score), convTime(time), correct, miss, convStr(speed.toFixed(
-                                2)), convStr((accuracy * 100).toFixed(2)) + '%', getWeaks(weakKeys)
-                            ];
+                                2)), convStr((accuracy * 100).toFixed(2)) + '%', getWeaks(weakKeys)];
 
                             // if (resCmt) {
                             //     const resComment = document.getElementById('result-comment');
