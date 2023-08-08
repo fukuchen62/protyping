@@ -64,15 +64,10 @@ class AdminScoreController extends Controller
                 ->orderBy('score', 'desc')
                 ->get();
         } else {
-            $items = Score::where('is_show', 1)
-                // ->where('language_id', $language_id)
-                ->orderBy('language_id', 'asc')
-                ->orderBy('level_id', 'asc')
-                ->orderBy('score', 'desc')
-                ->get();
-            // $items = Score::all()
-            //     ->orderBy('score', 'desc')
-            // ;
+            $items = Score::all()
+                ->sortBy('language_id')
+                ->sortBy('level_id')
+                ->sortByDesc('score');
         }
 
         // 言語一覧
@@ -193,12 +188,12 @@ class AdminScoreController extends Controller
         $item = Score::find($request->id);
 
         // スコアカテゴリー
-        $score_items = Score::All();
+        // $score_items = Score::All();
 
         // 渡すデータ
         $data = [
             'score' => $item,
-            'category_items' => $score_items,
+            // 'category_items' => $score_items,
             'login_user' => $login_user,
         ];
 
@@ -232,30 +227,12 @@ class AdminScoreController extends Controller
 
         // 更新日時を刷新
         $score->updated_at = date("Y-m-d H:i:s");
-        $score->updated_user_id = $login_user->id;
+        // $score->updated_user_id = $login_user->id;
 
         // インスタンスに編集結果を入れ替え、保存
         $score->fill($form)->save();
 
         return redirect(route('indexscore'));
-
-        // // ニュースを読み直す
-        // $items = News::where('deleted_at', null)
-        //     ->orderBy('id', 'desc')
-        //     ->get();
-
-        // // ニュースの件数
-        // $news_count = count($items);
-
-        // // 渡すデータ
-        // $data = [
-        //     'news_list' => $items,
-        //     'count' => $news_count,
-        //     'login_user' => $login_user,
-        // ];
-
-        // // ブレッドファイルを呼び出す
-        // return view('cms.cms_news_list', $data);
     }
 
     /**

@@ -51,19 +51,21 @@
 
     <table class="info">
         <tr>
-            <th width="10%">No</th>
-            <th width="10%">言語種別ID</th>
-            <th width="10%">難易度ID</th>
-            <th width="10%">ユーザID</th>
+            <th width="5%">No</th>
+            <th width="5%">ID</th>
+            <th width="5%">言語ID</th>
+            <th width="5%">難易度</th>
+            <th width="8%">ユーザID</th>
             <th width="20%">ユーザ名</th>
-            <th width="10%">スコア</th>
+            <th width="5%">スコア</th>
             <th width="15%">取得日時</th>
-            <th width="10%">表示</th>
-            {{-- <th width="10%">修正</th> --}}
+            <th width="5%">表示</th>
+            <th width="10%">修正</th>
         </tr>
         @foreach ($score_list as $key => $item)
             <tr>
                 <td>{{ $key + 1 }}</td>
+                <td>{{ $item->id }}</td>
                 <td>{{ $item->language_id }}</td>
                 <td>{{ $item->level_id }}</td>
                 <td>{{ $item->user_id }}</td>
@@ -71,8 +73,8 @@
                 <td>{{ $item->score }}</td>
                 <td>{{ $item->created_at }}</td>
                 <td>{{ $item->is_show }}</td>
-                {{-- <td class="edit"><a href="{{ route('editscore', ['id' => $item->id]) }}">編集</a></td> --}}
-                {{-- </tr> --}}
+                <td class="edit"><a href="{{ route('editscore', ['id' => $item->id]) }}">編集</a></td>
+            </tr>
         @endforeach
     </table>
 

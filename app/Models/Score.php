@@ -12,14 +12,17 @@ class Score extends Model
     // IDは自動生成するものなので、書き換えることはできない
     protected $guarded = array('id');
 
+    // 編集できるカラム
+    protected $fillable = ['is_show']; // カラム名を追加
+
     // バリデーションルール
     public static $rules = [
         // 'game_id' => 'required',
         // 'language_id' => 'required',
         // 'level_id' => 'required',
         // 'user_id' => 'required',
-        'username' => 'min:0|max:30',
-        'score' => 'max:10000',
+        // 'username' => 'min:0|max:30',
+        // 'score' => 'max:10000',
         'is_show' => 'required',
     ];
 
@@ -28,17 +31,6 @@ class Score extends Model
         $ret = $this->id . ':' . $this->score;
         return $ret;
     }
-
-
-
-    // モデルと関連するテーブル名を指定
-    protected $table = 'scores';
-
-    // 主キーのカラム名を指定
-    protected $primaryKey = 'id';
-
-    // モデルと関連するテーブルのカラム名を指定
-    protected $fillable = ['language_id', 'score']; // カラム名を追加
 
     // モデルと関連する他のモデルを定義
     public function language()

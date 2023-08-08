@@ -34,7 +34,44 @@
     <form method="post" action="{{ route('editscore') }}">
         <table class="info edit_info">
             @csrf
-            <input type="hidden" name="id" value="{{ $score->id }}">
+            {{-- <input type="hidden" name="id" value="{{ $score->id }}"> --}}
+            <tr>
+                <th width="15%"> <span>*</span>ID: </th>
+                <td>
+                    <input type="text" name="id" value="{{ $score->id }}" readonly="readonly">
+                </td>
+            </tr>
+            <tr>
+                <th width="15%"> <span>*</span>言語ID: </th>
+                <td>
+                    <input type="text" name="language_id" value="{{ $score->language_id }}" readonly="readonly">
+                </td>
+            </tr>
+            <tr>
+                <th width="15%"> <span>*</span>難易度ID: </th>
+                <td>
+                    <input type="text" name="level_id" value="{{ $score->level_id }}" readonly="readonly">
+                </td>
+            </tr>
+            <tr>
+                <th width="15%"> <span>*</span>ユーザーID: </th>
+                <td>
+                    <input type="text" name="user_id" value="{{ $score->user_id }}" readonly="readonly">
+                </td>
+            </tr>
+            <tr>
+                <th width="15%"> <span>*</span>ユーザー名: </th>
+                <td>
+                    <input type="text" name="username" value="{{ $score->username }}" readonly="readonly">
+                </td>
+            </tr>
+            <tr>
+                <th width="15%"> <span>*</span>スコア: </th>
+                <td>
+                    <input type="text" name="score" value="{{ $score->score }}" readonly="readonly">
+                </td>
+            </tr>
+
             <tr>
                 <th> <span>*</span> 表示フラグ:</th>
                 <td class="isshow">
@@ -53,8 +90,7 @@
             @php
                 $id = $score->id;
             @endphp
-            <input type="submit"value="修正" class="submit_btn"
-                onclick="return confirm_dialog('お問い合わせNo{{ $id }}を編集します。よろしいでしょうか。')">
+            <input type="submit"value="修正" class="submit_btn" onclick="return confirm_dialog('スコアを編集します。よろしいでしょうか。')">
         </div>
 
     </form>
