@@ -131,6 +131,16 @@
                                                     @if (request()->hasCookie('saved_data1'))
                                                         <p class="score">{{ request()->cookie('saved_data1') }}点</p>
                                                     @endif
+                                                    @if(isset($bestScores) && is_array($bestScores) && count($bestScores) > 0)
+                                                        <h3>Best 3 Scores:</h3>
+                                                        <ul>
+                                                            @foreach($bestScores as $score)
+                                                                <li>{{ $score }}</li>
+                                                            @endforeach
+                                                        </ul>
+                                                    @else
+                                                        <p>No best scores available.</p>
+                                                    @endif
                                                 @elseif($_GET['level_id'] == 2)
                                                     @if (request()->hasCookie('saved_data7'))
                                                         <p class="score">{{ request()->cookie('saved_data7') }}点</p>
@@ -143,6 +153,16 @@
                                             @else
                                                 @if (request()->hasCookie('saved_data1'))
                                                     <p class="score">{{ request()->cookie('saved_data1') }}点</p>
+                                                @endif
+                                                @if(isset($bestScores) && is_array($bestScores) && count($bestScores) > 0)
+                                                    <h3>Best 3 Scores:</h3>
+                                                    <ul>
+                                                        @foreach($bestScores as $score)
+                                                            <li>{{ $score }}</li>
+                                                        @endforeach
+                                                    </ul>
+                                                @else
+                                                    <p>No best scores available.</p>
                                                 @endif
                                             @endif
                                         </div>

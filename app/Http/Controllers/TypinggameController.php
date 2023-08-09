@@ -103,7 +103,24 @@ class TypinggameController extends Controller
             case '1':
                 if ($scoreModel->level_id == 1) {
                     // ゆっくりコース
-                    $response->cookie('saved_data1', $score, 600); // 60分 = 1時間
+                    // 現在のクッキーを取得
+                    $savedData1 = json_decode($request->cookie('saved_data1'), true) ?? [];
+
+                    // 既存のベスト3の値を取得
+                    $bestScores = isset($savedData1['best_scores']) ? $savedData1['best_scores'] : [];
+
+                    // ベスト3の値を更新
+                    array_push($bestScores, $score);
+                    rsort($bestScores); // 値を降順にソート
+
+                    if (count($bestScores) > 3) {
+                        array_pop($bestScores); // 要素が3つを超える場合、最小値を削除
+                    }
+
+                    // 更新されたベスト3の値をセット
+                    $savedData1['best_scores'] = $bestScores;
+                    $response->withCookie(cookie('saved_data1', json_encode($savedData1), 600));
+                    // $response->cookie('saved_data1', $score, 600); // 60分 = 1時間
                 } elseif ($scoreModel->level_id == 2) {
                     // ダッシュコース
                     $response->cookie('saved_data7', $score, 600); // 60分 = 1時間
