@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
 
+    {{-- ページタイトル --}}
+    <title>@yield('title')</title>
+
     {{-- ディスカッション --}}
     <meta
         content="プログラミングでよく使う英単語のタイピングゲームができるWEBアプリです。プログラミングで使う英単語のスペル習得、専門用語とタイピング速度の向上の力がつくと共に、IT業界で役立つ基本的な情報(知っトク情報)も掲載しております。"
         name="description">
     {{-- キーワード --}}
-    <meta content="タイピング,Typing,Webプログラマー,HTMLタグ,CSS,JavaScript,WordPres,ワードプレス,PHP,Python,プログラミングでよく使う英単語"
+    <meta content="タイピング,Typing,Webプログラマー,HTMLタグ,CSS,JavaScript,WordPress,ワードプレス,PHP,Python,プログラミングでよく使う英単語"
         name="keywords">
 
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
@@ -19,9 +22,6 @@
     <!-- faviconを読み込む -->
     <link href="{{ asset('assets/images/icon/favicon.ico') }}" id="favicon" rel="icon">
     <link href="{{ asset('assets/images/icon/apple_touch_icon_180x180.png') }}" rel="apple-touch-icon" sizes="180x180">
-
-    {{-- ページタイトル --}}
-    <title>@yield('title')</title>
 
     <!-- reset.cssファイルを読み込む -->
     <link href="{{ asset('assets/css/reset.css') }}" rel="stylesheet">

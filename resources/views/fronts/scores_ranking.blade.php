@@ -67,8 +67,8 @@
 
 
                     @foreach ($languages as $language)
-                        <div class="card">
-                            <h3 id="language_{{ $language->id }}">{{ $language->language_name }}</h3>
+                        <div class="card" id="language_{{ $language->id }}">
+                            <h3 >{{ $language->language_name }}</h3>
                             <div class="cardInner">
                                 @if (count($scoresByLanguage[$language->id]) > 0)
                                     <table class="scoreTable">

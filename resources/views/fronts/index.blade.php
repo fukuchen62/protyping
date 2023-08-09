@@ -175,7 +175,7 @@
                 <section class="infoNews">
                     <h3>知っトク情報</h3>
                     <div class="listBtn"><a href="{{ route('knowhow') }}">一覧を見る</a></div>
-                    <p class="explain">サイト内の日々の更新をUPしていきます</p>
+                    <p class="explain">IT業界で役立つ情報を掲載しています</p>
                     <p class="yellowLine"></p>
                     <ul class="infoList">
                         <!-- $items を使った表示や処理 -->
@@ -230,9 +230,9 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://ahaha-surf.com/" target="_blank">
-                                <div class="linkBase"><img src="{{ asset('assets/images/top_banner/ahahaha.png') }}"
-                                        alt="阿波波">
+                            <a href="https://www.awa-short.com/" target="_blank">
+                                <div class="linkBase"><img
+                                        src="{{ asset('assets/images/top_banner/awa_short_logo.png') }}" alt="あわ☆しょーと！">
                                 </div>
                             </a>
                         </li>
