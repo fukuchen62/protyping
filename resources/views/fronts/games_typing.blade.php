@@ -27,11 +27,16 @@
                 {{-- 遊ぶ文字列をJavaScriptに渡す --}}
                 @php
                     $json_array = []; // 空の配列として初期化
+                    $japanese_array = []; // 日本語空の配列として初期化
+                    
                     foreach ($items as $item) {
                         $json_array[] = $item->word_spell; // 配列にJSON形式の文字列を追加
+                        $japanese_array[] = $item->japanese; // 配列にJSON形式の文字列を追加
+                    
                         //var_dump($json_array); // デバッグ用に配列を表示（必要に応じてコメントアウト）
                     }
                     $json_array = json_encode($json_array); // PHPの配列をJSON形式の文字列に変換
+                    $japanese_array = json_encode($japanese_array); // PHPの配列をJSON形式の文字列に変換
                     //var_dump($json_array); // デバッグ用に配列を表示（必要に応じてコメントアウト）
                 @endphp
 
@@ -451,8 +456,11 @@
                         let countdownTime = 5; //ゲーム用タイマー 1=1秒
                         // 遊ぶ文字列をデータベースから取得
                         let wordJPArray = {!! $json_array !!};
+                        // 日本語表記
+                        let jpArray = {!! $japanese_array !!};
+
                         // console.log(wordJPArray); // 配列の中身を確認（デバッグ用）
-                        let wordJP1 = wordJPArray; // 表示要素
+                        let wordJP1 = jpArray; // 表示要素
                         let wordJP2 = wordJPArray; // 読み仮名文章
                         // console.log(wordJP1); // 配列の中身を確認（デバッグ用
                         // console.log(wordJP2); // 配列の中身を確認（デバッグ用
@@ -818,8 +826,12 @@
                             if (count == limit) {
                                 finish();
                             } else {
+                                // 日本語
                                 example.innerHTML = '<div>' + wordJP1[ridx[count]] + '</div>';
+                                // 英語（小文字）
                                 kana.innerHTML = '<div>' + wordJP2[ridx[count]] + '</div>';
+
+                                // 練習用の大文字
                                 wordR = wordRs[ridx[count]];
                                 let html;
                                 html = '<div><span class="typed"></span><span>';
