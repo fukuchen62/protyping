@@ -46,7 +46,7 @@
     .main {
         width: 1000px;
         margin-bottom: 20px;
-        margin-left: calc((100vw - 1000px) / 2);
+        /* margin-left: calc((100vw - 1000px) / 2); */
         padding-top: 120px;
     }
 }
