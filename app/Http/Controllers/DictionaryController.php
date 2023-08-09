@@ -28,7 +28,7 @@ class DictionaryController extends Controller
         }
 
         // 検索キーワード
-        $s = "";
+        $s = '';
         if (isset($request->s)) {
             $s = $request->s;
         }

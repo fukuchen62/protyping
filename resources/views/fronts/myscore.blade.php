@@ -16,11 +16,7 @@
 {{-- メインコンテンツの内容 --}}
 @section('content')
 
-
     <main class="main" id="main">
-
-
-
         <div class="mainContent">
             <!-- パンくずリスト -->
             <ol class="breadCrumb-001">
@@ -28,7 +24,7 @@
                 <li><a href="{{ route('myscore') }}">マイスコア</a></li>
             </ol>
 
-
+            {{-- Cookieに書き込むサンプル --}}
             {{-- <div>
             <form action="{{ route('game') }}" method="POST">
                 @csrf
@@ -48,15 +44,15 @@
             </section>
 
             {{-- レベル切り替えボタン --}}
-            <div class="levelButtons">
+            {{-- <div class="levelButtons">
                 <a class="levelButton {{ request()->query('level_id') == 1 || !request()->has('level_id') ? 'active' : '' }}"
                     href="{{ route('myscore', ['level_id' => 1]) }}">初級</a>
                 <a class="levelButton {{ request()->query('level_id') == 2 ? 'active' : '' }}"
                     href="{{ route('myscore', ['level_id' => 2]) }}">中級</a>
-            </div>
+            </div> --}}
 
             <!-- 言語選択 -->
-            <nav class="word">
+            {{-- <nav class="word">
                 <div>
                     <img alt="↓ボタン" src="{{ asset('assets/images/arrow.png') }}">
                     <a href="#html">HTML</a>
@@ -81,33 +77,10 @@
                     <img alt="↓ボタン" src="{{ asset('assets/images/arrow.png') }}">
                     <a href="#engword">プログラミングでよく使う英単語</a>
                 </div>
-            </nav>
-
+            </nav> --}}
 
             <!-- ここから動的 -->
             <section class="scoreWrap">
-
-                <!-- ユーザーネーム -->
-                <!-- 人とゆーざーを囲うdiv -->
-                {{-- <div class="usernameWrap"> --}}
-                <!-- <div class="usernameInner"> -->
-                <!-- 人のシルエット背景 -->
-                {{-- <div class="icon">
-                    <img src="{{ asset('assets/images/human.png') }}" alt="人アイコン">
-                </div> --}}
-
-                {{-- <div class="usernameItem">
-                    <div class="itemFirst">
-                        <p>ユーザーネーム</p>
-                    </div>
-                    <div class="itemSecond">
-                        <p>しんちゃん</p>
-                    </div>
-                </div> --}}
-                <!-- </div> -->
-                {{--
-            </div> --}}
-
                 <!--カード全体を囲う枠 -->
                 <div class="cardWrap">
                     <div class="cardList">
@@ -131,10 +104,10 @@
                                                     @if (request()->hasCookie('saved_data1'))
                                                         <p class="score">{{ request()->cookie('saved_data1') }}点</p>
                                                     @endif
-                                                    @if(isset($bestScores) && is_array($bestScores) && count($bestScores) > 0)
+                                                    @if (isset($bestScores) && is_array($bestScores) && count($bestScores) > 0)
                                                         <h3>Best 3 Scores:</h3>
                                                         <ul>
-                                                            @foreach($bestScores as $score)
+                                                            @foreach ($bestScores as $score)
                                                                 <li>{{ $score }}</li>
                                                             @endforeach
                                                         </ul>
@@ -154,10 +127,10 @@
                                                 @if (request()->hasCookie('saved_data1'))
                                                     <p class="score">{{ request()->cookie('saved_data1') }}点</p>
                                                 @endif
-                                                @if(isset($bestScores) && is_array($bestScores) && count($bestScores) > 0)
+                                                @if (isset($bestScores) && is_array($bestScores) && count($bestScores) > 0)
                                                     <h3>Best 3 Scores:</h3>
                                                     <ul>
-                                                        @foreach($bestScores as $score)
+                                                        @foreach ($bestScores as $score)
                                                             <li>{{ $score }}</li>
                                                         @endforeach
                                                     </ul>
@@ -170,384 +143,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="listInner">
-
-                            <div class="cardInner">
-                                <div class="history">
-                                    <h3 id="css">CSS</h3>
-                                    {{--
-                                <p>履歴（過去Best3）</p> --}}
-                                </div>
-                                <div class="scoreList">
-                                    <div class="scoreLine">
-                                        <div class="scoreItem">
-                                            <p>Score</p>
-                                        </div>
-                                        <div class="scoreItem">
-                                            <p class="triangle">▶▶▶</p>
-                                        </div>
-                                        <div class="scoreItem">
-                                            @if (isset($_GET['level_id']))
-                                                @if ($_GET['level_id'] == 1)
-                                                    @if (request()->hasCookie('saved_data2'))
-                                                        <p class="score">{{ request()->cookie('saved_data2') }}点</p>
-                                                    @endif
-                                                @elseif($_GET['level_id'] == 2)
-                                                    @if (request()->hasCookie('saved_data8'))
-                                                        <p class="score">{{ request()->cookie('saved_data8') }}点</p>
-                                                    @endif
-                                                @else
-                                                    @if (request()->hasCookie('saved_data2'))
-                                                        <p class="score">{{ request()->cookie('saved_data2') }}点</p>
-                                                    @endif
-                                                @endif
-                                            @else
-                                                @if (request()->hasCookie('saved_data2'))
-                                                    <p class="score">{{ request()->cookie('saved_data2') }}点</p>
-                                                @endif
-                                            @endif
-                                        </div>
-                                    </div>
-                                    {{-- <div class="scoreLine">
-
-                                    <div class="scoreItem">
-                                        <p>Score</p>
-                                    </div>
-                                    <div class="scoreItem">
-                                        <p class="triangle">▶▶▶</p>
-                                    </div>
-                                    <div class="scoreItem">
-                                        <p class="score">00点</p>
-                                    </div>
-                                </div>
-                                <div class="scoreLine">
-                                    <div class="scoreItem">
-                                        <p>Score</p>
-                                    </div>
-                                    <div class="scoreItem">
-                                        <p class="triangle">▶▶▶</p>
-                                    </div>
-                                    <div class="scoreItem">
-                                        <p class="score">00点</p>
-                                    </div>
-                                </div> --}}
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="listInner">
-
-                            <div class="cardInner">
-                                <div class="history">
-                                    <h3 id="javascrip">JavaScript</h3>
-                                    {{--
-                                <p>履歴（過去Best3）</p> --}}
-                                </div>
-                                <div class="scoreList">
-                                    <div class="scoreLine">
-                                        <div class="scoreItem">
-                                            <p>Score</p>
-                                        </div>
-                                        <div class="scoreItem">
-                                            <p class="triangle">▶▶▶</p>
-                                        </div>
-                                        <div class="scoreItem">
-                                            @if (isset($_GET['level_id']))
-                                                @if ($_GET['level_id'] == 1)
-                                                    @if (request()->hasCookie('saved_data3'))
-                                                        <p class="score">{{ request()->cookie('saved_data3') }}点</p>
-                                                    @endif
-                                                @elseif($_GET['level_id'] == 2)
-                                                    @if (request()->hasCookie('saved_data9'))
-                                                        <p class="score">{{ request()->cookie('saved_data9') }}点</p>
-                                                    @endif
-                                                @else
-                                                    @if (request()->hasCookie('saved_data3'))
-                                                        <p class="score">{{ request()->cookie('saved_data3') }}点</p>
-                                                    @endif
-                                                @endif
-                                            @else
-                                                @if (request()->hasCookie('saved_data3'))
-                                                    <p class="score">{{ request()->cookie('saved_data3') }}点</p>
-                                                @endif
-                                            @endif
-                                        </div>
-                                    </div>
-                                    {{-- <div class="scoreLine">
-
-                                    <div class="scoreItem">
-                                        <p>Score</p>
-                                    </div>
-                                    <div class="scoreItem">
-                                        <p class="triangle">▶▶▶</p>
-                                    </div>
-                                    <div class="scoreItem">
-                                        <p class="score">00点</p>
-                                    </div>
-                                </div>
-                                <div class="scoreLine">
-                                    <div class="scoreItem">
-                                        <p>Score</p>
-                                    </div>
-                                    <div class="scoreItem">
-                                        <p class="triangle">▶▶▶</p>
-                                    </div>
-                                    <div class="scoreItem">
-                                        <p class="score">00点</p>
-                                    </div>
-                                </div> --}}
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="listInner">
-
-                            <div class="cardInner">
-                                <div class="history">
-                                    <h3 id="php">PHP</h3>
-                                    {{--
-                                <p>履歴（過去Best3）</p> --}}
-                                </div>
-                                <div class="scoreList">
-                                    <div class="scoreLine">
-                                        <div class="scoreItem">
-                                            <p>Score</p>
-                                        </div>
-                                        <div class="scoreItem">
-                                            <p class="triangle">▶▶▶</p>
-                                        </div>
-                                        <div class="scoreItem">
-                                            @if (isset($_GET['level_id']))
-                                                @if ($_GET['level_id'] == 1)
-                                                    @if (request()->hasCookie('saved_data4'))
-                                                        <p class="score">{{ request()->cookie('saved_data4') }}点</p>
-                                                    @endif
-                                                @elseif($_GET['level_id'] == 2)
-                                                    @if (request()->hasCookie('saved_data10'))
-                                                        <p class="score">{{ request()->cookie('saved_data10') }}点</p>
-                                                    @endif
-                                                @else
-                                                    @if (request()->hasCookie('saved_data4'))
-                                                        <p class="score">{{ request()->cookie('saved_data4') }}点</p>
-                                                    @endif
-                                                @endif
-                                            @else
-                                                @if (request()->hasCookie('saved_data4'))
-                                                    <p class="score">{{ request()->cookie('saved_data4') }}点</p>
-                                                @endif
-                                            @endif
-                                        </div>
-                                    </div>
-                                    {{-- <div class="scoreLine">
-
-                                    <div class="scoreItem">
-                                        <p>Score</p>
-                                    </div>
-                                    <div class="scoreItem">
-                                        <p class="triangle">▶▶▶</p>
-                                    </div>
-                                    <div class="scoreItem">
-                                        <p class="score">00点</p>
-                                    </div>
-                                </div>
-                                <div class="scoreLine">
-                                    <div class="scoreItem">
-                                        <p>Score</p>
-                                    </div>
-                                    <div class="scoreItem">
-                                        <p class="triangle">▶▶▶</p>
-                                    </div>
-                                    <div class="scoreItem">
-                                        <p class="score">00点</p>
-                                    </div>
-                                </div> --}}
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="listInner">
-                            <div class="cardInner">
-                                <div class="history">
-                                    <h3 id="python">Python</h3>
-                                </div>
-                                <div class="scoreList">
-                                    <div class="scoreLine">
-                                        <div class="scoreItem">
-                                            <p>Score</p>
-                                        </div>
-                                        <div class="scoreItem">
-                                            <p class="triangle">▶▶▶</p>
-                                        </div>
-                                        <div class="scoreItem">
-                                            @if (isset($_GET['level_id']))
-                                                @if ($_GET['level_id'] == 1)
-                                                    @if (request()->hasCookie('saved_data5'))
-                                                        <p class="score">{{ request()->cookie('saved_data5') }}点</p>
-                                                    @endif
-                                                @elseif($_GET['level_id'] == 2)
-                                                    @if (request()->hasCookie('saved_data11'))
-                                                        <p class="score">{{ request()->cookie('saved_data11') }}点</p>
-                                                    @endif
-                                                @else
-                                                    @if (request()->hasCookie('saved_data5'))
-                                                        <p class="score">{{ request()->cookie('saved_data5') }}点</p>
-                                                    @endif
-                                                @endif
-                                            @else
-                                                @if (request()->hasCookie('saved_data5'))
-                                                    <p class="score">{{ request()->cookie('saved_data5') }}点</p>
-                                                @endif
-                                            @endif
-                                        </div>
-                                    </div>
-                                    {{-- <div class="scoreLine">
-
-                                    <div class="scoreItem">
-                                        <p>Score</p>
-                                    </div>
-                                    <div class="scoreItem">
-                                        <p class="triangle">▶▶▶</p>
-                                    </div>
-                                    <div class="scoreItem">
-                                        <p class="score">00点</p>
-                                    </div>
-                                </div>
-                                <div class="scoreLine">
-                                    <div class="scoreItem">
-                                        <p>Score</p>
-                                    </div>
-                                    <div class="scoreItem">
-                                        <p class="triangle">▶▶▶</p>
-                                    </div>
-                                    <div class="scoreItem">
-                                        <p class="score">00点</p>
-                                    </div>
-                                </div> --}}
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                        <div class="listInner">
-                            <div class="cardInner">
-                                <div class="history">
-                                    <h3 id="engword">プログラミングでよく使う英単語</h3>
-                                    {{--
-                                <p>履歴（過去Best3）</p> --}}
-                                </div>
-                                <div class="scoreList">
-                                    <div class="scoreLine">
-                                        <div class="scoreItem">
-                                            <p>Score</p>
-                                        </div>
-                                        <div class="scoreItem">
-                                            <p class="triangle">▶▶▶</p>
-                                        </div>
-                                        <div class="scoreItem">
-                                            @if (isset($_GET['level_id']))
-                                                @if ($_GET['level_id'] == 1)
-                                                    @if (request()->hasCookie('saved_data6'))
-                                                        <p class="score">{{ request()->cookie('saved_data6') }}点</p>
-                                                    @endif
-                                                @elseif($_GET['level_id'] == 2)
-                                                    @if (request()->hasCookie('saved_data12'))
-                                                        <p class="score">{{ request()->cookie('saved_data12') }}点</p>
-                                                    @endif
-                                                @else
-                                                    @if (request()->hasCookie('saved_data6'))
-                                                        <p class="score">{{ request()->cookie('saved_data6') }}点</p>
-                                                    @endif
-                                                @endif
-                                            @else
-                                                @if (request()->hasCookie('saved_data6'))
-                                                    <p class="score">{{ request()->cookie('saved_data6') }}点</p>
-                                                @endif
-                                            @endif
-                                        </div>
-                                    </div>
-                                    {{-- <div class="scoreLine">
-                                    <div class="scoreItem">
-                                        <p>Score</p>
-                                    </div>
-                                    <div class="scoreItem">
-                                        <p class="triangle">▶▶▶</p>
-                                    </div>
-                                    <div class="scoreItem">
-                                        <p class="score">00点</p>
-                                    </div>
-                                </div>
-                                <div class="scoreLine">
-                                    <div class="scoreItem">
-                                        <p>Score</p>
-                                    </div>
-                                    <div class="scoreItem">
-                                        <p class="triangle">▶▶▶</p>
-                                    </div>
-                                    <div class="scoreItem">
-                                        <p class="score">00点</p>
-                                    </div>
-                                </div> --}}
-                                </div>
-                            </div>
-                        </div>
-
-                        {{-- テスト --}}
-                        {{-- <div class="listInner">
-                            <div class="cardInner">
-                                <table>
-                                    <tr>
-                                        <td colspan="3">
-                                            <div class="history">
-                                                <h3 id="html">TEST</h3>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tbody class="scoreList">
-                                        <tr class="scoreLine">
-                                            <td>
-                                                <div class="scoreItem">
-                                                    <p>Score</p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="scoreItem">
-                                                    <p class="triangle">▶▶▶</p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="scoreItem">5555点
-                                                    @if (isset($_GET['level_id']))
-                                                        @if ($_GET['level_id'] == 1)
-                                                            @if (request()->hasCookie('saved_data1'))
-                                                                <p class="score">{{ request()->cookie('saved_data1') }}点
-                                                                </p>
-                                                            @endif
-                                                        @elseif($_GET['level_id'] == 2)
-                                                            @if (request()->hasCookie('saved_data7'))
-                                                                <p class="score">{{ request()->cookie('saved_data7') }}点
-                                                                </p>
-                                                            @endif
-                                                        @else
-                                                            @if (request()->hasCookie('saved_data1'))
-                                                                <p class="score">{{ request()->cookie('saved_data1') }}点
-                                                                </p>
-                                                            @endif
-                                                        @endif
-                                                    @else
-                                                        @if (request()->hasCookie('saved_data1'))
-                                                            <p class="score">{{ request()->cookie('saved_data1') }}点</p>
-                                                        @endif
-                                                    @endif
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div> --}}
-
 
 
                     </div>

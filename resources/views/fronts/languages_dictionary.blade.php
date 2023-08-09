@@ -102,7 +102,7 @@
         <!-- プルダウンメニュー -->
         <div class="selectWrap1">
             <form action="{{ route('dictionary') }}" method="get">
-                <input name="form_identifier" type="hidden" value="form2">
+                {{-- <input name="form_identifier" type="hidden" value="form2"> --}}
                 {{-- <form action="{{ route('dictionary') }}" id="select-form" method="get"> --}}
                 {{-- <input name="form_identifier" type="hidden" value="form1"> --}}
                 <input name="s" type="hidden" value="{{ $s }}">
@@ -133,7 +133,7 @@
         <!-- 検索ボックス -->
         <!-- <p>ここから辞書検索ができます。活用してね(^^)</p> -->
         <form action="{{ route('dictionary') }}" class="searchForm001" method="get">
-            <input name="form_identifier" type="hidden" value="form1">
+            {{-- <input name="form_identifier" type="hidden" value="form1"> --}}
             <input name="lang_id" type="hidden" value="{{ $lang_id }}">
 
             <input name="s" placeholder="ここで辞書検索ができます" type="text" value="{{ $s }}">
@@ -145,7 +145,7 @@
             <!-- サイドバー -->
             <aside class="sidebar">
                 <form action="{{ route('dictionary') }}" method="get">
-                    <input name="form_identifier" type="hidden" value="form2">
+                    {{-- <input name="form_identifier" type="hidden" value="form2"> --}}
                     {{-- <input name="s" placeholder="ここで辞書検索ができます" type="text"> --}}
                     <input name="s" type="hidden" value="{{ $s }}">
                     <ul>
@@ -300,7 +300,7 @@
             </table>
         </div>
         {{-- ページネーション --}}
-        {{ $items->links() }}
+        {{ $items->appends(['lang_id' => $lang_id, 's' => $s ?? ''])->links() }}
     </main>
 
 @endsection
