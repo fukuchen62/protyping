@@ -14,7 +14,7 @@
 
                 <div class="contentItem">
                     <div class="footerNav">
-                        <div class="footerTitle"><a href="{{ route('top') }}">HOME</a></div>
+                        <div class="footerTitle"><a href="{{ route('top') }}">ホーム</a></div>
                         <div class="footerTitle"><a href="{{ route('game') }}">ゲーム</a></div>
                         <div class="footerTitle"><a href="{{ route('dictionary') }}">辞書</a></div>
                         <div class="footerTitle"><a href="{{ route('ranking') }}">ランキング</a></div>
