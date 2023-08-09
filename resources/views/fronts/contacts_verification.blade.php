@@ -35,8 +35,8 @@
             <label>メールアドレス</label>
             <p>{{ $contactData['email'] }}</p>
             <p class="grayLine"></p>
-            <div class="basic">問い合わせ内容</div>
-            <label>問い合わせ種別</label>
+            <div class="basic">お問い合わせ内容</div>
+            <label>お問い合わせ種別</label>
             <p>{{ $contactData['contact_type'] }}</p>
             <p class="grayLine"></p>
             <label>言語名</label>
@@ -54,7 +54,7 @@
             <label>使用例</label>
             <p>{{ $contactData['usage'] }}</p>
             <p class="grayLine"></p>
-            <label>問い合わせ</label>
+            <label>お問い合わせ</label>
             <p>{{ $contactData['memo'] }}</p>
             <p class="grayLine"></p>
 
