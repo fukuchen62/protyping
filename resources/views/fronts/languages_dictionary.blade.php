@@ -191,6 +191,13 @@
                 </form>
             </aside>
 
+            {{-- ページネーションのページ番号 --}}
+            @php
+                $pageno = 0;
+                if (request()->input('page') != null) {
+                    $pageno = request()->input('page') - 1;
+                }
+            @endphp
             <!-- テーブル -->
             <table class="dictionary">
                 <thead class="headLine">
@@ -205,7 +212,7 @@
                     @if (isset($_GET['s']))
                         <tbody class="dictBody">
                             <tr class="dictRow">
-                                <td class="no">{{ $key + 1 }}</td>
+                                <td class="no">{{ $key + 1 + $pageno * 20 }}</td>
                                 <td class="wordCol">
                                     <p class="phrase">{{ $item->word_spell }}</p>
                                     <p class="">{{ $item->japanese }}</p>
@@ -249,7 +256,7 @@
                     @elseif ($item->language_id == 1)
                         <tbody class="dictBody">
                             <tr class="dictRow">
-                                <td class="no">{{ $key + 1 + (request()->input('page') - 1) * 20 }}</td>
+                                <td class="no">{{ $key + 1 + $pageno * 20 }}</td>
                                 <td class="wordCol">
                                     <p class="phrase">{{ $item->word_spell }}</p>
                                     <p class="">{{ $item->japanese }}</p>
