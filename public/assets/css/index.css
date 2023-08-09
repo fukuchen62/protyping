@@ -612,7 +612,7 @@ span {
 }
 
 .linkArea {
-    /* background-color: #625858; */
+    background-color: rgba(98, 88, 88, 0.49);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -646,6 +646,10 @@ span {
     height: auto;
     margin-top: 5%;
     margin-left: 10%;
+}
+
+.footer {
+    margin-top: 0;
 }
 
 @media (min-width:450px) {
