@@ -37,7 +37,36 @@
             <p class="grayLine"></p>
             <div class="basic">お問い合わせ内容</div>
             <label>お問い合わせ種別</label>
-            <p>{{ $contactData['contact_type'] }}</p>
+            {{--
+            <p>{{ $contactData['contact_type'] }}</p> --}}
+
+            <?php
+            $contactType = $contactData['contact_type'];
+            if ($contactType === '1') {
+                echo '<p>言語追加依頼</p>';
+                echo '<p class="grayLine"></p>';
+                echo '<label>言語名</label>';
+                echo '<p>' . $contactData['language_id'] . '</p>';
+                echo '<p class="grayLine"></p>';
+                echo '<label>単語名</label>';
+                echo '<p>' . $contactData['word_spell'] . '</p>';
+                echo '<p class="grayLine"></p>';
+                echo '<label>読み方</label>';
+                echo '<p>' . $contactData['japanese'] . '</p>';
+                echo '<p class="grayLine"></p>';
+                echo '<label>意味</label>';
+                echo '<p>' . $contactData['meaning'] . '</p>';
+                echo '<p class="grayLine"></p>';
+                echo '<label>使用例</label>';
+                echo '<p>' . $contactData['usage'] . '</p>';
+            } elseif ($contactType === '2') {
+                echo '<p>不具合報告</p>';
+            } elseif ($contactType === '3') {
+                echo '<p>その他のお問い合わせ</p>';
+            }
+            ?>
+
+            {{--
             <p class="grayLine"></p>
             <label>言語名</label>
             <p>{{ $contactData['language_id'] }}</p>
@@ -52,9 +81,9 @@
             <p>{{ $contactData['meaning'] }}</p>
             <p class="grayLine"></p>
             <label>使用例</label>
-            <p>{{ $contactData['usage'] }}</p>
+            <p>{{ $contactData['usage'] }}</p> --}}
             <p class="grayLine"></p>
-            <label>お問い合わせ</label>
+            <label>お問い合わせ内容</label>
             <p>{{ $contactData['memo'] }}</p>
             <p class="grayLine"></p>
 
