@@ -35,4 +35,9 @@ class Language extends Model
     {
         return $this->hasOne('App\Models\Vocabulary');
     }
+
+    public function vocabularies()
+    {
+        return $this->hasMany('App\Models\Vocabulary');
+    }
 }
