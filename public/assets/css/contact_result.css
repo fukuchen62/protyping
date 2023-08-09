@@ -1,12 +1,12 @@
 @charset "utf-8";
 
-main {
+.main {
     /* padding-top: 30px; */
     padding-top: 90px;
     width: 90%;
 }
 
-h2 {
+.h2 {
     font-size: 1.8rem;
     font-weight: 800;
     text-align: center;
@@ -57,6 +57,7 @@ h2 {
 .contactBottom {
     /* text-align: center; */
     margin-bottom: 30px;
+    padding-bottom: 5px;
 }
 
 .contactBottom p {
@@ -120,7 +121,7 @@ h2 {
         justify-content: space-between; */
     }
 
-    h2 {
+    .h2 {
         font-size: 4rem;
         margin: 40px auto;
     }
