@@ -612,7 +612,7 @@ span {
 }
 
 .linkArea {
-    background-color: #625858;
+    /* background-color: #625858; */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -635,6 +635,7 @@ span {
     background-color: #D4EBF6;
     border-radius: 7px;
     position: relative;
+
 }
 
 .linkBase img {
@@ -643,7 +644,8 @@ span {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
-    height: 7.8rem;
+    height: auto;
+    padding: 10px;
 }
 
 @media (min-width:450px) {
