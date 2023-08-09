@@ -58,7 +58,7 @@
             @foreach ($languages as $item)
                 @if ($item->id == $lang_id)
                     {{ $item->language_name }}
-                    &nbsp;({{ count($item->vocabularies) }}個)
+                    &nbsp;({{ count($item->vocabularies) }})
                 @endif
             @endforeach
 
@@ -156,11 +156,13 @@
                                 <li class="subMenu2 active">
                                     <button name="lang_id" type="submit"
                                         value="{{ $item->id }}">{{ $item->language_name }}</button>
+                                    &nbsp;({{ count($item->vocabularies) }})
                                 </li>
                             @else
                                 <li class="subMenu2">
                                     <button name="lang_id" type="submit"
                                         value="{{ $item->id }}">{{ $item->language_name }}</button>
+                                    &nbsp;({{ count($item->vocabularies) }})
                                 </li>
                             @endif
                         @endforeach
