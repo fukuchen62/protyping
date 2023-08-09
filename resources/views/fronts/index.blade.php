@@ -220,40 +220,41 @@
                         @endforeach
                     @endif
                 </section>
-            </div>
-            <div class="linkArea">
-                <ul class="linkList">
-                    <li>
-                        <a href="http://mizutokushima.com/index.php" target="_blank">
-                            <div class="linkBase"><img src="{{ asset('assets/images/top_banner/mizutoku_log.png') }}"
-                                    alt="みずとく">
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://ahaha-surf.com/" target="_blank">
-                            <div class="linkBase"><img src="{{ asset('assets/images/top_banner/ahahaha.png') }}"
-                                    alt="阿波波">
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://kisyanotabi.com/" target="_blank">
-                            <div class="linkBase"><img src="{{ asset('assets/images/top_banner/kisyatabi.png') }}"
-                                    alt="とくしま汽車の旅">
+                <div class="linkArea">
+                    <ul class="linkList">
+                        <li>
+                            <a href="http://mizutokushima.com/index.php" target="_blank">
+                                <div class="linkBase"><img src="{{ asset('assets/images/top_banner/mizutoku_log.png') }}"
+                                        alt="みずとく">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://ahaha-surf.com/" target="_blank">
+                                <div class="linkBase"><img src="{{ asset('assets/images/top_banner/ahahaha.png') }}"
+                                        alt="阿波波">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://kisyanotabi.com/" target="_blank">
+                                <div class="linkBase"><img src="{{ asset('assets/images/top_banner/kisyatabi.png') }}"
+                                        alt="とくしま汽車の旅">
 
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://arutoku.com/" target="_blank">
-                            <div class="linkBase"><img src="{{ asset('assets/images/top_banner/arutoku.png') }}"
-                                    alt="歩こう徳島あるとく">
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://arutoku.com/" target="_blank">
+                                <div class="linkBase"><img src="{{ asset('assets/images/top_banner/arutoku.png') }}"
+                                        alt="歩こう徳島あるとく">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
+
         </main>
     </div>
 
