@@ -34,7 +34,7 @@
         0.04em 0.02em 0 #B6F2FF,
         0.08em 0.05em 0 #5FBFED;
     text-align: center;
-    margin: 30px auto 40px;
+    margin: 0px auto 60px;
     font-size: 6.4rem;
 }
 
@@ -44,7 +44,7 @@
     border-radius: 21px;
     width: 682px;
     margin: auto;
-    box-shadow: 0px 0px 10px #2f7090;
+    /* box-shadow: 0px 0px 10px #2f7090; */
     padding: 20px 10px;
     margin-bottom: 40px;
 }
@@ -74,15 +74,15 @@
     padding: 5px;
     background-color: #58ABD3;
     display: inline-block;
-    margin: 0px 20px;
+    margin: 0px 7px;
     font-size: 2rem;
     text-align: center;
     color: #fff;
     font-weight: bold;
     text-shadow: 0px 3px 0.5px gray;
-    box-shadow: 0px 2px 3px #ffffffa3 inset,
-        0px 4px 2px rgba(0, 0, 0, 0.25);
-    border: 1px solid #26567cbd;
+    /* box-shadow: 0px 2px 3px #ffffffa3 inset,
+        0px 4px 2px rgba(0, 0, 0, 0.25); */
+    border: 0;
     border-radius: 24px;
 }
 
@@ -95,7 +95,8 @@
 }
 
 .selectWrap option {
-
+    background-color: #fff;
+    color: #26567C;
     font-size: 1.6rem;
 }
 
@@ -417,13 +418,12 @@ input#open2 {
     background: linear-gradient(to bottom, #FFDA56 0%, #DDA107 75%, #d8621f 100%);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     text-shadow: 0px 3px 0.5px gray;
-    border: 0;
     border-radius: 15px;
     transition-duration: 0.5s;
     margin: 0 auto;
     cursor: pointer;
     appearance: none;
-    margin: 8px 0;
+    margin: 16px 0;
 }
 
 .box {
@@ -464,9 +464,16 @@ input#open2 {
 .display-mode {
     background-color: #58ABD3;
     border-radius: 24px;
-    margin: 17px auto;
+    margin: 33px auto;
     width: 600px;
+    height: 144px;
     color: #fff;
-    padding: 10px 0 0 10px;
+    padding: 25px 10px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 2px 5px rgba(255, 255, 255, 0.42) inset, 0 4px 15px rgba(38, 86, 124, 0.63) inset;
+}
+
+.display-mode p {
+    font-size: 2.4rem;
+    font-weight: 500;
+    margin: 15px;
 }
