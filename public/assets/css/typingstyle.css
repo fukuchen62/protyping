@@ -1089,3 +1089,22 @@
     align-items: center;
     margin-right: 10px; /* 要素間の間隔を調整 */
 }
+
+.wayto-play{
+    border: #817F6E 2px solid;
+    border-radius: 24px;
+    background: #fff;
+    height: 220px;
+    width: 724px;
+    margin: 20px auto;
+    font-size: 24px;
+}
+
+.descriptive-essay{
+    padding: 20px 40px;
+    color: #26567C;
+}
+
+.descriptive-margin{
+    padding-top: 5px;
+}
