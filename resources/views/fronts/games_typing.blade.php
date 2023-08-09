@@ -41,8 +41,16 @@
                 @endphp
 
                 @php
-                    $languageValue = htmlspecialchars($_GET['language'] ?? '', ENT_QUOTES, 'UTF-8');
-                    $levelValue = htmlspecialchars($_GET['level'] ?? '', ENT_QUOTES, 'UTF-8');
+                    // fukushima start 2023-8-9
+                    $languageValue = 1;
+                    if (isset($_GET['language'])) {
+                        $languageValue = htmlspecialchars($_GET['language'] ?? '', ENT_QUOTES, 'UTF-8');
+                    }
+                    $levelValue = 1;
+                    if (isset($_GET['level'])) {
+                        $levelValue = htmlspecialchars($_GET['level'] ?? '', ENT_QUOTES, 'UTF-8');
+                    }
+                    // fukushima end 2023-8-9
                 @endphp
                 {{-- デバッグ用使うときは親タグのdivをtableにすること --}}
                 {{-- @foreach ($items as $item)
@@ -372,9 +380,9 @@
                 <div class="set-ranking" id="game-view6" style="display: none;">
                     <p class="ranking-title">ランキングに登録する</p>
                     <div class="entry-ranking">
-                        <p class="regist-end">ペンネーム入力欄</p>
-                        <input id="inputName" maxlength="8" type="text" value="クリップ太郎">
-                        <p class="attention regist-end">※８文字以内　本名は入れないでください</p>
+                        <p class="regist-end">ユーザー名入力欄</p>
+                        <input id="inputName" maxlength="10" type="text" value="" placeholder="クリップ太郎">
+                        <p class="attention regist-end">※10文字以内　本名は入れないでください</p>
                     </div>
                     <div>
                         <button class="regist-ranking" id="register-ranking" type="button">登録する</button>
@@ -500,7 +508,6 @@
 
                         let languageValue = @json($languageValue); //スーパーグローバル変数で得たlanguage_idの値をjavaに渡す
                         let levelValue = @json($levelValue); //スーパーグローバル変数で得たlevel_idの値をjavaに渡す
-
 
                         // ランキングに登録するときの登録ボタンクリック時
                         let inputUsername = '';
@@ -782,7 +789,10 @@
                             if (!flagK) {
                                 style += '#kana > div {opacity: 0;}';
                             }
-                            document.getElementById('custom-css').innerHTML = style;
+                            // 以下はエラーが出たため、コメントアウトした
+                            // fukushima s 2023/08/09
+                            // document.getElementById('custom-css').innerHTML = style;
+                            // fukushima s 2023/08/09
 
                             if (flagW) {
                                 const cWPM = document.getElementById('current-wpm');
@@ -1742,9 +1752,10 @@
                             if (isOpen) {
                                 overlay.style.width = document.body.clientWidth + 'px';
                                 overlay.style.height = document.body.clientHeight + 'px';
-                                game.style.top = window.pageYOffset + window.innerHeight / 2 - game
-                                    .clientHeight / 2 + 'px';
-                                game.style.left = window.innerWidth / 2 - game.clientWidth / 2 + 'px';
+                                game.style.top =
+                                    (window.pageYOffset + window.innerHeight / 2 - game.clientHeight / 2) +
+                                    'px';
+                                game.style.left = (window.innerWidth / 2 - game.clientWidth / 2) + 'px';
                             }
                         });
                     })(window, document);
