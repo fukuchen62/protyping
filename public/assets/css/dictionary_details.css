@@ -4,8 +4,9 @@
 .main {
     width: 98%;
     max-width: 1080px;
-    margin: 100px auto 40px;
+    margin: 0px auto 40px;
     padding: 20px;
+    padding-top: 90px;
 }
 
 @media (min-width:1000px) {

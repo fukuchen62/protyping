@@ -89,7 +89,7 @@
                     {{-- 設定 --}}
                     <button class="game-position5" id="howto-setting" type="button"></button>
                     <!-- ポップアップ -->
-                    <div class="popupWrop">
+                    {{-- <div class="popupWrop"> --}}
                         <!-- 設定のポップアップ -->
                         {{-- <div class="Popup1">
                             <input id="open" type="checkbox">
@@ -107,7 +107,7 @@
                             </div>
                         </div> --}}
                         <!-- 遊び方のポップアップ -->
-                        <div class="Popup2">
+                        {{-- <div class="Popup2">
                             <input id="open2" type="checkbox">
                             <label class="openBtn" for="open2"><img alt="メモアイコン"
                                     src="{{ asset('assets/images/memo.svg') }}">遊び方</label>
@@ -127,8 +127,8 @@
                             <div class="close">
                                 <label class="closeBtn" for="open2">閉じる</label>
                             </div>
-                        </div>
-                    </div>
+                        </div> --}}
+                    {{-- </div> --}}
                     {{-- 消すとゲームが動かなくなる！ --}}
                     {{-- <div id="game-func">
                         <span>ローマ字表示(R)</span>
@@ -157,7 +157,7 @@
                             <button class="off-btn btn" type="button">OFF</button>
                         </div>
                     </div> --}}
-                    <div class="audio_box">
+                    {{-- <div class="audio_box">
                         <div id="audio_box" class="audio_box">
                             <audio type="audio/mpeg" controls autoplay loop="metadata" id="audio" style="display: none;">
                                 <source src="{{asset('assets/music/typcode_bgm6.mp3')}}" type="audio/mp3" />
@@ -168,7 +168,7 @@
                                 <div id="OFF" class="sound_switchOff OFF">OFF</div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
                 {{-- 消すとゲームが動かなくなる！ --}}
                 {{-- モードとコース選択画面 --}}
@@ -303,7 +303,7 @@
                         <div class="deco_key18"></div>
                     </div>
                     <!-- 音声再生用の<audio>要素 -->
-                    {{-- <audio id="sound" src="{{ asset('assets/music/typcode_bgm6.mp3') }}"></audio> --}}
+                    <audio id="sound" src="{{ asset('assets/music/typcode_bgm6.mp3') }}"></audio>
                 </div>
                 {{-- 消すとゲームが動かなくなる！ --}}
 
@@ -390,7 +390,19 @@
                 </div>
             </div>
             {{-- </div> --}}
-
+            {{-- 遊び方説明 --}}
+            <div class="wayto-play">
+                <div class="descriptive-essay">
+                    遊び方
+                    <p class="descriptive-margin">タイプコードはプログラミングを学習している人のためのタイピングゲームです。</p>
+                    <p class="descriptive-margin">始め方</p>
+                    <p>１．タイピングしたい言語を選んでください。</p>
+                    <p>２．タイピングする単語の難易度を選んでください。</p>
+                    <p>３．言語と難易度を選んだら確定を押してください。</p>
+                    <p>４．言語と難易度が決定したらスタートを押してください。</p>
+                    <p class="descriptive-margin attention">※タイピングには制限時間があります。</p>
+                </div>
+            </div>
             {{-- ゲーム用js --}}
             {{-- jsファイルに分けると<はてなphp ?>が書けないので直接ここにタイピングゲームのコードを書く --}}
             {{-- <script src="assets/js/typing.js"></script> --}}
@@ -434,7 +446,7 @@
                         const button17 = document.getElementById('register-ranking'); // 『登録する』ボタンクリック時
                         const view7 = document.getElementById('game-view7'); //ランキング登録完了画面表示
                         const button18 = document.getElementById('return-start'); // 『スタートに戻る』ボタンクリック時
-                        //const audioElement = document.getElementById('sound'); //タイプ音
+                        const audioElement = document.getElementById('sound'); //タイプ音
 
                         let countdownTime = 5; //ゲーム用タイマー 1=1秒
                         // 遊ぶ文字列をデータベースから取得
@@ -708,7 +720,7 @@
                             missFlag = false;
 
                             startTimer(); //タイマースタート
-                            //audioElement.play(); //BGM
+                            audioElement.play(); //BGM
 
                             // 『ミスだけ』を選択した場合
                             if (moPlay) {
@@ -848,8 +860,8 @@
                             accuracy = correct / (correct + miss);
                             score = isStopped ? '-' : Math.floor(speed * accuracy ** 3); // スコアを数値として設定
 
-                            //audioElement.pause(); // 音声を停止
-                            //audioElement.currentTime = 0; // 音声を再生位置の初めに戻す
+                            audioElement.pause(); // 音声を停止
+                            audioElement.currentTime = 0; // 音声を再生位置の初めに戻す
 
                             let html;
                             html = '<ul>';
@@ -1728,19 +1740,19 @@
                 });
 
                 // BGMのON・OFF切り替え
-                document.addEventListener("DOMContentLoaded", function() {
-                    let audio = document.getElementById("audio");
-                    let soundOnButton = document.getElementById("ON");
-                    let soundOffButton = document.getElementById("OFF");
+                // document.addEventListener("DOMContentLoaded", function() {
+                //     let audio = document.getElementById("audio");
+                //     let soundOnButton = document.getElementById("ON");
+                //     let soundOffButton = document.getElementById("OFF");
 
-                    soundOnButton.addEventListener("click", function() {
-                        audio.play(); // 音を再生する
-                    });
+                //     soundOnButton.addEventListener("click", function() {
+                //         audio.play(); // 音を再生する
+                //     });
 
-                    soundOffButton.addEventListener("click", function() {
-                        audio.pause(); // 音を停止する
-                    });
-                });
+                //     soundOffButton.addEventListener("click", function() {
+                //         audio.pause(); // 音を停止する
+                //     });
+                // });
             </script>
         </div>
     </main>
