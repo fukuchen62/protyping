@@ -34,7 +34,7 @@
         0.04em 0.02em 0 #B6F2FF,
         0.08em 0.05em 0 #5FBFED;
     text-align: center;
-    margin: 0 auto 40px;
+    margin: 30px auto 40px;
     font-size: 6.4rem;
 }
 
@@ -46,7 +46,7 @@
     margin: auto;
     box-shadow: 0px 0px 10px #2f7090;
     padding: 20px 10px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .gameExplanation {
@@ -457,4 +457,10 @@ input#open2 {
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+
+/* 設定画面後のスペースキーでスタートする画面 */
+.display-mode {
+    background-color: #58ABD3;
 }
