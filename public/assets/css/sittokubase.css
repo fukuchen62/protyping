@@ -53,6 +53,7 @@ caption {
     text-align: center;
     vertical-align: middle;
     padding: 6px;
+    font-size: 1.4rem;
 }
 
 .tbodyTips tr td {
@@ -60,6 +61,7 @@ caption {
     text-align: left;
     vertical-align: middle;
     padding: 6px;
+    font-size: 1.4rem;
 }
 
 /* リストの共通 */
