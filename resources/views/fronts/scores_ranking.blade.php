@@ -41,15 +41,25 @@
             </div>
 
             {{-- 言語選択ボタン --}}
-            <nav class="word">
+            {{-- <nav class="word">
                 @foreach ($languages as $language)
                     <div>
                         <img alt="↓ボタン" src="{{ asset('assets/images/arrow.png') }}">
                         <a href="#language_{{ $language['id'] }}">{{ $language['language_name'] }}</a>
                     </div>
                 @endforeach
-            </nav>
+            </nav> --}}
 
+            <nav class="word">
+                @foreach ($languages as $language)
+                    <div style="cursor: pointer;" onclick="window.location.href = '#language_{{ $language['id'] }}';">
+                        <a href="#language_{{ $language['id'] }}">
+                            <img alt="↓ボタン" src="{{ asset('assets/images/arrow.png') }}">
+                            {{ $language['language_name'] }}
+                        </a>
+                    </div>
+                @endforeach
+            </nav>
 
             <!-- ランキングカード -->
             <section class="rankingWrap">
