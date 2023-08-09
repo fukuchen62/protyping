@@ -221,6 +221,30 @@
                     @endif
                 </section>
             </div>
+            <div class="linkArea">
+                <ul class="linkList">
+                    <li>
+                        <div class="linkBase"><img src="{{ asset('assets/images/top_banner/mizutoku_log.png') }}"
+                                alt="みずとく">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="linkBase"><img src="{{ asset('assets/images/top_banner/ahahaha.png') }}"
+                                alt="阿波波">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="linkBase"><img src="{{ asset('assets/images/top_banner/kisyatabi.png') }}"
+                                alt="とくしま汽車の旅">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="linkBase"><img src="{{ asset('assets/images/top_banner/arutoku.svg') }}"
+                                alt="歩こう徳島あるとく">
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </main>
     </div>
 

@@ -606,6 +606,41 @@ span {
     /* color: blueviolet; */
 }
 
+.linkArea {
+    background-color: #625858;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* align-items: center; */
+}
+
+.linkList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* 各バナーの間の間隔 */
+    width: 100%;
+    /* 幅いっぱいに広がるように */
+}
+
+.linkBase {
+    width: 130px;
+    height: 9rem;
+    background-color: #D4EBF6;
+    border-radius: 7px;
+    position: relative;
+}
+
+.linkBase img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 7.8rem;
+}
+
 @media (min-width:450px) {
     td.name {
         width: 55%;
@@ -666,10 +701,24 @@ span {
     }
 }
 
+@media (min-width:620px) {
+    .linkList {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
 @media (min-width:700px) {
 
     td.name {
         width: 55%;
+    }
+}
+
+@media (min-width:900px) {
+    .linkBase {
+        width: 180px;
+        height: 10rem;
     }
 }
 
@@ -823,6 +872,11 @@ span {
         text-align: right;
         padding: 10px;
         vertical-align: middle;
+    }
+
+    .linkBase {
+        width: 220px;
+        height: 13.5rem;
     }
 
     /* パソコン1000px~ */
