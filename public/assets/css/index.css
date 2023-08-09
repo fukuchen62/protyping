@@ -631,21 +631,21 @@ span {
 
 .linkBase {
     width: 130px;
-    height: 9rem;
+    height: 78px;
     background-color: #D4EBF6;
     border-radius: 7px;
     position: relative;
-
 }
 
 .linkBase img {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
     width: 80%;
     height: auto;
-    padding: 10px;
+    margin-top: 5%;
+    margin-left: 10%;
 }
 
 @media (min-width:450px) {
@@ -725,7 +725,7 @@ span {
 @media (min-width:900px) {
     .linkBase {
         width: 180px;
-        height: 10rem;
+        height: 108px;
     }
 }
 
@@ -883,7 +883,8 @@ span {
 
     .linkBase {
         width: 220px;
-        height: 13.5rem;
+        /* height: 13.5rem; */
+        height: 132px;
     }
 
     /* パソコン1000px~ */

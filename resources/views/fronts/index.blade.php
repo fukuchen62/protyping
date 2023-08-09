@@ -241,7 +241,7 @@
                     </li>
                     <li>
                         <div class="linkBase"><a href="https://arutoku.com/" target="_blank"><img
-                                    src="{{ asset('assets/images/top_banner/arutoku.svg') }}" alt="歩こう徳島あるとく"></a>
+                                    src="{{ asset('assets/images/top_banner/arutoku.png') }}" alt="歩こう徳島あるとく"></a>
                         </div>
                     </li>
                 </ul>
