@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('contacts', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('contact_type')->default(1);
-            $table->string('language_id')->nullable(false);
+            $table->string('language_id')->nullable(true);
             $table->string('word_spell', 200)->nullable(true);
             $table->string('japanese', 200)->nullable(true);
             $table->string('meaning', 200)->nullable(true);
