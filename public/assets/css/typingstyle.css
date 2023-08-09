@@ -152,35 +152,35 @@
     height: 100%;
 }
 
-#game-view1 > .game-position1 {
+#game-view1>.game-position1 {
     position: absolute;
     top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-#game-view1 > .game-position2 {
+#game-view1>.game-position2 {
     position: absolute;
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-#game-view1 > .game-position3 {
+#game-view1>.game-position3 {
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-#game-view1 > .game-position4 {
+#game-view1>.game-position4 {
     position: absolute;
     top: 40%;
     left: 40%;
     transform: translate(-50%, -50%);
 }
 
-#game-view1 > .game-position5 {
+#game-view1>.game-position5 {
     position: absolute;
     top: 40%;
     left: 60%;
@@ -284,10 +284,17 @@
 #text-container {
     position: relative;
     max-width: 610px;
-    height: 172px;
+    height: 150px;
     border: 1px solid #d8d8d8;
     margin: 0 auto 10px;
     overflow: hidden;
+    background-color: #fff;
+}
+
+#timer {
+    color: #EAB624;
+    font-size: 2.4rem;
+    text-align: center;
 }
 
 #miss-type-screen {
@@ -312,7 +319,7 @@
     font-size: 14px;
     text-align: center;
     line-height: 170%;
-    padding-top: 46px;
+    padding-top: 35px;
 }
 
 #start-msg p {
@@ -323,14 +330,15 @@
 #start-msg em {
     font-size: 24px;
     font-style: normal;
-    color: #ff9c00;
+    color: #EAB624;
+    font-weight: 600;
 }
 
 #countdown {
     position: absolute;
     top: 50%;
     left: 50%;
-    color: #ff9c00;
+    color: #EAB624;
     font-size: 80px;
     transform: translateX(-50%) translateY(-50%);
 }
@@ -453,6 +461,7 @@
     line-height: 34px;
     text-align: center;
     overflow: hidden;
+    background-color: #D4EBF6;
 }
 
 #virtual-keyboard div.key_1 {
@@ -797,8 +806,8 @@
 }
 
 #virtual-keyboard div.active {
-    background-color: #ff9c00 !important;
-    border-color: #ff9c00 !important;
+    background-color: #EAB624 !important;
+    border-color: #EAB624 !important;
     color: #fff !important;
 }
 
@@ -813,12 +822,13 @@
     width: 590px;
     height: 337px;
     border: 1px solid #d0d0d0;
-    margin: 0 0 12px;
+    margin: 15px 0 12px;
+    background-color: #f7f7f7;
 }
 
 #game-result .result-title {
     height: 37px;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: bold;
     line-height: 37px;
     overflow: hidden;
@@ -827,8 +837,10 @@
 }
 
 #current-result .result-title {
-    color: #027fff;
+    color: #26567C;
     border-bottom: 1px solid #d0d0d0;
+    background-color: #fff;
+    box-shadow: 2px 0px 7px #5FBFED inset;
 }
 
 #example-list {
@@ -840,6 +852,7 @@
     padding: 10px;
     overflow: auto;
     border: 1px solid #d0d0d0;
+    background-color: #fff;
 }
 
 #example-list ul {
@@ -877,7 +890,7 @@
 
 #game-result .result-data ul li .title {
     position: absolute;
-    font-size: 11px;
+    font-size: 16px;
     height: 32px;
     line-height: 32px;
     top: 0;
@@ -886,7 +899,7 @@
 
 #game-result .result-data ul li .data {
     color: #027fff;
-    font-size: 14px;
+    font-size: 16px;
     height: 32px;
     line-height: 32px;
     width: 166px;
@@ -904,6 +917,7 @@
     width: 138px;
     height: 337px;
     float: right;
+    margin-top: 15px;
     border-top: 1px solid #d0d0d0;
     border-right: 1px solid #d0d0d0;
     border-bottom: 1px solid #d0d0d0;
@@ -911,6 +925,9 @@
 
 #prev-result .result-title {
     border-bottom: 1px solid #d0d0d0;
+    color: #26567C;
+    background-color: #fff;
+    box-shadow: 2px 0px 7px #5FBFED inset;
 }
 
 #prev-result .result-data {
@@ -962,7 +979,7 @@
     width: 200px;
     height: 39px;
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     line-height: 39px;
     overflow: hidden;
@@ -1012,85 +1029,92 @@
     }
 }
 
-.set-ranking{
+.set-ranking {
     margin: 30px 30px;
     text-align: center;
 }
 
-.regist-ranking{
+.regist-ranking {
     width: 200px;
     height: 39px;
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     border-radius: 3px;
     background: linear-gradient(to bottom, #FFDA56 0%, #DDA107 75%, #EC905C 100%);
 }
 
-.ranking-title{
+.ranking-title {
     color: #26567C;
     font-size: 36px;
 }
 
-.entry-ranking{
+.entry-ranking {
     background-color: #fff;
-    padding:30px;
-    margin:30px 0;
+    padding: 30px;
+    margin: 30px 0;
     border-radius: 50px;
 }
 
 
-.entry-ranking input
-.entry-ranking div {
+.entry-ranking input .entry-ranking div {
     text-align: left;
 }
 
-.entry-ranking p{
+.entry-ranking p {
     font-size: 24px;
     padding: 10px;
 }
-.attention{
+
+.attention {
     color: red;
     font-size: 14px;
 }
 
-.entry-ranking input{
+.entry-ranking input {
     background-color: #26567C;
     font-size: 24px;
-    color:#fff;
-    padding:10px;
-    margin:20px;
+    color: #fff;
+    padding: 10px;
+    margin: 20px;
     text-align: left;
     border-radius: 20px;
     width: 300px;
-    display: block; /* ブロックレベル要素として表示 */
-    text-align: left; /* テキストを左寄せ */
-    margin: 0; /* 余白をリセット */
+    display: block;
+    /* ブロックレベル要素として表示 */
+    text-align: left;
+    /* テキストを左寄せ */
+    margin: 0;
+    /* 余白をリセット */
 }
 
-.entry-ranking div{
+.entry-ranking div {
     font-size: 36px;
     display: inline-block;
 }
 
-.regist-end{
+.regist-end {
     text-align: left;
 }
 
 .sound_switch_box {
     display: flex;
-    flex-direction: row; /* 要素を横並びに配置 */
-    justify-content: center; /* 要素を中央寄せ */
-    align-items: center; /* 要素を垂直方向に中央寄せ */
+    flex-direction: row;
+    /* 要素を横並びに配置 */
+    justify-content: center;
+    /* 要素を中央寄せ */
+    align-items: center;
+    /* 要素を垂直方向に中央寄せ */
 }
 
 .sound_switch {
     display: flex;
     align-items: center;
-    margin-right: 10px; /* 要素間の間隔を調整 */
+    margin-right: 10px;
+    /* 要素間の間隔を調整 */
 }
 
-.wayto-play{
+.wayto-play {
     border: #817F6E 2px solid;
     border-radius: 24px;
     background: #fff;
@@ -1100,11 +1124,11 @@
     font-size: 24px;
 }
 
-.descriptive-essay{
+.descriptive-essay {
     padding: 20px 40px;
     color: #26567C;
 }
 
-.descriptive-margin{
+.descriptive-margin {
     padding-top: 5px;
 }

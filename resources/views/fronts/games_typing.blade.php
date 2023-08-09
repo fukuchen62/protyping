@@ -90,8 +90,8 @@
                     <button class="game-position5" id="howto-setting" type="button"></button>
                     <!-- ポップアップ -->
                     {{-- <div class="popupWrop"> --}}
-                        <!-- 設定のポップアップ -->
-                        {{-- <div class="Popup1">
+                    <!-- 設定のポップアップ -->
+                    {{-- <div class="Popup1">
                             <input id="open" type="checkbox">
                             <label class="openBtn" for="open"><img alt="歯車アイコン"
                                     src="{{ asset('assets/images/gear.svg') }}">設定</label>
@@ -106,8 +106,8 @@
                                 <label class="closeBtn" for="open">閉じる</label>
                             </div>
                         </div> --}}
-                        <!-- 遊び方のポップアップ -->
-                        {{-- <div class="Popup2">
+                    <!-- 遊び方のポップアップ -->
+                    {{-- <div class="Popup2">
                             <input id="open2" type="checkbox">
                             <label class="openBtn" for="open2"><img alt="メモアイコン"
                                     src="{{ asset('assets/images/memo.svg') }}">遊び方</label>
@@ -323,7 +323,7 @@
                     </div> --}}
                     <div id="btn-area">
                         <button class="btn" id="set-ranking" type="button">ランキングに登録する</button>
-                        <button class="btn" id="game-finish" type="button">登録せずにゲームを終了する</button>
+                        <button class="btn" id="game-finish" type="button">登録せずに終了する</button>
                         <button class="btn" id="replay-button" type="button">もう一度プレイする</button>
                         {{-- <button id="close-button2" class="btn" type="button">プレイした単語を見る</button> --}}
                     </div>

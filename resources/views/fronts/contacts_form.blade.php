@@ -109,14 +109,14 @@
                             </th>
                             <td class="contactBody">
                                 <input class="formText" name="word_spell" type="text"
-                                    value="{{ old('word_spell') }}"placeholder="Math">
+                                    value="{{ old('word_spell') }}"placeholder="body">
                             </td>
                         </tr>
                         <tr class="readingName">
                             <th class="contactItem">読み方
                             </th>
                             <td class="contactBody">
-                                <input class="formText" name="japanese" placeholder="マス" type="text"
+                                <input class="formText" name="japanese" placeholder="ボディ" type="text"
                                     value="{{ old('japanese') }}">
                             </td>
                         </tr>
@@ -124,7 +124,7 @@
                             <th class="contactItem">意味
                             </th>
                             <td class="contactBody">
-                                <textarea class="formTextarea" name="meaning" placeholder="数字" value="{{ old('meaning') }}"></textarea>
+                                <textarea class="formTextarea" name="meaning" placeholder="ウェブページのコンテンツを定義します。" value="{{ old('meaning') }}"></textarea>
                             </td>
                         </tr>
                         <tr class="example">

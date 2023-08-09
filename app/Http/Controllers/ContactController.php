@@ -43,8 +43,14 @@ class ContactController extends Controller
             'status' => 'requried',
         ]);
 
+
+        $messages = [
+            'contact_name.max' => '名前は50文字以内で入力してください。',
+        ];
+
+
         // 入力内容をセッションに保存
-        $request->session()->put('contactData', $validatedData);
+        $request->session()->put('contactData', $validatedData, $messages);
 
         // 確認画面にリダイレクト
         // 送信確認画面に遷移する
