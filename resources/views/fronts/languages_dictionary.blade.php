@@ -58,6 +58,7 @@
             @foreach ($languages as $item)
                 @if ($item->id == $lang_id)
                     {{ $item->language_name }}
+                    &nbsp;({{ count($item->vocabularies) }})
                 @endif
             @endforeach
 
@@ -104,9 +105,10 @@
                 <input name="form_identifier" type="hidden" value="form2">
                 {{-- <form action="{{ route('dictionary') }}" id="select-form" method="get"> --}}
                 {{-- <input name="form_identifier" type="hidden" value="form1"> --}}
+                <input name="s" type="hidden" value="{{ $s }}">
                 <div id="langSelet">
                     {{-- <div>言語：</div> --}}
-                    <select id="dictionary-select" name="s">
+                    <select id="dictionary-select" name="lang_id">
                         @foreach ($languages as $item)
                             @if ($item->id == $lang_id)
                                 <option value="{{ $item->id }}" selected>{{ $item->language_name }}</option>
@@ -132,7 +134,9 @@
         <!-- <p>ここから辞書検索ができます。活用してね(^^)</p> -->
         <form action="{{ route('dictionary') }}" class="searchForm001" method="get">
             <input name="form_identifier" type="hidden" value="form1">
-            <input name="s" placeholder="ここで辞書検索ができます" type="text">
+            <input name="lang_id" type="hidden" value="{{ $lang_id }}">
+
+            <input name="s" placeholder="ここで辞書検索ができます" type="text" value="{{ $s }}">
             <button type="submit"></button>
             {{-- <input type="submit" value="検索"> --}}
         </form>
@@ -143,19 +147,22 @@
                 <form action="{{ route('dictionary') }}" method="get">
                     <input name="form_identifier" type="hidden" value="form2">
                     {{-- <input name="s" placeholder="ここで辞書検索ができます" type="text"> --}}
+                    <input name="s" type="hidden" value="{{ $s }}">
                     <ul>
                         <li class="globalNav">辞書選択</li>
 
                         @foreach ($languages as $item)
                             @if ($item->id == $lang_id)
                                 <li class="subMenu2 active">
-                                    <button name="s" type="submit"
+                                    <button name="lang_id" type="submit"
                                         value="{{ $item->id }}">{{ $item->language_name }}</button>
+                                    &nbsp;({{ count($item->vocabularies) }})
                                 </li>
                             @else
                                 <li class="subMenu2">
-                                    <button name="s" type="submit"
+                                    <button name="lang_id" type="submit"
                                         value="{{ $item->id }}">{{ $item->language_name }}</button>
+                                    &nbsp;({{ count($item->vocabularies) }})
                                 </li>
                             @endif
                         @endforeach
@@ -184,27 +191,34 @@
                 </form>
             </aside>
 
+            {{-- ページネーションのページ番号 --}}
+            @php
+                $pageno = 0;
+                if (request()->input('page') != null) {
+                    $pageno = request()->input('page') - 1;
+                }
+            @endphp
             <!-- テーブル -->
             <table class="dictionary">
                 <thead class="headLine">
                     <tr>
-                        <th class="no">No</th>
-                        <th class="wordCol">単語名<span class="description">・読み方</span></th>
-                        <th class="descrpCol">読み方</th>
-                        <th>使用例</th>
+                        <th class="no" width="8%">No</th>
+                        <th class="wordCol" width="30%">単語名<span class="">・読み方</span></th>
+                        <th class="descrpCol" width="50%">意味</th>
+                        <th width="8%">使用例</th>
                     </tr>
                 </thead>
-                @foreach ($items as $item)
+                @foreach ($items as $key => $item)
                     @if (isset($_GET['s']))
                         <tbody class="dictBody">
                             <tr class="dictRow">
-                                <td class="no">{{ $item->id }}</td>
+                                <td class="no">{{ $key + 1 + $pageno * 20 }}</td>
                                 <td class="wordCol">
                                     <p class="phrase">{{ $item->word_spell }}</p>
-                                    <p class="description">{{ $item->japanese }}</p>
+                                    <p class="">{{ $item->japanese }}</p>
                                 </td>
                                 <td class="descrpCol">
-                                    <p>{{ $item->japanese }}</p>
+                                    <p>{{ $item->meaning }}</p>
                                 </td>
                                 <td class="detail secondary">
                                     <p class="detailText"></p>
@@ -242,13 +256,13 @@
                     @elseif ($item->language_id == 1)
                         <tbody class="dictBody">
                             <tr class="dictRow">
-                                <td class="no">{{ $item->id }}</td>
+                                <td class="no">{{ $key + 1 + $pageno * 20 }}</td>
                                 <td class="wordCol">
                                     <p class="phrase">{{ $item->word_spell }}</p>
-                                    <p class="description">{{ $item->japanese }}</p>
+                                    <p class="">{{ $item->japanese }}</p>
                                 </td>
                                 <td class="descrpCol">
-                                    <p>{{ $item->japanese }}</p>
+                                    <p>{{ $item->meaning }}</p>
                                 </td>
                                 <td class="detail secondary">
                                     <p class="detailText"></p>
@@ -285,6 +299,7 @@
                 @endforeach
             </table>
         </div>
+        {{-- ページネーション --}}
         {{ $items->links() }}
     </main>
 
