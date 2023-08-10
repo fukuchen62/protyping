@@ -1,10 +1,10 @@
 @extends('layouts.layout_front')
 
-@section('description', 'プログラミングでよく使う英単語のタイピング練習ゲームです。無料&ブラウザで遊べ学べる。空き時間や暇つぶし程度にLet’sプレイ！')
+@section('description', 'プログラミングでよく使う英単語のタイピング練習ゲームです。無料&ブラウザで遊べ学べる。空き時間や暇つぶし程度にLet'sプレイ！')
 
 @section('keywords')
 
-@section('title', 'ゲーム ｜Play')
+@section('title', 'ゲーム｜Webプログラミング練習タイピングゲーム「タイプコード」')
 @section('pageCss')
     <link href="{{ asset('assets/css/typingstyle.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/css/game_typing.css') }}" rel="stylesheet" />
