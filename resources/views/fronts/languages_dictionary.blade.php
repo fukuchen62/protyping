@@ -6,7 +6,7 @@
 @section('keywords')
 @endsection
 
-@section('title', '辞書｜各言語の辞書')
+@section('title', '辞書｜Webプログラミング練習タイピングゲーム「タイプコード」')
 
 @section('pageCss')
     <link href="{{ asset('assets/css/dictionary_details.css') }}" rel="stylesheet">
