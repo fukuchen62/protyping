@@ -12,7 +12,7 @@ h2 {
 }
 
 #gameBody {
-    border: #17354D 2px solid;
+    border: #2E94CE 0.1px solid;
     border-radius: 10px;
     text-align: center;
     background: linear-gradient(to bottom, #B6F2FF 0%, #2E94CE 100%);
@@ -83,7 +83,7 @@ h2 {
     width: 100%;
     margin: 40px auto;
     padding: 20px;
-    border: #17354D 2px solid;
+    border: #17354D 1px solid;
     border-radius: 10px;
     background-color: #fff;
     font-weight: 300;
@@ -100,7 +100,6 @@ h2 {
 .topRanking {
     width: 24rem;
     padding: 10px;
-    border: #17354D 2px solid;
     display: none;
 }
 
@@ -161,7 +160,6 @@ h2 {
     width: 40%;
     padding: 10px;
     background: #ADEEFF;
-    border: 1px solid #17354D;
     border-radius: 10px;
     text-align: center;
     font-size: 16px;
@@ -218,7 +216,7 @@ h2 {
 }
 
 .topRanking section {
-    border: #17354D 2px solid;
+    border: #17354D 1px solid;
 }
 
 .rankingCategory {
@@ -465,7 +463,7 @@ span {
 .infoNews {
     margin-bottom: 40px;
     padding: 20px;
-    border: #17354D 2px solid;
+    border: #17354D 1px solid;
     border-radius: 10px;
     text-align: center;
     background-color: #fff;
@@ -511,7 +509,7 @@ span {
 }
 
 .info-pho {
-    border: 2px solid #17354D;
+    border: 1px solid #17354D;
 }
 
 /* 知っトク情報 */
@@ -520,7 +518,7 @@ span {
 .updateNews {
     margin-bottom: 40px;
     padding: 20px;
-    border: #17354D 2px solid;
+    border: #17354D 1px solid;
     border-radius: 10px;
     text-align: center;
     background-color: #fff;
@@ -756,7 +754,7 @@ span {
         background-color: #5FBFED;
         margin-left: 20px;
         width: 260px;
-        right: 43px;
+        right: 10px;
     }
 
     .topRankingArea {
