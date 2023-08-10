@@ -28,11 +28,11 @@
                 @php
                     $json_array = []; // 空の配列として初期化
                     $japanese_array = []; // 日本語空の配列として初期化
-                    
+
                     foreach ($items as $item) {
                         $json_array[] = $item->word_spell; // 配列にJSON形式の文字列を追加
                         $japanese_array[] = $item->japanese; // 配列にJSON形式の文字列を追加
-                    
+
                         //var_dump($json_array); // デバッグ用に配列を表示（必要に応じてコメントアウト）
                     }
                     $json_array = json_encode($json_array); // PHPの配列をJSON形式の文字列に変換
@@ -467,7 +467,7 @@
                         const button18 = document.getElementById('return-start'); // 『スタートに戻る』ボタンクリック時
                         const audioElement = document.getElementById('sound'); //タイプ音
 
-                        let countdownTime = 5; //ゲーム用タイマー 1=1秒
+                        let countdownTime = 60; //ゲーム用タイマー 1=1秒
                         // 遊ぶ文字列をデータベースから取得
                         let wordJPArray = {!! $json_array !!};
                         // 日本語表記
@@ -654,7 +654,7 @@
                             sWait = true;
                             space.classList.add('active');
 
-                            countdownTime = 120;
+                            countdownTime = 60;
 
                             flagR = flags[0];
                             flagK = flags[1];
@@ -708,7 +708,7 @@
                                 if (timeLeft < 0) {
                                     clearInterval(timerInterval);
                                     finish();
-                                    timerDisplay.textContent = "タイムアップ!";
+                                    // timerDisplay.textContent = "タイムアップ!";
                                     // タイマー終了後の処理をここに記述する（例：アラートを表示する、他の処理を実行する等）
                                 }
                             }
@@ -721,8 +721,8 @@
                         // タイマーを途中で停止し、デフォルト値にリセットする
                         function stopAndResetTimer() {
                             clearInterval(timerInterval);
-                            countdownTime = 180; // デフォルト値にリセット
-                            timerDisplay.textContent = "00:03:00"; // 表示もリセット
+                            countdownTime = 60; // デフォルト値にリセット
+                            timerDisplay.textContent = "00:01:00"; // 表示もリセット
                         }
 
                         // ゲーム開始処理
@@ -1608,11 +1608,12 @@
 
                         // リプレイ処理
                         function replay() {
+                            countdownTime = 60;
                             moPlay = false; // 『ミスだけ』フラグなし
                             result.style.display = 'none'; // 結果画面を非表示に
                             view2.style.display = 'block'; // タイピング画面を表示
                             startMsg.style.display = 'block'; // メッセージを再表示
-                            countdownTime = 180;
+
 
                             sWait = true; // 開始前のスペース入力待ちフラグ
                             space.classList.add('active'); // スペースキーをactiveにする
