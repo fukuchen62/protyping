@@ -141,7 +141,7 @@ h3 {
     font-size: 1.6rem;
 }
 
-.scoreTable td{
+.scoreTable td {
     vertical-align: middle;
 }
 
@@ -252,8 +252,7 @@ td {
     }
 
     .word {
-        width: 400px;
-        margin: 0 auto;
+        display: none;
     }
 
     .rankingInner {
