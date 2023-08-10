@@ -38,6 +38,8 @@ h4 {
     letter-spacing: 0.04em;
 }
 
+
+
 /* テーブルの共通 */
 .tableTips {
     margin-bottom: 20px;
@@ -47,6 +49,14 @@ h4 {
 
 caption {
     text-align: center;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #17354d;
+}
+
+caption p{
+
+    color: #17354d;
 }
 
 .theadTips tr th {

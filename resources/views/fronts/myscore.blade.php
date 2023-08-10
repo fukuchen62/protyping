@@ -4,7 +4,7 @@
 
 @section('keywords')
 
-@section('title', 'マイスコア｜タイプコード')
+@section('title', 'マイスコア｜プログラミング練習タイピングゲーム「タイプコード」')
 
 @section('pageCss')
     <link href="{{ asset('assets/css/myscore.css') }}" rel="stylesheet">
@@ -43,41 +43,17 @@
                 <p>ランキングコースに挑戦し、ユーザーネームを登録するとこのページに反映されます。<br>自己ベスト更新目指して頑張ろう！</p>
             </section>
 
+            {{-- @php
+                print_r($score_list);
+            @endphp --}}
+
             {{-- レベル切り替えボタン --}}
-            {{-- <div class="levelButtons">
+            <div class="levelButtons">
                 <a class="levelButton {{ request()->query('level_id') == 1 || !request()->has('level_id') ? 'active' : '' }}"
                     href="{{ route('myscore', ['level_id' => 1]) }}">初級</a>
                 <a class="levelButton {{ request()->query('level_id') == 2 ? 'active' : '' }}"
                     href="{{ route('myscore', ['level_id' => 2]) }}">中級</a>
-            </div> --}}
-
-            <!-- 言語選択 -->
-            {{-- <nav class="word">
-                <div>
-                    <img alt="↓ボタン" src="{{ asset('assets/images/arrow.png') }}">
-                    <a href="#html">HTML</a>
-                </div>
-                <div>
-                    <img alt="↓ボタン" src="{{ asset('assets/images/arrow.png') }}">
-                    <a href="#css">css</a>
-                </div>
-                <div>
-                    <img alt="↓ボタン" src="{{ asset('assets/images/arrow.png') }}">
-                    <a href="#javascript">JavaScript</a>
-                </div>
-                <div>
-                    <img alt="↓ボタン" src="{{ asset('assets/images/arrow.png') }}">
-                    <a href="#php">PHP</a>
-                </div>
-                <div>
-                    <img alt="↓ボタン" src="{{ asset('assets/images/arrow.png') }}">
-                    <a href="#python">Python</a>
-                </div>
-                <div>
-                    <img alt="↓ボタン" src="{{ asset('assets/images/arrow.png') }}">
-                    <a href="#engword">プログラミングでよく使う英単語</a>
-                </div>
-            </nav> --}}
+            </div>
 
             <!-- ここから動的 -->
             <section class="scoreWrap">
@@ -85,80 +61,49 @@
                 <div class="cardWrap">
                     <div class="cardList">
 
-                        <div class="listInner">
-                            <div class="cardInner">
-                                <div class="history">
-                                    <h3 id="html">HTML</h3>
-                                </div>
-                                <div class="scoreList">
-                                    <div class="scoreLine">
-                                        <div class="scoreItem">
-                                            <p>Score</p>
-                                        </div>
-                                        <div class="scoreItem">
-                                            <p class="triangle">▶▶▶</p>
-                                        </div>
-                                        <div class="scoreItem">
-                                            @if (isset($_GET['level_id']))
-                                                @if ($_GET['level_id'] == 1)
-                                                    @if (request()->hasCookie('saved_data1'))
-                                                        <p class="score">{{ request()->cookie('saved_data1') }}点</p>
-                                                    @endif
-                                                    @if (isset($bestScores) && is_array($bestScores) && count($bestScores) > 0)
-                                                        <h3>Best 3 Scores:</h3>
-                                                        <ul>
-                                                            @foreach ($bestScores as $score)
-                                                                <li>{{ $score }}</li>
-                                                            @endforeach
-                                                        </ul>
-                                                    @else
-                                                        <p>No best scores available.</p>
-                                                    @endif
-                                                @elseif($_GET['level_id'] == 2)
-                                                    @if (request()->hasCookie('saved_data7'))
-                                                        <p class="score">{{ request()->cookie('saved_data7') }}点</p>
-                                                    @endif
-                                                @else
-                                                    @if (request()->hasCookie('saved_data1'))
-                                                        <p class="score">{{ request()->cookie('saved_data1') }}点</p>
-                                                    @endif
-                                                @endif
-                                            @else
-                                                @if (request()->hasCookie('saved_data1'))
-                                                    <p class="score">{{ request()->cookie('saved_data1') }}点</p>
-                                                @endif
-                                                @if (isset($bestScores) && is_array($bestScores) && count($bestScores) > 0)
-                                                    <h3>Best 3 Scores:</h3>
-                                                    <ul>
-                                                        @foreach ($bestScores as $score)
-                                                            <li>{{ $score }}</li>
-                                                        @endforeach
-                                                    </ul>
-                                                @else
-                                                    <p>No best scores available.</p>
-                                                @endif
-                                            @endif
-                                        </div>
+                        @foreach ($score_list as $score)
+                            <div class="listInner">
+
+                                <div class="cardInner">
+                                    <div class="history">
+                                        <h3 id="html">{{ $score['name'] }}</h3>
+                                    </div>
+                                    <div class="scoreList">
+                                        <table class="scoreLine">
+                                            <tr>
+                                                <th width="50%">取得日時</th>
+                                                <th width="30%">名前</th>
+                                                <th width="20%">スコア</th>
+                                            </tr>
+                                            @foreach ($score['data'] as $item)
+                                                <tr class="score">
+                                                    <td>{{ \Carbon\Carbon::createFromTimeString($item['date'])->format('Y/m/d  H:m') }}
+                                                    </td>
+                                                    <td>{{ $item['name'] }}</td>
+                                                    <td>{{ $item['score'] }}</td>
+                                                </tr>
+                                            @endforeach
+                                        </table>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-
+                        @endforeach
                     </div>
                 </div>
-
             </section>
+        </div>
 
-            <!-- ランキング、マイスコアボタン -->
-            <div class="btnWrap">
-                <div class="gameChallenge">
-                    <a class="challengeBtn" href="{{ route('game') }}">ゲームに挑戦</a>
-                </div>
-                <div class="viewMyscore">
-                    <a class="viewBtn" href="{{ route('ranking') }}">ランキングを見る</a>
-                </div>
+        </section>
+
+        <!-- ランキング、マイスコアボタン -->
+        <div class="btnWrap">
+            <div class="gameChallenge">
+                <a class="challengeBtn" href="{{ route('game') }}">ゲームに挑戦</a>
             </div>
+            <div class="viewMyscore">
+                <a class="viewBtn" href="{{ route('ranking') }}">ランキングを見る</a>
+            </div>
+        </div>
 
         </div>
     </main>
