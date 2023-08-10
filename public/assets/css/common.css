@@ -18,7 +18,7 @@ html {
 body {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     background-color: #26567C;
-    color: #8B8B8B;
+    color: #17354d;
     min-width: 320px;
     overflow-x: hidden;
     /* 横スクロールを表示しなくなる設定 */
@@ -323,7 +323,7 @@ p {
 }
 
 .breadCrumb-001 a {
-    color: #8B8B8B;
+    color: #17354d;
     text-decoration: none;
 }
 
@@ -450,7 +450,7 @@ p {
 }
 
 .selectWrap select {
-    color: #625858;
+    color: #17354d;
     font-size: 1.6rem;
 }
 
@@ -884,7 +884,7 @@ padding: 15px;
     }
 
     .contentItem a:hover {
-        color: #26567C;
+        color: #17354d;
     }
 
 
