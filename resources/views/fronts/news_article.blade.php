@@ -4,7 +4,7 @@
 
 @section('keywords')
 
-@section('title', '更新情報｜タイプコード')
+@section('title', '更新情報｜プログラミング練習タイピングゲーム「タイプコード」')
 
 @section('pageCss')
     <link href="{{ asset('assets/css/update.css') }}" rel="stylesheet">
