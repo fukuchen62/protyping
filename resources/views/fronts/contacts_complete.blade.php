@@ -29,10 +29,10 @@
             <div>{{ session('success') }}</div>
             @endif --}}
             <p>送信いたしました。<br>お問い合わせいただき誠にありがとうございます。</p>
-            <div>
-                <a class="homeBack" href="{{ route('top') }}">
-                    ホームに戻る
-                </a>
+            <div class="contactBottom" align="center">
+                <p class="homeBack"><a href="{{ route('top') }}">
+                        ホームに戻る
+                    </a></p>
             </div>
         </main>
     </div>
