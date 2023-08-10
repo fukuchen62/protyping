@@ -4,7 +4,7 @@
 
 @section('keywords')
 
-@section('title', 'プライバシーポリシー｜タイプコード')
+@section('title', 'プライバシーポリシー｜タイピングゲーム「タイプコード」')
 
 @section('pageCss')
     <link href="{{ asset('assets/css/privacy_policy.css') }}" rel="stylesheet">
