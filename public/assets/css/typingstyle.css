@@ -140,7 +140,8 @@
 #game-body {
     display: table;
     width: 728px;
-    height: calc(100vh - 140px);
+    height: 630px;
+    /* height: calc(100vh - 140px); */
     /* height: 470px; */
     color: #636363;
 }
