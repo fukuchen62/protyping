@@ -130,45 +130,42 @@ class TypinggameController extends Controller
 
         $response = response()->json(['message' => 'Score saved successfully'], 200);
 
-        // クッキーに値を保存する
-        $cookie_name = 'score' . $language_id . $level_id;
-        $duration = time() + (7 * 24 * 60 * 60);
+        // クッキーに値を保存する処理
 
+        $cookie_name =  $language_id . '_' . $level_id;
+        $expiration =  (24 * 600) * 1;      // １日
+
+        // 登録データの配列
+        $score = [
+            "lag" => $language_id,
+            "lvl" => $level_id,
+            "name" => $user_name,
+            "score" => $score,
+            "date" => date('Y-m-d H:i'),
+        ];
         // cookieがすでにあったら
         if ($request->hasCookie($cookie_name)) {
-            // 指定名で該当クッキーを取得
+            // 指定名でクッキーを取得
             $score_list = json_decode($request->cookie($cookie_name), true) ?? [];
 
-            // 既存のベスト3の値を取得
-            $bestScores = isset($savedData1['best_scores']) ? $savedData1['best_scores'] : [];
+            // 既存配列に新しい記録を追加
+            array_push($score_list, $score);
 
-            // ベスト3の値を更新
-            array_push($bestScores, $score);
-            rsort($bestScores); // 値を降順にソート
+            // 配列を成績の降順に並び替え
+            array_multisort(array_column($score_list, 'score'), SORT_DESC, $score_list);
 
-            if (count($bestScores) > 3) {
-                array_pop($bestScores); // 要素が3つを超える場合、最小値を削除
+            // 要素が3つを超える場合、最小値を削除
+            if (count($score_list) > 3) {
+                array_pop($score_list);
             }
 
-            // 更新されたベスト3の値をセット
-            $savedData1['best_scores'] = $bestScores;
-            $response->withCookie(cookie('saved_data1', json_encode($savedData1), 600));
-            // $response->cookie('saved_data1', $score, 600); // 60分 = 1時間
-
+            // 更新された配列をクッキーに保存
+            $response->withCookie(cookie($cookie_name, json_encode($score_list), $expiration));
         } else {
-
-            $score = [
-                "language_id" => $language_id,
-                "level_id" => $level_id,
-                "user_name" => $user_name,
-                "score" => $score,
-                "created_at" => date('Y-m-d H:i:s'),
-            ];
-
-            $response->withCookie(cookie($cookie_name, json_encode($score), $duration));
+            // 新しいクッキーを作成する
+            $score_list[] = $score;
+            $response->withCookie(cookie($cookie_name, json_encode($score_list), $expiration));
         }
-
-
 
         // switch ($scoreModel->language_id) {
         //     case '1':
