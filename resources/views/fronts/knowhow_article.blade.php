@@ -1,11 +1,11 @@
 @extends('layouts.layout_front')
 
 @section('description',
-    'WEB業界に進むための知識が欲しい、タイピング速度の向上のためのスキルを磨きたい人向けの知っトク情報！開発環境やおすすめのWEBアプリ、ショートカットや便利な資格など多彩な知っトク情報を発信中です！')
+    'Web業界に進むための知識が欲しい、タイピング速度の向上のためのスキルを磨きたい人向けの知っトク情報！開発環境やおすすめのWebアプリ、ショートカットや便利な資格など多彩な知っトク情報を発信中です！')
 
 @section('keywords')
 
-@section('title', '知っトク情報一覧｜情報')
+@section('title', '知っトク情報一覧｜タイピングゲーム「タイプコード」')
 
 @section('pageCss')
     <link href="{{ asset('assets/css/shittoku.css') }}" rel="stylesheet">
