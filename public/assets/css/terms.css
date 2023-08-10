@@ -3,14 +3,11 @@
 .main {
     width: 90%;
     padding: 90px 10px 20px;
-    /* padding-top: 110px; */
 }
 
 @media (min-width:1000px) {
     .main {
         padding: 165px 10px 10px;
-        /* padding-top: 120px; */
-        /* padding-bottom: 40px; */
     }
 
     h2 {
