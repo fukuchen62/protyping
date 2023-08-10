@@ -1,6 +1,6 @@
 @extends('layouts.layout_front')
 
-@section('description', 'プログラミングでよく使う英単語のタイピング練習ゲームです。無料&ブラウザで遊べ学べる。空き時間や暇つぶし程度にLet'sプレイ！')
+@section('description', 'プログラミングでよく使う英単語のタイピング練習ゲームです。無料&ブラウザで遊べ学べる。空き時間や暇つぶし程度にLet’sプレイ！')
 
 @section('keywords')
 
@@ -28,11 +28,11 @@
                 @php
                     $json_array = []; // 空の配列として初期化
                     $japanese_array = []; // 日本語空の配列として初期化
-
+                    
                     foreach ($items as $item) {
                         $json_array[] = $item->word_spell; // 配列にJSON形式の文字列を追加
                         $japanese_array[] = $item->japanese; // 配列にJSON形式の文字列を追加
-
+                    
                         //var_dump($json_array); // デバッグ用に配列を表示（必要に応じてコメントアウト）
                     }
                     $json_array = json_encode($json_array); // PHPの配列をJSON形式の文字列に変換
