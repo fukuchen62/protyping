@@ -82,7 +82,7 @@
                             </th>
                             <td class="categoryFirst">
                                 <input checked id="selectRadio1" name="contact_type" required type="radio" value="1">
-                                <label for="selectRadio1">言語追加依頼</label>
+                                <label for="selectRadio1">単語追加依頼</label>
                             </td>
                             <td class="category">
                                 <input id="selectRadio2" name="contact_type" type="radio" value="2">
