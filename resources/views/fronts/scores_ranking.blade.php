@@ -4,7 +4,7 @@
 
 @section('keywords')
 
-@section('title', 'ランキング｜タイプコード')
+@section('title', 'ランキング｜プログラミング練習タイピングゲーム「タイプコード」')
 
 @section('pageCss')
     <link href="{{ asset('assets/css/ranking.css') }}" rel="stylesheet">
@@ -68,7 +68,7 @@
 
                     @foreach ($languages as $language)
                         <div class="card" id="language_{{ $language->id }}">
-                            <h3 >{{ $language->language_name }}</h3>
+                            <h3>{{ $language->language_name }}</h3>
                             <div class="cardInner">
                                 @if (count($scoresByLanguage[$language->id]) > 0)
                                     <table class="scoreTable">
