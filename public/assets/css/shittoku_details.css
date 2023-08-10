@@ -410,3 +410,15 @@ ul .subMenu4 a {
         margin: 40px;
     }
 }
+
+.parent {
+        white-space: nowrap; /* テキストを折り返さずに表示 */
+        overflow: hidden;    /* オーバーフロー部分を隠す */
+}
+
+.child {
+    display: inline-block; /* テキストを一行のブロックとして表示 */
+    overflow: hidden;      /* オーバーフロー部分を隠す */
+    text-overflow: ellipsis; /* テキストがはみ出た場合に省略記号 (...) を表示 */
+    max-width: 100%;       /* 親要素内での最大幅 */
+}

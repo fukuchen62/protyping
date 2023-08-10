@@ -74,19 +74,25 @@
                         <form action="{{ route('game') }}" class="select" method="get">
                             {{-- 言語の選択 --}}
                             <select class="selectWrap" id="language-select" name="language">
-                                <option value="1"selected>HTML</option>
+                                @foreach ($lang_list as $item)
+                                    <option value="{{ $item->id }}" {{ $item->id == $language ? 'selected' : '' }}>
+                                        {{ $item->language_name }}
+                                    </option>
+                                @endforeach
+
+                                {{-- <option value="1"selected>HTML</option>
                                 <option value="2">CSS</option>
                                 <option value="3">JavaScript</option>
                                 <option value="4">PHP</option>
                                 <option value="5">Python</option>
-                                <option value="6">よく使う英単語</option>
+                                <option value="6">よく使う英単語</option> --}}
                                 <!-- 他の言語のオプションを追加 -->
                             </select>
 
                             {{-- レベルの選択 --}}
                             <select class="selectWrap" id="level-select" name="level">
-                                <option value="1"selected>初級</option>
-                                <option value="2">中級</option>
+                                <option value="1" {{ $level == 1 ? 'selected' : '' }}>初級</option>
+                                <option value="2" {{ $level == 2 ? 'selected' : '' }}>中級</option>
                                 <!-- 他のレベルのオプションを追加 -->
                             </select>
                             <input class="selectWrap selectColor" type="submit" value="確定">

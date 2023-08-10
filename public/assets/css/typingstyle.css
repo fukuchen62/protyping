@@ -140,7 +140,8 @@
 #game-body {
     display: table;
     width: 728px;
-    height: 470px;
+    height: calc(100vh - 140px);
+    /* height: 470px; */
     color: #636363;
 }
 
@@ -279,22 +280,25 @@
 
 #game-view2 {
     display: none;
+    margin-block-start: 30px;
 }
 
 #text-container {
     position: relative;
     max-width: 610px;
-    height: 150px;
+    height: 170px;
     border: 1px solid #d8d8d8;
     margin: 0 auto 10px;
     overflow: hidden;
     background-color: #fff;
+    border-radius: 5px;
 }
 
 #timer {
     color: #EAB624;
-    font-size: 2.4rem;
+    font-size: 2rem;
     text-align: center;
+    margin-top: 10px;
 }
 
 #miss-type-screen {
@@ -346,10 +350,10 @@
 #example {
     position: absolute;
     left: 15px;
-    top: 36px;
+    top: 60px;
     width: 580px;
     height: 36px;
-    font-size: 30px;
+    font-size: 24px;
     line-height: 36px;
     overflow: hidden;
     font-variant-ligatures: no-common-ligatures;
@@ -373,6 +377,7 @@
     line-height: 24px;
     overflow: hidden;
     font-variant-ligatures: no-common-ligatures;
+    display: none;
 }
 
 #kana>div {
@@ -386,15 +391,19 @@
 #sentence {
     position: absolute;
     left: 15px;
-    top: 102px;
+    top: 100px;
     width: 580px;
     height: 30px;
-    font-size: 26px;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
     line-height: 26px;
     overflow: hidden;
     text-transform: uppercase;
     font-variant-ligatures: no-common-ligatures;
 }
+
+
 
 #sentence>div {
     position: absolute;
@@ -819,10 +828,13 @@
 #current-result {
     position: relative;
     float: left;
-    width: 590px;
+    width: 550px;
+    /* width: 590px; */
     height: 337px;
     border: 1px solid #d0d0d0;
-    margin: 15px 0 12px;
+    margin-top: 100px;
+    margin-left: 20px;
+    /* margin: 15px 0 12px; */
     background-color: #f7f7f7;
 }
 
@@ -917,7 +929,8 @@
     width: 138px;
     height: 337px;
     float: right;
-    margin-top: 15px;
+    margin-top: 100px;
+    margin-right: 20px;
     border-top: 1px solid #d0d0d0;
     border-right: 1px solid #d0d0d0;
     border-bottom: 1px solid #d0d0d0;
@@ -990,19 +1003,19 @@
 }
 
 #set-ranking {
-    top: 380px;
+    top: 460px;
     right: 35%;
     background: linear-gradient(to bottom, #FFDA56 0%, #DDA107 75%, #EC905C 100%);
 }
 
 #game-finish {
-    top: 380px;
+    top: 460px;
     right: 5%;
     background: linear-gradient(to bottom, #FFDA56 0%, #DDA107 75%, #EC905C 100%);
 }
 
 #replay-button {
-    top: 380px;
+    top: 460px;
     right: 65%;
     background: linear-gradient(to bottom, #FFDA56 0%, #DDA107 75%, #EC905C 100%);
 }
@@ -1036,12 +1049,13 @@
 
 .regist-ranking {
     width: 200px;
-    height: 39px;
+    height: 50px;
     color: #fff;
     font-size: 16px;
     text-align: center;
     border-radius: 3px;
     background: linear-gradient(to bottom, #FFDA56 0%, #DDA107 75%, #EC905C 100%);
+    margin-top: 30px;
 }
 
 .ranking-title {
