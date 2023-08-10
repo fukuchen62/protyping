@@ -6,7 +6,7 @@
 
 @section('keywords')
 
-@section('title', 'お問い合わせ｜ご意見ご要望お待ちしてます')
+@section('title', 'お問い合わせ｜プログラミング練習タイピングゲーム「タイプコード」')
 
 @section('pageCss')
     <link href="{{ asset('assets/css/contact.css') }}" rel="stylesheet">
