@@ -4,7 +4,7 @@
 
 @section('keywords')
 
-@section('title', '利用規約｜タイプコード')
+@section('title', '利用規約｜プログラミング練習タイピングゲーム「タイプコード」')
 
 @section('pageCss')
     <link href="{{ asset('assets/css/terms.css') }}" rel="stylesheet">
