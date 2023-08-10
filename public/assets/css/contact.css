@@ -230,9 +230,9 @@ form a:hover {
 
 .clear {
     width: 95px;
-    background-color: #5FC0ED;
+    background-color: #8B8B8B;
     color: #fff;
-    font-weight: 500;
+    font-weight: 800;
     display: block;
     margin: 20px;
     font-size: 16px;
@@ -259,12 +259,12 @@ form a:hover {
     height: 55px;
     display: block;
     border-radius: 10px;
-
     text-align: center;
     line-height: 3.4375rem;
     font-size: 1.6rem;
     margin: 0 auto;
     padding: 5px;
+    font-weight: 800;
 }
 
 .contactSubmit:hover {
