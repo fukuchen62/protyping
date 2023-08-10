@@ -303,7 +303,7 @@ p {
     display: flex;
     gap: 0 5px;
     list-style: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .breadCrumb-001 li {
@@ -919,6 +919,6 @@ padding: 15px;
         display: none;
         gap: 0 5px;
         list-style: none;
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 }

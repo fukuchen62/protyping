@@ -17,9 +17,6 @@
 }
 
 /* パンくずリストcss */
-.breadCrumb-001 {
-    font-size: 1rem;
-}
 
 .breadCrumb-001 li:not(:last-child)::after {
     border-top: 1px solid #ffff;
