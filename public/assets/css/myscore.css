@@ -13,8 +13,16 @@
 }
 
 .mainContent {
-    max-width: 280px;
+    /* max-width: 280px; */
+    width: 100%;
     margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+    .cardInner {
+        width: 48%;
+        /* max-width: 400px; */
+    }
 }
 
 /* タイトル */
@@ -206,9 +214,9 @@ input[name="course_name"] {
 
 .listInner {
     margin: 0 0 30px 0;
-    width: 280px;
-    height: 200px;
-    padding: 35px 10px;
+    /* width: 280px; */
+    /* height: 300px;*/
+    padding: 2px 20px;
     border-radius: 10px;
     background: linear-gradient(to bottom,
             #5FBFED 0%, #178CCE 60%, #105CB2 100%);
@@ -244,28 +252,39 @@ h3 {
     display: flex;
 }
 
-.scoreLine {
+/* .scoreLine {
     display: flex;
     border-bottom: 2px solid #0D3F88;
     width: 194px;
     justify-content: space-between;
     margin: 0 auto;
     font-size: 1.5rem;
-}
-
-/* .scoreItem p {
-    font-size: 1.5rem;
 } */
 
+table.scoreLine {
+    width: 95%;
+    margin: 10px auto;
+    font-size: 1.8rem;
+}
 
+table.scoreLine th,
+table.scoreLine tr,
+table.scoreLine td {
+    border: 1px solid;
+    padding: 5px;
+    font-size: 1.6rem;
+}
+
+table.scoreLine th {
+    text-align: center;
+}
 
 .cardInner {
-
-    width: 258px;
-    height: 128px;
+    width: 100%;
+    height: 300px;
     border: 3px solid #fff;
     border-radius: 5px;
-    margin: 0 auto;
+    margin: 40px auto;
 }
 
 /* .cardInner p {
@@ -364,6 +383,20 @@ h3 {
     padding: 5px;
 }
 
+@media (min-width:765px) {
+
+
+    .cardList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .listInner {
+        width: 45%;
+
+    }
+}
 
 /* メディアクエリ */
 @media (min-width:1000px) {
@@ -461,9 +494,9 @@ h3 {
     }
 
     .listInner {
-        width: 470px;
-        height: 490px;
-        padding: 60px 30px;
+        width: 48%;
+        /* height: 490px;
+        padding: 60px 30px; */
     }
 
     .cardWrap h3 {
