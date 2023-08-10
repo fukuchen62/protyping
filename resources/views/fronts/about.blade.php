@@ -4,7 +4,7 @@
 
 @section('keywords')
 
-@section('title', 'アバウト｜私たち、本サイトについて')
+@section('title', 'アバウト｜プログラミング練習タイピングゲーム「タイプコード」')
 
 @section('pageCss')
     <link href="{{ asset('assets/css/about.css') }}" rel="stylesheet">
