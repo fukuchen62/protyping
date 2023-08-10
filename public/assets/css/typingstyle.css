@@ -140,10 +140,11 @@
 #game-body {
     display: table;
     width: 728px;
-    height: 630px;
+    height: 600px;
     /* height: calc(100vh - 140px); */
     /* height: 470px; */
-    color: #636363;
+    color: #17354d;
+    margin: 10px auto 30px;
 }
 
 #game-view1 {
@@ -415,7 +416,7 @@
 }
 
 #sentence .typed {
-    color: #ffd0a6;
+    color: #15f37f;
 }
 
 #progress-bar {
@@ -833,7 +834,8 @@
     /* width: 590px; */
     height: 337px;
     border: 1px solid #d0d0d0;
-    margin-top: 100px;
+    margin-top: 60px;
+    /* margin-top: 100px; */
     margin-left: 20px;
     /* margin: 15px 0 12px; */
     background-color: #f7f7f7;
@@ -850,17 +852,17 @@
 }
 
 #current-result .result-title {
-    color: #26567C;
+    color: #17354d;
     border-bottom: 1px solid #d0d0d0;
     background-color: #fff;
-    box-shadow: 2px 0px 7px #5FBFED inset;
+    box-shadow: 0px 0px 5px #5FBFED inset;
 }
 
 #example-list {
     position: absolute;
     top: 49px;
     left: 12px;
-    width: 376px;
+    width: 345px;
     height: 274px;
     padding: 10px;
     overflow: auto;
@@ -930,7 +932,7 @@
     width: 138px;
     height: 337px;
     float: right;
-    margin-top: 100px;
+    margin-top: 60px;
     margin-right: 20px;
     border-top: 1px solid #d0d0d0;
     border-right: 1px solid #d0d0d0;
@@ -939,9 +941,9 @@
 
 #prev-result .result-title {
     border-bottom: 1px solid #d0d0d0;
-    color: #26567C;
+    color: #17354d;
     background-color: #fff;
-    box-shadow: 2px 0px 7px #5FBFED inset;
+    box-shadow: 0px 0px 5px #5FBFED inset;
 }
 
 #prev-result .result-data {
@@ -991,7 +993,7 @@
     position: absolute;
     display: block;
     width: 200px;
-    height: 39px;
+    height: 50px;
     color: #fff;
     font-size: 16px;
     text-align: center;
@@ -1060,7 +1062,7 @@
 }
 
 .ranking-title {
-    color: #26567C;
+    color: #17354d;
     font-size: 36px;
 }
 
@@ -1135,13 +1137,13 @@
     background: #fff;
     height: 220px;
     width: 724px;
-    margin: 20px auto;
+    margin: 50px auto;
     font-size: 24px;
 }
 
 .descriptive-essay {
     padding: 20px 40px;
-    color: #26567C;
+    color: #17354d;
 }
 
 .descriptive-margin {
