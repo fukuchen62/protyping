@@ -437,13 +437,6 @@ h3 {
     font-size: 1.4rem;
 }
 
-
-.clearfix::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
 .yellowLine {
     border: solid 1.5px #FFEBC5;
     margin: 10px auto;
@@ -646,16 +639,6 @@ span {
         margin: 10px 25px 50px;
     }
 
-    /* .infoList {
-        margin-bottom: 20px;
-        width: 100%;
-    } */
-
-    /* .rankingArea2 {
-        width: 100%;
-        margin: 20px auto;
-    } */
-
     .infoList li {
         width: 48%;
         margin-bottom: 20px;
@@ -697,6 +680,7 @@ span {
 
     .main {
         padding-top: 120px;
+        position: relative;
     }
 
     .topRanking2 {
@@ -728,7 +712,7 @@ span {
 
     .topLeftArea {
         max-width: 660px;
-        float: left;
+        /* float: left; */
     }
 
     .gameExplain {
@@ -767,12 +751,13 @@ span {
     }
 
     .topRanking {
-        position: relative;
+        position: absolute;
         display: inline-block;
         flex-basis: 360px;
         background-color: #5FBFED;
         margin-left: 20px;
         width: 260px;
+        right: 30px;
     }
 
     .topRankingArea {
