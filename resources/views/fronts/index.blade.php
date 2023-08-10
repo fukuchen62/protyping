@@ -4,7 +4,7 @@
 
 @section('keywords', 'キーワード1,キーワード2・・・')
 
-@section('title', 'タイプコード ｜学ぼう！遊ぼう！目指そう！Webプログラマー育成タイピングゲーム(^^)!')
+@section('title', 'Webプログラミング練習タイピングゲーム「タイプコード」')
 
 @section('pageCss')
     {{--
