@@ -133,7 +133,7 @@ class TypinggameController extends Controller
         // クッキーに値を保存する処理
 
         $cookie_name =  $language_id . '_' . $level_id;
-        $expiration =  (24 * 600) * 1;      // １日
+        $expiration =  (24 * 60) * 365;      // 365日
 
         // 登録データの配列
         $score = [
