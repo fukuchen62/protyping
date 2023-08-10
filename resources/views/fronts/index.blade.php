@@ -181,7 +181,7 @@
                         <!-- $items を使った表示や処理 -->
                         @if (isset($knowhows))
                             @foreach ($knowhows['items2'] as $item2)
-                                <li><a href="{{ route('knowhow') }}?id={{ $item2->id }}">
+                                <li><a href="{{ route('details') }}?id={{ $item2->id }}">
                                         <img alt="{{ $item2->title }}" class="info-pho"
                                             src="{{ asset('storage/images') }}/{{ $item2->thumbnail }}">
                                         <span class="info-title">【{{ $item2->title }}】</span>
