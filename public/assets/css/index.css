@@ -9,7 +9,6 @@
 /* ゲーム画面 */
 h2 {
     font-size: 6.4rem;
-    /* text-align: center; */
 }
 
 #gameBody {
@@ -61,14 +60,12 @@ h2 {
 
 .gameChara {
     width: 11rem;
-    /* height: 11rem; */
     margin: 10px;
     margin-bottom: 50px;
 }
 
 .gameChara2 {
     width: 11rem;
-    /* height: 11rem; */
     margin: 10px;
     margin-bottom: 50px;
 }
@@ -110,8 +107,6 @@ h2 {
 .topRanking2 {
     width: 100%;
     margin: 40px auto;
-    /* padding: 20px; */
-    /* border: #817F6E 2px solid; */
     border-radius: 10px;
 }
 
@@ -148,7 +143,6 @@ h2 {
     text-align: left;
     height: 4rem;
     cursor: pointer;
-    /* display: inline-block; */
     margin: 10px;
     position: relative;
     background: #ADEEFF;
@@ -174,11 +168,6 @@ h2 {
     text-decoration: none;
 }
 
-/* .selectWrap2 a:active {
-    background-color: #D6A923;
-    color: #fff;
-} */
-
 .selectWrap2 a.selected {
     background-color: #D6A923;
     color: #fff;
@@ -201,11 +190,6 @@ h2 {
 
 .selectWrap select {
     width: 20rem;
-    /* border: none;
-    outline: none; */
-    /* background: transparent; */
-    /* -webkit-appearance: none; */
-    /* appearance: none; */
     padding: 10px;
 }
 
@@ -234,9 +218,7 @@ h2 {
 }
 
 .topRanking section {
-    /* padding:10px; */
     border: #817F6E 2px solid;
-    /* border-radius:10px; */
 }
 
 .rankingCategory {
@@ -249,7 +231,6 @@ h2 {
 }
 
 .rankingWordCategory {
-    /* height: 50px; */
     text-align: center;
     padding: 15px;
     background:
@@ -259,7 +240,6 @@ h2 {
 }
 
 .rankingWordCategory2 {
-    /* height: 50px; */
     text-align: center;
     padding: 6px;
     background:
@@ -297,7 +277,6 @@ h2 {
 
 .rankingArea2 {
     margin-bottom: 20px;
-    /* width: 48%; */
     width: 100%;
 }
 
@@ -314,8 +293,6 @@ h2 {
     font-weight: 800;
     font-size: 1.4rem;
     margin: 10px;
-    /* display:inline; */
-    /* padding:20px 10px; */
 }
 
 .ranking-panel {
@@ -330,7 +307,6 @@ h2 {
 .topWordRanking2 {
     padding-top: 20px;
     width: 100%;
-    /* height: 13rem; */
     background-color: #fff;
     font-size: 1.6rem;
     margin: 0 auto 20px;
@@ -338,14 +314,12 @@ h2 {
 
 .topWordRanking2 tr {
     width: 100%;
-    /* height: 40px; */
     font-weight: 800;
     font-size: 1.4rem;
     border: 1px lightskyblue solid;
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* padding: 10px 10px; */
 }
 
 .topWordRanking2 td {
@@ -360,10 +334,6 @@ td.name {
 td.score {
     text-align: right;
 }
-
-/* .firstRank{
-    padding:20px;
-} */
 
 .topHtmlRanking {
     padding-top: 20px;
@@ -520,8 +490,6 @@ span {
     width: 9.1rem;
     height: 2.8rem;
     border-radius: 16px;
-    /* border: 1px solid #5FBFED; */
-    /* background-color: #5FBFED; */
 }
 
 .infoList {
@@ -536,7 +504,6 @@ span {
 .infoList li {
     width: 100%;
     margin-bottom: 20px;
-    /* border: 4px solid #5FBFED; */
     border-radius: 10px;
 }
 
@@ -547,8 +514,6 @@ span {
 
 .infoList img {
     width: 90%;
-    /* width: 20rem;
-    height: 8.5rem; */
     border-radius: 9px;
 }
 
@@ -578,8 +543,6 @@ span {
     width: 9.1rem;
     height: 2.8rem;
     border-radius: 16px;
-    /* border: 1px solid #5FBFED;
-    background-color: #5FBFED; */
 }
 
 .updateList {
@@ -608,7 +571,6 @@ span {
     margin-top: 20px;
     margin-left: 20px;
     font-weight: bold;
-    /* color: blueviolet; */
 }
 
 .linkArea {
@@ -618,7 +580,6 @@ span {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    /* align-items: center; */
     margin-bottom: 40px;
 }
 
@@ -640,10 +601,6 @@ span {
 }
 
 .linkBase img {
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
     width: 80%;
     height: auto;
     margin-top: 5%;
@@ -681,31 +638,27 @@ span {
 
     .gameChara {
         width: 15rem;
-        /* height: 15rem; */
         margin: 10px 25px 50px;
     }
 
     .gameChara2 {
         width: 15rem;
-        /* height: 15rem; */
         margin: 10px 25px 50px;
     }
 
-    .infoList {
-        .rankingArea2 {
-            margin-bottom: 20px;
-            /* width: 48%; */
-            width: 100%;
-        }
+    /* .infoList {
+        margin-bottom: 20px;
+        width: 100%;
+    } */
 
+    /* .rankingArea2 {
         width: 100%;
         margin: 20px auto;
-    }
+    } */
 
     .infoList li {
         width: 48%;
         margin-bottom: 20px;
-        /* border: 4px solid #5FBFED; */
         border-radius: 10px;
     }
 
@@ -840,7 +793,6 @@ span {
         background-color: #fff;
         font-size: 1.6rem;
         margin: 0 auto;
-        /* vertical-align: middle; */
         vertical-align: baseline;
     }
 
@@ -870,8 +822,6 @@ span {
     }
 
     .linkBase {
-        /* width: 220px;
-        height: 132px; */
         width: 145px;
         height: 87px;
     }
