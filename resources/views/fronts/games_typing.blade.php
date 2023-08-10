@@ -4,7 +4,7 @@
 
 @section('keywords')
 
-@section('title', 'ゲーム ｜Play')
+@section('title', 'ゲーム｜Webプログラミング練習タイピングゲーム「タイプコード」')
 @section('pageCss')
     <link href="{{ asset('assets/css/typingstyle.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/css/game_typing.css') }}" rel="stylesheet" />
@@ -28,11 +28,11 @@
                 @php
                     $json_array = []; // 空の配列として初期化
                     $japanese_array = []; // 日本語空の配列として初期化
-
+                    
                     foreach ($items as $item) {
                         $json_array[] = $item->word_spell; // 配列にJSON形式の文字列を追加
                         $japanese_array[] = $item->japanese; // 配列にJSON形式の文字列を追加
-
+                    
                         //var_dump($json_array); // デバッグ用に配列を表示（必要に応じてコメントアウト）
                     }
                     $json_array = json_encode($json_array); // PHPの配列をJSON形式の文字列に変換
