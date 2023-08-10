@@ -61,35 +61,7 @@ input[name="course_name"] {
     display: none;
 }
 
-/* パンくずリストcss */
-@media (min-width:1000px) {
-    .breadCrumb-001 {
-        font-size: 1rem;
-    }
 
-    .breadCrumb-001 li:not(:last-child)::after {
-        border-top: 1px solid #ffff;
-        border-right: 1px solid #ffff;
-    }
-
-    .breadCrumb-001 a {
-        color: #ffff;
-    }
-}
-
-/* パンくずリストcss */
-.breadCrumb-001 {
-    font-size: 1.2rem;
-}
-
-.breadCrumb-001 li:not(:last-child)::after {
-    border-top: 1px solid #ffff;
-    border-right: 1px solid #ffff;
-}
-
-.breadCrumb-001 a {
-    color: #ffff;
-}
 
 /* コース選択 */
 .levelButtons {
@@ -401,14 +373,16 @@ h3 {
         max-width: 1080px;
     }
 
+    /* パンくずリスト */
+    .breadCrumb-001 li:not(:last-child)::after {
+        border-top: 1px solid #ffff;
+        border-right: 1px solid #ffff;
+    }
+
     .breadCrumb-001 a {
-        font-size: 1.2rem;
-
+        color: #ffff;
     }
 
-    h2 {
-        font-size: 4rem;
-    }
 
     .info {
         margin-bottom: 70px;
