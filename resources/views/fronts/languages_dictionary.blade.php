@@ -276,9 +276,11 @@
                                             <label class="close" for="popUp1{{ $item->id }}"><img alt="閉じるボタン"
                                                     src="{{ asset('assets/images/dictionary.jpg') }}"></label>
                                             <h2>{{ $item->word_spell }}</h2>
-                                            {{--
+                                            <div class="read">
+                                                {{--
                                 <h5>読み方</h5> --}}
-                                            <p>{{ $item->japanese }}</p>
+                                                <p>{{ $item->japanese }}</p>
+                                            </div>
                                             <div class="mean">
                                                 {{--
                                     <h5>意味</h5> --}}
