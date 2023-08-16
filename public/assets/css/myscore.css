@@ -538,7 +538,7 @@ table.scoreLine th {
     .btnWrap {
         display: flex;
         justify-content: center;
-        font-weight: 800;
+        /* font-weight: 800; */
     }
 
     .challengeBtn {
