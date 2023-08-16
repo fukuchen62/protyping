@@ -506,6 +506,7 @@ span {
 .infoList img {
     width: 90%;
     border-radius: 9px;
+    box-shadow: 10px 10px 0px 0 rgb(96, 200, 218)
 }
 
 .info-pho {
@@ -560,7 +561,7 @@ span {
 
 .info-title {
     margin-top: 20px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
     font-weight: bold;
 }
 
