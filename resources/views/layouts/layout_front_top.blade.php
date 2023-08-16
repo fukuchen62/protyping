@@ -12,8 +12,7 @@
         content="プログラミングでよく使う英単語のタイピングゲームができるWEBアプリです。プログラミングで使う英単語のスペル習得、専門用語とタイピング速度の向上の力がつくと共に、IT業界で役立つ基本的な情報(知っトク情報)も掲載しております。"
         name="description">
     {{-- キーワード --}}
-    <meta content="タイピング,Typing,Webプログラマー,HTMLタグ,CSS,JavaScript,WordPress,ワードプレス,PHP,Python,プログラミングでよく使う英単語"
-        name="keywords">
+    <meta content="プログラミング,タイピング,単語,HTML,CSS,JavaScript,WordPress,ワードプレス,PHP,Python,英単語,Typing,Webプログラマー" name="keywords">
 
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
