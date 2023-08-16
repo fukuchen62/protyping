@@ -11,8 +11,7 @@
     <meta content="@yield('description')" name="description">
     {{-- <meta name="description" content="description"> --}}
     {{-- キーワード --}}
-    <meta content="タイピング,Typing,Webプログラマー,HTMLタグ,CSS,JavaScript,WordPress,ワードプレス,PHP,Python,プログラミングでよく使う英単語"
-        name="keywords">
+    <meta content="プログラミング,タイピング,単語,HTML,CSS,JavaScript,WordPress,ワードプレス,PHP,Python,英単語,Typing,Webプログラマー" name="keywords">
     {{-- <meta name="keywords" content="@yield('keywords')"> --}}
     {{-- <meta name="keywords" content="keywords"> --}}
 
