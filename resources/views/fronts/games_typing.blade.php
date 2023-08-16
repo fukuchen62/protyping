@@ -75,7 +75,7 @@
                             {{-- 言語の選択 --}}
                             <select class="selectWrap" id="language-select" name="language">
                                 @foreach ($lang_list as $item)
-                                    <option value="{{ $item->id }}" {{ $item->id == $language ? 'selected' : '' }}>
+                                    <option {{ $item->id == $language ? 'selected' : '' }} value="{{ $item->id }}">
                                         {{ $item->language_name }}
                                     </option>
                                 @endforeach
@@ -91,8 +91,8 @@
 
                             {{-- レベルの選択 --}}
                             <select class="selectWrap" id="level-select" name="level">
-                                <option value="1" {{ $level == 1 ? 'selected' : '' }}>初級</option>
-                                <option value="2" {{ $level == 2 ? 'selected' : '' }}>中級</option>
+                                <option {{ $level == 1 ? 'selected' : '' }} value="1">初級</option>
+                                <option {{ $level == 2 ? 'selected' : '' }} value="2">中級</option>
                                 <!-- 他のレベルのオプションを追加 -->
                             </select>
                             <input class="selectWrap selectColor" type="submit" value="確定">
@@ -236,6 +236,7 @@
                             <p>　モード・コース　▶　初級</p>
                         @endif
                         <br>
+                        <p>　＊終了するにはEscキーを押してください</p>
                     </div>
                     <div id="text-container">
                         <div id="timer">00:00:00</div>
@@ -243,7 +244,7 @@
                         <div id="start-msg">
                             <p>日本語入力モードをオフにしてください</p>
                             <p><em>スペースキーで開始</em></p>
-                            <p>（終了はEscキーです）</p>
+                            {{-- <p>（終了はEscキーです）</p> --}}
                         </div>
                         <div id="example"></div>
                         <div id="kana"></div>
@@ -387,7 +388,7 @@
                     <p class="ranking-title">ランキングに登録する</p>
                     <div class="entry-ranking">
                         <p class="regist-end">ユーザー名入力欄</p>
-                        <input id="inputName" maxlength="10" type="text" value="" placeholder="クリップ太郎">
+                        <input id="inputName" maxlength="10" placeholder="クリップ太郎" type="text" value="">
                         <p class="attention regist-end">※10文字以内　本名は入れないでください</p>
                     </div>
                     <div>
@@ -399,7 +400,7 @@
                 <div class="set-ranking" id="game-view7" style="display: none;">
                     <p class="ranking-title">ランキングに登録完了</p>
                     <div class="entry-ranking">
-                        <div>ペンネーム:</div>
+                        <div>ユーザーネーム:</div>
                         <div id="userNameDisplay"></div>
                         <p>で登録しました</p>
                     </div>
