@@ -236,7 +236,7 @@
                             <p>　モード・コース　▶　初級</p>
                         @endif
                         <br>
-                        <p>　＊終了するにはEscキーを押してください</p>
+                        <p>　＊途中終了するにはEscキーを押してください(ランキング登録不可)</p>
                     </div>
                     <div id="text-container">
                         <div id="timer">00:00:00</div>
@@ -421,6 +421,8 @@
                     <p>３．言語と難易度を選んだら確定を押してください。</p>
                     <p>４．言語と難易度が決定したらスタートを押してください。</p>
                     <p class="descriptive-margin attention">※タイピングには制限時間があります。</p>
+                    <p class="descriptive-margin attention">※途中終了した場合、ランキングに反映されません。</p>
+
                 </div>
             </div>
             {{-- ゲーム用js --}}
