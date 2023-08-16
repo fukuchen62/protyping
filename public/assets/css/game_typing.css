@@ -69,7 +69,7 @@
 <!-- 言語選択 --> */
 
 .selectWrap {
-    width: 250px;
+    width: 320px;
     height: 72px;
     padding: 5px;
     background-color: #58ABD3;
@@ -476,4 +476,8 @@ input#open2 {
     font-size: 1.6rem;
     font-weight: 500;
     margin: 5px;
+}
+
+#level-select {
+    width: 140px;
 }

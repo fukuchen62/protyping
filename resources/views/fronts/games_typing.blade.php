@@ -217,7 +217,7 @@
                             @elseif ($_GET['language'] == 5)
                                 <p>　選択中の言語　　▶　Python</p>
                             @elseif ($_GET['language'] == 6)
-                                <p>　選択中の言語　　▶　よく使う英単語</p>
+                                <p>　選択中の言語　　▶　プログラミングでよく使う英単語</p>
                             @else
                                 <p>　???</p>
                             @endif
