@@ -530,6 +530,10 @@ input[type="checkbox"]:checked+.overlay {
     z-index: -1;
 }
 
+.read p {
+    text-align: left;
+}
+
 .example pre {
     text-align: left;
     color: #17354d;
